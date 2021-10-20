@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <vector>
 #include <list>
 #include <map>
@@ -14,20 +15,24 @@ namespace cmdline {
 	public:
 		CommandLine() = delete;
 		CommandLine(std::vector<ParmItem> parms);
-		CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags);
-		int parse(const int argc, char* argv[]);
-		bool                    hasFlag(char* flag) { return (flags.find(flag) != flags.end()); }
+		// CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags);
+		void parse(const int argc, char* argv[]);
+		bool                    hasFlag(char* flag)       { return (flags.find(flag) != flags.end()); }
+		bool                    hasFlag(const char* flag) { return hasFlag((char*) flag); }
 		char* checkOption(char* option);
 		char* checkFlag(char* flag);
 		std::map<std::string, bool>   getDefaultFlags() { return (defFlags); }
 		std::set<std::string>   getCurrentFlags() { return (flags); }
 		std::map<char*, char*>  getDefaultOptions() {
 			std::map<char*, char*> defs;
-			for (std::map<std::string, ParmItem>::iterator it = defOptions.begin(); it != defOptions.end(); ++it) defs.insert(it->second.name, it->second.value);
+			for (std::map<std::string, ParmItem>::iterator it = defOptions.begin(); it != defOptions.end(); it++) {
+				std::cout << it->first << std::endl;
+//				 defs.insert(it->second.name, it->second.value);
+			}
 			return defs;
 		}
 		std::map<char*, char*>  getCurrentOptions() { return options; }
-
+//		template <typename T>  T  getOption(char* name);
 
 	private:
 		std::list<char*> inputs;
@@ -36,15 +41,12 @@ namespace cmdline {
 		std::map<std::string, ParmItem> defOptions;
 		std::map<std::string, bool> defFlags;
 
-		void  validateValue(char* value, char* option);
 		char* addParameterToOptions(char* option, char* prev);
 		char* addParameterToFlags(char* flag, char* prev);
 		char* addValueToOption(char* option, char* value);
 		inline char* addParameterToInput(char* flag);
 		char *removeParameterFromFlags(char* flag, char* prev);
 		char *checkParameter(ParameterTree* root[], char* parm);
-		template <class T>
-        T     getParameter(char* name);
 
 	};
 

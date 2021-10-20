@@ -10,14 +10,14 @@ namespace cmdline {
 
 	std::map<std::string, ParmItem> vector2map(std::vector<ParmItem> vect) {
 		std::map<std::string, ParmItem> mmap;
-		for (int i = 0; i < vect.size(); i++) mmap.insert_or_assign(vect[i].name, vect[i]);
+		for (size_t i = 0; i < vect.size(); i++) mmap.insert_or_assign(vect[i].name, vect[i]);
 		return (mmap);
     }
 	ParameterTree* createTree(const char* word) {
 		ParameterTree* root = new ParameterTree(word);
 		ParameterTree* prev = root;
 		ParameterTree* temp = NULL;
-		for (int idx = 1; idx < strlen(word); idx++) {
+		for (size_t idx = 1; idx < strlen(word); idx++) {
 			temp = new ParameterTree(&(word[idx]));
 			prev->addChild(temp);
 			prev = temp;

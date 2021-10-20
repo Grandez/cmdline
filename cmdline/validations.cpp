@@ -16,6 +16,7 @@ namespace cmdline {
 		if (strlen(parm) == 1) throw CmdLineException("Invalid Option", parm);
 		if (prev != nullptr) throw CmdLineException("Missing value", prev);
 	}
+
 	inline void validateNumber(char* value) {
 		char* p;
 		long converted = strtol(value, &p, 10);
@@ -66,6 +67,19 @@ namespace cmdline {
 		struct stat info;
 		if (stat(value, &info) != 0) throw CmdLineValueException(value, "file not found");
 		if (info.st_mode & S_IFDIR)  throw CmdLineValueException(value, "file is directory");
+	}
+
+	void         validateValue(char* value, cmdline::parmType type) {
+		switch (type) {
+		        case cmdline::NUMBER:      validateNumber(value); break;
+		        case cmdline::DECIMAL:     validateDecimal(value); break;
+		        case cmdline::DATE:        validateDate(value); break;
+		        case cmdline::TIME:        validateTime(value); break;
+		        case cmdline::DIR:         validateDir(value); break;
+		        case cmdline::FILE:        validateFile(value); break;
+		        case cmdline::DIR_EXISTS:  validateDirExist(value); break;
+		        case cmdline::FILE_EXISTS: validateFileExist(value); break;
+		}
 	}
 
 }

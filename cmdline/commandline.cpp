@@ -27,19 +27,27 @@ namespace cmdline {
 		}
 		add2tree(rootFlags, "help");
 	};
+/*
 	CommandLine::CommandLine(std::vector<cmdline::ParmItem> options, std::vector<std::pair<char *, bool>> flags) {
 		this->defOptions = vector2map(options);
 		for (std::pair f : flags) defFlags.insert_or_assign(f.first, f.second);
-		for (int i = 0; i < options.size(); i++) add2tree(rootOptions, options[i].name);
+		for (size_t i = 0; i <  options.size(); i++) add2tree(rootOptions, options[i].name);
 		add2tree(rootFlags, "help");
 	};
-	int CommandLine::parse(const int argc, char* argv[]) {
+*/
+	void CommandLine::parse(const int argc, char* argv[]) {
+		std::string in;
 		char* prev = nullptr;
-		for (int i = 0; i < argc; i++) {
+		for (int i = 1; i < argc; i++) {
 			switch (argv[i][0]) {
 			case '/': prev = addParameterToOptions(argv[i], prev); break;
 			case '+': prev = addParameterToFlags(argv[i], prev);   break;
-			case '-': prev = removeParameterFromFlags(argv[i], prev);
+			case '-': in = argv[i]; 
+				      if (in == std::string("-h") || in ==  std::string("--help"))  
+				          prev = addParameterToFlags((char *) "+help", prev);
+					  else 
+				         prev = removeParameterFromFlags(argv[i], prev);
+				      break;   
 			default:
 				if (prev == NULL) {
 					addParameterToInput(argv[i]);
@@ -49,16 +57,11 @@ namespace cmdline {
 				}
 			}
 		}
-		//	checkParameter(rootOptions, "pepe");
-		return 0;
+		if (hasFlag("help")) throw HelpRequested();
 	}
 	
-	char*        CommandLine::checkOption(char* option) {
-		return (checkParameter(rootOptions, option));
-	}
-	char*        CommandLine::checkFlag(char* flag) {
-		return (checkParameter(rootFlags, flag));
-	}
+	char*        CommandLine::checkOption(char* option) { return (checkParameter(rootOptions, option)); }
+	char*        CommandLine::checkFlag(char* flag)     { return (checkParameter(rootFlags, flag));    }
 	char*        CommandLine::addParameterToOptions(char* option, char* prev) {
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
@@ -80,25 +83,14 @@ namespace cmdline {
 		return (nullptr);
 	}
 	char*        CommandLine::addValueToOption(char* value, char* option) {
-		validateValue(value, option);
+		ParmItem def = defOptions.find(option)->second;
+		validateValue(value, def.type);
+
 		if (strlen(option) == 1) throw CmdLineException("Invalid Option", option);
 		return (checkOption(&(option[1])));
 	}
-	void         CommandLine::validateValue(char* value, char* option) {
-		ParmItem def = defOptions.find(option)->second;
-		switch (def.type) {
-		case cmdline::NUMBER: validateNumber(value); break;
-		case cmdline::DECIMAL: validateDecimal(value); break;
-		case cmdline::DATE: validateDate(value); break;
-		case cmdline::TIME: validateTime(value); break;
-		case cmdline::DIR: validateDir(value); break;
-		case cmdline::FILE: validateFile(value); break;
-		case cmdline::DIR_EXISTS: validateDirExist(value); break;
-		case cmdline::FILE_EXISTS: validateFileExist(value); break;
-		}
-	}
 	char*        CommandLine::checkParameter(ParameterTree* root[], char* parm) {
-		int idx = 0;
+		size_t idx = 0;
 		ParameterTree* base = root[parm[0] - ' '];
 		ParameterTree* prev = nullptr;
 
@@ -124,7 +116,8 @@ namespace cmdline {
 		return (makeChar(ss));
 	}
 
-	template <typename T>  T  CommandLine::getOption(char* name)          {}
-	template <typename T>  T  CommandLine::getOption(std::string name) { getOption<T>(name.c_str()};
+//	template <typename T>  T  CommandLine::getOption(char* name)          {
+//	}
+	
 
 }

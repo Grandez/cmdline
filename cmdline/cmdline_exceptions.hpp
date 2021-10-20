@@ -1,50 +1,51 @@
 #pragma once
 #include <iostream>
-#include <exception>
+#include <stdexcept>
 
-class CmdLineException : public std::exception {
-public:
-	CmdLineException() = default;
-	CmdLineException(const char* msg) { message = (char*)msg; }
-	CmdLineException(const char* msg, const char* input) {
-		message = (char*)msg;
-		parm = (char*)input;
-	}
-	CmdLineException(const char* msg, const char* input, const char* alt) {
-		message = (char*)msg;
-		parm = (char*)input;
-		this->alt = (char*)alt;
-	}
+namespace cmdline {
+	/**
+	 * Base class for cmdline exceptions
+	 *
+	 * As library process argument from command line it inherits from invalid_argument
+	 *
+	 * @param msg Text to show
+	 *
+	 */
 
-	const char* what() const throw()
-	{
-		return message;
-	}
-protected:
-	char* message = (char *) "exceptions en library";
-	char* parm = (char*) "";
-	char* alt = (char*) "";
-};
+	class CmdLineException : public std::invalid_argument {
+	public:
+		CmdLineException() = delete;
+		CmdLineException(const std::string& msg) : invalid_argument(msg) { message = (char*)msg.c_str(); }
+		CmdLineException(const char* msg) : invalid_argument(msg) { message = (char*)msg; }
+		CmdLineException(const char* msg, const char* input) : invalid_argument(msg) {
+			message = (char*)msg;
+			parm = (char*)input;
+		}
+		CmdLineException(const char* msg, const char* input, const char* alt) : invalid_argument(msg) {
+			message = (char*)msg;
+			parm = (char*)input;
+			this->alt = (char*)alt;
+		}
 
-class CmdLineValueException : public CmdLineException {
-public:
-	CmdLineValueException() = delete;
-	CmdLineValueException(const char* value, const char* desired) {
-		parm = (char*)value;
-		alt = (char*)desired;
-	}
-};
+	protected:
+		char* message = (char*)"exceptions en library";
+		char* parm = (char*)"";
+		char* alt = (char*)"";
+	};
+	class CmdLineValueException : public CmdLineException {
+	public:
+		CmdLineValueException() = delete;
+		CmdLineValueException(const char* value, const char* desired) : CmdLineException("Invalid value") {
+			parm = (char*)value;
+			alt = (char*)desired;
+		}
+	};
+	/**
+	 * Exception indicating HELP has been rquested
+	 */
+	class HelpRequested : public CmdLineException {
+	public:
+		HelpRequested() : CmdLineException("Help requested") {};
+	};
 
-class HelpException : public CmdLineException {
-public:
-	HelpException(const char* msg) { message = (char*)msg; }
-	HelpException(const char* msg, const char* alt) { message = (char*)msg; }
-	const char* what() const throw()
-	{
-		return message;
-	}
-private:
-	char* message;
-
-};
-
+}
