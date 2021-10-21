@@ -1,13 +1,10 @@
-﻿Build started 20/10/2021 16:42:14.
+﻿Build started 20/10/2021 23:35:14.
 Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\cmdline\cmdline.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\cmdline.tlog\unsuccessfulbuild".
+         Creating "Debug\cmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"Debug\\" /Fd"P:\C\cmdline\Debug\cmdline.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt commandline.cpp tools.cpp validations.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"Debug\\" /Fd"P:\C\cmdline\Debug\cmdline.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt commandline.cpp
          commandline.cpp
-         tools.cpp
-         validations.cpp
-         Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\Lib.exe /OUT:"P:\C\cmdline\Debug\cmdline.lib" /NOLOGO /MACHINE:X86 Debug\commandline.obj
          Debug\parameter_tree.obj
@@ -23,4 +20,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.49
+Time Elapsed 00:00:01.07

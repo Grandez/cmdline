@@ -20,12 +20,14 @@ namespace cmdline {
 			if (p.type == FLAG) {
 				value = (p.value[0] == '1') ? true : false;
 				defFlags.insert_or_assign(std::string(p.name), value);
+				add2tree(rootFlags, p.name);
 			}
 			else {
 				defOptions.insert_or_assign(std::string(p.name), p);
+				add2tree(rootOptions, p.name);
 			}
 		}
-		add2tree(rootFlags, "help");
+		if (defFlags.find("help") == defFlags.end()) add2tree(rootFlags, "help");
 	};
 /*
 	CommandLine::CommandLine(std::vector<cmdline::ParmItem> options, std::vector<std::pair<char *, bool>> flags) {
@@ -70,6 +72,7 @@ namespace cmdline {
 		validateEntry(flag, prev);
 		std::string name = checkFlag(&(flag[1]));
 		flags.insert(name);
+		std::cout << "inserting " << name << std::endl;
 		return (nullptr);
 	}
 	char*        CommandLine::removeParameterFromFlags(char* flag, char* prev) {
