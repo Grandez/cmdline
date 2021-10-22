@@ -15,3 +15,4 @@
    * Check if flag name is active
    */
 
+;

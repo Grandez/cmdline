@@ -73,9 +73,11 @@ bool testFlagInvalid(std::vector<cmdline::ParmItem>& flags, int argc, char* argv
 
 bool checkDefaultFlags(std::vector<cmdline::ParmItem>& flags, int argc, char* argv[10]) {
 	title(argv[1]);
+
 	cmdline::CmdLine cmdLine(flags);
 	map<string, bool> mflags = cmdLine.getDefaultFlags();
 	if (mflags.size() == flags.size()) return resok();
+
 	return resko();
 }
 

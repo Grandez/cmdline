@@ -18,28 +18,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cmdline.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="commandline.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="parmitem.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="parameter_tree.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="validations.h">
+    <ClInclude Include="cmdline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cmdline_exceptions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="parameter_tree.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="sal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="validations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,17 +47,14 @@
     <ClCompile Include="commandline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tools.cpp">
+    <ClCompile Include="parameter_tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="parameter_tree.cpp">
+    <ClCompile Include="tools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="validations.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="doc_cmdline.cpp">
-      <Filter>Documentation Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
