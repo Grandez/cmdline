@@ -18,19 +18,19 @@ namespace cmdline {
 		ParameterTree* prev = root;
 		ParameterTree* temp = NULL;
 		for (size_t idx = 1; idx < strlen(word); idx++) {
-			temp = new ParameterTree(&(word[idx]));
+			temp = new ParameterTree(&(word[idx]), prev);
 			prev->addChild(temp);
 			prev = temp;
 		}
 		return (root);
 	}
-	void           joinTree(ParameterTree* root, const char* word) {
+	ParameterTree *joinTree(ParameterTree* root, const char* word) {
 		int idx = 1; // Here we know first word matches, so we check second letter
 		ParameterTree* last = root;
 		ParameterTree* act = root->getNext();
 		if (act == nullptr) {
 			last->addBranch(createTree(&(word[idx])));
-			return;
+			return last;
 		}
 		bool done = false;
 		while (!done) {
@@ -40,7 +40,7 @@ namespace cmdline {
 				continue;
 			}
 			if (act->letter == word[idx]) {
-				act->branchs++;
+//				act->branchs++;
 				last = act;
 				act = act->getNext();
 				idx++;
@@ -49,15 +49,22 @@ namespace cmdline {
 			last->addBranch(createTree(&(word[idx])));
 			done = true;
 		}
+		return last;
 	}
-		void add2tree(ParameterTree* root[], const char* word) {
+	void add2tree(ParameterTree* root[], const char* word) {
+		ParameterTree* last   = nullptr;
+		ParameterTree* parent = nullptr;
 		int pos = word[0] - ' ';
 		if (root[pos] == nullptr) {
 			root[pos] = createTree(word);
-	//		cout << root[pos]->getWord() << endl;
 		}
 		else {
-			joinTree(root[pos], word);
+			last = joinTree(root[pos], word);
+			parent = last->parent;
+			while (parent) {
+				parent->branchs = std::max(parent->branchs, last->branchs);
+				parent = parent->parent;
+			}
 		}
 	}
 	char* makeChar(std::string str) {

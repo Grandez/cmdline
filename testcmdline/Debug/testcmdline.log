@@ -1,0 +1,37 @@
+﻿Build started 22/10/2021 15:42:18.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\testcmdline.tlog\unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt test_defaults.cpp test_validations.cpp
+         test_defaults.cpp
+         test_validations.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\Debug\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest_maind.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtestd.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\Debug\testcmdline.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\Debug\testcmdline.lib" /MACHINE:X86 /SAFESEH Debug\test.obj
+         Debug\pch.obj
+         Debug\test_defaults.obj
+         Debug\test_validations.obj
+         P:\C\cmdline\Debug\cmdline.lib
+     1>cmdline.lib(commandline.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         testcmdline.vcxproj -> P:\C\cmdline\Debug\testcmdline.exe
+       _CopyFilesMarkedCopyLocal:
+         Copying file from "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest_main.pdb" to "P:\C\cmdline\Debug\gtest_main.pdb".
+         Copying file from "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest.pdb" to "P:\C\cmdline\Debug\gtest.pdb".
+         Creating "P:\C\cmdline\testcmdline\Debug\testcmdline.vcxproj.CopyComplete" because "AlwaysCreate" was specified.
+       FinalizeBuildStatus:
+         Deleting file "Debug\testcmdline.tlog\unsuccessfulbuild".
+         Touching "Debug\testcmdline.tlog\testcmdline.lastbuildstate".
+     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Build target) (1) ->
+       (Link target) -> 
+         cmdline.lib(commandline.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.73

@@ -15,28 +15,22 @@ namespace cmdline {
 	public:
 		CommandLine() = delete;
 		CommandLine(std::vector<ParmItem> parms);
-		// CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags);
-		void parse(const int argc, char* argv[]);
-		bool                    hasFlag(char* flag)       { return (flags.find(flag) != flags.end()); }
+		CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags);
+		~CommandLine();
+		CommandLine& parse(const int argc, char* argv[]);
+		bool                    hasFlag(char* flag);
 		bool                    hasFlag(const char* flag) { return hasFlag((char*) flag); }
 		char* checkOption(char* option);
 		char* checkFlag(char* flag);
-		std::map<std::string, bool>   getDefaultFlags() { return (defFlags); }
-		std::set<std::string>   getCurrentFlags() { return (flags); }
-		std::map<char*, char*>  getDefaultOptions() {
-			std::map<char*, char*> defs;
-			for (std::map<std::string, ParmItem>::iterator it = defOptions.begin(); it != defOptions.end(); it++) {
-				std::cout << it->first << std::endl;
-//				 defs.insert(it->second.name, it->second.value);
-			}
-			return defs;
-		}
-		std::map<char*, char*>  getCurrentOptions() { return options; }
+		std::map<std::string, bool>    getDefaultFlags() { return (defFlags); }
+		std::map<std::string, bool>    getCurrentFlags(bool active = true);
+		std::map<std::string, char *>  getDefaultOptions();
+		std::map<std::string, void*>   getCurrentOptions(bool all = false);
 //		template <typename T>  T  getOption(char* name);
 
 	private:
 		std::list<char*> inputs;
-		std::map<char*, char*> options;
+		std::map<std::string, void *> options;
 		std::set<std::string> flags;
 		std::map<std::string, ParmItem> defOptions;
 		std::map<std::string, bool> defFlags;

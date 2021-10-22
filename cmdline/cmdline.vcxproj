@@ -24,6 +24,7 @@
     <ClInclude Include="commandline.hpp" />
     <ClInclude Include="parameter_tree.hpp" />
     <ClInclude Include="parmitem.hpp" />
+    <ClInclude Include="sal.h" />
     <ClInclude Include="tools.h" />
     <ClInclude Include="validations.h" />
   </ItemGroup>

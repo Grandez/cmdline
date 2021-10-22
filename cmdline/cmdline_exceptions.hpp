@@ -29,8 +29,17 @@ namespace cmdline {
 
 	protected:
 		char* message = (char*)"exceptions en library";
-		char* parm = (char*)"";
-		char* alt = (char*)"";
+		char* parm = nullptr;
+		char* alt =  nullptr;
+	};
+	class CmdLineParameterException : public CmdLineException {
+	public:
+		CmdLineParameterException() = delete;
+		CmdLineParameterException(const char* value) : CmdLineException("Invalid argument") { parm = (char*) value; }
+		CmdLineParameterException(const char* value, const char* desired) : CmdLineException("Invalid argument") { 
+			parm = (char*)value;
+			alt = (char*)desired;
+		}
 	};
 	class CmdLineValueException : public CmdLineException {
 	public:
