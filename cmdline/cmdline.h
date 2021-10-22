@@ -35,6 +35,7 @@ namespace cmdline {
 		}
 		bool                         hasFlag(char* name)         { return (commandLine->hasFlag(name)); };
 		bool                         hasFlag(const char* name)   { return (commandLine->hasFlag(name)); };
+		bool                         hasFlag(std::string name)   { return (commandLine->hasFlag(name.c_str())); };
 		std::map<std::string, char*> getDefaultOptions()         { return (commandLine->getDefaultOptions()); };
 		std::map<std::string, bool>  getDefaultFlags()           { return (commandLine->getDefaultFlags()); };
 		std::map<std::string, void*> getCurrentOptions(bool all = false)    { return (commandLine->getCurrentOptions(all)); }; 

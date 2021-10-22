@@ -30,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="commandline.cpp" />
+    <ClCompile Include="doc_cmdline.cpp" />
     <ClCompile Include="parameter_tree.cpp" />
     <ClCompile Include="tools.cpp" />
     <ClCompile Include="validations.cpp" />

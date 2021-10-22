@@ -32,7 +32,6 @@ namespace cmdline {
 		}
 		if (defFlags.find("help") == defFlags.end()) add2tree(rootFlags, "help");
 	};
-
 	CommandLine::CommandLine(std::vector<cmdline::ParmItem> options, std::vector<std::pair<char *, bool>> flags) {
 		this->defOptions = vector2map(options);
 		for (std::pair f : flags) defFlags.insert_or_assign(f.first, f.second);
@@ -46,6 +45,7 @@ namespace cmdline {
 			if (rootFlags[i] != nullptr) free(rootFlags[i]);
 		}
 	}
+	
 	CommandLine& CommandLine::parse(const int argc, char* argv[]) {
 		std::string in;
 		char* prev = nullptr;
@@ -72,6 +72,7 @@ namespace cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
+	
 	std::map<std::string, bool>          CommandLine::getCurrentFlags(bool active) {
 		std::map<std::string, bool> flg;
 
@@ -91,13 +92,13 @@ namespace cmdline {
 		return opts;
 	}
 
-	char*        CommandLine::checkOption(char* option) { return (checkParameter(rootOptions, option)); }
-	char*        CommandLine::checkFlag(char* flag)     { return (checkParameter(rootFlags, flag));    }
-	char*        CommandLine::addParameterToOptions(char* option, char* prev) {
+	char*        CommandLine::checkOption             (char* option) { return (checkParameter(rootOptions, option)); }
+	char*        CommandLine::checkFlag               (char* flag)     { return (checkParameter(rootFlags, flag));    }
+	char*        CommandLine::addParameterToOptions   (char* option, char* prev) {
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
 	}
-	char*        CommandLine::addParameterToFlags(char* flag, char* prev) {
+	char*        CommandLine::addParameterToFlags     (char* flag, char* prev) {
 		std::string name;
 		validateEntry(flag, prev);
 		try {
@@ -134,11 +135,11 @@ namespace cmdline {
 		}
 		return (nullptr);
 	}
-	inline char* CommandLine::addParameterToInput(char* input) {
+	inline char* CommandLine::addParameterToInput     (char* input) {
 		inputs.push_back(input);
 		return (nullptr);
 	}
-	char*        CommandLine::addValueToOption(char* value, char* option) {
+	char*        CommandLine::addValueToOption        (char* value, char* option) {
 		ParmItem def = defOptions.find(option)->second;
 		validateValue(value, def.type);
 

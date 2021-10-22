@@ -2,8 +2,6 @@
 #include <string>
 #include <map>
 
-
-
 namespace cmdline {
 
     class ParameterTree {

@@ -33,9 +33,11 @@
 
 # temp files
 *.bak
+*.pdb
 
 # Directories
 .vs/**
 x64/**
 Debug/**
+**/Debug/**
 packages/**

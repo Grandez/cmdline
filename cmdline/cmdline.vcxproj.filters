@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Documentation Files">
+      <UniqueIdentifier>{ad1ff312-69c7-4cc5-b5f4-28ceec152042}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmdline.h">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="validations.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="doc_cmdline.cpp">
+      <Filter>Documentation Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
