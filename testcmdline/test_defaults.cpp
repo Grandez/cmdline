@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <regex>
 
-#include "../cmdline/cmdline.h"
+#include "../cmdline/include/cmdline.h"
 
 using namespace cmdline;
 
