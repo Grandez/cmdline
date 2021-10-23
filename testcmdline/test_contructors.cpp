@@ -3,10 +3,11 @@
 #include <stdexcept>
 #include <regex>
 
-#include "../cmdline/include/cmdline.h"
+#include "../cmdline/cmdline.h"
 
 using namespace cmdline;
 
+/*
 TEST(Defaults, Flags_2) {
 	std::vector<cmdline::ParmItem> flags = {
 		 cmdline::ParmItem("output", true)
@@ -17,3 +18,4 @@ TEST(Defaults, Flags_2) {
 	std::map<std::string, void *> mOptions = cmdLine.getDefaultOptions();
 	EXPECT_EQ(mflags.size(), flags.size());
 }
+*/

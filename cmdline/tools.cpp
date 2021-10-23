@@ -4,12 +4,11 @@
 #include <vector>
 #include "cmdline.h"
 
-#include "parameter_tree.hpp"
 
 namespace cmdline {
 
-	std::map<std::string, ParmItem> vector2map(std::vector<ParmItem> vect) {
-		std::map<std::string, ParmItem> mmap;
+	std::unordered_map<std::string, ParmItem> vector2map(std::vector<ParmItem> vect) {
+		std::unordered_map<std::string, ParmItem> mmap;
 		for (size_t i = 0; i < vect.size(); i++) mmap.insert_or_assign(vect[i].name, vect[i]);
 		return (mmap);
     }
@@ -40,7 +39,6 @@ namespace cmdline {
 				continue;
 			}
 			if (act->letter == word[idx]) {
-//				act->branchs++;
 				last = act;
 				act = act->getNext();
 				idx++;
@@ -72,5 +70,20 @@ namespace cmdline {
 		char* cstr = new char[len];
 		strcpy_s(cstr, len, str.c_str());
 		return (cstr);
+	}
+	bool validateBoolean(char* value) {
+		if (strlen(value) == 0) return false;
+		if (value[0] == '0') return false;
+		if (_stricmp(value, "no")) return false;
+		if (_stricmp(value, "false")) return false;
+		return true;
+	}
+	Option* findOption(std::unordered_map<std::string, Option>* map, std::string what) {
+		try {
+			return &map->at(what);
+		}
+		catch (std::out_of_range ex) {
+			return (Option*) nullptr;
+		}
 	}
 }

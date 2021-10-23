@@ -1,0 +1,105 @@
+# Definiciones
+
+Un programa, por definicion ya que si no siempre realizaria la misma función, acepta un conjunto de información y customización especifica para esa ejecución concreta, esta información, dependiendo de la literatura utilizada, se suele denominar argumento o parámetro. En este apartado se introduce la definición utilizada para identificar de manera unívoca los diferentes tipos de información aportada al programa.
+
+Estos tipos son:
+
+- Parametro
+- Argumento
+- Opcion
+- Flag
+- Definicion
+
+
+## Parametro
+
+Cualquier palabra o texto si va entrecomillado introducido en la linea de comandos
+
+## Argumento
+
+Cualquier parámetro que sera utilizado como fuente de entrada al programa para su procesamiento
+Estos argumentos se introducen directamente en la linea de comandos y se procesan, en principio, en el orden en que son intorudcidos.
+
+Por ejemplo: `dummycat fichero1.txt fichero2.txt` hace que se muestre por pantalla el contenido de `fichero1.txt` y a continuación el de `fichero2.txt`
+
+## Opcion
+
+Aquel parámetro que establece alguna definición o configuración particular para la ejecución la cual es indicada como un parámetro a continuación de la opción.
+
+Las opciones se establecen de la forma generica: **`/opcion value`** donde `opcion` es la secuencia de palabras que define univocamente la opción. 
+
+Por ejemplo: `dummycat fichero1.txt fichero2.txt /output /tmp/new_file.txt` donde la opcion `output` indica que en lugar de mostrar el contenido de los ficheros en pantalla los escriba en `/tmp/new_file.txt`
+
+Una opcion puede ser simple o multiple.
+
+- simple: En el caso de que se establezca esta opcion repetidas veces solo se tomará en cuenta la ultima
+- multiple:  En este caso cada opcion puede tener multiples valores todos ellos validos dentro del contexto del programa y es posible concatenar varios valores para la opcion a traves del separador punto y coma (**;**)
+
+Ejemplo:
+
+Supongamos que el programa _dummycat_ acepta dos opciones:
+
+- _output_ como simple
+- _define_ como multiple
+
+Entonces estos comandos son equivalentes entre si respeto al primero:
+
+1. `dummycat fichero1.txt fichero2.txt /output file1.txt`
+2. `dummycat fichero1.txt fichero2.txt /output file2.txt /output file1.txt`
+3. `dummycat fichero1.txt fichero2.txt /output file2.txt /output file3.txt /output file1.txt`
+3. `dummycat fichero1.txt fichero2.txt /output file2.txt;file3.txt;file1.txt`
+
+De acuerdo con lo dicho, `dummycat` concatenará los dos ficheros en el fichero nuevo `file1.txt`
+
+1. `envecho /define def1=definition1 /define def2=definition2 def1 def2`
+2. `envecho /define def1=definition1;def2=definition2 def1 def2`
+
+y mostrará la siguiente salida por pantalla
+
+```
+def1 = definition1
+def2 = definition2
+``` 
+
+## Flags
+
+Aquel parámetro que gestiona el uso o no alguna funcionalidad prediseñada del programa; o dicho de otro modo, un indicador que activa o desactiva "algo" en el programa.
+
+El ejemplo típico de esta funcionalidad sería el parámetro típico de sistemas Unix: `--verbose` que suele indicar si el programa va a mostrar "información de progreso" durante su ejecucion o no.
+
+Estos parámetros se indican de la forma **`[+|-]flag`** Donde **+** indica activación y **-** desactivación.
+
+Por su propia definición, estos parámetros son **únicos** y su activación o desactivación dependerá de su valor por defecto y de los flags introducidos en la linea de comandos.
+
+Por ejemplo, supongamos que la salida del comando `dummycat fichero1.txt fichero2.txt /output file1.txt` es:
+
+```
+  Processing fichero1.txt
+  Processing fichero2.txt
+```
+
+Es decir, por defecto `dummycat` indica que fichero esta procesando.
+
+En este caso: 
+
+- El comando `dummycat fichero1.txt fichero2.txt /output file1.txt -verbose` no produciría ninguna salida
+
+- El comando `dummycat fichero1.txt fichero2.txt /output file1.txt +verbose` produciría la salida por defecto ya que `verbose` esta activado por defecto
+
+- El comando `dummycat fichero1.txt fichero2.txt /output file1.txt +verbose -verbose` no produciría ninguna salida ya que la ultima aparición de `verbose`es para desactivarlo
+
+### Concatenacion
+
+En el caso de que los _flags_ se puedan identificar univocamente con la primera letra es posible establecer todos ellos juntos en un solo flag.
+
+Ejemplo: `ls +alr` 
+
+## Definicion
+
+Algunos programas pueden aceptar otro conjunto de valores no definidos _a priori_ pero que pueden ser necesarios en algún momento de su ejecución.
+
+A estos parámetros los denominamos definiciones, y se indican de la siguiente manera:
+
+`/nombre=valor`
+
+Un ejemplo clásico de esta situación sería la opción `--define` del programa `gcc`

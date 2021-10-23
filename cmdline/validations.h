@@ -4,7 +4,7 @@
 
 namespace cmdline {
     void        validateEntry(char* parm, char* prev);
-    void        validateValue(char* value, cmdline::parmType type);
+    void        validateValue(char* value, Type type);
     inline void validateNumber(char* value);
     inline void validateDecimal(char* value);
     inline void validateTime(char* value);

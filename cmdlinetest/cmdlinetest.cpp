@@ -1,8 +1,11 @@
 #include <iostream>
-
+#include <memory>
 #include "../cmdline/cmdline.h"
+#include "../cmdline/hashmap.hpp"
+#include "../cmdline/parmitem.hpp"
 
 using namespace std;
+using namespace cmdline;
 
 std::vector<cmdline::ParmItem> flags = {
 	 cmdline::ParmItem("output", true)
@@ -75,7 +78,7 @@ bool checkDefaultFlags(std::vector<cmdline::ParmItem>& flags, int argc, char* ar
 	title(argv[1]);
 
 	cmdline::CmdLine cmdLine(flags);
-	map<string, bool> mflags = cmdLine.getDefaultFlags();
+	unordered_map<string, bool> mflags = cmdLine.getDefaultFlags();
 	if (mflags.size() == flags.size()) return resok();
 
 	return resko();
@@ -85,7 +88,13 @@ int main(int argc, char *argv[]) {
 	char* argv2[10];
 	std::cout << "Begin" << std::endl;
 	argv2[1] = (char*) "default flags";
+	cmdline::CmdLine cmdLine(flags);
+	/*
+	HashMap<std::string> *hmap = new HashMap<std::string>();
+	cmdline::ParmItem item1 = cmdline::ParmItem("pepe2");
 
+	hmap->insert(item1.name, std::make_unique<ParmItem>(item1));
+	*/
 	checkDefaultFlags(flags, 2, argv2);
 
 	argv2[1] = (char*)"+o";

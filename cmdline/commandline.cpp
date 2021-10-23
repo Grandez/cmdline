@@ -2,6 +2,8 @@
 #include <string>
 #include <utility>
 #include <algorithm>
+#include <unordered_map>
+#include <cstdlib>
 
 #include "parmitem.hpp"
 #include "commandline.hpp"
@@ -9,34 +11,24 @@
 #include "parameter_tree.hpp"
 #include "tools.h"
 #include "validations.h"
-
+#include "enums.h"
+#include "option.hpp"
 
 namespace cmdline {
-	cmdline::ParameterTree* rootOptions[128];
-	cmdline::ParameterTree* rootFlags[128];
+	ParameterTree* rootOptions[128];
+	ParameterTree* rootFlags[128];
 
 	CommandLine::CommandLine(std::vector<ParmItem> parms) {
-		bool value;
 		std::fill_n(rootOptions, sizeof(rootOptions), nullptr);
 		std::fill_n(rootFlags, sizeof(rootFlags), nullptr);
-		for (ParmItem p : parms) {
-			if (p.type == FLAG) {
-				value = (p.value[0] == '1') ? true : false;
-				defFlags.insert_or_assign(std::string(p.name), value);
-				add2tree(rootFlags, p.name);
-			}
-			else {
-				defOptions.insert_or_assign(std::string(p.name), p);
-				add2tree(rootOptions, p.name);
-			}
-		}
-		if (defFlags.find("help") == defFlags.end()) add2tree(rootFlags, "help");
+		loadDefaults(parms);
+		loadEnv(options);
+		loadEnv(flags);
+		if (flags["help"].name.length() == 0) add2tree(rootFlags, "help");
 	};
-	CommandLine::CommandLine(std::vector<cmdline::ParmItem> options, std::vector<std::pair<char *, bool>> flags) {
-		this->defOptions = vector2map(options);
-		for (std::pair f : flags) defFlags.insert_or_assign(f.first, f.second);
-		for (size_t i = 0; i <  options.size(); i++) add2tree(rootOptions, options[i].name);
-		add2tree(rootFlags, "help");
+	CommandLine::CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags) : CommandLine(options) {
+		for (std::pair f : flags) this->flags.emplace(f.first, Option(f.first, f.second ? "1" : "0"));
+		if (this->flags["help"].name.length() == 0) add2tree(rootFlags, "help");
 	};
 	CommandLine::~CommandLine() {
 		for (int i = 0; i < 128; i++) {
@@ -44,7 +36,6 @@ namespace cmdline {
 			if (rootFlags[i] != nullptr) free(rootFlags[i]);
 		}
 	}
-
 	CommandLine& CommandLine::parse(const int argc, char* argv[]) {
 		std::string in;
 		char* prev = nullptr;
@@ -52,12 +43,12 @@ namespace cmdline {
 			switch (argv[i][0]) {
 			case '/': prev = addParameterToOptions(argv[i], prev); break;
 			case '+': if (prev != nullptr) throw CmdLineException("Missing value", prev);
-				prev = addParameterToFlags(argv[i], argv[i]);   break;
+				      prev = updateFlag(argv[i], argv[i], true);   break;
 			case '-': in = argv[i]; 
 				      if (in == std::string("-h") || in ==  std::string("--help"))  
-				          prev = addParameterToFlags((char *) "+help", prev);
+				          prev = updateFlag((char *) "+help", prev, true);
 					  else 
-				         prev = removeParameterFromFlags(argv[i], prev);
+				         prev = updateFlag(argv[i], prev, false);
 				      break;   
 			default:
 				if (prev == NULL) {
@@ -71,23 +62,26 @@ namespace cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
-	std::map<std::string, std::string>  CommandLine::getDefaultOptions() {
-		std::map<std::string, std::string> defs;
-		std::map<std::string, ParmItem>::iterator it;
+	std::unordered_map<std::string, std::string>  CommandLine::getDefaultOptions() {
+		std::unordered_map<std::string, std::string> defs;
+		std::unordered_map<std::string, ParmItem>::iterator it;
 		for (it = defOptions.begin(); it != defOptions.end(); it++) {
 			// defs.insert(it->second.name, it->second.value);
 		}
 		return defs;
 	}
-	std::map<std::string, bool>          CommandLine::getCurrentFlags(bool active) {
-		std::map<std::string, bool> flg;
-
+	std::unordered_map<std::string, bool>          CommandLine::getCurrentFlags(bool active) {
+		std::unordered_map<std::string, bool> flg;
+		/*
 		for (std::string flag : flags) flg.emplace(std::string(flag), true);
 		if (!active) flg.insert(defFlags.begin(), defFlags.end());
 		return flg;
+		*/
+		return flg;
 	}
-	std::map<std::string, void*>          CommandLine::getCurrentOptions(bool all) {
-		std::map<std::string, void*> opts = options;
+	std::unordered_map<std::string, void*>          CommandLine::getCurrentOptions(bool all) {
+		std::unordered_map<std::string, void*> opts; // = options;
+		/*
 		if (all) {
 			std::map<std::string, void*> nopts;
 			for (const std::pair<std::string, ParmItem>& parm : defOptions) {
@@ -95,6 +89,7 @@ namespace cmdline {
 			}
 			opts.merge(nopts);
 		}
+		*/
 		return opts;
 	}
 
@@ -105,42 +100,30 @@ namespace cmdline {
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
 	}
-	char* CommandLine::addParameterToFlags(char* flag, char* prev) {
+	char *CommandLine::updateFlag(char* flag, char* prev, bool value) {
+		char* ptr;
+		ptr = strtok(flag, ",");
+		while (ptr != nullptr) {
+			updateFlagItem(ptr, prev, value);
+			ptr = strtok(NULL, ",");
+		}
+		return nullptr;
+	}
+	void CommandLine::updateFlagItem(char* flag, char* prev, bool value) {
 		std::string name;
 		validateEntry(flag, prev);
 		try {
-			name = checkFlag(&(flag[1]));
-			flags.emplace(name);
+     		Option* opt = findOption(&flags, checkFlag(&(flag[1])));
+			opt->setValue(value);
 		}
 		catch (CmdLineException ex) {
 			char newFlag[3] = "+ ";
 			if (strlen(flag) == 2) throw;
 			for (size_t i = 1; i < strlen(flag); i++) {
 				newFlag[1] = flag[i];
-				addParameterToFlags(newFlag, prev);
+				updateFlagItem(newFlag, prev, value);
 			}
 		}
-
-		flags.emplace(name);
-		return (nullptr);
-	}
-	char* CommandLine::removeParameterFromFlags(char* flag, char* prev) {
-		std::string name;
-		validateEntry(flag, prev);
-
-		try {
-			name = checkFlag(&(flag[1]));
-			flags.erase(name);
-		}
-		catch (CmdLineException ex) {
-			char newFlag[3] = "- ";
-			if (strlen(flag) == 2) throw;
-			for (size_t i = 1; i < strlen(flag); i++) {
-				newFlag[1] = flag[i];
-				removeParameterFromFlags(newFlag, prev);
-			}
-		}
-		return (nullptr);
 	}
 	inline char* CommandLine::addParameterToInput(char* input) {
 		inputs.push_back(input);
@@ -156,9 +139,12 @@ namespace cmdline {
 	char *CommandLine::checkOption(char* option) { return (checkParameter(rootOptions, option)); }
 	char *CommandLine::checkFlag  (char* flag)   { return (checkParameter(rootFlags, flag)); }
 	bool                    CommandLine::hasFlag(char* flag) {
+		/*
 		if (flags.find(flag) != flags.end()) return true;
 		std::map<std::string, bool>::iterator it = defFlags.find(flag);
 		return (it == defFlags.end()) ? false : true;
+		*/
+		return false;
 	}
 	char* CommandLine::checkParameter(ParameterTree* root[], char* parm) {
 		size_t idx = 0;
@@ -197,7 +183,28 @@ namespace cmdline {
 		ss.append(base->getWord());
 		return (makeChar(ss));
 	}
-
+	void CommandLine::loadDefaults(std::vector<ParmItem> parms) {
+		for (ParmItem p : parms) {
+			Option option(p.name, p.value);
+			std::unordered_map<std::string, Option>* map = (p.type == Type::FLAG) ? &flags : &options;
+			ParameterTree** root = (p.type == Type::FLAG) ? rootFlags : rootOptions;
+			map->insert_or_assign(p.name, option);
+			add2tree(root, p.name);
+		}
+	}
+	void CommandLine::loadEnv(std::unordered_map<std::string, Option> parms) {
+		char* value;
+		char key[255];
+		const char *prfx;
+		Option opt = options["env_preffix"];
+		prfx = opt.name.c_str();
+		std::unordered_map<std::string, Option>::iterator it;
+		for (it = parms.begin(); it != parms.end(); it++) {
+			sprintf(key, "%s_%s", prfx, it->second.name.c_str());
+			value = std::getenv(key);
+			if (value != nullptr) it->second.setFromEnv(value);
+		}
+	}
 
 /*
 

@@ -104,7 +104,8 @@ namespace cmdline {
 		// return strdup(value);
 	}
 
-	void          validateValue(char* value, cmdline::parmType type) {
+	void          validateValue(char* value, cmdline::Type type) {
+		/*
 		void* obj = value;
 		switch (type) {
 		        case cmdline::NUMBER:      validateNumber(value); break;
@@ -117,6 +118,7 @@ namespace cmdline {
 		        case cmdline::FILE_EXISTS: validateFileExist(value); break;
 		}
 		// return obj;
+		*/
 	}
 
 }

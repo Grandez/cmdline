@@ -1,0 +1,32 @@
+# Casos especiales
+
+En aras de mantener algunas convenciones de uso generalizado se contemplan las siguientes excepciones:
+
+## help
+
+Tipicamente la solicitud de ayuda se realiza con el parámetro `-h` o `--help`
+Este funcionamiento se sigue soportando como caso especial junto con la opción correcta `+help`
+
+## Acceso a las variables de entorno
+
+Para evitar conflictos de nombres en las variables de entorno se soporta por defecto la opcion: `env_preffix` para indicar un prefijo con el que acceder a las variables de entorno.
+
+Ejemplo: 
+
+Dado el comando `programa /env_preffix MYENV` que acepta la opcion `output`
+Se verificará si existe en el entorno la variable `MYENV_output`
+
+## Valores booleanos
+
+En los casos en que un determinado parámetro sea de tipo lógico, al igual que los flags, se consideran ciertos los siguientes valores:
+
+- 1
+- yes
+- true
+
+y falso:
+
+- 0
+- no
+- false
+

@@ -1,27 +1,27 @@
 #pragma once
-namespace cmdline {
+#include "enums.h"
 
-	enum parmType { FLAG, STRING, NUMBER, DECIMAL, DATE, TIME, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
+namespace cmdline {
 	class ParmItem {
 	public:
 		const char* name;              // Name of parameter
-		parmType type;  // Type
+		Type type;  // Type
 		const char* value;   // default value
 		bool multiple;   // Allow multiple values?
 		ParmItem() = delete;
 		ParmItem(const char* name) { 
 			this->name = name; 
 			this->value = nullptr;
-			this->type = STRING;
+			this->type = Type::STRING;
 			this->multiple = false;
 	    }
 		ParmItem(char* name, char *value) { 
 			this->name = name; 
 			this->value = value;
-			this->type = STRING;
+			this->type = Type::STRING;
 			this->multiple = false;
 		}
-		ParmItem(const char* name, char* value, parmType type, bool multiple = false) { 
+		ParmItem(const char* name, char* value, Type type, bool multiple = false) { 
 			this->name = name; 
 			this->value = value;
 			this -> type = type;
@@ -30,7 +30,7 @@ namespace cmdline {
 		ParmItem(const char* name, bool value) {
 			this->name = name;
 			this->value = (char *) ((value) ? "1" : "0");
-			this->type = FLAG;
+			this->type = Type::FLAG;
 			this->multiple = false;
 		}
 

@@ -37,10 +37,10 @@ namespace cmdline {
 		bool                         hasFlag(const char* name)   { return (commandLine->hasFlag(name)); };
 //		bool                         hasFlag(std::string name)   { return (commandLine->hasFlag((char *) name); };
 
-		std::map<std::string, bool>        getDefaultFlags()                   { return (commandLine->getDefaultFlags()); };
-	 	std::map<std::string, std::string> getDefaultOptions()                 { return (commandLine->getDefaultOptions()); };
-		std::map<std::string, void*>       getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); }; 
-		std::map<std::string, bool>        getCurrentFlags(bool set = true)    { return (commandLine->getCurrentFlags(set)); };
+		std::unordered_map<std::string, bool>        getDefaultFlags()                   { return (commandLine->getDefaultFlags()); };
+	 	std::unordered_map<std::string, std::string> getDefaultOptions()                 { return (commandLine->getDefaultOptions()); };
+		std::unordered_map<std::string, void*>       getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); };
+		std::unordered_map<std::string, bool>        getCurrentFlags(bool set = true)    { return (commandLine->getCurrentFlags(set)); };
 
 //		template <typename T>  T  getOption(char* name)       { return (commandLine->getOption<T>(name)); };
 //		template <typename T>  T  getOption(std::string name) { return (commandLine->getOption<T>(name)); };

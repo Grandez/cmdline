@@ -1,0 +1,16 @@
+fig:nice-fig
+tab:nice-tab
+prerequisites
+intro
+literature
+methods
+applications
+example-one
+example-two
+final-words
+definiciones
+parametro
+argumento
+opcion
+flags
+concatenacion

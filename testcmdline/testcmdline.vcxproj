@@ -45,6 +45,7 @@
     </ClCompile>
     <ClCompile Include="test_contructors.cpp" />
     <ClCompile Include="test_defaults.cpp" />
+    <ClCompile Include="test_map.cpp" />
     <ClCompile Include="test_validations.cpp" />
   </ItemGroup>
   <ItemGroup>
