@@ -4,7 +4,6 @@
 #include <vector>
 #include "cmdline.h"
 
-
 namespace cmdline {
 
 	std::unordered_map<std::string, ParmItem> vector2map(std::vector<ParmItem> vect) {
@@ -71,12 +70,18 @@ namespace cmdline {
 		strcpy_s(cstr, len, str.c_str());
 		return (cstr);
 	}
-	bool validateBoolean(char* value) {
+	inline bool makeBoolean(char* value) {
 		if (strlen(value) == 0) return false;
 		if (value[0] == '0') return false;
 		if (_stricmp(value, "no")) return false;
 		if (_stricmp(value, "false")) return false;
 		return true;
+	}
+	inline bool makeBoolean(std::string value) {
+		return makeBoolean(value.c_str());
+	}
+	Option* findOption(std::unordered_map<std::string, Option>* map, char* what) {
+		return findOption(map, std::string(what));
 	}
 	Option* findOption(std::unordered_map<std::string, Option>* map, std::string what) {
 		try {
@@ -85,5 +90,40 @@ namespace cmdline {
 		catch (std::out_of_range ex) {
 			return (Option*) nullptr;
 		}
+	}
+	std::vector<std::string> splitParameter(char* parm) {
+		char* next_token1 = NULL;
+		char* pch;
+		bool quote = false;
+		std::vector<char*> toks;
+		std::vector<std::string> toks2;
+
+		pch = strtok_s(parm, ",", &next_token1);
+		while (pch != NULL) {
+			toks.push_back(pch);
+			pch = strtok_s(NULL, ",", &next_token1);
+		}
+
+		for (char* t : toks) {
+			if (t[0] == '"') {
+				toks2.push_back(&(t[1]));
+				quote = true;
+			}
+			else {
+				if (quote) {
+					toks2[toks2.size()-1].append(",");
+					if (t[strlen(t) - 1] == '"') {
+						t[strlen(t) - 1] = 0x0;
+						quote = false;
+					}
+					toks2[toks2.size() - 1].append(t);
+				}
+				else {
+					toks2.push_back(t);
+				}
+			}
+		}
+		if (quote) throw CmdLineException("Missing comma");
+		return toks2;
 	}
 }

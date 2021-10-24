@@ -1,12 +1,13 @@
-#include <vector>
-#include <string>
-#include <utility>
-#include <algorithm>
-#include <unordered_map>
-#include <cstdlib>
-
-#include "parmitem.hpp"
+//#include <algorithm>
+//#include <unordered_map>
+//#include <cstdlib>
+//
+//// #include <boost/scoped_ptr.hpp>
+//
 #include "commandline.hpp"
+
+//#include "parmitem.hpp"
+
 #include "cmdline_exceptions.hpp"
 #include "parameter_tree.hpp"
 #include "tools.h"
@@ -36,12 +37,13 @@ namespace cmdline {
 			if (rootFlags[i] != nullptr) free(rootFlags[i]);
 		}
 	}
+	
 	CommandLine& CommandLine::parse(const int argc, char* argv[]) {
 		std::string in;
 		char* prev = nullptr;
 		for (int i = 1; i < argc; i++) {
 			switch (argv[i][0]) {
-			case '/': prev = addParameterToOptions(argv[i], prev); break;
+			case '/': prev = updateOption(argv[i], prev); break;
 			case '+': if (prev != nullptr) throw CmdLineException("Missing value", prev);
 				      prev = updateFlag(argv[i], argv[i], true);   break;
 			case '-': in = argv[i]; 
@@ -51,8 +53,8 @@ namespace cmdline {
 				         prev = updateFlag(argv[i], prev, false);
 				      break;   
 			default:
-				if (prev == NULL) {
-					addParameterToInput(argv[i]);
+				if (prev == NULL) { 
+					inputs.push_back(argv[i]);
 				}
 				else {
 					addValueToOption(argv[i], prev);
@@ -62,14 +64,51 @@ namespace cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
+	template <typename T>  T  CommandLine::getOption(char* name) {
+		return getOption(std::string(name));
+	}
+	template <typename T>  T  CommandLine::getOption(std::string name) {
+		Option *opt = findOption(&options, name);
+		return T(opt->getValue());
+	}
+	std::pair<std::string, bool>  CommandLine::getFlag(std::string name) {
+		Option* opt = findOption(&flags, name);
+		return std::pair<std::string, bool>(opt->name, makeBoolean(opt->getValue()));
+	}
+
+	bool                    CommandLine::hasFlag(char* flag) {
+		Option* opt = findOption(&flags, flag);
+		if (opt == nullptr) return false;
+		return makeBoolean(opt->getValue().c_str());
+	}
+	std::unordered_map<std::string, bool>  CommandLine::getDefaultFlags(bool all) {
+		std::unordered_map<std::string, bool> act;
+		Option opt;
+		bool val;
+		for (auto it : flags) {
+			opt = it.second;
+			if (all) {
+				act.emplace(opt.name, makeBoolean(opt.defvalue));
+			}
+			else {
+				val = makeBoolean(opt.defvalue);
+				if (val) act.emplace(opt.name, makeBoolean(opt.defvalue));
+			}
+		}
+		return act;
+	}
 	std::unordered_map<std::string, std::string>  CommandLine::getDefaultOptions() {
 		std::unordered_map<std::string, std::string> defs;
+		Option opt;
 		std::unordered_map<std::string, ParmItem>::iterator it;
-		for (it = defOptions.begin(); it != defOptions.end(); it++) {
-			// defs.insert(it->second.name, it->second.value);
+		for (auto it : options) {
+			opt = it.second;
+			defs.emplace(opt.name, opt.defvalue);
 		}
 		return defs;
 	}
+	
+
 	std::unordered_map<std::string, bool>          CommandLine::getCurrentFlags(bool active) {
 		std::unordered_map<std::string, bool> flg;
 		/*
@@ -92,21 +131,32 @@ namespace cmdline {
 		*/
 		return opts;
 	}
-
+	
 	/* *****************************************/
 	/* Private 
 	********************************************/
-	char* CommandLine::addParameterToOptions(char* option, char* prev) {
+	char* CommandLine::updateOption(char* option, char* prev) {
+		int pos = std::string(option).find("=");
+		if ( pos != std::string::npos) return updateDefinition(option, pos);
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
 	}
-	char *CommandLine::updateFlag(char* flag, char* prev, bool value) {
-		char* ptr;
-		ptr = strtok(flag, ",");
-		while (ptr != nullptr) {
-			updateFlagItem(ptr, prev, value);
-			ptr = strtok(NULL, ",");
+	char* CommandLine::updateDefinition(char *def, int pos) {
+		bool pending = false;
+		std::string prev;
+		std::string name = std::string(def).substr(0, pos-1);
+		std::vector<std::string> defs = splitParameter(&(def[pos+1]));
+		for (std::string value : defs) {
+			Option* opt = findOption(&defines, name);
+			enum class Source { DEFAULT, ENV, CMDLINE };
+			if (opt == nullptr) defines.emplace(name, Option(name, value, cmdline::Source::CMDLINE));
+		    if (opt != nullptr) opt->setValue(value);
 		}
+		return nullptr;
+	}
+	char *CommandLine::updateFlag(char* flag, char* prev, bool value) {
+		std::vector<std::string> flags = splitParameter(flag);
+		for (std::string f : flags) updateFlagItem((char *) f.c_str(), prev, value);
 		return nullptr;
 	}
 	void CommandLine::updateFlagItem(char* flag, char* prev, bool value) {
@@ -125,27 +175,18 @@ namespace cmdline {
 			}
 		}
 	}
-	inline char* CommandLine::addParameterToInput(char* input) {
-		inputs.push_back(input);
-		return (nullptr);
-	}
 	char* CommandLine::addValueToOption(char* value, char* option) {
+		if (strlen(option) == 1) throw CmdLineException("Invalid Option", option);
 		ParmItem def = defOptions.find(option)->second;
 		validateValue(value, def.type);
-
-		if (strlen(option) == 1) throw CmdLineException("Invalid Option", option);
+		Option* opt = findOption(&options, option);
+		if (def.multiple) opt->addValue(value);
+		if (!def.multiple) opt->setValue(value);
 		return (checkOption(&(option[1])));
 	}
+
 	char *CommandLine::checkOption(char* option) { return (checkParameter(rootOptions, option)); }
 	char *CommandLine::checkFlag  (char* flag)   { return (checkParameter(rootFlags, flag)); }
-	bool                    CommandLine::hasFlag(char* flag) {
-		/*
-		if (flags.find(flag) != flags.end()) return true;
-		std::map<std::string, bool>::iterator it = defFlags.find(flag);
-		return (it == defFlags.end()) ? false : true;
-		*/
-		return false;
-	}
 	char* CommandLine::checkParameter(ParameterTree* root[], char* parm) {
 		size_t idx = 0;
 		ParameterTree* base = root[parm[0] - ' '];
@@ -205,12 +246,4 @@ namespace cmdline {
 			if (value != nullptr) it->second.setFromEnv(value);
 		}
 	}
-
-/*
-
-
-//	template <typename T>  T  CommandLine::getOption(char* name)          {
-//	}
-	
-	*/
 }

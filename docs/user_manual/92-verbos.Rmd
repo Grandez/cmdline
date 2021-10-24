@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Verbos
 
 Por definicion los parametros son inmutables, lo cual no implica que se puedan leer.

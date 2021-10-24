@@ -1,5 +1,7 @@
 #pragma once
+
 #include <string>
+#include <vector>
 
 #include "sal.h"
 #include "enums.h"
@@ -8,21 +10,21 @@ namespace cmdline {
 	class Option {
 	public:
 		std::string name;
-		char* value;
-		Source source;
-		char* defvalue;
-		Option() {
-			value = nullptr;
-		}
-		Option(std::string name, char* value)       : source(Source::DEFAULT) { this->name = name; this->value = value; }
-		Option(const char *name, const char* value) : source(Source::DEFAULT) { this->name = std::string(name); this->value = strdup(value); }
-		inline Option& setFromEnv(const char* value) {
-			this->value = strdup(value);
-			return *this;
-		}
-		inline Option& setValue(bool value) { 
-			this->value = (char *) ((value) ? "1" : "0"); 
-			return *this;
-	    }
+		Source source = Source::DEFAULT;
+		char* defvalue = 0x0;;
+		Option();
+		Option(std::string name, char* value); 
+		Option(const char* name, const char* value);
+		Option(std::string name, std::string value, Source source);
+		inline Option& setFromEnv(const char* value);
+		inline Option& setValue(bool value);
+		inline Option& setValue(std::string value);
+		inline Option& addValue(std::string value);
+		inline std::string getValue() { return values[0]; }
+		inline std::vector<std::string> getValues() { return values; }
+		inline std::string letValue() { return std::string(values[0]); }
+		inline std::vector<std::string> letValues() { return std::vector(values); }
+	private:
+		std::vector<std::string> values;
 	};
 }

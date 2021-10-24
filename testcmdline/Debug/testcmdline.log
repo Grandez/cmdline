@@ -1,50 +1,7 @@
-﻿Build started 23/10/2021 12:43:57.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\testcmdline.tlog\testcmdline.lastbuildstate".
-       InitializeBuildStatus:
-         Touching "Debug\testcmdline.tlog\unsuccessfulbuild".
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt pch.cpp
-         pch.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt test.cpp test_contructors.cpp test_defaults.cpp test_map.cpp test_validations.cpp
-         test.cpp
-         test_contructors.cpp
-         test_defaults.cpp
-         test_map.cpp
-         The contents of <any> are available only with C++17 or later.
-         test_validations.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\Debug\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest_maind.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtestd.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\Debug\testcmdline.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\Debug\testcmdline.lib" /MACHINE:X86 /SAFESEH Debug\test.obj
-         Debug\pch.obj
-         Debug\test_contructors.obj
-         Debug\test_defaults.obj
-         Debug\test_map.obj
-         Debug\test_validations.obj
-         P:\C\cmdline\Debug\cmdline.lib
-     1>cmdline.lib(commandline.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-     1>test_map.obj : error LNK2019: unresolved external symbol "public: __thiscall cmdline::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??0?$HashMap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@cmdline@@QAE@XZ) referenced in function "private: virtual void __thiscall Mapping_init_Test::TestBody(void)" (?TestBody@Mapping_init_Test@@EAEXXZ)
-     1>test_map.obj : error LNK2019: unresolved external symbol "public: __thiscall cmdline::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::~HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??1?$HashMap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@cmdline@@QAE@XZ) referenced in function "private: virtual void __thiscall Mapping_init_Test::TestBody(void)" (?TestBody@Mapping_init_Test@@EAEXXZ)
-     1>test_map.obj : error LNK2019: unresolved external symbol "public: bool __thiscall cmdline::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::insert(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,void *)" (?insert@?$HashMap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@cmdline@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAX@Z) referenced in function "private: virtual void __thiscall Mapping_init_Test::TestBody(void)" (?TestBody@Mapping_init_Test@@EAEXXZ)
-     1>P:\C\cmdline\Debug\testcmdline.exe : fatal error LNK1120: 3 unresolved externals
-     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)) -- FAILED.
+﻿Build started 24/10/2021 12:26:40.
+Logging verbosity is set to: Normal.
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
 
-Build FAILED.
-
-       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
-       (Link target) -> 
-         cmdline.lib(commandline.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-
-
-       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
-       (Link target) -> 
-         test_map.obj : error LNK2019: unresolved external symbol "public: __thiscall cmdline::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??0?$HashMap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@cmdline@@QAE@XZ) referenced in function "private: virtual void __thiscall Mapping_init_Test::TestBody(void)" (?TestBody@Mapping_init_Test@@EAEXXZ)
-         test_map.obj : error LNK2019: unresolved external symbol "public: __thiscall cmdline::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::~HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??1?$HashMap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@cmdline@@QAE@XZ) referenced in function "private: virtual void __thiscall Mapping_init_Test::TestBody(void)" (?TestBody@Mapping_init_Test@@EAEXXZ)
-         test_map.obj : error LNK2019: unresolved external symbol "public: bool __thiscall cmdline::HashMap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::insert(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,void *)" (?insert@?$HashMap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@cmdline@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAX@Z) referenced in function "private: virtual void __thiscall Mapping_init_Test::TestBody(void)" (?TestBody@Mapping_init_Test@@EAEXXZ)
-         P:\C\cmdline\Debug\testcmdline.exe : fatal error LNK1120: 3 unresolved externals
-
-    1 Warning(s)
-    4 Error(s)
-
-Time Elapsed 00:00:01.29
+Time Elapsed 00:00:00.00

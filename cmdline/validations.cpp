@@ -32,7 +32,6 @@ namespace cmdline {
 	inline void validateDecimal(char* value) {
 		char* p;
 		double val;
-		std::string::size_type sz;
 		try {
 			val = std::strtod(value, &p);
 		}
@@ -75,33 +74,30 @@ namespace cmdline {
 	inline void validateDir(char* value) {
 		std::string start = "^";
 		std::string drive = "(? <drive>[a - z] : ) ?";
-		std::string path  = "(? <path>(? : [\\] ? (? : [\w !#() - ] + | [.]{ 1,2 }) + ) * [\\]) ?";
+		std::string path  = "(? <path>(? : [\\] ? (? : [\\w !#() - ] + | [.]{ 1,2 }) + ) * [\\]) ?";
 		std::string end   = "$";
 		std::regex pat{ start + drive + path + end};
 		bool match = std::regex_search(value, pat);
 		if (!match) throw CmdLineValueException(value, "expected path");
-		// return new std::filesystem::path(value);
-		//return new std::string(value);
 	}
 	inline void  validateFile(char* value) {
-		//return new std::string(value);
+		struct stat info;
+		std::filesystem::path p = std::filesystem::path(value);
+		if (stat((const char*)p.c_str(), &info) != 0) throw CmdLineValueException(value, "dir not found");
+		if ((info.st_mode & S_IFREG) == 0)  throw CmdLineValueException(value, "is not a file");
 	}
 	inline void validateDirExist(char* value) {
 		struct stat info;
-		/*
-		std::filesystem::path *p = (std::filesystem::path *) validateDir(value);
+		validateDir(value);
+		std::filesystem::path p = std::filesystem::path(value);
 		
-		if (stat((const char *) p->c_str(), &info) != 0) throw CmdLineValueException(value, "dir not found");
+		if (stat((const char *) p.c_str(), &info) != 0) throw CmdLineValueException(value, "dir not found");
 		if ((info.st_mode & S_IFDIR) == 0)  throw CmdLineValueException(value, "is not a directory");
-		*/
-		//return p;
-		// return new std::string(value);
 	}
 	inline void  validateFileExist(char* value) {
 		struct stat info;
 		if (stat(value, &info) != 0) throw CmdLineValueException(value, "file not found");
 		if (info.st_mode & S_IFDIR)  throw CmdLineValueException(value, "file is directory");
-		// return strdup(value);
 	}
 
 	void          validateValue(char* value, cmdline::Type type) {
