@@ -28,10 +28,7 @@ namespace cmdline {
 		CmdLine(std::vector<ParmItem> args)                                                { commandLine = new CommandLine(args); }
 		CmdLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags) { commandLine = new CommandLine(options, flags); }
 		~CmdLine()                                                                         { delete commandLine;  }
-		CmdLine& parse(const int argc, char* argv[]) { 
-			commandLine->parse(argc, argv);
-			return *this;
-		}
+		CmdLine& parse(const int argc, char* argv[]) { commandLine->parse(argc, argv); return *this; }
 		
 		bool                         hasFlag(char* name)         { return (commandLine->hasFlag(name)); };
 		bool                         hasFlag(const char* name)   { return (commandLine->hasFlag(name)); };
@@ -41,6 +38,8 @@ namespace cmdline {
 	 	std::unordered_map<std::string, std::string> getDefaultOptions()                 { return (commandLine->getDefaultOptions()); };
 		std::unordered_map<std::string, void*>       getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); };
 		std::unordered_map<std::string, bool>        getCurrentFlags(bool set = true)    { return (commandLine->getCurrentFlags(set)); };
+		std::vector<std::string>                     getDefinition(const char *name)     { return (commandLine->getDefinition(name)); };
+		std::unordered_map<std::string, std::vector<std::string>>                getDefinitions()  { return (commandLine->getDefinitions()); };
 
 		template <typename T>  T  getOption(char* name)       { return (commandLine->getOption<T>(name)); };
 		template <typename T>  T  getOption(std::string name) { return (commandLine->getOption<T>(name)); };

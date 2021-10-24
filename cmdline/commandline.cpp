@@ -75,7 +75,6 @@ namespace cmdline {
 		Option* opt = findOption(&flags, name);
 		return std::pair<std::string, bool>(opt->name, makeBoolean(opt->getValue()));
 	}
-
 	bool                    CommandLine::hasFlag(char* flag) {
 		Option* opt = findOption(&flags, flag);
 		if (opt == nullptr) return false;
@@ -107,8 +106,6 @@ namespace cmdline {
 		}
 		return defs;
 	}
-	
-
 	std::unordered_map<std::string, bool>          CommandLine::getCurrentFlags(bool active) {
 		std::unordered_map<std::string, bool> flg;
 		/*
@@ -131,7 +128,21 @@ namespace cmdline {
 		*/
 		return opts;
 	}
-	
+	std::vector<std::string>                     CommandLine::getDefinition(const char* name) {
+		Option* opt = findOption(&defines, name);
+		if (opt == nullptr) return std::vector<std::string>();
+		return opt->getValues();
+	}
+	std::unordered_map<std::string, std::vector<std::string>>  CommandLine::getDefinitions() {
+		std::unordered_map<std::string, std::vector<std::string>> defs;
+		Option opt;
+		for (auto it : defines) {
+			opt = it.second;
+			defs.emplace(it.second.name, it.second.getValues());
+		}
+		return defs;
+	}
+
 	/* *****************************************/
 	/* Private 
 	********************************************/

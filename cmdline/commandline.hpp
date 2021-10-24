@@ -29,6 +29,9 @@ namespace cmdline {
 		std::unordered_map<std::string, std::string> getDefaultOptions();
 		std::unordered_map<std::string, bool>        getCurrentFlags(bool active = true);
 		std::unordered_map<std::string, void*>       getCurrentOptions(bool all = false);
+		std::vector<std::string>                     getDefinition(const char* name);
+		std::unordered_map<std::string, std::vector<std::string>>  getDefinitions();
+
 		template <typename T>  T  getOption(char* name);
 		template <typename T>  T  getOption(std::string name);
 		
