@@ -1,0 +1,3 @@
+# Abstract {-}
+
+Este documento plantea una propuesta universal para la gestión de los argumentos pasados a un programa por línea de comandos para cualquier sistema operativo junto con el manual de uso para programas desarrollados en C++ 

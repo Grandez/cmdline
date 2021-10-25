@@ -1,0 +1,378 @@
+# Literature
+
+Cualquier programa susceptible de ser ejecutado a través de una linea de comandos necesita una serie de argumentos de entrada, de lo contrario siempre generaría el mismo resultado.
+
+Ahora bien, dependiendo del sistema operativo, la forma habitual de indicar estos parámetros varía. Es mas, cada programador podría definir un nuevo sistema de entrada de parámetros. Esto obliga, o al menos debería hacerlo, a que un programa multiplataforma debería adecuarse a cada sistema para aceptar el estilo de cada uno de ellos.
+
+## Especificacion de argumentos 
+
+Observemos algunos de los metodos usados en los sistemas operativos mas comunes
+
+### sistemas nix
+
+Típicamente estos sistemas utilizan los símbolos '-' o '--' para indicar un parámetro, donde:
+
+- La primera forma, denominada _corta_ se aplica a parámetros definidos por un solo carácter y permite además concatenarlos en una secuencia de letras.
+- La segunda forma, denominada _larga_ se introdujo con los sistemas basados en Linux y utiliza palabras o abreviaciones en lugar de solo un carácter.
+
+Pero cada comando implementa su propia forma de introducir parámetros
+
+Ejemplos tipicos serían:
+
+`command -h`
+`command --help`
+`command -af` 
+`command -a -f`
+`command -o output_file`
+
+
+Sin embargo, esto no siempre es asi
+
+Por ejemplo, esta es la salida del comando: `ps --help`
+
+```
+Usage: ps [-aefls] [-u UID] [-p PID]
+
+Report process status
+
+ -a, --all       show processes of all users
+ -e, --everyone  show processes of all users
+ -f, --full      show process uids, ppids
+ -h, --help      output usage information and exit
+ -l, --long      show process uids, ppids, pgids, winpids
+ -p, --process   show information for specified PID
+ -s, --summary   show process summary
+ -u, --user      list processes owned by UID
+ -V, --version   output version information and exit
+ -W, --windows   show windows as well as cygwin processes
+
+With no options, ps outputs the long format by default
+
+```
+Y esta es una salida parcial del comando `ls --help`
+
+```
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+...                               
+        --si                   likewise, but use powers of 1000 not 1024
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+...
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+...
+```
+
+En el primer caso, `ps` se utiliza el método clásico de _paramater value_: `[-u UID]`
+En el segundo se utiliza un metodo alternativo: _--block-size=SIZE_. En incluso una tercera forma: `+FORMAT`
+
+otros comandos también usan la forma: `-letter:value`
+
+Si nos fijamos, por ejemplo, en el comando `ps` observamos varias situaciones:
+
+- Soporta 20 opciones, 10 en versión corta y otras 10 mas con su equivalente en versión larga
+- La ayuda solo muestra 7 de las posibles opciones, excluye "help, version y windows"
+- Todas las opciones empiezan por '-' (o '--') como suele ser habitual, pero dos de ellas: `u,p` necesitan un valor añadido.
+
+### sistemas windows
+
+En Microsof Windows el funcionamiento es similar, aunque históricamente el indicador de parámetro ha sido el caracter '/':
+
+Y por otro lado, la linea de comandos no distingue minusculas y mayusculas
+
+`command /h`
+`command /-Y`
+`command /D:value`
+`command /o output_file`
+
+Actualmente, con la introducción de `Powershell` también se soportan las formas '-' y '--' y en algunos casos combinadas con los carácteres ':' y '='
+
+### ZOS y otros
+
+Otros sistemas operativos soportan otros métodos. 
+
+Por ejemplo zOS usa /_characters_, donde _characters_ es el mínimo numero de caracteres necesario para identificar un comando, siendo el usuario el responsable de conocer si el parametro necesita mas información o no. Por ejemplo:
+
+- `/pre pattern` y `/preffix pattern` son equivalentes en el sentido de que no existe mas que un comando que empiece por la secuencia `pre` y necesitan un patron
+- `/sort` ordena una lista ascendente por defecto por acepta las formas:
+   - `/sort asc` Ordenar ascendente (valor por defecto)
+   - `/sort desc` Ordenar descendente 
+
+Y otros sistemas utilizan la forma `parametro=valor`
+
+
+## Conclusiones
+
+1. Cada programa puede establecer un sistema de entrada de argumentos, independientemente del sistema operativo en el que se vaya a ejecutar, si bien, normalmente adheriendose a los criterios comunes del mismo
+
+2. Por ese motivo, todavía no se ha encontrado un método estándar de procesamiento de la linea de comandos (¡Si! Soy consciente de la existencia de `getopts`y otras librerias, lo mismo que lo soy de que no cumplen con los requerimientos generales )
+
+3. De manera general, es necesario controlar programáticamente las dos versiones de de cada parámetro; por ejemplo: `-v` y `--verbose`
+
+ttydev = NODEV;
+	memf = nlistf = swapf = NULL;
+	while ((ch = getopt(argc, argv,
+	    "AaCcegHhjkLlM:mN:O:o:p:rSTt:U:uvW:wx")) != -1)
+		switch (ch) {
+		case 'A':
+			all = 1;
+			xflg = 1;
+			break;
+		case 'a':
+			all = 1;
+			break;
+		case 'C':
+			break;			/* no-op */
+		case 'c':
+			commandonly = 1;
+			break;
+		case 'e':			/* XXX set ufmt */
+			needenv = 1;
+			break;
+		case 'g':
+			break;			/* no-op */
+		case 'H':
+			showthreads = 1;
+			break;
+		case 'h':
+			prtheader = ws.ws_row > 5 ? ws.ws_row : 22;
+			break;
+		case 'j':
+			parsefmt(jfmt);
+			fmt = 1;
+			jfmt[0] = '\0';
+			break;
+		case 'k':
+			kflag = 1;
+			break;
+		case 'L':
+			showkey();
+			exit(0);
+		case 'l':
+			parsefmt(lfmt);
+			fmt = 1;
+			lfmt[0] = '\0';
+			break;
+		case 'M':
+			memf = optarg;
+			break;
+		case 'm':
+			sortby = SORTMEM;
+			break;
+		case 'N':
+			nlistf = optarg;
+			break;
+		case 'O':
+			parsefmt(o1);
+			parsefmt(optarg);
+			parsefmt(o2);
+			o1[0] = o2[0] = '\0';
+			fmt = 1;
+			break;
+		case 'o':
+			parsefmt(optarg);
+			fmt = 1;
+			break;
+		case 'p':
+			pid = atol(optarg);
+			xflg = 1;
+			break;
+		case 'r':
+			sortby = SORTCPU;
+			break;
+		case 'S':
+			sumrusage = 1;
+			break;
+		case 'T':
+			if ((optarg = ttyname(STDIN_FILENO)) == NULL)
+				errx(1, "stdin: not a terminal");
+			/* FALLTHROUGH */
+		case 't': {
+			struct stat sb;
+			char *ttypath, pathbuf[PATH_MAX];
+
+			if (strcmp(optarg, "co") == 0)
+				ttypath = _PATH_CONSOLE;
+			else if (*optarg != '/') {
+				int r = snprintf(pathbuf, sizeof(pathbuf), "%s%s",
+				    _PATH_TTY, optarg);
+				if (r < 0 || r > sizeof(pathbuf))
+					errx(1, "%s: too long\n", optarg);
+				ttypath = pathbuf;
+			} else
+				ttypath = optarg;
+			if (stat(ttypath, &sb) == -1)
+				err(1, "%s", ttypath);
+			if (!S_ISCHR(sb.st_mode))
+				errx(1, "%s: not a terminal", ttypath);
+			ttydev = sb.st_rdev;
+			break;
+		}
+		case 'U':
+			if (uid_from_user(optarg, &uid) == -1)
+				errx(1, "%s: no such user", optarg);
+			Uflag = xflg = 1;
+			break;
+		case 'u':
+			parsefmt(ufmt);
+			sortby = SORTCPU;
+			fmt = 1;
+			ufmt[0] = '\0';
+			break;
+		case 'v':
+			parsefmt(vfmt);
+			sortby = SORTMEM;
+			fmt = 1;
+			vfmt[0] = '\0';
+			break;
+		case 'W':
+			swapf = optarg;
+			break;
+		case 'w':
+			if (wflag)
+				termwidth = UNLIMITED;
+			else if (termwidth < 131)
+				termwidth = 131;
+			wflag = 1;
+			break;
+		case 'x':
+			xflg = 1;
+			break;
+		default:
+			usage();
+		}
+	argc -= optind;
+	argv += optind;
+
+#define	BACKWARD_COMPATI
+
+
+grep source
+
+while (((c = getopt_long(aargc, aargv, optstr, long_options, NULL)) !=
+	    -1)) {
+		switch (c) {
+		case '0': case '1': case '2': case '3': case '4':
+		case '5': case '6': case '7': case '8': case '9':
+			if (newarg || !isdigit(lastc))
+				Aflag = 0;
+			else if (Aflag > LLONG_MAX / 10) {
+				errno = ERANGE;
+				err(2, NULL);
+			}
+			Aflag = Bflag = (Aflag * 10) + (c - '0');
+			break;
+		case 'C':
+			if (optarg == NULL) {
+				Aflag = Bflag = 2;
+				break;
+			}
+			/* FALLTHROUGH */
+		case 'A':
+			/* FALLTHROUGH */
+		case 'B':
+			errno = 0;
+			l = strtoull(optarg, &ep, 10);
+			if (((errno == ERANGE) && (l == ULLONG_MAX)) ||
+			    ((errno == EINVAL) && (l == 0)))
+				err(2, NULL);
+			else if (ep[0] != '\0') {
+				errno = EINVAL;
+				err(2, NULL);
+			}
+			if (c == 'A')
+				Aflag = l;
+			else if (c == 'B')
+				Bflag = l;
+			else
+				Aflag = Bflag = l;
+			break;
+			
+			
+			
+## Definiciones
+
+Introduzcamos algunas definiciones:
+
+**Parametro** o **argumento** son sinonimos y es cualquier elemento que aparece despues del comando en si mismo 
+
+Ahora bien, estos parámetros pueden ser de tres tipos:
+
+1. Datos de entrada
+2. Opciones
+3. Flags
+
+Y cada programa puede aceptar un determinado número de opciones, incluida ninguna, y de flags, incluidos ninguno, pero en el caso de que exista al menos uno, este, por definición debe asumir un valor por defecto cuando no es especificado en la linea de comandos.
+
+### Datos de entrada
+
+Es cualquier elemento o secuencia de ellos que debe ser procesado por el programa.
+
+Por ejemplo: `cat fichero.txt` mostrara por pantalla el contenido del fichero fichero.txt
+
+### Opciones
+
+Es cualquier elemento o secuencia de ellos que modifica o afecta al comportamiento del programa aportándole algun tipo de información
+
+Por ejemplo: `grep -e _pattern_` o `grep --regexp _pattern_` indica a grep que patrón usar
+
+### Flags
+
+Es cualquier elemento que activa o desactiva alguna característica o funcionalidad del programa.
+El caso mas típico seria el flag: `-h` o `--help` que indica al programa que muestre su ayuda
+
+Otros ejemplos podrían ser:
+
+`command -v` o `command --verbose` que suele usarse para generar información de progreso
+`command -s` o `command --silent` que suele usarse para evitar que se genere esa información
+
+Notese que estos flags son complementarios; es decir, afectan a las misma funcionalidad.
+
+## Incoherencias
+
+Con estos sistemas se plantean los siguientes problemas:
+
+Dado un parametro P o Parameter:
+
+- ¿Como podemos saber si es un flag o una opcion?
+- Si es un flag, ¿Activa o desactiva esa funcionalidad? (Vease el caso -verbose y -silent)
+- ¿Por que tengo que elegir como usuario, y controlar como desarrollador, las dos opciones -P y --Parameter?
+- En el caso de que no exista una version corta del parámetro, ¿Por que necesito escribir Parameter si con la primera letra ya seria suficiente? 
+- Cuanto mas caracteres tenga que escribir mas posible es que introduzca un error de tipografia
+
+# Propuesta
+
+El siguiente esquema propone resolver estas "deficiencias" y clarificar de cara al usuario los significados de cada parámetro:
+
+1. Un flag se prefija siempre con los signos + o - y su significado es **siempre** el mismo: + activa la funcionalidad y - la desactiva.
+2. Dado que los flags no necesitan información asociada se pueden concatenar en una secuencia de caracteres con la unica condicion de que ninguno de ellos empiece por el mismo caracter
+3. Una opcion se prefija **siempre** con la barra / y su valor asociado se establece en la siguiente palabra
+4. Cualquier parámetro queda definido en el momento en el que no existe duda acerca de la intención del usuario; es decir, no es necesario introducir el nombre completo del parámetro
+
+Por ultimo, y como consejo, el manual de usuario o la ayuda en linea, deberia indicar los valores por defecto de todos los flags y opciones soportadas por el programa
+

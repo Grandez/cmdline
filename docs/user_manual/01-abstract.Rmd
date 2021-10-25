@@ -1,0 +1,7 @@
+# disclaimer {-}
+
+As my mother tongue is Spanish and not forgetting that it is one of the most widely spoken languages ​​in the world but for sack of accuracy this document has been written is Castillian 
+
+However, if someone is interested in the job or wants more information, I will be happy to translate the documents or help as much as possible.
+
+In any case, for readability and maintainability reasons, I use English inside the code.

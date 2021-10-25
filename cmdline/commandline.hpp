@@ -12,10 +12,14 @@
 
 #include "option.hpp"
 
+#ifndef ENV_PREFFIX
+   #define ENV_PREFFIX "env_preffix"
+#endif
+
 namespace cmdline {
 	class CommandLine {
 	public:
-		CommandLine() = delete;
+		CommandLine();
 		CommandLine(std::vector<ParmItem> parms);
 		CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char*, bool>> flags);
 		~CommandLine();
@@ -32,7 +36,6 @@ namespace cmdline {
 		std::vector<std::string>                     getDefinition(const char* name);
 		std::unordered_map<std::string, std::vector<std::string>>  getDefinitions();
 
-		template <typename T>  T  getOption(char* name);
 		template <typename T>  T  getOption(std::string name);
 		
 	private:

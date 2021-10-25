@@ -10,12 +10,12 @@ namespace cmdline {
 		bool multiple;   // Allow multiple values?
 		ParmItem() = delete;
 		ParmItem(const char* name) { 
-			this->name = name; 
-			this->value = nullptr;
-			this->type = Type::STRING;
+			this->name = name;
+			this->value = "true";
+			this->type = Type::FLAG;
 			this->multiple = false;
 	    }
-		ParmItem(char* name, char *value) { 
+		ParmItem(const char* name, const char *value) { 
 			this->name = name; 
 			this->value = value;
 			this->type = Type::STRING;

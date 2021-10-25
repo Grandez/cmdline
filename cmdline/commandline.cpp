@@ -19,13 +19,20 @@ namespace cmdline {
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
 
+	CommandLine::CommandLine() {
+		std::vector<cmdline::ParmItem> flagHelp = { cmdline::ParmItem("help", false) };
+		loadDefaults(flagHelp);
+	}
 	CommandLine::CommandLine(std::vector<ParmItem> parms) {
+		std::vector<cmdline::ParmItem> flagHelp = { cmdline::ParmItem("help", false) };
+
 		std::fill_n(rootOptions, sizeof(rootOptions), nullptr);
 		std::fill_n(rootFlags, sizeof(rootFlags), nullptr);
 		loadDefaults(parms);
 		loadEnv(options);
 		loadEnv(flags);
-		if (flags["help"].name.length() == 0) add2tree(rootFlags, "help");
+		Option *opt = findOption(&flags, "help");
+		if (opt == nullptr) loadDefaults(flagHelp);
 	};
 	CommandLine::CommandLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags) : CommandLine(options) {
 		for (std::pair f : flags) this->flags.emplace(f.first, Option(f.first, f.second ? "1" : "0"));
@@ -64,12 +71,25 @@ namespace cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
-	template <typename T>  T  CommandLine::getOption(char* name) {
-		return getOption(std::string(name));
-	}
 	template <typename T>  T  CommandLine::getOption(std::string name) {
 		Option *opt = findOption(&options, name);
+//		if (typeid(T) == std::string) return "";
+//		if (typeid(T) == path) return "";
 		return T(opt->getValue());
+		/*
+#include <type_traits>
+
+		template <typename T>
+		void foo() {
+			if constexpr (std::is_same_v<T, path>) {
+				// use type specific operations... 
+			}
+		}
+		*/
+	}
+	template <> std::string CommandLine::getOption<std::string>(std::string name) {
+		Option* opt = findOption(&options, name);
+		return opt->getValue();
 	}
 	std::pair<std::string, bool>  CommandLine::getFlag(std::string name) {
 		Option* opt = findOption(&flags, name);
@@ -97,14 +117,11 @@ namespace cmdline {
 		return act;
 	}
 	std::unordered_map<std::string, std::string>  CommandLine::getDefaultOptions() {
-		std::unordered_map<std::string, std::string> defs;
-		Option opt;
-		std::unordered_map<std::string, ParmItem>::iterator it;
+		std::unordered_map<std::string, std::string> act;
 		for (auto it : options) {
-			opt = it.second;
-			defs.emplace(opt.name, opt.defvalue);
+			if (strcmp(it.first.c_str(), ENV_PREFFIX) != 0) act.emplace(it.first, it.second.defvalue);
 		}
-		return defs;
+		return act;
 	}
 	std::unordered_map<std::string, bool>          CommandLine::getCurrentFlags(bool active) {
 		std::unordered_map<std::string, bool> flg;
@@ -161,7 +178,7 @@ namespace cmdline {
 			Option* opt = findOption(&defines, name);
 			enum class Source { DEFAULT, ENV, CMDLINE };
 			if (opt == nullptr) defines.emplace(name, Option(name, value, cmdline::Source::CMDLINE));
-		    if (opt != nullptr) opt->setValue(value);
+//		    if (opt != nullptr) opt->setValue(value);
 		}
 		return nullptr;
 	}
@@ -175,7 +192,7 @@ namespace cmdline {
 		validateEntry(flag, prev);
 		try {
      		Option* opt = findOption(&flags, checkFlag(&(flag[1])));
-			opt->setValue(value);
+//			opt->setValue(value);
 		}
 		catch (CmdLineException ex) {
 			char newFlag[3] = "+ ";
@@ -191,8 +208,8 @@ namespace cmdline {
 		ParmItem def = defOptions.find(option)->second;
 		validateValue(value, def.type);
 		Option* opt = findOption(&options, option);
-		if (def.multiple) opt->addValue(value);
-		if (!def.multiple) opt->setValue(value);
+//		if (def.multiple) opt->addValue(value);
+//		if (!def.multiple) opt->setValue(value);
 		return (checkOption(&(option[1])));
 	}
 
@@ -248,7 +265,7 @@ namespace cmdline {
 		char* value;
 		char key[255];
 		const char *prfx;
-		Option opt = options["env_preffix"];
+		Option opt = options[ENV_PREFFIX];
 		prfx = opt.name.c_str();
 		std::unordered_map<std::string, Option>::iterator it;
 		for (it = parms.begin(); it != parms.end(); it++) {

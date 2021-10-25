@@ -22,17 +22,22 @@
 
 namespace cmdline {
 
+	typedef std::unordered_map<std::string, bool>        Flags;
+	typedef std::unordered_map<std::string, std::string> Options;
+
 	class CmdLine {
 	public:
-		CmdLine() = delete;
+		CmdLine()                                                                          { commandLine = new CommandLine();    };
 		CmdLine(std::vector<ParmItem> args)                                                { commandLine = new CommandLine(args); }
 		CmdLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags) { commandLine = new CommandLine(options, flags); }
+		CmdLine(std::vector<std::pair<char*, bool>> flags, std::vector<ParmItem> options)  { commandLine = new CommandLine(options, flags); }
 		~CmdLine()                                                                         { delete commandLine;  }
 		CmdLine& parse(const int argc, char* argv[]) { commandLine->parse(argc, argv); return *this; }
 		
-		bool                         hasFlag(char* name)         { return (commandLine->hasFlag(name)); };
-		bool                         hasFlag(const char* name)   { return (commandLine->hasFlag(name)); };
-		bool                         hasFlag(std::string name)   { return (commandLine->hasFlag(name.c_str())); };
+		bool                         hasFlag(char* name)         { return commandLine->hasFlag(name); };
+		bool                         hasFlag(const char* name)   { return commandLine->hasFlag(name); };
+		bool                         hasFlag(std::string name)   { return commandLine->hasFlag(name.c_str()); };
+		std::pair<std::string, bool> getFlag(std::string name)   { return commandLine->getFlag(name);  }
 
 		std::unordered_map<std::string, bool>        getDefaultFlags(bool all=true)      { return (commandLine->getDefaultFlags(all)); };
 	 	std::unordered_map<std::string, std::string> getDefaultOptions()                 { return (commandLine->getDefaultOptions()); };
