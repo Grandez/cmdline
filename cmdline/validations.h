@@ -2,15 +2,18 @@
 
 #include "parmitem.hpp"
 
+using namespace std;
+
 namespace cmdline {
-    void        validateEntry(char* parm, char* prev);
-    void        validateValue(char* value, Type type);
-    inline void validateNumber(char* value);
-    inline void validateDecimal(char* value);
-    std::vector<int> validateTime(char* value);
-    std::vector<int> validateDate(char* value);
-    inline void validateDir(char* value);
-    inline void validateDirExist(char* value);
-    inline void validateFile(char* value);
-    inline void validateFileExist(char* value);
+    void        validateEntry     (const char* parm, const char* prev);
+    void        validateValue     (const char* value, Type type);
+    void        validateNumber    (const char* value);
+    void        validateDecimal   (const char* value);
+    void        validateDir       (const char* value);
+    void        validateDirExist  (const char* value);
+    void        validateFile      (const char* value);
+    void        validateFileExist (const char* value);
+    vector<int> validateTime      (const char* value);
+    vector<int> validateDate      (const char* value);
+
 }

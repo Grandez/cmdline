@@ -1,21 +1,24 @@
 #pragma once
+
 #include <string>
 #include <unordered_map>
-#include <vector>
 
+#include "arg.hpp"
 #include "parmitem.hpp"
 #include "parameter_tree.hpp"
-#include "option.hpp"
+
+using namespace std;
+using namespace cmdline;
 
 namespace cmdline {
-	std::unordered_map<std::string, ParmItem> vector2map(std::vector<ParmItem> vect);
-	void add2tree(cmdline::ParameterTree* root[], const char* word);
-	char* makeChar(std::string str);
-	bool makeBoolean(char* value);
-	bool makeBoolean(std::string value);
-	Option* findOption(std::unordered_map<std::string, Option>* map, std::string what);
-	Option* findOption(std::unordered_map<std::string, Option>* map, char *what);
-	std::vector<std::string> splitParameter(char* parm);
-	std::vector<std::string> tokenize(char* src, char* pat);
-	std::vector<int>         tokenizeNumber(char* src, char* pat);
+	unordered_map<string, ParmItem> vector2map(vector<ParmItem> vect);
+	void add2tree(ParameterTree* root[], const char* word);
+	char* makeChar(string str);
+ 	bool makeBoolean(string value);
+
+//	Argument* findOption(Args* map, std::string what);
+
+	vector<string> splitParameter(const char* parm);
+	vector<string> tokenize(char* src, char* pat);
+	vector<int>         tokenizeNumber(const char* src, char* pat);
 }

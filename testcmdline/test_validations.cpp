@@ -61,9 +61,8 @@ TEST(Validations, Numbers_OK) {
 	EXPECT_NO_THROW(validateNumber("123"));
 	EXPECT_NO_THROW(validateNumber("123456"));
 	EXPECT_NO_THROW(validateNumber("0xff"));
-	EXPECT_NO_THROW(validateNumber("2f04e009")); 
+	EXPECT_NO_THROW(validateNumber("0X2f04e009")); 
 	EXPECT_NO_THROW(validateNumber("0x7fffff"));
-	EXPECT_NO_THROW(validateNumber("-11101001100100111010"));
 }
 
 TEST(Validations, Numbers_KO) {
@@ -74,6 +73,7 @@ TEST(Validations, Numbers_KO) {
 	EXPECT_THROW(validateNumber("--123"),    CmdLineValueException);
 	EXPECT_THROW(validateNumber("-12-3"),    CmdLineValueException);
 	EXPECT_THROW(validateNumber("xfa"),      CmdLineValueException);
+	EXPECT_THROW(validateNumber("2f04e009"), CmdLineValueException);
 }
 TEST(Validations, Decimals_OK) {
 	std::locale::global(std::locale("es_ES.utf8"));

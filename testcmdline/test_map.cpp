@@ -4,7 +4,6 @@
 #include <any>
 
 #include "../cmdline/parmitem.hpp"
-#include "../cmdline/hashmap.hpp"
 
 using namespace cmdline;
 TEST(Mapping, init) {

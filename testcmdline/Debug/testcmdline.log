@@ -1,28 +1,72 @@
-﻿Build started 24/10/2021 23:40:32.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\testcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+﻿Build started 26/10/2021 0:44:20.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\testcmdline.tlog\testcmdline.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "Debug\testcmdline.tlog\unsuccessfulbuild".
        ClCompile:
-         All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt test_contructors.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yc"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yu"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt test_contructors.cpp test_defaults.cpp test_input.cpp test_map.cpp test_tree.cpp test_validations.cpp
          test_contructors.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\Debug\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest_maind.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtestd.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\Debug\testcmdline.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\Debug\testcmdline.lib" /MACHINE:X86 /SAFESEH Debug\test.obj
-         Debug\pch.obj
-         Debug\test_contructors.obj
-         Debug\test_defaults.obj
-         Debug\test_input.obj
-         Debug\test_map.obj
-         Debug\test_validations.obj
-         P:\C\cmdline\Debug\cmdline.lib
-         testcmdline.vcxproj -> P:\C\cmdline\Debug\testcmdline.exe
-       FinalizeBuildStatus:
-         Deleting file "Debug\testcmdline.tlog\unsuccessfulbuild".
-         Touching "Debug\testcmdline.tlog\testcmdline.lastbuildstate".
-     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Build target(s)).
+         test_defaults.cpp
+         test_input.cpp
+         test_map.cpp
+     1>P:\C\cmdline\cmdline\tools.h(14,24): error C2065: 'ParmItem': undeclared identifier
+     1>P:\C\cmdline\cmdline\tools.h(14,2): error C2923: 'std::unordered_map': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+       P:\C\cmdline\cmdline\tools.h(14): message : see declaration of 'ParmItem'
+     1>P:\C\cmdline\cmdline\tools.h(14,2): error C2976: 'std::unordered_map': too few template arguments
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(69): message : see declaration of 'std::unordered_map'
+     1>P:\C\cmdline\cmdline\tools.h(14,52): error C2065: 'ParmItem': undeclared identifier
+     1>P:\C\cmdline\cmdline\tools.h(14,45): error C2923: 'std::vector': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+       P:\C\cmdline\cmdline\tools.h(14): message : see declaration of 'ParmItem'
+     1>P:\C\cmdline\cmdline\tools.h(14,45): error C2976: 'std::vector': too few template arguments
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+     1>P:\C\cmdline\cmdline\tools.h(14,62): error C2955: 'std::vector': use of class template requires template argument list
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+     1>P:\C\cmdline\cmdline\tools.h(14,67): error C2955: 'std::unordered_map': use of class template requires template argument list
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(69): message : see declaration of 'std::unordered_map'
+         test_tree.cpp
+         test_validations.cpp
+     1>P:\C\cmdline\cmdline\tools.h(14,24): error C2065: 'ParmItem': undeclared identifier
+     1>P:\C\cmdline\cmdline\tools.h(14,2): error C2923: 'std::unordered_map': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+       P:\C\cmdline\cmdline\tools.h(14): message : see declaration of 'ParmItem'
+     1>P:\C\cmdline\cmdline\tools.h(14,2): error C2976: 'std::unordered_map': too few template arguments
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(69): message : see declaration of 'std::unordered_map'
+     1>P:\C\cmdline\cmdline\tools.h(14,52): error C2065: 'ParmItem': undeclared identifier
+     1>P:\C\cmdline\cmdline\tools.h(14,45): error C2923: 'std::vector': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+       P:\C\cmdline\cmdline\tools.h(14): message : see declaration of 'ParmItem'
+     1>P:\C\cmdline\cmdline\tools.h(14,45): error C2976: 'std::vector': too few template arguments
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+     1>P:\C\cmdline\cmdline\tools.h(14,62): error C2955: 'std::vector': use of class template requires template argument list
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+     1>P:\C\cmdline\cmdline\tools.h(14,67): error C2955: 'std::unordered_map': use of class template requires template argument list
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(69): message : see declaration of 'std::unordered_map'
+         Generating Code...
+     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
+
+       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
+       (ClCompile target) -> 
+         P:\C\cmdline\cmdline\tools.h(14,24): error C2065: 'ParmItem': undeclared identifier
+         P:\C\cmdline\cmdline\tools.h(14,2): error C2923: 'std::unordered_map': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+         P:\C\cmdline\cmdline\tools.h(14,2): error C2976: 'std::unordered_map': too few template arguments
+         P:\C\cmdline\cmdline\tools.h(14,52): error C2065: 'ParmItem': undeclared identifier
+         P:\C\cmdline\cmdline\tools.h(14,45): error C2923: 'std::vector': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+         P:\C\cmdline\cmdline\tools.h(14,45): error C2976: 'std::vector': too few template arguments
+         P:\C\cmdline\cmdline\tools.h(14,62): error C2955: 'std::vector': use of class template requires template argument list
+         P:\C\cmdline\cmdline\tools.h(14,67): error C2955: 'std::unordered_map': use of class template requires template argument list
+         P:\C\cmdline\cmdline\tools.h(14,24): error C2065: 'ParmItem': undeclared identifier
+         P:\C\cmdline\cmdline\tools.h(14,2): error C2923: 'std::unordered_map': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+         P:\C\cmdline\cmdline\tools.h(14,2): error C2976: 'std::unordered_map': too few template arguments
+         P:\C\cmdline\cmdline\tools.h(14,52): error C2065: 'ParmItem': undeclared identifier
+         P:\C\cmdline\cmdline\tools.h(14,45): error C2923: 'std::vector': 'ParmItem' is not a valid template type argument for parameter '_Ty'
+         P:\C\cmdline\cmdline\tools.h(14,45): error C2976: 'std::vector': too few template arguments
+         P:\C\cmdline\cmdline\tools.h(14,62): error C2955: 'std::vector': use of class template requires template argument list
+         P:\C\cmdline\cmdline\tools.h(14,67): error C2955: 'std::unordered_map': use of class template requires template argument list
+
     0 Warning(s)
-    0 Error(s)
+    16 Error(s)
 
-Time Elapsed 00:00:00.49
+Time Elapsed 00:00:02.41

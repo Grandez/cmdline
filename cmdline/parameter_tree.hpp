@@ -1,6 +1,6 @@
 #pragma once
 
-#include <map>
+#include "common.h"
 
 namespace cmdline {
 
@@ -27,7 +27,7 @@ namespace cmdline {
         int sizeChildren = 0;
         char* word = 0x0;
         int wordSize = 0;
-        std::map<char, ParameterTree*> children;
+        std::unordered_map<char, ParameterTree*> children;
 
         char *getWord(char* base, int sizeBase);
         char *getReversedWord(char* base, int sizeBase);

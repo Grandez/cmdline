@@ -1,22 +1,11 @@
-﻿Build started 24/10/2021 23:38:37.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\cmdlinetest\cmdlinetest.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\cmdlinetest.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt cmdlinetest.cpp
-         cmdlinetest.cpp
-         The contents of <any> are available only with C++17 or later.
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\Debug\cmdlinetest.exe" /INCREMENTAL /ILK:"Debug\cmdlinetest.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\Debug\cmdlinetest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\Debug\cmdlinetest.lib" /MACHINE:X86 Debug\cmdlinetest.obj
-         P:\C\cmdline\Debug\cmdline.lib
-         cmdlinetest.vcxproj -> P:\C\cmdline\Debug\cmdlinetest.exe
-       FinalizeBuildStatus:
-         Deleting file "Debug\cmdlinetest.tlog\unsuccessfulbuild".
-         Touching "Debug\cmdlinetest.tlog\cmdlinetest.lastbuildstate".
-     1>Done Building Project "P:\C\cmdline\cmdlinetest\cmdlinetest.vcxproj" (Build target(s)).
+﻿Build started 25/10/2021 21:15:54.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\cmdlinetest\cmdlinetest.vcxproj" on node 2 (Clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\cmdlinetest.tlog\cmdlinetest.lastbuildstate".
+     1>Done Building Project "P:\C\cmdline\cmdlinetest\cmdlinetest.vcxproj" (Clean target(s)).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.84
+Time Elapsed 00:00:00.00

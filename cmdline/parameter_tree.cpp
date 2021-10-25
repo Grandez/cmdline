@@ -1,9 +1,8 @@
-#include <string>
-#include <algorithm>
-
-#include "sal.h"
+#include "common.h"
 #include "parameter_tree.hpp"
 
+using namespace std;
+using namespace cmdline;
 
 namespace cmdline {
 	ParameterTree& ParameterTree::addChild(ParameterTree* child) {
@@ -16,7 +15,7 @@ namespace cmdline {
 		branchs++;
 		return *this;
 	}
-	char * cmdline::ParameterTree::getWord() {
+	char * ParameterTree::getWord() {
 		char* word = (char*)calloc(16, sizeof(char));
 		word[0] = letter;
 
@@ -38,7 +37,7 @@ namespace cmdline {
 		if (children.size() == 0) return (word);
 		return (children.begin()->second->getWord(word, sizeBase));
 	}
-	char* cmdline::ParameterTree::getReversedWord() {
+	char* ParameterTree::getReversedWord() {
 		char* word = (char*)calloc(16, sizeof(char));
 		if (word != nullptr) word[0] = letter;
 		if (parent != nullptr) word = parent->getReversedWord(word, 16);

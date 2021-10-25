@@ -1,4 +1,6 @@
 #define _VALIDATIONS_CODE_
+#include <stdio.h>      /* printf, NULL */
+#include <stdlib.h>     /* strtoll */
 
 #include <iostream>
 #include <vector>
@@ -9,6 +11,8 @@
 #include <regex>
 #include <time.h>
 #include <filesystem>
+#include <cstdlib>
+#include <errno.h>
 
 #include "sal.h"
 #include "tools.h"
@@ -17,30 +21,33 @@
 
 
 namespace cmdline {
-	void        validateEntry(char* parm, char* prev) {
+	void        validateEntry(const char* parm, const char* prev) {
 		if (strlen(parm) == 1) throw CmdLineException("Invalid Option", parm);
 		//if (prev != nullptr) throw CmdLineException("Missing value", prev);
 	}
-	void  validateNumber(char* value) {
+	void  validateNumber(const char* value) {
 		try {
-			std::stoll(std::string(value), nullptr, 0);
+			size_t pos;
+            std::stoll(std::string(value), &pos, 0);
+			if (strlen(value) != pos) throw std::exception("expected number");
 		}
 		catch (std::exception ex) {
 			throw CmdLineValueException(value, "expected number");
 		}
 	}
-	inline void validateDecimal(char* value) {
+	void validateDecimal(const char* value) {
 		try {
 			size_t pos;
 			long double ld;
 			long double *pld = &ld;
 			std::stold(std::string(value), &pos);
+			if (strlen(value) != pos) throw std::exception("expected decimal");
 		}
 		catch (std::exception ex) {
 			throw CmdLineValueException(value, "expected decimal");
 		}
 	}
-	std::vector<int> validateTime(char* value) {
+	std::vector<int> validateTime(const char* value) {
 		std::regex pat{ "^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$" };
 		std::tm t;
 		memset(&t, 0, sizeof(tm));
@@ -59,7 +66,7 @@ namespace cmdline {
 		if ((year % 100) == 0) return ((year % 400) == 0 ? 29 : 28);
 		return 29;
 	}
-	void validateDateValue(char *value, std::vector<int> dt) {
+	void validateDateValue(const char *value, std::vector<int> dt) {
 		int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		int day;
 
@@ -68,7 +75,7 @@ namespace cmdline {
 		day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] - 1];
 		if (dt[0] > day) throw CmdLineValueException(value, "invalid date");
 	}
-	std::vector<int> validateDate(char* value) {
+	std::vector<int> validateDate(const char* value) {
 		std::vector<int> dt(3);
 		std::regex pat1{ "^[0-9]{1,2}[/-]{1}[0-9]{1,2}[/-]{1}[0-9]{2,4}$" };
 		std::regex pat2{ "^[0-9]{2,4}[/-]{1}[0-9]{1,2}[/-]{1}[0-9]{1,2}$" };
@@ -84,7 +91,7 @@ namespace cmdline {
 		}
 		bool match = std::regex_search(value, pat);
 		if (!match) throw CmdLineValueException(value, "invalid date");
-		std::vector<int> res = tokenizeNumber(value, (char*)"/-");
+		std::vector<int> res = tokenizeNumber(value, (char*)"[/-]");
 		switch (d) {
 		       case std::time_base::dmy: dt = { res[0], res[1], res[2] }; break;
 		       case std::time_base::mdy: dt = { res[1], res[0], res[2] }; break;
@@ -95,7 +102,8 @@ namespace cmdline {
 		validateDateValue(value, dt);
 		return dt;
 	}
-	inline void validateDir(char* value) {
+	inline void validateDir(const char* value) {
+	//	^ (((\\\\([^ \\ / :\ * \ ? "\|<>\. ]+))|([a-zA-Z]:\\))(([^\\/:\*\?"\ | <>\.] *)([\\] *))*)$
 		std::string start = "^";
 		std::string drive = "(? <drive>[a - z] : ) ?";
 		std::string path  = "(? <path>(? : [\\] ? (? : [\\w !#() - ] + | [.]{ 1,2 }) + ) * [\\]) ?";
@@ -104,13 +112,13 @@ namespace cmdline {
 		bool match = std::regex_search(value, pat);
 		if (!match) throw CmdLineValueException(value, "expected path");
 	}
-	inline void  validateFile(char* value) {
+	inline void  validateFile(const char* value) {
 		struct stat info;
 		std::filesystem::path p = std::filesystem::path(value);
-		if (stat((const char*)p.c_str(), &info) != 0) throw CmdLineValueException(value, "dir not found");
+		if (stat((const char*)p.c_str(), &info) != 0) throw CmdLineValueException(value, "is not a file");
 		if ((info.st_mode & S_IFREG) == 0)  throw CmdLineValueException(value, "is not a file");
 	}
-	inline void validateDirExist(char* value) {
+	inline void validateDirExist(const char* value) {
 		struct stat info;
 		validateDir(value);
 		std::filesystem::path p = std::filesystem::path(value);
@@ -118,13 +126,13 @@ namespace cmdline {
 		if (stat((const char *) p.c_str(), &info) != 0) throw CmdLineValueException(value, "dir not found");
 		if ((info.st_mode & S_IFDIR) == 0)  throw CmdLineValueException(value, "is not a directory");
 	}
-	inline void  validateFileExist(char* value) {
+	inline void  validateFileExist(const char* value) {
 		struct stat info;
 		if (stat(value, &info) != 0) throw CmdLineValueException(value, "file not found");
 		if (info.st_mode & S_IFDIR)  throw CmdLineValueException(value, "file is directory");
 	}
 
-	void          validateValue(char* value, cmdline::Type type) {
+	void          validateValue(const char* value, cmdline::Type type) {
 		/*
 		void* obj = value;
 		switch (type) {

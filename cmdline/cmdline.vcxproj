@@ -19,25 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="arg.hpp" />
     <ClInclude Include="cmdline.h" />
     <ClInclude Include="cmdline_exceptions.hpp" />
     <ClInclude Include="commandline.hpp" />
-    <ClInclude Include="enums.h" />
-    <ClInclude Include="hashing.h" />
-    <ClInclude Include="hashmap.hpp" />
-    <ClInclude Include="option.hpp" />
     <ClInclude Include="parameter_tree.hpp" />
     <ClInclude Include="parmitem.hpp" />
-    <ClInclude Include="pstdint.h" />
-    <ClInclude Include="sal.h" />
     <ClInclude Include="tools.h" />
     <ClInclude Include="validations.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="arg.cpp" />
     <ClCompile Include="commandline.cpp" />
-    <ClCompile Include="hashing.c" />
-    <ClCompile Include="hashmap.cpp" />
-    <ClCompile Include="option.cpp" />
     <ClCompile Include="parameter_tree.cpp" />
     <ClCompile Include="tools.cpp" />
     <ClCompile Include="validations.cpp" />

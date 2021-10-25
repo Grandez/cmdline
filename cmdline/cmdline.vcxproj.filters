@@ -33,28 +33,13 @@
     <ClInclude Include="parameter_tree.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="tools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="validations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pstdint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hashing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hashmap.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="option.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="enums.h">
+    <ClInclude Include="arg.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,13 +56,7 @@
     <ClCompile Include="validations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hashing.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hashmap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="option.cpp">
+    <ClCompile Include="arg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,6 +5,7 @@
 
 #include "../cmdline/cmdline.h"
 
+using namespace std;
 using namespace cmdline;
 
 TEST(Constructors, empty) {
@@ -103,11 +104,11 @@ TEST(Constructors, option_and_flags_mixed) {
 	EXPECT_EQ(options.size(), 1);
 }
 TEST(Constructors, option_and_flags) {
-	std::vector<cmdline::ParmItem> opts = {
-		  cmdline::ParmItem("outer", "..")
+	vector<cmdline::ParmItem> opts = {
+		  ParmItem("outer", "..")
 	};
-	std::vector<std::pair<char*, bool>> flgs = {
-		std::pair<char*, bool>("help", false)
+	vector<Flag> flgs = {
+		Flag("help", false)
 	};
 	cmdline::CmdLine cmdLine(opts, flgs);
 	Flags flags = cmdLine.getDefaultFlags();
@@ -116,11 +117,11 @@ TEST(Constructors, option_and_flags) {
 	EXPECT_EQ(options.size(), 1);
 }
 TEST(Constructors, option_and_flags_invert) {
-	std::vector<cmdline::ParmItem> opts = {
+	vector<cmdline::ParmItem> opts = {
 		  cmdline::ParmItem("outer", "..")
 	};
-	std::vector<std::pair<char*, bool>> flgs = {
-		std::pair<char*, bool>("help", false)
+	vector<Flag> flgs = {
+		pair<const char*, bool>("help", false)
 	};
 	cmdline::CmdLine cmdLine(flgs, opts);
 	Flags flags = cmdLine.getDefaultFlags();

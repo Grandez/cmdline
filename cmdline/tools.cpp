@@ -1,16 +1,18 @@
-#include "tools.h"
-#include <map>
-#include <string.h>
-#include <vector>
-#include "cmdline.h"
 #include <regex>
+#include <cstdlib>
+#include <unordered_map>
 
+#include "arg.hpp"
+#include "parmitem.hpp"
 #include "cmdline_exceptions.hpp"
+
+using namespace std;
+using namespace cmdline;
 
 namespace cmdline {
 
-	std::unordered_map<std::string, ParmItem> vector2map(std::vector<ParmItem> vect) {
-		std::unordered_map<std::string, ParmItem> mmap;
+	unordered_map<string, ParmItem> vector2map(vector<ParmItem> vect) {
+		unordered_map<string, ParmItem> mmap;
 		for (size_t i = 0; i < vect.size(); i++) mmap.insert_or_assign(vect[i].name, vect[i]);
 		return (mmap);
     }
@@ -62,52 +64,51 @@ namespace cmdline {
 			last = joinTree(root[pos], word);
 			parent = last->parent;
 			while (parent) {
-				parent->branchs = std::max(parent->branchs, last->branchs);
+				parent->branchs = max(parent->branchs, last->branchs);
 				parent = parent->parent;
 			}
 		}
 	}
-	char* makeChar(std::string str) {
+	char* makeChar(string str) {
 		int len = (int) str.length() + 1;
 		char* cstr = new char[len];
 		strcpy_s(cstr, len, str.c_str());
 		return (cstr);
 	}
-	bool makeBoolean(std::string value) { return makeBoolean((char*)value.c_str()); }
-	bool makeBoolean(char* value) {
-		//TODO Launch exception on invalid entry
-		if (value == nullptr)              return false;
-		if (strlen(value) == 0)            return false;
+	bool makeBoolean(string value) { 
+		char * val = (char*) value.c_str();
+
+		if (val == nullptr)              return false;
+		if (strlen(val) == 0)            return false;
 		if (value[0] == '0')               return false;
 		if (value[0] == '1')               return true;
-		if (strcmp(value, "-1")      == 0) return true;
-		if (_stricmp(value, "no"   ) == 0) return false;
-		if (_stricmp(value, "false") == 0) return false;
-		if (_stricmp(value, "yes"  ) == 0) return true;
-		if (_stricmp(value, "true" ) == 0) return true;
-		if (_stricmp(value, "si"   ) == 0) return true;
+		if (strcmp(val, "-1")      == 0) return true;
+		if (_stricmp(val, "no"   ) == 0) return false;
+		if (_stricmp(val, "false") == 0) return false;
+		if (_stricmp(val, "yes"  ) == 0) return true;
+		if (_stricmp(val, "true" ) == 0) return true;
+		if (_stricmp(val, "si"   ) == 0) return true;
 		return false;
 	}
-
-	Option* findOption(std::unordered_map<std::string, Option>* map, char* what) {
-		return findOption(map, std::string(what));
-	}
-	Option* findOption(std::unordered_map<std::string, Option>* map, std::string what) {
+	/*
+	Argument* findOption(Args* map, string what) {
 		try {
-			return &map->at(what);
+			auto res = map->at(what);
+			return &(map->at(what));
 		}
-		catch (std::out_of_range ex) {
+		catch (out_of_range ex) {
 			return (Option*) nullptr;
 		}
 	}
-	std::vector<std::string> splitParameter(char* parm) {
+	*/
+	vector<string> splitParameter(const char* parm) {
 		char* parse = strdup(parm);
 		char* next_token = NULL;
 		char* token = nullptr;
 		char* tmp = nullptr;;
 		bool quote = false;
-		std::vector<char*> toks;
-		std::vector<std::string> toks2;
+		vector<char*> toks;
+		vector<string> toks2;
 
 		token = strtok_s(parse, ",", &next_token);
 		while (token) {
@@ -142,20 +143,20 @@ namespace cmdline {
 		}
 		return toks2;
 	}
-	std::vector<std::string> tokenize(char* src, char* pat) {
-		std::string str(src);
+	vector<string> tokenize(const char* src, char* pat) {
+		string str(src);
 
-		std::regex reg(pat);
+		regex reg(pat);
 
-		std::sregex_token_iterator iter(str.begin(), str.end(), reg, -1);
-		std::sregex_token_iterator end;
-		std::vector<std::string> vec(iter, end);
+		sregex_token_iterator iter(str.begin(), str.end(), reg, -1);
+		sregex_token_iterator end;
+		vector<string> vec(iter, end);
 		return vec;
 	}
-	std::vector<int> tokenizeNumber(char* src, char* pat) {
-		std::vector<int> res;
-		std::vector<std::string> vec = tokenize(src, pat);
-		for (std::string s : vec) res.push_back(std::stoi(s));
+	vector<int> tokenizeNumber(const char* src, char* pat) {
+		vector<int> res;
+		vector<string> vec = tokenize(src, pat);
+		for (string s : vec) res.push_back(stoi(s));
 		return res;
 	}
 

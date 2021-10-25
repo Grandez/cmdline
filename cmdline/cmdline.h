@@ -1,57 +1,37 @@
 #pragma once
-/**
- * @brief Interface of command line parser
- * I do not like expose private members into interfaz 
- * so, "the real code is in CommandLine class
- * 
- * # Process
- * 
- * 1. Instanciate **CmdLine** with options and flags
- * 2. Parse the command line. When errors or help and exception will be thrown
- * 3. Query and use options and flags
- * 
- */
 
-#include <vector>
-#include <map>
-#include <string>
-
-#include "parmitem.hpp"
+#include "common.h"
 #include "commandline.hpp"
-#include "cmdline_exceptions.hpp"
+
+using namespace std;
 
 namespace cmdline {
 
-	typedef std::unordered_map<std::string, bool>        Flags;
-	typedef std::unordered_map<std::string, std::string> Options;
-
 	class CmdLine {
 	public:
-		CmdLine()                                                                          { commandLine = new CommandLine();    };
-		CmdLine(std::vector<ParmItem> args)                                                { commandLine = new CommandLine(args); }
-		CmdLine(std::vector<ParmItem> options, std::vector<std::pair<char *, bool>> flags) { commandLine = new CommandLine(options, flags); }
-		CmdLine(std::vector<std::pair<char*, bool>> flags, std::vector<ParmItem> options)  { commandLine = new CommandLine(options, flags); }
-		~CmdLine()                                                                         { delete commandLine;  }
-		CmdLine& parse(const int argc, char* argv[]) { commandLine->parse(argc, argv); return *this; }
-		
-		bool                         hasFlag(char* name)         { return commandLine->hasFlag(name); };
-		bool                         hasFlag(const char* name)   { return commandLine->hasFlag(name); };
-		bool                         hasFlag(std::string name)   { return commandLine->hasFlag(name.c_str()); };
-		std::pair<std::string, bool> getFlag(std::string name)   { return commandLine->getFlag(name);  }
+		CmdLine() { commandLine = new CommandLine(); }
+		CmdLine(vector<ParmItem> args)                                      { commandLine = new CommandLine(args); }
+		CmdLine(vector<ParmItem> options, vector<Flag> flags)  { commandLine = new CommandLine(options, flags); }
+		CmdLine(vector<Flag> flags, vector<ParmItem> options) { commandLine = new CommandLine(options, flags); }
+		~CmdLine() { delete commandLine; }
+		CmdLine& parse(const int argc, const char* argv[]) { commandLine->parse(argc, argv); return *this; }
 
-		std::unordered_map<std::string, bool>        getDefaultFlags(bool all=true)      { return (commandLine->getDefaultFlags(all)); };
-	 	std::unordered_map<std::string, std::string> getDefaultOptions()                 { return (commandLine->getDefaultOptions()); };
-		std::unordered_map<std::string, void*>       getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); };
-		std::unordered_map<std::string, bool>        getCurrentFlags(bool set = true)    { return (commandLine->getCurrentFlags(set)); };
-		std::vector<std::string>                     getDefinition(const char *name)     { return (commandLine->getDefinition(name)); };
-		std::unordered_map<std::string, std::vector<std::string>>                getDefinitions()  { return (commandLine->getDefinitions()); };
+		bool  hasFlag(const char* name) { return commandLine->hasFlag(name); };
+		bool  hasFlag(string name)      { return commandLine->hasFlag(name.c_str()); };
+		Flag  getFlag(string name)      { return commandLine->getFlag(name); }
 
-		template <typename T>  T  getOption(char* name)       { return (commandLine->getOption<T>(name)); };
-		template <typename T>  T  getOption(std::string name) { return (commandLine->getOption<T>(name)); };
+		Flags   getDefaultFlags(bool all = true) { return (commandLine->getDefaultFlags(all)); };
+		Flags   getCurrentFlags(bool set = true) { return (commandLine->getCurrentFlags(set)); };
+		Options getDefaultOptions() { return (commandLine->getDefaultOptions()); };
+		Options getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); };
+
+//		vector<string>  getDefinition(const char* name) { return (commandLine->getDefinition(name)); };
+//		Definitions     getDefinitions() { return (commandLine->getDefinitions()); };
+
+//		template <typename T>  T  getOption(const char* name) { return (commandLine->getOption<T>(name)); };
+//		template <typename T>  T  getOption(string name) { return (commandLine->getOption<T>(name)); };
+
 	private:
-		CommandLine* commandLine;
-		
+		CommandLine *commandLine;
 	};
- }
-
-
+}
