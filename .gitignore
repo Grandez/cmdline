@@ -38,7 +38,12 @@
 # Directories
 .vs/**
 x64/**
+x86/**
 Debug/**
 **/Debug/**
 packages/**
 .Rproj.user
+
+# Others
+.gitignore
+.Rhistory
