@@ -3,140 +3,165 @@
 #include <stdexcept>
 #include <regex>
 
-#include "../cmdline/cmdline.h"
+#include "../cmdline/cmdline.hpp"
 
 using namespace std;
 using namespace cmdline;
 
 TEST(Constructors, empty) {
-	cmdline::CmdLine cmdLine;
-	Flags flags = cmdLine.getDefaultFlags();
-	EXPECT_EQ(flags.size(), 1); // Help
+	// No flags, no options
+	CmdLine cmdLine;
+	Flags   flags   = cmdLine.getDefaultFlags();
+	Options options = cmdLine.getDefaultOptions();
+	EXPECT_EQ(flags.size(),   0);
+	EXPECT_EQ(options.size(), 0);
 }
-TEST(Constructors, flag_help) {
-	std::vector<cmdline::ParmItem> iflags = {
-	 cmdline::ParmItem("help", false)
-	};
 
-	cmdline::CmdLine cmdLine(iflags);
-	Flags flags = cmdLine.getDefaultFlags();
-	EXPECT_EQ(flags.size(), 1);
-}
 TEST(Constructors, Flags_1) {
-	std::vector<cmdline::ParmItem> flags = {
-		 cmdline::ParmItem("output", true)
+	// 1 flag, 0 options
+	std::vector<cmdline::ParmItem> iflags = {
+		 ParmItem("verbose")
 	};
-	cmdline::CmdLine cmdLine(flags);
-	Flags mflags = cmdLine.getDefaultFlags();
-	Options mOptions = cmdLine.getDefaultOptions();
-	EXPECT_EQ(mflags.size(), flags.size() + 1); // help implicit
-	EXPECT_EQ(mOptions.size(), 0);
+	CmdLine cmdLine(iflags);
+	Flags   flags   = cmdLine.getDefaultFlags();
+	Options options = cmdLine.getDefaultOptions();
+	EXPECT_EQ(flags.size(), iflags.size());
+	EXPECT_EQ(options.size(), 0);
 }
+
 TEST(Constructors, Flags_2) {
-	std::vector<cmdline::ParmItem> flags = {
+	// 2 flags. Note that second arg is boolean, so is aflag
+	std::vector<cmdline::ParmItem> iflags = {
 		 cmdline::ParmItem("output", true)
 		,cmdline::ParmItem("outer", true)
 	};
-	cmdline::CmdLine cmdLine(flags);
-	std::unordered_map<std::string, bool> mFlags = cmdLine.getDefaultFlags();
-	std::unordered_map<std::string, std::string> mOptions = cmdLine.getDefaultOptions();
-	EXPECT_EQ(mFlags.size(), flags.size() + 1); // help implicit
-	EXPECT_EQ(mOptions.size(), 0);
+	cmdline::CmdLine cmdLine(iflags);
+	Flags   flags = cmdLine.getDefaultFlags();
+	Options options = cmdLine.getDefaultOptions();
+	EXPECT_EQ(flags.size(), iflags.size());
+	EXPECT_EQ(options.size(), 0);
 }
 TEST(Constructors, Flags_with_help) {
-	std::vector<cmdline::ParmItem> flags = {
+	// Help is not auto inserted
+	std::vector<cmdline::ParmItem> iflags = {
 		 cmdline::ParmItem("output", true)
 		,cmdline::ParmItem("outer", true)
 		,cmdline::ParmItem("help", false)
 	};
-	cmdline::CmdLine cmdLine(flags);
-	Flags   mFlags   = cmdLine.getDefaultFlags();
-	Options mOptions = cmdLine.getDefaultOptions();
-	EXPECT_EQ(mFlags.size(), flags.size());
-	EXPECT_EQ(mOptions.size(), 0);
+	cmdline::CmdLine cmdLine(iflags);
+	Flags   flags   = cmdLine.getDefaultFlags();
+	Options options = cmdLine.getDefaultOptions();
+	EXPECT_EQ(flags.size(), flags.size());
+	EXPECT_EQ(options.size(), 0);
 }
+
 TEST(Constructors, getHelp) {
+	//Help exists
 	std::vector<cmdline::ParmItem> flags = {
 		 cmdline::ParmItem("output", true)
 		,cmdline::ParmItem("outer", true)
 	};
 	cmdline::CmdLine cmdLine(flags);
-	std::pair<std::string, bool>  pair = cmdLine.getFlag("help");
-	EXPECT_EQ(pair.first, "help");
+	Flag flag = cmdLine.getFlag("help");
+	EXPECT_EQ(flag.first, "help");
 }
-TEST(Constructors, HelpDefined) {
+TEST(Constructors, getHELP) {
+	// HELP Exists
 	std::vector<cmdline::ParmItem> flags = {
 		 cmdline::ParmItem("output", true)
 		,cmdline::ParmItem("outer", true)
 	};
 	cmdline::CmdLine cmdLine(flags);
-	std::pair<std::string, bool>  pair = cmdLine.getFlag("help");
-	EXPECT_FALSE(pair.second);
+	Flag flag = cmdLine.getFlag("HELP");
+	EXPECT_EQ(flag.first, "HELP");
 }
 TEST(Constructors, HelpExplicit) {
-	std::vector<cmdline::ParmItem> iflags = {
-		 cmdline::ParmItem("help", false)
-		,cmdline::ParmItem("outer", "..")
+	// Can get Help status
+	vector<cmdline::ParmItem> iflags = {
+		 ParmItem("help", false)
+		,ParmItem("outer", "..")
 	};
-	cmdline::CmdLine cmdLine(iflags);
-	Flags flags = cmdLine.getDefaultFlags();
+	CmdLine cmdLine(iflags);
+	Flags flags = cmdLine.getDefaultFlags(true);
 	EXPECT_EQ(flags.size(), 1);
 }
+
 TEST(Constructors, option_1) {
+	// 1 Options cause arg 2 is not boolean
 	std::vector<cmdline::ParmItem> opts = {
 		 cmdline::ParmItem("outer", "..")
 	};
 	cmdline::CmdLine cmdLine(opts);
 	Flags flags     = cmdLine.getDefaultFlags();
 	Options options = cmdLine.getDefaultOptions();
-	EXPECT_EQ(flags.size(),   1);
+	EXPECT_EQ(flags.size(),   0);
 	EXPECT_EQ(options.size(), 1);
 }
 TEST(Constructors, option_and_flags_mixed) {
-	std::vector<cmdline::ParmItem> opts = {
-		  cmdline::ParmItem("outer", "..")
-		 ,cmdline::ParmItem("verbose")
+	// Options and flags in same vector
+	vector<ParmItem> opts = {
+		  ParmItem("outer", "..")
+		 ,ParmItem("verbose")
 	};
-	cmdline::CmdLine cmdLine(opts);
-	Flags flags = cmdLine.getDefaultFlags();
+	CmdLine cmdLine(opts);
+	Flags flags     = cmdLine.getDefaultFlags();
 	Options options = cmdLine.getDefaultOptions();
-	EXPECT_EQ(flags.size(), 2);
+	EXPECT_EQ(flags.size(),   1);
 	EXPECT_EQ(options.size(), 1);
 }
 TEST(Constructors, option_and_flags) {
-	vector<cmdline::ParmItem> opts = {
+	// 2 parms: one for options and other for flags
+	vector<ParmItem> opts = {
 		  ParmItem("outer", "..")
 	};
 	vector<Flag> flgs = {
-		Flag("help", false)
+		Flag("verbose", false)
 	};
-	cmdline::CmdLine cmdLine(opts, flgs);
-	Flags flags = cmdLine.getDefaultFlags();
+	CmdLine cmdLine(opts, flgs);
+	Flags   flags   = cmdLine.getDefaultFlags();
 	Options options = cmdLine.getDefaultOptions();
-	EXPECT_EQ(flags.size(),  1);
+	EXPECT_EQ(flags.size(),   1);
 	EXPECT_EQ(options.size(), 1);
 }
 TEST(Constructors, option_and_flags_invert) {
-	vector<cmdline::ParmItem> opts = {
-		  cmdline::ParmItem("outer", "..")
+	// 2 parms: one for options and other for flags
+	// first flags
+	vector<ParmItem> opts = {
+		   ParmItem("outer", "..")
 	};
 	vector<Flag> flgs = {
-		pair<const char*, bool>("help", false)
+		Flag("verbose", true)
 	};
 	cmdline::CmdLine cmdLine(flgs, opts);
-	Flags flags = cmdLine.getDefaultFlags();
+	Flags   flags   = cmdLine.getDefaultFlags();
 	Options options = cmdLine.getDefaultOptions();
 	EXPECT_EQ(flags.size(), 1);
 	EXPECT_EQ(options.size(), 1);
 }
 TEST(Constructors, option_repeat) {
-	std::vector<cmdline::ParmItem> opts = {
-		 cmdline::ParmItem("outer", "..")
-        ,cmdline::ParmItem("outer", "other")
+	// outer must be appears only one time
+	vector<ParmItem> opts = {
+		 ParmItem("outer", "..")
+        ,ParmItem("outer", "other")
 	};
-	cmdline::CmdLine cmdLine(opts);
-	Flags flags = cmdLine.getDefaultFlags();
+	CmdLine cmdLine(opts);
+	Flags   flags   = cmdLine.getDefaultFlags();
 	Options options = cmdLine.getDefaultOptions();
-	EXPECT_EQ(flags.size(), 1);
+	EXPECT_EQ(flags.size(), 0);
 	EXPECT_EQ(options.size(), 1);
+}
+
+TEST(Constructors, option_repeat_value) {
+	// outer must be other
+	vector<ParmItem> opts = {
+		 ParmItem("outer", "..")
+		,ParmItem("outer", "other")
+	};
+	CmdLine cmdLine(opts);
+	Flags   flags   = cmdLine.getDefaultFlags();
+	Options options = cmdLine.getDefaultOptions();
+	string str = cmdLine.getOption("outer");
+	EXPECT_EQ(flags.size(), 0);
+	EXPECT_EQ(options.size(), 1);
+	EXPECT_EQ(str, "..");
 }

@@ -40,7 +40,7 @@ namespace cmdline {
 
 	typedef unordered_map<string, Argument>  Args;
 	typedef unordered_map<string, bool>      Flags;
-	typedef pair<string, bool>               Flag;
+	typedef pair<const string, bool>         Flag;
 	typedef unordered_map<string, string>    Options;
 	typedef pair<string, string>             Option;
 	typedef unordered_map<string, vector<string>> Definitions;

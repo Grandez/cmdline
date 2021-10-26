@@ -1,15 +1,15 @@
 #pragma once
 
-#include "common.h"
-#include "arg.hpp"
+//#include "common.h"
+// #include "arg.hpp"
 
 using namespace std;
 
 namespace cmdline {
 #ifndef __TYPES__
     #define __TYPES__
-	enum class Type { FLAG, STRING, NUMBER, DECIMAL, DATE, TIME, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
-	enum class Source { DEFAULT, ENV, CMDLINE };
+	enum class Type { FLAG, STRING, NUMBER, DECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
+	enum class Source { DEFAULT, ENV, CMDLINE, AUTO };
 #endif
 
 	class ParmItem {
@@ -31,7 +31,7 @@ namespace cmdline {
 			this->type = Type::STRING;
 			this->multiple = false;
 		}
-		ParmItem(const char* name, char* value, Type type, bool multiple = false) { 
+		ParmItem(const char* name, const char* value, Type type, bool multiple = false) { 
 			this->name = name; 
 			this->value = value;
 			this -> type = type;

@@ -15,5 +15,6 @@ namespace cmdline {
     void        validateFileExist (const char* value);
     vector<int> validateTime      (const char* value);
     vector<int> validateDate      (const char* value);
-
+    vector<int> validateDateTime  (const char* value);
+    vector<int> validateTimestamp (const char* value);
 }

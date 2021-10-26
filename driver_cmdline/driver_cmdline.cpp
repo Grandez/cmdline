@@ -1,13 +1,12 @@
 #include <iostream>
 #include <memory>
-#include "../cmdline/cmdline.h"
-#include "../cmdline/hashmap.hpp"
+#include "../cmdline/cmdline.hpp"
 #include "../cmdline/parmitem.hpp"
 
 #include "../cmdline/tools.h"
 using namespace std;
 using namespace cmdline;
-
+/*
 std::vector<cmdline::ParmItem> flags = {
 	 cmdline::ParmItem("output", true)
 	,cmdline::ParmItem("outer", true)
@@ -121,12 +120,13 @@ bool checkDefaultFlags(std::vector<cmdline::ParmItem>& flags, int argc, char* ar
 
 	return resko();
 }
-
+*/
 int main(int argc, char *argv[]) {
 	bool rc = false;
 	cout << "Starting\n";
-
-	rc |= failingGoogleTest();
+	CmdLine cmdline;
+	cout << "End\n";
+	// rc |= failingGoogleTest();
 	/*
 	char data[] = "test1,test2";
 	std::vector<std::string> res = splitParameter(data);

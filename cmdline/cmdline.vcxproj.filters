@@ -24,7 +24,7 @@
     <ClInclude Include="parmitem.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cmdline.h">
+    <ClInclude Include="cmdline.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cmdline_exceptions.hpp">
@@ -40,6 +40,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="arg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

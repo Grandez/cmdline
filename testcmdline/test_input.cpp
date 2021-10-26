@@ -5,7 +5,7 @@
 
 #include "../cmdline/tools.h"
 
-using namespace cmdline;
+using namespace std;
 
 TEST(TextInput, items_1) {
 	std::vector<std::string> res2;

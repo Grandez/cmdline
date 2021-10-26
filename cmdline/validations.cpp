@@ -102,7 +102,42 @@ namespace cmdline {
 		validateDateValue(value, dt);
 		return dt;
 	}
-	inline void validateDir(const char* value) {
+	std::vector<int> validateDateTime(const char* value) {
+		std::vector<int> dt(3);
+		std::regex pat { "^([0-9]{2,4}[/-]{1}[0-9]{1,2}[/-]{1}[0-9]{1,2}[ \t]+)([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2})$" };
+		bool match = std::regex_search(value, pat);
+		if (!match) throw CmdLineValueException(value, "invalid date time");
+		std::vector<int> res = tokenizeNumber(value, (char*)"[/-: \t]");
+		dt[0] = res[2];
+		dt[1] = res[1];
+		dt[2] = res[0];
+        
+		try {
+			validateDateValue(value, dt);
+			std::vector<string> str = tokenize(value, (char*)"[ \t]");
+			validateTime(str[1].c_str());
+		}
+		catch(exception ex) {
+			throw CmdLineValueException(value, "invalid datetime");
+		}
+		return res;
+	}
+	std::vector<int> validateTimestamp(const char* value) {
+		std::vector<string> str = tokenize(value, (char*)"\.");
+		std::vector<int> res;
+		if (str.size() != 2) throw CmdLineValueException(value, "invalid timestamp");
+		try {
+			res = validateDateTime(str[0].c_str());
+			validateNumber(str[1].c_str());
+			res.push_back(stol(str[1]));
+		}
+		catch (exception ex) {
+			throw CmdLineValueException(value, "invalid timestamp");
+		}
+		return res;
+	}
+
+	void validateDir(const char* value) {
 	//	^ (((\\\\([^ \\ / :\ * \ ? "\|<>\. ]+))|([a-zA-Z]:\\))(([^\\/:\*\?"\ | <>\.] *)([\\] *))*)$
 		std::string start = "^";
 		std::string drive = "(? <drive>[a - z] : ) ?";

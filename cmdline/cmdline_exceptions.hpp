@@ -12,6 +12,12 @@ namespace cmdline {
 	 *
 	 */
 
+	class CmdLineNotFoundException : public std::runtime_error {
+	public:
+		CmdLineNotFoundException() = delete;
+		CmdLineNotFoundException(const std::string& msg) : runtime_error(msg) {}
+		CmdLineNotFoundException(const char* msg) : runtime_error(msg) {}
+	};
 	class CmdLineException : public std::invalid_argument {
 	public:
 		CmdLineException() = delete;
@@ -55,6 +61,10 @@ namespace cmdline {
 	class HelpRequested : public CmdLineException {
 	public:
 		HelpRequested() : CmdLineException("Help requested") {};
+	};
+	class HelpDetailedRequested : public CmdLineException {
+	public:
+		HelpDetailedRequested() : CmdLineException("Help detailed requested") {};
 	};
 
 }

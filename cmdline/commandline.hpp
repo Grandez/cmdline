@@ -20,7 +20,7 @@ namespace cmdline {
 		~CommandLine();
 		CommandLine& parse(const int argc, const char* argv[]);
 		bool  hasFlag(const char *flag);
-		Flag  getFlag(string name);
+		const Flag  getFlag(const char *name);
 		Flags getDefaultFlags(bool all);
 		Flags getCurrentFlags(bool active = true);
 		Options getDefaultOptions();
@@ -29,7 +29,10 @@ namespace cmdline {
 //		Definitions  getDefinitions();
 
 
-//		template <typename T>  T  getOption(std::string name);
+		template <typename T>  
+		const T  getOption(const char *name);
+
+
 	private:
 		std::list<const char*> inputs;
 		Args       options;
@@ -48,8 +51,11 @@ namespace cmdline {
 		char* checkFlag(const char* parm);
 		char* checkParameter(ParameterTree* root[], const char* parm);
 
-		void loadDefaults (vector<ParmItem> parms);
-		void loadEnv(Args parms);
+		void updateFromEnv();
+		void udpateArgsFromEnv(Args& parms, const char *prfx);
+		void loadHelp();
+		void preInit(vector<ParmItem> parms, bool init = true);
+		void postInit();
 	};
 }
 

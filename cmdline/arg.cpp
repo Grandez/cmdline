@@ -41,6 +41,7 @@ namespace cmdline {
 		return false;
 	}
 	Argument& Argument::setFromEnv(const char* value) {
+		cout << "JGG Carga de entorno: " << name << endl;
 		this->values.push_back(std::string(value));
 		this->source = Source::ENV;
 		return *this;

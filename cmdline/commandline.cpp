@@ -1,5 +1,7 @@
 
 #include <iostream> // temp
+#include <type_traits>
+
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _SECURE_DEF_
 #define _CRT_SECURE_NO_WARNINGS
@@ -18,6 +20,10 @@ using namespace cmdline;
 
 namespace cmdline {
 
+   #ifndef ENV_PREFFIX
+       #define ENV_PREFFIX "env_preffix"
+    #endif
+
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
 
@@ -32,26 +38,23 @@ namespace cmdline {
 	}
 
 	CommandLine::CommandLine() {
-		cout << "Crea";
-		vector<ParmItem> flagHelp = { ParmItem("help", false) };
-		loadDefaults(flagHelp);
+		memset(&rootOptions, 0x0, sizeof(rootOptions));
+		memset(&rootFlags, 0x0, sizeof(rootFlags));
+	//	fill_n(rootOptions, sizeof(rootOptions), nullptr);
+	//	fill_n(rootFlags, sizeof(rootFlags), nullptr);
+		loadHelp();
 	}
 	CommandLine::CommandLine(vector<ParmItem> parms) {
-		vector<ParmItem> flagHelp = { ParmItem("help", false) };
-
-		fill_n(rootOptions, sizeof(rootOptions), nullptr);
-		fill_n(rootFlags, sizeof(rootFlags), nullptr);
-		loadDefaults(parms);
-		loadEnv(options);
-		loadEnv(flags);
-		Argument* opt = findOption(&flags, "help");
-		if (opt == nullptr) loadDefaults(flagHelp);
+		preInit(parms);
+		postInit();
 	};
-	CommandLine::CommandLine(vector<ParmItem> options, vector<Flag> flags) : CommandLine(options) {
+	CommandLine::CommandLine(vector<ParmItem> options, vector<Flag> flags)  {
+		preInit(options);
 		for (auto f : flags) {
-//CHECK			this->flags.emplace(f.first, Argument(f.first, f.second ? "1" : "0"));
+ 			 this->flags.emplace(f.first, Argument(f.first, (char *) (f.second ? "1" : "0")));
 		}
-		if (this->flags["help"].name.length() == 0) add2tree(rootFlags, "help");
+		updateFromEnv();
+		loadHelp();
 	};
 	CommandLine::~CommandLine() {
 		for (int i = 0; i < 128; i++) {
@@ -82,6 +85,7 @@ namespace cmdline {
 				}
 			}
 		}
+		if (hasFlag("HELP")) throw HelpDetailedRequested();
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
@@ -90,19 +94,19 @@ namespace cmdline {
 		if (opt == nullptr) return false;
 		return makeBoolean(opt->getValue().c_str());
 	}
+	const Flag  CommandLine::getFlag(const char* flag) {
+		Argument* opt = findOption(&flags, flag);
+		if (opt == nullptr) throw CmdLineNotFoundException(flag);
+		return Flag(opt->name, opt->getBoolean());
+	}
 
 	Flags  CommandLine::getDefaultFlags(bool all) {
 		Flags act;
 		Argument opt;
-		bool val;
 		for (auto it : flags) {
 			opt = it.second;
-			if (all) {
-				act.emplace(opt.name, makeBoolean(opt.defvalue));
-			}
-			else {
-				val = makeBoolean(opt.defvalue);
-				if (val) act.emplace(opt.name, makeBoolean(opt.defvalue));
+			if (opt.source != Source::AUTO && (all || opt.getBoolean())) {
+			    act.emplace(opt.name, makeBoolean(opt.defvalue));
 			}
 		}
 		return act;
@@ -116,11 +120,11 @@ namespace cmdline {
 	}
 	Options  CommandLine::getDefaultOptions() {
 		Options act;
-		/*
+		Argument opt;
 		for (auto it : options) {
-			if (strcmp(it.first.c_str(), ENV_PREFFIX) != 0) act.emplace(it.first, it.second.defvalue);
+			opt = it.second;
+			if (opt.source != Source::AUTO) act.emplace(opt.name, opt.defvalue);
 		}
-		*/
 		return act;
 	}
 	Options CommandLine::getCurrentOptions(bool all) {
@@ -136,29 +140,30 @@ namespace cmdline {
 			*/
 	    return opts;
 	}
-	/*
-	template <typename T>  T  CommandLine::getOption(string name) {
+
+	template <typename T>  const T  CommandLine::getOption(const char *name) {
 		Argument* opt = findOption(&options, name);
+		if (opt == nullptr) throw CmdLineNotFoundException(name);
 		//		if (typeid(T) == string) return "";
 		//		if (typeid(T) == path) return "";
 		return T(opt->getValue());
 	}
-	*/	/*
-	#include <type_traits>
+	template <> const string CommandLine::getOption(const char* name) {
+		Argument* opt = findOption(&options, name);
+		if (opt == nullptr) throw CmdLineNotFoundException(name);
 
-			template <typename T>
+		return opt->getValue();
+	}
+
+
+	/*
+	template <typename T>
 			void foo() {
 				if constexpr (is_same_v<T, path>) {
 					// use type specific operations...
 				}
 			}
 			*/
-/*
-	template <> string CommandLine::getOption<string>(string name) {
-		Argument* opt = findOption(&options, name);
-		return opt->getValue();
-	}
-*/
 	//////////////////////////////////////////////////////////////////
 	
 	char* CommandLine::checkOption(const char* option) { return (checkParameter(rootOptions, option)); }
@@ -200,24 +205,25 @@ namespace cmdline {
 		ss.append(base->getWord());
 		return (makeChar(ss));
 	}
-
-	void CommandLine::loadDefaults(vector<ParmItem> parms) {
-		for (ParmItem p : parms) {
-			Argument option(p.name, p.value);
-			Args& map = (p.type == Type::FLAG) ? flags : options;
-			map.emplace(p.name, Argument(option));
-			ParameterTree** root = (p.type == Type::FLAG) ? rootFlags : rootOptions;
-			add2tree(root, p.name);
-		}
-	}
-	void CommandLine::loadEnv(Args parms) {
-		char* value;
+	void CommandLine::updateFromEnv() {
 		char key[255];
-		const char *prfx = options[ENV_PREFFIX].name.c_str();
+		char* p = (char*)"";
+		Argument *arg = findOption(&options, ENV_PREFFIX);
+		if (arg != nullptr) {
+			sprintf(key, "%s_", arg->name.c_str());
+			p = strdup(key);
+		}
+		udpateArgsFromEnv(options, p);
+		udpateArgsFromEnv(flags, p);
+		if (arg != nullptr) free(p);
+	}
+	void CommandLine::udpateArgsFromEnv(Args &parms, const char*prfx) {
+		char key[255];
+		char* value;
 		Args::iterator it;
 
 		for (it = parms.begin(); it != parms.end(); it++) {
-			sprintf(key, "%s_%s", prfx, it->second.name.c_str());
+			sprintf(key, "%s%s", prfx, it->second.name.c_str());
 			value = getenv(key);
 			if (value != nullptr) it->second.setFromEnv(value);
         }
@@ -272,6 +278,36 @@ namespace cmdline {
 		//		if (def.multiple) opt->addValue(value);
 		//		if (!def.multiple) opt->setValue(value);
 		return (checkOption(&(option[1])));
+	}
+	void CommandLine::loadHelp() {
+		vector<ParmItem> flagHelp = { ParmItem("help", false) ,ParmItem("HELP", false) };
+		Argument* arg = findOption(&flags, "help");
+		if (arg != nullptr) return;
+		preInit(flagHelp, false);
+		arg = findOption(&flags, "help");
+		arg->source = Source::AUTO;
+		arg = findOption(&flags, "HELP");
+		arg->source = Source::AUTO;
+	}
+	void CommandLine::preInit(vector<ParmItem> parms, bool init) {
+		if (init) {
+			memset(&rootOptions, 0x0, sizeof(rootOptions));
+			memset(&rootFlags, 0x0, sizeof(rootFlags));
+
+//			fill_n(rootOptions, sizeof(rootOptions), nullptr);
+//			fill_n(rootFlags, sizeof(rootFlags), nullptr);
+		}
+		for (ParmItem p : parms) {
+			Argument option(p.name, p.value);
+			Args* map = (p.type == Type::FLAG) ? &flags : &options;
+			map->emplace(p.name, Argument(option));
+			ParameterTree** root = (p.type == Type::FLAG) ? rootFlags : rootOptions;
+			add2tree(root, p.name);
+		}
+	}
+	void CommandLine::postInit() {
+		updateFromEnv();
+		loadHelp();
 	}
 
 }
