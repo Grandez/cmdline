@@ -123,18 +123,26 @@ namespace cmdline {
 		return res;
 	}
 	std::vector<int> validateTimestamp(const char* value) {
-		std::vector<string> str = tokenize(value, (char*)"\.");
-		std::vector<int> res;
-		if (str.size() != 2) throw CmdLineValueException(value, "invalid timestamp");
+		// timestamp es yyyy-mm-dd[- ]hh:MM:SS.nnnnnn
+		std::regex pat{ "^[0-9-/\.: \t]+$" };
+		std::vector<int> dt(3);
+		char tt[9];
+		bool match = std::regex_search(value, pat);
+		if (!match) throw CmdLineValueException(value, "invalid timestamp");
+		std::vector<int> items = tokenizeNumber(value, (char*)"/-:\.\t ");
+		if (items.size() != 7) throw CmdLineValueException(value, "invalid timestamp");
+		dt[0] = items[2];
+		dt[1] = items[1];
+		dt[2] = items[0];
 		try {
-			res = validateDateTime(str[0].c_str());
-			validateNumber(str[1].c_str());
-			res.push_back(stol(str[1]));
+			validateDateValue(value, dt);
+			sprintf(tt, "%d:%d:%d", items[3], items[4], items[5]);
+			validateTime(tt);
 		}
 		catch (exception ex) {
 			throw CmdLineValueException(value, "invalid timestamp");
 		}
-		return res;
+		return items;
 	}
 
 	void validateDir(const char* value) {

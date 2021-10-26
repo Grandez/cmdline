@@ -27,7 +27,7 @@ TEST(Validations, Hours_KO) {
 	EXPECT_THROW(validateTime("24:-10:0"), CmdLineValueException);
 	EXPECT_THROW(validateTime("23/10/05"), CmdLineValueException);
 }
-// ATENTION
+
 TEST(Validations, Dates_OK) {
 	std::locale::global(std::locale("es_ES.utf8"));
 	EXPECT_NO_THROW(validateDate("1/1/01"));
@@ -52,6 +52,15 @@ TEST(Validations, Dates_KO) {
 	EXPECT_THROW(validateTime("15/13/2020"), CmdLineValueException);
 	EXPECT_THROW(validateTime("data"),       CmdLineValueException);
 	EXPECT_THROW(validateTime("29/02/2021"), CmdLineValueException);
+	std::locale::global(std::locale());
+}
+TEST(Validations, Datetimes_OK) {
+	std::locale::global(std::locale("es_ES.utf8"));
+	EXPECT_NO_THROW(validateDate("1/1/01 1:1:1"));
+	EXPECT_NO_THROW(validateDate("01/01/01 10:11:12"));
+	EXPECT_NO_THROW(validateDate("01-01-01   1:2:34"));
+	EXPECT_NO_THROW(validateDate("29/2/2000 1:12:3"));
+	EXPECT_NO_THROW(validateDate("29/02/2000 12:1:1"));
 	std::locale::global(std::locale());
 }
 TEST(Validations, Numbers_OK) {
