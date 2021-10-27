@@ -18,7 +18,9 @@ namespace cmdline {
 
 //	Argument* findOption(Args* map, std::string what);
 
-	vector<string> splitParameter(const char* parm);
-	vector<string> tokenize(const char* src, char* pat);
-	vector<int>    tokenizeNumber(const char* src, char* pat);
+	vector<string> splitArgument(const char* parm);
+	vector<string> tokenize(const char* src, const char* pat);
+	vector<int>    tokenizeNumber(const char* src, const char* pat);
+	char*          myStrdup(const char* s, int size);
+	char*          myStrdup(const char* s);
 }

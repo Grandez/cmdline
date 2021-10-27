@@ -1,30 +1,35 @@
 #pragma once
 #include "common.h"
-
+#include "parmitem.hpp"
 #include "arg.hpp"
 
 using namespace std;
 using namespace cmdline;
 
 namespace cmdline {
-	Argument::Argument() {
-		cout << "Crea OptionTpl" << endl;
+	Argument::Argument(ParmItem& parm) {
+		name = strdup(parm.name);
+		type = parm.type;
+		multiple = parm.multiple;
+		defvalue = strdup(parm.value);
+		values.push_back(defvalue);
 	}
-	Argument::Argument(std::string name, char* value) : source(Source::DEFAULT) {
+	Argument::Argument(const char* name, const char* value) {
 		this->name = name;
 		this->values.push_back(std::string(value));
 		this->defvalue = strdup(value);
 	}
-	Argument::Argument(const char* name, const char* value) : source(Source::DEFAULT) {
-		this->name = std::string(name);
-		this->values.push_back(std::string(value));
-		this->defvalue = strdup(value);
-	}
-	Argument::Argument(std::string name, std::string value, Source source) {
+	Argument::Argument(const char* name, const char *value, Source source) {
 		this->name = name;
 		this->values.push_back(value);
 		this->source = source;
 	}
+	Argument::Argument(const char* name, const char* value, Type type) {
+		this->name = name;
+		this->values.push_back(value);
+		this->source = Source::DEFAULT;
+	}
+
 	bool Argument::getBoolean() {
 		char* val = (char*) values[0].c_str();
 
@@ -46,9 +51,12 @@ namespace cmdline {
 		this->source = Source::ENV;
 		return *this;
 	}
-
+	Argument& Argument::setValue(const char *value) {
+		this->values[0] = value;
+		return *this;
+	}
 	Argument& Argument::setValue(bool value) {
-		this->values.push_back(std::string(value ? "1" : "0"));
+		this->values[0] = string(value ? "1" : "0");
 		return *this;
 	}
 	Argument& Argument::setValue(std::string value) {
@@ -59,6 +67,10 @@ namespace cmdline {
 		this->values.push_back(value);
 		return *this;
 	}
-
+	Argument& Argument::addValues(vector<string> values) {
+		this->values.resize(this->values.size() + values.size());
+		this->values.insert(this->values.end(), values.begin(), values.end());
+		return *this;
+	}
 
 };

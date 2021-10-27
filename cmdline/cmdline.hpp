@@ -11,16 +11,18 @@ namespace cmdline {
         #define __TYPES__
 		enum class Type { FLAG, STRING, NUMBER, DECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
 		enum class Source { DEFAULT, ENV, CMDLINE, AUTO };
-     
+#include "arg.hpp"
+/*
 		class Argument {
 		public:
 			string name;
-			Source source;
-			char* defvalue = 0x0;;
-			Argument();
-			Argument(string name, char* value);
+			Source source = Source::DEFAULT;
+			Type   type = Type::STRING;
+			char* defvalue = 0x0;
+			vector<string> values;
+			Argument() = delete;
 			Argument(const char* name, const char* value);
-			Argument(string name, string value, Source source);
+			Argument(const char* name, const char* value, Source source);
 			Argument& setFromEnv(const char* value);
 			Argument& setValue(bool value);
 			Argument& setValue(std::string value);
@@ -31,9 +33,9 @@ namespace cmdline {
 			vector<string> letValues() { return vector<string>(values); }
 			bool           getBoolean();
 		private:
-			vector<string> values;
-		};
 
+		};
+*/
 	typedef unordered_map<string, Argument>  Args;
 	typedef unordered_map<string, bool>      Flags;
 	typedef pair<string, bool>               Flag;
@@ -55,17 +57,19 @@ namespace cmdline {
 		const Flag  getFlag(const char* name) { return commandLine->getFlag(name); }
 		const Flag  getFlag(string name)      { return commandLine->getFlag(name.c_str()); };
 
-		Flags   getDefaultFlags(bool all = true) { return (commandLine->getDefaultFlags(all)); };
-		Flags   getCurrentFlags(bool set = true) { return (commandLine->getCurrentFlags(set)); };
-		Options getDefaultOptions() { return (commandLine->getDefaultOptions()); };
-		Options getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); };
-
-//		vector<string>  getDefinition(const char* name) { return (commandLine->getDefinition(name)); };
-//		Definitions     getDefinitions() { return (commandLine->getDefinitions()); };
+		Flags           getDefaultFlags(bool all = true) { return (commandLine->getDefaultFlags(all)); };
+		Flags           getCurrentFlags(bool set = true) { return (commandLine->getCurrentFlags(set)); };
+		Options         getDefaultOptions() { return (commandLine->getDefaultOptions()); };
+		Options         getCurrentOptions(bool all = false) { return (commandLine->getCurrentOptions(all)); };
+		bool            hasDefinition    (const char*def)   { return (commandLine->hasDefinition(def)); };
 
 		template <typename T>  const T  getOption(const char* name) { return (commandLine->getOption<T>(name)); };
 		template <typename T>  const T  getOption(string name)      { return getOption<T>(name.c_str()); };
 		const string                    getOption(const char* name) { return getOption<string>(name); }
+		template <typename T>  const T  getDefinition(const char* name) { return (commandLine->getDefinition<T>(name)); };
+		const string  getDefinition(const char* name) { return (commandLine->getDefinition2(name)); };
+		const vector<string>  getVectorDefinition(const char* name) { return (commandLine->getVectorDefinition(name)); };
+
 	private:
 		CommandLine *commandLine;
 	};

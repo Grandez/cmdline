@@ -19,7 +19,7 @@ TEST(Constructors, empty) {
 
 TEST(Constructors, Flags_1) {
 	// 1 flag, 0 options
-	std::vector<cmdline::ParmItem> iflags = {
+	vector<ParmItem> iflags = {
 		 ParmItem("verbose")
 	};
 	CmdLine cmdLine(iflags);
@@ -163,5 +163,5 @@ TEST(Constructors, option_repeat_value) {
 	string str = cmdLine.getOption("outer");
 	EXPECT_EQ(flags.size(), 0);
 	EXPECT_EQ(options.size(), 1);
-	EXPECT_EQ(str, "..");
+	EXPECT_EQ(str, "other");
 }

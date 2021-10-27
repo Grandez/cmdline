@@ -1,41 +1,42 @@
 #pragma once
 #include <string>
-#include <unordered_map>
+#include  <unordered_map>
+#include "types.h"
 #include "tools.h"
+#include "parmitem.hpp"
 
-/*
-
-#include "common.h"
-#include <string>
-*/
 using namespace std;
 
 namespace cmdline {
-#ifndef __TYPES__
-#define __TYPES__
-	enum class Type { FLAG, STRING, NUMBER, DECIMAL, DATE, TIME, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
-	enum class Source { DEFAULT, ENV, CMDLINE };
-#endif
 	class Argument {
 	public:
 		string name;
-		Source source;
-		char* defvalue = 0x0;;
-		Argument();
-		Argument(string name, char* value);
-		Argument(const char* name, const char* value);
-		Argument(string name, string value, Source source);
+		Source source   = Source::DEFAULT;
+		Type   type     = Type::STRING;
+		bool   multiple = false;
+		char* defvalue = 0x0;
+		vector<string> values;
+		Argument() = delete;
+		Argument(ParmItem& parm);
+		Argument(const char *name, const char* value);
+		Argument(const char *name, const char* value, Source source);
+		Argument(const char* name, const char* value, Type type);
 		Argument& setFromEnv(const char* value);
 		Argument& setValue(bool value);
+		Argument& setValue(const char* value);
 		Argument& setValue(std::string value);
 		Argument& addValue(std::string value);
-		string         getValue()  { return values[0]; }
-		vector<string> getValues() { return values; }
+		const string         getValue()  { return values[0]; }
+		const vector<string> getValues() { return values; }
 		string         letValue()  { return string(values[0]); }
 		vector<string> letValues() { return vector<string>(values); }
 		bool           getBoolean();
-	private:
-		vector<string> values;
+		Argument& initValues(vector<string> values) {
+			this->values = values;
+			return *this;
+		}
+	protected:
+		Argument&      addValues(vector<string> values);
 	};
 
 	typedef unordered_map<string, Argument>  Args;
@@ -43,6 +44,6 @@ namespace cmdline {
 	typedef pair<const string, bool>         Flag;
 	typedef unordered_map<string, string>    Options;
 	typedef pair<string, string>             Option;
-	typedef unordered_map<string, vector<string>> Definitions;
+	typedef unordered_map<string, vector<string>> Definition;
 
 }

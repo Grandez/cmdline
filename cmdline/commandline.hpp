@@ -7,6 +7,7 @@
 #include "common.h"
 
 #include "parmitem.hpp"
+#include  "group.hpp"
 
 using namespace std;
 
@@ -25,19 +26,22 @@ namespace cmdline {
 		Flags getCurrentFlags(bool active = true);
 		Options getDefaultOptions();
 		Options getCurrentOptions(bool all = false);
+		bool hasDefinition(const char*);
 //		std::vector<std::string> getDefinition(const char* name);
 //		Definitions  getDefinitions();
 
 
 		template <typename T>  
 		const T  getOption(const char *name);
-
-
+		template <typename T>  
+		const T  getDefinition(const char* name);
+		const string  getDefinition2(const char* name);
+		vector<string> getVectorDefinition(const char* name);
 	private:
 		std::list<const char*> inputs;
-		Args       options;
-		Args       flags;
-		Definitions defines;
+		Group  options;
+		Group  flags;
+		Group  defines;
 
 		std::unordered_map<std::string, ParmItem> defOptions;
 
@@ -45,14 +49,14 @@ namespace cmdline {
 		char* updateFlag(const char* flag, const char* prev, bool value);
 		void  updateFlagItem(const char* flag, const char* prev, bool value);
 		char* updateOption(const char* option, char* value);
-		char* updateDefinition(const char* def, int pos);
+		char* updateDefinition(const char* def);
 		char* addParameterToInput(char* flag);
 		char* checkOption(const char* parm);
 		char* checkFlag(const char* parm);
 		char* checkParameter(ParameterTree* root[], const char* parm);
 
 		void updateFromEnv();
-		void udpateArgsFromEnv(Args& parms, const char *prfx);
+		void udpateArgsFromEnv(Group& parms, const char *prfx);
 		void loadHelp();
 		void preInit(vector<ParmItem> parms, bool init = true);
 		void postInit();

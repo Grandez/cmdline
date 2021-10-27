@@ -7,7 +7,7 @@
 
 using namespace cmdline;
 
-TEST(Validations, Hours_OK) {
+TEST(Validations, Times_OK) {
 	EXPECT_NO_THROW(validateTime("10:00:00"));
 	EXPECT_NO_THROW(validateTime("01:01:01"));
 	EXPECT_NO_THROW(validateTime("00:00:00"));
@@ -18,7 +18,7 @@ TEST(Validations, Hours_OK) {
 	EXPECT_NO_THROW(validateTime("1:1:1"));
 	EXPECT_NO_THROW(validateTime("0:0:0"));
 }
-TEST(Validations, Hours_KO) {
+TEST(Validations, Times_KO) {
 	EXPECT_THROW(validateTime("1 1 1"),    CmdLineValueException);
 	EXPECT_THROW(validateTime("24:0:0"),   CmdLineValueException);
 	EXPECT_THROW(validateTime("nada"),     CmdLineValueException);
@@ -56,13 +56,48 @@ TEST(Validations, Dates_KO) {
 }
 TEST(Validations, Datetimes_OK) {
 	std::locale::global(std::locale("es_ES.utf8"));
-	EXPECT_NO_THROW(validateDate("1/1/01 1:1:1"));
-	EXPECT_NO_THROW(validateDate("01/01/01 10:11:12"));
-	EXPECT_NO_THROW(validateDate("01-01-01   1:2:34"));
-	EXPECT_NO_THROW(validateDate("29/2/2000 1:12:3"));
-	EXPECT_NO_THROW(validateDate("29/02/2000 12:1:1"));
+	EXPECT_NO_THROW(validateDateTime("01/1/01 1:1:1"));
+	EXPECT_NO_THROW(validateDateTime("01/01/01 10:11:12"));
+	EXPECT_NO_THROW(validateDateTime("01-01-01   1:2:34"));
+	EXPECT_NO_THROW(validateDateTime("29/2/2000 1:12:3"));
+	EXPECT_NO_THROW(validateDateTime("29/02/2000 12:1:1"));
 	std::locale::global(std::locale());
 }
+TEST(Validations, Datetimes_KO) {
+	std::locale::global(std::locale("es_ES.utf8"));
+	EXPECT_THROW(validateDate("1 1 01 1:1:1"),        CmdLineValueException);
+	EXPECT_THROW(validateDate("31/02/01 1:1:1"),      CmdLineValueException);
+	EXPECT_THROW(validateDate("31-4-01 1:1:1"),       CmdLineValueException);
+	EXPECT_THROW(validateTime("0/1/2020 1:1:1"),      CmdLineValueException);
+	EXPECT_THROW(validateTime("15/13/2020 1:1:1"),    CmdLineValueException);
+	EXPECT_THROW(validateTime("data 1:1:1"),          CmdLineValueException);
+	EXPECT_THROW(validateTime("29/02/2021 1:1:1"),    CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 1 1 1"),    CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 24:0:0"),   CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 nada"),     CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 23:60:0"),  CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 0:0:60"),   CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 24:-10:0"), CmdLineValueException);
+	EXPECT_THROW(validateTime("15-13-2020 23/10/05"), CmdLineValueException);
+	std::locale::global(std::locale());
+}
+TEST(Validations, Timestamp_OK) {
+	EXPECT_NO_THROW(validateTimestamp("2001-01-01 01:01:01.000"));
+	EXPECT_NO_THROW(validateTimestamp("2000-02-29 01:01:01.000"));
+	EXPECT_NO_THROW(validateTimestamp("2001-02-28 01:01:01.000"));
+	EXPECT_NO_THROW(validateTimestamp("2001-01-01 01:01:01.123456"));
+	EXPECT_NO_THROW(validateTimestamp("2001-01-01-01:01:01.123456"));
+}
+TEST(Validations, Timestamp_KO) {
+	EXPECT_THROW(validateTimestamp("2001-01-01 01 01 01.000"),    CmdLineValueException);
+	EXPECT_THROW(validateTimestamp("2000-02-30 01:01:01.000"),    CmdLineValueException);
+	EXPECT_THROW(validateTimestamp("2001-02-29 01:01:01.000"),    CmdLineValueException);
+	EXPECT_THROW(validateTimestamp("2001-01-01 24:00:00.123456"), CmdLineValueException);
+	EXPECT_THROW(validateTimestamp("2001-01-01-01:01:01.-12345"), CmdLineValueException);
+	EXPECT_THROW(validateTimestamp("12-01-01-01:01:01.-12345"),   CmdLineValueException);
+	EXPECT_THROW(validateTimestamp("123-01-01-01:01:01.-12345"),   CmdLineValueException);
+}
+
 TEST(Validations, Numbers_OK) {
 	EXPECT_NO_THROW(validateNumber("1"));
 	EXPECT_NO_THROW(validateNumber("-1"));

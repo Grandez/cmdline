@@ -134,7 +134,10 @@ Y otros sistemas utilizan la forma `parametro=valor`
 
 3. De manera general, es necesario controlar programáticamente las dos versiones de de cada parámetro; por ejemplo: `-v` y `--verbose`
 
-ttydev = NODEV;
+A continuación se muesta un extracto del código de la utilidad `ls` que utiliza la función`getopt`:
+
+```{C}
+
 	memf = nlistf = swapf = NULL;
 	while ((ch = getopt(argc, argv,
 	    "AaCcegHhjkLlM:mN:O:o:p:rSTt:U:uvW:wx")) != -1)
@@ -146,19 +149,7 @@ ttydev = NODEV;
 		case 'a':
 			all = 1;
 			break;
-		case 'C':
-			break;			/* no-op */
-		case 'c':
-			commandonly = 1;
-			break;
-		case 'e':			/* XXX set ufmt */
-			needenv = 1;
-			break;
-		case 'g':
-			break;			/* no-op */
-		case 'H':
-			showthreads = 1;
-			break;
+		...	
 		case 'h':
 			prtheader = ws.ws_row > 5 ? ws.ws_row : 22;
 			break;
@@ -167,47 +158,7 @@ ttydev = NODEV;
 			fmt = 1;
 			jfmt[0] = '\0';
 			break;
-		case 'k':
-			kflag = 1;
-			break;
-		case 'L':
-			showkey();
-			exit(0);
-		case 'l':
-			parsefmt(lfmt);
-			fmt = 1;
-			lfmt[0] = '\0';
-			break;
-		case 'M':
-			memf = optarg;
-			break;
-		case 'm':
-			sortby = SORTMEM;
-			break;
-		case 'N':
-			nlistf = optarg;
-			break;
-		case 'O':
-			parsefmt(o1);
-			parsefmt(optarg);
-			parsefmt(o2);
-			o1[0] = o2[0] = '\0';
-			fmt = 1;
-			break;
-		case 'o':
-			parsefmt(optarg);
-			fmt = 1;
-			break;
-		case 'p':
-			pid = atol(optarg);
-			xflg = 1;
-			break;
-		case 'r':
-			sortby = SORTCPU;
-			break;
-		case 'S':
-			sumrusage = 1;
-			break;
+		...
 		case 'T':
 			if ((optarg = ttyname(STDIN_FILENO)) == NULL)
 				errx(1, "stdin: not a terminal");
@@ -233,41 +184,14 @@ ttydev = NODEV;
 			ttydev = sb.st_rdev;
 			break;
 		}
-		case 'U':
-			if (uid_from_user(optarg, &uid) == -1)
-				errx(1, "%s: no such user", optarg);
-			Uflag = xflg = 1;
-			break;
-		case 'u':
-			parsefmt(ufmt);
-			sortby = SORTCPU;
-			fmt = 1;
-			ufmt[0] = '\0';
-			break;
-		case 'v':
-			parsefmt(vfmt);
-			sortby = SORTMEM;
-			fmt = 1;
-			vfmt[0] = '\0';
-			break;
-		case 'W':
-			swapf = optarg;
-			break;
-		case 'w':
-			if (wflag)
-				termwidth = UNLIMITED;
-			else if (termwidth < 131)
-				termwidth = 131;
-			wflag = 1;
-			break;
-		case 'x':
-			xflg = 1;
-			break;
-		default:
+      ...
+      default:
 			usage();
 		}
 	argc -= optind;
 	argv += optind;
+```
+
 
 #define	BACKWARD_COMPATI
 

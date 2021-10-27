@@ -1,6 +1,7 @@
 #include <regex>
 #include <cstdlib>
 #include <unordered_map>
+#include <string>
 
 #include "arg.hpp"
 #include "parmitem.hpp"
@@ -10,12 +11,14 @@ using namespace std;
 using namespace cmdline;
 
 namespace cmdline {
-
+	/*
 	unordered_map<string, ParmItem> vector2map(vector<ParmItem> vect) {
 		unordered_map<string, ParmItem> mmap;
+		mmap.begin();
 		for (size_t i = 0; i < vect.size(); i++) mmap.insert_or_assign(vect[i].name, vect[i]);
 		return (mmap);
     }
+	*/
 	ParameterTree* createTree(const char* word) {
 		ParameterTree* root = new ParameterTree(word);
 		ParameterTree* prev = root;
@@ -101,7 +104,7 @@ namespace cmdline {
 		}
 	}
 	*/
-	vector<string> splitParameter(const char* parm) {
+	vector<string> splitArgument(const char* parm) {
 		char* parse = strdup(parm);
 		char* next_token = NULL;
 		char* token = nullptr;
@@ -143,9 +146,8 @@ namespace cmdline {
 		}
 		return toks2;
 	}
-	vector<string> tokenize(const char* src, char* pat) {
+	vector<string> tokenize(const char* src, const char* pat) {
 		string str(src);
-
 		regex reg(pat);
 
 		sregex_token_iterator iter(str.begin(), str.end(), reg, -1);
@@ -153,11 +155,26 @@ namespace cmdline {
 		vector<string> vec(iter, end);
 		return vec;
 	}
-	vector<int> tokenizeNumber(const char* src, char* pat) {
+	vector<int> tokenizeNumber(const char* src, const char* pat) {
 		vector<int> res;
 		vector<string> vec = tokenize(src, pat);
 		for (string s : vec) res.push_back(stoi(s));
 		return res;
+	}
+
+	// From http ://www.olivierlanglois.net/idioms_for_using_cpp_in_c_programs.html
+	// Variant #1
+	char* myStrdup(const char* s, int size) {
+		++size;
+		char* res = static_cast<char*>(malloc(size));
+		if (!res) throw runtime_error("No memory");
+		memcpy(res, s, size);
+		 return res;
+	}
+
+	// Variant #2
+	char* myStrdup(const char* s) {
+		return myStrdup(s, strlen(s));
 	}
 
 }

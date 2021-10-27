@@ -18,6 +18,13 @@ namespace cmdline {
 		CmdLineNotFoundException(const std::string& msg) : runtime_error(msg) {}
 		CmdLineNotFoundException(const char* msg) : runtime_error(msg) {}
 	};
+	class CmdLineInvalidTypeException : public std::runtime_error {
+	public:
+		CmdLineInvalidTypeException() = delete;
+		CmdLineInvalidTypeException(const std::string& msg) : runtime_error(msg) {}
+		CmdLineInvalidTypeException(const char* msg)        : runtime_error(msg) {}
+	};
+
 	class CmdLineException : public std::invalid_argument {
 	public:
 		CmdLineException() = delete;

@@ -45,4 +45,19 @@ namespace cmdline {
 		}
 
 	};
+	class FlagItem : public ParmItem {
+	public:
+		FlagItem() = delete;
+		FlagItem(const char* name) : ParmItem(name, true) {};
+		FlagItem(const char* name, bool active) : ParmItem(name, active) {};
+	};
+	class OptionItem : public ParmItem {
+	public:
+		OptionItem() = delete;
+		OptionItem(const char* name, const char *value)            : ParmItem(name, value) {};
+		OptionItem(const char* name, const char* value, Type type) : ParmItem(name, value, type) {};
+		OptionItem(const char* name, const char* value, bool multiple)                    : ParmItem(name, value, Type::STRING, multiple) {};
+		OptionItem(const char* name, const char* value, Type type, bool multiple = false) : ParmItem(name, value, type, multiple) {};
+	};
+
 }
