@@ -1,31 +1,477 @@
-﻿Build started 27/10/2021 19:41:23.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 28/10/2021 15:26:39.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 3 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\testcmdline.tlog\testcmdline.lastbuildstate".
+       InitializeBuildStatus:
          Creating "Debug\testcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yu"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt test_defines.cpp test_mutable.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yc"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yu"pch.h" /Fp"Debug\testcmdline.pch" /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt test_contructors.cpp test_defaults.cpp test_defines.cpp test_input.cpp test_mutable.cpp test_tree.cpp test_validations.cpp
+         test_contructors.cpp
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(13,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(25,24): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(25,24): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(25,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(38,33): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(38,33): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(38,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(51,33): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(51,33): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(51,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(64,32): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(64,32): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(64,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(74,32): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(74,32): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(74,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(84,24): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(84,24): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(84,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(94,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(94,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(94,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(106,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(106,22): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(106,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(120,28): error C2661: 'cmdline::CmdLine::CmdLine': no overloaded function takes 2 arguments
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(135,37): error C2661: 'cmdline::CmdLine::CmdLine': no overloaded function takes 2 arguments
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(147,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(147,22): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(147,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_contructors.cpp(160,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(160,22): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_contructors.cpp(160,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+         test_defaults.cpp
          test_defines.cpp
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(10,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(11,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(15,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(16,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(20,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(21,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(25,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(26,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(30,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(31,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(37,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(38,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(43,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(44,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(49,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(50,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(54,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(55,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(62,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_defines.cpp(63,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+         test_input.cpp
+     1>P:\C\cmdline\testcmdline\test_input.cpp(12,9): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(18,8): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(24,8): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(29,8): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(34,8): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(39,8): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(44,8): error C3861: 'splitArgument': identifier not found
+     1>P:\C\cmdline\testcmdline\test_input.cpp(49,8): error C3861: 'splitArgument': identifier not found
          test_mutable.cpp
+     1>P:\C\cmdline\testcmdline\test_mutable.cpp(19,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_mutable.cpp(20,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_mutable.cpp(32,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_mutable.cpp(32,22): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_mutable.cpp(32,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_mutable.cpp(33,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_mutable.cpp(43,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(99): message : see declaration of 'cmdline::CmdLine::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_mutable.cpp(44,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+         test_tree.cpp
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(6,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(8,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(8,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(8,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(9,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(12,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(14,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(14,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(14,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(15,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(18,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(20,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(20,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(20,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(21,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(24,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(24,69): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(26,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(26,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(26,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(27,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(30,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(30,69): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(32,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(32,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(32,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(33,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(36,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(36,69): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(38,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(38,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(38,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(39,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(42,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(42,69): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(44,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(44,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(44,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(45,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(51,42): error C3861: 'ParmItem': identifier not found
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(53,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+       P:\C\cmdline\testcmdline\test_tree.cpp(53,31): message : Reason: cannot convert from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\test_tree.cpp(53,27): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+       P:\C\cmdline\cmdline\cmdline.hpp(105,2): message : see declaration of 'cmdline::CmdLine::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+       P:\C\cmdline\cmdline\cmdline.hpp(69): message : see declaration of 'cmdline::CmdLine'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2061: syntax error: identifier 'CmdLineException'
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2310: catch handlers must specify one type
+     1>P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2311: 'overloaded function type': is caught by '...' on line 54
+         test_validations.cpp
+     1>P:\C\cmdline\cmdline\validations.h(11,55): error C2061: syntax error: identifier 'Type'
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(11,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(12,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(13,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(14,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(15,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(16,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(17,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(18,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(19,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(22,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(23,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(24,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(25,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(26,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(27,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(28,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(33,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(34,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(35,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(36,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(37,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(38,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(39,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(40,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(41,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(42,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(43,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(48,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(49,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(50,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(51,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(52,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(53,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(54,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(59,2): error C3861: 'validateDateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(60,2): error C3861: 'validateDateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(61,2): error C3861: 'validateDateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(62,2): error C3861: 'validateDateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(63,2): error C3861: 'validateDateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(68,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(69,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(70,2): error C3861: 'validateDate': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(71,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(72,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(73,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(74,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(75,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(76,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(77,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(78,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(79,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(80,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(81,2): error C3861: 'validateTime': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(85,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(86,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(87,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(88,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(89,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(92,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(93,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(94,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(95,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(96,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(97,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(98,2): error C3861: 'validateTimestamp': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(102,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(103,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(104,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(105,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(106,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(107,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(108,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(109,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(113,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(114,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(115,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(116,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(117,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(118,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(119,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(120,2): error C3861: 'validateNumber': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(124,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(125,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(126,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(127,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(128,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(129,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(130,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(136,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(137,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(138,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(139,2): error C3861: 'validateDecimal': identifier not found
+     1>P:\C\cmdline\testcmdline\test_validations.cpp(140,2): error C3861: 'validateDecimal': identifier not found
          Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\Debug\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest_maind.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtestd.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\Debug\testcmdline.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\Debug\testcmdline.lib" /MACHINE:X86 /SAFESEH Debug\pch.obj
-         Debug\test_contructors.obj
-         Debug\test_defaults.obj
-         Debug\test_defines.obj
-         Debug\test_input.obj
-         Debug\test_mutable.obj
-         Debug\test_tree.obj
-         Debug\test_validations.obj
-         P:\C\cmdline\Debug\cmdline.lib
-         testcmdline.vcxproj -> P:\C\cmdline\Debug\testcmdline.exe
-       FinalizeBuildStatus:
-         Deleting file "Debug\testcmdline.tlog\unsuccessfulbuild".
-         Touching "Debug\testcmdline.tlog\testcmdline.lastbuildstate".
-     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Build target(s)).
+     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
+
+       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
+       (ClCompile target) -> 
+         P:\C\cmdline\testcmdline\test_contructors.cpp(13,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(25,24): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(38,33): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(51,33): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(64,32): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(74,32): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(84,24): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(94,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(106,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(120,28): error C2661: 'cmdline::CmdLine::CmdLine': no overloaded function takes 2 arguments
+         P:\C\cmdline\testcmdline\test_contructors.cpp(135,37): error C2661: 'cmdline::CmdLine::CmdLine': no overloaded function takes 2 arguments
+         P:\C\cmdline\testcmdline\test_contructors.cpp(147,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_contructors.cpp(160,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_defines.cpp(10,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(11,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(15,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(16,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(20,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(21,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(25,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(26,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(30,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(31,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(37,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(38,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(43,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(44,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(49,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(50,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(54,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(55,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(62,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_defines.cpp(63,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_input.cpp(12,9): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(18,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(24,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(29,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(34,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(39,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(44,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_input.cpp(49,8): error C3861: 'splitArgument': identifier not found
+         P:\C\cmdline\testcmdline\test_mutable.cpp(19,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_mutable.cpp(20,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_mutable.cpp(32,22): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_mutable.cpp(33,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_mutable.cpp(43,17): error C2248: 'cmdline::CmdLine::CmdLine': cannot access private member declared in class 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_mutable.cpp(44,10): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(6,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(8,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(9,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(12,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(14,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(15,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(18,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(20,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(21,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(24,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(24,69): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(26,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(27,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(30,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(30,69): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(32,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(33,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(36,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(36,69): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(38,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(39,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(42,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(42,69): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(44,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(45,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(51,42): error C3861: 'ParmItem': identifier not found
+         P:\C\cmdline\testcmdline\test_tree.cpp(53,31): error C2664: 'cmdline::CmdLine::CmdLine(const cmdline::CmdLine &)': cannot convert argument 1 from 'std::vector<cmdline::ParmItem,std::allocator<cmdline::ParmItem>>' to 'const cmdline::CmdLine &'
+         P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2039: 'parse': is not a member of 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2061: syntax error: identifier 'CmdLineException'
+         P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2310: catch handlers must specify one type
+         P:\C\cmdline\testcmdline\test_tree.cpp(54,2): error C2311: 'overloaded function type': is caught by '...' on line 54
+         P:\C\cmdline\cmdline\validations.h(11,55): error C2061: syntax error: identifier 'Type'
+         P:\C\cmdline\testcmdline\test_validations.cpp(11,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(12,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(13,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(14,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(15,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(16,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(17,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(18,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(19,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(22,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(23,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(24,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(25,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(26,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(27,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(28,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(33,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(34,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(35,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(36,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(37,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(38,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(39,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(40,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(41,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(42,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(43,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(48,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(49,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(50,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(51,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(52,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(53,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(54,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(59,2): error C3861: 'validateDateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(60,2): error C3861: 'validateDateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(61,2): error C3861: 'validateDateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(62,2): error C3861: 'validateDateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(63,2): error C3861: 'validateDateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(68,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(69,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(70,2): error C3861: 'validateDate': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(71,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(72,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(73,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(74,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(75,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(76,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(77,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(78,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(79,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(80,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(81,2): error C3861: 'validateTime': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(85,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(86,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(87,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(88,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(89,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(92,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(93,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(94,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(95,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(96,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(97,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(98,2): error C3861: 'validateTimestamp': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(102,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(103,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(104,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(105,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(106,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(107,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(108,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(109,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(113,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(114,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(115,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(116,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(117,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(118,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(119,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(120,2): error C3861: 'validateNumber': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(124,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(125,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(126,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(127,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(128,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(129,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(130,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(136,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(137,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(138,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(139,2): error C3861: 'validateDecimal': identifier not found
+         P:\C\cmdline\testcmdline\test_validations.cpp(140,2): error C3861: 'validateDecimal': identifier not found
+
     0 Warning(s)
-    0 Error(s)
+    172 Error(s)
 
-Time Elapsed 00:00:00.77
+Time Elapsed 00:00:02.18

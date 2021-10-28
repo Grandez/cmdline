@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace cmdline {
+namespace _cmdline {
     void        validateEntry     (const char* parm, const char* prev);
     void        validateValue     (const char* value, Type type);
     void        validateNumber    (const char* value);

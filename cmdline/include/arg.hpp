@@ -1,13 +1,10 @@
 #pragma once
-#include <string>
-#include  <unordered_map>
-#include "types.h"
-#include "tools.h"
-#include "parmitem.hpp"
+#include "cmdline.hpp"
 
 using namespace std;
+using namespace cmdline;
 
-namespace cmdline {
+namespace _cmdline {
 	class Argument {
 	public:
 		string name;
@@ -17,7 +14,7 @@ namespace cmdline {
 		char* defvalue = 0x0;
 		vector<string> values;
 		Argument() = delete;
-		Argument(ParmItem& parm);
+		Argument(Parm& parm);
 		Argument(const char *name, const char* value);
 		Argument(const char *name, const char* value, Source source);
 		Argument(const char* name, const char* value, Type type);
@@ -38,12 +35,12 @@ namespace cmdline {
 	protected:
 		Argument&      addValues(vector<string> values);
 	};
-
+	/*
 	typedef unordered_map<string, Argument>  Args;
 	typedef unordered_map<string, bool>      Flags;
 	typedef pair<const string, bool>         Flag;
 	typedef unordered_map<string, string>    Options;
 	typedef pair<string, string>             Option;
 	typedef unordered_map<string, vector<string>> Definition;
-
+	*/
 }

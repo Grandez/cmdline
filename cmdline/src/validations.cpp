@@ -32,7 +32,7 @@
 
 using namespace std;
 
-namespace cmdline {
+namespace _cmdline {
 	void        validateEntry     (const char* parm, const char* prev) {
 		if (strlen(parm) == 1) throw CmdLineException("Invalid Option", parm);
 		//if (prev != nullptr) throw CmdLineException("Missing value", prev);

@@ -1,0 +1,54 @@
+# Libreria cmdline
+
+## Introduccion
+
+Por definición, todo programa que acepta parámetros por línea de comandos lo primero que debe hacer es validar estos.
+
+
+## Enumeraciones
+
+Para simplificar la definición de los parámetros y la codificación se han definido los siguientes tipos enumerados y personalizados
+
+### Type
+
+Indica el tipo de dato que se espera 
+
+STRING; const char *
+NUMBER; long
+DECIMAL; double
+DATE;struct tm
+TIME;struct tm
+DATETIME, struct tm
+TMS;no se
+DIR;path
+DIR_EXISTS; path
+FILE;path
+FILE_EXISTS;path
+
+### Source
+
+Indica de donde se obtuvo el valor
+
+DEFAULT; Definido como valor por defecto
+ENV; Definido como cariable de entorno
+CMDLINE;Definidio por el usuario
+CODE;Definido en tiempo de ejecucion
+AUTO; Uso reservado
+
+## Parametros
+
+Un parámetro es una estructura general, implementada como clase, para definir las distintas opciones que soporta el programa y sus atributos.
+Se implementa como una clase abstracta **Parm**
+
+name;nombre del parámetro
+value;valor por defecto
+multiple; flag indicando si acepta varios valoes
+type;instancia concreta del parametro
+
+
+
+STRING; const char *
+NUMBER; long
+DECIMAL; double
+DATE;struct tm
+TIME;struct tm

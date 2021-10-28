@@ -1,10 +1,9 @@
-#include "common.h"
+#include "tools.h"
 #include "parameter_tree.hpp"
 
 using namespace std;
-using namespace cmdline;
 
-namespace cmdline {
+namespace _cmdline {
 	ParameterTree& ParameterTree::addChild(ParameterTree* child) {
 		children.insert_or_assign(child->letter, child);
 		branchs = (int)children.size();

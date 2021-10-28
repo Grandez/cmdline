@@ -63,7 +63,7 @@ namespace cmdline {
 		}
 	};
 	/**
-	 * Exception indicating HELP has been rquested
+	 * Exception indicating HELP has been requested
 	 */
 	class HelpRequested : public CmdLineException {
 	public:

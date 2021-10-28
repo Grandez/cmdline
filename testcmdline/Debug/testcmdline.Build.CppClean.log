@@ -3,11 +3,11 @@ p:\c\cmdline\testcmdline\debug\vc142.pdb
 p:\c\cmdline\testcmdline\debug\pch.obj
 p:\c\cmdline\testcmdline\debug\test_validations.obj
 p:\c\cmdline\testcmdline\debug\test_tree.obj
+p:\c\cmdline\testcmdline\debug\test_mutable.obj
 p:\c\cmdline\testcmdline\debug\test_input.obj
 p:\c\cmdline\testcmdline\debug\test_defines.obj
 p:\c\cmdline\testcmdline\debug\test_defaults.obj
 p:\c\cmdline\testcmdline\debug\test_contructors.obj
-p:\c\cmdline\testcmdline\debug\test_mutable.obj
 p:\c\cmdline\debug\gtest.pdb
 p:\c\cmdline\debug\gtest_main.pdb
 p:\c\cmdline\debug\testcmdline.exe

@@ -141,6 +141,11 @@
   <ItemGroup>
     <ClCompile Include="driver_cpp.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cmdline\cmdline.vcxproj">
+      <Project>{4976bfe5-1d66-47cf-9604-13738bb7d926}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

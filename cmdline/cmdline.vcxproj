@@ -19,30 +19,33 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="arg.hpp" />
-    <ClInclude Include="cmdline.h" />
-    <ClInclude Include="cmdline.hpp" />
-    <ClInclude Include="cmdline_exceptions.hpp" />
-    <ClInclude Include="commandline.hpp" />
-    <ClInclude Include="common.h" />
-    <ClInclude Include="defines.hpp" />
-    <ClInclude Include="group.hpp" />
-    <ClInclude Include="parameter_tree.hpp" />
-    <ClInclude Include="parmitem.hpp" />
-    <ClInclude Include="tools.h" />
-    <ClInclude Include="types.h" />
-    <ClInclude Include="validations.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="arg.cpp" />
-    <ClCompile Include="cmdline_c.cpp" />
-    <ClCompile Include="commandline.cpp" />
-    <ClCompile Include="parameter_tree.cpp" />
-    <ClCompile Include="tools.cpp" />
-    <ClCompile Include="validations.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="doc\doc_cmdline.cpp" />
+    <ClCompile Include="src\arg.cpp" />
+    <ClCompile Include="src\cmdline.cpp" />
+    <ClCompile Include="src\cmdline_c.cpp" />
+    <ClCompile Include="src\cmdline_flavors.cpp" />
+    <ClCompile Include="src\commandline.cpp" />
+    <ClCompile Include="src\parameter_tree.cpp" />
+    <ClCompile Include="src\tools.cpp" />
+    <ClCompile Include="src\validations.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\arg.hpp" />
+    <ClInclude Include="include\cmdline.h" />
+    <ClInclude Include="include\cmdline.hpp" />
+    <ClInclude Include="include\cmdline_exceptions.hpp" />
+    <ClInclude Include="include\commandline.hpp" />
+    <ClInclude Include="include\common.h" />
+    <ClInclude Include="include\defines.hpp" />
+    <ClInclude Include="include\group.hpp" />
+    <ClInclude Include="include\parameter_tree.hpp" />
+    <ClInclude Include="include\parmitem.hpp" />
+    <ClInclude Include="include\tools.h" />
+    <ClInclude Include="include\types.h" />
+    <ClInclude Include="include\validations.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -98,15 +101,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

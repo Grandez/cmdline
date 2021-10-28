@@ -1,13 +1,12 @@
 #pragma once
-#include "common.h"
-#include "parmitem.hpp"
 #include "arg.hpp"
+#include "tools.h"
 
 using namespace std;
 using namespace cmdline;
 
-namespace cmdline {
-	Argument::Argument(ParmItem& parm) {
+namespace _cmdline {
+	Argument::Argument(Parm& parm) {
 		name = strdup(parm.name);
 		type = parm.type;
 		multiple = parm.multiple;
@@ -46,7 +45,6 @@ namespace cmdline {
 		return false;
 	}
 	Argument& Argument::setFromEnv(const char* value) {
-		cout << "JGG Carga de entorno: " << name << endl;
 		this->values.push_back(std::string(value));
 		this->source = Source::ENV;
 		return *this;

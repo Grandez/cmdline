@@ -1,24 +1,24 @@
 #include <regex>
+
+/*
+
 #include <cstdlib>
 #include <unordered_map>
 #include <string>
+*/
 
-#include "arg.hpp"
-#include "parmitem.hpp"
+#include "tools.h"
 #include "cmdline_exceptions.hpp"
 
+/*
+#include "arg.hpp"
+#include "parmitem.hpp"
+
+*/
 using namespace std;
 using namespace cmdline;
 
-namespace cmdline {
-	/*
-	unordered_map<string, ParmItem> vector2map(vector<ParmItem> vect) {
-		unordered_map<string, ParmItem> mmap;
-		mmap.begin();
-		for (size_t i = 0; i < vect.size(); i++) mmap.insert_or_assign(vect[i].name, vect[i]);
-		return (mmap);
-    }
-	*/
+namespace _cmdline {
 	ParameterTree* createTree(const char* word) {
 		ParameterTree* root = new ParameterTree(word);
 		ParameterTree* prev = root;
@@ -93,17 +93,6 @@ namespace cmdline {
 		if (_stricmp(val, "si"   ) == 0) return true;
 		return false;
 	}
-	/*
-	Argument* findOption(Args* map, string what) {
-		try {
-			auto res = map->at(what);
-			return &(map->at(what));
-		}
-		catch (out_of_range ex) {
-			return (Option*) nullptr;
-		}
-	}
-	*/
 	vector<string> splitArgument(const char* parm) {
 		char* parse = strdup(parm);
 		char* next_token = NULL;
@@ -160,6 +149,12 @@ namespace cmdline {
 		vector<string> vec = tokenize(src, pat);
 		for (string s : vec) res.push_back(stoi(s));
 		return res;
+	}
+
+	char* strUpper(const char* str) {
+		char* tmp = strdup(str);
+		for (size_t i = 0; i < strlen(str); i++) tmp[i] = toupper(tmp[i]);
+		return tmp;
 	}
 
 	// From http ://www.olivierlanglois.net/idioms_for_using_cpp_in_c_programs.html

@@ -6,12 +6,13 @@
 using namespace std;
 
 namespace cmdline {
+	/*
 #ifndef __TYPES__
     #define __TYPES__
 	enum class Type { FLAG, STRING, NUMBER, DECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
 	enum class Source { DEFAULT, ENV, CMDLINE, AUTO };
 #endif
-
+	
 	class ParmItem {
 	public:
 		const char* name;              // Name of parameter
@@ -59,5 +60,5 @@ namespace cmdline {
 		OptionItem(const char* name, const char* value, bool multiple)                    : ParmItem(name, value, Type::STRING, multiple) {};
 		OptionItem(const char* name, const char* value, Type type, bool multiple = false) : ParmItem(name, value, type, multiple) {};
 	};
-
+	*/
 }

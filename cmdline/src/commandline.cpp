@@ -1,16 +1,9 @@
 
 #include <iostream> // temp
 #include <type_traits>
-#include <list>
 
 #include "common.h"
 #include "parameter_tree.hpp"
-/*
-
-
-#include "arg.hpp"
-
-*/
 
 #include "defines.hpp"
 #include "cmdline_exceptions.hpp"
@@ -20,7 +13,7 @@
 using namespace std;
 // using namespace cmdline;
 
-namespace cmdline {
+namespace _cmdline {
 
    #ifndef ENV_PREFFIX
        #define ENV_PREFFIX "env_preffix"
@@ -28,30 +21,24 @@ namespace cmdline {
 
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
-	CommandLine::CommandLine() {
-		memset(&rootOptions, 0x0, sizeof(rootOptions));
-		memset(&rootFlags, 0x0, sizeof(rootFlags));
-        loadHelp();
-	}
-	CommandLine::CommandLine(vector<ParmItem> parms) {
+
+	_CommandLine::_CommandLine(int argc, char* argv[], Parameters parms) {
 		preInit(parms);
 		postInit();
-	};
-	CommandLine::CommandLine(vector<ParmItem> options, vector<Flag> flags)  {
-		preInit(options);
-		for (auto f : flags) {
- 			 this->flags.emplace(f.first, Argument(f.first.c_str(), (char *) (f.second ? "1" : "0")));
-		}
-		updateFromEnv();
-		loadHelp();
-	};
-	CommandLine::~CommandLine() {
+	}
+    _CommandLine::_CommandLine(int argc, char* argv[], Parameters parms, bool forward, bool strict) {
+	    this->forward = forward;
+	    this->strict = strict;
+	    preInit(parms);
+	    postInit();
+    }
+	_CommandLine::~_CommandLine() {
 		for (int i = 0; i < 128; i++) {
 			if (rootOptions[i] != nullptr) free(rootOptions[i]);
 			if (rootFlags[i] != nullptr) free(rootFlags[i]);
 		}
 	}
-	CommandLine& CommandLine::parse(const int argc, const char* argv[]) {
+	_CommandLine& _CommandLine::parse(const int argc, const char* argv[]) {
 		std::string in;
 		char* prev = nullptr;
 		for (int i = 1; i < argc; i++) {
@@ -73,36 +60,24 @@ namespace cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
-	bool  CommandLine::hasFlag(const char* flag) {
+	bool  _CommandLine::hasDefinition(const char* flag) {
+		return false;
+	}
+
+	bool  _CommandLine::hasFlag(const char* flag) {
 		Argument* opt = flags.find(flag);
 		if (opt == nullptr) return false;
 		return makeBoolean(opt->getValue().c_str());
 	}
-	const Flag  CommandLine::getFlag(const char* flag) {
-		Argument* opt = flags.find(flag);
-		if (opt == nullptr) throw CmdLineNotFoundException(flag);
-		return Flag(opt->name, opt->getBoolean());
+	Flags  _CommandLine::getDefaultFlags(bool all) { // Valores por defecto
+		return getFlags(all, false);
+	}
+	Flags _CommandLine::getCurrentFlags(bool all) {
+		return getFlags(all, true);
 	}
 
-	Flags  CommandLine::getDefaultFlags(bool all) {
-		Flags act;
-		Argument *opt;
-		for (auto it : flags) {
-			opt = &it.second;
-			if (opt->source != Source::AUTO && (all || opt->getBoolean())) {
-			    act.emplace(opt->name, makeBoolean(opt->defvalue));
-			}
-		}
-		return act;
-	}
-	Flags CommandLine::getCurrentFlags(bool active) {
-		Flags flg;
-		for (auto it : flags) {
-			if (!active || it.second.getBoolean()) flg.emplace(it.second.name, it.second.getBoolean());
-		}
-		return flg;
-	}
-	Options  CommandLine::getDefaultOptions() {
+
+	Options  _CommandLine::getDefaultOptions() {
 		Options act;
 		Argument *opt;
 		for (auto it : options) {
@@ -111,7 +86,7 @@ namespace cmdline {
 		}
 		return act;
 	}
-	Options CommandLine::getCurrentOptions(bool all) {
+	Options _CommandLine::getCurrentOptions(bool all) {
 		Options opts; // = options;
 		/*
 			if (all) {
@@ -125,20 +100,20 @@ namespace cmdline {
 	    return opts;
 	}
 
-	template <typename T>  const T  CommandLine::getOption(const char *name) {
+	template <typename T>  const T  _CommandLine::getOption(const char *name) {
 		Argument* opt = options.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 		//		if (typeid(T) == string) return "";
 		//		if (typeid(T) == path) return "";
 		return T(opt->getValue());
 	}
-	template <> const string CommandLine::getOption(const char* name) {
+	template <> const string _CommandLine::getOption(const char* name) {
 		Argument* opt = options.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 
 		return opt->getValue();
 	}
-	template <typename T>  const T  CommandLine::getDefinition(const char* name) {
+	template <typename T>  const T  _CommandLine::getDefinition(const char* name) {
 		Argument* opt = options.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 		const vector<string> values = opt->getValues();
@@ -154,19 +129,19 @@ namespace cmdline {
 		}
 	}
 	template <> 
-	const string CommandLine::getDefinition(const char* name) {
+	const string _CommandLine::getDefinition(const char* name) {
 		Argument* opt = defines.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 
 		return opt->getValue();
 	}
 
-	const string CommandLine::getDefinition2(const char* name) {
+	const string _CommandLine::getDefinition2(const char* name) {
 		Argument* opt = defines.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 		return (*opt).getValue();
 	}
-	vector<string> CommandLine::getVectorDefinition(const char* name) {
+	vector<string> _CommandLine::getVectorDefinition(const char* name) {
 		Argument* opt = defines.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 		return (*opt).getValues();
@@ -182,9 +157,9 @@ namespace cmdline {
 			*/
 	//////////////////////////////////////////////////////////////////
 	
-	char* CommandLine::checkOption(const char* option) { return (checkParameter(rootOptions, option)); }
-	char* CommandLine::checkFlag(const char* flag) { return (checkParameter(rootFlags, flag)); }
-	char* CommandLine::checkParameter(ParameterTree* root[], const char* parm) {
+	char* _CommandLine::checkOption(const char* option) { return (checkParameter(rootOptions, option)); }
+	char* _CommandLine::checkFlag(const char* flag) { return (checkParameter(rootFlags, flag)); }
+	char* _CommandLine::checkParameter(ParameterTree* root[], const char* parm) {
 		size_t idx = 0;
 		ParameterTree* base = root[parm[0] - ' '];
 		ParameterTree* prev = nullptr;
@@ -216,7 +191,7 @@ namespace cmdline {
 		ss.append(base->getWord());
 		return (makeChar(ss));
 	}
-	void CommandLine::updateFromEnv() {
+	void _CommandLine::updateFromEnv() {
 		char key[255];
 		char* p = (char*)"";
 		Argument *arg = options.find(ENV_PREFFIX);
@@ -228,7 +203,7 @@ namespace cmdline {
 		udpateArgsFromEnv(flags, p);
 		if (arg != nullptr) free(p);
 	}
-	void CommandLine::udpateArgsFromEnv(Group &parms, const char*prfx) {
+	void _CommandLine::udpateArgsFromEnv(Group &parms, const char*prfx) {
 		char key[255];
 		char* value;
 //		Args::iterator it;
@@ -239,13 +214,13 @@ namespace cmdline {
 			if (value != nullptr) it->second.setFromEnv(value);
         }
 	}
-	char* CommandLine::updateOption(const char* option, char* prev) {
+	char* _CommandLine::updateOption(const char* option, char* prev) {
 		int pos = std::string(option).find("=");
 		if (pos != std::string::npos) return updateDefinition(option);
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
 	}
-	char* CommandLine::updateDefinition(const char* value) {
+	char* _CommandLine::updateDefinition(const char* value) {
 		const char* ptr = &(value[1]);
 		vector<string> toks = tokenize(ptr, "=");
 		if (toks.size() != 2)      throw CmdLineParameterException("Invalid definition", value);
@@ -256,12 +231,12 @@ namespace cmdline {
 		defines.add(*def);
 		return nullptr;
 	}
-	char* CommandLine::updateFlag(const char* flag, const char* prev, bool value) {
+	char* _CommandLine::updateFlag(const char* flag, const char* prev, bool value) {
 		std::vector<std::string> flags = splitArgument(flag);
 		for (std::string f : flags) updateFlagItem((char*)f.c_str(), prev, value);
 		return nullptr;
 	}
-	void CommandLine::updateFlagItem(const char* flag, const char* prev, bool value) {
+	void _CommandLine::updateFlagItem(const char* flag, const char* prev, bool value) {
 		std::string name;
 		validateEntry(flag, prev);
 		try {
@@ -277,7 +252,7 @@ namespace cmdline {
 			}
 		}
 	}
-	char *CommandLine::addValueToOption(const char* value, char* option) {
+	char *_CommandLine::addValueToOption(const char* value, char* option) {
 		if (strlen(option) == 1) throw CmdLineException("Invalid Option", option);
 		Argument* opt = options.find(option); // Exists!!!!
 		validateValue(value, opt->type);
@@ -285,8 +260,27 @@ namespace cmdline {
 		if (!opt->multiple) (*opt).setValue(value);
 		return nullptr;
 	}
-	void CommandLine::loadHelp() {
-		vector<ParmItem> flagHelp = { ParmItem("help", false) ,ParmItem("HELP", false) };
+	void _CommandLine::preInit(Parameters parms, bool init) {
+		ParameterTree** root;
+
+		if (init) {
+			memset(&rootOptions, 0x0, sizeof(rootOptions));
+			memset(&rootFlags, 0x0, sizeof(rootFlags));
+		}
+		for (Parm p : parms) {
+			Argument option(p);
+			Group& map  = (p.instanceOfFlag()) ? flags      : options;
+			root = (p.instanceOfFlag()) ? rootFlags : rootOptions;
+			map.add(p.name, option);
+			add2tree(root, p.name);
+		}
+	}
+	void _CommandLine::postInit() {
+		updateFromEnv();
+		loadHelp();
+	}
+	void _CommandLine::loadHelp() {
+		Parameters flagHelp = { Parm("help", false) ,Parm("HELP", false) };
 		Argument* arg = flags.find("help");
 		if (arg != nullptr) return;
 		preInit(flagHelp, false);
@@ -295,22 +289,16 @@ namespace cmdline {
 		arg = flags.find("HELP");
 		arg->source = Source::AUTO;
 	}
-	void CommandLine::preInit(vector<ParmItem> parms, bool init) {
-		if (init) {
-			memset(&rootOptions, 0x0, sizeof(rootOptions));
-			memset(&rootFlags, 0x0, sizeof(rootFlags));
+	Flags  _CommandLine::getFlags(bool active, bool def) {
+		Flags act;
+		Argument* opt;
+		bool value;
+		for (auto it : flags) {
+			opt = &it.second;
+			value = makeBoolean((def) ? opt->defvalue : opt->getValue());
+			if (opt->source != Source::AUTO && (active || value)) act.emplace(opt->name, value);
 		}
-		for (ParmItem p : parms) {
-			Argument option(p);
-			Group& map = (p.type == Type::FLAG) ? flags : options;
-			map.add(p.name, option);
-			ParameterTree** root = (p.type == Type::FLAG) ? rootFlags : rootOptions;
-			add2tree(root, p.name);
-		}
-	}
-	void CommandLine::postInit() {
-		updateFromEnv();
-		loadHelp();
+		return act;
 	}
 
 }

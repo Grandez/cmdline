@@ -1,11 +1,32 @@
 #include <iostream>
-#include <memory>
-#include "../cmdline/cmdline.hpp"
-#include "../cmdline/parmitem.hpp"
 
-#include "../cmdline/tools.h"
+#include "../cmdline/include/cmdline.hpp"
+
 using namespace std;
 using namespace cmdline;
+
+bool checkFlag() {
+	char* argv2[10] = { (char*)"drivercpp"
+	, (char*)"/def1=definition1"
+	};
+	bool rc = false;
+	std::cout << "Starting\n";
+
+	Parameters iflags = {
+	 ParmFlag("verbose")
+	};
+	CmdLine cmdLine = CmdLine::GetInstance(2, argv2, iflags);
+	return !cmdLine.hasFlag("verbose");
+
+}
+int main(int argc, char* argv[]) {
+	bool rc = false;
+	std::cout << "Starting\n";
+	rc |= checkFlag();
+	std::cout << "End\n";
+	return (rc ? 1 : 0);
+}
+
 /*
 std::vector<cmdline::ParmItem> flags = {
 	 cmdline::ParmItem("output", true)
@@ -121,56 +142,3 @@ bool checkDefaultFlags(std::vector<cmdline::ParmItem>& flags, int argc, char* ar
 	return resko();
 }
 */
-int main(int argc, char* argv[]) {
-	const char* argv2[10] = { "drivercpp"
-		,"/def1=definition1"
-	};
-	bool rc = false;
-	std::cout << "Starting\n";
-	CmdLine cmdline;
-	cmdline.parse(2, argv2);
-	string str = cmdline.getDefinition((const char*)"def1");
-	str.at(2) = 'p';
-	cout << str << endl;
-	string str2 = cmdline.getDefinition((const char*)"def1");
-	cout << str2 << endl;
-	std::cout << "End\n";
-	// rc |= failingGoogleTest();
-	/*
-	char data[] = "test1,test2";
-	std::vector<std::string> res = splitParameter(data);
-
-	std::cout << "Begin" << std::endl;
-	argv2[1] = (char*) "default flags";
-	cmdline::CmdLine cmdLine(flags);
-
-	HashMap<std::string> *hmap = new HashMap<std::string>();
-	cmdline::ParmItem item1 = cmdline::ParmItem("pepe2");
-
-	hmap->insert(item1.name, std::make_unique<ParmItem>(item1));
-
-	checkDefaultFlags(flags, 2, argv2);
-
-	argv2[1] = (char*)"+o";
-	if (testFlagInvalid(flags, 2, (char**)argv2)) return 1;
-
-	argv2[1] = (char *)  "+v";
-	if (testFlagDetect(flags, 2, argv2)) return 1;
-
-	argv2[1] = (char*)"+ver";
-	if (testFlagDetect(flags, 2, argv2)) return 1;
-
-	argv2[1] = (char*)"+verbo";
-	if (testFlagDetect(flags, 2, argv2)) return 1;
-
-	argv2[1] = (char*)"+verbose";
-	if (testFlagDetect(flags, 2, (char**)argv2)) return 1;
-
-
-	argv2[1] = (char*) "-h";
-	if (case01(2, (char**)argv2)) return 1;
-	argv2[1] = (char*) "--help";
-	if (case02(2, (char**)argv2)) return 1;
-	*/
-	return 0;
-}

@@ -1,8 +1,8 @@
 #pragma once
+#include <string>
+#include <unordered_map>
 
-#include "common.h"
-
-namespace cmdline {
+namespace _cmdline {
 
     class ParameterTree {
     public:

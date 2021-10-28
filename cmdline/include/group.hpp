@@ -6,7 +6,7 @@ using namespace std;
 
 #include "arg.hpp"
 
-namespace cmdline {
+namespace _cmdline {
 	class Group : public unordered_map<string, Argument> {
 		char* name;
 //		unordered_map<string, Argument> container;

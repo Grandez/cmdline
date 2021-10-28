@@ -1,0 +1,19 @@
+# Excepciones
+
+Si se produce un error durante el proceso de análisis de la línea de comandos o se produce un error en tiempo de ejecución se genera una excepción **CmdLineException**
+
+Distinguimos los siguientes tipos:
+
+
+CmdLineParameterException;El parámetro es erroneo
+CmdLineValueException;el valor asociado alparámetro no es valido de acuerdo con el tipo indicado
+
+CmdLineNotFoundException;runtime_error;Se ha solicitado un parámetro que no existe
+CmdLineInvalidTypeException;Se ha solicitado una conversion no valida de un parámetro
+
+Además, para gestionar la solicitud de ayuda, se generan las siguientes excepciones:
+
+
+- HelpRequested
+- HelpDetailedRequested
+

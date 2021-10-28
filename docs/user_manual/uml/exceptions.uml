@@ -1,0 +1,39 @@
+@startuml
+hide empty members
+skinparam groupInheritance 2
+skinparam style strictuml
+
+class exception 
+together {
+  class runtime_error 
+  class invalid_argument 
+}
+
+exception <|-- runtime_error
+invalid_argument -- (exception , runtime_error )
+
+runtime_error <|-- CmdLineNotFoundException
+runtime_error <|-- CmdLineInvalidTypeException
+
+invalid_argument <|-- CmdLineException
+
+together {
+  class CmdLineHelpException
+  class CmdLineParameterException
+  class CmdLineValueException
+
+}
+
+CmdLineException <|-- CmdLineParameterException
+CmdLineException <|-- CmdLineValueException
+
+CmdLineException <|-- CmdLineHelpException
+
+
+together {
+  class HelpRequested
+  class HelpDetailRequested
+}
+
+HelpDetailRequested -- (CmdLineHelpException, HelpRequested )
+@enduml
