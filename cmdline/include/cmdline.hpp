@@ -108,20 +108,18 @@ namespace cmdline {
 		CmdLine(int argc, const char* argv[], Parameters parms, bool forward = false, bool strict = false);
 	};
 	class CmdLineI : public CmdLine {
-		
 	public: 
+		CmdLine GetInstance(int argc, const char* argv[], Parameters parms);
 		~CmdLineI();
-		CmdLineI& GetInstance(int argc, const char* argv[], Parameters parms);
 	};
 	class CmdLineS : public CmdLine {
 	public:
-		CmdLineS& GetInstance(int argc, const char* argv[], Parameters parms);
+		CmdLine GetInstance(int argc, const char* argv[], Parameters parms);
 	};
 	class CmdLineIS : public CmdLineI {
 	public:
 		~CmdLineIS();
-		CmdLineIS& GetInstance(int argc, const char* argv[], Parameters parms);
-
+		CmdLine GetInstance(int argc, const char* argv[], Parameters parms);
 	};
 	class CmdLineI_forward : public CmdLine {
 

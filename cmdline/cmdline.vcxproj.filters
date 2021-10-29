@@ -77,9 +77,6 @@
     <ClInclude Include="include\parameter_tree.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\parmitem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\tools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
