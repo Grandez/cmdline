@@ -95,26 +95,30 @@ namespace cmdline {
 		Flags getCurrentFlags (bool all = true);
 
 		// Options control
+		bool            hasOption        (const char* name);
+		bool            hasOption        (string name);
+		bool            isOptionMultiple (const char* name);
+		bool            isOptionMultiple (string name);
+		const char *    getOption        (const char* name);
+		const char*     getOption        (string name);
 		template <typename T>  
-		const T       getOption         (const char* name);
-		template <typename T>  
-		const T       getOption         (string name);
+		const T         getOptionAs      (const char* name);
 		template <typename T>
-		vector<T>     getOptionValues   (const char* name);
+		const T         getOptionAs     (string name);
+		vector<string>  getOptionValues (const char* name);
+		vector<string>  getOptionValues (string name);
+		template <typename T>
+		const vector<T> getOptionValuesAs(string name);
 
-		const string  getOption         (const char* name);
-		Options       getDefaultOptions ();
-		Options       getCurrentOptions ();
+		Options         getDefaultOptions ();
+		Options         getCurrentOptions ();
 
 		bool  hasDefinition(const char* def);
-//		const cmdline::Flag  getFlag(const char* name);// { return commandLine->getFlag(name); }
-//		const cmdline::Flag  getFlag(string name);//      { return commandLine->getFlag(name.c_str()); };
-
-//		bool            hasDefinition    (const char*def);//   { return (commandLine->hasDefinition(def)); };
-
+/*
 		template <typename T>  const T  getDefinition(const char* name);// { return (commandLine->getDefinition<T>(name)); };
 		const string  getDefinition(const char* name);// { return (commandLine->getDefinition2(name)); };
 		const vector<string>  getVectorDefinition(const char* name);// { return (commandLine->getVectorDefinition(name)); };
+*/
 	protected:
 		static CmdLine GetInstance(int argc, char* argv[], Parameters parms, bool forward, bool strict);
 	private:

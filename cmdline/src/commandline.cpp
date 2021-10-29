@@ -1,7 +1,7 @@
 
 #include <iostream> // temp
 #include <type_traits>
-
+#include <chrono>
 #include "common.h"
 #include "parameter_tree.hpp"
 
@@ -60,14 +60,13 @@ namespace _cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 		return *this;
 	}
-	bool  _CommandLine::hasDefinition(const char* flag) {
+	bool  _CommandLine::hasDefinition(const char* name) {
 		return false;
 	}
 
-	bool  _CommandLine::hasFlag(const char* flag) {
-		Argument* opt = flags.find(flag);
-		if (opt == nullptr) return false;
-		return makeBoolean(opt->getValue().c_str());
+	bool  _CommandLine::hasFlag(const char* name) {
+		Argument* opt = find(flags, name);
+		return makeBoolean(opt->getValue());
 	}
 	Flags  _CommandLine::getDefaultFlags(bool all) { // Valores por defecto
 		return getFlags(all, false);
@@ -76,43 +75,73 @@ namespace _cmdline {
 		return getFlags(all, true);
 	}
 
-
-	Options  _CommandLine::getDefaultOptions() {
-		Options act;
-		Argument *opt;
-		for (auto it : options) {
-			opt = &it.second;
-			if (opt->source != Source::AUTO) act.emplace(opt->name, opt->defvalue);
-		}
-		return act;
+	bool _CommandLine::hasOption(const char* name) {
+		Argument* opt = find(options, name);
+		return (strlen(opt->getValue()) == 0 ? false : true);
 	}
-	Options _CommandLine::getCurrentOptions(bool all) {
-		Options opts; // = options;
-		/*
-			if (all) {
-				std::map<std::string, void*> nopts;
-				for (const std::pair<std::string, ParmItem>& parm : defOptions) {
-					if (parm.second.value != nullptr) nopts.emplace(std::string(parm.first), (void*)strdup(parm.second.value));
-				}
-				opts.merge(nopts);
-			}
-			*/
-	    return opts;
+	bool _CommandLine::hasOption(string name) {
+		return hasOption(name.c_str());
 	}
-
-	template <typename T>  const T  _CommandLine::getOption(const char *name) {
-		Argument* opt = options.find(name);
-		if (opt == nullptr) throw CmdLineNotFoundException(name);
-		//		if (typeid(T) == string) return "";
-		//		if (typeid(T) == path) return "";
-		return T(opt->getValue());
+	bool _CommandLine::isOptionMultiple(const char* name) {
+		Argument* opt = find(options, name);
+		return (opt->values.size() > 1);
 	}
-	template <> const string _CommandLine::getOption(const char* name) {
-		Argument* opt = options.find(name);
-		if (opt == nullptr) throw CmdLineNotFoundException(name);
-
+	bool _CommandLine::isOptionMultiple(string name) {
+		return isOptionMultiple(name.c_str());
+	}
+	const char* _CommandLine::getOption(const char* name) {
+		Argument* opt = find(options, name);
 		return opt->getValue();
 	}
+	const char* _CommandLine::getOption(string name) {
+		return getOption(name.c_str());
+	}
+	vector<string> _CommandLine::getOptionValues(const char* name) { 
+		Argument* opt = find(options, name);
+		return opt->getValues();
+	}
+	vector<string> _CommandLine::getOptionValues(string name) { 
+		return getOptionValues(name.c_str()); 
+	}
+
+	template <typename T>
+	const T _CommandLine::getOptionAs(const char* name) {
+		T cls;
+		Argument* opt = find(options, name);
+		return castValue<T>(cls, opt->type, opt->getValue());
+//		checkType(T, Type type);
+//		auto value = any(getValue(opt->getValue(), opt->type));
+//		return  castValue(value, opt->type);
+    }
+	template <typename T>
+	const T _CommandLine::getOptionAs(string name) {
+		return getOptionAs<T>(name.c_str());
+	}
+
+	Options  _CommandLine::getDefaultOptions() {
+		return getOptionsValue(true);
+	}
+	Options _CommandLine::getCurrentOptions() {
+		return getOptionsValue(false);
+	}
+	template <typename T>
+	vector<T> _CommandLine::getOptionValuesAs(const char *name) { 
+		T cls;
+		vector<T> data;
+		
+		Argument* opt = find(options, name);
+		for (auto it : opt->getValues()) {
+			data.push_back(castValue<T>(cls, opt->type, it));
+		}
+		return data;
+	};
+	/*
+	template <typename T>
+	vector<T> _CommandLine::getOptionValuesAs(string name) {
+		return getOptionValuesAs<T>(name.c_str());
+	};
+	*/
+	/*
 	template <typename T>  const T  _CommandLine::getDefinition(const char* name) {
 		Argument* opt = options.find(name);
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
@@ -146,7 +175,7 @@ namespace _cmdline {
 		if (opt == nullptr) throw CmdLineNotFoundException(name);
 		return (*opt).getValues();
 	}
-
+	*/
 	/*
 	template <typename T>
 			void foo() {
@@ -295,12 +324,54 @@ namespace _cmdline {
 		bool value;
 		for (auto it : flags) {
 			opt = &it.second;
-			value = makeBoolean((def) ? opt->defvalue : opt->getValue());
+			value = makeBoolean((def) ? opt->defValue : opt->getValue());
 			if (opt->source != Source::AUTO && (active || value)) act.emplace(opt->name, value);
 		}
 		return act;
 	}
+	Argument* _CommandLine::find(Group where, const char* what) {
+		Argument* arg = where.find(what);
+		if (arg == nullptr) throw CmdLineNotFoundException(what);
+		return arg;
+	}
+	template <typename T>
+	void _CommandLine::checkType(T, Type type) {
+		string expected("");
+		switch (type) {
+		case cmdline::Type::NUMBER:  if (!is_same<T, int> && !is_same<T, long>) expected = "number";break;
+		case cmdline::Type::DECIMAL: if (!is_same<T, float> && !is_same<T, double>) expected = "decimal"; break;
+		case cmdline::Type::DATE:   if (!is_same<T, struct tm>) expected = "date";break;
+		case cmdline::Type::TIME:   if (!is_same<T, struct tm>) expected = "time";break;
+		case cmdline::Type::DATETIME: if (!is_same<T, struct tm>) expected = "datetiem"; break;
+		case cmdline::Type::TMS:      if (!is_same<T, chrono::time_point>) expected = "timestamp";break;
+		case cmdline::Type::DIR:
+		case cmdline::Type::DIR_EXISTS: if (!is_same<T, filesystem::path>) expected = "directory";break;
+		case cmdline::Type::FILE:
+		case cmdline::Type::FILE_EXISTS: if (!is_same<T, filesystem::path>) expected = "file";break;
+		default: expected = "";
+		}
+		if (expected.length() > 0) throw CmdLineInvalidTypeException("expected " + expected);
+	}
+	template <typename T>
+	T _CommandLine::castValue(T, auto value) {
+		if (is_same<T, int>) return any_cast<int>(value);
+		if (is_same<T, long>) return any_cast<long>(value);
+		if (is_same<T, float>) return any_cast<float>(value);
+		if (is_same<T, double>) return any_cast<double>(value);
+		if (!is_same<T, struct tm *>) return any_cast<struct tm *>(value);
+		if (!is_same<T, filesystem::path>) return any_cast<filesystem::path>(value);
+		return any_cast<string>(value);
+	}
+	Options  _CommandLine::getOptionsValue(bool def) {
+		Options act;
+			Argument* opt;
+			for (auto it : options) {
+				opt = &it.second;
+				if (opt->source != Source::AUTO) act.emplace(opt->name, (def ? opt->defValue : opt->getValue()));
+			}
+		return act;
 
+	}
 }
 
 #ifdef _SECURE_DEF_

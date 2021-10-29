@@ -1,4 +1,5 @@
 #pragma once
+#include <set>
 #include "cmdline.hpp"
 
 using namespace std;
@@ -11,8 +12,8 @@ namespace _cmdline {
 		Source source   = Source::DEFAULT;
 		Type   type     = Type::STRING;
 		bool   multiple = false;
-		char* defvalue = 0x0;
-		vector<string> values;
+		char* defValue = 0x0;
+		set<string> values; // avoid duplicates
 		Argument() = delete;
 		Argument(Parm& parm);
 		Argument(const char *name, const char* value);
@@ -23,24 +24,32 @@ namespace _cmdline {
 		Argument& setValue(const char* value);
 		Argument& setValue(std::string value);
 		Argument& addValue(std::string value);
-		const string         getValue()  { return values[0]; }
-		const vector<string> getValues() { return values; }
-		string         letValue()  { return string(values[0]); }
-		vector<string> letValues() { return vector<string>(values); }
-		bool           getBoolean();
-		Argument& initValues(vector<string> values) {
-			this->values = values;
-			return *this;
+		const char* getValue();
+		vector<string>  getValues();
+		/*
+			m_buff = make_unique<unsigned char*[]>(size);
+			std::unique_ptr<char **, arrayDeleter> _ptr = ;
+			_ptr. = (char**)malloc((values.size() + 1) * sizeof(char*));
+			char** pValues = (char **) malloc((values.size() + 1) * sizeof(char*));
+			int i = 0;
+			for (i = 0; i < values.size(); i++) pValues[i] = strdup(values[i].c_str());
+			pValues[i] = 0x0;
+//			_ptr = make_unique<char **, arrayDeleter>(pValues);
+//			return values; 
 		}
+		*/
+		bool           getBoolean();
+		Argument& initValues(vector<string> values);
 	protected:
 		Argument&      addValues(vector<string> values);
+	private:
+		char* first = 0x0;
+		struct arrayDeleter {
+			void operator()(char ** data) { 
+				int i = 0;
+				if (data == 0x0) return;
+				while (data[i]) free(data[i++]);
+			}
+		};
 	};
-	/*
-	typedef unordered_map<string, Argument>  Args;
-	typedef unordered_map<string, bool>      Flags;
-	typedef pair<const string, bool>         Flag;
-	typedef unordered_map<string, string>    Options;
-	typedef pair<string, string>             Option;
-	typedef unordered_map<string, vector<string>> Definition;
-	*/
 }

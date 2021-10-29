@@ -41,22 +41,32 @@ namespace cmdline {
 		Flags CmdLine::getDefaultFlags (bool all)         { return _commandLine->getDefaultFlags(all);  };
 		Flags CmdLine::getCurrentFlags (bool all)         { return _commandLine->getCurrentFlags(all);  };
 
-		template <typename T>  
-		const T       CmdLine::getOption         (const char* name) { return _commandLine->getOption<T>(name);    };
-		template <typename T>  
-		const T       CmdLine::getOption         (string name)      { return getOption<T>(name.c_str());          };
-		const string  CmdLine::getOption         (const char* name) { return getOption<string>(name);             };
+		bool            CmdLine::hasOption       (const char* name) { return _commandLine->hasOption(name); };
+		bool            CmdLine::hasOption       (string name)      { return _commandLine->hasOption(name.c_str()); };
+		bool            CmdLine::isOptionMultiple(const char* name) { return _commandLine->isOptionMultiple(name); };
+		bool            CmdLine::isOptionMultiple(string name)      { return _commandLine->isOptionMultiple(name.c_str()); };
+		const char*     CmdLine::getOption       (const char* name) { return _commandLine->getOption(name); };
+		const char*     CmdLine::getOption       (string name)      { return _commandLine->getOption(name.c_str()); };
 		template <typename T>
-		vector<T>     CmdLine::getOptionValues   (const char* name)  { return vector<T> getOptionValues<T>(name); };
-		Options       CmdLine::getDefaultOptions ()                  { return _commandLine->getDefaultOptions();  };
-		Options       CmdLine::getCurrentOptions ()                  { return _commandLine->getCurrentOptions();  };
+		const T         CmdLine::getOptionAs     (const char* name) { return _commandLine->getOption<T>(name.c_str()); };
+		template <typename T>
+		const T         CmdLine::getOptionAs     (string name)      { return _commandLine->getOption<T>(name.c_str()); };
+		vector<string>  CmdLine::getOptionValues (const char* name) { return _commandLine->getOptionValues(name); };
+		vector<string>  CmdLine::getOptionValues (string name)      { return _commandLine->getOptionValues(name.c_str()); };
+		template <typename T>
+		const vector<T> CmdLine::getOptionValuesAs(string name) { return _commandLine->getOptionValuesAs<T>(name.c_str()); };
+
+		Options         CmdLine::getDefaultOptions() { return _commandLine->getDefaultOptions(); };
+		Options         CmdLine::getCurrentOptions() { return _commandLine->getDefaultOptions(); };
+
 
 //		const Flag  CmdLine::getFlag(const char* name) { return _commandLine->getFlag(name); }
 //		const Flag  CmdLine::getFlag(string name) { return _commandLine->getFlag(name.c_str()); };
-
+/*
 		bool            CmdLine::hasDefinition(const char* def) { return _commandLine->hasDefinition(def); };
 
 		template <typename T>  const T  CmdLine::getDefinition(const char* name) { return _commandLine->getDefinition<T>(name); };
 		const string  CmdLine::getDefinition(const char* name) { return _commandLine->getDefinition2(name); };
 		const vector<string>  CmdLine::getVectorDefinition(const char* name) { return _commandLine->getVectorDefinition(name); };
+*/
 }
