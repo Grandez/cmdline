@@ -38,13 +38,12 @@
     <ClInclude Include="include\cmdline.hpp" />
     <ClInclude Include="include\cmdline_exceptions.hpp" />
     <ClInclude Include="include\commandline.hpp" />
-    <ClInclude Include="include\common.h" />
     <ClInclude Include="include\defines.hpp" />
     <ClInclude Include="include\group.hpp" />
+    <ClInclude Include="include\msg_locale.h" />
     <ClInclude Include="include\parameter_tree.hpp" />
     <ClInclude Include="include\parmitem.hpp" />
     <ClInclude Include="include\tools.h" />
-    <ClInclude Include="include\types.h" />
     <ClInclude Include="include\validations.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

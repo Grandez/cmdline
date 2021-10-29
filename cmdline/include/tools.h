@@ -3,7 +3,6 @@
 #include <unordered_map>
 
 #include "parameter_tree.hpp"
-#include "types.h"
 
 using namespace std;
 

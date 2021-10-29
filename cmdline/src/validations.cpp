@@ -6,7 +6,8 @@
 #include <locale>
 #include <iomanip>
 
-#include "types.h"
+#include "tools.h"
+
 /*
 #include <stdio.h>      
 #include <stdlib.h>     
@@ -24,12 +25,11 @@
 #include <errno.h>
 
 #include "sal.h"
-#include "tools.h"
+
 #include "validations.h"
 
 
 */
-#include "common.h"
 #include "arg.hpp"
 #include "cmdline_exceptions.hpp"
 

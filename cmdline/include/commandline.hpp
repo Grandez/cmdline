@@ -86,6 +86,7 @@ namespace _cmdline {
 		void checkType(T, Type type);
 		template <typename T>
 		T castValue(T, auto value);
+		void checkAlreadySet(Group where, const char* what);
 
 	};
 }

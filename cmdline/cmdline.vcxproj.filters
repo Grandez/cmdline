@@ -65,9 +65,6 @@
     <ClInclude Include="include\commandline.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\defines.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -83,10 +80,10 @@
     <ClInclude Include="include\tools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\types.h">
+    <ClInclude Include="include\validations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\validations.h">
+    <ClInclude Include="include\msg_locale.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdexcept>
+#include "msg_locale.h"
 
 namespace cmdline {
 	/**
@@ -48,8 +49,8 @@ namespace cmdline {
 	class CmdLineParameterException : public CmdLineException {
 	public:
 		CmdLineParameterException() = delete;
-		CmdLineParameterException(const char* value) : CmdLineException("Invalid argument") { parm = (char*) value; }
-		CmdLineParameterException(const char* value, const char* desired) : CmdLineException("Invalid argument") { 
+		CmdLineParameterException(const char* value) : CmdLineException(TXT_ARG_INVALID) { parm = (char*) value; }
+		CmdLineParameterException(const char* value, const char* desired) : CmdLineException(TXT_ARG_INVALID) {
 			parm = (char*)value;
 			alt = (char*)desired;
 		}
@@ -57,21 +58,29 @@ namespace cmdline {
 	class CmdLineValueException : public CmdLineException {
 	public:
 		CmdLineValueException() = delete;
-		CmdLineValueException(const char* value, const char* desired) : CmdLineException("Invalid value") {
+		CmdLineValueException(const char* value, const char* desired) : CmdLineException(TXT_VAL_INVALID) {
 			parm = (char*)value;
 			alt = (char*)desired;
 		}
 	};
+	
+	class CmdLineDuplicateArgumentException : public CmdLineException {
+	public:
+		CmdLineDuplicateArgumentException() = delete;
+		CmdLineDuplicateArgumentException(const char* value) : CmdLineException(TXT_ARG_SET) {
+		};
+	};
+		
 	/**
 	 * Exception indicating HELP has been requested
 	 */
 	class HelpRequested : public CmdLineException {
 	public:
-		HelpRequested() : CmdLineException("Help requested") {};
+		HelpRequested() : CmdLineException(TXT_HELP) {};
 	};
 	class HelpDetailedRequested : public CmdLineException {
 	public:
-		HelpDetailedRequested() : CmdLineException("Help detailed requested") {};
+		HelpDetailedRequested() : CmdLineException(TXT_HELP_DETAIL) {};
 	};
 
 }

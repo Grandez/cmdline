@@ -2,9 +2,9 @@
 #include <iostream> // temp
 #include <type_traits>
 #include <chrono>
-#include "common.h"
 #include "parameter_tree.hpp"
 
+#include "tools.h"
 #include "defines.hpp"
 #include "cmdline_exceptions.hpp"
 #include "validations.h"
@@ -43,7 +43,10 @@ namespace _cmdline {
 		char* prev = nullptr;
 		for (int i = 1; i < argc; i++) {
 			switch (argv[i][0]) {
-			case '/': prev = updateOption(argv[i], prev); break;
+			case '/': 
+				prev = updateOption(argv[i], prev); 
+				if (strict) checkAlreadySet(options, prev);
+				break;
 			case '+': if (prev != nullptr) throw CmdLineException("Missing value", prev);
 				prev = updateFlag(argv[i], argv[i], true);   break;
 			case '-': in = argv[i];
@@ -371,6 +374,12 @@ namespace _cmdline {
 			}
 		return act;
 
+	}
+	void _CommandLine::checkAlreadySet(Group where, const char* what) {
+		Argument* arg = find(where, what);
+		if (arg != nullptr) {
+			if (arg->values.size() && !arg->multiple) throw CmdLineDuplicateArgumentException(what);
+		}
 	}
 }
 
