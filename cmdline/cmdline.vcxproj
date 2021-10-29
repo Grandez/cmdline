@@ -28,6 +28,7 @@
     <ClCompile Include="src\cmdline_c.cpp" />
     <ClCompile Include="src\cmdline_flavors.cpp" />
     <ClCompile Include="src\commandline.cpp" />
+    <ClCompile Include="src\parameter.cpp" />
     <ClCompile Include="src\parameter_tree.cpp" />
     <ClCompile Include="src\tools.cpp" />
     <ClCompile Include="src\validations.cpp" />

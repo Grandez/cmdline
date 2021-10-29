@@ -10,19 +10,19 @@ using namespace _cmdline;
 namespace cmdline {
 	CmdLine* singleton_ = nullptr;
 	_CommandLine* _commandLine;
-	CmdLine::CmdLine(int argc, char* argv[], Parameters parms, bool forward, bool strict) {
+	CmdLine::CmdLine(int argc, const char* argv[], Parameters parms, bool forward, bool strict) {
 		_commandLine = new _cmdline::_CommandLine(argc, argv, parms, forward, strict);
 	}
-	CmdLine CmdLine::GetInstance(int argc, char* argv[], Parameters parms) {
+	CmdLine CmdLine::GetInstance(int argc, const char* argv[], Parameters parms) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
-	CmdLine CmdLine::GetInstance(Parameters parms, int argc, char* argv[]) {
+	CmdLine CmdLine::GetInstance(Parameters parms, int argc, const char* argv[]) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
 
-	CmdLine CmdLine::GetInstance(int argc, char* argv[], Parameters parms, bool forward, bool strict) {
+	CmdLine CmdLine::GetInstance(int argc, const char* argv[], Parameters parms, bool forward, bool strict) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, forward, strict);
 		return *singleton_;
 	}
@@ -59,6 +59,14 @@ namespace cmdline {
 		Options         CmdLine::getDefaultOptions() { return _commandLine->getDefaultOptions(); };
 		Options         CmdLine::getCurrentOptions() { return _commandLine->getDefaultOptions(); };
 
+		bool            CmdLine::hasDefinition(const char* def)         { return _commandLine->hasDefinition(def);         }
+		bool            CmdLine::hasDefinition(string def)              { return _commandLine->hasDefinition(def);         }
+		bool            CmdLine::isDefinitionMultiple(const char* name) { return _commandLine->isDefinitionMultiple(name); }
+		bool            CmdLine::isDefinitionMultiple(string name)      { return _commandLine->isDefinitionMultiple(name); }
+		char*           CmdLine::getDefinition(const char* name)        { return _commandLine->getDefinition(name);        }
+		char*           CmdLine::getDefinition(string name)             { return _commandLine->getDefinition(name);        }
+		vector<string>  CmdLine::getDefinitionValues(const char* name)  { return _commandLine->getDefinitionValues(name);  }
+		vector<string>  CmdLine::getDefinitionValues(string name)       { return _commandLine->getDefinitionValues(name);  }
 
 //		const Flag  CmdLine::getFlag(const char* name) { return _commandLine->getFlag(name); }
 //		const Flag  CmdLine::getFlag(string name) { return _commandLine->getFlag(name.c_str()); };

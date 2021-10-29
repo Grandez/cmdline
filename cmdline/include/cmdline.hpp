@@ -15,46 +15,20 @@ namespace cmdline {
 		enum class Source { DEFAULT, ENV, CMDLINE, CODE, AUTO };
 
 	    typedef unordered_map<string, bool>      Flags;
-//	    typedef pair<string, bool>               Flag;
 	    typedef unordered_map<string, string>    Options;
-	    //typedef pair<string, string>             Option;
-//	    typedef unordered_map<string, vector<string>> Definitions;
 		class Parm {
 		public:
 			const char* name;              // Name of parameter
 			Type type = Type::STRING;  // Type
-			const char* value;   // default value
+			char* value;   // default value
 			bool multiple;   // Allow multiple values?
 			Parm() = delete;
-			Parm(const char* name) {
-				this->name = name;
-				this->value = "true";
-				this->type = Type::BOOL;
-				this->multiple = false;
-				this->instance = 2;
-			}
-			Parm(const char* name, const char* value) {
-				this->name = name;
-				this->value = value;
-				this->multiple = false;
-				this->instance = 1;
-			}
-			Parm(const char* name, const char* value, Type type, bool multiple = false) {
-				this->name = name;
-				this->value = value;
-				this->type = type;
-				this->multiple = multiple;
-				this->instance = 1;
-			}
-			Parm(const char* name, bool value) {
-				this->name = name;
-				this->value = (char*)((value) ? "1" : "0");
-				this->type = Type::BOOL;
-				this->multiple = false;
-				this->instance = 2;
-			}
-			bool instanceOfFlag()   { return instance == 2; }
-			bool instanceOfOption() { return instance == 1; }
+			Parm(const char* name);
+			Parm(const char* name, const char* value);
+			Parm(const char* name, const char* value, Type type, bool multiple = false);
+			Parm(const char* name, bool value);
+			bool instanceOfFlag();
+			bool instanceOfOption();
 		private:
 			int instance = 0;
 
@@ -78,8 +52,8 @@ namespace cmdline {
     #endif
 	class CmdLine {
 	public:
-		static CmdLine GetInstance(int argc, char *argv[], Parameters parms = Parameters());
-		static CmdLine GetInstance(Parameters parms, int argc, char* argv[]);
+		static CmdLine GetInstance(int argc, const char *argv[], Parameters parms = Parameters());
+		static CmdLine GetInstance(Parameters parms, int argc, const char* argv[]);
 		/*
 		CmdLine();
 		CmdLine(vector<ParmItem> args);//                                      { commandLine = new CommandLine(args); }
@@ -113,31 +87,40 @@ namespace cmdline {
 		Options         getDefaultOptions ();
 		Options         getCurrentOptions ();
 
-		bool  hasDefinition(const char* def);
+		// Definitions
+		bool            hasDefinition(const char* def);
+		bool            hasDefinition(string def);
+		bool            isDefinitionMultiple(const char* name);
+		bool            isDefinitionMultiple(string name);
+		char*           getDefinition(const char* name);
+		char*           getDefinition(string name);
+		vector<string>  getDefinitionValues(const char* name);
+		vector<string>  getDefinitionValues(string name);
+		
 /*
 		template <typename T>  const T  getDefinition(const char* name);// { return (commandLine->getDefinition<T>(name)); };
 		const string  getDefinition(const char* name);// { return (commandLine->getDefinition2(name)); };
 		const vector<string>  getVectorDefinition(const char* name);// { return (commandLine->getVectorDefinition(name)); };
 */
 	protected:
-		static CmdLine GetInstance(int argc, char* argv[], Parameters parms, bool forward, bool strict);
+		static CmdLine GetInstance(int argc, const char* argv[], Parameters parms, bool forward, bool strict);
 	private:
-		CmdLine(int argc, char* argv[], Parameters parms, bool forward = false, bool strict = false);
+		CmdLine(int argc, const char* argv[], Parameters parms, bool forward = false, bool strict = false);
 	};
 	class CmdLineI : public CmdLine {
 		
 	public: 
 		~CmdLineI();
-		CmdLineI& GetInstance(int argc, char* argv[], Parameters parms);
+		CmdLineI& GetInstance(int argc, const char* argv[], Parameters parms);
 	};
 	class CmdLineS : public CmdLine {
 	public:
-		CmdLineS& GetInstance(int argc, char* argv[], Parameters parms);
+		CmdLineS& GetInstance(int argc, const char* argv[], Parameters parms);
 	};
 	class CmdLineIS : public CmdLineI {
 	public:
 		~CmdLineIS();
-		CmdLineIS& GetInstance(int argc, char* argv[], Parameters parms);
+		CmdLineIS& GetInstance(int argc, const char* argv[], Parameters parms);
 
 	};
 	class CmdLineI_forward : public CmdLine {

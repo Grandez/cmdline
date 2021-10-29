@@ -22,30 +22,26 @@ namespace _cmdline {
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
 
-	_CommandLine::_CommandLine(int argc, char* argv[], Parameters parms) {
+	_CommandLine::_CommandLine(int argc, const char* argv[], Parameters parms) {
 		preInit(parms);
 		postInit();
+		parse(argc, argv);
 	}
-    _CommandLine::_CommandLine(int argc, char* argv[], Parameters parms, bool forward, bool strict) {
+    _CommandLine::_CommandLine(int argc, const char* argv[], Parameters parms, bool forward, bool strict) {
 	    this->forward = forward;
 	    this->strict = strict;
 	    preInit(parms);
 	    postInit();
+		parse(argc, argv);
     }
-	_CommandLine::~_CommandLine() {
-		for (int i = 0; i < 128; i++) {
-			if (rootOptions[i] != nullptr) free(rootOptions[i]);
-			if (rootFlags[i] != nullptr) free(rootFlags[i]);
-		}
-	}
-	_CommandLine& _CommandLine::parse(const int argc, const char* argv[]) {
+	void _CommandLine::parse(const int argc, const char* argv[]) {
 		std::string in;
 		char* prev = nullptr;
 		for (int i = 1; i < argc; i++) {
 			switch (argv[i][0]) {
 			case '/': 
 				prev = updateOption(argv[i], prev); 
-				if (strict) checkAlreadySet(options, prev);
+				if (strict) checkAlreadySet(&options, prev);
 				break;
 			case '+': if (prev != nullptr) throw CmdLineException("Missing value", prev);
 				prev = updateFlag(argv[i], argv[i], true);   break;
@@ -61,15 +57,10 @@ namespace _cmdline {
 		}
 		if (hasFlag("HELP")) throw HelpDetailedRequested();
 		if (hasFlag("help")) throw HelpRequested();
-		return *this;
 	}
-	bool  _CommandLine::hasDefinition(const char* name) {
-		return false;
-	}
-
 	bool  _CommandLine::hasFlag(const char* name) {
-		Argument* opt = find(flags, name);
-		return makeBoolean(opt->getValue());
+		Argument& opt = find(&flags, name);
+		return makeBoolean(opt.getValue());
 	}
 	Flags  _CommandLine::getDefaultFlags(bool all) { // Valores por defecto
 		return getFlags(all, false);
@@ -79,29 +70,29 @@ namespace _cmdline {
 	}
 
 	bool _CommandLine::hasOption(const char* name) {
-		Argument* opt = find(options, name);
-		return (strlen(opt->getValue()) == 0 ? false : true);
+		Argument& opt = find(&options, name);
+		return (strlen(opt.getValue()) == 0 ? false : true);
 	}
 	bool _CommandLine::hasOption(string name) {
 		return hasOption(name.c_str());
 	}
 	bool _CommandLine::isOptionMultiple(const char* name) {
-		Argument* opt = find(options, name);
-		return (opt->values.size() > 1);
+		Argument& opt = find(&options, name);
+		return (opt.values.size() > 1);
 	}
 	bool _CommandLine::isOptionMultiple(string name) {
 		return isOptionMultiple(name.c_str());
 	}
 	const char* _CommandLine::getOption(const char* name) {
-		Argument* opt = find(options, name);
-		return opt->getValue();
+		Argument& opt = find(&options, name);
+		return opt.getValue();
 	}
 	const char* _CommandLine::getOption(string name) {
 		return getOption(name.c_str());
 	}
 	vector<string> _CommandLine::getOptionValues(const char* name) { 
-		Argument* opt = find(options, name);
-		return opt->getValues();
+		Argument& opt = find(&options, name);
+		return opt.getValues();
 	}
 	vector<string> _CommandLine::getOptionValues(string name) { 
 		return getOptionValues(name.c_str()); 
@@ -110,10 +101,10 @@ namespace _cmdline {
 	template <typename T>
 	const T _CommandLine::getOptionAs(const char* name) {
 		T cls;
-		Argument* opt = find(options, name);
-		return castValue<T>(cls, opt->type, opt->getValue());
+		Argument& opt = find(&options, name);
+		return castValue<T>(cls, opt->type, opt.getValue());
 //		checkType(T, Type type);
-//		auto value = any(getValue(opt->getValue(), opt->type));
+//		auto value = any(getValue(opt.getValue(), opt->type));
 //		return  castValue(value, opt->type);
     }
 	template <typename T>
@@ -132,66 +123,46 @@ namespace _cmdline {
 		T cls;
 		vector<T> data;
 		
-		Argument* opt = find(options, name);
-		for (auto it : opt->getValues()) {
+		Argument& opt = find(&options, name);
+		for (auto it : opt.getValues()) {
 			data.push_back(castValue<T>(cls, opt->type, it));
 		}
 		return data;
 	};
-	/*
-	template <typename T>
-	vector<T> _CommandLine::getOptionValuesAs(string name) {
-		return getOptionValuesAs<T>(name.c_str());
-	};
-	*/
-	/*
-	template <typename T>  const T  _CommandLine::getDefinition(const char* name) {
-		Argument* opt = options.find(name);
-		if (opt == nullptr) throw CmdLineNotFoundException(name);
-		const vector<string> values = opt->getValues();
-		if (typeid(T) == vector) return values; 
-		if (typeid(T) == list)	 return list<string>(values.begin(), values.end());
-//		if (typeid(T) == (char[]))	 return opt->getValue().c_str();
-		throw CmdLineInvalidTypeException(typeid(T).name());
-		try {
-			return T(opt->getValues());
-		}
-		catch (exception ex) {
-			throw CmdLineInvalidTypeException(typeid(T).name());
-		}
+	bool            _CommandLine::hasDefinition(const char* name) {
+		Argument* opt = findPointer(&defines, name);
+		return (opt == nullptr) ? false : true;
+    }
+	bool            _CommandLine::hasDefinition(string name) { 
+		return hasDefinition(name.c_str());
 	}
-	template <> 
-	const string _CommandLine::getDefinition(const char* name) {
-		Argument* opt = defines.find(name);
-		if (opt == nullptr) throw CmdLineNotFoundException(name);
+	bool            _CommandLine::isDefinitionMultiple(const char* name) { 
+		Argument& opt = find(&defines, name);
+		return (opt.values.size() < 2 ? false : true);
+    }
+	bool            _CommandLine::isDefinitionMultiple(string name) { 
+		return isDefinitionMultiple(name.c_str()); 
+	}
+	char* _CommandLine::getDefinition(const char* name) {
+		Argument& opt = find(&defines, name);
+		return (char *) opt.getValue();
+	}
+	char*           _CommandLine::getDefinition(string name) { 
+		return getDefinition(name.c_str()); 
+	}
+	vector<string>  _CommandLine::getDefinitionValues(const char* name) { 
+		Argument& opt = find(&defines, name);
+		return opt.getValues();
+    }
+	vector<string>  _CommandLine::getDefinitionValues(string name) { 
+		return getDefinitionValues(name.c_str()); 
+	}
 
-		return opt->getValue();
-	}
-
-	const string _CommandLine::getDefinition2(const char* name) {
-		Argument* opt = defines.find(name);
-		if (opt == nullptr) throw CmdLineNotFoundException(name);
-		return (*opt).getValue();
-	}
-	vector<string> _CommandLine::getVectorDefinition(const char* name) {
-		Argument* opt = defines.find(name);
-		if (opt == nullptr) throw CmdLineNotFoundException(name);
-		return (*opt).getValues();
-	}
-	*/
-	/*
-	template <typename T>
-			void foo() {
-				if constexpr (is_same_v<T, path>) {
-					// use type specific operations...
-				}
-			}
-			*/
 	//////////////////////////////////////////////////////////////////
 	
-	char* _CommandLine::checkOption(const char* option) { return (checkParameter(rootOptions, option)); }
-	char* _CommandLine::checkFlag(const char* flag) { return (checkParameter(rootFlags, flag)); }
-	char* _CommandLine::checkParameter(ParameterTree* root[], const char* parm) {
+	char* _CommandLine::checkOption       (const char* option) { return (checkParameter(rootOptions, option)); }
+	char* _CommandLine::checkFlag         (const char* flag)     { return (checkParameter(rootFlags, flag)); }
+	char* _CommandLine::checkParameter    (ParameterTree* root[], const char* parm) {
 		size_t idx = 0;
 		ParameterTree* base = root[parm[0] - ' '];
 		ParameterTree* prev = nullptr;
@@ -223,7 +194,7 @@ namespace _cmdline {
 		ss.append(base->getWord());
 		return (makeChar(ss));
 	}
-	void _CommandLine::updateFromEnv() {
+	void  _CommandLine::updateFromEnv     () {
 		char key[255];
 		char* p = (char*)"";
 		Argument *arg = options.find(ENV_PREFFIX);
@@ -235,7 +206,7 @@ namespace _cmdline {
 		udpateArgsFromEnv(flags, p);
 		if (arg != nullptr) free(p);
 	}
-	void _CommandLine::udpateArgsFromEnv(Group &parms, const char*prfx) {
+	void  _CommandLine::udpateArgsFromEnv (Group &parms, const char*prfx) {
 		char key[255];
 		char* value;
 //		Args::iterator it;
@@ -246,13 +217,13 @@ namespace _cmdline {
 			if (value != nullptr) it->second.setFromEnv(value);
         }
 	}
-	char* _CommandLine::updateOption(const char* option, char* prev) {
+	char* _CommandLine::updateOption      (const char* option, char* prev) {
 		int pos = std::string(option).find("=");
 		if (pos != std::string::npos) return updateDefinition(option);
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
 	}
-	char* _CommandLine::updateDefinition(const char* value) {
+	char* _CommandLine::updateDefinition  (const char* value) {
 		const char* ptr = &(value[1]);
 		vector<string> toks = tokenize(ptr, "=");
 		if (toks.size() != 2)      throw CmdLineParameterException("Invalid definition", value);
@@ -260,20 +231,20 @@ namespace _cmdline {
 		Argument *def = defines.find(toks[0]);
 		if (def == nullptr) def = new Define(toks[0].c_str());
 		def->initValues(splitArgument(toks[1].c_str()));
-		defines.add(*def);
+		defines.add(def);
 		return nullptr;
 	}
-	char* _CommandLine::updateFlag(const char* flag, const char* prev, bool value) {
+	char* _CommandLine::updateFlag        (const char* flag, const char* prev, bool value) {
 		std::vector<std::string> flags = splitArgument(flag);
 		for (std::string f : flags) updateFlagItem((char*)f.c_str(), prev, value);
 		return nullptr;
 	}
-	void _CommandLine::updateFlagItem(const char* flag, const char* prev, bool value) {
+	void  _CommandLine::updateFlagItem    (const char* flag, const char* prev, bool value) {
 		std::string name;
 		validateEntry(flag, prev);
 		try {
 			Argument* opt = flags.find(checkFlag(&(flag[1])));
-			//			opt->setValue(value);
+			opt->setValue(value);
 		}
 		catch (CmdLineException ex) {
 			char newFlag[3] = "+ ";
@@ -284,7 +255,7 @@ namespace _cmdline {
 			}
 		}
 	}
-	char *_CommandLine::addValueToOption(const char* value, char* option) {
+	char* _CommandLine::addValueToOption  (const char* value, char* option) {
 		if (strlen(option) == 1) throw CmdLineException("Invalid Option", option);
 		Argument* opt = options.find(option); // Exists!!!!
 		validateValue(value, opt->type);
@@ -292,7 +263,7 @@ namespace _cmdline {
 		if (!opt->multiple) (*opt).setValue(value);
 		return nullptr;
 	}
-	void _CommandLine::preInit(Parameters parms, bool init) {
+	void  _CommandLine::preInit           (Parameters parms, bool init) {
 		ParameterTree** root;
 
 		if (init) {
@@ -300,18 +271,18 @@ namespace _cmdline {
 			memset(&rootFlags, 0x0, sizeof(rootFlags));
 		}
 		for (Parm p : parms) {
-			Argument option(p);
-			Group& map  = (p.instanceOfFlag()) ? flags      : options;
+			Argument option(&p);
+			Group *map  = (p.instanceOfFlag()) ? &flags : &options;
 			root = (p.instanceOfFlag()) ? rootFlags : rootOptions;
-			map.add(p.name, option);
+			map->add(p.name, &option);
 			add2tree(root, p.name);
 		}
 	}
-	void _CommandLine::postInit() {
+	void  _CommandLine::postInit          () {
 		updateFromEnv();
 		loadHelp();
 	}
-	void _CommandLine::loadHelp() {
+	void  _CommandLine::loadHelp          () {
 		Parameters flagHelp = { Parm("help", false) ,Parm("HELP", false) };
 		Argument* arg = flags.find("help");
 		if (arg != nullptr) return;
@@ -321,21 +292,22 @@ namespace _cmdline {
 		arg = flags.find("HELP");
 		arg->source = Source::AUTO;
 	}
-	Flags  _CommandLine::getFlags(bool active, bool def) {
+	Flags _CommandLine::getFlags          (bool active, bool def) {
 		Flags act;
-		Argument* opt;
 		bool value;
 		for (auto it : flags) {
-			opt = &it.second;
-			value = makeBoolean((def) ? opt->defValue : opt->getValue());
-			if (opt->source != Source::AUTO && (active || value)) act.emplace(opt->name, value);
+			value = makeBoolean((def) ? it.second.defValue : it.second.getValue());
+			if (it.second.source != Source::AUTO && (active || value)) act.emplace(it.second.name, value);
 		}
 		return act;
 	}
-	Argument* _CommandLine::find(Group where, const char* what) {
-		Argument* arg = where.find(what);
+	Argument& _CommandLine::find(Group *group, const char* what) {
+		Argument* arg = group->find(what);
 		if (arg == nullptr) throw CmdLineNotFoundException(what);
-		return arg;
+		return *arg;
+	}
+	Argument* _CommandLine::findPointer(Group *group, const char* what) {
+		return group->find(what);
 	}
 	template <typename T>
 	void _CommandLine::checkType(T, Type type) {
@@ -365,18 +337,18 @@ namespace _cmdline {
 		if (!is_same<T, filesystem::path>) return any_cast<filesystem::path>(value);
 		return any_cast<string>(value);
 	}
-	Options  _CommandLine::getOptionsValue(bool def) {
+	Options _CommandLine::getOptionsValue(bool def) {
 		Options act;
-			Argument* opt;
+//			Argument& opt;
 			for (auto it : options) {
-				opt = &it.second;
-				if (opt->source != Source::AUTO) act.emplace(opt->name, (def ? opt->defValue : opt->getValue()));
+//				opt = &it.second;
+				if (it.second.source != Source::AUTO) act.emplace(it.second.name, (def ? it.second.defValue : it.second.getValue()));
 			}
 		return act;
 
 	}
-	void _CommandLine::checkAlreadySet(Group where, const char* what) {
-		Argument* arg = find(where, what);
+	void    _CommandLine::checkAlreadySet(Group *group, const char* what) {
+		Argument* arg = findPointer(group, what);
 		if (arg != nullptr) {
 			if (arg->values.size() && !arg->multiple) throw CmdLineDuplicateArgumentException(what);
 		}

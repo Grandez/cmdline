@@ -7,7 +7,7 @@
 using namespace std;
 
 namespace _cmdline {
-    #define strdup(a) myStrdup(a)
+    #define strdup(a) _cmdline::myStrdup(a)
 //	unordered_map<std::string, ParmItem> vector2map(vector<ParmItem> vect);
 	void  add2tree(ParameterTree* root[], const char* word);
 	char* makeChar   (std::string str);

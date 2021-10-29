@@ -9,18 +9,13 @@ using namespace std;
 namespace _cmdline {
 	class Group : public unordered_map<string, Argument> {
 		char* name;
-//		unordered_map<string, Argument> container;
-		typedef unordered_map<string, Argument> container;
 	public:
-		
-//		typedef typename iterator iterator;
-//		typedef typename const_iterator const_iterator;
-		Group& add(const char* name, Argument arg) {
-			insert_or_assign(name, arg);
+		Group& add(const char* name, Argument *arg) {
+			insert_or_assign(name, Argument(arg));
 			return *this;
 		}
-		Group& add(Argument arg) {
-			insert_or_assign(arg.name, arg);
+		Group& add(Argument *arg) {
+			insert_or_assign(arg->name, Argument(arg));
 			cout << "para" << size() << endl;
 			return *this;
 		}
@@ -28,6 +23,8 @@ namespace _cmdline {
 			try {
 				auto res = at(what);
 				return &(at(what));
+
+//				return &(at(what));
 			}
 			catch (out_of_range ex) {
 				return (Argument*) nullptr;

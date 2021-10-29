@@ -12,10 +12,9 @@ using namespace std;
 namespace _cmdline {
 	class _CommandLine {
 	public:
-		_CommandLine(int argc, char* argv[], Parameters parms);
-		_CommandLine(int argc, char* argv[], Parameters parms, bool forward = false, bool strict = false);
+		_CommandLine(int argc, const char* argv[], Parameters parms);
+		_CommandLine(int argc, const char* argv[], Parameters parms, bool forward = false, bool strict = false);
 		~_CommandLine();
-		_CommandLine& parse(const int argc, const char* argv[]);
 		// Flags
 		bool  hasFlag(const char *flag);
 		Flags getDefaultFlags(bool all);
@@ -43,18 +42,15 @@ namespace _cmdline {
 		Options         getDefaultOptions();
 		Options         getCurrentOptions();
 
+		bool            hasDefinition        (const char* def);
+		bool            hasDefinition        (string def);
+		bool            isDefinitionMultiple (const char* name);
+		bool            isDefinitionMultiple (string name);
+		char*           getDefinition        (const char* name);
+		char*           getDefinition        (string name);
+		vector<string>  getDefinitionValues  (const char* name);
+		vector<string>  getDefinitionValues  (string name);
 
-
-		bool hasDefinition(const char*);
-//		std::vector<std::string> getDefinition(const char* name);
-//		Definitions  getDefinitions();
-
-/*
-		template <typename T>  
-		const T  getDefinition(const char* name);
-		const string  getDefinition2(const char* name);
-		vector<string> getVectorDefinition(const char* name);
-*/
 	private:
 		std::list<const char*> inputs;
 		bool   forward = false;
@@ -64,7 +60,7 @@ namespace _cmdline {
 		Group  defines;
 
 		std::unordered_map<std::string, Parm> defOptions;
-
+		void  parse(const int argc, const char* argv[]);
 		char* addValueToOption(const char* option, char* prev);
 		char* updateFlag(const char* flag, const char* prev, bool value);
 		void  updateFlagItem(const char* flag, const char* prev, bool value);
@@ -81,12 +77,13 @@ namespace _cmdline {
 		void preInit(Parameters parms, bool init = true);
 		void postInit();
 		Flags  getFlags(bool active, bool set);
-		Argument* find(Group where, const char* what);
+		Argument& find         (Group *group, const char* what);
+		Argument* findPointer  (Group *group, const char* what);
 		template <typename T>
 		void checkType(T, Type type);
 		template <typename T>
 		T castValue(T, auto value);
-		void checkAlreadySet(Group where, const char* what);
+		void checkAlreadySet(Group *group, const char* what);
 
 	};
 }

@@ -48,6 +48,9 @@
     <ClCompile Include="doc\doc_cmdline.cpp">
       <Filter>Documentation Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\parameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\arg.hpp">

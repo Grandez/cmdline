@@ -18,7 +18,7 @@ namespace cmdline {
 	CmdLineI::~CmdLineI() {
 		_cleanClass();
 	}
-    CmdLineI& CmdLineI::GetInstance(int argc, char* argv[], cmdline::Parameters parms) {
+    CmdLineI& CmdLineI::GetInstance(int argc, const char* argv[], cmdline::Parameters parms) {
 		_parms = parms;
 		_nargc = argc;
 		_argv = (char**)calloc(argc, sizeof(char*));
@@ -26,10 +26,10 @@ namespace cmdline {
 		for (auto it : _parms) it.name = _cmdline::strUpper(it.name);
 		return (CmdLineI&) CmdLine::GetInstance(argc, argv, _parms);
 	}
-	CmdLineS& CmdLineS::GetInstance(int argc, char* argv[], cmdline::Parameters parms) {
+	CmdLineS& CmdLineS::GetInstance(int argc, const char* argv[], cmdline::Parameters parms) {
 		return (CmdLineS&) CmdLine::GetInstance(argc, argv, parms, true, false);
 	}
-	CmdLineIS& CmdLineIS::GetInstance(int argc, char* argv[], cmdline::Parameters parms) {
+	CmdLineIS& CmdLineIS::GetInstance(int argc, const char* argv[], cmdline::Parameters parms) {
 		_parms = parms;
 		_nargc = argc;
 		_argv = (char**)calloc(argc, sizeof(char*));

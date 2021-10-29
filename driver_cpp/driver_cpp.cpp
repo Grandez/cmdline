@@ -6,7 +6,7 @@ using namespace std;
 using namespace cmdline;
 
 bool checkFlag() {
-	char* argv2[10] = { (char*)"drivercpp"
+	const char* argv2[10] = { (char*)"drivercpp"
 	, (char*)"/def1=definition1"
 	};
 	bool rc = false;
@@ -19,7 +19,7 @@ bool checkFlag() {
 	return !cmdLine.hasFlag("verbose");
 
 }
-int main(int argc, char* argv[]) {
+int main(int argc, const char* argv[]) {
 	bool rc = false;
 	std::cout << "Starting\n";
 	rc |= checkFlag();
