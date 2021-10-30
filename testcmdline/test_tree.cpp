@@ -1,7 +1,7 @@
 #include "pch.h"
 
-#include "../cmdline/cmdline.hpp"
-
+#include "../cmdline/include/cmdline.hpp"
+/*
 TEST(Tree, same_word) {
 	std::vector<cmdline::ParmItem> opts = { ParmItem("verbose", "..") };
 	const char* argv[] = { "command", "/verbose", "." };
@@ -53,3 +53,4 @@ TEST(Tree, word_extent) {
 	cmdline::CmdLine cmdLine(opts);
 	EXPECT_THROW(cmdLine.parse(3, argv), CmdLineException);
 }
+*/

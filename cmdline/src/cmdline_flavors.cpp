@@ -4,7 +4,7 @@
 #include "tools.h"
 
 #include "cmdline.hpp"
-
+#include "commandline.hpp"
 
 namespace cmdline {
 	char** _argv = nullptr;
@@ -13,29 +13,22 @@ namespace cmdline {
 
 	void _cleanClass() {
 		for (int i = 0; i < _nargc; i++) free(_argv[i]);
-		for (auto it : _parms) free((void *) it.name);
+//		for (auto it : _parms) free((void *) it.name);
 	}
 	CmdLineI::~CmdLineI() {
 		_cleanClass();
 	}
-    CmdLine CmdLineI::GetInstance(int argc, const char* argv[], cmdline::Parameters parms) {
-		_parms = parms;
-		_nargc = argc;
-		_argv = (char**)calloc(argc, sizeof(char*));
-		for (int i = 1; i < argc; i++) if (_argv) _argv[i] = _cmdline::strUpper(argv[i]);
-		for (auto it : _parms) it.name = _cmdline::strUpper(it.name);
-		return CmdLine::GetInstance(argc, argv, _parms);
+    CmdLine CmdLineI::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
+		_cmdline::_CommandLine::Attr attr = _cmdline::_CommandLine::Attr(true, false, false);
+		return CmdLine::getInstance(argc, argv, parms, &attr);
 	}
-	CmdLine CmdLineS::GetInstance(int argc, const char* argv[], cmdline::Parameters parms) {
-		return CmdLine::GetInstance(argc, argv, parms, true, false);
+	CmdLine CmdLineS::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
+		_cmdline::_CommandLine::Attr attr = _cmdline::_CommandLine::Attr(false, true, false);
+		return CmdLine::getInstance(argc, argv, parms, &attr);
 	}
-	CmdLine CmdLineIS::GetInstance(int argc, const char* argv[], cmdline::Parameters parms) {
-		_parms = parms;
-		_nargc = argc;
-		_argv = (char**)calloc(argc, sizeof(char*));
-		for (int i = 1; i < argc; i++) if (_argv) _argv[i] = _cmdline::strUpper(argv[i]);
-		for (auto it : _parms) it.name = _cmdline::strUpper(it.name);
-		return CmdLine::GetInstance(argc, argv, _parms, false, true);
+	CmdLine CmdLineIS::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
+		_cmdline::_CommandLine::Attr attr = _cmdline::_CommandLine::Attr(true, true, false);
+		return CmdLine::getInstance(argc, argv, parms, &attr);
 	}
 	CmdLineIS::~CmdLineIS() {
 		_cleanClass();

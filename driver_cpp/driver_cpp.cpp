@@ -5,24 +5,27 @@
 using namespace std;
 using namespace cmdline;
 
+/*
 bool checkFlag() {
 	const char* argv2[10] = { (char*)"drivercpp"
 	, (char*)"/def1=definition1"
 	};
+	char** argv = &argv2;
 	bool rc = false;
 	std::cout << "Starting\n";
 
 	Parameters iflags = {
 	 ParmFlag("verbose")
 	};
-	CmdLine cmdLine = CmdLine::GetInstance(2, argv2, iflags);
+	CmdLine cmdLine = CmdLine::getInstance(2, argv, iflags);
 	return !cmdLine.hasFlag("verbose");
 
 }
+*/
 int main(int argc, const char* argv[]) {
 	bool rc = false;
 	std::cout << "Starting\n";
-	rc |= checkFlag();
+//	rc |= checkFlag();
 	std::cout << "End\n";
 	return (rc ? 1 : 0);
 }

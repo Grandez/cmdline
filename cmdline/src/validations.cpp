@@ -1,41 +1,23 @@
-#define _VALIDATIONS_CODE_
+// #define _VALIDATIONS_CODE_
+#pragma warning(disable : 4996)
 
 #include <filesystem>
 #include <regex>
 #include <ctime>
 #include <locale>
 #include <iomanip>
-
+#include <memory>
 #include "tools.h"
-
-/*
-#include <stdio.h>      
-#include <stdlib.h>     
-
-#include <iostream>
-#include <vector>
-#include <locale>
-#include <iomanip>
-#include <sstream>
-#include <iterator>
-
-#include <time.h>
-
-#include <cstdlib>
-#include <errno.h>
-
-#include "sal.h"
-
-#include "validations.h"
-
-
-*/
+#include "sys/stat.h"
 #include "arg.hpp"
 #include "cmdline_exceptions.hpp"
+#include <direct.h>
 
 using namespace std;
 
 namespace _cmdline {
+	// Decimals are tried two times: Using comma and point as decimal sign
+	// Internal functions
 	struct tm* makeDateTime(char* sdate, char* stime) {
 		char szDate[11];
 		char szTime[9];
@@ -60,6 +42,39 @@ namespace _cmdline {
 		ss >> get_time(now, "%Y/%m/%d %H:%M:%S");
 		return now;
 	}
+	int         isLeap(int year) {
+		if (year < 100) year += 2000;
+		if (year % 4) return 28;
+		if ((year % 100) == 0) return ((year % 400) == 0 ? 29 : 28);
+		return 29;
+	}
+	double      validateDecimal2(const char* value) {
+		double res;
+		try {
+			size_t pos;
+			double* pld = &res;
+			stod(string(value), &pos);
+			if (strlen(value) != pos) throw exception("expected decimal");
+		}
+		catch (exception ex) {
+			throw CmdLineValueException(value, "expected decimal");
+		}
+		return res;
+	}
+	long double validateLongDecimal2(const char* value) {
+		long double res;
+		try {
+			size_t pos;
+			long double* pld = &res;
+			stod(string(value), &pos);
+			if (strlen(value) != pos) throw exception("expected long decimal");
+		}
+		catch (exception ex) {
+			throw CmdLineValueException(value, "expected long decimal");
+		}
+		return res;
+	}
+	// Public functions
 	void        validateEntry     (const char* parm, const char* prev) {
 		if (strlen(parm) == 1) throw CmdLineException("Invalid Option", parm);
 		//if (prev != nullptr) throw CmdLineException("Missing value", prev);
@@ -76,20 +91,70 @@ namespace _cmdline {
 		}
 		return res;
 	}
-	double        validateDecimal   (const char* value) {
-		double res;
+	long long   validateLongNumber(const char* value) {
+		long long res;
 		try {
 			size_t pos;
-			double *pld = &res;
-			stod(string(value), &pos);
-			if (strlen(value) != pos) throw exception("expected decimal");
+			res = stoll(string(value), &pos, 0);
+			if (strlen(value) != pos) throw exception("expected long number");
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "expected decimal");
+			throw CmdLineValueException(value, "expected long number");
 		}
 		return res;
 	}
-	struct tm *validateTime      (const char* value) {
+	double      validateDecimal   (const char* value) {
+		double res;
+		char* tmp = strdup(value);
+		try {
+			res = validateDecimal2(tmp);
+			free(tmp);
+			return res;
+		}
+		catch (exception ex) {
+			for (size_t i = 0; i < strlen(tmp); i++) {
+				switch (tmp[i]) {
+					case ',': tmp[i] = '.'; break;
+					case '.': tmp[i] = ','; break;
+				}
+			}
+			try {
+				res = validateDecimal2(tmp);
+				free(tmp);
+				return res;
+			}
+			catch (exception ex) {
+				throw CmdLineValueException(value, "expected decimal");
+			}
+		}
+	}
+	long double validateLongDecimal(const char* value) {
+		long double res;
+		char* tmp = strdup(value);
+
+		try {
+			res = validateLongDecimal2(tmp);
+			free(tmp);
+			return res;
+		}
+		catch (exception ex) {
+			for (size_t i = 0; i < strlen(tmp); i++) {
+				switch (tmp[i]) {
+				case ',': tmp[i] = '.'; break;
+				case '.': tmp[i] = ','; break;
+				}
+			}
+			try {
+				res = validateLongDecimal2(tmp);
+				free(tmp);
+				return res;
+			}
+			catch (exception ex) {
+				throw CmdLineValueException(value, "expected long decimal");
+			}
+		}
+	}
+	struct tm*  validateTime      (const char* value) {
 		char strTime[9];
 		regex pat{ "^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$" };
 		bool match = regex_search(value, pat);
@@ -101,12 +166,6 @@ namespace _cmdline {
 		sprintf(strTime, "%02d:%02d:%02d", res[0], res[1], res[2]);
 		return makeDateTime(0x0, strTime);
 	}
-	int         isLeap            (int year) {
-		if (year < 100) year += 2000;
-		if (year % 4) return 28;
-		if ((year % 100) == 0) return ((year % 400) == 0 ? 29 : 28);
-		return 29;
-	}
 	void        validateDateValue (const char *value, vector<int> dt) {
 		int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		int day;
@@ -116,7 +175,7 @@ namespace _cmdline {
 		day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] - 1];
 		if (dt[0] > day) throw CmdLineValueException(value, "invalid date");
 	}
-	struct tm *validateDate      (const char* value, int fmt = -1) {
+	struct tm*  validateDate      (const char* value, int fmt = -1) {
 		char strDate[11];
 		time_base::dateorder d;
 		vector<int> dt(3);
@@ -143,10 +202,10 @@ namespace _cmdline {
 		       default:                  dt = { res[0], res[1], res[2] };
 		}
 		validateDateValue(value, dt);
-		sprintf(strDate, "%02d/%02d/%04d", res[0], res[1], res[2]);
+		sprintf(strDate, "%02d/%02d/%04d", dt[0], dt[1], dt[2]);
 		return makeDateTime(strDate, 0x0);
 	}
-	struct tm* validateDateTime  (const char* value) {
+	struct tm*  validateDateTime  (const char* value) {
 		struct tm* tmDate;
 		struct tm* tmTime;
 		char szDate[11];
@@ -171,11 +230,10 @@ namespace _cmdline {
 		}
 		return makeDateTime(szDate,szTime);
 	}
-	vector<int> validateTimestamp (const char* value) {
+	char *      validateTimestamp (const char* value) {
 		vector<int> res;
 		// timestamp es yyyy-mm-dd[- ]hh:MM:SS.nnnnnn
 		struct tm *tmDate, *tmTime;
-		long ss;
 		vector<string> pieces = tokenize(value, "-|[ \t]+");
 		int npieces = pieces.size();
 		if (npieces != 2 && npieces != 4) throw CmdLineValueException(value, "invalid timestamp");
@@ -190,49 +248,62 @@ namespace _cmdline {
 			vector<string> tt = tokenize(pieces[iTime].c_str(), "\\.");
 			if (tt.size() != 2) throw CmdLineValueException(value, "invalid timestamp");
 			tmTime = validateTime(tt[0].c_str());
-			ss = stol(tt[1]);
-			res.reserve(8);
-//			res.insert(res.end(), dt.begin(), dt.end());
-//			res.insert(res.end(), tm.begin(), tm.end());
-//			res.push_back(ss);
+			validateNumber(tt[1].c_str());
 		}
 		catch (exception ex) {
 			throw CmdLineValueException(value, "invalid timestamp");
 		}
-		return res;
+		return (char *) value;
 	}
+	
+
 	filesystem::path        validateDir       (const char* value) {
-	//	^ (((\\\\([^ \\ / :\ * \ ? "\|<>\. ]+))|([a-zA-Z]:\\))(([^\\/:\*\?"\ | <>\.] *)([\\] *))*)$
-		string start = "^";
-		string drive = "(? <drive>[a - z] : ) ?";
-		string path  = "(? <path>(? : [\\] ? (? : [\\w !#() - ] + | [.]{ 1,2 }) + ) * [\\]) ?";
-		string end   = "$";
-		regex pat{ start + drive + path + end};
-		bool match = regex_search(value, pat);
-		if (!match) throw CmdLineValueException(value, "expected path");
+		// If is not a valid path, chdir return -1
+		// Some times chdir returns 0 but not change the directory
+		char old[256];
+		char tmp[256];
+		int rc, rc2;
+		char* ptr = getcwd(old, 256);
+		if (strcmp(value, ".") == 0) return filesystem::path(old);
+		
+		rc = _chdir(value);
+		if (rc) throw CmdLineValueException(value, "expected directory");
+		ptr = getcwd(tmp, 256);
+		rc = chdir(old);
+        #ifdef _WIN32 // Windows is case insensitive
+		    rc2 = strcmpi(old, tmp);
+        #else
+		    rc2 = strcmp(old, tmp);
+        #endif
+
+		if (rc2 == 0) throw CmdLineValueException(value, "expected directory");
+		return filesystem::path(value);
+	}
+	filesystem::path        validateDirExist(const char* value) {
+		struct stat info;
+		validateDir(value);
+		int rc = stat(value, &info);
+		if (stat(value, &info) != 0) throw CmdLineValueException(value, "dir not found");
+		unsigned short mask = info.st_mode & S_IFDIR;
+		mask ^= 16384; // 100 0000 0000 0000
+		if (mask == 0)          throw CmdLineValueException(value, "dir not found");
+		//if ((info.st_mode & S_IFDIR) == 0)               throw CmdLineValueException(value, "is not a directory");
 		return filesystem::path(value);
 	}
 	filesystem::path        validateFile      (const char* value) {
-		struct stat info;
-		filesystem::path p = filesystem::path(value);
-		if (stat((const char*)p.c_str(), &info) != 0) throw CmdLineValueException(value, "is not a file");
-		if ((info.st_mode & S_IFREG) == 0)  throw CmdLineValueException(value, "is not a file");
-		return filesystem::path(value);
-	}
-	filesystem::path        validateDirExist  (const char* value) {
-		struct stat info;
-		validateDir(value);
-		filesystem::path p = filesystem::path(value);
-		
-		if (stat((const char *) p.c_str(), &info) != 0) throw CmdLineValueException(value, "dir not found");
-		if ((info.st_mode & S_IFDIR) == 0)  throw CmdLineValueException(value, "is not a directory");
-		return filesystem::path(value);
+		try {
+			return filesystem::path(value);
+		}
+		catch (exception ex) {
+			throw CmdLineValueException(value, "expected path");
+		}
 	}
 	filesystem::path        validateFileExist (const char* value) {
 		struct stat info;
+		filesystem::path p = validateFile(value);
 		if (stat(value, &info) != 0) throw CmdLineValueException(value, "file not found");
 		if (info.st_mode & S_IFDIR)  throw CmdLineValueException(value, "file is directory");
-		return filesystem::path(value);
+		return p;
 	}
 	void        validateValue     (const char* value, Type type) {
 		switch (type) {

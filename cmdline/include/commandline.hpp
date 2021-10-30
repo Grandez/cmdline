@@ -12,8 +12,18 @@ using namespace std;
 namespace _cmdline {
 	class _CommandLine {
 	public:
-		_CommandLine(int argc, const char* argv[], Parameters parms);
-		_CommandLine(int argc, const char* argv[], Parameters parms, bool forward = false, bool strict = false);
+		struct Attr {
+			bool sensitive;
+			bool strict;
+			bool forward;
+			Attr(bool c, bool s, bool f) {
+				sensitive = c;
+				strict = s;
+				forward = f;
+			}
+		};
+		_CommandLine(int argc,  char**  argv, Parameters parms);
+		_CommandLine(int argc,  char**  argv, Parameters parms, void *attr);
 		~_CommandLine();
 		// Flags
 		bool  hasFlag(const char *flag);
@@ -53,14 +63,13 @@ namespace _cmdline {
 
 	private:
 		std::list<const char*> inputs;
-		bool   forward = false;
-		bool   strict  = false;
+		Attr   attr = Attr(false, false, false);
 		Group  options;
 		Group  flags;
 		Group  defines;
 
 		std::unordered_map<std::string, Parm> defOptions;
-		void  parse(const int argc, const char* argv[]);
+		void  parse(const int argc,  char** argv);
 		char* addValueToOption(const char* option, char* prev);
 		char* updateFlag(const char* flag, const char* prev, bool value);
 		void  updateFlagItem(const char* flag, const char* prev, bool value);

@@ -7,14 +7,16 @@
 using namespace std;
 
 namespace _cmdline {
+#ifdef _WIN32
+   #define chdir(a) _chdir(a)
+   #define getcwd(a, b) _getcwd(a, b)
+#endif
+
     #define strdup(a) _cmdline::myStrdup(a)
-//	unordered_map<std::string, ParmItem> vector2map(vector<ParmItem> vect);
 	void  add2tree(ParameterTree* root[], const char* word);
 	char* makeChar   (std::string str);
  	bool  makeBoolean(std::string value);
 	char* strUpper(const char* str);
-
-//	Argument* findOption(Args* map, std::string what);
 
 	vector<std::string> splitArgument(const char* parm);
 	vector<std::string> tokenize(const char* src, const char* pat);

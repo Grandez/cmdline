@@ -21,31 +21,50 @@ namespace _cmdline {
 
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
+	char _upper[64] = "";
 
-	_CommandLine::_CommandLine(int argc, const char* argv[], Parameters parms) {
+	char* makeUpper(const char* str) {
+		size_t i;
+		for (i = 0; i < strlen(str); i++) _upper[i] = toupper(str[i]);
+		_upper[i] = 0x0;
+		return _upper;
+	}
+	_CommandLine::_CommandLine(int argc,  char**  argv, Parameters parms) {
 		preInit(parms);
 		postInit();
 		parse(argc, argv);
 	}
-    _CommandLine::_CommandLine(int argc, const char* argv[], Parameters parms, bool forward, bool strict) {
-	    this->forward = forward;
-	    this->strict = strict;
+    _CommandLine::_CommandLine(int argc,  char**  argv, Parameters parms, void* attr) {
+		Attr* p = (Attr*)attr;
+    	this->attr.sensitive = p->sensitive;
+		this->attr.strict    = p->strict;
+		this->attr.forward   = p->forward;
 	    preInit(parms);
 	    postInit();
 		parse(argc, argv);
     }
-	void _CommandLine::parse(const int argc, const char* argv[]) {
+	void _CommandLine::parse(int argc, char** argv) {
+		char c;
+		char szOpt[64] = "";
 		std::string in;
 		char* prev = nullptr;
 		for (int i = 1; i < argc; i++) {
+			c = argv[i][0];
+
+			if (c == '/' || c == '+' || c == '-') {
+				strcpy(szOpt, argv[i]);
+				if (attr.sensitive) {
+					for (size_t j = 0; j < strlen(szOpt); j++) szOpt[j] = toupper(szOpt[j]);
+				}
+			}
 			switch (argv[i][0]) {
 			case '/': 
-				prev = updateOption(argv[i], prev); 
-				if (strict) checkAlreadySet(&options, prev);
+				prev = updateOption(szOpt, prev); 
+				if (attr.strict) checkAlreadySet(&options, prev);
 				break;
 			case '+': if (prev != nullptr) throw CmdLineException("Missing value", prev);
-				prev = updateFlag(argv[i], argv[i], true);   break;
-			case '-': in = argv[i];
+				prev = updateFlag(szOpt, argv[i], true);   break;
+			case '-': in = string(szOpt);
 				prev = (in == std::string("-h") || in == std::string("--help")) ?
 				     	updateFlag((char*)"+help", prev, true) :
 					    updateFlag(argv[i], prev, false);
@@ -58,7 +77,7 @@ namespace _cmdline {
 		if (hasFlag("HELP")) throw HelpDetailedRequested();
 		if (hasFlag("help")) throw HelpRequested();
 	}
-	bool  _CommandLine::hasFlag(const char* name) {
+	bool _CommandLine::hasFlag(const char* name) {
 		Argument& opt = find(&flags, name);
 		return makeBoolean(opt.getValue());
 	}
@@ -68,7 +87,6 @@ namespace _cmdline {
 	Flags _CommandLine::getCurrentFlags(bool all) {
 		return getFlags(all, true);
 	}
-
 	bool _CommandLine::hasOption(const char* name) {
 		Argument& opt = find(&options, name);
 		return (strlen(opt.getValue()) == 0 ? false : true);
@@ -272,10 +290,11 @@ namespace _cmdline {
 		}
 		for (Parm p : parms) {
 			Argument option(&p);
+			if (attr.sensitive) option.makeUpper();
 			Group *map  = (p.instanceOfFlag()) ? &flags : &options;
 			root = (p.instanceOfFlag()) ? rootFlags : rootOptions;
-			map->add(p.name, &option);
-			add2tree(root, p.name);
+			map->add(option.name, &option);
+			add2tree(root, option.name.c_str());
 		}
 	}
 	void  _CommandLine::postInit          () {
@@ -287,8 +306,10 @@ namespace _cmdline {
 		Argument* arg = flags.find("help");
 		if (arg != nullptr) return;
 		preInit(flagHelp, false);
-		arg = flags.find("help");
-		arg->source = Source::AUTO;
+		if (!attr.sensitive) {
+			arg = flags.find("help");
+			arg->source = Source::AUTO;
+		}
 		arg = flags.find("HELP");
 		arg->source = Source::AUTO;
 	}
@@ -302,12 +323,16 @@ namespace _cmdline {
 		return act;
 	}
 	Argument& _CommandLine::find(Group *group, const char* what) {
-		Argument* arg = group->find(what);
+		char* ptr = (char *) what;
+		if (attr.sensitive) ptr = makeUpper(what);
+		Argument* arg = group->find(ptr);
 		if (arg == nullptr) throw CmdLineNotFoundException(what);
 		return *arg;
 	}
 	Argument* _CommandLine::findPointer(Group *group, const char* what) {
-		return group->find(what);
+		char* ptr = (char *) what;
+		if (attr.sensitive) ptr = makeUpper(what);
+		return group->find(ptr);
 	}
 	template <typename T>
 	void _CommandLine::checkType(T, Type type) {

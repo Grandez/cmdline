@@ -5,13 +5,13 @@
 #include "cmdline_exceptions.hpp"
 
 using namespace std;
-namespace cmdline_ { class CommandLine; } // Forward declaration
+namespace _cmdline { class CommandLine; } // Forward declaration
 
 namespace cmdline {
 
 	#ifndef __CMDLINE_TYPES__
         #define __CMDLINE_TYPES__
-		enum class Type   { STRING, BOOL, NUMBER, DECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
+		enum class Type   { STRING, BOOL, NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
 		enum class Source { DEFAULT, ENV, CMDLINE, CODE, AUTO };
 
 	    typedef unordered_map<string, bool>      Flags;
@@ -52,16 +52,9 @@ namespace cmdline {
     #endif
 	class CmdLine {
 	public:
-		static CmdLine GetInstance(int argc, const char *argv[], Parameters parms = Parameters());
-		static CmdLine GetInstance(Parameters parms, int argc, const char* argv[]);
-		/*
-		CmdLine();
-		CmdLine(vector<ParmItem> args);//                                      { commandLine = new CommandLine(args); }
-		CmdLine(vector<ParmItem> options, vector<cmdline::Flag> flags);//  { commandLine = new CommandLine(options, flags); }
-		CmdLine(vector<cmdline::Flag> flags, vector<ParmItem> options);// { commandLine = new CommandLine(options, flags); }
-		// ~CmdLine();// { delete commandLine; }
-		CmdLine& parse(const int argc, const char* argv[]);// { commandLine->parse(argc, argv); return *this; }
-		*/
+		static CmdLine getInstance(int argc,  char **  argv, Parameters parms = Parameters());
+		static CmdLine getInstance(Parameters parms, int argc,  char**  argv);
+		static void    freeInstance(); // For tests ONLY
 		// Flags control
 		bool  hasFlag         (const char* name);
 		bool  hasFlag         (string name);
@@ -96,30 +89,25 @@ namespace cmdline {
 		char*           getDefinition(string name);
 		vector<string>  getDefinitionValues(const char* name);
 		vector<string>  getDefinitionValues(string name);
-		
-/*
-		template <typename T>  const T  getDefinition(const char* name);// { return (commandLine->getDefinition<T>(name)); };
-		const string  getDefinition(const char* name);// { return (commandLine->getDefinition2(name)); };
-		const vector<string>  getVectorDefinition(const char* name);// { return (commandLine->getVectorDefinition(name)); };
-*/
 	protected:
-		static CmdLine GetInstance(int argc, const char* argv[], Parameters parms, bool forward, bool strict);
+		static CmdLine getInstance(int argc,  char**  argv, Parameters parms, void *attr);
 	private:
-		CmdLine(int argc, const char* argv[], Parameters parms, bool forward = false, bool strict = false);
+		CmdLine(int argc,  char**  argv, Parameters parms, void *attr);
+		CmdLine(int argc,  char**  argv, Parameters parms);
 	};
 	class CmdLineI : public CmdLine {
 	public: 
-		CmdLine GetInstance(int argc, const char* argv[], Parameters parms);
+		static CmdLine getInstance(int argc,  char**  argv, Parameters parms);
 		~CmdLineI();
 	};
 	class CmdLineS : public CmdLine {
 	public:
-		CmdLine GetInstance(int argc, const char* argv[], Parameters parms);
+		static CmdLine getInstance(int argc,  char**  argv, Parameters parms);
 	};
 	class CmdLineIS : public CmdLineI {
 	public:
 		~CmdLineIS();
-		CmdLine GetInstance(int argc, const char* argv[], Parameters parms);
+		static CmdLine getInstance(int argc,  char**  argv, Parameters parms);
 	};
 	class CmdLineI_forward : public CmdLine {
 

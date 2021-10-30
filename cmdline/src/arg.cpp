@@ -1,6 +1,7 @@
 #pragma once
 #include "arg.hpp"
 #include "tools.h"
+#include <algorithm>
 
 using namespace std;
 using namespace cmdline;
@@ -106,6 +107,10 @@ namespace _cmdline {
 	Argument& Argument::addValues(vector<string> values) {
 		if (values.size() == 0) first = string(values[0]);
 		for (string v : values) this->values.emplace(v);
+		return *this;
+	}
+	Argument& Argument::makeUpper() {
+		for_each(name.begin(), name.end(), [](char& c) { c = ::toupper(c);});
 		return *this;
 	}
 

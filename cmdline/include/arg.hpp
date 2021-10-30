@@ -30,16 +30,10 @@ namespace _cmdline {
 		vector<string>  getValues();
 		bool            getBoolean();
 		Argument&       initValues(vector<string> values);
+		Argument&       makeUpper();
 	protected:
 		Argument&      addValues(vector<string> values);
 	private:
 		string first;
-		struct arrayDeleter {
-			void operator()(char ** data) { 
-				int i = 0;
-				if (data == 0x0) return;
-				while (data[i]) free(data[i++]);
-			}
-		};
 	};
 }

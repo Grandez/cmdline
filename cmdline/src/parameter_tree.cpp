@@ -15,8 +15,8 @@ namespace _cmdline {
 		return *this;
 	}
 	char * ParameterTree::getWord() {
-		char* word = (char*)calloc(16, sizeof(char));
-		word[0] = letter;
+		char* word = (char*) calloc(16, sizeof(char));
+		if (word) word[0] = letter;
 
 		if (children.size() == 0) return (word);
 		return (children.begin()->second->getWord(word, 16));
@@ -25,11 +25,9 @@ namespace _cmdline {
 		int pos = (int)strlen(word);
 		if (pos == sizeBase) {
 			sizeBase += 16;
-			if (word != nullptr) {
-				word = (char*)realloc(word, sizeBase);
-			}
+			if (word) word = (char*) realloc(word, sizeBase);
 		}
-		if (word != nullptr) {
+		if (word) {
 			word[pos] = letter;
 			word[pos + 1] = 0x0;
 		}
@@ -49,9 +47,9 @@ namespace _cmdline {
 		int pos = (int)strlen(word);
 		if (pos == sizeBase) {
 			sizeBase += 16;
-			if (word != nullptr) word = (char*)realloc(word, sizeBase);
+			if (word) word = (char*) realloc(word, sizeBase);
 		}
-		if (word != nullptr) {
+		if (word) {
 			word[pos] = letter;
 			word[pos + 1] = 0x0;
 			if (parent != nullptr) word = parent->getReversedWord(word, 16);

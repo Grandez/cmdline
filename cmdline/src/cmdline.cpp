@@ -10,32 +10,27 @@ using namespace _cmdline;
 namespace cmdline {
 	CmdLine* singleton_ = nullptr;
 	_CommandLine* _commandLine;
-	CmdLine::CmdLine(int argc, const char* argv[], Parameters parms, bool forward, bool strict) {
-		_commandLine = new _cmdline::_CommandLine(argc, argv, parms, forward, strict);
+	void CmdLine::freeInstance() { singleton_ = nullptr; }
+	CmdLine::CmdLine(int argc,  char**  argv, Parameters parms) {
+		_commandLine = new _cmdline::_CommandLine(argc, argv, parms);
 	}
-	CmdLine CmdLine::GetInstance(int argc, const char* argv[], Parameters parms) {
+    CmdLine::CmdLine(int argc,  char**  argv, Parameters parms, void *attr) {
+        _commandLine = new _cmdline::_CommandLine(argc, argv, parms, attr);
+	}
+	CmdLine CmdLine::getInstance(Parameters parms, int argc,  char**  argv) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
-	CmdLine CmdLine::GetInstance(Parameters parms, int argc, const char* argv[]) {
+	CmdLine CmdLine::getInstance(int argc,  char**  argv, Parameters parms) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
 
-	CmdLine CmdLine::GetInstance(int argc, const char* argv[], Parameters parms, bool forward, bool strict) {
-		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, forward, strict);
+	CmdLine CmdLine::getInstance(int argc,  char**  argv, Parameters parms, void* attr) {
+		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, attr);
 		return *singleton_;
 	}
 
-	//CmdLine::CmdLine() { CommandLine *commandLine = new CommandLine(); }
-	// CmdLine::CmdLine() { _commandLine = new _cmdline::CommandLine(); }
-	/*
-	CmdLine::CmdLine(vector<ParmItem> args) { commandLine = new cmdline_::CommandLine(args); }
-	CmdLine::CmdLine(vector<ParmItem> options, vector<Flag> flags) { commandLine = new CommandLine(options, flags); }
-	CmdLine::CmdLine(vector<Flag> flags, vector<ParmItem> options) { commandLine = new CommandLine(options, flags); }
-//	CmdLine::~CmdLine() { delete commandLine; }
-	CmdLine& CmdLine::parse(const int argc, const char* argv[]) { commandLine->parse(argc, argv); return *this; }
-	*/
 		bool  CmdLine::hasFlag         (const char* name) { return _commandLine->hasFlag(name);         };
 		bool  CmdLine::hasFlag         (string name)      { return _commandLine->hasFlag(name.c_str()); };
 		Flags CmdLine::getDefaultFlags (bool all)         { return _commandLine->getDefaultFlags(all);  };
