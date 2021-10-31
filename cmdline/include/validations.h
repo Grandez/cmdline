@@ -24,9 +24,9 @@ namespace _cmdline {
     struct tm* validateDate      (const char* value, int fmt = -1);
     struct tm* validateDateTime  (const char* value);
     char *     validateTimestamp (const char* value);
-    int         makeInteger(const char* value);
-    float       makeFloat  (const char* value);
-    struct tm makeTm(struct tm* ptr);
+    int         makeInteger      (const char* value);
+    float       makeFloat        (const char* value);
+    struct tm   makeTm           (const char* value);
 /*
     template <typename T>
     T        getValue(const char* value, cmdline::Type type);

@@ -143,9 +143,9 @@ namespace cmdline {
 			if constexpr (is_same<T, CMD_DECIMAL>::value)      return _cmdline::validateDecimal(value);
 			if constexpr (is_same<T, CMD_FLOAT>::value)        return _cmdline::makeFloat(value);
 			if constexpr (is_same<T, CMD_DOUBLE>::value)       return _cmdline::validateDecimal(value);
-			if constexpr (is_same<T, CMD_DATE>::value)         return _cmdline::makeTm(_cmdline::validateDate(value));
-			if constexpr (is_same<T, CMD_TIME>::value)         return _cmdline::makeTm(_cmdline::validateTime(value));
-			if constexpr (is_same<T, CMD_DATETIME>::value)     return _cmdline::makeTm(_cmdline::validateDateTime(value));
+			if constexpr (is_same<T, CMD_DATE>::value)         return _cmdline::makeTm(value);
+			if constexpr (is_same<T, CMD_TIME>::value)         return _cmdline::makeTm(value);
+			if constexpr (is_same<T, CMD_DATETIME>::value)     return _cmdline::makeTm(value);
 			if constexpr (is_same<T, CMD_TMS>::value)          return _cmdline::validateTimestamp(value);
 			if constexpr (is_same<T, CMD_LONGNUMBER>::value)   return _cmdline::validateLongNumber(value);
 			if constexpr (is_same<T, CMD_LONGDECIMAL>::value)  return _cmdline::validateLongDecimal(value);

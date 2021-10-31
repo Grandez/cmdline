@@ -8,8 +8,8 @@ TEST(Types, STRING) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::STRING) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	string res = cmdline.getOptionAs<CMD_STRING>((const char*)"opt");
-	EXPECT_EQ(res, "123");
 	CmdLine::freeInstance();
+	EXPECT_EQ(res, "123");
 }
 TEST(Types, string) {
 	tool.reset();
@@ -18,8 +18,8 @@ TEST(Types, string) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::STRING) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	string res = cmdline.getOptionAs<string>((const char*)"opt");
-	EXPECT_EQ(res, "123");
 	CmdLine::freeInstance();
+	EXPECT_EQ(res, "123");
 }
 TEST(Types, char) {
 	tool.reset();
@@ -28,8 +28,8 @@ TEST(Types, char) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::STRING) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	char * res = cmdline.getOptionAs<char *>((const char*)"opt");
-	EXPECT_EQ(strcmp(res, "123"), 0);
 	CmdLine::freeInstance();
+	EXPECT_EQ(strcmp(res, "123"), 0);
 }
 TEST(Types, NUMBER) {
 	tool.reset();
@@ -38,8 +38,8 @@ TEST(Types, NUMBER) {
 	Parameters  parms = { ParmOption((const char *)"opt", (const char*)"123", Type::NUMBER)};
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	long res = cmdline.getOptionAs<CMD_NUMBER>((const char*)"opt");
-	EXPECT_EQ(res,123);
 	CmdLine::freeInstance();
+	EXPECT_EQ(res, 123);
 }
 TEST(Types, LONG) {
 	tool.reset();
@@ -48,8 +48,8 @@ TEST(Types, LONG) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::NUMBER) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	long res = cmdline.getOptionAs<CMD_LONG>((const char*)"opt");
-	EXPECT_EQ(res, 123);
 	CmdLine::freeInstance();
+	EXPECT_EQ(res, 123);
 }
 TEST(Types, INT) {
 	tool.reset();
@@ -98,8 +98,8 @@ TEST(Types, FLOAT) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123.456", Type::DECIMAL) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	float res = cmdline.getOptionAs<CMD_FLOAT>((const char*)"opt");
-	EXPECT_FLOAT_EQ(res, 123.456f);
 	CmdLine::freeInstance();
+	EXPECT_FLOAT_EQ(res, 123.456f);
 }
 TEST(Types, float) {
 	tool.reset();
@@ -119,9 +119,9 @@ TEST(Types, DATE) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"01/02/2021", Type::DATE) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	struct tm res = cmdline.getOptionAs<CMD_DATE>((const char*)"opt");
-	EXPECT_EQ(res.tm_mday, 2);
 	CmdLine::freeInstance();
 	std::locale::global(std::locale());
+	EXPECT_EQ(res.tm_mday, 1);
 }
 TEST(Types, TIME) {
 	std::locale::global(std::locale("es_ES.utf8"));
@@ -131,9 +131,9 @@ TEST(Types, TIME) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"01:02:03", Type::TIME) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	struct tm res = cmdline.getOptionAs<CMD_TIME>((const char*)"opt");
-	EXPECT_EQ(res.tm_min, 2);
 	CmdLine::freeInstance();
 	std::locale::global(std::locale());
+	EXPECT_EQ(res.tm_min, 2);
 }
 TEST(Types, DATETIME) {
 	std::locale::global(std::locale("es_ES.utf8"));
@@ -143,23 +143,18 @@ TEST(Types, DATETIME) {
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"2021-10-11 01:02:03", Type::DATETIME) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	struct tm res = cmdline.getOptionAs<CMD_DATETIME>((const char*)"opt");
+	CmdLine::freeInstance();
 	EXPECT_EQ(res.tm_min, 2);
 	EXPECT_EQ(res.tm_mon, 9);
-	CmdLine::freeInstance();
-	std::locale::global(std::locale());
 }
 
 TEST(Types, TMS) {
-	std::locale::global(std::locale("es_ES.utf8"));
 	tool.reset();
 	const char* opt = "opt";
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"2021-10-11 01:02:03.456", Type::TMS) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
 	char *tms = cmdline.getOptionAs<CMD_TMS>((const char*)"opt");
-	struct tm res;
-	EXPECT_EQ(res.tm_min, 2);
-	EXPECT_EQ(res.tm_mon, 9);
 	CmdLine::freeInstance();
-	std::locale::global(std::locale());
+	EXPECT_GT((int) strlen(tms), 20);
 }

@@ -13,6 +13,7 @@ namespace _cmdline {
 		type = parm->type;
 		multiple = parm->multiple;
 		defValue = string(parm->value);
+		validateDefault();
 	}
 	Argument::Argument(Argument *arg) {
 		// Copy contructor
@@ -24,10 +25,12 @@ namespace _cmdline {
 		if (arg->values.size() > 0) {
 			for (string s : arg->values) this->values.insert(s);
 		}
+		validateDefault();
 	}
 	Argument::Argument(const char* name, const char* value) {
 		this->name     = string(name);
 		this->defValue = string(value);
+		validateDefault();
 	}
 	Argument::Argument(const char* name, const char *value, Source source) {
 		if (source == Source::DEFAULT) {
@@ -39,9 +42,11 @@ namespace _cmdline {
 		}
 		this->name = string(name);
 		this->source = source;
+		validateDefault();
 	}
 	Argument::Argument(const char* name, const char* value, Type type) : Argument(name, value) {
 		this->type = type;
+		validateDefault();
 	}
 	Argument::~Argument() {
 		// if (defValue) free(defValue);
@@ -115,6 +120,11 @@ namespace _cmdline {
 	Argument& Argument::makeUpper() {
 		for_each(name.begin(), name.end(), [](char& c) { c = ::toupper(c);});
 		return *this;
+	}
+	void Argument::validateDefault() {
+		if (defValue.length() == 0) return;
+		if (type == Type::STRING || type == Type::BOOL) return;
+		validateValue(defValue.c_str(), type);
 	}
 
 };

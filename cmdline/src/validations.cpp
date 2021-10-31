@@ -23,9 +23,6 @@ namespace _cmdline {
 	// Decimals are tried two times: Using comma and point as decimal sign
 	// Internal functions
 	struct tm* makeDateTime(char* sdate, char* stime) {
-		char szDate[11];
-		char szTime[9];
-
 		struct tm *now;
 		struct tm *res = (struct tm *) malloc(sizeof(struct tm));
 
@@ -49,7 +46,6 @@ namespace _cmdline {
 			res->tm_min  = tt[1];
 			res->tm_sec  = tt[2];
 		}
-		mktime(res);
 		return res;
 	}
 	int         isLeap(int year) {
@@ -225,10 +221,10 @@ namespace _cmdline {
 		vector<string> pieces = tokenize(value, "[ \t]+");
 		if (pieces.size() != 2) throw CmdLineValueException(value, "invalid datetime");
 		try {
-			tmDate = validateDate(pieces[0].c_str());
+			tmDate = validateDate(pieces[0].c_str(), time_base::ymd);
 			tmTime = validateTime(pieces[1].c_str());
-			sprintf(szDate, "%02d/%02d/%04d", tmDate->tm_mday, tmDate->tm_mon + 1, tmDate->tm_year + 1900);
-			sprintf(szTime, "%02d:%02d:%02d", tmTime->tm_hour, tmDate->tm_min, tmDate->tm_sec);
+			sprintf(szDate, "%04d/%02d/%02d", tmDate->tm_year + 1900, tmDate->tm_mon + 1, tmDate->tm_mday);
+			sprintf(szTime, "%02d:%02d:%02d", tmTime->tm_hour, tmTime->tm_min, tmTime->tm_sec);
 			/*
 			res.reserve(dt.size() + tm.size());
 			res.insert(res.end(), dt.begin(), dt.end());
@@ -363,10 +359,33 @@ namespace _cmdline {
 		checkValue<float>(dvalue);
 		return (float) dvalue;
 	}
-	struct tm makeTm(struct tm* ptr) {
+	struct tm makeTm(const char *value) {
+		// Como date, time y datetime son tm
+		// Parseamos
+		// datetime > 10
+		// date puede ser > 8
+		// si es menor y tiene : es hora, si no tiempo
+		struct tm* ptr = nullptr;
 		struct tm t;
+		unsigned int len = strlen(value);
+		if (len > 10) {
+			ptr = validateDateTime(value);
+		}
+		else {
+			if (len > 8) {
+				ptr = validateDate(value);
+			}
+			else {
+				string str(value);
+				if (str.find(':') != std::string::npos) {
+					ptr = validateTime(value);
+				}
+				else {
+					ptr = validateDate(value);
+				}
+			}
+		}
 		memcpy(&t, ptr, sizeof(struct tm));
 		return t;
 	}
-
 }

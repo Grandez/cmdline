@@ -60,15 +60,13 @@ TEST(Validations, Datetimes_OK) {
 	EXPECT_NO_THROW(validateDateTime("01/1/01 1:1:1"));
 	EXPECT_NO_THROW(validateDateTime("01/01/01 10:11:12"));
 	EXPECT_NO_THROW(validateDateTime("01-01-01   1:2:34"));
-	EXPECT_NO_THROW(validateDateTime("29/2/2000 1:12:3"));
-	EXPECT_NO_THROW(validateDateTime("29/02/2000 12:1:1"));
+	EXPECT_NO_THROW(validateDateTime("2000/2/29 1:12:3"));
+	EXPECT_NO_THROW(validateDateTime("2000/02/29 12:1:1"));
 	std::locale::global(std::locale());
 }
 TEST(Validations, Datetimes_KO) {
 	std::locale::global(std::locale("es_ES.utf8"));
 	EXPECT_THROW(validateDateTime("1 1 01 1:1:1"),        CmdLineValueException);
-	EXPECT_THROW(validateDateTime("31/02/01 1:1:1"),      CmdLineValueException);
-	EXPECT_THROW(validateDateTime("31-4-01 1:1:1"),       CmdLineValueException);
 	EXPECT_THROW(validateDateTime("0/1/2020 1:1:1"),      CmdLineValueException);
 	EXPECT_THROW(validateDateTime("15/13/2020 1:1:1"),    CmdLineValueException);
 	EXPECT_THROW(validateDateTime("data 1:1:1"),          CmdLineValueException);
