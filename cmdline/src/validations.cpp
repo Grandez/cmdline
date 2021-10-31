@@ -1,19 +1,23 @@
 // #define _VALIDATIONS_CODE_
 #pragma warning(disable : 4996)
 
-#include <filesystem>
-#include <regex>
 #include <ctime>
-#include <locale>
+#include<cstring>
+#include <cstdio>
 #include <iomanip>
-#include <memory>
-#include "tools.h"
-#include "sys/stat.h"
-#include "arg.hpp"
-#include "cmdline_exceptions.hpp"
+#include <string>
+#include <regex>
+#include <filesystem>
 #include <direct.h>
+#include <vector>
+
+#include "tools.h"
+#include "types.h"
+#include "cmdline_exceptions.hpp"
+#include "validations.h"
 
 using namespace std;
+using namespace cmdline;
 
 namespace _cmdline {
 	// Decimals are tried two times: Using comma and point as decimal sign
@@ -23,24 +27,30 @@ namespace _cmdline {
 		char szTime[9];
 
 		struct tm *now;
-		time_t t = std::time(0);
+		struct tm *res = (struct tm *) malloc(sizeof(struct tm));
 
+		time_t t = std::time(0);
 		now = std::localtime(&t);
-		if (sdate) {
-			strcpy(szDate, sdate);
+
+		if (!sdate) {
+			memcpy(res, now, sizeof(tm));
 		}
 		else {
-			sprintf(szDate, "%d/%d/%d", now->tm_mday, now->tm_mon + 1, now->tm_year + 1900);
+			std::istringstream ss(sdate);
+			ss >> get_time(res, "%Y/%m/%d");
+			res->tm_hour = now->tm_hour;
+			res->tm_min = now->tm_min;
+			res->tm_sec = now->tm_sec;
 		}
+
 		if (stime) {
-			strcpy(szTime, stime);
+			vector<int> tt = tokenizeNumber(stime, ":");
+			res->tm_hour = tt[0];
+			res->tm_min  = tt[1];
+			res->tm_sec  = tt[2];
 		}
-		else {
-			sprintf(szTime, "%02d:%02d:%02d", now->tm_hour, now->tm_min, now->tm_sec);
-		}
-		std::istringstream ss(printf("%s %s", szDate, szTime));
-		ss >> get_time(now, "%Y/%m/%d %H:%M:%S");
-		return now;
+		mktime(res);
+		return res;
 	}
 	int         isLeap(int year) {
 		if (year < 100) year += 2000;
@@ -53,7 +63,7 @@ namespace _cmdline {
 		try {
 			size_t pos;
 			double* pld = &res;
-			stod(string(value), &pos);
+			res = stod(string(value), &pos);
 			if (strlen(value) != pos) throw exception("expected decimal");
 		}
 		catch (exception ex) {
@@ -175,7 +185,7 @@ namespace _cmdline {
 		day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] - 1];
 		if (dt[0] > day) throw CmdLineValueException(value, "invalid date");
 	}
-	struct tm*  validateDate      (const char* value, int fmt = -1) {
+	struct tm*  validateDate      (const char* value, int fmt) {
 		char strDate[11];
 		time_base::dateorder d;
 		vector<int> dt(3);
@@ -202,7 +212,7 @@ namespace _cmdline {
 		       default:                  dt = { res[0], res[1], res[2] };
 		}
 		validateDateValue(value, dt);
-		sprintf(strDate, "%02d/%02d/%04d", dt[0], dt[1], dt[2]);
+		sprintf(strDate, "%04d/%02d/%02d", dt[2], dt[1], dt[0]);
 		return makeDateTime(strDate, 0x0);
 	}
 	struct tm*  validateDateTime  (const char* value) {
@@ -307,7 +317,7 @@ namespace _cmdline {
 	}
 	void        validateValue     (const char* value, Type type) {
 		switch (type) {
-		        case Type::NUMBER:      validateNumber(value); break;
+		case cmdline::Type::NUMBER:      validateNumber(value); break;
 		        case Type::DECIMAL:     validateDecimal(value); break;
 		        case Type::DATE:        validateDate(value); break;
 		        case Type::TIME:        validateTime(value); break;
@@ -338,19 +348,25 @@ namespace _cmdline {
 		// return obj;
 	}
 	template <typename T>
-	T castValue(auto value, Type type) {
-		switch (type) {
-		case Type::NUMBER:      return validateNumber(value);
-		case Type::DECIMAL:     return validateDecimal(value);
-		case Type::DATE:        return validateDate(value);
-		case Type::TIME:        return validateTime(value);
-		case Type::DATETIME:    return validateDateTime(value);
-		case Type::TMS:         return validateTimestamp(value);
-		case Type::DIR:         return validateDir(value);
-		case Type::FILE:        return validateFile(value);
-		case Type::DIR_EXISTS:  return validateDirExist(value);
-		case Type::FILE_EXISTS: return validateFileExist(value);
+	void checkValue(auto value) {
+		if (value < numeric_limits<T>::min() || value > numeric_limits<T>::max()) {
+			throw CmdLineInvalidTypeException(typeid(T).name());
 		}
-
 	}
+	int  makeInteger(const char *value) {
+		long lvalue = validateNumber(value);
+		checkValue<int>(lvalue);
+		return (int) lvalue;
+	}
+	float  makeFloat(const char* value) {
+		double dvalue = validateDecimal(value);
+		checkValue<float>(dvalue);
+		return (float) dvalue;
+	}
+	struct tm makeTm(struct tm* ptr) {
+		struct tm t;
+		memcpy(&t, ptr, sizeof(struct tm));
+		return t;
+	}
+
 }

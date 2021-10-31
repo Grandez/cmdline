@@ -35,14 +35,16 @@ namespace _cmdline {
 		bool           hasOption       (string name);
 		bool           isOptionMultiple(const char* name);
 		bool           isOptionMultiple(string name);
-		const char*    getOption       (const char* name);
-		const char*    getOption       (string name);
+//		const char* getOption(const char* name) { return getValue(&options, name); }
+		const char* getOption(const char* name);
 		template <typename T>
-		const T         getOptionAs    (const char* name);
-		template <typename T>
-		const T         getOptionAs    (string name);
-		vector<string>  getOptionValues(const char* name);
-		vector<string>  getOptionValues(string name);
+		const T         getOptionAs(const char* name) {
+				Argument& opt = find(&options, name);
+				return castValue<T>(opt.getValue());
+		}
+		vector<const char*> getOptionValues(const char* name);
+		
+		int             getOptionNumValues(const char* name);
 		template <typename T>
 		vector<T>       getOptionValuesAs(const char* name);
 		/*
@@ -56,10 +58,8 @@ namespace _cmdline {
 		bool            hasDefinition        (string def);
 		bool            isDefinitionMultiple (const char* name);
 		bool            isDefinitionMultiple (string name);
-		char*           getDefinition        (const char* name);
-		char*           getDefinition        (string name);
-		vector<string>  getDefinitionValues  (const char* name);
-		vector<string>  getDefinitionValues  (string name);
+		const char*          getDefinition        (const char* name) { return getValue(&defines, name); }
+		vector<const char*>  getDefinitionValues  (const char* name);
 
 	private:
 		std::list<const char*> inputs;
@@ -71,6 +71,7 @@ namespace _cmdline {
 		std::unordered_map<std::string, Parm> defOptions;
 		void  parse(const int argc,  char** argv);
 		char* addValueToOption(const char* option, char* prev);
+		
 		char* updateFlag(const char* flag, const char* prev, bool value);
 		void  updateFlagItem(const char* flag, const char* prev, bool value);
 		char* updateOption(const char* option, char* value);
@@ -88,12 +89,12 @@ namespace _cmdline {
 		Flags  getFlags(bool active, bool set);
 		Argument& find         (Group *group, const char* what);
 		Argument* findPointer  (Group *group, const char* what);
+		const char* getValue   (Group* group, const char* what);
 		template <typename T>
 		void checkType(T, Type type);
 		template <typename T>
-		T castValue(T, auto value);
+		T castValue(auto value);
 		void checkAlreadySet(Group *group, const char* what);
-
 	};
 }
 

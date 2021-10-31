@@ -45,13 +45,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="caseTest.cpp" />
-    <ClCompile Include="test_defaults.cpp" />
-    <ClCompile Include="test_defines.cpp" />
+    <ClCompile Include="defaultsTest.cpp" />
+    <ClCompile Include="definesTest.cpp" />
     <ClCompile Include="flagsTest.cpp" />
     <ClCompile Include="helpTest.cpp" />
-    <ClCompile Include="test_input.cpp" />
-    <ClCompile Include="test_mutable.cpp" />
+    <ClCompile Include="inputTest.cpp" />
     <ClCompile Include="optionsTest.cpp" />
+    <ClCompile Include="TypesTest.cpp" />
     <ClCompile Include="_global.cpp" />
     <ClCompile Include="test_tree.cpp" />
     <ClCompile Include="validationsTest.cpp" />

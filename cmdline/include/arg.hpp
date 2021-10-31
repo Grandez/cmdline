@@ -27,7 +27,7 @@ namespace _cmdline {
 		Argument& setValue(std::string value);
 		Argument& addValue(std::string value);
 		const char* getValue();
-		vector<string>  getValues();
+		vector<const char *>  getValues();
 		bool            getBoolean();
 		Argument&       initValues(vector<string> values);
 		Argument&       makeUpper();

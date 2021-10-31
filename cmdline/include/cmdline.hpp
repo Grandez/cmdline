@@ -1,21 +1,43 @@
 #pragma once
+#pragma warning(disable : 4390  4244)
+
+#include <string>
 #include <vector>
 #include <unordered_map>
-
+#include <filesystem>
 #include "cmdline_exceptions.hpp"
+#include "validations.h"
+#include "types.h"
 
 using namespace std;
-namespace _cmdline { class CommandLine; } // Forward declaration
+namespace _cmdline { 
+	class _CommandLine; 
+	class Argument;
+} // Forward declaration
 
 namespace cmdline {
-
+	/*
 	#ifndef __CMDLINE_TYPES__
         #define __CMDLINE_TYPES__
 		enum class Type   { STRING, BOOL, NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
 		enum class Source { DEFAULT, ENV, CMDLINE, CODE, AUTO };
 
+		using CMD_STRING = string;
+		using CMD_BOOL = bool;
+		using CMD_NUMBER = long;
+		using CMD_DECIMAL = float;
+		using CMD_LONGNUMBER = long long;
+		using CMD_LONGDECIMAL = float;
+		using CMD_DATE = struct tm*;
+		using CMD_TIME = struct tm*;
+		using CMD_DATETIME = struct tm*; 
+		using CMD_TMS = string;
+//		using CMD_DIR = filesystem::path;
+//		using CMD_FILE = filesystem::path;
+
 	    typedef unordered_map<string, bool>      Flags;
 	    typedef unordered_map<string, string>    Options;
+*/
 		class Parm {
 		public:
 			const char* name;              // Name of parameter
@@ -33,6 +55,7 @@ namespace cmdline {
 			int instance = 0;
 
 		};
+		
 		class ParmFlag : public Parm {
 		public:
 			ParmFlag() = delete;
@@ -43,13 +66,12 @@ namespace cmdline {
 		public:
 			ParmOption() = delete;
 			ParmOption(const char* name, const char* value)                                   : Parm(name, value) {};
-			ParmOption(const char* name, const char* value, Type type)                        : Parm(name, value, type) {};
 			ParmOption(const char* name, const char* value, bool multiple)                    : Parm(name, value, Type::STRING, multiple) {};
 			ParmOption(const char* name, const char* value, Type type, bool multiple = false) : Parm(name, value, type, multiple) {};
 		};
 
 		typedef vector<Parm>                 Parameters;
-    #endif
+  
 	class CmdLine {
 	public:
 		static CmdLine getInstance(int argc,  char **  argv, Parameters parms = Parameters());
@@ -68,12 +90,25 @@ namespace cmdline {
 		bool            isOptionMultiple (string name);
 		const char *    getOption        (const char* name);
 		const char*     getOption        (string name);
+
 		template <typename T>  
-		const T         getOptionAs      (const char* name);
+		const T         getOptionAs(const char* name) {
+			const char* value = getOption(name);
+			return castValue<T>(value);
+//			_cmdline::castValue2<T>(value);
+//			_cmdline::Argument& opt = _commandLine->find(&options, name);
+//			
+//			return T(value);
+			// return _commandLine->getOptionAs<T>(name); 
+		}
 		template <typename T>
 		const T         getOptionAs     (string name);
-		vector<string>  getOptionValues (const char* name);
-		vector<string>  getOptionValues (string name);
+		vector<const char*>  getOptionValues (const char* name);
+		vector<const char*>  getOptionValues (string name);
+
+		int             getOptionNumValues(const char* name);
+		int             getOptionNumValues(string name);
+
 		template <typename T>
 		const vector<T> getOptionValuesAs(string name);
 
@@ -85,15 +120,39 @@ namespace cmdline {
 		bool            hasDefinition(string def);
 		bool            isDefinitionMultiple(const char* name);
 		bool            isDefinitionMultiple(string name);
-		char*           getDefinition(const char* name);
-		char*           getDefinition(string name);
-		vector<string>  getDefinitionValues(const char* name);
-		vector<string>  getDefinitionValues(string name);
+		const char* getDefinition(const char* name);
+		const char* getDefinition(string name);
+
+		vector<const char*>  getDefinitionValues(const char* name);
+		vector<const char*>  getDefinitionValues(string name);
 	protected:
 		static CmdLine getInstance(int argc,  char**  argv, Parameters parms, void *attr);
 	private:
+		_cmdline::_CommandLine *_commandLine;
 		CmdLine(int argc,  char**  argv, Parameters parms, void *attr);
 		CmdLine(int argc,  char**  argv, Parameters parms);
+		template <typename T>
+		T castValue(const char* value) {
+			if constexpr (is_same<T, const char*>::value)      return value;
+			if constexpr (is_same<T, char*>::value)            return (char*)value;
+
+			if constexpr (is_same<T, CMD_STRING>::value)       return string(value);
+			if constexpr (is_same<T, CMD_NUMBER>::value)       return _cmdline::validateNumber(value);
+			if constexpr (is_same<T, CMD_LONG>::value)         return _cmdline::validateNumber(value);
+			if constexpr (is_same<T, CMD_INT>::value)          return _cmdline::makeInteger(value);
+			if constexpr (is_same<T, CMD_DECIMAL>::value)      return _cmdline::validateDecimal(value);
+			if constexpr (is_same<T, CMD_FLOAT>::value)        return _cmdline::makeFloat(value);
+			if constexpr (is_same<T, CMD_DOUBLE>::value)       return _cmdline::validateDecimal(value);
+			if constexpr (is_same<T, CMD_DATE>::value)         return _cmdline::makeTm(_cmdline::validateDate(value));
+			if constexpr (is_same<T, CMD_TIME>::value)         return _cmdline::makeTm(_cmdline::validateTime(value));
+			if constexpr (is_same<T, CMD_DATETIME>::value)     return _cmdline::makeTm(_cmdline::validateDateTime(value));
+			if constexpr (is_same<T, CMD_TMS>::value)          return _cmdline::validateTimestamp(value);
+			if constexpr (is_same<T, CMD_LONGNUMBER>::value)   return _cmdline::validateLongNumber(value);
+			if constexpr (is_same<T, CMD_LONGDECIMAL>::value)  return _cmdline::validateLongDecimal(value);
+			if constexpr (is_same<T, CMD_DIR>::value)          return _cmdline::validateFile(value);
+			if constexpr (is_same<T, CMD_FILE>::value)         return _cmdline::validateDir(value);
+			throw CmdLineInvalidTypeException(typeid(T).name());
+		}
 	};
 	class CmdLineI : public CmdLine {
 	public: 

@@ -2,6 +2,9 @@
 #include <iostream> // temp
 #include <type_traits>
 #include <chrono>
+#include <any>
+#include <utility>
+
 #include "parameter_tree.hpp"
 
 #include "tools.h"
@@ -10,8 +13,14 @@
 #include "validations.h"
 #include "commandline.hpp"
 
+//#pragma warning( disable : 4390 34; once : 4385; error : 164 )
+
+#ifdef _WIN32
+#pragma warning( disable : 4390 )
+#endif
+
 using namespace std;
-// using namespace cmdline;
+using namespace cmdline;
 
 namespace _cmdline {
 
@@ -101,33 +110,16 @@ namespace _cmdline {
 	bool _CommandLine::isOptionMultiple(string name) {
 		return isOptionMultiple(name.c_str());
 	}
-	const char* _CommandLine::getOption(const char* name) {
-		Argument& opt = find(&options, name);
-		return opt.getValue();
-	}
-	const char* _CommandLine::getOption(string name) {
-		return getOption(name.c_str());
-	}
-	vector<string> _CommandLine::getOptionValues(const char* name) { 
+	vector<const char*> _CommandLine::getOptionValues(const char* name) {
 		Argument& opt = find(&options, name);
 		return opt.getValues();
 	}
-	vector<string> _CommandLine::getOptionValues(string name) { 
-		return getOptionValues(name.c_str()); 
-	}
-
-	template <typename T>
-	const T _CommandLine::getOptionAs(const char* name) {
-		T cls;
+	int    _CommandLine::getOptionNumValues(const char* name) {
 		Argument& opt = find(&options, name);
-		return castValue<T>(cls, opt->type, opt.getValue());
-//		checkType(T, Type type);
-//		auto value = any(getValue(opt.getValue(), opt->type));
-//		return  castValue(value, opt->type);
-    }
-	template <typename T>
-	const T _CommandLine::getOptionAs(string name) {
-		return getOptionAs<T>(name.c_str());
+		return opt.values.size();
+	}
+	const char* _CommandLine::getOption(const char* name) {
+		return getValue(&options, name);
 	}
 
 	Options  _CommandLine::getDefaultOptions() {
@@ -161,20 +153,10 @@ namespace _cmdline {
 	bool            _CommandLine::isDefinitionMultiple(string name) { 
 		return isDefinitionMultiple(name.c_str()); 
 	}
-	char* _CommandLine::getDefinition(const char* name) {
-		Argument& opt = find(&defines, name);
-		return (char *) opt.getValue();
-	}
-	char*           _CommandLine::getDefinition(string name) { 
-		return getDefinition(name.c_str()); 
-	}
-	vector<string>  _CommandLine::getDefinitionValues(const char* name) { 
+	vector<const char  *>  _CommandLine::getDefinitionValues(const char* name) { 
 		Argument& opt = find(&defines, name);
 		return opt.getValues();
     }
-	vector<string>  _CommandLine::getDefinitionValues(string name) { 
-		return getDefinitionValues(name.c_str()); 
-	}
 
 	//////////////////////////////////////////////////////////////////
 	
@@ -227,8 +209,6 @@ namespace _cmdline {
 	void  _CommandLine::udpateArgsFromEnv (Group &parms, const char*prfx) {
 		char key[255];
 		char* value;
-//		Args::iterator it;
-
 		for (auto it = parms.begin(); it != parms.end(); it++) {
 			sprintf(key, "%s%s", prfx, it->second.name.c_str());
 			value = getenv(key);
@@ -353,30 +333,38 @@ namespace _cmdline {
 		if (expected.length() > 0) throw CmdLineInvalidTypeException("expected " + expected);
 	}
 	template <typename T>
-	T _CommandLine::castValue(T, auto value) {
-		if (is_same<T, int>) return any_cast<int>(value);
-		if (is_same<T, long>) return any_cast<long>(value);
-		if (is_same<T, float>) return any_cast<float>(value);
-		if (is_same<T, double>) return any_cast<double>(value);
-		if (!is_same<T, struct tm *>) return any_cast<struct tm *>(value);
-		if (!is_same<T, filesystem::path>) return any_cast<filesystem::path>(value);
-		return any_cast<string>(value);
+	T _CommandLine::castValue(auto value) {
+		size_t pos;
+		string::size_type sz;
+		if (is_same<T, int>::value) 
+			return any_cast<int>(value);
+		if (is_same<T, long>::value) return validateNumber(value); 
+//			long l = stol(string(value), &pos, 0);
+//			return any_cast<long>(value);
+//		}
+		if (is_same<T, float>::value) return any_cast<float>(value);
+		if (is_same<T, double>::value) return any_cast<double>(value);
+//		if (!is_same<T, struct tm>::value) return any_cast<struct tm>(value);
+//		if (!is_same<T, filesystem::path>::value) return std::any_cast<filesystem::path>(value);
+//		return std::any_cast<string>(value);
+		return NULL;
 	}
 	Options _CommandLine::getOptionsValue(bool def) {
 		Options act;
-//			Argument& opt;
-			for (auto it : options) {
-//				opt = &it.second;
-				if (it.second.source != Source::AUTO) act.emplace(it.second.name, (def ? it.second.defValue : it.second.getValue()));
-			}
+		for (auto it : options) {
+			if (it.second.source != Source::AUTO) act.emplace(it.second.name, (def ? it.second.defValue : it.second.getValue()));
+		}
 		return act;
-
 	}
 	void    _CommandLine::checkAlreadySet(Group *group, const char* what) {
 		Argument* arg = findPointer(group, what);
 		if (arg != nullptr) {
 			if (arg->values.size() && !arg->multiple) throw CmdLineDuplicateArgumentException(what);
 		}
+	}
+	const char* _CommandLine::getValue(Group *grp, const char* name) {
+		Argument& opt = find(grp, name);
+		return opt.getValue();
 	}
 }
 

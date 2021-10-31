@@ -1,11 +1,6 @@
 #include "pch.h"
-#include <map>
-#include <stdexcept>
-#include <regex>
 
-#include "../cmdline/include/cmdline.hpp"
-
-using namespace cmdline;
+#include "_global.hpp"
 /*
 TEST(Defaults, Flags_2) {
 	std::vector<cmdline::ParmItem> flags = {

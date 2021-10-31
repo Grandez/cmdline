@@ -9,7 +9,7 @@ using namespace _cmdline;
 
 namespace cmdline {
 	CmdLine* singleton_ = nullptr;
-	_CommandLine* _commandLine;
+//	_CommandLine* _commandLine;
 	void CmdLine::freeInstance() { singleton_ = nullptr; }
 	CmdLine::CmdLine(int argc,  char**  argv, Parameters parms) {
 		_commandLine = new _cmdline::_CommandLine(argc, argv, parms);
@@ -41,13 +41,17 @@ namespace cmdline {
 		bool            CmdLine::isOptionMultiple(const char* name) { return _commandLine->isOptionMultiple(name); };
 		bool            CmdLine::isOptionMultiple(string name)      { return _commandLine->isOptionMultiple(name.c_str()); };
 		const char*     CmdLine::getOption       (const char* name) { return _commandLine->getOption(name); };
-		const char*     CmdLine::getOption       (string name)      { return _commandLine->getOption(name.c_str()); };
-		template <typename T>
-		const T         CmdLine::getOptionAs     (const char* name) { return _commandLine->getOption<T>(name.c_str()); };
-		template <typename T>
-		const T         CmdLine::getOptionAs     (string name)      { return _commandLine->getOption<T>(name.c_str()); };
-		vector<string>  CmdLine::getOptionValues (const char* name) { return _commandLine->getOptionValues(name); };
-		vector<string>  CmdLine::getOptionValues (string name)      { return _commandLine->getOptionValues(name.c_str()); };
+
+//		template <typename T>
+//		const T         CmdLine::getOptionAs     (const char* name) { return _commandLine->getOptionAs<T>(name); };
+//		template <typename T>
+//		const T         CmdLine::getOptionAs     (string name)      { return _commandLine->getOptionAs<T>(name.c_str()); };
+		vector<const char*>  CmdLine::getOptionValues (const char* name) { return _commandLine->getOptionValues(name); };
+		vector<const char*>  CmdLine::getOptionValues (string name)      { return getOptionValues(name.c_str()); };
+
+		int             CmdLine::getOptionNumValues (const char* name) { return _commandLine->getOptionNumValues(name); };
+		int             CmdLine::getOptionNumValues (string name)      { return getOptionNumValues(name.c_str()); };
+
 		template <typename T>
 		const vector<T> CmdLine::getOptionValuesAs(string name) { return _commandLine->getOptionValuesAs<T>(name.c_str()); };
 
@@ -58,18 +62,9 @@ namespace cmdline {
 		bool            CmdLine::hasDefinition(string def)              { return _commandLine->hasDefinition(def);         }
 		bool            CmdLine::isDefinitionMultiple(const char* name) { return _commandLine->isDefinitionMultiple(name); }
 		bool            CmdLine::isDefinitionMultiple(string name)      { return _commandLine->isDefinitionMultiple(name); }
-		char*           CmdLine::getDefinition(const char* name)        { return _commandLine->getDefinition(name);        }
-		char*           CmdLine::getDefinition(string name)             { return _commandLine->getDefinition(name);        }
-		vector<string>  CmdLine::getDefinitionValues(const char* name)  { return _commandLine->getDefinitionValues(name);  }
-		vector<string>  CmdLine::getDefinitionValues(string name)       { return _commandLine->getDefinitionValues(name);  }
+		const char* CmdLine::getDefinition(const char* name) { return _commandLine->getDefinition(name); }
+		const char* CmdLine::getDefinition(string name) { return getDefinition(name.c_str()); }
 
-//		const Flag  CmdLine::getFlag(const char* name) { return _commandLine->getFlag(name); }
-//		const Flag  CmdLine::getFlag(string name) { return _commandLine->getFlag(name.c_str()); };
-/*
-		bool            CmdLine::hasDefinition(const char* def) { return _commandLine->hasDefinition(def); };
-
-		template <typename T>  const T  CmdLine::getDefinition(const char* name) { return _commandLine->getDefinition<T>(name); };
-		const string  CmdLine::getDefinition(const char* name) { return _commandLine->getDefinition2(name); };
-		const vector<string>  CmdLine::getVectorDefinition(const char* name) { return _commandLine->getVectorDefinition(name); };
-*/
+		vector<const char*>  CmdLine::getDefinitionValues(const char* name)  { return _commandLine->getDefinitionValues(name);  }
+		vector<const char*>  CmdLine::getDefinitionValues(string name)       { return getDefinitionValues(name.c_str());        }
 }

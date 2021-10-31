@@ -4,8 +4,9 @@
 #include <regex>
 
 #include "../cmdline/include/tools.h"
-/*
+
 using namespace std;
+using namespace _cmdline;
 
 TEST(TextInput, items_1) {
 	std::vector<std::string> res2;
@@ -49,4 +50,3 @@ TEST(TextInput, mixed_2) {
 	res = splitArgument("\"item3,item4\",item5");
 	EXPECT_EQ(res.size(), 2);
 }
-*/

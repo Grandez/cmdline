@@ -23,6 +23,16 @@ bool checkFlag() {
 }
 */
 int main(int argc, const char* argv[]) {
+	const char* opt = "opt";
+	char* argv2[] = { (char *) "test" };
+
+	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::NUMBER) };
+
+	CmdLine cmdline = CmdLine::getInstance(1, argv2, parms);
+
+
+	int res = cmdline.getOptionAs<CMD_INT>((const char*)"opt");
+
 	bool rc = false;
 	std::cout << "Starting\n";
 //	rc |= checkFlag();

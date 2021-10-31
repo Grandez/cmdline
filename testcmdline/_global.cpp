@@ -16,7 +16,7 @@
 #endif
 	}
 	void Tool::reset() {
-		for (size_t i = 1; i < argc; i++) free(argv[i]);
+		for (int i = 1; i < argc; i++) free(argv[i]);
 		argv[1] = 0x0;
 		argc = 1;
 	}

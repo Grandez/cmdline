@@ -50,9 +50,12 @@ namespace _cmdline {
 	const char* Argument::getValue() { 
 		return (first.length() > 0) ? first.c_str() : defValue.c_str();
 	}
-	vector<string>  Argument::getValues() {
-		vector<string> v(values.size());
-		for (string val : values) v.push_back(val);
+	vector<const char *>  Argument::getValues() {
+		int i = 0;
+		vector<const char*> v(values.size());
+		for (string val : values) {
+			v[i++] = strdup((val.c_str()));
+		}
 		return v;
 	}
 
