@@ -17,14 +17,18 @@ using namespace jggtools;
 
 namespace cmdline {
 	class CmdLineNotFoundException : public std::runtime_error {
+		jggtools::stringbuffer str;
 	public:
 		CmdLineNotFoundException() = delete;
 		CmdLineNotFoundException(const char* fmt, ...);
+		const char* what() noexcept;
 	};
 	class CmdLineInvalidTypeException : public std::runtime_error {
+		jggtools::stringbuffer str;
 	public:
 		CmdLineInvalidTypeException() = delete;
 		CmdLineInvalidTypeException(const char* fmt, ...);
+		const char* what() noexcept;
 	};
 
 	class CmdLineException : public std::invalid_argument {
@@ -34,15 +38,9 @@ namespace cmdline {
 		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
 
 		CmdLineException(const char* fmt, ...); 
-		CmdLineException(const char* fmt, va_list args);
+		const char* what() noexcept;
 	protected:
 		jggtools::stringbuffer str;
-		char *buffer = new char[256];
-		int  bufferSize = 256;
-	private:
-		void mountMessage(const char *fmt, va_list args);
-		bool isPattern(const char* fmt);
-		void setSuper();
 	};
 
 	class CmdLineParameterException : public CmdLineException {

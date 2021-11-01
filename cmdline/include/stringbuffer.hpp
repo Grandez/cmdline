@@ -20,7 +20,9 @@ namespace jggtools {
 			return *this;
 		}
 		inline std::string toString() { return ss.str(); }
-		inline const char * str()     { return ss.str().c_str(); }
-		inline const char * value()   { return ss.str().c_str(); }
+		inline const char* str()      { 
+			std::string ss = toString();
+			return ss.c_str(); 
+		}
 	};
 }
