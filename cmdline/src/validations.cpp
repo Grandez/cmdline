@@ -60,10 +60,10 @@ namespace _cmdline {
 			size_t pos;
 			double* pld = &res;
 			res = stod(string(value), &pos);
-			if (strlen(value) != pos) throw exception("expected decimal");
+			if (strlen(value) != pos) throw exception("");
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "expected decimal");
+			throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DECIMAL);
 		}
 		return res;
 	}
@@ -73,16 +73,16 @@ namespace _cmdline {
 			size_t pos;
 			long double* pld = &res;
 			stod(string(value), &pos);
-			if (strlen(value) != pos) throw exception("expected long decimal");
+			if (strlen(value) != pos) throw exception("");
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "expected long decimal");
+			throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);
 		}
 		return res;
 	}
 	// Public functions
 	void        validateEntry     (const char* parm, const char* prev) {
-		if (strlen(parm) == 1) throw CmdLineException("Invalid Option", parm);
+		if (strlen(parm) == 1) throw CmdLineException(ERR_INV_OPTION, parm);
 		//if (prev != nullptr) throw CmdLineException("Missing value", prev);
 	}
 	long        validateNumber    (const char* value) {
@@ -90,10 +90,10 @@ namespace _cmdline {
 		try {
 			size_t pos;
             res = stol(string(value), &pos, 0);
-			if (strlen(value) != pos) throw exception("expected number");
+			if (strlen(value) != pos) throw exception("");
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "expected number");
+			throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NUMBER);
 		}
 		return res;
 	}
@@ -102,10 +102,10 @@ namespace _cmdline {
 		try {
 			size_t pos;
 			res = stoll(string(value), &pos, 0);
-			if (strlen(value) != pos) throw exception("expected long number");
+			if (strlen(value) != pos) throw exception("");
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "expected long number");
+			throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGNUMBER);
 		}
 		return res;
 	}
@@ -130,7 +130,7 @@ namespace _cmdline {
 				return res;
 			}
 			catch (exception ex) {
-				throw CmdLineValueException(value, "expected decimal");
+				throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DECIMAL);
 			}
 		}
 	}
@@ -156,7 +156,7 @@ namespace _cmdline {
 				return res;
 			}
 			catch (exception ex) {
-				throw CmdLineValueException(value, "expected long decimal");
+				throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);
 			}
 		}
 	}
@@ -164,11 +164,11 @@ namespace _cmdline {
 		char strTime[9];
 		regex pat{ "^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$" };
 		bool match = regex_search(value, pat);
-		if (!match) throw CmdLineValueException(value, "invalid time");
+		if (!match) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TIME);
 		vector<int> res = tokenizeNumber(value, (char*)":");
-		if (res[0] < 0 || res[0] > 23) throw CmdLineValueException(value, "invalid time");
+		if (res[0] < 0 || res[0] > 23) throw CmdLineValueException(TXT_VAL_INVALID, value);
 		for (int i = 1; i < 3; i++) 
-			if (res[i] < 0 || res[i] > 59) throw CmdLineValueException(value, "invalid time");
+			if (res[i] < 0 || res[i] > 59) throw CmdLineValueException(TXT_VAL_INVALID, value);
 		sprintf(strTime, "%02d:%02d:%02d", res[0], res[1], res[2]);
 		return makeDateTime(0x0, strTime);
 	}
@@ -176,10 +176,10 @@ namespace _cmdline {
 		int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		int day;
 
-		if (dt[0] < 1 || dt[0] > 31) throw CmdLineValueException(value, "invalid date");
-		if (dt[1] < 1 || dt[1] > 12) throw CmdLineValueException(value, "invalid date");
+		if (dt[0] < 1 || dt[0] > 31) throw CmdLineValueException(TXT_VAL_INVALID, value);
+		if (dt[1] < 1 || dt[1] > 12) throw CmdLineValueException(TXT_VAL_INVALID, value);
 		day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] - 1];
-		if (dt[0] > day) throw CmdLineValueException(value, "invalid date");
+		if (dt[0] > day) throw CmdLineValueException(TXT_VAL_INVALID, value);
 	}
 	struct tm*  validateDate      (const char* value, int fmt) {
 		char strDate[11];
@@ -198,7 +198,7 @@ namespace _cmdline {
 				default:                  pat = pat2;
 		}
 		bool match = regex_search(value, pat);
-		if (!match) throw CmdLineValueException(value, "invalid date");
+		if (!match) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DATE);
 		vector<int> res = tokenizeNumber(value, (char*)"[/-]");
 		switch (d) {
 		       case time_base::dmy: dt = { res[0], res[1], res[2] }; break;
@@ -219,7 +219,7 @@ namespace _cmdline {
 		vector<int> res;
 		// Revisited. More clean by pieces
 		vector<string> pieces = tokenize(value, "[ \t]+");
-		if (pieces.size() != 2) throw CmdLineValueException(value, "invalid datetime");
+		if (pieces.size() != 2) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DATETIME);
 		try {
 			tmDate = validateDate(pieces[0].c_str(), time_base::ymd);
 			tmTime = validateTime(pieces[1].c_str());
@@ -232,7 +232,7 @@ namespace _cmdline {
 			*/
 		}
 		catch(exception ex) {
-			throw CmdLineValueException(value, "invalid datetime");
+			throw CmdLineValueException(TXT_VAL_INVALID, value);
 		}
 		return makeDateTime(szDate,szTime);
 	}
@@ -242,7 +242,7 @@ namespace _cmdline {
 		struct tm *tmDate, *tmTime;
 		vector<string> pieces = tokenize(value, "-|[ \t]+");
 		int npieces = pieces.size();
-		if (npieces != 2 && npieces != 4) throw CmdLineValueException(value, "invalid timestamp");
+		if (npieces != 2 && npieces != 4) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);
 		try {
 			int iTime = (npieces == 2) ? 1 : 3;
 			if (npieces == 2) tmDate = validateDate(pieces[0].c_str(), time_base::ymd);
@@ -252,17 +252,15 @@ namespace _cmdline {
 				tmDate = validateDate(strdt, time_base::ymd);
 			}
 			vector<string> tt = tokenize(pieces[iTime].c_str(), "\\.");
-			if (tt.size() != 2) throw CmdLineValueException(value, "invalid timestamp");
+			if (tt.size() != 2) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);
 			tmTime = validateTime(tt[0].c_str());
 			validateNumber(tt[1].c_str());
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "invalid timestamp");
+			throw CmdLineValueException(TXT_VAL_INVALID, value);
 		}
 		return (char *) value;
 	}
-	
-
 	filesystem::path        validateDir       (const char* value) {
 		// If is not a valid path, chdir return -1
 		// Some times chdir returns 0 but not change the directory
@@ -273,7 +271,7 @@ namespace _cmdline {
 		if (strcmp(value, ".") == 0) return filesystem::path(old);
 		
 		rc = _chdir(value);
-		if (rc) throw CmdLineValueException(value, "expected directory");
+		if (rc) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR );
 		ptr = getcwd(tmp, 256);
 		rc = chdir(old);
         #ifdef _WIN32 // Windows is case insensitive
@@ -282,17 +280,17 @@ namespace _cmdline {
 		    rc2 = strcmp(old, tmp);
         #endif
 
-		if (rc2 == 0) throw CmdLineValueException(value, "expected directory");
+		if (rc2 == 0) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR);
 		return filesystem::path(value);
 	}
 	filesystem::path        validateDirExist(const char* value) {
 		struct stat info;
 		validateDir(value);
 		int rc = stat(value, &info);
-		if (stat(value, &info) != 0) throw CmdLineValueException(value, "dir not found");
+		if (stat(value, &info) != 0) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NO_DIR);
 		unsigned short mask = info.st_mode & S_IFDIR;
 		mask ^= 16384; // 100 0000 0000 0000
-		if (mask == 0)          throw CmdLineValueException(value, "dir not found");
+		if (mask == 0)          throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR_NOTFND);
 		//if ((info.st_mode & S_IFDIR) == 0)               throw CmdLineValueException(value, "is not a directory");
 		return filesystem::path(value);
 	}
@@ -301,28 +299,30 @@ namespace _cmdline {
 			return filesystem::path(value);
 		}
 		catch (exception ex) {
-			throw CmdLineValueException(value, "expected path");
+			throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE);
 		}
 	}
 	filesystem::path        validateFileExist (const char* value) {
 		struct stat info;
 		filesystem::path p = validateFile(value);
-		if (stat(value, &info) != 0) throw CmdLineValueException(value, "file not found");
-		if (info.st_mode & S_IFDIR)  throw CmdLineValueException(value, "file is directory");
+		if (stat(value, &info) != 0) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE_NOTFND);
+		if (info.st_mode & S_IFDIR)  throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE_DIR);
 		return p;
 	}
 	void        validateValue     (const char* value, Type type) {
 		switch (type) {
-		case cmdline::Type::NUMBER:      validateNumber(value); break;
-		        case Type::DECIMAL:     validateDecimal(value); break;
-		        case Type::DATE:        validateDate(value); break;
-		        case Type::TIME:        validateTime(value); break;
-				case Type::DATETIME:    validateDateTime(value); break;
-				case Type::TMS:         validateTimestamp(value); break;
-		        case Type::DIR:         validateDir(value); break;
-		        case Type::FILE:        validateFile(value); break;
-		        case Type::DIR_EXISTS:  validateDirExist(value); break;
-		        case Type::FILE_EXISTS: validateFileExist(value); break;
+		        case Type::NUMBER:      validateNumber(value);      break;
+				case Type::LONGNUMBER:  validateLongNumber(value);  break;
+		        case Type::DECIMAL:     validateDecimal(value);     break;
+				case Type::LONGDECIMAL: validateLongDecimal(value); break;
+		        case Type::DATE:        validateDate(value);        break;
+		        case Type::TIME:        validateTime(value);        break;
+				case Type::DATETIME:    validateDateTime(value);    break;
+				case Type::TMS:         validateTimestamp(value);   break;
+		        case Type::DIR:         validateDir(value);         break;
+		        case Type::FILE:        validateFile(value);        break;
+		        case Type::DIR_EXISTS:  validateDirExist(value);    break;
+		        case Type::FILE_EXISTS: validateFileExist(value);   break;
 		}
 		// return obj;
 	}

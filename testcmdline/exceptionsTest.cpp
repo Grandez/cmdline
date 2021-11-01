@@ -21,7 +21,7 @@ TEST(Exceptions, mistype) {
 	}
 }
 TEST(Exceptions, overtype) {
-	// outvut vs output
+	// outputs vs output
 	tool.reset();
 	Parameters  parms = { ParmOption("output", ".") };
 	int argc = tool.addArg("/outputs", "..");
@@ -38,7 +38,7 @@ TEST(Exceptions, overtype) {
 	}
 }
 TEST(Exceptions, notfound) {
-	// outvut vs output
+	// pepe
 	tool.reset();
 	Parameters  parms = { ParmOption("output", ".") };
 	int argc = tool.addArg("/pepe", "..");

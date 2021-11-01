@@ -18,3 +18,20 @@
 #define ERR_NOT_FND      "Parameter not found: '%s'"
 #define ERR_INV_TYPE     "Invalid type. Expected '%s'"
 #define ERR_ARG_DUP      "Parameter already set: '%s'"
+#define TXT_NO_DIR       "Is not a directory"
+#define TXT_DIR_NOTFND   "Directory not found"
+#define TXT_FILE_NOTFND  "File not found"
+#define TXT_FILE_DIR     "Is a directory"
+
+#define TXT_DATE         "Date"
+#define TXT_TIME         "Time"
+#define TXT_DATETIME     "Datetime"
+#define TXT_TMS          "Timestamp"
+#define TXT_NUMBER       "Number"
+#define TXT_DECIMAL      "Decimal"
+#define TXT_LONGNUMBER   "Long Number"
+#define TXT_LONGDECIMAL  "Long Decimal"
+#define TXT_DIR          "Directory"
+#define TXT_FILE         "File"
+
+
