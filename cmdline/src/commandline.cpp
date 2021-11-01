@@ -12,6 +12,7 @@
 #include "cmdline_exceptions.hpp"
 #include "validations.h"
 #include "commandline.hpp"
+#include "msg_locale.h"
 
 //#pragma warning( disable : 4390 34; once : 4385; error : 164 )
 

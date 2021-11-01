@@ -1,5 +1,7 @@
+#include <iostream>
 #include <cstdarg>
 #include <cstring>
+#include <cstdio>
 
 #include "cmdline_exceptions.hpp"
 
@@ -7,99 +9,54 @@
 #pragma warning( disable : 6386 34)
 #endif
 
-// NOTE Code is duplicate because I don't know how
-// Corrrectly call to foo(fmt, ...) from other fo1(fmt,...)
 namespace cmdline {
-	typedef struct _buff {
-		char* data = new char[256];
-		int size = 128;
-		void incSize() {
-			size += 128;
-			delete data;
-			data = new char[size];
-		}
-	} Buffer;
+	static std::string mountMessage(const char* fmt, va_list list) {
+		char t[255];
+		std::vsprintf(t, fmt, list);
+		return std::string(t);
+	}
+	CmdLineException::CmdLineException(char* txt) : invalid_argument(txt) {};
 	CmdLineException::CmdLineException(const char* fmt, ...) : invalid_argument("") {
-		Buffer buffer;
 		va_list args;
-		int res = buffer.size;
-		do {
-			if (res < 0) buffer.incSize();
-			va_start(args, fmt);
-			res = vsnprintf(buffer.data, buffer.size, fmt, args);
-			va_end(args);
-		} while (res < 0);
-		str <= buffer.data;
-    }
-	const char* CmdLineException::what() noexcept {
-		return str.toString().c_str();
+		va_start(args, fmt);
+		std::string txt = mountMessage(fmt, args);
+		this->invalid_argument::~invalid_argument();
+		new (this) invalid_argument(txt); //
 	}
 	CmdLineParameterException::CmdLineParameterException(const char* fmt, ...) {
-		Buffer buffer;
 		va_list args;
-		int res = buffer.size;
-		do {
-			if (res < 0) buffer.incSize();
-			va_start(args, fmt);
-			res = vsnprintf(buffer.data, buffer.size, fmt, args);
-			va_end(args);
-		} while (res < 0);
-		str <= buffer.data;
+		va_start(args, fmt);
+		std::string txt = mountMessage(fmt, args);
+		this->CmdLineException::~CmdLineException(); // destroy the base class
+		new (this) CmdLineException((char*)txt.c_str()); //
 	}
 	CmdLineValueException::CmdLineValueException(const char* fmt, ...) {
-		Buffer buffer;
 		va_list args;
-		int res = buffer.size;
-		do {
-			if (res < 0) buffer.incSize();
-			va_start(args, fmt);
-			res = vsnprintf(buffer.data, buffer.size, fmt, args);
-			va_end(args);
-		} while (res < 0);
-		str <= buffer.data;
+		va_start(args, fmt);
+		std::string txt = mountMessage(fmt, args);
+		this->CmdLineException::~CmdLineException(); // destroy the base class
+		new (this) CmdLineException((char *) txt.c_str()); //
 	}
 	CmdLineDuplicateArgumentException::CmdLineDuplicateArgumentException(const char* fmt, ...) {
-		Buffer buffer;
 		va_list args;
-		int res = buffer.size;
-		do {
-			if (res < 0) buffer.incSize();
-			va_start(args, fmt);
-			res = vsnprintf(buffer.data, buffer.size, fmt, args);
-			va_end(args);
-		} while (res < 0);
-		str <= buffer.data;
+		va_start(args, fmt);
+		std::string txt = mountMessage(fmt, args);
+		this->CmdLineException::~CmdLineException(); // destroy the base class
+		new (this) CmdLineException((char*)txt.c_str()); //
 	}
-	CmdLineNotFoundException::CmdLineNotFoundException(const char* fmt, ...) : runtime_error("") {
-		Buffer buffer;
+	CmdLineNotFoundException::CmdLineNotFoundException(const char* fmt, ...)  : std::runtime_error("unchecked") {
 		va_list args;
-		int res = buffer.size;
-		do {
-			if (res < 0) buffer.incSize();
-			va_start(args, fmt);
-			res = vsnprintf(buffer.data, buffer.size, fmt, args);
-			va_end(args);
-		} while (res < 0);
-		str <= buffer.data;
+		va_start(args, fmt);
+		std::string txt = mountMessage(fmt, args);
+		this->runtime_error::~runtime_error(); // destroy the base class
+		new (this) runtime_error((char*)txt.c_str()); //
 	}
-	const char* CmdLineNotFoundException::what() noexcept {
-		return str.toString().c_str();
-	}
-
-	CmdLineInvalidTypeException::CmdLineInvalidTypeException(const char* fmt, ...) : runtime_error("") {
-		Buffer buffer;
+	CmdLineInvalidTypeException::CmdLineInvalidTypeException(const char* fmt, ...) : std::runtime_error("unchecked") {
 		va_list args;
-		int res = buffer.size;
-		do {
-			if (res < 0) buffer.incSize();
-			va_start(args, fmt);
-			res = vsnprintf(buffer.data, buffer.size, fmt, args);
-			va_end(args);
-		} while (res < 0);
-		str <= buffer.data;
-	}
-	const char* CmdLineInvalidTypeException::what() noexcept {
-		return str.toString().c_str();
+		va_start(args, fmt);
+		std::string txt = mountMessage(fmt, args);
+		this->runtime_error::~runtime_error(); // destroy the base class
+		new (this) runtime_error((char*)txt.c_str()); //
 	}
 }
 

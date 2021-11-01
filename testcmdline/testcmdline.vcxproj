@@ -37,6 +37,7 @@
     <ClInclude Include="_global.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="argumentTest.cpp" />
     <ClCompile Include="exceptionsDefaultTest.cpp" />
     <ClCompile Include="exceptionsTest.cpp" />
     <ClCompile Include="mainTest.cpp" />

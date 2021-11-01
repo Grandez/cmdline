@@ -4,7 +4,7 @@
 
 #include "stringbuffer.hpp"
 #include "parameter_tree.hpp"
-
+#include "msg_locale.h"
 using namespace std;
 
 namespace _cmdline {

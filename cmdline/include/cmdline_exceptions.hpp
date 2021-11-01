@@ -21,26 +21,22 @@ namespace cmdline {
 	public:
 		CmdLineNotFoundException() = delete;
 		CmdLineNotFoundException(const char* fmt, ...);
-		const char* what() noexcept;
 	};
 	class CmdLineInvalidTypeException : public std::runtime_error {
 		jggtools::stringbuffer str;
 	public:
 		CmdLineInvalidTypeException() = delete;
 		CmdLineInvalidTypeException(const char* fmt, ...);
-		const char* what() noexcept;
 	};
 
 	class CmdLineException : public std::invalid_argument {
 	public:
 		CmdLineException() : invalid_argument("") {};
-		~CmdLineException()  {};
-		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
+		~CmdLineException() {};
+//		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
 
 		CmdLineException(const char* fmt, ...); 
-		const char* what() noexcept;
-	protected:
-		jggtools::stringbuffer str;
+		CmdLineException(char* txt);
 	};
 
 	class CmdLineParameterException : public CmdLineException {
@@ -53,7 +49,6 @@ namespace cmdline {
 		CmdLineValueException() = delete;
 		CmdLineValueException(const char* fmt, ...);
 	};
-	
 	class CmdLineDuplicateArgumentException : public CmdLineException {
 	public:
 		CmdLineDuplicateArgumentException() = delete;

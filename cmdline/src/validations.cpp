@@ -15,6 +15,7 @@
 #include "types.h"
 #include "cmdline_exceptions.hpp"
 #include "validations.h"
+#include "msg_locale.h"
 
 using namespace std;
 using namespace cmdline;
