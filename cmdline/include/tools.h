@@ -2,6 +2,7 @@
 
 #include <unordered_map>
 
+#include "stringbuffer.hpp"
 #include "parameter_tree.hpp"
 
 using namespace std;

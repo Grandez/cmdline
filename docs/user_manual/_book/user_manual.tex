@@ -117,7 +117,7 @@
 
 \title{A Minimal Book Example}
 \author{Yihui Xie}
-\date{2021-10-23}
+\date{2021-10-31}
 
 \begin{document}
 \maketitle
@@ -129,7 +129,37 @@
 \hypertarget{prerequisites}{%
 \chapter{Prerequisites}\label{prerequisites}}
 
-Placeholder
+This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+
+The \textbf{bookdown} package can be installed from CRAN or Github:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\CommentTok{\# or the development version}
+\CommentTok{\# devtools::install\_github("rstudio/bookdown")}
+\end{Highlighting}
+\end{Shaded}
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+
+\hypertarget{abstract}{%
+\chapter*{Abstract}\label{abstract}}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Este documento plantea una propuesta universal para la gestión de los argumentos pasados a un programa por línea de comandos para cualquier sistema operativo junto con el manual de uso para programas desarrollados en C++
+
+\hypertarget{disclaimer}{%
+\chapter*{disclaimer}\label{disclaimer}}
+\addcontentsline{toc}{chapter}{disclaimer}
+
+As my mother tongue is Spanish and not forgetting that it is one of the most widely spoken languages \hspace{0pt}\hspace{0pt}in the world but for sack of accuracy this document has been written is Castillian
+
+However, if someone is interested in the job or wants more information, I will be happy to translate the documents or help as much as possible.
+
+In any case, for readability and maintainability reasons, I use English inside the code.
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -207,6 +237,41 @@ You can write citations, too. For example, we are using the \textbf{bookdown} pa
 
 Here is a review of existing methods.
 
+\hypertarget{literature-1}{%
+\chapter{Literature}\label{literature-1}}
+
+Placeholder
+
+\hypertarget{especificacion-de-argumentos}{%
+\section{Especificacion de argumentos}\label{especificacion-de-argumentos}}
+
+\hypertarget{sistemas-nix}{%
+\subsection{sistemas nix}\label{sistemas-nix}}
+
+\hypertarget{sistemas-windows}{%
+\subsection{sistemas windows}\label{sistemas-windows}}
+
+\hypertarget{zos-y-otros}{%
+\subsection{ZOS y otros}\label{zos-y-otros}}
+
+\hypertarget{conclusiones}{%
+\section{Conclusiones}\label{conclusiones}}
+
+\hypertarget{definiciones}{%
+\section{Definiciones}\label{definiciones}}
+
+\hypertarget{datos-de-entrada}{%
+\subsection{Datos de entrada}\label{datos-de-entrada}}
+
+\hypertarget{opciones}{%
+\subsection{Opciones}\label{opciones}}
+
+\hypertarget{flags}{%
+\subsection{Flags}\label{flags}}
+
+\hypertarget{incoherencias}{%
+\section{Incoherencias}\label{incoherencias}}
+
 \hypertarget{methods}{%
 \chapter{Methods}\label{methods}}
 
@@ -228,8 +293,8 @@ Some \emph{significant} applications are demonstrated in this chapter.
 
 We have finished a nice book.
 
-\hypertarget{definiciones}{%
-\chapter{Definiciones}\label{definiciones}}
+\hypertarget{definiciones-1}{%
+\chapter{Definiciones}\label{definiciones-1}}
 
 Placeholder
 
@@ -242,8 +307,8 @@ Placeholder
 \hypertarget{opcion}{%
 \section{Opcion}\label{opcion}}
 
-\hypertarget{flags}{%
-\section{Flags}\label{flags}}
+\hypertarget{flags-1}{%
+\section{Flags}\label{flags-1}}
 
 \hypertarget{concatenacion}{%
 \subsection{Concatenacion}\label{concatenacion}}
@@ -268,46 +333,7 @@ Placeholder
 \hypertarget{ejemplos-de-codigos}{%
 \chapter{Ejemplos de codigos}\label{ejemplos-de-codigos}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{int}\NormalTok{ argc}\OperatorTok{,} \DataTypeTok{char} \OperatorTok{*}\NormalTok{argv}\OperatorTok{[])} \OperatorTok{\{}
-    \DataTypeTok{char}\OperatorTok{*}\NormalTok{ argv2}\OperatorTok{[}\DecValTok{10}\OperatorTok{];}
-    \BuiltInTok{std::}\NormalTok{cout}\OperatorTok{ \textless{}\textless{}} \StringTok{"Begin"} \OperatorTok{\textless{}\textless{}} \BuiltInTok{std::}\NormalTok{endl}\OperatorTok{;}
-\NormalTok{    argv2}\OperatorTok{[}\DecValTok{1}\OperatorTok{]} \OperatorTok{=} \OperatorTok{(}\DataTypeTok{char}\OperatorTok{*)} \StringTok{"default flags"}\OperatorTok{;}
-\NormalTok{    cmdline}\OperatorTok{::}\NormalTok{CmdLine cmdLine}\OperatorTok{(}\NormalTok{flags}\OperatorTok{);}
-    \CommentTok{/*}
-\CommentTok{    HashMap\textless{}std::string\textgreater{} *hmap = new HashMap\textless{}std::string\textgreater{}();}
-\CommentTok{    cmdline::ParmItem item1 = cmdline::ParmItem("pepe2");}
-
-\CommentTok{    hmap{-}\textgreater{}insert(item1.name, std::make\_unique\textless{}ParmItem\textgreater{}(item1));}
-\CommentTok{    */}
-\NormalTok{    checkDefaultFlags}\OperatorTok{(}\NormalTok{flags}\OperatorTok{,} \DecValTok{2}\OperatorTok{,}\NormalTok{ argv2}\OperatorTok{);}
-
-\NormalTok{    argv2}\OperatorTok{[}\DecValTok{1}\OperatorTok{]} \OperatorTok{=} \OperatorTok{(}\DataTypeTok{char}\OperatorTok{*)}\StringTok{"+o"}\OperatorTok{;}
-    \ControlFlowTok{if} \OperatorTok{(}\NormalTok{testFlagInvalid}\OperatorTok{(}\NormalTok{flags}\OperatorTok{,} \DecValTok{2}\OperatorTok{,} \OperatorTok{(}\DataTypeTok{char}\OperatorTok{**)}\NormalTok{argv2}\OperatorTok{))} \ControlFlowTok{return} \DecValTok{1}\OperatorTok{;}
-\CommentTok{/*}
-\CommentTok{    argv2[1] = (char *)  "+v";}
-\CommentTok{    if (testFlagDetect(flags, 2, argv2)) return 1;}
-
-\CommentTok{    argv2[1] = (char*)"+ver";}
-\CommentTok{    if (testFlagDetect(flags, 2, argv2)) return 1;}
-
-\CommentTok{    argv2[1] = (char*)"+verbo";}
-\CommentTok{    if (testFlagDetect(flags, 2, argv2)) return 1;}
-
-\CommentTok{    argv2[1] = (char*)"+verbose";}
-\CommentTok{    if (testFlagDetect(flags, 2, (char**)argv2)) return 1;}
-
-
-\CommentTok{    argv2[1] = (char*) "{-}h";}
-\CommentTok{    if (case01(2, (char**)argv2)) return 1;}
-\CommentTok{    argv2[1] = (char*) "{-}{-}help";}
-\CommentTok{    if (case02(2, (char**)argv2)) return 1;}
-\CommentTok{    */}
-    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
-\OperatorTok{\}}
-\end{Highlighting}
-\end{Shaded}
+Placeholder
 
 \hypertarget{verbos}{%
 \chapter{Verbos}\label{verbos}}
@@ -324,6 +350,52 @@ Por definicion los parametros son inmutables, lo cual no implica que se puedan l
   hasXXX: Indica siexiste o no
 \item
   addXXX: Permite incluir parametros
+\end{itemize}
+
+\hypertarget{libreria-cmdline}{%
+\chapter{Libreria cmdline}\label{libreria-cmdline}}
+
+Placeholder
+
+\hypertarget{introduccion}{%
+\section{Introduccion}\label{introduccion}}
+
+\hypertarget{enumeraciones}{%
+\section{Enumeraciones}\label{enumeraciones}}
+
+\hypertarget{type}{%
+\subsection{Type}\label{type}}
+
+\hypertarget{source}{%
+\subsection{Source}\label{source}}
+
+\hypertarget{parametros}{%
+\section{Parametros}\label{parametros}}
+
+\hypertarget{flags-2}{%
+\section{Flags}\label{flags-2}}
+
+\hypertarget{excepciones}{%
+\chapter{Excepciones}\label{excepciones}}
+
+Si se produce un error durante el proceso de análisis de la línea de comandos o se produce un error en tiempo de ejecución se genera una excepción \textbf{CmdLineException}
+
+Distinguimos los siguientes tipos:
+
+CmdLineParameterException;El parámetro es erroneo
+CmdLineValueException;el valor asociado alparámetro no es valido de acuerdo con el tipo indicado
+
+CmdLineNotFoundException;runtime\_error;Se ha solicitado un parámetro que no existe
+CmdLineInvalidTypeException;Se ha solicitado una conversion no valida de un parámetro
+
+Además, para gestionar la solicitud de ayuda, se generan las siguientes excepciones:
+
+\begin{itemize}
+\tightlist
+\item
+  HelpRequested
+\item
+  HelpDetailedRequested
 \end{itemize}
 
   \bibliography{book.bib,packages.bib}

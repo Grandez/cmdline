@@ -25,7 +25,7 @@ namespace cmdline {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
-
+	vector<const char*> CmdLine::args() { return _commandLine->getArgs(); }
 	CmdLine CmdLine::getInstance(int argc,  char**  argv, Parameters parms, void* attr) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, attr);
 		return *singleton_;

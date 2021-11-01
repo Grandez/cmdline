@@ -1,0 +1,41 @@
+@startuml
+hide empty members
+
+namespace cmdline {
+interface       CmdLine {
+main class
+
+}
+class CmdLineI {
+case insensitive
+}
+class CmdLineS {
+strict mode\n
+(repeat parameters not allowed)
+
+}
+class CmdLineIS {
+insensitive + strict
+}
+class CmdLine_forward {
+process arguments in sequence
+}
+class CmdLineI_forward {
+case insensitive
+}
+
+class CmdLineS_forward {
+strict mode
+}
+class CmdLineIS_forward {
+insensitive + strict
+}
+
+CmdLine  <-- CmdLineI
+CmdLine  <-- CmdLineS
+CmdLineI <-- CmdLineIS
+CmdLine  <-- CmdLine_forward
+CmdLine_forward  <-- CmdLineI_forward
+CmdLine_forward  <-- CmdLineS_forward
+CmdLineI_forward <-- CmdLineIS_forward
+@enduml

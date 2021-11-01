@@ -25,6 +25,7 @@ namespace _cmdline {
 		_CommandLine(int argc,  char**  argv, Parameters parms);
 		_CommandLine(int argc,  char**  argv, Parameters parms, void *attr);
 		~_CommandLine();
+		vector<const char*> getArgs();
 		// Flags
 		bool  hasFlag(const char *flag);
 		Flags getDefaultFlags(bool all);
@@ -62,7 +63,7 @@ namespace _cmdline {
 		vector<const char*>  getDefinitionValues  (const char* name);
 
 	private:
-		std::list<const char*> inputs;
+		vector<const char*> inputs;
 		Attr   attr = Attr(false, false, false);
 		Group  options;
 		Group  flags;

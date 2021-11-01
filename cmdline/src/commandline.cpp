@@ -52,6 +52,9 @@ namespace _cmdline {
 	    postInit();
 		parse(argc, argv);
     }
+	vector<const char*> _CommandLine::getArgs() {
+		return inputs;
+	}
 	void _CommandLine::parse(int argc, char** argv) {
 		char c;
 		char szOpt[64] = "";
@@ -71,7 +74,7 @@ namespace _cmdline {
 				prev = updateOption(szOpt, prev); 
 				if (attr.strict) checkAlreadySet(&options, prev);
 				break;
-			case '+': if (prev != nullptr) throw CmdLineException("Missing value", prev);
+			case '+': if (prev != nullptr) throw CmdLineException(ERR_ARG_MISSING, prev);
 				prev = updateFlag(szOpt, argv[i], true);   break;
 			case '-': in = string(szOpt);
 				prev = (in == std::string("-h") || in == std::string("--help")) ?
@@ -166,7 +169,7 @@ namespace _cmdline {
 		size_t idx = 0;
 		ParameterTree* base = root[parm[0] - ' '];
 		ParameterTree* prev = nullptr;
-		//while (base != nullptr && base->letter == parm[idx]) {
+
 		while (idx < strlen(parm) && base != nullptr) {
 			prev = base;
 			if (base->letter != parm[idx]) break;
@@ -180,16 +183,26 @@ namespace _cmdline {
 			case 1: str = parm;
 				str.append(prev->getNext()->getWord());
 				return (makeChar(str));
-			default: throw CmdLineParameterException(parm);
+			default: throw CmdLineParameterException(ERR_ARG_ERR, parm);
 			}
 		}
-		if (prev == nullptr) throw CmdLineException(parm);  // primero
-		if (base == nullptr) throw CmdLineParameterException(parm, prev->getReversedWord());
-
+		if (prev == nullptr) throw CmdLineException(TXT_ARG_NFND, parm);  // primero
+		if (idx < strlen(parm) && prev->branchs == 0) { // overtype
+			throw CmdLineException(TXT_ARG_NFND1, parm, prev->getReversedWord());
+		}
 		// Ha salido por base = nullptr
 
-		if (prev->branchs > 1)  throw CmdLineException("No definido con alternativa 2", "varias alernativa");
-		if (prev->branchs == 1) throw CmdLineException("No definido con alternativa 1", "tipo");
+		if (prev->branchs == 1) { 
+			char * next = prev->getWord();
+			char* base = prev->getReversedWord();
+			base[strlen(base) - 1] = 0x0;
+			throw CmdLineException(TXT_ARG_NFND2, parm, base, next);
+		}
+		if (prev->branchs > 1) {
+			throw CmdLineException(TXT_ARG_NFND3, parm);
+		}
+//		if (base == nullptr) throw CmdLineParameterException(parm, prev->getReversedWord());
+
 		std::string ss(parm);
 		ss.append(base->getWord());
 		return (makeChar(ss));
@@ -224,8 +237,8 @@ namespace _cmdline {
 	char* _CommandLine::updateDefinition  (const char* value) {
 		const char* ptr = &(value[1]);
 		vector<string> toks = tokenize(ptr, "=");
-		if (toks.size() != 2)      throw CmdLineParameterException("Invalid definition", value);
-		if (toks[0].length() == 0) throw CmdLineParameterException("Invalid definition", value);
+		if (toks.size() != 2)      throw CmdLineParameterException(INV_DEFINITION, value);
+		if (toks[0].length() == 0) throw CmdLineParameterException(INV_DEFINITION, value);
 		Argument *def = defines.find(toks[0]);
 		if (def == nullptr) def = new Define(toks[0].c_str());
 		def->initValues(splitArgument(toks[1].c_str()));
@@ -244,7 +257,7 @@ namespace _cmdline {
 			Argument* opt = flags.find(checkFlag(&(flag[1])));
 			opt->setValue(value);
 		}
-		catch (CmdLineException ex) {
+		catch (exception ex) {
 			char newFlag[3] = "+ ";
 			if (strlen(flag) == 2) throw;
 			for (size_t i = 1; i < strlen(flag); i++) {
@@ -254,7 +267,7 @@ namespace _cmdline {
 		}
 	}
 	char* _CommandLine::addValueToOption  (const char* value, char* option) {
-		if (strlen(option) == 1) throw CmdLineException("Invalid Option", option);
+		if (strlen(option) == 1) throw CmdLineException(ERR_INV_OPTION, option);
 		Argument* opt = options.find(option); // Exists!!!!
 		validateValue(value, opt->type);
 		if ( opt->multiple) (*opt).addValue(value);
@@ -306,7 +319,7 @@ namespace _cmdline {
 		char* ptr = (char *) what;
 		if (attr.sensitive) ptr = makeUpper(what);
 		Argument* arg = group->find(ptr);
-		if (arg == nullptr) throw CmdLineNotFoundException(what);
+		if (arg == nullptr) throw CmdLineNotFoundException(ERR_NOT_FND, what);
 		return *arg;
 	}
 	Argument* _CommandLine::findPointer(Group *group, const char* what) {
@@ -330,7 +343,7 @@ namespace _cmdline {
 		case cmdline::Type::FILE_EXISTS: if (!is_same<T, filesystem::path>) expected = "file";break;
 		default: expected = "";
 		}
-		if (expected.length() > 0) throw CmdLineInvalidTypeException("expected " + expected);
+		if (expected.length() > 0) throw CmdLineInvalidTypeException(ERR_INV_TYPE, expected);
 	}
 	template <typename T>
 	T _CommandLine::castValue(auto value) {
@@ -359,7 +372,8 @@ namespace _cmdline {
 	void    _CommandLine::checkAlreadySet(Group *group, const char* what) {
 		Argument* arg = findPointer(group, what);
 		if (arg != nullptr) {
-			if (arg->values.size() && !arg->multiple) throw CmdLineDuplicateArgumentException(what);
+			if (arg->values.size() && !arg->multiple) 
+				throw CmdLineDuplicateArgumentException(ERR_ARG_DUP, what);
 		}
 	}
 	const char* _CommandLine::getValue(Group *grp, const char* name) {

@@ -1,0 +1,16 @@
+@startuml
+hide empty members
+
+
+namespace cmdline {
+class Parm {
++string name
++Type type
++bool multiple
++char *values
+}
+
+
+Parm  <|-- ParmFlag
+Parm  <|-- ParmOption
+@enduml

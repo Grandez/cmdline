@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # Libreria cmdline
 
 ## Introduccion
@@ -52,3 +57,13 @@ NUMBER; long
 DECIMAL; double
 DATE;struct tm
 TIME;struct tm
+
+## Flags
+
+		Flags getDefaultFlags (bool all = true);
+		
+Saca los valores por defecto. si all los activos e inactivos
+
+		Flags getCurrentFlags (bool set = true);
+		
+El estado actual de los flags. si all los activos e inactivos		

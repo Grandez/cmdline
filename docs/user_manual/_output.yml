@@ -1,3 +1,4 @@
+bookdown: word_document
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

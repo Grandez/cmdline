@@ -1,79 +1,69 @@
 #pragma once
+/**
+ * Base class for cmdline exceptions
+ *
+ * As library process argument from command line it inherits from invalid_argument
+ *
+ * @param msg Text to show
+ *
+ */
 
 #include <stdexcept>
 #include "msg_locale.h"
+#include "stringbuffer.hpp"
+#include <cstdarg>
+
+using namespace jggtools;
 
 namespace cmdline {
-	/**
-	 * Base class for cmdline exceptions
-	 *
-	 * As library process argument from command line it inherits from invalid_argument
-	 *
-	 * @param msg Text to show
-	 *
-	 */
-
 	class CmdLineNotFoundException : public std::runtime_error {
 	public:
 		CmdLineNotFoundException() = delete;
-		CmdLineNotFoundException(const std::string& msg) : runtime_error(msg) {}
-		CmdLineNotFoundException(const char* msg) : runtime_error(msg) {}
+		CmdLineNotFoundException(const char* fmt, ...);
 	};
 	class CmdLineInvalidTypeException : public std::runtime_error {
 	public:
 		CmdLineInvalidTypeException() = delete;
-		CmdLineInvalidTypeException(const std::string& msg) : runtime_error(msg) {}
-		CmdLineInvalidTypeException(const char* msg)        : runtime_error(msg) {}
+		CmdLineInvalidTypeException(const char* fmt, ...);
 	};
 
 	class CmdLineException : public std::invalid_argument {
 	public:
-		CmdLineException() = delete;
-		CmdLineException(const std::string& msg) : invalid_argument(msg) { message = (char*)msg.c_str(); }
-		CmdLineException(const char* msg) : invalid_argument(msg) { message = (char*)msg; }
-		CmdLineException(const char* msg, const char* input) : invalid_argument(msg) {
-			message = (char*)msg;
-			parm = (char*)input;
-		}
-		CmdLineException(const char* msg, const char* input, const char* alt) : invalid_argument(msg) {
-			message = (char*)msg;
-			parm = (char*)input;
-			this->alt = (char*)alt;
-		}
+		CmdLineException() : invalid_argument("") {};
+		~CmdLineException()  {};
+		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
 
+		CmdLineException(const char* fmt, ...); 
+		CmdLineException(const char* fmt, va_list args);
 	protected:
-		char* message = (char*)"exceptions en library";
-		char* parm = nullptr;
-		char* alt =  nullptr;
+		jggtools::stringbuffer str;
+		char *buffer = new char[256];
+		int  bufferSize = 256;
+	private:
+		void mountMessage(const char *fmt, va_list args);
+		bool isPattern(const char* fmt);
+		void setSuper();
 	};
+
 	class CmdLineParameterException : public CmdLineException {
 	public:
 		CmdLineParameterException() = delete;
-		CmdLineParameterException(const char* value) : CmdLineException(TXT_ARG_INVALID) { parm = (char*) value; }
-		CmdLineParameterException(const char* value, const char* desired) : CmdLineException(TXT_ARG_INVALID) {
-			parm = (char*)value;
-			alt = (char*)desired;
-		}
+		CmdLineParameterException(const char* fmt, ...);
 	};
 	class CmdLineValueException : public CmdLineException {
 	public:
 		CmdLineValueException() = delete;
-		CmdLineValueException(const char* value, const char* desired) : CmdLineException(TXT_VAL_INVALID) {
-			parm = (char*)value;
-			alt = (char*)desired;
-		}
+		CmdLineValueException(const char* fmt, ...);
 	};
 	
 	class CmdLineDuplicateArgumentException : public CmdLineException {
 	public:
 		CmdLineDuplicateArgumentException() = delete;
-		CmdLineDuplicateArgumentException(const char* value) : CmdLineException(TXT_ARG_SET) {
-		};
+		CmdLineDuplicateArgumentException(const char* fmt, ...);
 	};
-		
-	/**
-	 * Exception indicating HELP has been requested
-	 */
+
+	 // Exception indicating HELP has been requested
+
 	class HelpRequested : public CmdLineException {
 	public:
 		HelpRequested() : CmdLineException(TXT_HELP) {};
@@ -82,5 +72,4 @@ namespace cmdline {
 	public:
 		HelpDetailedRequested() : CmdLineException(TXT_HELP_DETAIL) {};
 	};
-
 }
