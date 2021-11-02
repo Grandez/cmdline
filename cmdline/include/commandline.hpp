@@ -12,19 +12,7 @@ using namespace std;
 namespace _cmdline {
 	class _CommandLine {
 	public:
-		struct Attr {
-			bool sensitive;
-			bool strict;
-			bool forward;
-			Attr(bool c, bool s, bool f) {
-				sensitive = c;
-				strict = s;
-				forward = f;
-			}
-		};
-		_CommandLine(int argc,  char**  argv, Parameters parms);
-		_CommandLine(int argc,  char**  argv, Parameters parms, void *attr);
-		~_CommandLine();
+		_CommandLine(int argc,  char**  argv, Parameters parms, bool sensitive = false, bool strict = false);
 		vector<const char*> getArgs();
 		// Flags
 		bool  hasFlag(const char *flag);
@@ -64,7 +52,8 @@ namespace _cmdline {
 
 	private:
 		vector<const char*> inputs;
-		Attr   attr = Attr(false, false, false);
+		bool   sensitive = false;
+		bool   strict = false;
 		Group  options;
 		Group  flags;
 		Group  defines;

@@ -104,10 +104,10 @@ namespace cmdline {
 		vector<const char*>  getDefinitionValues(const char* name);
 		vector<const char*>  getDefinitionValues(string name);
 	protected:
-		static CmdLine getInstance(int argc, char** argv, Parameters parms, void* attr);
+		static CmdLine pGetInstance(int argc, char** argv, Parameters parms, bool sensitive = false, bool strict = false);
 	private:
 		_cmdline::_CommandLine* _commandLine;
-		CmdLine(int argc, char** argv, Parameters parms, void* attr);
+		CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
 		CmdLine(int argc, char** argv, Parameters parms);
 		template <typename T>
 		T castValue(const char* value) {
@@ -134,7 +134,7 @@ namespace cmdline {
 	};
 	class CmdLineI : public CmdLine {
 	public:
-		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+		static CmdLine getInstance(int argc, char** argv, Parameters);
 		~CmdLineI();
 	};
 	class CmdLineS : public CmdLine {

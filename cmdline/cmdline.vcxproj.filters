@@ -21,9 +21,6 @@
     <None Include="readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\arg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\cmdline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -53,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="cmdline_exceptions.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\arg.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +90,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stringbuffer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

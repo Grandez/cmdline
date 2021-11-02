@@ -19,16 +19,13 @@ namespace cmdline {
 		_cleanClass();
 	}
     CmdLine CmdLineI::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
-		_cmdline::_CommandLine::Attr attr = _cmdline::_CommandLine::Attr(true, false, false);
-		return CmdLine::getInstance(argc, argv, parms, &attr);
+		return CmdLine::pGetInstance(argc, argv, parms, true);
 	}
 	CmdLine CmdLineS::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
-		_cmdline::_CommandLine::Attr attr = _cmdline::_CommandLine::Attr(false, true, false);
-		return CmdLine::getInstance(argc, argv, parms, &attr);
+		return CmdLine::pGetInstance(argc, argv, parms, false, true);
 	}
 	CmdLine CmdLineIS::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
-		_cmdline::_CommandLine::Attr attr = _cmdline::_CommandLine::Attr(true, true, false);
-		return CmdLine::getInstance(argc, argv, parms, &attr);
+		return CmdLine::pGetInstance(argc, argv, parms, true, true);
 	}
 	CmdLineIS::~CmdLineIS() {
 		_cleanClass();

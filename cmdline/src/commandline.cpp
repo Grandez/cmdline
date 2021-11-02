@@ -39,16 +39,9 @@ namespace _cmdline {
 		_upper[i] = 0x0;
 		return _upper;
 	}
-	_CommandLine::_CommandLine(int argc,  char**  argv, Parameters parms) {
-		preInit(parms);
-		postInit();
-		parse(argc, argv);
-	}
-    _CommandLine::_CommandLine(int argc,  char**  argv, Parameters parms, void* attr) {
-		Attr* p = (Attr*)attr;
-    	this->attr.sensitive = p->sensitive;
-		this->attr.strict    = p->strict;
-		this->attr.forward   = p->forward;
+    _CommandLine::_CommandLine(int argc,  char**  argv, Parameters parms, bool sensitive, bool strict) {
+		this->sensitive = sensitive;
+		this->strict    = strict;
 	    preInit(parms);
 	    postInit();
 		parse(argc, argv);
@@ -66,14 +59,14 @@ namespace _cmdline {
 
 			if (c == '/' || c == '+' || c == '-') {
 				strcpy(szOpt, argv[i]);
-				if (attr.sensitive) {
+				if (sensitive) {
 					for (size_t j = 0; j < strlen(szOpt); j++) szOpt[j] = toupper(szOpt[j]);
 				}
 			}
 			switch (argv[i][0]) {
 			case '/': 
 				prev = updateOption(szOpt, prev); 
-				if (attr.strict) checkAlreadySet(&options, prev);
+				if (strict) checkAlreadySet(&options, prev);
 				break;
 			case '+': if (prev != nullptr) throw CmdLineException(ERR_ARG_MISSING, prev);
 				prev = updateFlag(szOpt, argv[i], true);   break;
@@ -284,7 +277,7 @@ namespace _cmdline {
 		}
 		for (Parm p : parms) {
 			Argument option(&p);
-			if (attr.sensitive) option.makeUpper();
+			if (sensitive) option.makeUpper();
 			Group *map  = (p.instanceOfFlag()) ? &flags : &options;
 			root = (p.instanceOfFlag()) ? rootFlags : rootOptions;
 			map->add(option.name, &option);
@@ -300,7 +293,7 @@ namespace _cmdline {
 		Argument* arg = flags.find("help");
 		if (arg != nullptr) return;
 		preInit(flagHelp, false);
-		if (!attr.sensitive) {
+		if (!sensitive) {
 			arg = flags.find("help");
 			arg->source = Source::AUTO;
 		}
@@ -318,14 +311,14 @@ namespace _cmdline {
 	}
 	Argument& _CommandLine::find(Group *group, const char* what) {
 		char* ptr = (char *) what;
-		if (attr.sensitive) ptr = makeUpper(what);
+		if (sensitive) ptr = makeUpper(what);
 		Argument* arg = group->find(ptr);
 		if (arg == nullptr) throw CmdLineNotFoundException(ERR_NOT_FND, what);
 		return *arg;
 	}
 	Argument* _CommandLine::findPointer(Group *group, const char* what) {
 		char* ptr = (char *) what;
-		if (attr.sensitive) ptr = makeUpper(what);
+		if (sensitive) ptr = makeUpper(what);
 		return group->find(ptr);
 	}
 	template <typename T>

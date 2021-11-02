@@ -14,22 +14,22 @@ namespace cmdline {
 	CmdLine::CmdLine(int argc,  char**  argv, Parameters parms) {
 		_commandLine = new _cmdline::_CommandLine(argc, argv, parms);
 	}
-    CmdLine::CmdLine(int argc,  char**  argv, Parameters parms, void *attr) {
-        _commandLine = new _cmdline::_CommandLine(argc, argv, parms, attr);
+	CmdLine::CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict) {
+		_commandLine = new _cmdline::_CommandLine(argc, argv, parms, sensitive, strict);
 	}
 	CmdLine CmdLine::getInstance(Parameters parms, int argc,  char**  argv) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
-	CmdLine CmdLine::getInstance(int argc,  char**  argv, Parameters parms) {
+	CmdLine CmdLine::getInstance(int argc, char** argv, Parameters parms) {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return *singleton_;
 	}
-	vector<const char*> CmdLine::args() { return _commandLine->getArgs(); }
-	CmdLine CmdLine::getInstance(int argc,  char**  argv, Parameters parms, void* attr) {
-		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, attr);
+	CmdLine CmdLine::pGetInstance(int argc,  char**  argv, Parameters parms, bool sensitive, bool strict) {
+		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, sensitive, strict);
 		return *singleton_;
 	}
+	vector<const char*> CmdLine::args() { return _commandLine->getArgs(); }
 
 		bool  CmdLine::hasFlag         (const char* name) { return _commandLine->hasFlag(name);         };
 		bool  CmdLine::hasFlag         (string name)      { return _commandLine->hasFlag(name.c_str()); };

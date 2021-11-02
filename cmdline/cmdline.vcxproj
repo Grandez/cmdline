@@ -44,7 +44,6 @@
     <ClInclude Include="include\group.hpp" />
     <ClInclude Include="include\msg_locale.h" />
     <ClInclude Include="include\parameter_tree.hpp" />
-    <ClInclude Include="include\stringbuffer.hpp" />
     <ClInclude Include="include\tools.h" />
     <ClInclude Include="include\types.h" />
     <ClInclude Include="include\validations.h" />

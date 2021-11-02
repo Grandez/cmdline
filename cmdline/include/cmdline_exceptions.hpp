@@ -10,20 +10,15 @@
 
 #include <stdexcept>
 #include "msg_locale.h"
-#include "stringbuffer.hpp"
 #include <cstdarg>
-
-using namespace jggtools;
 
 namespace cmdline {
 	class CmdLineNotFoundException : public std::runtime_error {
-		jggtools::stringbuffer str;
 	public:
 		CmdLineNotFoundException() = delete;
 		CmdLineNotFoundException(const char* fmt, ...);
 	};
 	class CmdLineInvalidTypeException : public std::runtime_error {
-		jggtools::stringbuffer str;
 	public:
 		CmdLineInvalidTypeException() = delete;
 		CmdLineInvalidTypeException(const char* fmt, ...);
