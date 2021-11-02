@@ -24,7 +24,7 @@
   <ItemGroup>
     <ClCompile Include="cmdline_exceptions.cpp" />
     <ClCompile Include="doc\doc_cmdline.cpp" />
-    <ClCompile Include="src\arg.cpp" />
+    <ClCompile Include="src\argument.cpp" />
     <ClCompile Include="src\cmdline.cpp" />
     <ClCompile Include="src\cmdline_c.cpp" />
     <ClCompile Include="src\cmdline_flavors.cpp" />
@@ -35,7 +35,7 @@
     <ClCompile Include="src\validations.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\arg.hpp" />
+    <ClInclude Include="include\argument.hpp" />
     <ClInclude Include="include\cmdline.h" />
     <ClInclude Include="include\cmdline.hpp" />
     <ClInclude Include="include\cmdline_exceptions.hpp" />

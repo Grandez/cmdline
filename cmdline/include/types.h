@@ -5,27 +5,27 @@
 #ifndef __CMDLINE_TYPES__
 #define __CMDLINE_TYPES__
 namespace cmdline {
-	enum class Type { STRING, BOOL, NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
+	enum class Type { STRING, CHAR, BOOL, NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL, DATE, TIME, DATETIME, TMS, DIR, DIR_EXISTS, FILE, FILE_EXISTS };
 	enum class Source { DEFAULT, ENV, CMDLINE, CODE, AUTO };
 
-	using CMD_STRING      = std::string;
-	using CMD_BOOL        = bool;
-	using CMD_NUMBER      = long;
-	using CMD_LONG        = long;
-	using CMD_INT         = int;
-	using CMD_DECIMAL     = float;
-	using CMD_FLOAT       = float;
-	using CMD_DOUBLE      = double;
-	using CMD_LONGNUMBER  = long long;
-	using CMD_LONGDECIMAL = float;
-	using CMD_DATE        = std::tm;
-	using CMD_TIME        = std::tm;
-	using CMD_DATETIME    = std::tm;
-	using CMD_TMS         = char *;
-	using CMD_DIR         = std::filesystem::path;
-	using CMD_FILE        = std::filesystem::path;
+	using TYPE_STRING      = std::string;
+	using TYPE_BOOL        = bool;
+	using TYPE_NUMBER      = long;
+	using TYPE_LONG        = long;
+	using TYPE_INT         = int;
+	using TYPE_DECIMAL     = float;
+	using TYPE_FLOAT       = float;
+	using TYPE_DOUBLE      = double;
+	using TYPE_LONGNUMBER  = long long;
+	using TYPE_LONGDECIMAL = float;
+	using TYPE_DATE        = std::tm;
+	using TYPE_TIME        = std::tm;
+	using TYPE_DATETIME    = std::tm;
+	using TYPE_TMS         = char *;
+	using TYPE_DIR         = std::filesystem::path;
+	using TYPE_FILE        = std::filesystem::path;
 
-	typedef std::unordered_map<std::string, bool>      Flags;
-	typedef std::unordered_map<std::string, std::string>    Options;
+	using Flags   = std::unordered_map<std::string, bool>;
+	using Options = std::unordered_map<std::string, std::string>;
 }
 #endif

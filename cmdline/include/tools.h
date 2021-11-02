@@ -15,6 +15,7 @@ namespace _cmdline {
     #define strdup(a) _cmdline::myStrdup(a)
 	void  add2tree(ParameterTree* root[], const char* word);
 	char* makeChar   (std::string str);
+	bool  makeBoolean(const char *value);
  	bool  makeBoolean(std::string value);
 	char* strUpper(const char* str);
 
@@ -23,4 +24,5 @@ namespace _cmdline {
 	vector<int>         tokenizeNumber(const char* src, const char* pat);
 	char*               myStrdup(const char* s, int size);
 	char*               myStrdup(const char* s);
+	void                defaultDate(char* aux);
 }

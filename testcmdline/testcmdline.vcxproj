@@ -34,12 +34,14 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="_global.hpp" />
+    <ClInclude Include="%24tool.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="argumentTest.cpp" />
+    <ClCompile Include="defaultValuesTest.cpp" />
     <ClCompile Include="exceptionsDefaultTest.cpp" />
     <ClCompile Include="exceptionsTest.cpp" />
+    <ClCompile Include="exceptionsValueTest.cpp" />
     <ClCompile Include="mainTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -55,7 +57,7 @@
     <ClCompile Include="inputTest.cpp" />
     <ClCompile Include="optionsTest.cpp" />
     <ClCompile Include="TypesTest.cpp" />
-    <ClCompile Include="_global.cpp" />
+    <ClCompile Include="%24tool.cpp" />
     <ClCompile Include="test_tree.cpp" />
     <ClCompile Include="validationsTest.cpp" />
   </ItemGroup>

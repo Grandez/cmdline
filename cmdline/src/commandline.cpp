@@ -97,15 +97,9 @@ namespace _cmdline {
 		Argument& opt = find(&options, name);
 		return (strlen(opt.getValue()) == 0 ? false : true);
 	}
-	bool _CommandLine::hasOption(string name) {
-		return hasOption(name.c_str());
-	}
 	bool _CommandLine::isOptionMultiple(const char* name) {
 		Argument& opt = find(&options, name);
 		return (opt.values.size() > 1);
-	}
-	bool _CommandLine::isOptionMultiple(string name) {
-		return isOptionMultiple(name.c_str());
 	}
 	vector<const char*> _CommandLine::getOptionValues(const char* name) {
 		Argument& opt = find(&options, name);
@@ -125,31 +119,14 @@ namespace _cmdline {
 	Options _CommandLine::getCurrentOptions() {
 		return getOptionsValue(false);
 	}
-	template <typename T>
-	vector<T> _CommandLine::getOptionValuesAs(const char *name) { 
-		T cls;
-		vector<T> data;
-		
-		Argument& opt = find(&options, name);
-		for (auto it : opt.getValues()) {
-			data.push_back(castValue<T>(cls, opt->type, it));
-		}
-		return data;
-	};
 	bool            _CommandLine::hasDefinition(const char* name) {
 		Argument* opt = findPointer(&defines, name);
 		return (opt == nullptr) ? false : true;
     }
-	bool            _CommandLine::hasDefinition(string name) { 
-		return hasDefinition(name.c_str());
-	}
 	bool            _CommandLine::isDefinitionMultiple(const char* name) { 
 		Argument& opt = find(&defines, name);
 		return (opt.values.size() < 2 ? false : true);
     }
-	bool            _CommandLine::isDefinitionMultiple(string name) { 
-		return isDefinitionMultiple(name.c_str()); 
-	}
 	vector<const char  *>  _CommandLine::getDefinitionValues(const char* name) { 
 		Argument& opt = find(&defines, name);
 		return opt.getValues();
@@ -241,7 +218,8 @@ namespace _cmdline {
 	}
 	char* _CommandLine::updateFlag        (const char* flag, const char* prev, bool value) {
 		std::vector<std::string> flags = splitArgument(flag);
-		for (std::string f : flags) updateFlagItem((char*)f.c_str(), prev, value);
+		for (std::string f : flags) 
+			updateFlagItem((char*)f.c_str(), prev, value);
 		return nullptr;
 	}
 	void  _CommandLine::updateFlagItem    (const char* flag, const char* prev, bool value) {
@@ -325,16 +303,16 @@ namespace _cmdline {
 	void _CommandLine::checkType(T, Type type) {
 		string expected("");
 		switch (type) {
-		case cmdline::Type::NUMBER:  if (!is_same<T, int> && !is_same<T, long>) expected = "number";break;
-		case cmdline::Type::DECIMAL: if (!is_same<T, float> && !is_same<T, double>) expected = "decimal"; break;
-		case cmdline::Type::DATE:   if (!is_same<T, struct tm>) expected = "date";break;
-		case cmdline::Type::TIME:   if (!is_same<T, struct tm>) expected = "time";break;
-		case cmdline::Type::DATETIME: if (!is_same<T, struct tm>) expected = "datetiem"; break;
-		case cmdline::Type::TMS:      if (!is_same<T, chrono::time_point>) expected = "timestamp";break;
-		case cmdline::Type::DIR:
-		case cmdline::Type::DIR_EXISTS: if (!is_same<T, filesystem::path>) expected = "directory";break;
-		case cmdline::Type::FILE:
-		case cmdline::Type::FILE_EXISTS: if (!is_same<T, filesystem::path>) expected = "file";break;
+		case Type::NUMBER:  if (!is_same<T, int> && !is_same<T, long>) expected = "number";break;
+		case Type::DECIMAL: if (!is_same<T, float> && !is_same<T, double>) expected = "decimal"; break;
+		case Type::DATE:   if (!is_same<T, struct tm>) expected = "date";break;
+		case Type::TIME:   if (!is_same<T, struct tm>) expected = "time";break;
+		case Type::DATETIME: if (!is_same<T, struct tm>) expected = "datetiem"; break;
+		case Type::TMS:      if (!is_same<T, chrono::time_point>) expected = "timestamp";break;
+		case Type::DIR:
+		case Type::DIR_EXISTS: if (!is_same<T, filesystem::path>) expected = "directory";break;
+		case Type::FILE:
+		case Type::FILE_EXISTS: if (!is_same<T, filesystem::path>) expected = "file";break;
 		default: expected = "";
 		}
 		if (expected.length() > 0) throw CmdLineInvalidTypeException(ERR_INV_TYPE, expected);

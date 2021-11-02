@@ -1,7 +1,7 @@
 #include "pch.h"
 #include <stdexcept>
 
-#include "_global.hpp"
+#include "$tool.hpp"
 
 TEST(DefaultValuesExceptions, date) {
 	tool.reset();

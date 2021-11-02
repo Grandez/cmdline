@@ -20,33 +20,17 @@ namespace _cmdline {
 		Flags getCurrentFlags(bool all);
 
 		// Options
-		bool           hasOption       (const char* name);
-		bool           hasOption       (string name);
-		bool           isOptionMultiple(const char* name);
-		bool           isOptionMultiple(string name);
-//		const char* getOption(const char* name) { return getValue(&options, name); }
-		const char* getOption(const char* name);
-		template <typename T>
-		const T         getOptionAs(const char* name) {
-				Argument& opt = find(&options, name);
-				return castValue<T>(opt.getValue());
-		}
-		vector<const char*> getOptionValues(const char* name);
+		int                 getOptionNumValues(const char* name);
+		bool                hasOption        (const char* name);
+		bool                isOptionMultiple (const char* name);
+		Options             getDefaultOptions();
+		Options             getCurrentOptions();
+		const char*         getOption        (const char* name);
+		vector<const char*> getOptionValues  (const char* name);
 		
-		int             getOptionNumValues(const char* name);
-		template <typename T>
-		vector<T>       getOptionValuesAs(const char* name);
-		/*
-		template <typename T>
-		const vector<T> getOptionValuesAs(string name);
-		*/
-		Options         getDefaultOptions();
-		Options         getCurrentOptions();
-
-		bool            hasDefinition        (const char* def);
-		bool            hasDefinition        (string def);
-		bool            isDefinitionMultiple (const char* name);
-		bool            isDefinitionMultiple (string name);
+		// Definitions
+		bool                 hasDefinition        (const char* def);
+		bool                 isDefinitionMultiple (const char* name);
 		const char*          getDefinition        (const char* name) { return getValue(&defines, name); }
 		vector<const char*>  getDefinitionValues  (const char* name);
 

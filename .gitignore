@@ -36,6 +36,7 @@
 *.pdb
 
 # Directories
+cmdline/.cccc/**
 .vs/**
 x64/**
 x86/**

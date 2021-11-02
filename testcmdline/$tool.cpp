@@ -1,13 +1,19 @@
 #pragma once
 #include "pch.h"
 
-#include "_global.hpp"
+#include "$tool.hpp"
 
 	Tool::Tool() {
+		int err = 0;
+		auto start = std::chrono::system_clock::now();
+		time_t t = std::chrono::system_clock::to_time_t(start);
+		err = localtime_s(&now, &t);
+
 		argv = (char**) calloc(10, sizeof(char*));
-		argv[0] = (char *) "test";
+		if (argv) argv[0] = (char *) "test";
 		argc = 1;
 	}
+
 	inline char* Tool::mystrdup(const char* str) {
 #ifdef _WIN32
 		return _strdup(str);

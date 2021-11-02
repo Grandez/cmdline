@@ -51,12 +51,12 @@
     <ClCompile Include="cmdline_exceptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\arg.cpp">
+    <ClCompile Include="src\argument.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\arg.hpp">
+    <ClInclude Include="include\argument.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\cmdline.h">

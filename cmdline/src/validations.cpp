@@ -2,7 +2,7 @@
 #pragma warning(disable : 4996)
 
 #include <ctime>
-#include<cstring>
+#include <cstring>
 #include <cstdio>
 #include <iomanip>
 #include <string>

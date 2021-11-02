@@ -1,7 +1,11 @@
 #pragma once
-#include "arg.hpp"
-#include "tools.h"
+
 #include <algorithm>
+#include <filesystem>
+
+#include "argument.hpp"
+#include "tools.h"
+#include "types.h"
 
 using namespace std;
 using namespace cmdline;
@@ -12,7 +16,7 @@ namespace _cmdline {
 		name = string(parm->name);
 		type = parm->type;
 		multiple = parm->multiple;
-		defValue = string(parm->value);
+		defValue = applyDefault(parm->value);
 		validateDefault();
 	}
 	Argument::Argument(Argument *arg) {
@@ -29,12 +33,12 @@ namespace _cmdline {
 	}
 	Argument::Argument(const char* name, const char* value) {
 		this->name     = string(name);
-		this->defValue = string(value);
+		this->defValue = applyDefault(value); 
 		validateDefault();
 	}
 	Argument::Argument(const char* name, const char *value, Source source) {
 		if (source == Source::DEFAULT) {
-			this->defValue = string(value);
+			this->defValue = applyDefault(value);
 		}
 		else {
 			if (values.size() == 0) this->first = string(value);
@@ -125,6 +129,41 @@ namespace _cmdline {
 		if (defValue.length() == 0) return;
 		if (type == Type::STRING || type == Type::BOOL) return;
 		validateValue(defValue.c_str(), type);
+	}
+	string Argument::applyDefault(const char* txt) {
+		char aux[256];
+		if (txt != NULL && strlen(txt) > 0) return string(txt);
+		std::time_t t = std::time(0);   
+		std::tm* now = std::localtime(&t);
+		switch (this->type) {
+		       case Type::DATE: 
+				    defaultDate(aux);
+			        break;
+		       case Type::TIME:
+			        sprintf(aux, "%02d:%02d:%02d", now->tm_hour, now->tm_min, now->tm_sec);
+			        break;
+		       case Type::DATETIME:
+			        sprintf(aux, "%04d-%02d-%02d %02d:%02d:%02d",
+				                 now->tm_year + 1900, now->tm_mon + 1, now->tm_mday,
+				                 now->tm_hour, now->tm_min, now->tm_sec);
+			        break;
+		       case Type::TMS:
+			        sprintf(aux, "%04d-%02d-%02d-%02d:%02d:%02d.000000",
+				    now->tm_year + 1900, now->tm_mon + 1, now->tm_mday,
+				    now->tm_hour, now->tm_min, now->tm_sec);
+			        break;
+		       case Type::DIR:
+		       case Type::DIR_EXISTS:
+ 				    strcpy(aux, (const char *) std::filesystem::current_path().native().c_str());
+			        break;
+		       case Type::BOOL:
+			        aux[0] = '0'; aux[1] = 0x0;
+			        break;
+		       default:
+			        if (txt == NULL) return string("");
+			        return string(aux);
+		}
+		return (string(aux));
 	}
 
 };

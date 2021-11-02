@@ -35,6 +35,7 @@ namespace _cmdline {
 		Argument&      addValues(vector<string> values);
 	private:
 		string first;
-		void validateDefault();
+		void   validateDefault();
+		string applyDefault(const char *);
 	};
 }

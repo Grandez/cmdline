@@ -1,13 +1,14 @@
 #include "pch.h"
 
-#include "_global.hpp"
+#include "$tool.hpp"
+
 TEST(Types, STRING) {
 	tool.reset();
 	const char* opt = "opt";
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::STRING) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	string res = cmdline.getOptionAs<CMD_STRING>((const char*)"opt");
+	string res = cmdline.getOptionAs<TYPE_STRING>((const char*)"opt");
 	CmdLine::freeInstance();
 	EXPECT_EQ(res, "123");
 }
@@ -37,7 +38,7 @@ TEST(Types, NUMBER) {
 
 	Parameters  parms = { ParmOption((const char *)"opt", (const char*)"123", Type::NUMBER)};
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	long res = cmdline.getOptionAs<CMD_NUMBER>((const char*)"opt");
+	long res = cmdline.getOptionAs<TYPE_NUMBER>((const char*)"opt");
 	CmdLine::freeInstance();
 	EXPECT_EQ(res, 123);
 }
@@ -47,7 +48,7 @@ TEST(Types, LONG) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::NUMBER) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	long res = cmdline.getOptionAs<CMD_LONG>((const char*)"opt");
+	long res = cmdline.getOptionAs<TYPE_LONG>((const char*)"opt");
 	CmdLine::freeInstance();
 	EXPECT_EQ(res, 123);
 }
@@ -57,7 +58,7 @@ TEST(Types, INT) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123", Type::NUMBER) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	int res = cmdline.getOptionAs<CMD_INT>((const char*)"opt");
+	int res = cmdline.getOptionAs<TYPE_INT>((const char*)"opt");
 	EXPECT_EQ(res, 123);
 	CmdLine::freeInstance();
 }
@@ -87,7 +88,7 @@ TEST(Types, DECIMAL) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123.456", Type::DECIMAL) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	double res = cmdline.getOptionAs<CMD_DECIMAL>((const char*)"opt");
+	double res = cmdline.getOptionAs<TYPE_DECIMAL>((const char*)"opt");
 	EXPECT_DOUBLE_EQ(res, 123.456f);
 	CmdLine::freeInstance();
 }
@@ -97,7 +98,7 @@ TEST(Types, FLOAT) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"123.456", Type::DECIMAL) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	float res = cmdline.getOptionAs<CMD_FLOAT>((const char*)"opt");
+	float res = cmdline.getOptionAs<TYPE_FLOAT>((const char*)"opt");
 	CmdLine::freeInstance();
 	EXPECT_FLOAT_EQ(res, 123.456f);
 }
@@ -118,7 +119,7 @@ TEST(Types, DATE) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"01/02/2021", Type::DATE) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	struct tm res = cmdline.getOptionAs<CMD_DATE>((const char*)"opt");
+	struct tm res = cmdline.getOptionAs<TYPE_DATE>((const char*)"opt");
 	CmdLine::freeInstance();
 	std::locale::global(std::locale());
 	EXPECT_EQ(res.tm_mday, 1);
@@ -130,7 +131,7 @@ TEST(Types, TIME) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"01:02:03", Type::TIME) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	struct tm res = cmdline.getOptionAs<CMD_TIME>((const char*)"opt");
+	struct tm res = cmdline.getOptionAs<TYPE_TIME>((const char*)"opt");
 	CmdLine::freeInstance();
 	std::locale::global(std::locale());
 	EXPECT_EQ(res.tm_min, 2);
@@ -142,7 +143,7 @@ TEST(Types, DATETIME) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"2021-10-11 01:02:03", Type::DATETIME) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	struct tm res = cmdline.getOptionAs<CMD_DATETIME>((const char*)"opt");
+	struct tm res = cmdline.getOptionAs<TYPE_DATETIME>((const char*)"opt");
 	CmdLine::freeInstance();
 	EXPECT_EQ(res.tm_min, 2);
 	EXPECT_EQ(res.tm_mon, 9);
@@ -154,7 +155,7 @@ TEST(Types, TMS) {
 
 	Parameters  parms = { ParmOption((const char*)"opt", (const char*)"2021-10-11 01:02:03.456", Type::TMS) };
 	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
-	char *tms = cmdline.getOptionAs<CMD_TMS>((const char*)"opt");
+	char *tms = cmdline.getOptionAs<TYPE_TMS>((const char*)"opt");
 	CmdLine::freeInstance();
 	EXPECT_GT((int) strlen(tms), 20);
 }

@@ -1,17 +1,16 @@
 #include "pch.h"
 
-#include "_global.hpp"
+#include "$tool.hpp"
 
 TEST(Case, option_01) {
 	tool.reset();
 	const char* opt1 = "output";
 	Parameters  parms = { ParmOption(opt1, ".") };
 
-	CmdLine cmdline = CmdLineI::getInstance(tool.argc, tool.argv, parms);
+	CmdLine cmdline = (CmdLine) CmdLineI(tool.argc, tool.argv, parms);
 	EXPECT_TRUE(cmdline.hasOption(opt1));
 	EXPECT_TRUE(cmdline.hasOption("OUTPUT"));
 	EXPECT_TRUE(cmdline.hasOption("Output"));
-	CmdLine::freeInstance();
 }
 
 TEST(Case, options_02) {
@@ -19,21 +18,23 @@ TEST(Case, options_02) {
 	const char* opt1 = "output";
 	Parameters  parms = { ParmOption(opt1, ".") };
 	int argc = tool.addArg("/output", "..");
-	CmdLine cmdline = CmdLineI::getInstance(tool.argc, tool.argv, parms);
+	CmdLine cmdline = (CmdLine) CmdLineI(tool.argc, tool.argv, parms);
 
 	EXPECT_TRUE(cmdline.hasOption(opt1));
 	EXPECT_TRUE(cmdline.hasOption("OUTPUT"));
 	EXPECT_TRUE(cmdline.hasOption("Output"));
-	CmdLine::freeInstance();
 }
 TEST(Case, flag_01) {
 	tool.reset();
 	Parameters  parms = { ParmFlag("verbose", true)};
+	int argc = tool.addArg("+VERBOSE");
 
-	CmdLine cmdline = CmdLineI::getInstance(tool.argc, tool.argv, parms);
-	EXPECT_TRUE(cmdline.hasFlag("verbose"));
-	EXPECT_TRUE(cmdline.hasFlag("VERBOSE"));
-	CmdLine::freeInstance();
+	CmdLine cmdline = (CmdLine) CmdLineI(tool.argc, tool.argv, parms);
+	bool flag1 = cmdline.hasFlag("verbose");
+	bool flag2 = cmdline.hasFlag("Verbose");
+	EXPECT_TRUE(flag1);
+	EXPECT_TRUE(flag2);
+	
 }
 
 TEST(Case, flag_02) {
@@ -41,8 +42,7 @@ TEST(Case, flag_02) {
 	Parameters  parms = { ParmFlag("verbose") };
 	int argc = tool.addArg("+VERBOSE");
 
-	CmdLine cmdline = CmdLineI::getInstance(tool.argc, tool.argv, parms);
+	CmdLine cmdline = (CmdLine) CmdLineI(tool.argc, tool.argv, parms);
 	EXPECT_TRUE(cmdline.hasFlag("verbose"));
 	EXPECT_TRUE(cmdline.hasFlag("VERBOSE"));
-	CmdLine::freeInstance();
 }

@@ -31,7 +31,7 @@ int main(int argc, const char* argv[]) {
 	CmdLine cmdline = CmdLine::getInstance(1, argv2, parms);
 
 
-	int res = cmdline.getOptionAs<CMD_INT>((const char*)"opt");
+	int res = cmdline.getOptionAs<TYPE_INT>((const char*)"opt");
 
 	bool rc = false;
 	std::cout << "Starting\n";

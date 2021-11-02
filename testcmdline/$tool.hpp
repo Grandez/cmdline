@@ -1,4 +1,7 @@
 #pragma once
+#include <chrono>
+#include <ctime>
+
 #include "../cmdline/include/cmdline.hpp"
 #include "../cmdline/include/tools.h"
 
@@ -8,9 +11,10 @@ using namespace _cmdline;
 
 class Tool {
 public:
-	 char** argv; // = { "","" };
+	 char** argv = nullptr;
 	 int    argc = 0;
-	Tool();
+	 struct tm now;
+	 Tool();
 	void reset();
 	int addArg(const char* arg);
 	int addArg(const char* name, const char* value);

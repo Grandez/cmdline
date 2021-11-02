@@ -1,31 +1,52 @@
 #include "pch.h"
 
-#include "_global.hpp"
-/*
+#include "$tool.hpp"
+
 TEST(Defaults, Flags_2) {
-	std::vector<cmdline::ParmItem> flags = {
-		 cmdline::ParmItem("output", true)
-		,cmdline::ParmItem("outer", true)
+	Parameters  parms = { 
+		ParmFlag("output", true)
+	   ,ParmFlag("outer", true) 
 	};
-	cmdline::CmdLine cmdLine(flags);
-	std::map<std::string, bool> mflags = cmdLine.getDefaultFlags();
-	EXPECT_EQ(mflags.size(), flags.size());
+	tool.reset();
+	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
+	Flags mflags    = cmdline.getDefaultFlags();
+	CmdLine::freeInstance();
+	EXPECT_EQ(mflags.size(), parms.size());
 }
 TEST(Defaults, Flags_3) {
-	std::vector<cmdline::ParmItem> flags = {
-		 cmdline::ParmItem("output", true)
-		,cmdline::ParmItem("outer", true)
-		,cmdline::ParmItem("verbose", true)
+	Parameters  parms = { 
+		 ParmFlag("output", true)
+		,ParmFlag("outer",  true)
+		,ParmFlag("verbose", true)
 	};
-	cmdline::CmdLine cmdLine(flags);
-	std::map<std::string, bool> mflags = cmdLine.getDefaultFlags();
-	EXPECT_EQ(mflags.size(), flags.size());
+	tool.reset();
+	CmdLine cmdline = CmdLine(tool.argc, tool.argv, parms);
+	Flags mflags = cmdline.getDefaultFlags();
+	EXPECT_EQ(mflags.size(), parms.size());
 }
 
 TEST(Defaults, Flags_0) {
-	std::vector<cmdline::ParmItem> flags;
-	cmdline::CmdLine cmdLine(flags);
-	std::map<std::string, bool> mflags = cmdLine.getDefaultFlags();
-	EXPECT_EQ(mflags.size(), 0);
+	tool.reset();
+	Parameters  parms;
+	CmdLine cmdline = CmdLine(tool.argc, tool.argv, parms);
+	Flags mparms = cmdline.getDefaultFlags();
+	EXPECT_EQ(mparms.size(), parms.size());
+}
+TEST(Defaults, Options_0) {
+	tool.reset();
+	Parameters  parms;
+	CmdLine cmdline = CmdLine(tool.argc, tool.argv, parms);
+	Options mparms = cmdline.getDefaultOptions();
+	EXPECT_EQ(mparms.size(), parms.size());
+}
+/*
+TEST(Defaults, Options_0) {
+	Parameters  parms{
+		ParmOption("hour", Type::TIME)
+	};
+	CmdLine cmdline = CmdLine::getInstance(tool.argc, tool.argv, parms);
+	Options mparms = cmdline.getDefaultOptions();
+	CmdLine::freeInstance();
+	EXPECT_EQ(mflags.size(), parms.size());
 }
 */

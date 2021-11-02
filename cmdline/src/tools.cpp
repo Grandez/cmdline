@@ -1,20 +1,10 @@
 #include <regex>
-
-/*
-
-#include <cstdlib>
-#include <unordered_map>
-#include <string>
-*/
+#include <ctime>
+#include <locale>
 
 #include "tools.h"
 #include "cmdline_exceptions.hpp"
 
-/*
-#include "arg.hpp"
-#include "parmitem.hpp"
-
-*/
 using namespace std;
 using namespace cmdline;
 
@@ -78,20 +68,15 @@ namespace _cmdline {
 		strcpy_s(cstr, len, str.c_str());
 		return (cstr);
 	}
+	bool makeBoolean(const char* value) {
+		string str(strUpper(value));
+		if (str.compare("0") == 0)     return false;
+		if (str.compare("FALSE") == 0) return false;
+		if (str.compare("NO") == 0)    return false;
+		return true;
+	}
 	bool makeBoolean(string value) { 
-		char * val = (char*) value.c_str();
-
-		if (val == nullptr)              return false;
-		if (strlen(val) == 0)            return false;
-		if (value[0] == '0')               return false;
-		if (value[0] == '1')               return true;
-		if (strcmp(val, "-1")      == 0) return true;
-		if (_stricmp(val, "no"   ) == 0) return false;
-		if (_stricmp(val, "false") == 0) return false;
-		if (_stricmp(val, "yes"  ) == 0) return true;
-		if (_stricmp(val, "true" ) == 0) return true;
-		if (_stricmp(val, "si"   ) == 0) return true;
-		return false;
+		return makeBoolean(value.c_str());
 	}
 	vector<string> splitArgument(const char* parm) {
 		char* parse = strdup(parm);
@@ -171,5 +156,22 @@ namespace _cmdline {
 	char* myStrdup(const char* s) {
 		return myStrdup(s, strlen(s));
 	}
-
+	void defaultDate(char *aux) {
+		std::time_t t = std::time(0);
+		std::tm* now = std::localtime(&t);
+		time_base::dateorder d = use_facet<time_get<char>>(locale()).date_order();
+		switch (d) {
+		       case time_base::mdy: 
+			        sprintf(aux, "%02d/%02d/%04d", now->tm_mon, now->tm_mday + 1, now->tm_year + 1900);
+					break;
+		       case time_base::ymd: 
+				    sprintf(aux, "%04d/%02d/%02d", now->tm_year, now->tm_mon + 1, now->tm_mday);
+					break;
+		       case time_base::ydm: 
+				    sprintf(aux, "%04d/%02d/%02d", now->tm_year, now->tm_mday, now->tm_mon + 1);
+					break;
+			   default:
+			        sprintf(aux, "%02d/%02d/%04d", now->tm_mday, now->tm_mon + 1, now->tm_year + 1900);
+		}
+	}
 }

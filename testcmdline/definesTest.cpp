@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "_global.hpp"
+#include "$tool.hpp"
 
 TEST(Defines, Define_01) {
 	tool.reset();
