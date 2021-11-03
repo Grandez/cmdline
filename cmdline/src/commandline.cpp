@@ -49,40 +49,6 @@ namespace _cmdline {
 	vector<const char*> _CommandLine::getArgs() {
 		return inputs;
 	}
-	void _CommandLine::parse(int argc, char** argv) {
-		char c;
-		char szOpt[64] = "";
-		std::string in;
-		char* prev = nullptr;
-		for (int i = 1; i < argc; i++) {
-			c = argv[i][0];
-
-			if (c == '/' || c == '+' || c == '-') {
-				strcpy(szOpt, argv[i]);
-				if (sensitive) {
-					for (size_t j = 0; j < strlen(szOpt); j++) szOpt[j] = toupper(szOpt[j]);
-				}
-			}
-			switch (argv[i][0]) {
-			case '/': 
-				prev = updateOption(szOpt, prev); 
-				if (strict) checkAlreadySet(&options, prev);
-				break;
-			case '+': if (prev != nullptr) throw CmdLineException(ERR_ARG_MISSING, prev);
-				prev = updateFlag(szOpt, argv[i], true);   break;
-			case '-': in = string(szOpt);
-				prev = (in == std::string("-h") || in == std::string("--help")) ?
-				     	updateFlag((char*)"+help", prev, true) :
-					    updateFlag(argv[i], prev, false);
-				break;
-			default:
-				if (prev == NULL) inputs.push_back(argv[i]);
-				if (prev != NULL) prev = addValueToOption(argv[i], prev);
-			}
-		}
-		if (hasFlag("HELP")) throw HelpDetailedRequested();
-		if (hasFlag("help")) throw HelpRequested();
-	}
 	bool _CommandLine::hasFlag(const char* name) {
 		Argument& opt = find(&flags, name);
 		return makeBoolean(opt.getValue());
@@ -133,7 +99,42 @@ namespace _cmdline {
     }
 
 	//////////////////////////////////////////////////////////////////
-	
+
+	void _CommandLine::parse(int argc, char** argv) {
+		char c;
+		char szOpt[64] = "";
+		std::string in;
+		char* prev = nullptr;
+		for (int i = 1; i < argc; i++) {
+			c = argv[i][0];
+
+			if (c == '/' || c == '+' || c == '-') {
+				strcpy(szOpt, argv[i]);
+				if (sensitive) {
+					for (size_t j = 0; j < strlen(szOpt); j++) szOpt[j] = toupper(szOpt[j]);
+				}
+			}
+			switch (argv[i][0]) {
+			case '/':
+				prev = updateOption(szOpt, prev);
+				if (strict) checkAlreadySet(&options, prev);
+				break;
+			case '+': if (prev != nullptr) throw CmdLineException(ERR_ARG_MISSING, prev);
+				prev = updateFlag(szOpt, argv[i], true);   break;
+			case '-': in = string(szOpt);
+				prev = (in == std::string("-h") || in == std::string("--help")) ?
+					updateFlag((char*)"+help", prev, true) :
+					updateFlag(argv[i], prev, false);
+				break;
+			default:
+				if (prev == NULL) inputs.push_back(argv[i]);
+				if (prev != NULL) prev = addValueToOption(argv[i], prev);
+			}
+		}
+		if (hasFlag("HELP")) throw HelpDetailedRequested();
+		if (hasFlag("help")) throw HelpRequested();
+	}
+
 	char* _CommandLine::checkOption       (const char* option) { return (checkParameter(rootOptions, option)); }
 	char* _CommandLine::checkFlag         (const char* flag)     { return (checkParameter(rootFlags, flag)); }
 	char* _CommandLine::checkParameter    (ParameterTree* root[], const char* parm) {

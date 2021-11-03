@@ -15,15 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="driver_c.c">
+    <ClCompile Include="ccmdline.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\ccmdline\include\ccmdline.h">
+    <ClInclude Include="include\cmdline_errno.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\ccmdline\include\ctypes.h">
+    <ClInclude Include="..\include\cmdline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cmdline_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -127,11 +127,11 @@ namespace _cmdline {
 	}
 	void Argument::validateDefault() {
 		if (defValue.length() == 0) return;
-		if (type == Type::STRING || type == Type::BOOL) return;
+		if (type == Type::STRING) return;
 		validateValue(defValue.c_str(), type);
 	}
 	string Argument::applyDefault(const char* txt) {
-		char aux[256];
+		char aux[256] = "";
 		if (txt != NULL && strlen(txt) > 0) return string(txt);
 		std::time_t t = std::time(0);   
 		std::tm* now = std::localtime(&t);
@@ -154,7 +154,7 @@ namespace _cmdline {
 			        break;
 		       case Type::DIR:
 		       case Type::DIR_EXISTS:
- 				    strcpy(aux, (const char *) std::filesystem::current_path().native().c_str());
+ 				    strcpy(aux, (const char *) std::filesystem::current_path().string().c_str());
 			        break;
 		       case Type::BOOL:
 			        aux[0] = '0'; aux[1] = 0x0;

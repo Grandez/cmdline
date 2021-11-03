@@ -24,30 +24,34 @@ namespace _cmdline {
 	// Decimals are tried two times: Using comma and point as decimal sign
 	// Internal functions
 	struct tm* makeDateTime(char* sdate, char* stime) {
-		struct tm *now;
-		struct tm *res = (struct tm *) malloc(sizeof(struct tm));
+		struct tm* tt;
+		struct tm now;
+		struct tm res;
 
 		time_t t = std::time(0);
-		now = std::localtime(&t);
+		tt = std::localtime(&t);
+		memcpy(&now, tt, sizeof(tm));
 
 		if (!sdate) {
-			memcpy(res, now, sizeof(tm));
+			memcpy(&res, &now, sizeof(tm));
 		}
 		else {
 			std::istringstream ss(sdate);
-			ss >> get_time(res, "%Y/%m/%d");
-			res->tm_hour = now->tm_hour;
-			res->tm_min = now->tm_min;
-			res->tm_sec = now->tm_sec;
+			ss >> get_time(&res, "%Y/%m/%d");
+			res.tm_hour = now.tm_hour;
+			res.tm_min  = now.tm_min;
+			res.tm_sec  = now.tm_sec;
 		}
 
 		if (stime) {
 			vector<int> tt = tokenizeNumber(stime, ":");
-			res->tm_hour = tt[0];
-			res->tm_min  = tt[1];
-			res->tm_sec  = tt[2];
+			res.tm_hour = tt[0];
+			res.tm_min  = tt[1];
+			res.tm_sec  = tt[2];
 		}
-		return res;
+		tt = (struct tm *) malloc(sizeof(struct tm));
+		memcpy(tt, &res, sizeof(struct tm));
+		return tt;
 	}
 	int         isLeap(int year) {
 		if (year < 100) year += 2000;
@@ -226,11 +230,6 @@ namespace _cmdline {
 			tmTime = validateTime(pieces[1].c_str());
 			sprintf(szDate, "%04d/%02d/%02d", tmDate->tm_year + 1900, tmDate->tm_mon + 1, tmDate->tm_mday);
 			sprintf(szTime, "%02d:%02d:%02d", tmTime->tm_hour, tmTime->tm_min, tmTime->tm_sec);
-			/*
-			res.reserve(dt.size() + tm.size());
-			res.insert(res.end(), dt.begin(), dt.end());
-			res.insert(res.end(), tm.begin(), tm.end());
-			*/
 		}
 		catch(exception ex) {
 			throw CmdLineValueException(TXT_VAL_INVALID, value);
@@ -270,7 +269,7 @@ namespace _cmdline {
 		int rc, rc2;
 		char* ptr = getcwd(old, 256);
 		if (strcmp(value, ".") == 0) return filesystem::path(old);
-		
+		if (strcmp(value, old) == 0) return filesystem::path(old);
 		rc = _chdir(value);
 		if (rc) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR );
 		ptr = getcwd(tmp, 256);

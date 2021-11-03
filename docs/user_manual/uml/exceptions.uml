@@ -1,39 +1,51 @@
 @startuml
 hide empty members
 skinparam groupInheritance 2
-skinparam style strictuml
+
+
 
 class exception 
+
 together {
   class runtime_error 
   class invalid_argument 
 }
 
-exception <|-- runtime_error
-invalid_argument -- (exception , runtime_error )
+together {
+  class CmdLineParameterException
+  class CmdLineValueException
+  class CmdLineHelpException
+
+  class CmdLineNotFoundException
+  class  CmdLineInvalidTypeException
+}
+
+together {
+  class HelpRequested
+  class HelpDetailRequested
+}
+
+exception <|-down- runtime_error
+exception <|-down- invalid_argument
 
 runtime_error <|-- CmdLineNotFoundException
 runtime_error <|-- CmdLineInvalidTypeException
 
 invalid_argument <|-- CmdLineException
 
-together {
-  class CmdLineHelpException
-  class CmdLineParameterException
-  class CmdLineValueException
+CmdLineException <|-down- CmdLineHelpException
+CmdLineException <|-right- CmdLineValueException
+CmdLineException <|-right- CmdLineParameterException
 
-}
-
-CmdLineException <|-- CmdLineParameterException
-CmdLineException <|-- CmdLineValueException
-
-CmdLineException <|-- CmdLineHelpException
+CmdLineParameterException -[hidden, up]- CmdLineDuplicateArgumentException
 
 
-together {
-  class HelpRequested
-  class HelpDetailRequested
-}
+
+
+CmdLineException <|-down- CmdLineNotFoundException
+CmdLineException <|-down- CmdLineInvalidTypeException
+CmdLineException <|-right-  CmdLineDuplicateArgumentException
+
 
 HelpDetailRequested -- (CmdLineHelpException, HelpRequested )
 @enduml

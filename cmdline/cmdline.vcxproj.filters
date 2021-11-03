@@ -54,12 +54,12 @@
     <ClCompile Include="src\argument.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\c_wrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\argument.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cmdline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\cmdline.hpp">
@@ -90,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\c_wrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cmdline_errno.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -24,7 +24,7 @@ namespace cmdline {
 		Type type = Type::STRING;  // Type
 		char* value;   // default value
 		bool multiple;   // Allow multiple values?
-		Parm() = delete;
+		Parm() { name = nullptr; } // default
 		Parm(const char* name);
 		Parm(const char* name, const char* value);
 		Parm(const char* name, const char* value, Type type, bool multiple = false);
@@ -148,20 +148,8 @@ namespace cmdline {
 		*/
 		template <typename T> const T         getOptionAs(const char* name) {
 			const char* value = getOption(name);
-			//if constexpr (is_same<T, Type>::value) {
-			//	return getOptionFromType(T, name);
-			//}
-			//else {
-				return castByNative<T>(value);
-			//}
+			return castByNative<T>(value);
 		}
-		//template <typename T>
-		/*
-		const auto getOptionAs(Type t, const char* name) {
-			const char* value = getOption(name);
-			return castValueType(t, value);
-		}
-		*/
 		template <typename T> const T         getOptionAs(string name)      { return getOptionAs<T>(name.c_str()); }
 		template <typename T> const vector<T> getOptionValuesAs(string name) { return getOptionValuesAs<T>(name.c_str()); };
 		template <typename T> const vector<T> getOptionValuesAs(const char* name) {
@@ -173,7 +161,6 @@ namespace cmdline {
 			}
 			return res;
 		}
-		
 
 		// Definitions
 		bool        hasDefinition(const char* def);

@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module anonymous-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="875" level="1" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="6" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="145.833" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.000" level="0" />
+<weighted_methods_per_class_unity value="102" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="0" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>TEST(Arguments,arg_0)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\argumentTest.cpp" line="4" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Arguments,arg_1)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\argumentTest.cpp" line="11" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Arguments,arg_2)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\argumentTest.cpp" line="18" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Arguments,arg_mixed)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\argumentTest.cpp" line="32" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Arguments,arg_quoted)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\argumentTest.cpp" line="25" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Case,flag_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\caseTest.cpp" line="27" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Case,flag_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\caseTest.cpp" line="40" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Case,option_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\caseTest.cpp" line="5" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Case,options_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\caseTest.cpp" line="16" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefValues,TypeBoolean)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultValuesTest.cpp" line="43" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefValues,TypeDate)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultValuesTest.cpp" line="18" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefValues,TypeDateTime)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultValuesTest.cpp" line="26" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefValues,TypeString)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultValuesTest.cpp" line="52" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefValues,TypeTime)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultValuesTest.cpp" line="35" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,date)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="6" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,datetime)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="20" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,decimal)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="41" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,long_decimal)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="55" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,long_number)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="48" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,number)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="34" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,time)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="13" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(DefaultValuesExceptions,timestamp)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsDefaultTest.cpp" line="27" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defaults,Flags_0)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultsTest.cpp" line="28" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defaults,Flags_2)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultsTest.cpp" line="5" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defaults,Flags_3)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultsTest.cpp" line="16" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defaults,Options_0)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\defaultsTest.cpp" line="35" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="5" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="13" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_03)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="23" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_04)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="32" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_05)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="42" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_KO_1)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="52" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_KO_2)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="59" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Define_KO_3)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="66" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Vector_1)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="73" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Vector_2)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="81" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Defines,Vector_3)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\definesTest.cpp" line="89" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Exceptions,mistype)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsTest.cpp" line="6" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Exceptions,notfound)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsTest.cpp" line="40" />
+</extent>
+<lines_of_code value="14" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Exceptions,overtype)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsTest.cpp" line="23" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_active_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="5" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_active_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="12" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_active_03)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="19" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_chain_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="26" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_chain_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="36" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_inactive_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="46" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_inactive_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="53" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Flags,flags_inactive_03)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\flagsTest.cpp" line="60" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Help,help_long)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\helpTest.cpp" line="21" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Help,help_no)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\helpTest.cpp" line="8" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Help,help_short)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\helpTest.cpp" line="14" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Options,options_01)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\optionsTest.cpp" line="5" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Options,options_02)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\optionsTest.cpp" line="17" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Options,options_03)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\optionsTest.cpp" line="29" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Options,options_04)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\optionsTest.cpp" line="43" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Options,options_05)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\optionsTest.cpp" line="57" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,item_quoted)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="23" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,item_with_comma)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="33" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,items_1)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="11" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,items_2)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="17" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,items_with_comma_inserted)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="38" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,mixed_1)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="43" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,mixed_2)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="48" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(TextInput,two_item_quoted)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\inputTest.cpp" line="28" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,DATE)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="115" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,DATETIME)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="139" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,DECIMAL)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="85" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,FLOAT)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="95" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,INT)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="55" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,LONG)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="45" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,NUMBER)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="35" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,STRING)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="5" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,TIME)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="127" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,TMS)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="152" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,char)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="25" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,float)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="105" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="75" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,long)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="65" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Types,string)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\TypesTest.cpp" line="15" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Dates_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="47" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Dates_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="32" />
+</extent>
+<lines_of_code value="15" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Datetimes_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="67" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Datetimes_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="58" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Decimals_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="154" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Decimals_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="142" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,DirectoryExists_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="200" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,DirectoryExists_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="192" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Directory_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="187" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Directory_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="180" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,LongDecimals_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="172" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,LongDecimals_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="160" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,LongNumbers_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="132" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,LongNumbers_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="121" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Numbers_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="111" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Numbers_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="100" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Times_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="22" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Times_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="11" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Timestamp_KO)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="90" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(Validations,Timestamp_OK)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\validationsTest.cpp" line="83" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>TEST(ValuesExceptions,date)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\exceptionsValueTest.cpp" line="6" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>main(int,char **)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\mainTest.cpp" line="22" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setenv(const char *,const char *,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="P:\C\cmdline\testcmdline\mainTest.cpp" line="11" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>anonymous</name>
+<client_module>
+</client_module>
+<supplier_module>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

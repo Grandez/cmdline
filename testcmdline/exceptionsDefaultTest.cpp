@@ -1,3 +1,11 @@
+/**
+ * @file exceptionsDefaultTest.cpp
+ * @author Grandez
+ * @date   09/2021
+ * @brief Test invalid data in parameter definitions
+ *
+ */
+
 #include "pch.h"
 #include <stdexcept>
 
