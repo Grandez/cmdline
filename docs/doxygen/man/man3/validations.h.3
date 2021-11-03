@@ -1,0 +1,80 @@
+.TH "cmdline/include/validations.h" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmdline/include/validations.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <filesystem>\fP
+.br
+\fC#include <locale>\fP
+.br
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fB_cmdline\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_cmdline::validateEntry\fP (const char *parm, const char *prev)"
+.br
+.ti -1c
+.RI "void \fB_cmdline::validateValue\fP (const char *value, \fBcmdline::Type\fP type)"
+.br
+.ti -1c
+.RI "long \fB_cmdline::validateNumber\fP (const char *value)"
+.br
+.ti -1c
+.RI "double \fB_cmdline::validateDecimal\fP (const char *value)"
+.br
+.ti -1c
+.RI "long long \fB_cmdline::validateLongNumber\fP (const char *value)"
+.br
+.ti -1c
+.RI "long double \fB_cmdline::validateLongDecimal\fP (const char *value)"
+.br
+.ti -1c
+.RI "filesystem::path \fB_cmdline::validateDir\fP (const char *value)"
+.br
+.ti -1c
+.RI "filesystem::path \fB_cmdline::validateDirExist\fP (const char *value)"
+.br
+.ti -1c
+.RI "filesystem::path \fB_cmdline::validateFile\fP (const char *value)"
+.br
+.ti -1c
+.RI "filesystem::path \fB_cmdline::validateFileExist\fP (const char *value)"
+.br
+.ti -1c
+.RI "struct tm * \fB_cmdline::validateTime\fP (const char *value)"
+.br
+.ti -1c
+.RI "struct tm * \fB_cmdline::validateDate\fP (const char *value, int fmt=\-1)"
+.br
+.ti -1c
+.RI "struct tm * \fB_cmdline::validateDateTime\fP (const char *value)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::validateTimestamp\fP (const char *value)"
+.br
+.ti -1c
+.RI "int \fB_cmdline::makeInteger\fP (const char *value)"
+.br
+.ti -1c
+.RI "float \fB_cmdline::makeFloat\fP (const char *value)"
+.br
+.ti -1c
+.RI "struct tm \fB_cmdline::makeTm\fP (const char *value)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

@@ -1,0 +1,42 @@
+\hypertarget{validations_8h_source}{}\doxysection{validations.\+h}
+\label{validations_8h_source}\index{cmdline/include/validations.h@{cmdline/include/validations.h}}
+\mbox{\hyperlink{validations_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00008}00008 \textcolor{comment}{// \#include "{}cmdline.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00010}00010 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00013}00013     \textcolor{keywordtype}{void}        \mbox{\hyperlink{namespace__cmdline_abe924028ef20f05344e72b64e20f4175}{validateEntry}}      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prev);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00014}00014     \textcolor{keywordtype}{void}        \mbox{\hyperlink{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}{validateValue}}      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{cmdline::Type}} type);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00015}00015     \textcolor{keywordtype}{long}        \mbox{\hyperlink{namespace__cmdline_afd3fa1bb6804f9721ed1f0396f3a6c53}{validateNumber}}     (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00016}00016     \textcolor{keywordtype}{double}      \mbox{\hyperlink{namespace__cmdline_aab588063bde95d863dd92f6cd022ac16}{validateDecimal}}    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00017}00017     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}   \mbox{\hyperlink{namespace__cmdline_a34cbbbe44795f34fc1645ff59e76f640}{validateLongNumber}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00018}00018     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} \mbox{\hyperlink{namespace__cmdline_a298f09debb8ad70f2e16726ac762f375}{validateLongDecimal}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00019}00019     filesystem::path        \mbox{\hyperlink{namespace__cmdline_a262e5b1297b0d2553e8ad835daf2f4ae}{validateDir}}       (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00020}00020     filesystem::path        \mbox{\hyperlink{namespace__cmdline_ac3f22ebb3537792be24568a8e3566cdb}{validateDirExist}}  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00021}00021     filesystem::path        \mbox{\hyperlink{namespace__cmdline_abeab6d0edcdf554fa8652c8aadabe42c}{validateFile}}      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00022}00022     filesystem::path        \mbox{\hyperlink{namespace__cmdline_a66551a355b1355d0cbf634354faf5c56}{validateFileExist}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00023}00023     \textcolor{keyword}{struct }tm *\mbox{\hyperlink{namespace__cmdline_a157e7ae9485d8fbf716ce2d2d4786c5b}{validateTime}}      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00024}00024     \textcolor{keyword}{struct }tm* \mbox{\hyperlink{namespace__cmdline_a8e8491d72d0f7c44b6dfb88777fc328a}{validateDate}}      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \textcolor{keywordtype}{int} fmt = -\/1);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00025}00025     \textcolor{keyword}{struct }tm* \mbox{\hyperlink{namespace__cmdline_a89c5f6e58069fc8f6d38573ac4a1a857}{validateDateTime}}  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00026}00026     \textcolor{keywordtype}{char} *     \mbox{\hyperlink{namespace__cmdline_ad33443a73ced46819f4499bcaf4d6318}{validateTimestamp}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00027}00027     \textcolor{keywordtype}{int}         \mbox{\hyperlink{namespace__cmdline_a9124f48914e15413151365a8a54c52e8}{makeInteger}}      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00028}00028     \textcolor{keywordtype}{float}       \mbox{\hyperlink{namespace__cmdline_a60f69e7de3e2a87fbb7b5b6d3795e18e}{makeFloat}}        (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00029}00029     \textcolor{keyword}{struct }tm   \mbox{\hyperlink{namespace__cmdline_ac7b4158149a8fbd68ca1310a53a748b0}{makeTm}}           (const char* value);}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00030}00030 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00031}00031 \textcolor{comment}{    template <typename T>}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00032}00032 \textcolor{comment}{    T        getValue(const char* value, cmdline::Type type);}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00033}00033 \textcolor{comment}{    template <typename T> T castValue(auto value, Type type);}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00034}00034 \textcolor{comment}{    template <typename T> T castValue2(auto value);}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00035}00035 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{validations_8h_source_l00036}00036 \}}
+
+\end{DoxyCode}

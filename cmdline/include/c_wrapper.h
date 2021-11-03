@@ -4,7 +4,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-int cmdline_create(int argc, char** argv, Parameter parms[]);
+int cmdline_create(int argc, char** argv, ParmDef parms[]);
 void destroy();
 
 #ifdef __cplusplus

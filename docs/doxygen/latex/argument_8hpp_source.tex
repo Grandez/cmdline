@@ -1,0 +1,47 @@
+\hypertarget{argument_8hpp_source}{}\doxysection{argument.\+hpp}
+\label{argument_8hpp_source}\index{cmdline/include/argument.hpp@{cmdline/include/argument.hpp}}
+\mbox{\hyperlink{argument_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmdline_8hpp}{cmdline.hpp}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{6 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{9     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} \{}
+\DoxyCodeLine{10     \textcolor{keyword}{public}:}
+\DoxyCodeLine{11         \textcolor{keywordtype}{string} \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}};}
+\DoxyCodeLine{12         \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}{Source}} \mbox{\hyperlink{class__cmdline_1_1_argument_a30e3e62e1e9c0a652107aa27f1415d3a}{source}}   = \mbox{\hyperlink{cmdline__types_8h_a176e1eca2d1e3d1c6a064340bc6a351ea88ec7d5086d2469ba843c7fcceade8a6}{Source::DEFAULT}};}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}}   \mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}}     = \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3aee847e634a4297b274316de8a8ca9921}{Type::STRING}};}
+\DoxyCodeLine{14         \textcolor{keywordtype}{bool}   \mbox{\hyperlink{class__cmdline_1_1_argument_acaf36fb32eaef2230a3508dc5f0b7f04}{multiple}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{15         \textcolor{keywordtype}{string} \mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}};}
+\DoxyCodeLine{16         set<string> \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}; \textcolor{comment}{// avoid duplicates}}
+\DoxyCodeLine{17         \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{18         \mbox{\hyperlink{class__cmdline_1_1_argument_ad6915197122944fb270074dd5c62e258}{\string~Argument}}();}
+\DoxyCodeLine{19         \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg);}
+\DoxyCodeLine{20         \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument}}(\mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} *parm);}
+\DoxyCodeLine{21         \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{22         \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}{Source}} \mbox{\hyperlink{class__cmdline_1_1_argument_a30e3e62e1e9c0a652107aa27f1415d3a}{source}});}
+\DoxyCodeLine{23         \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}} \mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}});}
+\DoxyCodeLine{24         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a9da77f9a75c30db3a5186198593f5d3b}{setFromEnv}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{25         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{setValue}}(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{26         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{setValue}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{27         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{setValue}}(\mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}} value);}
+\DoxyCodeLine{28         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a070383faf05aa2196979a5da4cc48de4}{addValue}}(\mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}} value);}
+\DoxyCodeLine{29         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a8946d2d314a69e9227bd9ee73e297ef6}{getValue}}();}
+\DoxyCodeLine{30         vector<const char *>  \mbox{\hyperlink{class__cmdline_1_1_argument_ac34ca7b1eed1201c2eddb0a2b6dc7af0}{getValues}}();}
+\DoxyCodeLine{31         \textcolor{keywordtype}{bool}            \mbox{\hyperlink{class__cmdline_1_1_argument_a08049ae39bb1d5e8e16e449757caf1a8}{getBoolean}}();}
+\DoxyCodeLine{32         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\&       \mbox{\hyperlink{class__cmdline_1_1_argument_ab3ed0053b6303e2afc6a7e9fa849d29b}{initValues}}(vector<string> \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}});}
+\DoxyCodeLine{33         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\&       \mbox{\hyperlink{class__cmdline_1_1_argument_afad7c4433716a1ccacae2ed4c697ef3a}{makeUpper}}();}
+\DoxyCodeLine{34     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{35         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\&      \mbox{\hyperlink{class__cmdline_1_1_argument_a3ea97c6f8b07c135f9b61c5fb1b6a983}{addValues}}(vector<string> \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}});}
+\DoxyCodeLine{36     \textcolor{keyword}{private}:}
+\DoxyCodeLine{37         \textcolor{keywordtype}{string} first;}
+\DoxyCodeLine{38         \textcolor{keywordtype}{void}   validateDefault();}
+\DoxyCodeLine{39         \textcolor{keywordtype}{string} applyDefault(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *);}
+\DoxyCodeLine{40     \};}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}

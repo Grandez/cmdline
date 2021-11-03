@@ -1,0 +1,35 @@
+\hypertarget{defines_8hpp_source}{}\doxysection{defines.\+hpp}
+\label{defines_8hpp_source}\index{cmdline/include/defines.hpp@{cmdline/include/defines.hpp}}
+\mbox{\hyperlink{defines_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{argument_8hpp}{argument.hpp}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{8     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_define}{Define}} : \textcolor{keyword}{public} \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} \{}
+\DoxyCodeLine{9     \textcolor{keyword}{public}:}
+\DoxyCodeLine{10         \mbox{\hyperlink{class__cmdline_1_1_define_a83e216fe596b79d4c94633bc2f7d7d81}{Define}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{11         \mbox{\hyperlink{class__cmdline_1_1_define_ab3cfbe7893a980305955e38635a504df}{Define}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) : \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, value) \{\};}
+\DoxyCodeLine{12         \mbox{\hyperlink{class__cmdline_1_1_define_a00e32a079e770dc1bff91334885955b1}{Define}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}) : \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{stringliteral}{"{}"{}}) \{}
+\DoxyCodeLine{13            \textcolor{comment}{// Incomplete definition}}
+\DoxyCodeLine{14             pName = \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}});}
+\DoxyCodeLine{15         \}}
+\DoxyCodeLine{16         \mbox{\hyperlink{class__cmdline_1_1_define_ab14ad6c6125c4b22409915118b705f6c}{\string~Define}}() \{}
+\DoxyCodeLine{17             \textcolor{keywordflow}{if} (pName) free(pName);}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19         \textcolor{keywordtype}{void} \mbox{\hyperlink{class__cmdline_1_1_define_ad66f7701cb10ff34203873ba572b2180}{initValues}}(vector<string> \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}) \{}
+\DoxyCodeLine{20             \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{Argument::name}} = \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}(pName);}
+\DoxyCodeLine{21             \mbox{\hyperlink{class__cmdline_1_1_argument_a3ea97c6f8b07c135f9b61c5fb1b6a983}{Argument::addValues}}(\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}});}
+\DoxyCodeLine{22         \}}
+\DoxyCodeLine{23         }
+\DoxyCodeLine{24     \textcolor{keyword}{private}:}
+\DoxyCodeLine{25         \textcolor{keywordtype}{char}* pName = NULL;}
+\DoxyCodeLine{26     \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \}}
+\DoxyCodeLine{29 }
+
+\end{DoxyCode}

@@ -1,0 +1,190 @@
+.TH "include/cmdline.h" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/cmdline.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'cmdline_types\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__CMDLINE_H__\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcreate\fP (int argc, char **argv, \fBParameter\fP \fBparms\fP[])"
+.br
+.ti -1c
+.RI "void \fBdelete\fP ()"
+.br
+.ti -1c
+.RI "char \fBhasFlag\fP (const char *name)"
+.br
+.ti -1c
+.RI "char \fBgetDefaultFlags\fP ()"
+.br
+.ti -1c
+.RI "char \fBhasOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "char \fBisOptionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBgetOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char ** \fBgetOptionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "char \fBgetOptionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fBgetDefaultOptions\fP ()"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fBgetCurrentOptions\fP ()"
+.br
+.ti -1c
+.RI "char \fBhasDefinition\fP (const char *def)"
+.br
+.ti -1c
+.RI "char \fBisDefinitionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBgetDefinition\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char ** \fBgetDefinitionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBType\fP \fBgetType\fP (const char name)"
+.br
+.ti -1c
+.RI "struct tm * \fBtoTm\fP (const char *name)"
+.br
+.ti -1c
+.RI "struct tm ** \fBtoTmAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBtoInt\fP (const char *name)"
+.br
+.ti -1c
+.RI "int ** \fBtoIntAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "long \fBtoLong\fP (const char *name)"
+.br
+.ti -1c
+.RI "long ** \fBtoLongAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "unsigned int \fBtoUint\fP (const char *name)"
+.br
+.ti -1c
+.RI "unsigned int ** \fBtoUintAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "unsigned long \fBtoUlong\fP (const char *name)"
+.br
+.ti -1c
+.RI "unsigned long ** \fBtoUlongAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "float \fBtoFloat\fP (const char *name)"
+.br
+.ti -1c
+.RI "float ** \fBtoFloatAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "double \fBtoDouble\fP (const char *name)"
+.br
+.ti -1c
+.RI "double ** \fBtoDoubleAll\fP (const char *name)"
+.br
+.ti -1c
+.RI "char * \fBtoTimestamp\fP (const char *name)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __CMDLINE_H__"
+
+.PP
+Definition at line \fB3\fP of file \fBcmdline\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int create (int argc, char ** argv, \fBParameter\fP parms[])"
+
+.SS "void delete ()"
+
+.PP
+Definition at line \fB11\fP of file \fBccmdline\&.c\fP\&.
+.SS "\fBParameter\fP ** getCurrentOptions ()"
+
+.SS "char getDefaultFlags ()"
+
+.SS "\fBParameter\fP ** getDefaultOptions ()"
+
+.SS "const char * getDefinition (const char * name)"
+
+.SS "const char ** getDefinitionValues (const char * name)"
+
+.SS "const char * getOption (const char * name)"
+
+.SS "char getOptionNumValues (const char * name)"
+
+.SS "const char ** getOptionValues (const char * name)"
+
+.SS "\fBType\fP getType (const char name)"
+
+.SS "char hasDefinition (const char * def)"
+
+.SS "char hasFlag (const char * name)"
+
+.SS "char hasOption (const char * name)"
+
+.SS "char isDefinitionMultiple (const char * name)"
+
+.SS "char isOptionMultiple (const char * name)"
+
+.SS "double toDouble (const char * name)"
+
+.SS "double ** toDoubleAll (const char * name)"
+
+.SS "float toFloat (const char * name)"
+
+.SS "float ** toFloatAll (const char * name)"
+
+.SS "int toInt (const char * name)"
+
+.SS "int ** toIntAll (const char * name)"
+
+.SS "long toLong (const char * name)"
+
+.SS "long ** toLongAll (const char * name)"
+
+.SS "char * toTimestamp (const char * name)"
+
+.SS "struct tm * toTm (const char * name)"
+
+.SS "struct tm ** toTmAll (const char * name)"
+
+.SS "unsigned int toUint (const char * name)"
+
+.SS "unsigned int ** toUintAll (const char * name)"
+
+.SS "unsigned long toUlong (const char * name)"
+
+.SS "unsigned long ** toUlongAll (const char * name)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

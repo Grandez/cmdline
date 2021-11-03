@@ -1,0 +1,50 @@
+\hypertarget{c__wrapper_8cpp_source}{}\doxysection{c\+\_\+wrapper.\+cpp}
+\label{c__wrapper_8cpp_source}\index{cmdline/src/c\_wrapper.cpp@{cmdline/src/c\_wrapper.cpp}}
+\mbox{\hyperlink{c__wrapper_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}errno.h"{}}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{c__wrapper_8h}{c\_wrapper.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmdline_8hpp}{cmdline.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tools_8h}{tools.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00007}\mbox{\hyperlink{c__wrapper_8cpp_aa5c528076d4a51320efb5ff5b6f5e388}{00007}} \mbox{\hyperlink{classcmdline_1_1_cmd_line}{cmdline::CmdLine}} \mbox{\hyperlink{c__wrapper_8cpp_aa5c528076d4a51320efb5ff5b6f5e388}{cmdLine}};}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00008}00008 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00010}\mbox{\hyperlink{c__wrapper_8cpp_af977f1026230e55887ec0509fbaabc03}{00010}} \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{cmdline::Parameters}} \mbox{\hyperlink{c__wrapper_8cpp_af977f1026230e55887ec0509fbaabc03}{makeParameters}}(\mbox{\hyperlink{struct___parm_def}{ParmDef}} \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[]) \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00011}00011     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00012}00012     \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}} arr;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00013}00013     \mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} p;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00014}00014     \textcolor{keywordflow}{if} (\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}} == 0x0) \textcolor{keywordflow}{return} arr;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00015}00015     \textcolor{keywordflow}{while} (\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].name != 0x0) \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00016}00016         \textcolor{keywordtype}{bool} mult = (\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].\mbox{\hyperlink{struct___parm_def_a332cb2ec7e688d39120f4c9ac03ef651}{multiple}} == \mbox{\hyperlink{cmdline__types_8h_a1d8d7b6a3fa0d91462315dd5c7281548aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}) ? \textcolor{keyword}{false} : \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00017}00017         \textcolor{keywordflow}{if} (\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].type == \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3a391ad3dbcf1f6d5c27590a7e511a1667}{FLAG}}) \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00018}00018             \textcolor{keywordtype}{bool} val = \mbox{\hyperlink{namespace__cmdline_ac4e01eeebef63139e9f3b3e028d67c9b}{\_cmdline::makeBoolean}}(\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].value);}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00019}00019             p = \mbox{\hyperlink{classcmdline_1_1_parm}{Parm}}(\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].name, val);}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00020}00020         \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00021}00021         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00022}00022             p = \mbox{\hyperlink{classcmdline_1_1_parm}{Parm}}(\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].name, \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{cmdline::Type}}(\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[i].type), mult);}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00024}00024         arr.push\_back(p);}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00025}00025         i++;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00026}00026    \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00027}00027     \textcolor{keywordflow}{return} arr;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00030}\mbox{\hyperlink{c__wrapper_8h_a930adc3069f58c48e575d70620f4068f}{00030}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{c__wrapper_8cpp_a930adc3069f58c48e575d70620f4068f}{cmdline\_create}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv, \mbox{\hyperlink{struct___parm_def}{ParmDef}} \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[]) \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00031}00031         \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}} p = \mbox{\hyperlink{c__wrapper_8cpp_af977f1026230e55887ec0509fbaabc03}{makeParameters}}(\mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}});}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00032}00032         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00033}00033             \mbox{\hyperlink{c__wrapper_8cpp_aa5c528076d4a51320efb5ff5b6f5e388}{cmdLine}} = CmdLine::getInstance(argc, argv, p);}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00035}00035         \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classcmdline_1_1_cmd_line_exception}{CmdLineException}} ex) \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00036}00036             errno = 33; \textcolor{comment}{// ERR\_CMDLINE\_EXCEPTION;}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00037}00037             \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00039}00039         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00041}\mbox{\hyperlink{c__wrapper_8cpp_abda408dfe56dc9066ea1471006405a14}{00041}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{c__wrapper_8cpp_abda408dfe56dc9066ea1471006405a14}{cmdline\_destroy}}() \{}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00042}00042         \mbox{\hyperlink{c__wrapper_8cpp_aa5c528076d4a51320efb5ff5b6f5e388}{cmdLine}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{c__wrapper_8cpp_source_l00044}00044 }
+
+\end{DoxyCode}

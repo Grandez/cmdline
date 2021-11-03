@@ -7,7 +7,7 @@
 cmdline::CmdLine cmdLine;
 using namespace cmdline;
 
-cmdline::Parameters makeParameters(Parameter parms[]) {
+cmdline::Parameters makeParameters(ParmDef parms[]) {
     int i = 0;
     Parameters arr;
     Parm p;
@@ -27,7 +27,7 @@ cmdline::Parameters makeParameters(Parameter parms[]) {
     return arr;
 }
 
-    int cmdline_create(int argc, char** argv, Parameter parms[]) {
+    int cmdline_create(int argc, char** argv, ParmDef parms[]) {
         Parameters p = makeParameters(parms);
         try {
             cmdLine = CmdLine::getInstance(argc, argv, p);
@@ -38,7 +38,7 @@ cmdline::Parameters makeParameters(Parameter parms[]) {
         }
         return 0;
     }
-    void destroy() {
-        // ~cmdline();
+    void cmdline_destroy() {
+        cmdLine = nullptr;
     }
 

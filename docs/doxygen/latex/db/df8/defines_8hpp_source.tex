@@ -1,0 +1,35 @@
+\hypertarget{defines_8hpp_source}{}\doxysection{defines.\+hpp}
+\label{defines_8hpp_source}\index{cmdline/include/defines.hpp@{cmdline/include/defines.hpp}}
+\mbox{\hyperlink{defines_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{argument_8hpp}{argument.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00005}00005 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00008}\mbox{\hyperlink{class__cmdline_1_1_define}{00008}}     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_define}{Define}} : \textcolor{keyword}{public} \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} \{}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00009}00009     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00010}\mbox{\hyperlink{class__cmdline_1_1_define_a83e216fe596b79d4c94633bc2f7d7d81}{00010}}         \mbox{\hyperlink{class__cmdline_1_1_define_a83e216fe596b79d4c94633bc2f7d7d81}{Define}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00011}\mbox{\hyperlink{class__cmdline_1_1_define_ab3cfbe7893a980305955e38635a504df}{00011}}         \mbox{\hyperlink{class__cmdline_1_1_define_ab3cfbe7893a980305955e38635a504df}{Define}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) : \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, value) \{\};}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00012}\mbox{\hyperlink{class__cmdline_1_1_define_a00e32a079e770dc1bff91334885955b1}{00012}}         \mbox{\hyperlink{class__cmdline_1_1_define_a00e32a079e770dc1bff91334885955b1}{Define}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}) : \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \textcolor{stringliteral}{"{}"{}}) \{}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00013}00013            \textcolor{comment}{// Incomplete definition}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00014}00014             pName = \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}});}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00015}00015         \}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00016}\mbox{\hyperlink{class__cmdline_1_1_define_ab14ad6c6125c4b22409915118b705f6c}{00016}}         \mbox{\hyperlink{class__cmdline_1_1_define_ab14ad6c6125c4b22409915118b705f6c}{\string~Define}}() \{}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00017}00017             \textcolor{keywordflow}{if} (pName) free(pName);}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00018}00018         \}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00019}\mbox{\hyperlink{class__cmdline_1_1_define_ad66f7701cb10ff34203873ba572b2180}{00019}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{class__cmdline_1_1_define_ad66f7701cb10ff34203873ba572b2180}{initValues}}(vector<string> \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}) \{}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00020}00020             \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{Argument::name}} = \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}(pName);}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00021}00021             \mbox{\hyperlink{class__cmdline_1_1_argument_a3ea97c6f8b07c135f9b61c5fb1b6a983}{Argument::addValues}}(\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}});}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00023}00023         }
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00024}00024     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00025}00025         \textcolor{keywordtype}{char}* pName = NULL;}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00026}00026     \};}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{defines_8hpp_source_l00029}00029 }
+
+\end{DoxyCode}

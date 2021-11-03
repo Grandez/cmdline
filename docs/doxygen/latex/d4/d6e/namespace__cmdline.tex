@@ -1,0 +1,537 @@
+\hypertarget{namespace__cmdline}{}\doxysection{\+\_\+cmdline Namespace Reference}
+\label{namespace__cmdline}\index{\_cmdline@{\_cmdline}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class__cmdline_1_1___command_line}{\+\_\+\+Command\+Line}}
+\item 
+class \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}
+\item 
+class \mbox{\hyperlink{class__cmdline_1_1_define}{Define}}
+\item 
+class \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}
+\item 
+class \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace__cmdline_a5590f2f5d56b652aeef6ef53cf43ee70}{add2tree}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$root\mbox{[}$\,$\mbox{]}, const char $\ast$word)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a7679e8df5b4b3293b9250b96fff63064}{make\+Char}} (std\+::string str)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_ac4e01eeebef63139e9f3b3e028d67c9b}{make\+Boolean}} (const char $\ast$value)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_abd3fb72f1db0c2a9937682680e5bc879}{make\+Boolean}} (std\+::string value)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a46da4ab4e6f0c5f7661964636efef1c7}{str\+Upper}} (const char $\ast$str)
+\item 
+vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace__cmdline_a73c00c909fb29335362ef07259e967df}{split\+Argument}} (const char $\ast$parm)
+\item 
+vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace__cmdline_a7f448be21aee8ccfe94b07af358dfcce}{tokenize}} (const char $\ast$src, const char $\ast$pat)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{namespace__cmdline_a161f7a65673f4b1380d9a7ab9a4975f4}{tokenize\+Number}} (const char $\ast$src, const char $\ast$pat)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a11f44a7159bcdc7cef533fe548af4c6e}{my\+Strdup}} (const char $\ast$s, int size)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a9744d157661e45183a67f5b78b2760e7}{my\+Strdup}} (const char $\ast$s)
+\item 
+void \mbox{\hyperlink{namespace__cmdline_a1546b166647f2d3b462cf683185fd80d}{default\+Date}} (char $\ast$aux)
+\item 
+void \mbox{\hyperlink{namespace__cmdline_abe924028ef20f05344e72b64e20f4175}{validate\+Entry}} (const char $\ast$parm, const char $\ast$prev)
+\item 
+void \mbox{\hyperlink{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}{validate\+Value}} (const char $\ast$value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{cmdline\+::\+Type}} type)
+\item 
+long \mbox{\hyperlink{namespace__cmdline_afd3fa1bb6804f9721ed1f0396f3a6c53}{validate\+Number}} (const char $\ast$value)
+\item 
+double \mbox{\hyperlink{namespace__cmdline_aab588063bde95d863dd92f6cd022ac16}{validate\+Decimal}} (const char $\ast$value)
+\item 
+long long \mbox{\hyperlink{namespace__cmdline_a34cbbbe44795f34fc1645ff59e76f640}{validate\+Long\+Number}} (const char $\ast$value)
+\item 
+long double \mbox{\hyperlink{namespace__cmdline_a298f09debb8ad70f2e16726ac762f375}{validate\+Long\+Decimal}} (const char $\ast$value)
+\item 
+filesystem\+::path \mbox{\hyperlink{namespace__cmdline_a262e5b1297b0d2553e8ad835daf2f4ae}{validate\+Dir}} (const char $\ast$value)
+\item 
+filesystem\+::path \mbox{\hyperlink{namespace__cmdline_ac3f22ebb3537792be24568a8e3566cdb}{validate\+Dir\+Exist}} (const char $\ast$value)
+\item 
+filesystem\+::path \mbox{\hyperlink{namespace__cmdline_abeab6d0edcdf554fa8652c8aadabe42c}{validate\+File}} (const char $\ast$value)
+\item 
+filesystem\+::path \mbox{\hyperlink{namespace__cmdline_a66551a355b1355d0cbf634354faf5c56}{validate\+File\+Exist}} (const char $\ast$value)
+\item 
+struct tm $\ast$ \mbox{\hyperlink{namespace__cmdline_a157e7ae9485d8fbf716ce2d2d4786c5b}{validate\+Time}} (const char $\ast$value)
+\item 
+struct tm $\ast$ \mbox{\hyperlink{namespace__cmdline_a8e8491d72d0f7c44b6dfb88777fc328a}{validate\+Date}} (const char $\ast$value, int fmt=-\/1)
+\item 
+struct tm $\ast$ \mbox{\hyperlink{namespace__cmdline_a89c5f6e58069fc8f6d38573ac4a1a857}{validate\+Date\+Time}} (const char $\ast$value)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_ad33443a73ced46819f4499bcaf4d6318}{validate\+Timestamp}} (const char $\ast$value)
+\item 
+int \mbox{\hyperlink{namespace__cmdline_a9124f48914e15413151365a8a54c52e8}{make\+Integer}} (const char $\ast$value)
+\item 
+float \mbox{\hyperlink{namespace__cmdline_a60f69e7de3e2a87fbb7b5b6d3795e18e}{make\+Float}} (const char $\ast$value)
+\item 
+struct tm \mbox{\hyperlink{namespace__cmdline_ac7b4158149a8fbd68ca1310a53a748b0}{make\+Tm}} (const char $\ast$value)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a70377767725c817586a2b575e0fdac7e}{make\+Upper}} (const char $\ast$str)
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{namespace__cmdline_af790cb1bc53e9c5b47e30f7093de5a72}{create\+Tree}} (const char $\ast$word)
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{namespace__cmdline_aa6436f63fb8388210feebf9bd62fc521}{join\+Tree}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$root, const char $\ast$word)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a42a90c303b9f0517b033719749ea2456}{make\+Char}} (string str)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_a9a96acb82031d2a0396cf51c73ddc08a}{make\+Boolean}} (string value)
+\item 
+struct tm $\ast$ \mbox{\hyperlink{namespace__cmdline_ade1b540e78711606ef25480c5ff903fc}{make\+Date\+Time}} (char $\ast$sdate, char $\ast$stime)
+\item 
+int \mbox{\hyperlink{namespace__cmdline_aa5599fc36e08b8d317e4843d4b6c6b39}{is\+Leap}} (int year)
+\item 
+double \mbox{\hyperlink{namespace__cmdline_a385e390f4b9aa5dd537cc0413fcb3e1c}{validate\+Decimal2}} (const char $\ast$value)
+\item 
+long double \mbox{\hyperlink{namespace__cmdline_a073dc02f37e33e5c933f7e2fc716d049}{validate\+Long\+Decimal2}} (const char $\ast$value)
+\item 
+void \mbox{\hyperlink{namespace__cmdline_aa520f596258329c51fd027c4522144e1}{validate\+Date\+Value}} (const char $\ast$value, vector$<$ int $>$ dt)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace__cmdline_a6f2a7393534fb21104f12a850152be0a}{get\+Value}} (const char $\ast$value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}} type)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace__cmdline_a7149c0f6113ecda584bcd9402b70c108}{check\+Value}} (auto value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{namespace__cmdline_ad390392958a00da14168d6204e74f6a5}{root\+Options}} \mbox{[}128\mbox{]}
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{namespace__cmdline_a895dee29a8e3d7fdd55aa1f7b89d696c}{root\+Flags}} \mbox{[}128\mbox{]}
+\item 
+char \mbox{\hyperlink{namespace__cmdline_aecf9a3be04888c0d13fda7a0449ae0c1}{\+\_\+upper}} \mbox{[}64\mbox{]} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace__cmdline_a5590f2f5d56b652aeef6ef53cf43ee70}\label{namespace__cmdline_a5590f2f5d56b652aeef6ef53cf43ee70}} 
+\index{\_cmdline@{\_cmdline}!add2tree@{add2tree}}
+\index{add2tree@{add2tree}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{add2tree()}{add2tree()}}
+{\footnotesize\ttfamily void \+\_\+cmdline\+::add2tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$}]{root\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a7149c0f6113ecda584bcd9402b70c108}\label{namespace__cmdline_a7149c0f6113ecda584bcd9402b70c108}} 
+\index{\_cmdline@{\_cmdline}!checkValue@{checkValue}}
+\index{checkValue@{checkValue}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{checkValue()}{checkValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \+\_\+cmdline\+::check\+Value (\begin{DoxyParamCaption}\item[{auto}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00347}{347}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_af790cb1bc53e9c5b47e30f7093de5a72}\label{namespace__cmdline_af790cb1bc53e9c5b47e30f7093de5a72}} 
+\index{\_cmdline@{\_cmdline}!createTree@{createTree}}
+\index{createTree@{createTree}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{createTree()}{createTree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \+\_\+cmdline\+::create\+Tree (\begin{DoxyParamCaption}\item[{const char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a1546b166647f2d3b462cf683185fd80d}\label{namespace__cmdline_a1546b166647f2d3b462cf683185fd80d}} 
+\index{\_cmdline@{\_cmdline}!defaultDate@{defaultDate}}
+\index{defaultDate@{defaultDate}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{defaultDate()}{defaultDate()}}
+{\footnotesize\ttfamily void \+\_\+cmdline\+::default\+Date (\begin{DoxyParamCaption}\item[{char $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a6f2a7393534fb21104f12a850152be0a}\label{namespace__cmdline_a6f2a7393534fb21104f12a850152be0a}} 
+\index{\_cmdline@{\_cmdline}!getValue@{getValue}}
+\index{getValue@{getValue}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \+\_\+cmdline\+::get\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value,  }\item[{\mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00330}{330}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_aa5599fc36e08b8d317e4843d4b6c6b39}\label{namespace__cmdline_aa5599fc36e08b8d317e4843d4b6c6b39}} 
+\index{\_cmdline@{\_cmdline}!isLeap@{isLeap}}
+\index{isLeap@{isLeap}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{isLeap()}{isLeap()}}
+{\footnotesize\ttfamily int \+\_\+cmdline\+::is\+Leap (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_aa6436f63fb8388210feebf9bd62fc521}\label{namespace__cmdline_aa6436f63fb8388210feebf9bd62fc521}} 
+\index{\_cmdline@{\_cmdline}!joinTree@{joinTree}}
+\index{joinTree@{joinTree}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{joinTree()}{joinTree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \+\_\+cmdline\+::join\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$}]{root,  }\item[{const char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_ac4e01eeebef63139e9f3b3e028d67c9b}\label{namespace__cmdline_ac4e01eeebef63139e9f3b3e028d67c9b}} 
+\index{\_cmdline@{\_cmdline}!makeBoolean@{makeBoolean}}
+\index{makeBoolean@{makeBoolean}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeBoolean()}{makeBoolean()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool \+\_\+cmdline\+::make\+Boolean (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_abd3fb72f1db0c2a9937682680e5bc879}\label{namespace__cmdline_abd3fb72f1db0c2a9937682680e5bc879}} 
+\index{\_cmdline@{\_cmdline}!makeBoolean@{makeBoolean}}
+\index{makeBoolean@{makeBoolean}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeBoolean()}{makeBoolean()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool \+\_\+cmdline\+::make\+Boolean (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace__cmdline_a9a96acb82031d2a0396cf51c73ddc08a}\label{namespace__cmdline_a9a96acb82031d2a0396cf51c73ddc08a}} 
+\index{\_cmdline@{\_cmdline}!makeBoolean@{makeBoolean}}
+\index{makeBoolean@{makeBoolean}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeBoolean()}{makeBoolean()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool \+\_\+cmdline\+::make\+Boolean (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a7679e8df5b4b3293b9250b96fff63064}\label{namespace__cmdline_a7679e8df5b4b3293b9250b96fff63064}} 
+\index{\_cmdline@{\_cmdline}!makeChar@{makeChar}}
+\index{makeChar@{makeChar}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeChar()}{makeChar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::make\+Char (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace__cmdline_a42a90c303b9f0517b033719749ea2456}\label{namespace__cmdline_a42a90c303b9f0517b033719749ea2456}} 
+\index{\_cmdline@{\_cmdline}!makeChar@{makeChar}}
+\index{makeChar@{makeChar}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeChar()}{makeChar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::make\+Char (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_ade1b540e78711606ef25480c5ff903fc}\label{namespace__cmdline_ade1b540e78711606ef25480c5ff903fc}} 
+\index{\_cmdline@{\_cmdline}!makeDateTime@{makeDateTime}}
+\index{makeDateTime@{makeDateTime}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeDateTime()}{makeDateTime()}}
+{\footnotesize\ttfamily struct tm $\ast$ \+\_\+cmdline\+::make\+Date\+Time (\begin{DoxyParamCaption}\item[{char $\ast$}]{sdate,  }\item[{char $\ast$}]{stime }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a60f69e7de3e2a87fbb7b5b6d3795e18e}\label{namespace__cmdline_a60f69e7de3e2a87fbb7b5b6d3795e18e}} 
+\index{\_cmdline@{\_cmdline}!makeFloat@{makeFloat}}
+\index{makeFloat@{makeFloat}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeFloat()}{makeFloat()}}
+{\footnotesize\ttfamily float \+\_\+cmdline\+::make\+Float (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00357}{357}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a9124f48914e15413151365a8a54c52e8}\label{namespace__cmdline_a9124f48914e15413151365a8a54c52e8}} 
+\index{\_cmdline@{\_cmdline}!makeInteger@{makeInteger}}
+\index{makeInteger@{makeInteger}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeInteger()}{makeInteger()}}
+{\footnotesize\ttfamily int \+\_\+cmdline\+::make\+Integer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00352}{352}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_ac7b4158149a8fbd68ca1310a53a748b0}\label{namespace__cmdline_ac7b4158149a8fbd68ca1310a53a748b0}} 
+\index{\_cmdline@{\_cmdline}!makeTm@{makeTm}}
+\index{makeTm@{makeTm}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeTm()}{makeTm()}}
+{\footnotesize\ttfamily struct tm \+\_\+cmdline\+::make\+Tm (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00362}{362}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a70377767725c817586a2b575e0fdac7e}\label{namespace__cmdline_a70377767725c817586a2b575e0fdac7e}} 
+\index{\_cmdline@{\_cmdline}!makeUpper@{makeUpper}}
+\index{makeUpper@{makeUpper}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{makeUpper()}{makeUpper()}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::make\+Upper (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{commandline_8cpp_source}{commandline.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a9744d157661e45183a67f5b78b2760e7}\label{namespace__cmdline_a9744d157661e45183a67f5b78b2760e7}} 
+\index{\_cmdline@{\_cmdline}!myStrdup@{myStrdup}}
+\index{myStrdup@{myStrdup}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{myStrdup()}{myStrdup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::my\+Strdup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a11f44a7159bcdc7cef533fe548af4c6e}\label{namespace__cmdline_a11f44a7159bcdc7cef533fe548af4c6e}} 
+\index{\_cmdline@{\_cmdline}!myStrdup@{myStrdup}}
+\index{myStrdup@{myStrdup}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{myStrdup()}{myStrdup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::my\+Strdup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a73c00c909fb29335362ef07259e967df}\label{namespace__cmdline_a73c00c909fb29335362ef07259e967df}} 
+\index{\_cmdline@{\_cmdline}!splitArgument@{splitArgument}}
+\index{splitArgument@{splitArgument}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{splitArgument()}{splitArgument()}}
+{\footnotesize\ttfamily vector$<$ string $>$ \+\_\+cmdline\+::split\+Argument (\begin{DoxyParamCaption}\item[{const char $\ast$}]{parm }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a46da4ab4e6f0c5f7661964636efef1c7}\label{namespace__cmdline_a46da4ab4e6f0c5f7661964636efef1c7}} 
+\index{\_cmdline@{\_cmdline}!strUpper@{strUpper}}
+\index{strUpper@{strUpper}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{strUpper()}{strUpper()}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::str\+Upper (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a7f448be21aee8ccfe94b07af358dfcce}\label{namespace__cmdline_a7f448be21aee8ccfe94b07af358dfcce}} 
+\index{\_cmdline@{\_cmdline}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
+{\footnotesize\ttfamily vector$<$ string $>$ \+\_\+cmdline\+::tokenize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src,  }\item[{const char $\ast$}]{pat }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a161f7a65673f4b1380d9a7ab9a4975f4}\label{namespace__cmdline_a161f7a65673f4b1380d9a7ab9a4975f4}} 
+\index{\_cmdline@{\_cmdline}!tokenizeNumber@{tokenizeNumber}}
+\index{tokenizeNumber@{tokenizeNumber}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{tokenizeNumber()}{tokenizeNumber()}}
+{\footnotesize\ttfamily vector$<$ int $>$ \+\_\+cmdline\+::tokenize\+Number (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src,  }\item[{const char $\ast$}]{pat }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tools_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a8e8491d72d0f7c44b6dfb88777fc328a}\label{namespace__cmdline_a8e8491d72d0f7c44b6dfb88777fc328a}} 
+\index{\_cmdline@{\_cmdline}!validateDate@{validateDate}}
+\index{validateDate@{validateDate}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDate()}{validateDate()}}
+{\footnotesize\ttfamily struct tm $\ast$ \+\_\+cmdline\+::validate\+Date (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value,  }\item[{int}]{fmt = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00189}{189}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a89c5f6e58069fc8f6d38573ac4a1a857}\label{namespace__cmdline_a89c5f6e58069fc8f6d38573ac4a1a857}} 
+\index{\_cmdline@{\_cmdline}!validateDateTime@{validateDateTime}}
+\index{validateDateTime@{validateDateTime}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDateTime()}{validateDateTime()}}
+{\footnotesize\ttfamily struct tm $\ast$ \+\_\+cmdline\+::validate\+Date\+Time (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00219}{219}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_aa520f596258329c51fd027c4522144e1}\label{namespace__cmdline_aa520f596258329c51fd027c4522144e1}} 
+\index{\_cmdline@{\_cmdline}!validateDateValue@{validateDateValue}}
+\index{validateDateValue@{validateDateValue}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDateValue()}{validateDateValue()}}
+{\footnotesize\ttfamily void \+\_\+cmdline\+::validate\+Date\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value,  }\item[{vector$<$ int $>$}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00180}{180}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_aab588063bde95d863dd92f6cd022ac16}\label{namespace__cmdline_aab588063bde95d863dd92f6cd022ac16}} 
+\index{\_cmdline@{\_cmdline}!validateDecimal@{validateDecimal}}
+\index{validateDecimal@{validateDecimal}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDecimal()}{validateDecimal()}}
+{\footnotesize\ttfamily double \+\_\+cmdline\+::validate\+Decimal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a385e390f4b9aa5dd537cc0413fcb3e1c}\label{namespace__cmdline_a385e390f4b9aa5dd537cc0413fcb3e1c}} 
+\index{\_cmdline@{\_cmdline}!validateDecimal2@{validateDecimal2}}
+\index{validateDecimal2@{validateDecimal2}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDecimal2()}{validateDecimal2()}}
+{\footnotesize\ttfamily double \+\_\+cmdline\+::validate\+Decimal2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a262e5b1297b0d2553e8ad835daf2f4ae}\label{namespace__cmdline_a262e5b1297b0d2553e8ad835daf2f4ae}} 
+\index{\_cmdline@{\_cmdline}!validateDir@{validateDir}}
+\index{validateDir@{validateDir}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDir()}{validateDir()}}
+{\footnotesize\ttfamily filesystem\+::path \+\_\+cmdline\+::validate\+Dir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00264}{264}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_ac3f22ebb3537792be24568a8e3566cdb}\label{namespace__cmdline_ac3f22ebb3537792be24568a8e3566cdb}} 
+\index{\_cmdline@{\_cmdline}!validateDirExist@{validateDirExist}}
+\index{validateDirExist@{validateDirExist}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateDirExist()}{validateDirExist()}}
+{\footnotesize\ttfamily filesystem\+::path \+\_\+cmdline\+::validate\+Dir\+Exist (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00286}{286}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_abe924028ef20f05344e72b64e20f4175}\label{namespace__cmdline_abe924028ef20f05344e72b64e20f4175}} 
+\index{\_cmdline@{\_cmdline}!validateEntry@{validateEntry}}
+\index{validateEntry@{validateEntry}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateEntry()}{validateEntry()}}
+{\footnotesize\ttfamily void \+\_\+cmdline\+::validate\+Entry (\begin{DoxyParamCaption}\item[{const char $\ast$}]{parm,  }\item[{const char $\ast$}]{prev }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_abeab6d0edcdf554fa8652c8aadabe42c}\label{namespace__cmdline_abeab6d0edcdf554fa8652c8aadabe42c}} 
+\index{\_cmdline@{\_cmdline}!validateFile@{validateFile}}
+\index{validateFile@{validateFile}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateFile()}{validateFile()}}
+{\footnotesize\ttfamily filesystem\+::path \+\_\+cmdline\+::validate\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a66551a355b1355d0cbf634354faf5c56}\label{namespace__cmdline_a66551a355b1355d0cbf634354faf5c56}} 
+\index{\_cmdline@{\_cmdline}!validateFileExist@{validateFileExist}}
+\index{validateFileExist@{validateFileExist}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateFileExist()}{validateFileExist()}}
+{\footnotesize\ttfamily filesystem\+::path \+\_\+cmdline\+::validate\+File\+Exist (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00305}{305}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a298f09debb8ad70f2e16726ac762f375}\label{namespace__cmdline_a298f09debb8ad70f2e16726ac762f375}} 
+\index{\_cmdline@{\_cmdline}!validateLongDecimal@{validateLongDecimal}}
+\index{validateLongDecimal@{validateLongDecimal}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateLongDecimal()}{validateLongDecimal()}}
+{\footnotesize\ttfamily long double \+\_\+cmdline\+::validate\+Long\+Decimal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00142}{142}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a073dc02f37e33e5c933f7e2fc716d049}\label{namespace__cmdline_a073dc02f37e33e5c933f7e2fc716d049}} 
+\index{\_cmdline@{\_cmdline}!validateLongDecimal2@{validateLongDecimal2}}
+\index{validateLongDecimal2@{validateLongDecimal2}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateLongDecimal2()}{validateLongDecimal2()}}
+{\footnotesize\ttfamily long double \+\_\+cmdline\+::validate\+Long\+Decimal2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a34cbbbe44795f34fc1645ff59e76f640}\label{namespace__cmdline_a34cbbbe44795f34fc1645ff59e76f640}} 
+\index{\_cmdline@{\_cmdline}!validateLongNumber@{validateLongNumber}}
+\index{validateLongNumber@{validateLongNumber}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateLongNumber()}{validateLongNumber()}}
+{\footnotesize\ttfamily long long \+\_\+cmdline\+::validate\+Long\+Number (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_afd3fa1bb6804f9721ed1f0396f3a6c53}\label{namespace__cmdline_afd3fa1bb6804f9721ed1f0396f3a6c53}} 
+\index{\_cmdline@{\_cmdline}!validateNumber@{validateNumber}}
+\index{validateNumber@{validateNumber}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateNumber()}{validateNumber()}}
+{\footnotesize\ttfamily long \+\_\+cmdline\+::validate\+Number (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a157e7ae9485d8fbf716ce2d2d4786c5b}\label{namespace__cmdline_a157e7ae9485d8fbf716ce2d2d4786c5b}} 
+\index{\_cmdline@{\_cmdline}!validateTime@{validateTime}}
+\index{validateTime@{validateTime}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateTime()}{validateTime()}}
+{\footnotesize\ttfamily struct tm $\ast$ \+\_\+cmdline\+::validate\+Time (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_ad33443a73ced46819f4499bcaf4d6318}\label{namespace__cmdline_ad33443a73ced46819f4499bcaf4d6318}} 
+\index{\_cmdline@{\_cmdline}!validateTimestamp@{validateTimestamp}}
+\index{validateTimestamp@{validateTimestamp}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateTimestamp()}{validateTimestamp()}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::validate\+Timestamp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}\label{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}} 
+\index{\_cmdline@{\_cmdline}!validateValue@{validateValue}}
+\index{validateValue@{validateValue}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{validateValue()}{validateValue()}}
+{\footnotesize\ttfamily void \+\_\+cmdline\+::validate\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value,  }\item[{\mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{cmdline\+::\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{validations_8cpp_source_l00312}{312}} of file \mbox{\hyperlink{validations_8cpp_source}{validations.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace__cmdline_aecf9a3be04888c0d13fda7a0449ae0c1}\label{namespace__cmdline_aecf9a3be04888c0d13fda7a0449ae0c1}} 
+\index{\_cmdline@{\_cmdline}!\_upper@{\_upper}}
+\index{\_upper@{\_upper}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{\_upper}{\_upper}}
+{\footnotesize\ttfamily char \+\_\+cmdline\+::\+\_\+upper\mbox{[}64\mbox{]} = \char`\"{}\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{commandline_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{commandline_8cpp_source}{commandline.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_a895dee29a8e3d7fdd55aa1f7b89d696c}\label{namespace__cmdline_a895dee29a8e3d7fdd55aa1f7b89d696c}} 
+\index{\_cmdline@{\_cmdline}!rootFlags@{rootFlags}}
+\index{rootFlags@{rootFlags}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{rootFlags}{rootFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}}$\ast$ \+\_\+cmdline\+::root\+Flags\mbox{[}128\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{commandline_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{commandline_8cpp_source}{commandline.\+cpp}}.
+
+\mbox{\Hypertarget{namespace__cmdline_ad390392958a00da14168d6204e74f6a5}\label{namespace__cmdline_ad390392958a00da14168d6204e74f6a5}} 
+\index{\_cmdline@{\_cmdline}!rootOptions@{rootOptions}}
+\index{rootOptions@{rootOptions}!\_cmdline@{\_cmdline}}
+\doxysubsubsection{\texorpdfstring{rootOptions}{rootOptions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}}$\ast$ \+\_\+cmdline\+::root\+Options\mbox{[}128\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{commandline_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{commandline_8cpp_source}{commandline.\+cpp}}.
+

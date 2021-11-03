@@ -1,0 +1,41 @@
+\hypertarget{parameter__tree_8hpp_source}{}\doxysection{parameter\+\_\+tree.\+hpp}
+\label{parameter__tree_8hpp_source}\index{cmdline/include/parameter\_tree.hpp@{cmdline/include/parameter\_tree.hpp}}
+\mbox{\hyperlink{parameter__tree_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}} \{}
+\DoxyCodeLine{8     \textcolor{keyword}{public}:}
+\DoxyCodeLine{9         \textcolor{keywordtype}{char} \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}};}
+\DoxyCodeLine{10         \textcolor{keywordtype}{int}  \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a3b75f38f5321b9b554c09f7d704d9947}{branchs}} = 0; \textcolor{comment}{// Maximum of branchs along all children}}
+\DoxyCodeLine{11         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}} *\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{12         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a6ed5f4b7303e00025f4d5d3ca2de8e3c}{ParameterTree}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{13         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_ae4a8d2600c32045284841d19ea5b26b6}{ParameterTree}}(\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{14         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a3c70c2b1aca2c5ea1b98714187ff1726}{ParameterTree}}(\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{15         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8839e8418d06ea052a0fd8aa3012bb75}{ParameterTree}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm, \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}* \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}} = \textcolor{keyword}{nullptr}) \{ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}} = parm[0]; this-\/>parent = \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}};  \}}
+\DoxyCodeLine{16         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}\&  \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_ab53e5c55a9be59c6d711a6479787d1bc}{addBranch}}(\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}* tree);}
+\DoxyCodeLine{17         \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}}     \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a69781fbc96c7b8a0edb00f70fdc85f94}{getName}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}} parm, \textcolor{keywordtype}{int} pos = 1);}
+\DoxyCodeLine{18         \textcolor{keywordtype}{char}*           \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_add1ced10c86d1b3b637f5a5e89d62d69}{getWord}}();}
+\DoxyCodeLine{19         \textcolor{keywordtype}{char}*           \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a234b22579f9efafbf3fc834b4a9278fe}{getReversedWord}}();}
+\DoxyCodeLine{20         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}*  \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_afe862a5b0bd27ee09e3eeef12c73ea7d}{getNext}}();}
+\DoxyCodeLine{21         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}*  \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_abcb9c00fde33588eb036224456e77171}{getChild}}(\textcolor{keywordtype}{char} \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}});}
+\DoxyCodeLine{22         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}*  \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_ad4523315eced829482674e852bd92b1c}{setParent}}(\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}* \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}}) \{ this-\/>parent = \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}}; \};}
+\DoxyCodeLine{23         \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}\&  \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_af77c24893fb5a730c6bb5c7bd1790f6f}{addChild}}(\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}* child);}
+\DoxyCodeLine{24         \textcolor{keywordtype}{bool}            \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a6148c665f01afa8bb7fabee499913939}{hasChild}}(\textcolor{keywordtype}{char} \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}});}
+\DoxyCodeLine{25         \textcolor{keywordtype}{size\_t}          \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a662319dd97e524cdd3f08c4c0515057f}{numChildren}}() \{ \textcolor{keywordflow}{return} children.size(); \}}
+\DoxyCodeLine{26     \textcolor{keyword}{private}:}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} sizeChildren = 0;}
+\DoxyCodeLine{28         \textcolor{keywordtype}{char}* word = 0x0;}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} wordSize = 0;}
+\DoxyCodeLine{30         std::unordered\_map<char, ParameterTree*> children;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keywordtype}{char} *\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_add1ced10c86d1b3b637f5a5e89d62d69}{getWord}}(\textcolor{keywordtype}{char}* base, \textcolor{keywordtype}{int} sizeBase);}
+\DoxyCodeLine{33         \textcolor{keywordtype}{char} *\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a234b22579f9efafbf3fc834b4a9278fe}{getReversedWord}}(\textcolor{keywordtype}{char}* base, \textcolor{keywordtype}{int} sizeBase);}
+\DoxyCodeLine{34     \};}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}

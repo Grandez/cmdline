@@ -5,7 +5,7 @@
 #include "cmdline.h"
 #include "cmdline_types.h"
 
-Parameter parms[] = {
+ParmDef parms[] = {
 	 {"verbose", FLAG, "false", FALSE}
 	,{"output",  STRING, "", FALSE}
 	,0x0

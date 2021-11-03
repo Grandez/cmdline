@@ -1,0 +1,43 @@
+\hypertarget{tools_8cpp}{}\doxysection{cmdline/src/tools.cpp File Reference}
+\label{tools_8cpp}\index{cmdline/src/tools.cpp@{cmdline/src/tools.cpp}}
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmdline\+\_\+exceptions.\+hpp\char`\"{}}\newline
+Include dependency graph for tools.\+cpp\+:
+% FIG 0
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace__cmdline}{\+\_\+cmdline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Parameter\+Tree $\ast$ \mbox{\hyperlink{namespace__cmdline_af790cb1bc53e9c5b47e30f7093de5a72}{\+\_\+cmdline\+::create\+Tree}} (const char $\ast$word)
+\item 
+Parameter\+Tree $\ast$ \mbox{\hyperlink{namespace__cmdline_aa6436f63fb8388210feebf9bd62fc521}{\+\_\+cmdline\+::join\+Tree}} (Parameter\+Tree $\ast$root, const char $\ast$word)
+\item 
+void \mbox{\hyperlink{namespace__cmdline_a5590f2f5d56b652aeef6ef53cf43ee70}{\+\_\+cmdline\+::add2tree}} (Parameter\+Tree $\ast$root\mbox{[}$\,$\mbox{]}, const char $\ast$word)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a42a90c303b9f0517b033719749ea2456}{\+\_\+cmdline\+::make\+Char}} (string str)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_ac4e01eeebef63139e9f3b3e028d67c9b}{\+\_\+cmdline\+::make\+Boolean}} (const char $\ast$value)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_a9a96acb82031d2a0396cf51c73ddc08a}{\+\_\+cmdline\+::make\+Boolean}} (string value)
+\item 
+vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace__cmdline_a73c00c909fb29335362ef07259e967df}{\+\_\+cmdline\+::split\+Argument}} (const char $\ast$parm)
+\item 
+vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace__cmdline_a7f448be21aee8ccfe94b07af358dfcce}{\+\_\+cmdline\+::tokenize}} (const char $\ast$src, const char $\ast$pat)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{namespace__cmdline_a161f7a65673f4b1380d9a7ab9a4975f4}{\+\_\+cmdline\+::tokenize\+Number}} (const char $\ast$src, const char $\ast$pat)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a46da4ab4e6f0c5f7661964636efef1c7}{\+\_\+cmdline\+::str\+Upper}} (const char $\ast$str)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a11f44a7159bcdc7cef533fe548af4c6e}{\+\_\+cmdline\+::my\+Strdup}} (const char $\ast$s, int size)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a9744d157661e45183a67f5b78b2760e7}{\+\_\+cmdline\+::my\+Strdup}} (const char $\ast$s)
+\item 
+void \mbox{\hyperlink{namespace__cmdline_a1546b166647f2d3b462cf683185fd80d}{\+\_\+cmdline\+::default\+Date}} (char $\ast$aux)
+\end{DoxyCompactItemize}

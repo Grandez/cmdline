@@ -1,0 +1,60 @@
+\hypertarget{exceptions_test_8cpp_source}{}\doxysection{exceptions\+Test.\+cpp}
+\label{exceptions_test_8cpp_source}\index{testcmdline/exceptionsTest.cpp@{testcmdline/exceptionsTest.cpp}}
+\mbox{\hyperlink{exceptions_test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pch_8h}{pch.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_0btool_8hpp}{\$tool.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00006}\mbox{\hyperlink{exceptions_test_8cpp_ab046dba6e6887b14a33ca3a451d94157}{00006}} \mbox{\hyperlink{exceptions_test_8cpp_ab046dba6e6887b14a33ca3a451d94157}{TEST}}(Exceptions, mistype) \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00007}00007     \textcolor{comment}{// outvut vs output}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00008}00008     \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_aa75acde8263345da3b5b039d184c54f2}{reset}}();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00009}00009     \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}}  \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}} = \{ \mbox{\hyperlink{classcmdline_1_1_parm_option}{ParmOption}}(\textcolor{stringliteral}{"{}output"{}}, \textcolor{stringliteral}{"{}."{}})\};}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00010}00010     \textcolor{keywordtype}{int} argc = \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{stringliteral}{"{}/outvut"{}}, \textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00011}00011     \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}} \mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00012}00012     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00013}00013         \mbox{\hyperlink{namespacecmdline}{cmdline}} = CmdLine::getInstance(\mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{argc}}, \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{argv}}, \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}});}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00014}00014         CmdLine::freeInstance();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00015}00015     \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00016}00016     \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classcmdline_1_1_cmd_line_exception}{CmdLineException}} ex) \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00017}00017         CmdLine::freeInstance();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00018}00018         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg = ex.what();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00019}00019         \mbox{\hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}}(strstr(msg, \textcolor{stringliteral}{"{}output"{}}));}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00020}00020         \mbox{\hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}}(strstr(msg, \textcolor{stringliteral}{"{}outvut"{}}));}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00021}00021     \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00022}00022 \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00023}\mbox{\hyperlink{exceptions_test_8cpp_a025f1c9351a45ebb310d39f6ea416ef1}{00023}} \mbox{\hyperlink{exceptions_test_8cpp_ab046dba6e6887b14a33ca3a451d94157}{TEST}}(Exceptions, overtype) \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00024}00024     \textcolor{comment}{// outputs vs output}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00025}00025     \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_aa75acde8263345da3b5b039d184c54f2}{reset}}();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00026}00026     \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}}  \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}} = \{ \mbox{\hyperlink{classcmdline_1_1_parm_option}{ParmOption}}(\textcolor{stringliteral}{"{}output"{}}, \textcolor{stringliteral}{"{}."{}}) \};}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00027}00027     \textcolor{keywordtype}{int} argc = \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{stringliteral}{"{}/outputs"{}}, \textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00028}00028     \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}} \mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00029}00029     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00030}00030         \mbox{\hyperlink{namespacecmdline}{cmdline}} = CmdLine::getInstance(\mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{argc}}, \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{argv}}, \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}});}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00031}00031         CmdLine::freeInstance();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00033}00033     \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classcmdline_1_1_cmd_line_exception}{CmdLineException}} ex) \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00034}00034         CmdLine::freeInstance();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00035}00035         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg = ex.what();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00036}00036         \mbox{\hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}}(strstr(msg, \textcolor{stringliteral}{"{}'outputs'"{}}));}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00037}00037         \mbox{\hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}}(strstr(msg, \textcolor{stringliteral}{"{}'output'"{}}));}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00040}\mbox{\hyperlink{exceptions_test_8cpp_a281274815724eb6590f7e2979cc42c51}{00040}} \mbox{\hyperlink{exceptions_test_8cpp_ab046dba6e6887b14a33ca3a451d94157}{TEST}}(Exceptions, notfound) \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00041}00041     \textcolor{comment}{// pepe}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00042}00042     \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_aa75acde8263345da3b5b039d184c54f2}{reset}}();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00043}00043     \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}}  \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}} = \{ \mbox{\hyperlink{classcmdline_1_1_parm_option}{ParmOption}}(\textcolor{stringliteral}{"{}output"{}}, \textcolor{stringliteral}{"{}."{}}) \};}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00044}00044     \textcolor{keywordtype}{int} argc = \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{stringliteral}{"{}/pepe"{}}, \textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00045}00045     \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}} \mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00046}00046     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00047}00047         \mbox{\hyperlink{namespacecmdline}{cmdline}} = CmdLine::getInstance(\mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{argc}}, \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}}.\mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{argv}}, \mbox{\hyperlink{driver__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}});}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00048}00048         CmdLine::freeInstance();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00050}00050     \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classcmdline_1_1_cmd_line_exception}{CmdLineException}} ex) \{}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00051}00051         CmdLine::freeInstance();}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00052}00052         \mbox{\hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}}(1,1);}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{exceptions_test_8cpp_source_l00054}00054 \}}
+
+\end{DoxyCode}

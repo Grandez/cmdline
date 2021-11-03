@@ -1,0 +1,161 @@
+.TH "include/cmdline_types.h" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/cmdline_types.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_option\fP"
+.br
+.ti -1c
+.RI "struct \fB_ParmDef\fP"
+.br
+.ti -1c
+.RI "struct \fB_Parameter\fP"
+.br
+.ti -1c
+.RI "struct \fB_Flag\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__CMDLINE_CTYPES__\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fB_Type\fP \fBType\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_logical\fP \fBlogical\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_option\fP \fBOption\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_ParmDef\fP \fBParmDef\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_Parameter\fP \fBParameter\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_Flag\fP \fBFlag\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_Type\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILES\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
+.br
+.ti -1c
+.RI "enum \fB_logical\fP { \fBFALSE\fP, \fBTRUE\fP }"
+.br
+.ti -1c
+.RI "enum \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __CMDLINE_CTYPES__"
+
+.PP
+Definition at line \fB4\fP of file \fBcmdline_types\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fB_Flag\fP \fBFlag\fP"
+
+.SS "typedef enum \fB_logical\fP \fBlogical\fP"
+
+.SS "typedef struct \fB_option\fP \fBOption\fP"
+
+.SS "typedef struct \fB_Parameter\fP \fBParameter\fP"
+
+.SS "typedef struct \fB_ParmDef\fP \fBParmDef\fP"
+
+.SS "typedef enum \fB_Type\fP \fBType\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_logical\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFALSE \fP\fP
+.TP
+\fB\fITRUE \fP\fP
+.PP
+Definition at line \fB14\fP of file \fBcmdline_types\&.h\fP\&.
+.SS "enum \fB_Type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISTRING \fP\fP
+.TP
+\fB\fICHAR \fP\fP
+.TP
+\fB\fIBOOL \fP\fP
+.TP
+\fB\fINUMBER \fP\fP
+.TP
+\fB\fIDECIMAL \fP\fP
+.TP
+\fB\fILONGNUMBER \fP\fP
+.TP
+\fB\fILONGDECIMAL \fP\fP
+.TP
+\fB\fIDATE \fP\fP
+.TP
+\fB\fITIME \fP\fP
+.TP
+\fB\fIDATETIME \fP\fP
+.TP
+\fB\fITMS \fP\fP
+.TP
+\fB\fIDIR \fP\fP
+.TP
+\fB\fIDIR_EXISTS \fP\fP
+.TP
+\fB\fIFILES \fP\fP
+.TP
+\fB\fIFILE_EXISTS \fP\fP
+.TP
+\fB\fIFLAG \fP\fP
+.PP
+Definition at line \fB7\fP of file \fBcmdline_types\&.h\fP\&.
+.SS "enum \fBSource\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDEFAULT \fP\fP
+.TP
+\fB\fIENV \fP\fP
+.TP
+\fB\fICMDLINE \fP\fP
+.TP
+\fB\fICODE \fP\fP
+.TP
+\fB\fIAUTO \fP\fP
+.PP
+Definition at line \fB16\fP of file \fBcmdline_types\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.
