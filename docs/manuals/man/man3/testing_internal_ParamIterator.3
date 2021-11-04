@@ -1,0 +1,126 @@
+.TH "testing::internal::ParamIterator< T >" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::ParamIterator< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gtest\-param\-util\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef T \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef const T & \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef ptrdiff_t \fBdifference_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParamIterator\fP (const \fBParamIterator\fP &other)"
+.br
+.ti -1c
+.RI "\fBParamIterator\fP & \fBoperator=\fP (const \fBParamIterator\fP &other)"
+.br
+.ti -1c
+.RI "const T & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "const T * \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "\fBParamIterator\fP & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "\fBParamIterator\fP \fBoperator++\fP (int)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBParamIterator\fP &other) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBParamIterator\fP &other) const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBParamGenerator< T >\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class testing::internal::ParamIterator< T >"
+.PP
+Definition at line \fB119\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename T > typedef ptrdiff_t \fBtesting::internal::ParamIterator\fP< T >::\fBdifference_type\fP"
+
+.PP
+Definition at line \fB123\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > typedef const T& \fBtesting::internal::ParamIterator\fP< T >::\fBreference\fP"
+
+.PP
+Definition at line \fB122\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > typedef T \fBtesting::internal::ParamIterator\fP< T >::\fBvalue_type\fP"
+
+.PP
+Definition at line \fB121\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > \fBtesting::internal::ParamIterator\fP< T >::\fBParamIterator\fP (const \fBParamIterator\fP< T > & other)\fC [inline]\fP"
+
+.PP
+Definition at line \fB126\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > bool \fBtesting::internal::ParamIterator\fP< T >::operator!= (const \fBParamIterator\fP< T > & other) const\fC [inline]\fP"
+
+.PP
+Definition at line \fB149\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > const T & \fBtesting::internal::ParamIterator\fP< T >::operator* () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB133\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > \fBParamIterator\fP & \fBtesting::internal::ParamIterator\fP< T >::operator++ ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB136\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > \fBParamIterator\fP \fBtesting::internal::ParamIterator\fP< T >::operator++ (int)\fC [inline]\fP"
+
+.PP
+Definition at line \fB141\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > const T * \fBtesting::internal::ParamIterator\fP< T >::operator\-> () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB134\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > \fBParamIterator\fP & \fBtesting::internal::ParamIterator\fP< T >::operator= (const \fBParamIterator\fP< T > & other)\fC [inline]\fP"
+
+.PP
+Definition at line \fB127\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T > bool \fBtesting::internal::ParamIterator\fP< T >::operator== (const \fBParamIterator\fP< T > & other) const\fC [inline]\fP"
+
+.PP
+Definition at line \fB146\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename T > friend class \fBParamGenerator\fP< T >\fC [friend]\fP"
+
+.PP
+Definition at line \fB149\fP of file \fBgtest\-param\-util\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

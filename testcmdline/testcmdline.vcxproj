@@ -65,8 +65,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cmdline\cmdline.vcxproj">
-      <Project>{4976bfe5-1d66-47cf-9604-13738bb7d926}</Project>
+    <ProjectReference Include="..\cmdline_cpp\cmdline_cpp.vcxproj">
+      <Project>{8dd90963-d3c1-4df0-90f6-cdd32c401f9d}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup />

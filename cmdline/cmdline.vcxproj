@@ -19,41 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="readme.md" />
+    <ClInclude Include="include\cmdline.h" />
+    <ClInclude Include="include\cmdline_c.h" />
+    <ClInclude Include="include\cmdline_cpp.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cmdline_exceptions.cpp" />
-    <ClCompile Include="doc\doc_cmdline.cpp" />
-    <ClCompile Include="src\argument.cpp" />
     <ClCompile Include="src\cmdline.cpp" />
-    <ClCompile Include="src\cmdline_c.cpp" />
-    <ClCompile Include="src\cmdline_flavors.cpp" />
-    <ClCompile Include="src\commandline.cpp" />
-    <ClCompile Include="src\c_wrapper.cpp" />
-    <ClCompile Include="src\parameter.cpp" />
-    <ClCompile Include="src\parameter_tree.cpp" />
-    <ClCompile Include="src\tools.cpp" />
-    <ClCompile Include="src\validations.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\argument.hpp" />
-    <ClInclude Include="include\cmdline.hpp" />
-    <ClInclude Include="include\cmdline_errno.h" />
-    <ClInclude Include="include\cmdline_exceptions.hpp" />
-    <ClInclude Include="include\commandline.hpp" />
-    <ClInclude Include="include\c_wrapper.h" />
-    <ClInclude Include="include\defines.hpp" />
-    <ClInclude Include="include\group.hpp" />
-    <ClInclude Include="include\msg_locale.h" />
-    <ClInclude Include="include\parameter_tree.hpp" />
-    <ClInclude Include="include\tools.h" />
-    <ClInclude Include="include\types.h" />
-    <ClInclude Include="include\validations.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4976bfe5-1d66-47cf-9604-13738bb7d926}</ProjectGuid>
+    <ProjectGuid>{a2fc53ff-3e64-47ad-b756-c9287464f362}</ProjectGuid>
     <RootNamespace>cmdline</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -104,38 +80,33 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
-    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
-    <ExternalIncludePath>P:\C\cmdline\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
-    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
-    <ExternalIncludePath>P:\C\cmdline\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
-    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
-    <ExternalIncludePath>P:\C\cmdline\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
-    <SourcePath>$(ProjectDir)\src;$(SourcePath)</SourcePath>
-    <ExternalIncludePath>P:\C\cmdline\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -149,12 +120,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -168,12 +138,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -187,12 +156,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>

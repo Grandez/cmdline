@@ -1,0 +1,236 @@
+\hypertarget{class__cmdline_1_1_parameter_tree}{}\doxysection{\+\_\+cmdline\+::Parameter\+Tree Class Reference}
+\label{class__cmdline_1_1_parameter_tree}\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+
+
+{\ttfamily \#include $<$parameter\+\_\+tree.\+hpp$>$}
+
+
+
+Collaboration diagram for \+\_\+cmdline\+::Parameter\+Tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{d1/d13/class__cmdline_1_1_parameter_tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a6ed5f4b7303e00025f4d5d3ca2de8e3c}{Parameter\+Tree}} ()=\mbox{\hyperlink{cmdline_8h_a7a4721d0a51e952c211e9b0fea4d8090}{delete}}
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_ae4a8d2600c32045284841d19ea5b26b6}{Parameter\+Tree}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \&)=\mbox{\hyperlink{cmdline_8h_a7a4721d0a51e952c211e9b0fea4d8090}{delete}}
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a3c70c2b1aca2c5ea1b98714187ff1726}{Parameter\+Tree}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \&\&)=\mbox{\hyperlink{cmdline_8h_a7a4721d0a51e952c211e9b0fea4d8090}{delete}}
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8839e8418d06ea052a0fd8aa3012bb75}{Parameter\+Tree}} (const char $\ast$parm, \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}}=nullptr)
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \& \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_ab53e5c55a9be59c6d711a6479787d1bc}{add\+Branch}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$tree)
+\item 
+std\+::string \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a69781fbc96c7b8a0edb00f70fdc85f94}{get\+Name}} (const std\+::string parm, int pos=1)
+\item 
+char $\ast$ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_add1ced10c86d1b3b637f5a5e89d62d69}{get\+Word}} ()
+\item 
+char $\ast$ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a234b22579f9efafbf3fc834b4a9278fe}{get\+Reversed\+Word}} ()
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_afe862a5b0bd27ee09e3eeef12c73ea7d}{get\+Next}} ()
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_abcb9c00fde33588eb036224456e77171}{get\+Child}} (char \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}})
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_ad4523315eced829482674e852bd92b1c}{set\+Parent}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$\mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}})
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \& \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_af77c24893fb5a730c6bb5c7bd1790f6f}{add\+Child}} (\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$child)
+\item 
+bool \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a6148c665f01afa8bb7fabee499913939}{has\+Child}} (char \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}})
+\item 
+size\+\_\+t \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a662319dd97e524cdd3f08c4c0515057f}{num\+Children}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}{letter}}
+\item 
+int \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a3b75f38f5321b9b554c09f7d704d9947}{branchs}} = 0
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \mbox{\hyperlink{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}{parent}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00007}{7}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a6ed5f4b7303e00025f4d5d3ca2de8e3c}\label{class__cmdline_1_1_parameter_tree_a6ed5f4b7303e00025f4d5d3ca2de8e3c}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!ParameterTree@{ParameterTree}}
+\index{ParameterTree@{ParameterTree}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{ParameterTree()}{ParameterTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \+\_\+cmdline\+::\+Parameter\+Tree\+::\+Parameter\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_ae4a8d2600c32045284841d19ea5b26b6}\label{class__cmdline_1_1_parameter_tree_ae4a8d2600c32045284841d19ea5b26b6}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!ParameterTree@{ParameterTree}}
+\index{ParameterTree@{ParameterTree}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{ParameterTree()}{ParameterTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \+\_\+cmdline\+::\+Parameter\+Tree\+::\+Parameter\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a3c70c2b1aca2c5ea1b98714187ff1726}\label{class__cmdline_1_1_parameter_tree_a3c70c2b1aca2c5ea1b98714187ff1726}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!ParameterTree@{ParameterTree}}
+\index{ParameterTree@{ParameterTree}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{ParameterTree()}{ParameterTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \+\_\+cmdline\+::\+Parameter\+Tree\+::\+Parameter\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a8839e8418d06ea052a0fd8aa3012bb75}\label{class__cmdline_1_1_parameter_tree_a8839e8418d06ea052a0fd8aa3012bb75}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!ParameterTree@{ParameterTree}}
+\index{ParameterTree@{ParameterTree}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{ParameterTree()}{ParameterTree()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \+\_\+cmdline\+::\+Parameter\+Tree\+::\+Parameter\+Tree (\begin{DoxyParamCaption}\item[{const char $\ast$}]{parm,  }\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_ab53e5c55a9be59c6d711a6479787d1bc}\label{class__cmdline_1_1_parameter_tree_ab53e5c55a9be59c6d711a6479787d1bc}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!addBranch@{addBranch}}
+\index{addBranch@{addBranch}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{addBranch()}{addBranch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \& \+\_\+cmdline\+::\+Parameter\+Tree\+::add\+Branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_af77c24893fb5a730c6bb5c7bd1790f6f}\label{class__cmdline_1_1_parameter_tree_af77c24893fb5a730c6bb5c7bd1790f6f}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!addChild@{addChild}}
+\index{addChild@{addChild}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} \& \+\_\+cmdline\+::\+Parameter\+Tree\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$}]{child }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_abcb9c00fde33588eb036224456e77171}\label{class__cmdline_1_1_parameter_tree_abcb9c00fde33588eb036224456e77171}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!getChild@{getChild}}
+\index{getChild@{getChild}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \+\_\+cmdline\+::\+Parameter\+Tree\+::get\+Child (\begin{DoxyParamCaption}\item[{char}]{letter }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a69781fbc96c7b8a0edb00f70fdc85f94}\label{class__cmdline_1_1_parameter_tree_a69781fbc96c7b8a0edb00f70fdc85f94}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!getName@{getName}}
+\index{getName@{getName}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string \+\_\+cmdline\+::\+Parameter\+Tree\+::get\+Name (\begin{DoxyParamCaption}\item[{const std\+::string}]{parm,  }\item[{int}]{pos = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_afe862a5b0bd27ee09e3eeef12c73ea7d}\label{class__cmdline_1_1_parameter_tree_afe862a5b0bd27ee09e3eeef12c73ea7d}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!getNext@{getNext}}
+\index{getNext@{getNext}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \+\_\+cmdline\+::\+Parameter\+Tree\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a234b22579f9efafbf3fc834b4a9278fe}\label{class__cmdline_1_1_parameter_tree_a234b22579f9efafbf3fc834b4a9278fe}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!getReversedWord@{getReversedWord}}
+\index{getReversedWord@{getReversedWord}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{getReversedWord()}{getReversedWord()}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::\+Parameter\+Tree\+::get\+Reversed\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_add1ced10c86d1b3b637f5a5e89d62d69}\label{class__cmdline_1_1_parameter_tree_add1ced10c86d1b3b637f5a5e89d62d69}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!getWord@{getWord}}
+\index{getWord@{getWord}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{getWord()}{getWord()}}
+{\footnotesize\ttfamily char $\ast$ \+\_\+cmdline\+::\+Parameter\+Tree\+::get\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a6148c665f01afa8bb7fabee499913939}\label{class__cmdline_1_1_parameter_tree_a6148c665f01afa8bb7fabee499913939}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!hasChild@{hasChild}}
+\index{hasChild@{hasChild}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{hasChild()}{hasChild()}}
+{\footnotesize\ttfamily bool \+\_\+cmdline\+::\+Parameter\+Tree\+::has\+Child (\begin{DoxyParamCaption}\item[{char}]{letter }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{parameter__tree_8cpp_source}{parameter\+\_\+tree.\+cpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a662319dd97e524cdd3f08c4c0515057f}\label{class__cmdline_1_1_parameter_tree_a662319dd97e524cdd3f08c4c0515057f}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!numChildren@{numChildren}}
+\index{numChildren@{numChildren}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{numChildren()}{numChildren()}}
+{\footnotesize\ttfamily size\+\_\+t \+\_\+cmdline\+::\+Parameter\+Tree\+::num\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_ad4523315eced829482674e852bd92b1c}\label{class__cmdline_1_1_parameter_tree_ad4523315eced829482674e852bd92b1c}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!setParent@{setParent}}
+\index{setParent@{setParent}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$ \+\_\+cmdline\+::\+Parameter\+Tree\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a3b75f38f5321b9b554c09f7d704d9947}\label{class__cmdline_1_1_parameter_tree_a3b75f38f5321b9b554c09f7d704d9947}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!branchs@{branchs}}
+\index{branchs@{branchs}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{branchs}{branchs}}
+{\footnotesize\ttfamily int \+\_\+cmdline\+::\+Parameter\+Tree\+::branchs = 0}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}\label{class__cmdline_1_1_parameter_tree_a57b3b6041f2ee96b59ccdacef8506515}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!letter@{letter}}
+\index{letter@{letter}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{letter}{letter}}
+{\footnotesize\ttfamily char \+\_\+cmdline\+::\+Parameter\+Tree\+::letter}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00009}{9}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+\mbox{\Hypertarget{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}\label{class__cmdline_1_1_parameter_tree_a8a93a851bd8779daee01795ff2b8d2bc}} 
+\index{\_cmdline::ParameterTree@{\_cmdline::ParameterTree}!parent@{parent}}
+\index{parent@{parent}!\_cmdline::ParameterTree@{\_cmdline::ParameterTree}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{Parameter\+Tree}}$\ast$ \+\_\+cmdline\+::\+Parameter\+Tree\+::parent = nullptr}
+
+
+
+Definition at line \mbox{\hyperlink{parameter__tree_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{parameter__tree_8hpp_source}{parameter\+\_\+tree.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cmdline/include/\mbox{\hyperlink{parameter__tree_8hpp}{parameter\+\_\+tree.\+hpp}}\item 
+cmdline/src/\mbox{\hyperlink{parameter__tree_8cpp}{parameter\+\_\+tree.\+cpp}}\end{DoxyCompactItemize}

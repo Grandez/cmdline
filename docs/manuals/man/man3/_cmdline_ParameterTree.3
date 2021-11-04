@@ -1,0 +1,144 @@
+.TH "_cmdline::ParameterTree" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_cmdline::ParameterTree
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <parameter_tree\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParameterTree\fP ()=\fBdelete\fP"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP (\fBParameterTree\fP &)=\fBdelete\fP"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP (\fBParameterTree\fP &&)=\fBdelete\fP"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP (const char *parm, \fBParameterTree\fP *\fBparent\fP=nullptr)"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP & \fBaddBranch\fP (\fBParameterTree\fP *tree)"
+.br
+.ti -1c
+.RI "std::string \fBgetName\fP (const std::string parm, int pos=1)"
+.br
+.ti -1c
+.RI "char * \fBgetWord\fP ()"
+.br
+.ti -1c
+.RI "char * \fBgetReversedWord\fP ()"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBgetNext\fP ()"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBgetChild\fP (char \fBletter\fP)"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBsetParent\fP (\fBParameterTree\fP *\fBparent\fP)"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP & \fBaddChild\fP (\fBParameterTree\fP *child)"
+.br
+.ti -1c
+.RI "bool \fBhasChild\fP (char \fBletter\fP)"
+.br
+.ti -1c
+.RI "size_t \fBnumChildren\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "char \fBletter\fP"
+.br
+.ti -1c
+.RI "int \fBbranchs\fP = 0"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBparent\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB7\fP of file \fBparameter_tree\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "_cmdline::ParameterTree::ParameterTree ()\fC [delete]\fP"
+
+.SS "_cmdline::ParameterTree::ParameterTree (\fBParameterTree\fP &)\fC [delete]\fP"
+
+.SS "_cmdline::ParameterTree::ParameterTree (\fBParameterTree\fP &&)\fC [delete]\fP"
+
+.SS "_cmdline::ParameterTree::ParameterTree (const char * parm, \fBParameterTree\fP * parent = \fCnullptr\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB15\fP of file \fBparameter_tree\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBParameterTree\fP & _cmdline::ParameterTree::addBranch (\fBParameterTree\fP * tree)"
+
+.PP
+Definition at line \fB12\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "\fBParameterTree\fP & _cmdline::ParameterTree::addChild (\fBParameterTree\fP * child)"
+
+.PP
+Definition at line \fB7\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "\fBParameterTree\fP * _cmdline::ParameterTree::getChild (char letter)"
+
+.PP
+Definition at line \fB67\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "std::string _cmdline::ParameterTree::getName (const std::string parm, int pos = \fC1\fP)"
+
+.PP
+Definition at line \fB72\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "\fBParameterTree\fP * _cmdline::ParameterTree::getNext ()"
+
+.PP
+Definition at line \fB59\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "char * _cmdline::ParameterTree::getReversedWord ()"
+
+.PP
+Definition at line \fB37\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "char * _cmdline::ParameterTree::getWord ()"
+
+.PP
+Definition at line \fB17\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "bool _cmdline::ParameterTree::hasChild (char letter)"
+
+.PP
+Definition at line \fB63\fP of file \fBparameter_tree\&.cpp\fP\&.
+.SS "size_t _cmdline::ParameterTree::numChildren ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB25\fP of file \fBparameter_tree\&.hpp\fP\&.
+.SS "\fBParameterTree\fP * _cmdline::ParameterTree::setParent (\fBParameterTree\fP * parent)\fC [inline]\fP"
+
+.PP
+Definition at line \fB22\fP of file \fBparameter_tree\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int _cmdline::ParameterTree::branchs = 0"
+
+.PP
+Definition at line \fB10\fP of file \fBparameter_tree\&.hpp\fP\&.
+.SS "char _cmdline::ParameterTree::letter"
+
+.PP
+Definition at line \fB9\fP of file \fBparameter_tree\&.hpp\fP\&.
+.SS "\fBParameterTree\fP* _cmdline::ParameterTree::parent = nullptr"
+
+.PP
+Definition at line \fB11\fP of file \fBparameter_tree\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

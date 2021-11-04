@@ -1,0 +1,106 @@
+.TH "testing::internal::ParameterizedTestCaseInfo< TestCase >" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::ParameterizedTestCaseInfo< TestCase >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gtest\-param\-util\&.h>\fP
+.PP
+Inherits \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef TestCase::ParamType \fBParamType\fP"
+.br
+.ti -1c
+.RI "typedef \fBParamNameGenFunc\fP< \fBParamType\fP >::\fBType\fP \fBParamNameGeneratorFunc\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBParamGenerator\fP (GeneratorCreationFunc)()"
+.br
+.ti -1c
+.RI "\fBParameterizedTestCaseInfo\fP (const char *name, \fBCodeLocation\fP code_location)"
+.br
+.ti -1c
+.RI "virtual const std::string & \fBGetTestCaseName\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBTypeId\fP \fBGetTestCaseTypeId\fP () const"
+.br
+.ti -1c
+.RI "void \fBAddTestPattern\fP (const char *test_case_name, const char *test_base_name, \fBTestMetaFactoryBase\fP< \fBParamType\fP > *meta_factory)"
+.br
+.ti -1c
+.RI "int \fBAddTestCaseInstantiation\fP (const std::string &instantiation_name, GeneratorCreationFunc *func, \fBParamNameGeneratorFunc\fP *name_func, const char *file, int line)"
+.br
+.ti -1c
+.RI "virtual void \fBRegisterTests\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class \fBTestCase\fP>
+.br
+class testing::internal::ParameterizedTestCaseInfo< TestCase >"
+.PP
+Definition at line \fB495\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<class \fBTestCase\fP > typedef \fBParamNameGenFunc\fP<\fBParamType\fP>::\fBType\fP \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParamNameGeneratorFunc\fP"
+
+.PP
+Definition at line \fB503\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<class \fBTestCase\fP > typedef TestCase::ParamType \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParamType\fP"
+
+.PP
+Definition at line \fB500\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class \fBTestCase\fP > \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParameterizedTestCaseInfo\fP (const char * name, \fBCodeLocation\fP code_location)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Definition at line \fB505\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class \fBTestCase\fP > int \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::AddTestCaseInstantiation (const std::string & instantiation_name, GeneratorCreationFunc * func, \fBParamNameGeneratorFunc\fP * name_func, const char * file, int line)\fC [inline]\fP"
+
+.PP
+Definition at line \fB528\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<class \fBTestCase\fP > void \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::AddTestPattern (const char * test_case_name, const char * test_base_name, \fBTestMetaFactoryBase\fP< \fBParamType\fP > * meta_factory)\fC [inline]\fP"
+
+.PP
+Definition at line \fB519\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<class \fBTestCase\fP > virtual const std::string & \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::GetTestCaseName () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+.PP
+Definition at line \fB510\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<class \fBTestCase\fP > virtual \fBTypeId\fP \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::GetTestCaseTypeId () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+.PP
+Definition at line \fB512\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<class \fBTestCase\fP > typedef \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParamGenerator\fP (GeneratorCreationFunc)"
+
+.SS "template<class \fBTestCase\fP > virtual void \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::RegisterTests ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+.PP
+Definition at line \fB541\fP of file \fBgtest\-param\-util\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

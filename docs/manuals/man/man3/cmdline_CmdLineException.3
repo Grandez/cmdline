@@ -1,0 +1,55 @@
+.TH "cmdline::CmdLineException" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmdline::CmdLineException
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cmdline_exceptions\&.hpp>\fP
+.PP
+Inherits std::invalid_argument\&.
+.PP
+Inherited by \fBcmdline::CmdLineDuplicateArgumentException\fP, \fBcmdline::CmdLineParameterException\fP, \fBcmdline::CmdLineValueException\fP, \fBcmdline::HelpDetailedRequested\fP, and \fBcmdline::HelpRequested\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCmdLineException\fP ()"
+.br
+.ti -1c
+.RI "\fB~CmdLineException\fP ()"
+.br
+.ti -1c
+.RI "\fBCmdLineException\fP (const char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBCmdLineException\fP (char *txt)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB27\fP of file \fBcmdline_exceptions\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "cmdline::CmdLineException::CmdLineException ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB29\fP of file \fBcmdline_exceptions\&.hpp\fP\&.
+.SS "cmdline::CmdLineException::~CmdLineException ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB30\fP of file \fBcmdline_exceptions\&.hpp\fP\&.
+.SS "cmdline::CmdLineException::CmdLineException (const char * fmt,  \&.\&.\&.)"
+
+.PP
+Definition at line \fB19\fP of file \fBcmdline_exceptions\&.cpp\fP\&.
+.SS "cmdline::CmdLineException::CmdLineException (char * txt)"
+
+.PP
+Definition at line \fB18\fP of file \fBcmdline_exceptions\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

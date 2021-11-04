@@ -11,8 +11,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "driver_c", "driver_c\driver
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "driver_cpp", "driver_cpp\driver_cpp.vcxproj", "{6E9D5A06-2DAA-4670-B8EB-F05A4A24C411}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccmdline", "ccmdline\ccmdline.vcxproj", "{1076C2AE-E210-4F81-B515-F937AAECD362}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,14 +51,6 @@ Global
 		{6E9D5A06-2DAA-4670-B8EB-F05A4A24C411}.Release|x64.Build.0 = Release|x64
 		{6E9D5A06-2DAA-4670-B8EB-F05A4A24C411}.Release|x86.ActiveCfg = Release|Win32
 		{6E9D5A06-2DAA-4670-B8EB-F05A4A24C411}.Release|x86.Build.0 = Release|Win32
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Debug|x64.ActiveCfg = Debug|x64
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Debug|x64.Build.0 = Debug|x64
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Debug|x86.ActiveCfg = Debug|Win32
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Debug|x86.Build.0 = Debug|Win32
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Release|x64.ActiveCfg = Release|x64
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Release|x64.Build.0 = Release|x64
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Release|x86.ActiveCfg = Release|Win32
-		{1076C2AE-E210-4F81-B515-F937AAECD362}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,60 @@
+.TH "_cmdline::Group" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_cmdline::Group
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <group\&.hpp>\fP
+.PP
+Inherits unordered_map< string, Argument >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGroup\fP & \fBadd\fP (const char *name, \fBArgument\fP *arg)"
+.br
+.ti -1c
+.RI "\fBGroup\fP & \fBadd\fP (string name, \fBArgument\fP *arg)"
+.br
+.ti -1c
+.RI "\fBGroup\fP & \fBadd\fP (\fBArgument\fP *arg)"
+.br
+.ti -1c
+.RI "\fBArgument\fP * \fBfind\fP (string what)"
+.br
+.ti -1c
+.RI "\fBArgument\fP * \fBoperator[]\fP (string what)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB10\fP of file \fBgroup\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGroup\fP & _cmdline::Group::add (\fBArgument\fP * arg)\fC [inline]\fP"
+
+.PP
+Definition at line \fB21\fP of file \fBgroup\&.hpp\fP\&.
+.SS "\fBGroup\fP & _cmdline::Group::add (const char * name, \fBArgument\fP * arg)\fC [inline]\fP"
+
+.PP
+Definition at line \fB12\fP of file \fBgroup\&.hpp\fP\&.
+.SS "\fBGroup\fP & _cmdline::Group::add (string name, \fBArgument\fP * arg)\fC [inline]\fP"
+
+.PP
+Definition at line \fB16\fP of file \fBgroup\&.hpp\fP\&.
+.SS "\fBArgument\fP * _cmdline::Group::find (string what)\fC [inline]\fP"
+
+.PP
+Definition at line \fB26\fP of file \fBgroup\&.hpp\fP\&.
+.SS "\fBArgument\fP * _cmdline::Group::operator[] (string what)\fC [inline]\fP"
+
+.PP
+Definition at line \fB34\fP of file \fBgroup\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

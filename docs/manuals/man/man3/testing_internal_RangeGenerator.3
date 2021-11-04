@@ -1,0 +1,65 @@
+.TH "testing::internal::RangeGenerator< T, IncrementT >" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::RangeGenerator< T, IncrementT >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gtest\-param\-util\&.h>\fP
+.PP
+Inherits \fBtesting::internal::ParamGeneratorInterface< T >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRangeGenerator\fP (T begin, T end, IncrementT step)"
+.br
+.ti -1c
+.RI "virtual \fB~RangeGenerator\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBParamIteratorInterface\fP< T > * \fBBegin\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBParamIteratorInterface\fP< T > * \fBEnd\fP () const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T, typename IncrementT>
+.br
+class testing::internal::RangeGenerator< T, IncrementT >"
+.PP
+Definition at line \fB203\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T , typename IncrementT > \fBtesting::internal::RangeGenerator\fP< T, IncrementT >::\fBRangeGenerator\fP (T begin, T end, IncrementT step)\fC [inline]\fP"
+
+.PP
+Definition at line \fB205\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T , typename IncrementT > virtual \fBtesting::internal::RangeGenerator\fP< T, IncrementT >::~\fBRangeGenerator\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line \fB208\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T , typename IncrementT > virtual \fBParamIteratorInterface\fP< T > * \fBtesting::internal::RangeGenerator\fP< T, IncrementT >::Begin () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBtesting::internal::ParamGeneratorInterface< T >\fP\&.
+.PP
+Definition at line \fB210\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SS "template<typename T , typename IncrementT > virtual \fBParamIteratorInterface\fP< T > * \fBtesting::internal::RangeGenerator\fP< T, IncrementT >::End () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBtesting::internal::ParamGeneratorInterface< T >\fP\&.
+.PP
+Definition at line \fB213\fP of file \fBgtest\-param\-util\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

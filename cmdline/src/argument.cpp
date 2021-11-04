@@ -1,11 +1,11 @@
 #pragma once
-
+#include <string>
 #include <algorithm>
 #include <filesystem>
+#include <ctime>
 
 #include "argument.hpp"
-#include "tools.h"
-#include "types.h"
+#include "tools.hpp"
 
 using namespace std;
 using namespace cmdline;

@@ -1,0 +1,69 @@
+.TH "packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-death-test.h" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-death-test.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'gtest/internal/gtest\-death\-test\-internal\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBtesting\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGTEST_UNSUPPORTED_DEATH_TEST\fP(statement,  regex,  terminator)"
+.br
+.ti -1c
+.RI "#define \fBEXPECT_DEATH_IF_SUPPORTED\fP(statement,  regex)       \fBGTEST_UNSUPPORTED_DEATH_TEST\fP(statement, regex, )"
+.br
+.ti -1c
+.RI "#define \fBASSERT_DEATH_IF_SUPPORTED\fP(statement,  regex)       \fBGTEST_UNSUPPORTED_DEATH_TEST\fP(statement, regex, return)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtesting::GTEST_DECLARE_string_\fP (death_test_style)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ASSERT_DEATH_IF_SUPPORTED(statement, regex)       \fBGTEST_UNSUPPORTED_DEATH_TEST\fP(statement, regex, return)"
+
+.PP
+Definition at line \fB338\fP of file \fBgtest\-death\-test\&.h\fP\&.
+.SS "#define EXPECT_DEATH_IF_SUPPORTED(statement, regex)       \fBGTEST_UNSUPPORTED_DEATH_TEST\fP(statement, regex, )"
+
+.PP
+Definition at line \fB336\fP of file \fBgtest\-death\-test\&.h\fP\&.
+.SS "#define GTEST_UNSUPPORTED_DEATH_TEST(statement, regex, terminator)"
+\fBValue:\fP
+.PP
+.nf
+    GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
+    if (::testing::internal::AlwaysTrue()) { \
+      GTEST_LOG_(WARNING) \
+          << "Death tests are not supported on this platform\&.\n" \
+          << "Statement '" #statement "' cannot be verified\&."; \
+    } else if (::testing::internal::AlwaysFalse()) { \\
+      ::testing::internal::RE::PartialMatch("\&.*", (regex)); \
+      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \
+      terminator; \
+    } else \
+      ::testing::Message()
+.fi
+.PP
+Definition at line \fB312\fP of file \fBgtest\-death\-test\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

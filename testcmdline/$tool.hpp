@@ -3,7 +3,9 @@
 #include <ctime>
 
 #include "../include/cmdline.hpp"
+#include "../cmdline/include/types.h"
 #include "../cmdline/include/tools.h"
+#include "../cmdline/include/cmdline_exceptions.hpp"
 
 using namespace std;
 using namespace cmdline;

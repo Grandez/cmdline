@@ -1,12 +1,19 @@
+/*
 #include "errno.h"
 #include "c_wrapper.h"
-#include "cmdline.hpp"
-
+#include "cmdline_cpp.h"
 #include "tools.h"
+#include <cmdline_exceptions.hpp>
 
 cmdline::CmdLine cmdLine;
 using namespace cmdline;
+*/
+#include "c_wrapper.h"
+#include "cmdline_ctypes.h"
+#include "cmdline_cpptypes.hpp"
+#include "cmdline.hpp"
 
+/*
 cmdline::Parameters makeParameters(ParmDef parms[]) {
     int i = 0;
     Parameters arr;
@@ -26,7 +33,7 @@ cmdline::Parameters makeParameters(ParmDef parms[]) {
    }
     return arr;
 }
-
+*/
     int cmdline_create(int argc, char** argv, ParmDef parms[]) {
         Parameters p = makeParameters(parms);
         try {
@@ -38,7 +45,8 @@ cmdline::Parameters makeParameters(ParmDef parms[]) {
         }
         return 0;
     }
-    void cmdline_destroy() {
-        cmdLine = nullptr;
-    }
+
+void cmdline_delete() {
+    //        cmdLine = nullptr;
+}
 

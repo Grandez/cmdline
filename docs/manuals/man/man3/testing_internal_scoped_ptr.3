@@ -1,0 +1,105 @@
+.TH "testing::internal::scoped_ptr< T >" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::scoped_ptr< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gtest\-port\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef T \fBelement_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBscoped_ptr\fP (T *p=NULL)"
+.br
+.ti -1c
+.RI "\fB~scoped_ptr\fP ()"
+.br
+.ti -1c
+.RI "T & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "T * \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "T * \fBget\fP () const"
+.br
+.ti -1c
+.RI "T * \fBrelease\fP ()"
+.br
+.ti -1c
+.RI "void \fBreset\fP (T *p=NULL)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "void \fBswap\fP (\fBscoped_ptr\fP &a, \fBscoped_ptr\fP &b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class testing::internal::scoped_ptr< T >"
+.PP
+Definition at line \fB1196\fP of file \fBgtest\-port\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename T > typedef T \fBtesting::internal::scoped_ptr\fP< T >::\fBelement_type\fP"
+
+.PP
+Definition at line \fB1198\fP of file \fBgtest\-port\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > \fBtesting::internal::scoped_ptr\fP< T >::\fBscoped_ptr\fP (T * p = \fCNULL\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Definition at line \fB1200\fP of file \fBgtest\-port\&.h\fP\&.
+.SS "template<typename T > \fBtesting::internal::scoped_ptr\fP< T >::~\fBscoped_ptr\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB1201\fP of file \fBgtest\-port\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > T * \fBtesting::internal::scoped_ptr\fP< T >::get () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB1205\fP of file \fBgtest\-port\&.h\fP\&.
+.SS "template<typename T > T & \fBtesting::internal::scoped_ptr\fP< T >::operator* () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB1203\fP of file \fBgtest\-port\&.h\fP\&.
+.SS "template<typename T > T * \fBtesting::internal::scoped_ptr\fP< T >::operator\-> () const\fC [inline]\fP"
+
+.PP
+Definition at line \fB1204\fP of file \fBgtest\-port\&.h\fP\&.
+.SS "template<typename T > T * \fBtesting::internal::scoped_ptr\fP< T >::release ()\fC [inline]\fP"
+
+.PP
+Definition at line \fB1207\fP of file \fBgtest\-port\&.h\fP\&.
+.SS "template<typename T > void \fBtesting::internal::scoped_ptr\fP< T >::reset (T * p = \fCNULL\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB1213\fP of file \fBgtest\-port\&.h\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename T > void swap (\fBscoped_ptr\fP< T > & a, \fBscoped_ptr\fP< T > & b)\fC [friend]\fP"
+
+.PP
+Definition at line \fB1222\fP of file \fBgtest\-port\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

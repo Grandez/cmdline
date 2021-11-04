@@ -1,6 +1,8 @@
 #pragma once
+
 #include <set>
 #include "cmdline.hpp"
+#include "types_cpp.hpp"
 
 using namespace std;
 using namespace cmdline;
