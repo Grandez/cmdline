@@ -1,9 +1,9 @@
-﻿Build started 05/11/2021 18:45:13.
+﻿Build started 05/11/2021 19:31:00.
 Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" on node 3 (Rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "x64\Release\drivercm.fb0009be.tlog\drivercmdline_cpp.lastbuildstate".
        InitializeBuildStatus:
-         Creating "x64\Release\drivercm.fb0009be.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "x64\Release\drivercm.fb0009be.tlog\unsuccessfulbuild".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt drivercmdline_cpp.cpp
          drivercmdline_cpp.cpp
@@ -24,4 +24,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.93
+Time Elapsed 00:00:01.83

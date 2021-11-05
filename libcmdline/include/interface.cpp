@@ -198,21 +198,10 @@ Flag** makeFlags(cmdline::Flags flags) {
         res[i++] = tmp;
     }
     res[i] = 0x0;
-/*
-    for (i = 0; i < flags.size(); i++) {
-
-        
-        tmp->value = (flags[i].value) ? TRUE : FALSE;
-        res[i] = tmp;
-    }
-    */
-//    res[i] = 0x0;
     return res;
 }
 
-logical      cHasFlag            (const char* name) { 
-    printf("Entro en has fag\n");
-    return hasValue(1, name); }
+logical      cHasFlag            (const char* name) { return hasValue(1, name); }
 logical      cHasOption          (const char* name) { return hasValue(2, name); }
 logical      cHasDefine          (const char* name) { return hasValue(3, name); }
 logical      cIsOptionMultiple   (const char* name) { return isMultiple   (true, name); }

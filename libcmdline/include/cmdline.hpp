@@ -2,8 +2,16 @@
 
 #include <vector>
 #include "types.hpp"
+#include "validations.hpp"
+#include "cmdline_exceptions.hpp"
+
 #ifndef __CLASS_CMDLINE__
 #define __CLASS_CMDLINE__
+
+#ifdef _WIN32
+#pragma warning( disable : 4244)
+#endif
+
 namespace cmdline {
 	/**
 	 * Generic Class to define defined flags and options
@@ -107,6 +115,7 @@ namespace cmdline {
 			const char* value = getOption(name);
 			return castByNative<T>(value);
 		}
+
 		template <typename T> const T         getOptionAs(string name) { return getOptionAs<T>(name.c_str()); }
 		template <typename T> const vector<T> getOptionValuesAs(string name) { return getOptionValuesAs<T>(name.c_str()); };
 		template <typename T> const vector<T> getOptionValuesAs(const char* name);
@@ -136,8 +145,10 @@ namespace cmdline {
 	protected:
 		static CmdLine pGetInstance(int argc, char** argv, Parameters parms, bool sensitive = false, bool strict = false);
 		CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
+		CmdLine(int argc, char **argv, Parameters parms, bool sensitive) : CmdLine(argc, argv, parms, sensitive, false) {}
 	private:
-		template <typename T> T castByNative(const char* value);
+		#include "templates.hpp"
+		// template <typename T> T castByNative(const char* value);
 	};
 	class CmdLineI : public CmdLine {
 	public:

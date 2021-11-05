@@ -1,5 +1,5 @@
 #pragma once
-	template <typename T> T CmdLine::castByNative(const char* value) {
+	template <typename T> T castByNative(const char* value) {
 		if constexpr (is_same<T, const char*>::value)      return value;
 		if constexpr (is_same<T, char*>::value)            return (char*)value;
 
@@ -20,7 +20,7 @@
 		if constexpr (is_same<T, TYPE_FILE>::value)         return _cmdline::validateDir(value);
 		if constexpr (is_same<T, TYPE_BOOL>::value) {
 			if (value == 0x0) return false;
-			return _cmdline::makeBoolean(value);
+			return _cmdline::valMakeBoolean(value);
 		}
 		throw CmdLineInvalidTypeException(typeid(T).name());
 	}

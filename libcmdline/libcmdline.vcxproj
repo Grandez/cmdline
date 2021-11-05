@@ -42,6 +42,7 @@
     <ClCompile Include="src\argument.cpp" />
     <ClCompile Include="src\cmdline.cpp" />
     <ClCompile Include="src\cmdline_exceptions.cpp" />
+    <ClCompile Include="src\cmdline_flavors.cpp" />
     <ClCompile Include="src\commandline.cpp" />
     <ClCompile Include="src\parameter_tree.cpp" />
     <ClCompile Include="src\parm.cpp" />
@@ -119,7 +120,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)include;$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)/include;$(SolutionDir)include;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
     <OutDir>$(SolutionDir)\libs\</OutDir>
     <TargetName>libcmdline64</TargetName>

@@ -397,4 +397,11 @@ namespace _cmdline {
 		memcpy(&t, ptr, sizeof(struct tm));
 		return t;
 	}
+	bool  valMakeBoolean(const char *value) {
+		return makeBoolean(value);
+	}
+ 	bool  valMakeBoolean(std::string value) {
+		return makeBoolean(value);
+	}
+
 }

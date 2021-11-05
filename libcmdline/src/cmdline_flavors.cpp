@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <ctype.h>
 
-#include "tools.h"
+#include "tools.hpp"
 
 #include "cmdline.hpp"
 #include "commandline.hpp"

@@ -1,4 +1,4 @@
-﻿Build started 05/11/2021 18:45:13.
+﻿Build started 05/11/2021 19:31:00.
 Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
@@ -47,42 +47,20 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\tes
          x64\Release\validationsTest.obj
          P:\C\cmdline\libs\libcmdline64.lib
          libcmdline64.lib(parm.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
-     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
-     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
-     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
-     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: bool __cdecl cmdline::CmdLine::castByNative<bool>(char const *)" (??$castByNative@_N@CmdLine@cmdline@@AEAA_NPEBD@Z)
-     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
-     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
-     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::filesystem::path __cdecl cmdline::CmdLine::castByNative<class std::filesystem::path>(char const *)" (??$castByNative@Vpath@filesystem@std@@@CmdLine@cmdline@@AEAA?AVpath@filesystem@std@@PEBD@Z)
-     1>caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::CmdLineI(int,char * *,class std::vector<class cmdline::Parm,class std::allocator<class cmdline::Parm> >)" (??0CmdLineI@cmdline@@QEAA@HPEAPEADV?$vector@VParm@cmdline@@V?$allocator@VParm@cmdline@@@std@@@std@@@Z)
-     1>caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::~CmdLineI(void)" (??1CmdLineI@cmdline@@QEAA@XZ)
-     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: long __cdecl cmdline::CmdLine::castByNative<long>(char const *)" (??$castByNative@J@CmdLine@cmdline@@AEAAJPEBD@Z)
-     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: int __cdecl cmdline::CmdLine::castByNative<int>(char const *)" (??$castByNative@H@CmdLine@cmdline@@AEAAHPEBD@Z)
-     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: float __cdecl cmdline::CmdLine::castByNative<float>(char const *)" (??$castByNative@M@CmdLine@cmdline@@AEAAMPEBD@Z)
-     1>P:\C\cmdline\x64\Release\testcmdline.exe : fatal error LNK1120: 10 unresolved externals
-     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)) -- FAILED.
+         Generating code
+         Finished generating code
+         testcmdline.vcxproj -> P:\C\cmdline\x64\Release\testcmdline.exe
+       _CopyFilesMarkedCopyLocal:
+         Copying file from "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest_main.pdb" to "P:\C\cmdline\x64\Release\gtest_main.pdb".
+         Copying file from "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest.pdb" to "P:\C\cmdline\x64\Release\gtest.pdb".
+         Creating "P:\C\cmdline\testcmdline\x64\Release\testcmdline.vcxproj.CopyComplete" because "AlwaysCreate" was specified.
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\testcmdline.tlog\unsuccessfulbuild".
+         Touching "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
+     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)).
 
-Build FAILED.
-
-       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
-       (Link target) -> 
-         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
-         TypesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
-         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
-         TypesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
-         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: bool __cdecl cmdline::CmdLine::castByNative<bool>(char const *)" (??$castByNative@_N@CmdLine@cmdline@@AEAA_NPEBD@Z)
-         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
-         TypesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
-         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::filesystem::path __cdecl cmdline::CmdLine::castByNative<class std::filesystem::path>(char const *)" (??$castByNative@Vpath@filesystem@std@@@CmdLine@cmdline@@AEAA?AVpath@filesystem@std@@PEBD@Z)
-         caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::CmdLineI(int,char * *,class std::vector<class cmdline::Parm,class std::allocator<class cmdline::Parm> >)" (??0CmdLineI@cmdline@@QEAA@HPEAPEADV?$vector@VParm@cmdline@@V?$allocator@VParm@cmdline@@@std@@@std@@@Z)
-         caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::~CmdLineI(void)" (??1CmdLineI@cmdline@@QEAA@XZ)
-         TypesTest.obj : error LNK2001: unresolved external symbol "private: long __cdecl cmdline::CmdLine::castByNative<long>(char const *)" (??$castByNative@J@CmdLine@cmdline@@AEAAJPEBD@Z)
-         TypesTest.obj : error LNK2001: unresolved external symbol "private: int __cdecl cmdline::CmdLine::castByNative<int>(char const *)" (??$castByNative@H@CmdLine@cmdline@@AEAAHPEBD@Z)
-         TypesTest.obj : error LNK2001: unresolved external symbol "private: float __cdecl cmdline::CmdLine::castByNative<float>(char const *)" (??$castByNative@M@CmdLine@cmdline@@AEAAMPEBD@Z)
-         P:\C\cmdline\x64\Release\testcmdline.exe : fatal error LNK1120: 10 unresolved externals
-
+Build succeeded.
     0 Warning(s)
-    14 Error(s)
+    0 Error(s)
 
-Time Elapsed 00:00:15.94
+Time Elapsed 00:00:16.05

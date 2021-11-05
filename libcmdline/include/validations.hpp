@@ -5,7 +5,6 @@
 #include <filesystem>
 
 #include "types.hpp"
-// #include "cmdline.hpp"
 
 using namespace std;
 
@@ -27,6 +26,10 @@ namespace _cmdline {
     int         makeInteger      (const char* value);
     float       makeFloat        (const char* value);
     struct tm   makeTm           (const char* value);
+    // Bridge
+	bool  valMakeBoolean(const char *value);
+ 	bool  valMakeBoolean(std::string value);
+
 /*
     template <typename T>
     T        getValue(const char* value, cmdline::Type type);
