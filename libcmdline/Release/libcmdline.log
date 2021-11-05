@@ -1,0 +1,43 @@
+﻿Build started 05/11/2021 2:07:02.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\libcmdline\libcmdline.vcxproj" on node 3 (Rebuild target(s)).
+     1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+         Creating directory "Release\libcmdline.tlog\".
+     1>InitializeBuildStatus:
+         Creating "Release\libcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"Release\\" /Fd"P:\C\cmdline\\libs\libcmdline32.lib.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt include\interface.cpp src\argument.cpp src\cmdline.cpp src\cmdline_exceptions.cpp src\commandline.cpp src\parameter_tree.cpp src\parm.cpp src\tools.cpp src\validations.cpp
+         interface.cpp
+         argument.cpp
+         cmdline.cpp
+         cmdline_exceptions.cpp
+         commandline.cpp
+         parameter_tree.cpp
+         parm.cpp
+         tools.cpp
+         validations.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\Lib.exe /OUT:"P:\C\cmdline\\libs\libcmdline32.lib.lib" /NOLOGO /MACHINE:X86 /LTCG Release\interface.obj
+         Release\argument.obj
+         Release\cmdline.obj
+         Release\cmdline_exceptions.obj
+         Release\commandline.obj
+         Release\parameter_tree.obj
+         Release\parm.obj
+         Release\tools.obj
+         Release\validations.obj
+         libcmdline.vcxproj -> P:\C\cmdline\libs\libcmdline32.lib.lib
+       FinalizeBuildStatus:
+         Deleting file "Release\libcmdline.tlog\unsuccessfulbuild".
+         Touching "Release\libcmdline.tlog\libcmdline.lastbuildstate".
+     1>Done Building Project "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+       "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target) (1) ->
+       (PrepareForBuild target) -> 
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:10.83

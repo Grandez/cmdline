@@ -1,0 +1,23 @@
+﻿Build started 05/11/2021 2:07:13.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" on node 2 (Rebuild target(s)).
+     1>PrepareForBuild:
+         Creating directory "Release\drivercm.fb0009be.tlog\".
+       InitializeBuildStatus:
+         Creating "Release\drivercm.fb0009be.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"Release\\" /Fd"Release\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt drivercmdline_cpp.cpp
+         drivercmdline_cpp.cpp
+     1>P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.cpp(7,22): error C2512: 'cmdline::CmdLine': no appropriate default constructor available
+       P:\C\snippets\libcmdline\include\cmdline.hpp(72,8): message : see declaration of 'cmdline::CmdLine'
+     1>Done Building Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+       "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" (Rebuild target) (1) ->
+       (ClCompile target) -> 
+         P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.cpp(7,22): error C2512: 'cmdline::CmdLine': no appropriate default constructor available
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.35
