@@ -5,13 +5,13 @@
 
 
 typedef enum _Type {
-	STRING, CHAR, BOOL,
+	STRING=0, CHAR, BOOL,
 	NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL,
 	DATE, TIME, DATETIME, TMS,
 	DIR, DIR_EXISTS, FILES, FILE_EXISTS,
 	FLAG
 } Type;
-typedef enum _logical { FALSE, TRUE } logical;
+typedef enum _logical { UNCHECKED=0, CHECKED=-1, UNKNOW=1 } logical;
 
 typedef enum { DEFAULT, ENV, CMDLINE, CODE, AUTO } Source;
 
@@ -35,10 +35,6 @@ typedef struct _Flag {
 	const char* name;
 	logical value;
 } Flag;
-
-typedef struct struct_cmdline {
-	char (*hashFlag)(const char* name);
-} CmdLine;
 
 //JGG Ajustar a diferentes sistemas
 /*

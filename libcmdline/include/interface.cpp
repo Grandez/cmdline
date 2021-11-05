@@ -1,92 +1,124 @@
-#include "cmdline.h"
+#include <iostream>
 #include "cmdline.hpp"
+#include "cmdline.h"
+#include "cmdline_exceptions.hpp"
+#include "cmdline.h"
 #include "types.h"
 #include "types.hpp"
+#include "interface.hpp"
 #include "cmdline_errno.h"
+#include "tools.hpp"
 
-using namespace cmdline;
+#ifdef _WIN32
+// Pointer is not null
+// Theres is enoguh space
+// it is enum becauase is C
+#pragma warning(disable : 26812 6011 6386)
+#endif
 
-static cmdline::CmdLine* cmdLine;
-sCmdLine scmdline;
+static cmdline::CmdLine* _cmdLine = nullptr;
+static CmdLine* _pCmdLine = nullptr;
 
-void checkException(exception ex) {
-
+template <typename T> void * checkException(T& ex) {
+    /*
+    if      constexpr (is_same<T, cmdline::HelpRequested>::ex)                      errno = ECMDLINE_HELP;
+    else if constexpr (is_same<T, cmdline::HelpDetailedRequested>::ex)              errno = ECMDLINE_HELP_DETAIL;
+    else if constexpr (is_same<T, cmdline::CmdLineNotFoundException>::ex)           errno = ECMDLINE_NOTFND;
+    else if constexpr (is_same<T, cmdline::CmdLineInvalidTypeException>::ex)        errno = ECMDLINE_INVTYPE;
+    else if constexpr (is_same<T, cmdline::CmdLineParameterException>::ex)          errno = ECMDLINE_INVPARM;
+    else if constexpr (is_same<T, cmdline::CmdLineValueException>::ex)              errno = ECMDLINE_INVVALUE;
+    else if constexpr (is_same<T, cmdline::CmdLineDuplicateArgumentException>::ex)  errno = ECMDLINE_DUP;
+    else                                                                    errno = ECMDLINE;
+    */
+        errno = ECMDLINE;
+    return NULL;
 }
-Flag** makeFlag(Flags flags) {
-    int i;
+cmdline::Parameters makeParameters(ParmDef cparms[]) {
+    vector <cmdline::Parm> parms;
+    ParmDef *cp = cparms;
+    while (cp->name) {
+        bool b = (cp->multiple == CHECKED) ? "1" : "0";
+        cmdline::Type t = cmdline::Type(cp->type);
+        parms.push_back(cmdline::Parm(cp->name, cp->value, t, b));
+        cp++;
+    }
+
+    /*
+    
+    int i = 0;
+    ParmDef *pp = *cparms;
+    while (pp) {
+        bool b = (cparms[i]->multiple == TRUE) ? "1" : "0";
+        cmdline::Type t = cmdline::Type(cparms[i]->type);
+        parms.push_back(cmdline::Parm(cparms[i]->name, cparms[i]->value,t,b));
+        i++;
+    }
+    */
+    return parms;
+}
+Flag** makeFlags(cmdline::Flags flags) {
+    int i = 0;
     Flag* tmp;
-    Flag** res = (Flag **) malloc((flags.size() + 1) * sizeof(Flag *));
-    for (i = 0; i < flags.size(); i++) {
+    Flag** res = (Flag**)malloc((flags.size() + 1) * sizeof(Flag*));
+    for (auto it : flags) {
         tmp = (Flag*)malloc(sizeof(Flag));
-        tmp->name = strdup(flags[i].name);
+        if (!tmp) {
+            errno = ECMDLINE_NOMEM;
+            return NULL;
+        }
+        tmp->name = strdup(it.first.c_str());
+        tmp->value = (it.second) ? CHECKED : UNCHECKED;
+        res[i++] = tmp;
+    }
+    res[i] = 0x0;
+/*
+    for (i = 0; i < flags.size(); i++) {
+
+        
         tmp->value = (flags[i].value) ? TRUE : FALSE;
         res[i] = tmp;
     }
-    res[i] = 0x0;
+    */
+//    res[i] = 0x0;
     return res;
 }
-char cHashflag(const char* name) {
+
+logical cHashflag(const char* name) {
     try {
-        bool b = cmdLine->hasFlag(name);
-        return (b) ? '1' : '0';
+        bool b = _cmdLine->hasFlag(name);
+        return (b) ? CHECKED : UNCHECKED;
     }
     catch (exception ex) {
         checkException(ex);
-        return NULL;
+        return UNKNOW;
     }
 }
-Flag *cGetDefaultFlags)  (logical all) {
+Flag **cGetDefaultFlags  (logical all) {
     try {
-        bool b = (all == FALSE) ? false : true;
-        Flags flags = cmdLine->cGegtDefaultFlags(b);
-        return makeFlag(flags);
+        bool b = (all == CHECKED) ? false : true;
+        cmdline::Flags flags = _cmdLine->getDefaultFlags(b);
+        return makeFlags(flags);
     }
     catch (exception ex) {
-        checkException(ex);
-        return NULL;
+        return (Flag **) checkException(ex);
     }
-
 }
-typedef struct struct_cmdline {
 
-    Flag* (*getDefaultFlags)  (char all);
-    logical(*hasOption)        (const char* name);
-    logical(*isOptionMultiple) (const char* name);
-} sCmdLine;
-
-
-sCmdLine *create() {
-    sCmdLine *ptr;
-
+extern "C" CmdLine * cmdline_create(int argc, char** arg, ParmDef cparms[]) {
+    if (_pCmdLine != nullptr) return _pCmdLine;
+    cmdline::Parameters parms = makeParameters(cparms);
     try {
-        cmdLine = new cmdline::CmdLine();
-        scmdline.hashFlag = &cHashflag;
+        _cmdLine = new cmdline::CmdLine(argc, arg, parms);
+        _pCmdLine = (CmdLine*)malloc(sizeof(CmdLine));
+        _pCmdLine->hashFlag = &cHashflag;
+        _pCmdLine->getDefaultFlags = &cGetDefaultFlags;
 
-        return &scmdline;
+        return _pCmdLine;
     }
     catch (exception ex) {
-        errno = ERR_CMDLINE_EXCEPTION;
-        return NULL;
+        return (CmdLine *) checkException(ex);
     }
 }
-
-/*
-bool  hasFlag(const char* name);
-bool  hasFlag(string name);
-Flags getDefaultFlags(bool all = true);
-Flags getCurrentFlags(bool all = true);
-*/
-
-// using namespace cmdline;
-
-/*
-void callMyclassSendCommandToSerialDevice(int Command, int Parameters, int DeviceId)
-{
-    // May need try/catch here.
-    myclass->sendCommandToSerialDevice(Command, Parameters, DeviceId);
-}
-*/
-void destroy()
-{
-    delete cmdLine;
+extern "C" void cmdline_delete() {
+    std::cout << "delete\n";
 }

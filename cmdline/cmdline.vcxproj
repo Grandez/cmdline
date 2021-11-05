@@ -29,7 +29,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a2fc53ff-3e64-47ad-b756-c9287464f362}</ProjectGuid>
+    <ProjectGuid>{4976BFE5-1D66-47CF-9604-13738BB7D926}</ProjectGuid>
     <RootNamespace>cmdline</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

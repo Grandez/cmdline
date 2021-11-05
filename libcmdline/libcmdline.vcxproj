@@ -26,7 +26,9 @@
     <ClInclude Include="include\cmdline_exceptions.hpp" />
     <ClInclude Include="include\commandline.hpp" />
     <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\defines.hpp" />
     <ClInclude Include="include\group.hpp" />
+    <ClInclude Include="include\interface.hpp" />
     <ClInclude Include="include\msg_locale.hpp" />
     <ClInclude Include="include\parameter_tree.hpp" />
     <ClInclude Include="include\tools.hpp" />

@@ -26,7 +26,7 @@ namespace cmdline {
 		const char* name;              // Name of parameter
 		Type type = Type::STRING;  // Type
 		char* value;   // default value
-		bool multiple;   // Allow multiple values?
+		bool multiple = false;   // Allow multiple values?
 		Parm() { name = nullptr; } // default
 		Parm(const char* name);
 		Parm(const char* name, const char* value);
@@ -71,7 +71,7 @@ namespace cmdline {
 
 	class CmdLine {
 	public:
-		CmdLine(); 
+		CmdLine(int argc, char **argv, Parameters parms); 
 		~CmdLine(); 
 		// Arguments
 		vector<const char*> args();

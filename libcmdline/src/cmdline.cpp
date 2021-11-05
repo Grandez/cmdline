@@ -9,7 +9,7 @@
 using namespace _cmdline;
 
 namespace cmdline {
-
+	/*
 	class CmdLineImpl {
 	public:
 		_cmdline::CommandLine* _commandLine = new _cmdline::CommandLine();
@@ -24,11 +24,12 @@ namespace cmdline {
 	private:
 		  _cmdline::CommandLine* engine_;
 	};
+	*/
 	_cmdline::CommandLine* _commandLine;
 
-	CmdLine::CmdLine() {
+	CmdLine::CmdLine(int argc, char** argv, Parameters parms) {
 		std::cout << "Crea\n";
-		_cmdline::CommandLine* _commandLine = new _cmdline::CommandLine();
+		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
 	}
 	CmdLine::~CmdLine() {
 		std::cout << "Destruye\n";

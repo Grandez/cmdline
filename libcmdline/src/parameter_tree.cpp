@@ -68,17 +68,4 @@ namespace _cmdline {
 		auto it = children.find(letter);
 		return (it == children.end() ? nullptr : it->second);
 	}
-
-	std::string ParameterTree::getName(const std::string parm, int pos) {
-		// Recibre help
-		// h existe, es el propio
-	/*
-		// La cadena se ha acabado pero no hay duda
-		if (parm.at(pos + 1) == 0x0 && this->branchs == 1) return (concatena lo anterior y lo siguiente)
-		if (this->hasChild(parm.at(pos))) {
-			getName(parm, pos + 1);
-		}
-		*/
-		return (" ");
-	}
 }

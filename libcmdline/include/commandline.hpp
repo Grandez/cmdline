@@ -6,13 +6,14 @@
 
 #include "types.hpp"
 #include "group.hpp"
+#include "parameter_tree.hpp"
 
 using namespace cmdline;
 
 namespace _cmdline {
 	class CommandLine {
 	public:
-		CommandLine();
+		CommandLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
 		~CommandLine();
 
 		vector<const char*> getArgs();
@@ -43,11 +44,28 @@ namespace _cmdline {
 		Group  options;
 		Group  flags;
 		Group  defines;
+		void  parse(const int argc, char** argv);
+		char* addValueToOption(const char* option, char* prev);
+		char* checkOption(const char* option);
+		char* checkFlag(const char* flag);
+		char* checkParameter(ParameterTree* root[], const char* parm);
+		void  checkAlreadySet(Group* group, const char* what);
+
+		char* updateFlag(const char* flag, const char* prev, bool value);
+		void  updateFlagItem(const char* flag, const char* prev, bool value);
+		char* updateOption(const char* option, char* value);
+		char* updateDefinition(const char* def);
+		void  updateFromEnv();
+		void  udpateArgsFromEnv(Group& parms, const char* prfx);
 
 		Flags     getFlags(bool active, bool set);
 		Argument& find(Group* group, const char* what);
 		Argument* findPointer(Group* group, const char* what);
 		const char* getValue(Group* group, const char* what);
 		Options  getOptionsValue(bool def);
+		void preInit(Parameters parms, bool init = true);
+		void  postInit();
+		void  loadHelp();
+		
 	};
 }

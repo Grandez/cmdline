@@ -1,5 +1,8 @@
 // #define _VALIDATIONS_CODE_
+#ifdef _WIN32
 #pragma warning(disable : 4996)
+#endif
+
 
 #include <ctime>
 #include <cstring>
