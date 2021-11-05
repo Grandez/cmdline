@@ -1,287 +1,88 @@
-﻿Build started 05/11/2021 2:08:15.
+﻿Build started 05/11/2021 18:45:13.
 Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Rebuild target(s)).
-     1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1967,5): warning : The referenced project '..\cmdline_cpp\cmdline_cpp.vcxproj' does not exist.
-     1>PrepareForBuild:
-         Creating directory "P:\C\cmdline\x64\Release\".
-         Creating directory "x64\Release\testcmdline.tlog\".
+     1>_PrepareForClean:
+         Deleting file "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
        InitializeBuildStatus:
-         Creating "x64\Release\testcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "x64\Release\testcmdline.tlog\unsuccessfulbuild".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /O2 /D X64 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yc"pch.h" /Fp"x64\Release\testcmdline.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt pch.cpp
          pch.cpp
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /O2 /D X64 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yu"pch.h" /Fp"x64\Release\testcmdline.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt argumentTest.cpp defaultValuesTest.cpp exceptionsDefaultTest.cpp exceptionsTest.cpp exceptionsValueTest.cpp mainTest.cpp caseTest.cpp defaultsTest.cpp definesTest.cpp flagsTest.cpp helpTest.cpp inputTest.cpp optionsTest.cpp TypesTest.cpp "$tool.cpp" test_tree.cpp validationsTest.cpp
          argumentTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          defaultValuesTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          exceptionsDefaultTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          exceptionsTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          exceptionsValueTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          mainTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          caseTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          defaultsTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          definesTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          flagsTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          helpTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          inputTest.cpp
-     1>P:\C\cmdline\testcmdline\inputTest.cpp(6,10): fatal error C1083: Cannot open include file: '../cmdline/include/tools.h': No such file or directory
          optionsTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          TypesTest.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          $tool.cpp
-     1>P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
          test_tree.cpp
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(22,8): error C3646: 'type': unknown override specifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(22,13): error C2059: syntax error: '='
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(22,15): error C2653: 'Type': is not a class or namespace name
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(22,27): error C2238: unexpected token(s) preceding ';'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(28,45): error C2061: syntax error: identifier 'Type'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(28,7): error C2535: 'cmdline::Parm::Parm(const char *,const char *)': member function already defined or declared
-       P:\C\cmdline\cmdline\include\cmdline.hpp(27): message : see declaration of 'cmdline::Parm::Parm'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(47,32): error C2061: syntax error: identifier 'Type'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(49,51): error C2061: syntax error: identifier 'Type'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(49,13): error C2535: 'cmdline::ParmOption::ParmOption(const char *,const char *)': member function already defined or declared
-       P:\C\cmdline\cmdline\include\cmdline.hpp(46): message : see declaration of 'cmdline::ParmOption::ParmOption'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(47,70): error C2065: 'type': undeclared identifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(48,86): error C2653: 'Type': is not a class or namespace name
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(48,92): error C2065: 'STRING': undeclared identifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(49,105): error C2065: 'type': undeclared identifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(65,9): error C3646: 'getDefaultFlags': unknown override specifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(65,24): error C2059: syntax error: '('
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(65,41): error C2238: unexpected token(s) preceding ';'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(66,9): error C3646: 'getCurrentFlags': unknown override specifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(66,24): error C2059: syntax error: '('
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(66,41): error C2238: unexpected token(s) preceding ';'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(80,13): error C3646: 'getDefaultOptions': unknown override specifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(80,32): error C2059: syntax error: '('
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(80,34): error C2238: unexpected token(s) preceding ';'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(81,13): error C3646: 'getCurrentOptions': unknown override specifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(81,32): error C2059: syntax error: '('
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(81,34): error C2238: unexpected token(s) preceding ';'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(111,59): error C2061: syntax error: identifier 'Type'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(209,22): error C2061: syntax error: identifier 'Type'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(112,12): error C3861: 't': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(113,9): error C3861: 'Type': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(113,50): error C3861: 'name': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(114,9): error C3861: 'Type': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(114,53): error C3861: 'name': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(115,9): error C3861: 'Type': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(115,46): error C3861: 'name': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(116,9): error C3861: 'Type': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(116,48): error C3861: 'name': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(118,10): error C3861: 'CmdLineInvalidTypeException': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(118,37): message : 'CmdLineInvalidTypeException': function declaration must be available as none of the arguments depend on a template parameter
-       P:\C\cmdline\cmdline\include\cmdline.hpp(111,41): message : This diagnostic occurred in the compiler generated function 'const T cmdline::CmdLine::getOptionFromType(void)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(181,38): error C2039: 'Type': is not a member of 'cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(18): message : see declaration of 'cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(180,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castValue(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(188,29): error C3861: 'TYPE_STRING': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(189,29): error C3861: 'TYPE_NUMBER': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(189,73): error C2039: 'validateNumber': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(190,29): error C3861: 'TYPE_LONG': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(190,73): error C2039: 'validateNumber': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(191,29): error C3861: 'TYPE_INT': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(191,73): error C2039: 'makeInteger': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(192,29): error C3861: 'TYPE_DECIMAL': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(192,73): error C2039: 'validateDecimal': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(193,29): error C3861: 'TYPE_FLOAT': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(193,73): error C2039: 'makeFloat': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(194,29): error C3861: 'TYPE_DOUBLE': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(194,73): error C2039: 'validateDecimal': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(195,29): error C3861: 'TYPE_DATE': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(195,73): error C2039: 'makeTm': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(196,29): error C3861: 'TYPE_TIME': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(196,73): error C2039: 'makeTm': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(197,29): error C3861: 'TYPE_DATETIME': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(197,73): error C2039: 'makeTm': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(198,29): error C3861: 'TYPE_TMS': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(198,73): error C2039: 'validateTimestamp': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(199,29): error C3861: 'TYPE_LONGNUMBER': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(199,73): error C2039: 'validateLongNumber': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(200,29): error C3861: 'TYPE_LONGDECIMAL': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(200,73): error C2039: 'validateLongDecimal': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(201,29): error C3861: 'TYPE_DIR': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(201,73): error C2039: 'validateFile': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(202,29): error C3861: 'TYPE_FILE': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(202,73): error C2039: 'validateDir': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(203,29): error C3861: 'TYPE_BOOL': identifier not found
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(205,22): error C2039: 'makeBoolean': is not a member of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(13): message : see declaration of '_cmdline'
-       P:\C\cmdline\cmdline\include\cmdline.hpp(184,27): message : This diagnostic occurred in the compiler generated function 'T cmdline::CmdLine::castByNative(const char *)'
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(210,8): error C2065: 't': undeclared identifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(210,13): error C2653: 'Type': is not a class or namespace name
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(210,19): error C2065: 'STRING': undeclared identifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(210,41): error C2065: 'value': undeclared identifier
-     1>P:\C\cmdline\cmdline\include\cmdline.hpp(227,10): error C3861: 'CmdLineInvalidTypeException': identifier not found
          validationsTest.cpp
-     1>P:\C\cmdline\cmdline\include\validations.h(7,10): fatal error C1083: Cannot open include file: 'types.h': No such file or directory
          Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\x64\Release\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest_main.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\x64\Release\testcmdline.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\x64\Release\testcmdline.lib" /MACHINE:X64 /SAFESEH:NO x64\Release\argumentTest.obj
+         x64\Release\defaultValuesTest.obj
+         x64\Release\exceptionsDefaultTest.obj
+         x64\Release\exceptionsTest.obj
+         x64\Release\exceptionsValueTest.obj
+         x64\Release\mainTest.obj
+         x64\Release\pch.obj
+         x64\Release\caseTest.obj
+         x64\Release\defaultsTest.obj
+         x64\Release\definesTest.obj
+         x64\Release\flagsTest.obj
+         x64\Release\helpTest.obj
+         x64\Release\inputTest.obj
+         x64\Release\optionsTest.obj
+         x64\Release\TypesTest.obj
+         "x64\Release\$tool.obj"
+         x64\Release\test_tree.obj
+         x64\Release\validationsTest.obj
+         P:\C\cmdline\libs\libcmdline64.lib
+         libcmdline64.lib(parm.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
+     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
+     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
+     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
+     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: bool __cdecl cmdline::CmdLine::castByNative<bool>(char const *)" (??$castByNative@_N@CmdLine@cmdline@@AEAA_NPEBD@Z)
+     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
+     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
+     1>defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::filesystem::path __cdecl cmdline::CmdLine::castByNative<class std::filesystem::path>(char const *)" (??$castByNative@Vpath@filesystem@std@@@CmdLine@cmdline@@AEAA?AVpath@filesystem@std@@PEBD@Z)
+     1>caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::CmdLineI(int,char * *,class std::vector<class cmdline::Parm,class std::allocator<class cmdline::Parm> >)" (??0CmdLineI@cmdline@@QEAA@HPEAPEADV?$vector@VParm@cmdline@@V?$allocator@VParm@cmdline@@@std@@@std@@@Z)
+     1>caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::~CmdLineI(void)" (??1CmdLineI@cmdline@@QEAA@XZ)
+     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: long __cdecl cmdline::CmdLine::castByNative<long>(char const *)" (??$castByNative@J@CmdLine@cmdline@@AEAAJPEBD@Z)
+     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: int __cdecl cmdline::CmdLine::castByNative<int>(char const *)" (??$castByNative@H@CmdLine@cmdline@@AEAAHPEBD@Z)
+     1>TypesTest.obj : error LNK2001: unresolved external symbol "private: float __cdecl cmdline::CmdLine::castByNative<float>(char const *)" (??$castByNative@M@CmdLine@cmdline@@AEAAMPEBD@Z)
+     1>P:\C\cmdline\x64\Release\testcmdline.exe : fatal error LNK1120: 10 unresolved externals
      1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
        "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
-       (ResolveProjectReferences target) -> 
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1967,5): warning : The referenced project '..\cmdline_cpp\cmdline_cpp.vcxproj' does not exist.
+       (Link target) -> 
+         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
+         TypesTest.obj : error LNK2001: unresolved external symbol "private: struct tm __cdecl cmdline::CmdLine::castByNative<struct tm>(char const *)" (??$castByNative@Utm@@@CmdLine@cmdline@@AEAA?AUtm@@PEBD@Z)
+         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
+         TypesTest.obj : error LNK2001: unresolved external symbol "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl cmdline::CmdLine::castByNative<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(char const *)" (??$castByNative@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CmdLine@cmdline@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z)
+         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: bool __cdecl cmdline::CmdLine::castByNative<bool>(char const *)" (??$castByNative@_N@CmdLine@cmdline@@AEAA_NPEBD@Z)
+         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
+         TypesTest.obj : error LNK2001: unresolved external symbol "private: char * __cdecl cmdline::CmdLine::castByNative<char *>(char const *)" (??$castByNative@PEAD@CmdLine@cmdline@@AEAAPEADPEBD@Z)
+         defaultValuesTest.obj : error LNK2001: unresolved external symbol "private: class std::filesystem::path __cdecl cmdline::CmdLine::castByNative<class std::filesystem::path>(char const *)" (??$castByNative@Vpath@filesystem@std@@@CmdLine@cmdline@@AEAA?AVpath@filesystem@std@@PEBD@Z)
+         caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::CmdLineI(int,char * *,class std::vector<class cmdline::Parm,class std::allocator<class cmdline::Parm> >)" (??0CmdLineI@cmdline@@QEAA@HPEAPEADV?$vector@VParm@cmdline@@V?$allocator@VParm@cmdline@@@std@@@std@@@Z)
+         caseTest.obj : error LNK2001: unresolved external symbol "public: __cdecl cmdline::CmdLineI::~CmdLineI(void)" (??1CmdLineI@cmdline@@QEAA@XZ)
+         TypesTest.obj : error LNK2001: unresolved external symbol "private: long __cdecl cmdline::CmdLine::castByNative<long>(char const *)" (??$castByNative@J@CmdLine@cmdline@@AEAAJPEBD@Z)
+         TypesTest.obj : error LNK2001: unresolved external symbol "private: int __cdecl cmdline::CmdLine::castByNative<int>(char const *)" (??$castByNative@H@CmdLine@cmdline@@AEAAHPEBD@Z)
+         TypesTest.obj : error LNK2001: unresolved external symbol "private: float __cdecl cmdline::CmdLine::castByNative<float>(char const *)" (??$castByNative@M@CmdLine@cmdline@@AEAAMPEBD@Z)
+         P:\C\cmdline\x64\Release\testcmdline.exe : fatal error LNK1120: 10 unresolved externals
 
+    0 Warning(s)
+    14 Error(s)
 
-       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
-       (ClCompile target) -> 
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\testcmdline\inputTest.cpp(6,10): fatal error C1083: Cannot open include file: '../cmdline/include/tools.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\include\cmdline.hpp(4,10): fatal error C1083: Cannot open include file: 'cmdline_types.h': No such file or directory
-         P:\C\cmdline\cmdline\include\cmdline.hpp(22,8): error C3646: 'type': unknown override specifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(22,13): error C2059: syntax error: '='
-         P:\C\cmdline\cmdline\include\cmdline.hpp(22,15): error C2653: 'Type': is not a class or namespace name
-         P:\C\cmdline\cmdline\include\cmdline.hpp(22,27): error C2238: unexpected token(s) preceding ';'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(28,45): error C2061: syntax error: identifier 'Type'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(28,7): error C2535: 'cmdline::Parm::Parm(const char *,const char *)': member function already defined or declared
-         P:\C\cmdline\cmdline\include\cmdline.hpp(47,32): error C2061: syntax error: identifier 'Type'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(49,51): error C2061: syntax error: identifier 'Type'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(49,13): error C2535: 'cmdline::ParmOption::ParmOption(const char *,const char *)': member function already defined or declared
-         P:\C\cmdline\cmdline\include\cmdline.hpp(47,70): error C2065: 'type': undeclared identifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(48,86): error C2653: 'Type': is not a class or namespace name
-         P:\C\cmdline\cmdline\include\cmdline.hpp(48,92): error C2065: 'STRING': undeclared identifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(49,105): error C2065: 'type': undeclared identifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(65,9): error C3646: 'getDefaultFlags': unknown override specifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(65,24): error C2059: syntax error: '('
-         P:\C\cmdline\cmdline\include\cmdline.hpp(65,41): error C2238: unexpected token(s) preceding ';'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(66,9): error C3646: 'getCurrentFlags': unknown override specifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(66,24): error C2059: syntax error: '('
-         P:\C\cmdline\cmdline\include\cmdline.hpp(66,41): error C2238: unexpected token(s) preceding ';'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(80,13): error C3646: 'getDefaultOptions': unknown override specifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(80,32): error C2059: syntax error: '('
-         P:\C\cmdline\cmdline\include\cmdline.hpp(80,34): error C2238: unexpected token(s) preceding ';'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(81,13): error C3646: 'getCurrentOptions': unknown override specifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(81,32): error C2059: syntax error: '('
-         P:\C\cmdline\cmdline\include\cmdline.hpp(81,34): error C2238: unexpected token(s) preceding ';'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(111,59): error C2061: syntax error: identifier 'Type'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(209,22): error C2061: syntax error: identifier 'Type'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(112,12): error C3861: 't': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(113,9): error C3861: 'Type': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(113,50): error C3861: 'name': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(114,9): error C3861: 'Type': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(114,53): error C3861: 'name': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(115,9): error C3861: 'Type': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(115,46): error C3861: 'name': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(116,9): error C3861: 'Type': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(116,48): error C3861: 'name': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(118,10): error C3861: 'CmdLineInvalidTypeException': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(181,38): error C2039: 'Type': is not a member of 'cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(188,29): error C3861: 'TYPE_STRING': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(189,29): error C3861: 'TYPE_NUMBER': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(189,73): error C2039: 'validateNumber': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(190,29): error C3861: 'TYPE_LONG': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(190,73): error C2039: 'validateNumber': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(191,29): error C3861: 'TYPE_INT': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(191,73): error C2039: 'makeInteger': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(192,29): error C3861: 'TYPE_DECIMAL': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(192,73): error C2039: 'validateDecimal': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(193,29): error C3861: 'TYPE_FLOAT': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(193,73): error C2039: 'makeFloat': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(194,29): error C3861: 'TYPE_DOUBLE': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(194,73): error C2039: 'validateDecimal': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(195,29): error C3861: 'TYPE_DATE': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(195,73): error C2039: 'makeTm': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(196,29): error C3861: 'TYPE_TIME': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(196,73): error C2039: 'makeTm': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(197,29): error C3861: 'TYPE_DATETIME': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(197,73): error C2039: 'makeTm': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(198,29): error C3861: 'TYPE_TMS': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(198,73): error C2039: 'validateTimestamp': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(199,29): error C3861: 'TYPE_LONGNUMBER': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(199,73): error C2039: 'validateLongNumber': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(200,29): error C3861: 'TYPE_LONGDECIMAL': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(200,73): error C2039: 'validateLongDecimal': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(201,29): error C3861: 'TYPE_DIR': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(201,73): error C2039: 'validateFile': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(202,29): error C3861: 'TYPE_FILE': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(202,73): error C2039: 'validateDir': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(203,29): error C3861: 'TYPE_BOOL': identifier not found
-         P:\C\cmdline\cmdline\include\cmdline.hpp(205,22): error C2039: 'makeBoolean': is not a member of '_cmdline'
-         P:\C\cmdline\cmdline\include\cmdline.hpp(210,8): error C2065: 't': undeclared identifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(210,13): error C2653: 'Type': is not a class or namespace name
-         P:\C\cmdline\cmdline\include\cmdline.hpp(210,19): error C2065: 'STRING': undeclared identifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(210,41): error C2065: 'value': undeclared identifier
-         P:\C\cmdline\cmdline\include\cmdline.hpp(227,10): error C3861: 'CmdLineInvalidTypeException': identifier not found
-         P:\C\cmdline\cmdline\include\validations.h(7,10): fatal error C1083: Cannot open include file: 'types.h': No such file or directory
-
-    1 Warning(s)
-    90 Error(s)
-
-Time Elapsed 00:00:05.74
+Time Elapsed 00:00:15.94

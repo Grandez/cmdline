@@ -35,7 +35,7 @@ namespace cmdline {
 	using TYPE_FILE = filesystem::path;
 
 	using Flags = std::unordered_map<std::string, bool>;
-	using Options = std::unordered_map<std::string, std::string>;
+	using Options = std::unordered_map<std::string, vector<std::string>>;
 
 };
 #endif

@@ -54,7 +54,7 @@ namespace _cmdline {
 	}
 	int    CommandLine::getOptionNumValues(const char* name) {
 		Argument& opt = find(&options, name);
-		return opt.values.size();
+		return (int) opt.values.size();
 	}
 	const char* CommandLine::getOption(const char* name) {
 		return getValue(&options, name);
@@ -77,6 +77,29 @@ namespace _cmdline {
 	vector<const char*>  CommandLine::getDefinitionValues(const char* name) {
 		Argument& opt = find(&defines, name);
 		return opt.getValues();
+	}
+	int         CommandLine::getDefinitionNumValues(const char* name) {
+		Argument& opt = find(&defines, name);
+		return (int) opt.values.size();
+	}
+	Options    CommandLine::getDefinitions() {
+		Options opts;
+		for (auto it = defines.begin(); it != defines.end(); it++){
+			opts.emplace(it->second.name, it->second.getStringValues());
+		}
+        return opts;
+	}
+	Options CommandLine::getOptionsValue(bool def) {
+		Options act;
+/*
+		for (auto it : options) {
+			string str((def ? it.second.defValue : it.second.getValue()));
+			vector<string> v;
+			v.push_back(def ? it.second.defValue : it.second.getValue());
+			if (it.second.source != Source::AUTO) act.emplace(it.second.name, v);
+		}
+*/
+		return act;
 	}
 
 	// /////////////////////////////////////////////////////////////
@@ -117,7 +140,7 @@ namespace _cmdline {
 		if (hasFlag("help")) throw HelpRequested();
 	}
 	char* CommandLine::updateOption(const char* option, char* prev) {
-		int pos = std::string(option).find("=");
+		size_t pos = std::string(option).find("=");
 		if (pos != std::string::npos) return updateDefinition(option);
 		validateEntry(option, prev);
 		return (checkOption(&(option[1])));
@@ -191,13 +214,18 @@ namespace _cmdline {
 		Argument& opt = find(grp, name);
 		return opt.getValue();
 	}
+/*
 	Options CommandLine::getOptionsValue(bool def) {
 		Options act;
 		for (auto it : options) {
-			if (it.second.source != Source::AUTO) act.emplace(it.second.name, (def ? it.second.defValue : it.second.getValue()));
+			string str((def ? it.second.defValue : it.second.getValue()));
+			vector<string> v;
+			v.push_back(def ? it.second.defValue : it.second.getValue());
+			if (it.second.source != Source::AUTO) act.emplace(it.second.name, v);
 		}
 		return act;
 	}
+*/
 	void  CommandLine::preInit(Parameters parms, bool init) {
 		ParameterTree** root;
 

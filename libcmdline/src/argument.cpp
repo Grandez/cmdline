@@ -72,6 +72,11 @@ namespace _cmdline {
 		}
 		return v;
 	}
+	vector<string>  Argument::getStringValues() {
+		std::vector<string> v(values.size());
+        std::copy(values.begin(), values.end(), v.begin());
+		return v;
+	}
 
 	bool Argument::getBoolean() {
 		string val = (first.length() > 0) ? first : defValue;

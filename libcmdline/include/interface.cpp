@@ -17,7 +17,7 @@
 #endif
 
 static cmdline::CmdLine* _cmdLine = nullptr;
-static CmdLine* _pCmdLine = nullptr;
+static CmdLine* _pCmdLine = NULL;
 
 template <typename T> void * checkException(T& ex) {
     /*
@@ -33,29 +33,156 @@ template <typename T> void * checkException(T& ex) {
         errno = ECMDLINE;
     return NULL;
 }
+// Magic numbers are: 1-Flag, 2-Option, 3-Define
+logical     hasValue(int target, const char* name) {
+    bool b;
+    try {
+        switch (target) {
+                case 1: b = _cmdLine->hasFlag(name); break;
+                case 2: b = _cmdLine->hasOption(name); break;
+                case 3: b = _cmdLine->hasDefinition(name); break;
+        }
+        return (b) ? TRUE : FALSE;
+    }
+    catch (exception ex) {
+        checkException(ex);
+        return MISSING;
+    }
+}
+logical     isMultiple(bool option, const char* name) {
+    bool b;
+    try {
+        b = (option) ? _cmdLine->isOptionMultiple(name) 
+                     : _cmdLine->isDefinitionMultiple(name);
+        return (b) ? TRUE : FALSE;
+    }
+    catch (exception ex) {
+        checkException(ex);
+        return MISSING;
+    }
+}
 cmdline::Parameters makeParameters(ParmDef cparms[]) {
     vector <cmdline::Parm> parms;
-    ParmDef *cp = cparms;
+    ParmDef* cp = cparms;
     while (cp->name) {
-        bool b = (cp->multiple == CHECKED) ? "1" : "0";
+        bool b = (cp->multiple == TRUE) ? "1" : "0";
         cmdline::Type t = cmdline::Type(cp->type);
         parms.push_back(cmdline::Parm(cp->name, cp->value, t, b));
         cp++;
     }
-
-    /*
-    
-    int i = 0;
-    ParmDef *pp = *cparms;
-    while (pp) {
-        bool b = (cparms[i]->multiple == TRUE) ? "1" : "0";
-        cmdline::Type t = cmdline::Type(cparms[i]->type);
-        parms.push_back(cmdline::Parm(cparms[i]->name, cparms[i]->value,t,b));
-        i++;
-    }
-    */
     return parms;
 }
+const char** _makeArray(vector<const char *> data) {
+    int i = 0;
+    try {
+        char** res = (char**)malloc((data.size() + 1) * sizeof(char*));
+        for (i = 0; i < data.size(); i++) res[i] = strdup(data[i]);
+        res[i] = 0x0;
+        return (const char **) res;
+    }
+    catch (exception ex) {
+        errno = ECMDLINE_NOMEM;
+        return NULL;
+    }
+}
+const char** _makeArray(vector<string> data) {
+    int i = 0;
+    try {
+        char** res = (char**)malloc((data.size() + 1) * sizeof(char*));
+        for (i = 0; i < data.size(); i++) res[i] = (char *) strdup(data[i].c_str());
+        res[i] = 0x0;
+        return (const char **) res;
+    }
+    catch (exception ex) {
+        errno = ECMDLINE_NOMEM;
+        return NULL;
+    }
+}
+
+Parameter** _makeArrayParameter(cmdline::Options data) {
+    Parameter** parms = NULL;
+    Parameter*  tmp   = NULL;
+    try {
+        parms = (Parameter **) malloc((data.size() + 1) * sizeof(Parameter *));
+        int i = 0;
+        for (auto it : data) {
+            tmp = (Parameter *) malloc(sizeof(Parameter));
+            tmp->name = strdup(it.first.c_str());
+            tmp->size = (int) it.second.size();
+            tmp->values = _makeArray(it.second);
+            parms[i++] = tmp;
+        }
+        parms[i] = 0x0;
+    }
+    catch (exception ex) {
+        errno = ECMDLINE_NOMEM;
+        return NULL;
+    }
+    return parms;
+}
+const char* getValue(bool option, const char* name) {
+    const char* res;
+    try {
+        res = (option) ? _cmdLine->getOption(name)
+                       : _cmdLine->getDefinition(name);
+        return res;
+    }
+    catch (exception ex) {
+        return (const char *) checkException(ex);
+    }
+}
+int getNumValues(bool option, const char* name) {
+    int res;
+    try {
+        res = (option) ? _cmdLine->getOptionNumValues(name)
+                       : _cmdLine->getDefinitionNumValues(name);
+         return res;
+    }
+    catch (exception ex) {
+        checkException(ex);
+        return -1;
+    }
+}
+
+const char** getAllValues(bool option, const char* name) {
+    vector<const char *> res;
+    try {
+        res = (option) ? _cmdLine->getOptionValues(name)
+                       : _cmdLine->getDefinitionValues(name);
+        return _makeArray(res);
+    }
+    catch (exception ex) {
+        return (const char**)checkException(ex);
+    }
+}
+Parameter** _getOptions  (bool def) {
+    Parameter **parms = NULL;
+    cmdline::Options opts;
+    
+    try {
+        cmdline::Options opts = (def) ? _cmdLine->getDefaultOptions()
+                                      : _cmdLine->getCurrentOptions();
+        return _makeArrayParameter(opts);
+    }
+    catch (exception ex) {
+        return (Parameter**) checkException(ex);
+    }
+
+    try {
+        parms = (Parameter **) malloc((opts.size() + 1) * sizeof(Parameter *));
+        int i = 0;
+        for (auto it : opts) {
+            i++;
+        }
+        parms[i] = 0x0;
+    }
+    catch (exception ex) {
+        errno = ECMDLINE_NOMEM;
+        return NULL;
+    }
+
+}
+
 Flag** makeFlags(cmdline::Flags flags) {
     int i = 0;
     Flag* tmp;
@@ -67,7 +194,7 @@ Flag** makeFlags(cmdline::Flags flags) {
             return NULL;
         }
         tmp->name = strdup(it.first.c_str());
-        tmp->value = (it.second) ? CHECKED : UNCHECKED;
+        tmp->value = (it.second) ? TRUE : FALSE;
         res[i++] = tmp;
     }
     res[i] = 0x0;
@@ -83,19 +210,23 @@ Flag** makeFlags(cmdline::Flags flags) {
     return res;
 }
 
-logical cHashflag(const char* name) {
+logical      cHasFlag            (const char* name) { 
+    printf("Entro en has fag\n");
+    return hasValue(1, name); }
+logical      cHasOption          (const char* name) { return hasValue(2, name); }
+logical      cHasDefine          (const char* name) { return hasValue(3, name); }
+logical      cIsOptionMultiple   (const char* name) { return isMultiple   (true, name); }
+logical      cIsDefineMultiple   (const char* name) { return isMultiple   (false, name); }
+int          cGetOptionNumValues (const char* name) { return getNumValues(true, name); }
+int          cGetDefineNumValues (const char* name) { return getNumValues(false, name); }
+const char*  cGetOption          (const char* name) { return getValue     (true, name); }
+const char*  cGetDefine          (const char* name) { return getValue     (false, name); }
+const char** cGetOptionValues    (const char* name) { return getAllValues (true, name); }
+const char** cGetDefineValues    (const char* name) { return getAllValues (false, name); }
+
+Flag **cGetDefaultFlags  (logical active) {
     try {
-        bool b = _cmdLine->hasFlag(name);
-        return (b) ? CHECKED : UNCHECKED;
-    }
-    catch (exception ex) {
-        checkException(ex);
-        return UNKNOW;
-    }
-}
-Flag **cGetDefaultFlags  (logical all) {
-    try {
-        bool b = (all == CHECKED) ? false : true;
+        bool b = (active == TRUE) ? false : true;
         cmdline::Flags flags = _cmdLine->getDefaultFlags(b);
         return makeFlags(flags);
     }
@@ -103,22 +234,57 @@ Flag **cGetDefaultFlags  (logical all) {
         return (Flag **) checkException(ex);
     }
 }
+Flag **cGetCurrentFlags  (logical active) {
+    try {
+        bool b = (active == TRUE) ? false : true;
+        cmdline::Flags flags = _cmdLine->getCurrentFlags(b);
+        return makeFlags(flags);
+    }
+    catch (exception ex) {
+        return (Flag **) checkException(ex);
+    }
+}
+Parameter** cGetDefaultOptions  () {
+    return _getOptions(true);
+}
+Parameter** cGetCurrentOptions  () {
+    return _getOptions(false);
+}
+Parameter** cGetDefinitions  () {
+    cmdline::Options defs = _cmdLine->getDefinitions();
+    return _makeArrayParameter(defs);
+}
 
-extern "C" CmdLine * cmdline_create(int argc, char** arg, ParmDef cparms[]) {
+extern "C" CmdLine*  cmdline_create(int argc, char** arg, ParmDef cparms[]) {
     if (_pCmdLine != nullptr) return _pCmdLine;
     cmdline::Parameters parms = makeParameters(cparms);
     try {
         _cmdLine = new cmdline::CmdLine(argc, arg, parms);
-        _pCmdLine = (CmdLine*)malloc(sizeof(CmdLine));
-        _pCmdLine->hashFlag = &cHashflag;
-        _pCmdLine->getDefaultFlags = &cGetDefaultFlags;
 
+        _pCmdLine = (CmdLine*)malloc(sizeof(CmdLine));
+        _pCmdLine->hasFlag            = &cHasFlag;
+        _pCmdLine->hasOption          = &cHasOption;
+        _pCmdLine->hasDefine          = &cHasDefine;
+        _pCmdLine->getOption          = &cGetOption;
+        _pCmdLine->getDefine          = &cGetDefine;
+        _pCmdLine->getOptionValues    = &cGetOptionValues;
+        _pCmdLine->getDefineValues    = &cGetDefineValues;
+        _pCmdLine->getOptionNumValues = &cGetOptionNumValues;
+        _pCmdLine->getDefineNumValues = &cGetDefineNumValues;
+
+        _pCmdLine->isOptionMultiple  = &cIsOptionMultiple;
+        _pCmdLine->isDefineMultiple  = &cIsDefineMultiple;
+        _pCmdLine->getDefaultFlags   = &cGetDefaultFlags; 
+	    _pCmdLine->getDefaultOptions = &cGetDefaultOptions; 
+	    _pCmdLine->getCurrentOptions = &cGetCurrentOptions; 
+	    _pCmdLine->getDefinitions    = &cGetDefinitions; 
+//        memcpy(&_ppCmdLine, _pCmdLine, sizeof(cCmdLine));
         return _pCmdLine;
     }
     catch (exception ex) {
         return (CmdLine *) checkException(ex);
     }
 }
-extern "C" void cmdline_delete() {
+extern "C" void cmdline_delete(CmdLine *cmdline) {
     std::cout << "delete\n";
 }

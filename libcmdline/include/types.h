@@ -11,14 +11,10 @@ typedef enum _Type {
 	DIR, DIR_EXISTS, FILES, FILE_EXISTS,
 	FLAG
 } Type;
-typedef enum _logical { UNCHECKED=0, CHECKED=-1, UNKNOW=1 } logical;
+typedef enum _logical { TRUE=-1, FALSE = 0, MISSING=1 } logical;
 
 typedef enum { DEFAULT, ENV, CMDLINE, CODE, AUTO } Source;
 
-typedef struct _option {
-	const char* name;
-	const char** values;
-} Option;
 
 typedef struct _ParmDef {
 	const char* name;
@@ -30,6 +26,7 @@ typedef struct _ParmDef {
 typedef struct _Parameter {
 	const char* name;
 	const char** values;
+	int          size;
 } Parameter;
 typedef struct _Flag {
 	const char* name;

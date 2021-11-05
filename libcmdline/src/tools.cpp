@@ -167,7 +167,7 @@ namespace _cmdline {
 
 	// Variant #2
 	char* myStrdup(const char* s) {
-		return myStrdup(s, strlen(s));
+		return myStrdup(s, (int) strlen(s));
 	}
 	void defaultDate(char *aux) {
 		std::time_t t = std::time(0);

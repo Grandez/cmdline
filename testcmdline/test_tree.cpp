@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../cmdline/include/cmdline.hpp"
+#include "cmdline.hpp"
 /*
 TEST(Tree, same_word) {
 	std::vector<cmdline::ParmItem> opts = { ParmItem("verbose", "..") };

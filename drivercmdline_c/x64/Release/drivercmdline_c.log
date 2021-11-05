@@ -1,19 +1,18 @@
-﻿Build started 05/11/2021 2:08:26.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_c\drivercmdline_c.vcxproj" on node 3 (Rebuild target(s)).
-     1>PrepareForBuild:
-         Creating directory "x64\Release\drivercmdline_c.tlog\".
+﻿Build started 05/11/2021 18:45:13.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_c\drivercmdline_c.vcxproj" on node 4 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Release\drivercmdline_c.tlog\drivercmdline_c.lastbuildstate".
        InitializeBuildStatus:
          Creating "x64\Release\drivercmdline_c.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TC /FC /errorReport:prompt drivercmdline_c.c
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TC /FC /errorReport:prompt drivercmdline_c.c
          drivercmdline_c.c
-     1>P:\C\cmdline\drivercmdline_c\drivercmdline_c.c(14,1): warning C4047: 'initializing': 'Flag **' differs in levels of indirection from 'Flag *'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\x64\Release\drivercmdline_c.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\x64\Release\drivercmdline_c.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"x64\Release\drivercmdline_c.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\x64\Release\drivercmdline_c.lib" /MACHINE:X64 x64\Release\drivercmdline_c.obj
-         P:\C\cmdline\libs\libcmdline64.lib.lib
+         P:\C\cmdline\libs\libcmdline64.lib
          Generating code
          Previous IPDB not found, fall back to full compilation.
-         All 2437 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         All 2730 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
          Finished generating code
          drivercmdline_c.vcxproj -> P:\C\cmdline\x64\Release\drivercmdline_c.exe
        FinalizeBuildStatus:
@@ -22,12 +21,7 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_c
      1>Done Building Project "P:\C\cmdline\drivercmdline_c\drivercmdline_c.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
-
-       "P:\C\cmdline\drivercmdline_c\drivercmdline_c.vcxproj" (Rebuild target) (1) ->
-       (ClCompile target) -> 
-         P:\C\cmdline\drivercmdline_c\drivercmdline_c.c(14,1): warning C4047: 'initializing': 'Flag **' differs in levels of indirection from 'Flag *'
-
-    1 Warning(s)
+    0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.67
+Time Elapsed 00:00:00.88

@@ -1,10 +1,9 @@
 #pragma once
 
 #include <vector>
-
-// #include <iostream>
 #include "types.hpp"
-
+#ifndef __CLASS_CMDLINE__
+#define __CLASS_CMDLINE__
 namespace cmdline {
 	/**
 	 * Generic Class to define defined flags and options
@@ -71,8 +70,12 @@ namespace cmdline {
 
 	class CmdLine {
 	public:
+		CmdLine() {};
 		CmdLine(int argc, char **argv, Parameters parms); 
 		~CmdLine(); 
+		static CmdLine getInstance(int argc, char** argv, Parameters parms = Parameters());
+		static CmdLine getInstance(Parameters parms, int argc, char** argv);
+		static void freeInstance();  // Just for test
 		// Arguments
 		vector<const char*> args();
 
@@ -87,8 +90,8 @@ namespace cmdline {
 		bool                 hasOption(string name);
 		bool                 isOptionMultiple(const char* name);
 		bool                 isOptionMultiple(string name);
-		const char* getOption(const char* name);
-		const char* getOption(string name) { return getOption(name.c_str()); }
+		const char*          getOption(const char* name);
+		const char*          getOption(string name) { return getOption(name.c_str()); }
 		vector<const char*>  getOptionValues(const char* name);
 		vector<const char*>  getOptionValues(string name);
 
@@ -119,17 +122,41 @@ namespace cmdline {
 		}
 		*/
 // Definitions
-		bool        hasDefinition(const char* def);
-		bool        hasDefinition(string def);
-		bool        isDefinitionMultiple(const char* name);
-		bool        isDefinitionMultiple(string name);
-		const char* getDefinition(const char* name);
-		const char* getDefinition(string name);
-
+		bool                 hasDefinition(const char* def);
+		bool                 hasDefinition(string def);
+		bool                 isDefinitionMultiple(const char* name);
+		bool                 isDefinitionMultiple(string name);
+		const char*          getDefinition(const char* name);
+		const char*          getDefinition(string name);
+		Options              getDefinitions();
+		int                  getDefinitionNumValues(const char* name);
+		int                  getDefinitionNumValues(string name);
 		vector<const char*>  getDefinitionValues(const char* name);
 		vector<const char*>  getDefinitionValues(string name);
-
+	protected:
+		static CmdLine pGetInstance(int argc, char** argv, Parameters parms, bool sensitive = false, bool strict = false);
+		CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
 	private:
 		template <typename T> T castByNative(const char* value);
 	};
+	class CmdLineI : public CmdLine {
+	public:
+		CmdLineI(int argc, char** argv, Parameters parms);
+		CmdLineI(int argc, char** argv, cmdline::Parameters parms, bool strict);
+		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+		~CmdLineI();
+	};
+	class CmdLineS : public CmdLine {
+	public:
+		CmdLineS(int argc, char** argv, Parameters parms);
+		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+	};
+	class CmdLineIS : public CmdLineI {
+	public:
+		CmdLineIS(int argc, char** argv, Parameters parms);
+		~CmdLineIS();
+		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+	};
+
 }
+#endif

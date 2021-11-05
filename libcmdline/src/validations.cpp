@@ -250,7 +250,7 @@ namespace _cmdline {
 		// timestamp es yyyy-mm-dd[- ]hh:MM:SS.nnnnnn
 		struct tm *tmDate, *tmTime;
 		vector<string> pieces = tokenize(value, "-|[ \t]+");
-		int npieces = pieces.size();
+		int npieces = (int) pieces.size();
 		if (npieces != 2 && npieces != 4) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);
 		try {
 			int iTime = (npieces == 2) ? 1 : 3;
@@ -376,7 +376,7 @@ namespace _cmdline {
 		// si es menor y tiene : es hora, si no tiempo
 		struct tm* ptr = nullptr;
 		struct tm t;
-		unsigned int len = strlen(value);
+		int len = (int) strlen(value);
 		if (len > 10) {
 			ptr = validateDateTime(value);
 		}

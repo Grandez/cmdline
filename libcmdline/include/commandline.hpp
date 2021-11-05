@@ -28,14 +28,17 @@ namespace _cmdline {
 		bool                isOptionMultiple(const char* name);
 		Options             getDefaultOptions();
 		Options             getCurrentOptions();
-		const char* getOption(const char* name);
+		const char*         getOption(const char* name);
 		vector<const char*> getOptionValues(const char* name);
 
 		// Definitions
 		bool                 hasDefinition(const char* def);
 		bool                 isDefinitionMultiple(const char* name);
-		const char* getDefinition(const char* name) { return getValue(&defines, name); }
+		int                  getDefinitionNumValues(const char* name);
+
+		const char*          getDefinition(const char* name) { return getValue(&defines, name); }
 		vector<const char*>  getDefinitionValues(const char* name);
+		Options              getDefinitions();
 
 	private:
 		vector<const char*> inputs;
@@ -58,14 +61,14 @@ namespace _cmdline {
 		void  updateFromEnv();
 		void  udpateArgsFromEnv(Group& parms, const char* prfx);
 
-		Flags     getFlags(bool active, bool set);
-		Argument& find(Group* group, const char* what);
-		Argument* findPointer(Group* group, const char* what);
+		Flags       getFlags(bool active, bool set);
+		Argument&   find(Group* group, const char* what);
+		Argument*   findPointer(Group* group, const char* what);
 		const char* getValue(Group* group, const char* what);
-		Options  getOptionsValue(bool def);
-		void preInit(Parameters parms, bool init = true);
-		void  postInit();
-		void  loadHelp();
+		Options     getOptionsValue(bool def);
+		void        preInit(Parameters parms, bool init = true);
+		void        postInit();
+		void        loadHelp();
 		
 	};
 }

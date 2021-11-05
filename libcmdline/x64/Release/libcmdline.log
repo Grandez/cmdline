@@ -1,28 +1,22 @@
-﻿Build started 05/11/2021 2:08:56.
+﻿Build started 05/11/2021 18:45:02.
 Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\libcmdline\libcmdline.vcxproj" on node 2 (Rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "x64\Release\libcmdline.tlog\libcmdline.lastbuildstate".
-     1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
        InitializeBuildStatus:
          Creating "x64\Release\libcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"x64\Release\\" /Fd"P:\C\cmdline\\libs\libcmdline64.lib.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt include\interface.cpp src\argument.cpp src\cmdline.cpp src\cmdline_exceptions.cpp src\commandline.cpp src\parameter_tree.cpp src\parm.cpp src\tools.cpp src\validations.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /Od /GL /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"x64\Release\\" /Fd"P:\C\cmdline\\libs\libcmdline64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt include\interface.cpp src\argument.cpp src\cmdline.cpp src\cmdline_exceptions.cpp src\commandline.cpp src\parameter_tree.cpp src\parm.cpp src\tools.cpp src\validations.cpp
          interface.cpp
          argument.cpp
          cmdline.cpp
          cmdline_exceptions.cpp
          commandline.cpp
-     1>P:\C\cmdline\libcmdline\src\commandline.cpp(57,2): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-     1>P:\C\cmdline\libcmdline\src\commandline.cpp(120,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
          parameter_tree.cpp
          parm.cpp
          tools.cpp
-     1>P:\C\cmdline\libcmdline\src\tools.cpp(170,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
          validations.cpp
-     1>P:\C\cmdline\libcmdline\src\validations.cpp(253,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-     1>P:\C\cmdline\libcmdline\src\validations.cpp(379,35): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\Lib.exe /OUT:"P:\C\cmdline\\libs\libcmdline64.lib.lib" /NOLOGO /MACHINE:X64 /LTCG x64\Release\interface.obj
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\Lib.exe /OUT:"P:\C\cmdline\\libs\libcmdline64.lib" /NOLOGO /MACHINE:X64 /LTCG x64\Release\interface.obj
          x64\Release\argument.obj
          x64\Release\cmdline.obj
          x64\Release\cmdline_exceptions.obj
@@ -31,28 +25,14 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\libcmdline\libc
          x64\Release\parm.obj
          x64\Release\tools.obj
          x64\Release\validations.obj
-         libcmdline.vcxproj -> P:\C\cmdline\libs\libcmdline64.lib.lib
+         libcmdline.vcxproj -> P:\C\cmdline\libs\libcmdline64.lib
        FinalizeBuildStatus:
          Deleting file "x64\Release\libcmdline.tlog\unsuccessfulbuild".
          Touching "x64\Release\libcmdline.tlog\libcmdline.lastbuildstate".
      1>Done Building Project "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
-
-       "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target) (1) ->
-       (PrepareForBuild target) -> 
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-
-
-       "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target) (1) ->
-       (ClCompile target) -> 
-         P:\C\cmdline\libcmdline\src\commandline.cpp(57,2): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-         P:\C\cmdline\libcmdline\src\commandline.cpp(120,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-         P:\C\cmdline\libcmdline\src\tools.cpp(170,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-         P:\C\cmdline\libcmdline\src\validations.cpp(253,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-         P:\C\cmdline\libcmdline\src\validations.cpp(379,35): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
-
-    6 Warning(s)
+    0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:10.22
+Time Elapsed 00:00:10.60

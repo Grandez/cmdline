@@ -32,6 +32,18 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)include;P:\C\cmdline\libcmdline\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)include;P:\C\cmdline\libcmdline\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)include;P:\C\cmdline\libcmdline\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)include;P:\C\cmdline\libcmdline\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="%24tool.hpp" />
@@ -65,8 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cmdline_cpp\cmdline_cpp.vcxproj">
-      <Project>{8dd90963-d3c1-4df0-90f6-cdd32c401f9d}</Project>
+    <ProjectReference Include="..\libcmdline\libcmdline.vcxproj">
+      <Project>{3cd8174e-514b-4f1a-9f33-130ceef336ee}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup />

@@ -10,9 +10,9 @@ namespace _cmdline {
 #ifdef _WIN32
    #define chdir(a) _chdir(a)
    #define getcwd(a, b) _getcwd(a, b)
+   #define strdup(a) _cmdline::myStrdup(a)
 #endif
 
-    #define strdup(a) _cmdline::myStrdup(a)
 	void  add2tree(ParameterTree* root[], const char* word);
 	char* makeChar   (std::string str);
 	bool  makeBoolean(const char *value);

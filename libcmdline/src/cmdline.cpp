@@ -9,31 +9,36 @@
 using namespace _cmdline;
 
 namespace cmdline {
-	/*
-	class CmdLineImpl {
-	public:
-		_cmdline::CommandLine* _commandLine = new _cmdline::CommandLine();
-		CmdLineImpl() {
-			engine_ = new _cmdline::CommandLine();
-		}
-		~CmdLineImpl() {
-			std::cout << "Destructor de CmdLineImpl\n";
-			delete engine_;
-		}
-
-	private:
-		  _cmdline::CommandLine* engine_;
-	};
-	*/
+	CmdLine* singleton_ = nullptr;
+	static bool instance = false;  // Allow constructor only in test
+	void CmdLine::freeInstance() { singleton_ = nullptr; }
 	_cmdline::CommandLine* _commandLine;
 
 	CmdLine::CmdLine(int argc, char** argv, Parameters parms) {
-		std::cout << "Crea\n";
+		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
+	}
+	CmdLine::CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict) {
 		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
 	}
 	CmdLine::~CmdLine() {
 		std::cout << "Destruye\n";
 	}
+	CmdLine CmdLine::getInstance(Parameters parms, int argc,  char**  argv) {
+		cmdline::instance = true;
+		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
+		return *singleton_;
+	}
+	CmdLine CmdLine::getInstance(int argc, char** argv, Parameters parms) {
+		cmdline::instance = true;
+		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
+		return *singleton_;
+	}
+	CmdLine CmdLine::pGetInstance(int argc,  char**  argv, Parameters parms, bool sensitive, bool strict) {
+		cmdline::instance = true;
+		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, sensitive, strict);
+		return *singleton_;
+	}
+
 	vector<const char*> CmdLine::args() { return _commandLine->getArgs(); }
 
 	bool  CmdLine::hasFlag(const char* name) { return _commandLine->hasFlag(name); };
@@ -70,10 +75,14 @@ namespace cmdline {
 	bool        CmdLine::isDefinitionMultiple(string name) { return isDefinitionMultiple(name.c_str()); }
 	const char* CmdLine::getDefinition(const char* name) { return _commandLine->getDefinition(name); }
 	const char* CmdLine::getDefinition(string name) { return getDefinition(name.c_str()); }
+	int         CmdLine::getDefinitionNumValues(const char* name) { return _commandLine->getDefinitionNumValues(name); }
+	int         CmdLine::getDefinitionNumValues(string name) { return getDefinitionNumValues(name.c_str()); }
+	Options     CmdLine::getDefinitions() { return _commandLine->getDefinitions(); }
+
 
 	vector<const char*>  CmdLine::getDefinitionValues(const char* name) { return _commandLine->getDefinitionValues(name); }
 	vector<const char*>  CmdLine::getDefinitionValues(string name) { return getDefinitionValues(name.c_str()); }
-	
+	/*
 	template <typename T> T CmdLine::castByNative(const char* value) {
 		if constexpr (is_same<T, const char*>::value)      return value;
 		if constexpr (is_same<T, char*>::value)            return (char*)value;
@@ -99,5 +108,5 @@ namespace cmdline {
 		}
 		throw CmdLineInvalidTypeException(typeid(T).name());
 	}
-
+	*/
 }
