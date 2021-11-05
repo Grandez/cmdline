@@ -127,7 +127,7 @@ namespace _cmdline {
 		return *this;
 	}
 	Argument& Argument::addValues(vector<string> values) {
-		if (values.size() == 0) first = string(values[0]);
+		if (this->values.size() == 0) first = string(values[0]);
 		for (string v : values) this->values.emplace(v);
 		return *this;
 	}

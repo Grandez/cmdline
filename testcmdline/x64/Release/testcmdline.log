@@ -1,31 +1,10 @@
-﻿Build started 05/11/2021 19:31:00.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
-       InitializeBuildStatus:
-         Touching "x64\Release\testcmdline.tlog\unsuccessfulbuild".
+﻿Build started 05/11/2021 22:39:50.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Release\testcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /O2 /D X64 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yc"pch.h" /Fp"x64\Release\testcmdline.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt pch.cpp
-         pch.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /O2 /D X64 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yu"pch.h" /Fp"x64\Release\testcmdline.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt argumentTest.cpp defaultValuesTest.cpp exceptionsDefaultTest.cpp exceptionsTest.cpp exceptionsValueTest.cpp mainTest.cpp caseTest.cpp defaultsTest.cpp definesTest.cpp flagsTest.cpp helpTest.cpp inputTest.cpp optionsTest.cpp TypesTest.cpp "$tool.cpp" test_tree.cpp validationsTest.cpp
-         argumentTest.cpp
-         defaultValuesTest.cpp
-         exceptionsDefaultTest.cpp
-         exceptionsTest.cpp
-         exceptionsValueTest.cpp
-         mainTest.cpp
-         caseTest.cpp
-         defaultsTest.cpp
-         definesTest.cpp
-         flagsTest.cpp
-         helpTest.cpp
-         inputTest.cpp
-         optionsTest.cpp
-         TypesTest.cpp
-         $tool.cpp
-         test_tree.cpp
-         validationsTest.cpp
-         Generating Code...
+         All outputs are up-to-date.
+         All outputs are up-to-date.
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\x64\Release\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest_main.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\x64\Release\testcmdline.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\x64\Release\testcmdline.lib" /MACHINE:X64 /SAFESEH:NO x64\Release\argumentTest.obj
          x64\Release\defaultValuesTest.obj
@@ -50,17 +29,13 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\tes
          Generating code
          Finished generating code
          testcmdline.vcxproj -> P:\C\cmdline\x64\Release\testcmdline.exe
-       _CopyFilesMarkedCopyLocal:
-         Copying file from "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest_main.pdb" to "P:\C\cmdline\x64\Release\gtest_main.pdb".
-         Copying file from "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest.pdb" to "P:\C\cmdline\x64\Release\gtest.pdb".
-         Creating "P:\C\cmdline\testcmdline\x64\Release\testcmdline.vcxproj.CopyComplete" because "AlwaysCreate" was specified.
        FinalizeBuildStatus:
          Deleting file "x64\Release\testcmdline.tlog\unsuccessfulbuild".
          Touching "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
-     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Build target(s)).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:16.05
+Time Elapsed 00:00:01.19

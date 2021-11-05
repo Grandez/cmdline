@@ -18,7 +18,7 @@ namespace cmdline {
 		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
 	}
 	CmdLine::CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict) {
-		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
+		_commandLine = new _cmdline::CommandLine(argc, argv, parms, sensitive, strict);
 	}
 	CmdLine::~CmdLine() {
 		std::cout << "Destruye\n";

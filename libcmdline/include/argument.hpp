@@ -24,18 +24,17 @@ namespace _cmdline {
 		Argument(const char *name, const char* value, Source source);
 		Argument(const char* name, const char* value, Type type);
 		Argument& setFromEnv(const char* value);
-		Argument& setValue(bool value);
-		Argument& setValue(const char* value);
-		Argument& setValue(std::string value);
-		Argument& addValue(std::string value);
+		Argument& setValue  (bool value);
+		Argument& setValue  (const char* value);
+		Argument& setValue  (std::string value);
+		Argument& addValue  (std::string value);
+		Argument& addValues (vector<string> values);
 		const char* getValue();
 		vector<const char *>  getValues();
 		vector<string>        getStringValues();
 		bool            getBoolean();
 		Argument&       initValues(vector<string> values);
 		Argument&       makeUpper();
-	protected:
-		Argument&      addValues(vector<string> values);
 	private:
 		string first;
 		void   validateDefault();

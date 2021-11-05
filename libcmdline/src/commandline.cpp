@@ -152,7 +152,7 @@ namespace _cmdline {
 		if (toks[0].length() == 0) throw CmdLineParameterException(INV_DEFINITION, value);
 		Argument* def = defines.find(toks[0]);
 		if (def == nullptr) def = new Define(toks[0].c_str());
-		def->initValues(splitArgument(toks[1].c_str()));
+		def->addValues(splitArgument(toks[1].c_str()));
 		defines.add(def);
 		return nullptr;
 	}
