@@ -1,8 +1,8 @@
-.TH "cmdline/src/tools.cpp" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/src/tools.cpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline/src/tools.cpp
+libcmdline/src/tools.cpp
 .SH SYNOPSIS
 .br
 .PP
@@ -12,7 +12,11 @@ cmdline/src/tools.cpp
 .br
 \fC#include <locale>\fP
 .br
-\fC#include 'tools\&.h'\fP
+\fC#include <cctype>\fP
+.br
+\fC#include 'tools\&.hpp'\fP
+.br
+\fC#include 'parameter_tree\&.hpp'\fP
 .br
 \fC#include 'cmdline_exceptions\&.hpp'\fP
 .br
@@ -24,7 +28,14 @@ cmdline/src/tools.cpp
 .RI "namespace \fB_cmdline\fP"
 .br
 .in -1c
-.SS "Functions"
+.SS "defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_CRT_SECURE_NO_WARNINGS\fP"
+.br
+.in -1c
+.SS "Funciones"
 
 .in +1c
 .ti -1c
@@ -44,6 +55,9 @@ cmdline/src/tools.cpp
 .br
 .ti -1c
 .RI "bool \fB_cmdline::makeBoolean\fP (string value)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::makeUpper\fP (const char *str)"
 .br
 .ti -1c
 .RI "vector< std::string > \fB_cmdline::splitArgument\fP (const char *parm)"
@@ -67,6 +81,19 @@ cmdline/src/tools.cpp
 .RI "void \fB_cmdline::defaultDate\fP (char *aux)"
 .br
 .in -1c
-.SH "Author"
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char \fB_cmdline::_upper\fP [64] = ''"
+.br
+.in -1c
+.SH "Documentación de los 'defines'"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+.SS "#define _CRT_SECURE_NO_WARNINGS"
+
+.PP
+Definición en la línea \fB1\fP del archivo \fBtools\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

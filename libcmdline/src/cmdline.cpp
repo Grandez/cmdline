@@ -14,29 +14,29 @@ namespace cmdline {
 	void CmdLine::freeInstance() { singleton_ = nullptr; }
 	_cmdline::CommandLine* _commandLine;
 
-	CmdLine::CmdLine(int argc, char** argv, Parameters parms) {
+	CmdLine::CmdLine(int argc, const char** argv, Parameters parms) {
 		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
 	}
-	CmdLine::CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict) {
+	CmdLine::CmdLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
 		_commandLine = new _cmdline::CommandLine(argc, argv, parms, sensitive, strict);
 	}
 	CmdLine::~CmdLine() {
 		std::cout << "Destruye\n";
 	}
-	CmdLine CmdLine::getInstance(Parameters parms, int argc,  char**  argv) {
+	CmdLine* CmdLine::getInstance(Parameters parms, int argc,  const char**  argv) {
 		cmdline::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
-		return *singleton_;
+		return singleton_;
 	}
-	CmdLine CmdLine::getInstance(int argc, char** argv, Parameters parms) {
+	CmdLine* CmdLine::getInstance(int argc, const char** argv, Parameters parms) {
 		cmdline::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
-		return *singleton_;
+		return singleton_;
 	}
-	CmdLine CmdLine::pGetInstance(int argc,  char**  argv, Parameters parms, bool sensitive, bool strict) {
+	CmdLine* CmdLine::pGetInstance(int argc,  const char**  argv, Parameters parms, bool sensitive, bool strict) {
 		cmdline::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, sensitive, strict);
-		return *singleton_;
+		return singleton_;
 	}
 
 	vector<const char*> CmdLine::args() { return _commandLine->getArgs(); }
@@ -45,7 +45,7 @@ namespace cmdline {
 	bool  CmdLine::hasFlag(string name) { return _commandLine->hasFlag(name.c_str()); };
 	Flags CmdLine::getDefaultFlags(bool all) { return _commandLine->getDefaultFlags(all); };
 	Flags CmdLine::getCurrentFlags(bool all) { return _commandLine->getCurrentFlags(all); };
-
+	Type            CmdLine::getType(const char* name) { return _commandLine->getType(name); };
 	bool            CmdLine::hasOption(const char* name) { return _commandLine->hasOption(name); };
 	bool            CmdLine::hasOption(string name) { return _commandLine->hasOption(name.c_str()); };
 	bool            CmdLine::isOptionMultiple(const char* name) { return _commandLine->isOptionMultiple(name); };
@@ -57,8 +57,8 @@ namespace cmdline {
 
 	int         CmdLine::getOptionNumValues(const char* name) { return _commandLine->getOptionNumValues(name); };
 	int         CmdLine::getOptionNumValues(string name) { return getOptionNumValues(name.c_str()); };
-	Options     CmdLine::getDefaultOptions() { return _commandLine->getDefaultOptions(); };
-	Options     CmdLine::getCurrentOptions() { return _commandLine->getDefaultOptions(); };
+	unordered_map<string, string> CmdLine::getDefaultOptions() { return _commandLine->getDefaultOptions(); };
+	Options     CmdLine::getCurrentOptions() { return _commandLine->getCurrentOptions(); };
 
 	template <typename T> const vector<T> getOptionValuesAs(const char* name) {
 		vector<T> res;

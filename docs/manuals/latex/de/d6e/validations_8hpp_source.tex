@@ -1,0 +1,45 @@
+\hypertarget{validations_8hpp_source}{}\doxysection{validations.\+hpp}
+\label{validations_8hpp_source}\index{validations.hpp@{validations.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00005}00005 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}types.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00009}00009 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00012}00012     \textcolor{keywordtype}{void}        validateEntry      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prev);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00013}00013     \textcolor{keywordtype}{void}        validateValue      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \mbox{\hyperlink{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}{cmdline::Type}} type);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00014}00014     \textcolor{keywordtype}{long}        validateNumber     (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00015}00015     \textcolor{keywordtype}{double}      validateDecimal    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00016}00016     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}   validateLongNumber (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00017}00017     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} validateLongDecimal(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00018}00018     filesystem::path        validateDir       (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00019}00019     filesystem::path        validateDirExist  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00020}00020     filesystem::path        validateFile      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00021}00021     filesystem::path        validateFileExist (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00022}00022     \textcolor{keyword}{struct }tm *validateTime      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00023}00023     \textcolor{keyword}{struct }tm* validateDate      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \textcolor{keywordtype}{int} fmt = -\/1);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00024}00024     \textcolor{keyword}{struct }tm* validateDateTime  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00025}00025     \textcolor{keywordtype}{char} *     validateTimestamp (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00026}00026     \textcolor{keywordtype}{int}         makeInteger      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00027}00027     \textcolor{keywordtype}{float}       makeFloat        (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00028}00028     \textcolor{keyword}{struct }tm   makeTm           (const char* value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00029}00029     \textcolor{comment}{// Bridge}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00030}00030     \textcolor{keywordtype}{bool}  valMakeBoolean(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00031}00031     \textcolor{keywordtype}{bool}  valMakeBoolean(std::string value);}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00033}00033 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00034}00034 \textcolor{comment}{    template <typename T>}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00035}00035 \textcolor{comment}{    T        getValue(const char* value, cmdline::Type type);}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00036}00036 \textcolor{comment}{    template <typename T> T castValue(auto value, Type type);}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00037}00037 \textcolor{comment}{    template <typename T> T castValue2(auto value);}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00038}00038 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{validations_8hpp_source_l00039}00039 \}}
+
+\end{DoxyCode}

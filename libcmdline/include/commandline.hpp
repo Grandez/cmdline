@@ -13,10 +13,11 @@ using namespace cmdline;
 namespace _cmdline {
 	class CommandLine {
 	public:
-		CommandLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
+		CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict);
 		~CommandLine();
 
 		vector<const char*> getArgs();
+		Type getType(const char *name);
 		// Flags
 		bool  hasFlag(const char* flag);
 		Flags getDefaultFlags(bool all);
@@ -26,11 +27,10 @@ namespace _cmdline {
 		int                 getOptionNumValues(const char* name);
 		bool                hasOption(const char* name);
 		bool                isOptionMultiple(const char* name);
-		Options             getDefaultOptions();
 		Options             getCurrentOptions();
 		const char*         getOption(const char* name);
 		vector<const char*> getOptionValues(const char* name);
-
+		unordered_map<string, string>   getDefaultOptions();
 		// Definitions
 		bool                 hasDefinition(const char* def);
 		bool                 isDefinitionMultiple(const char* name);
@@ -47,7 +47,7 @@ namespace _cmdline {
 		Group  options;
 		Group  flags;
 		Group  defines;
-		void  parse(const int argc, char** argv);
+		void  parse(const int argc, const char** argv);
 		char* addValueToOption(const char* option, char* prev);
 		char* checkOption(const char* option);
 		char* checkFlag(const char* flag);
@@ -65,7 +65,7 @@ namespace _cmdline {
 		Argument&   find(Group* group, const char* what);
 		Argument*   findPointer(Group* group, const char* what);
 		const char* getValue(Group* group, const char* what);
-		Options     getOptionsValue(bool def);
+		unordered_map<string,string>     getOptionsValue(bool def);
 		void        preInit(Parameters parms, bool init = true);
 		void        postInit();
 		void        loadHelp();

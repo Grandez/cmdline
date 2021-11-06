@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultprintertype_0',['DefaultPrinterType',['../d0/da7/namespacetesting_1_1internal.html#a17fb8f0125fa92404a249ed38a43faa4',1,'testing::internal']]]
+  ['type_0',['Type',['../df/d4e/group___types.html#ga1d1cfd8ffb84e947f82999c682b666a7',1,'cmdline']]]
 ];

@@ -1,6 +1,11 @@
-\hypertarget{namespacecmdline}{}\doxysection{cmdline Namespace Reference}
+\hypertarget{namespacecmdline}{}\doxysection{Referencia del Namespace cmdline}
 \label{namespacecmdline}\index{cmdline@{cmdline}}
-\doxysubsection*{Classes}
+
+
+Public namespace to avoid naming mangling.  
+
+
+\doxysubsection*{Clases}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classcmdline_1_1_cmd_line}{Cmd\+Line}}
@@ -25,6 +30,8 @@ class \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{Cmd\+Line\+Val
 \item 
 class \mbox{\hyperlink{classcmdline_1_1_help_detailed_requested}{Help\+Detailed\+Requested}}
 \item 
+class \mbox{\hyperlink{classcmdline_1_1_help_exception}{Help\+Exception}}
+\item 
 class \mbox{\hyperlink{classcmdline_1_1_help_requested}{Help\+Requested}}
 \item 
 class \mbox{\hyperlink{classcmdline_1_1_parm}{Parm}}
@@ -33,411 +40,311 @@ class \mbox{\hyperlink{classcmdline_1_1_parm_flag}{Parm\+Flag}}
 \item 
 class \mbox{\hyperlink{classcmdline_1_1_parm_option}{Parm\+Option}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
+\doxysubsection*{typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef vector$<$ \mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} $>$ \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}}
+typedef std\+::vector$<$ \mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} $>$ \mbox{\hyperlink{namespacecmdline_aa196c85dba607b8b0c719f371c6d6127}{Parameters}}
 \item 
-using \mbox{\hyperlink{namespacecmdline_a9419a1e265d6031653b7ec069d784721}{TYPE\+\_\+\+STRING}} = std\+::string
+using \mbox{\hyperlink{namespacecmdline_af036a3f1da3709f512b9a021c3d9af17}{TYPE\+\_\+\+STRING}} = std\+::string
 \item 
-using \mbox{\hyperlink{namespacecmdline_a9c169e4cdbb4e5829365d477383125c9}{TYPE\+\_\+\+BOOL}} = bool
+using \mbox{\hyperlink{namespacecmdline_a1759ed76d500e2ded04b2fdc4725f4f7}{TYPE\+\_\+\+BOOL}} = bool
 \item 
-using \mbox{\hyperlink{namespacecmdline_aaf1f725a6e9790a8566d8c92fa6dbad3}{TYPE\+\_\+\+NUMBER}} = long
+using \mbox{\hyperlink{namespacecmdline_a4adb6839604609a7da7341bcd26564f3}{TYPE\+\_\+\+NUMBER}} = long
 \item 
-using \mbox{\hyperlink{namespacecmdline_ac7e48d74dd5285d6a2b727ba1807d1f9}{TYPE\+\_\+\+LONG}} = long
+using \mbox{\hyperlink{namespacecmdline_a99fc066d53206224ee48a39496af5828}{TYPE\+\_\+\+LONG}} = long
 \item 
-using \mbox{\hyperlink{namespacecmdline_a9f92378a7f9615ecc4dffbc43da401e6}{TYPE\+\_\+\+INT}} = int
+using \mbox{\hyperlink{namespacecmdline_a7c1a8cd11936e7de3d0a47af297c88c9}{TYPE\+\_\+\+INT}} = int
 \item 
-using \mbox{\hyperlink{namespacecmdline_a1522cb6c41a3e27eb5fb1c7fa99af3c4}{TYPE\+\_\+\+DECIMAL}} = float
+using \mbox{\hyperlink{namespacecmdline_a25cb1287749223430f31d10da0fcfc9e}{TYPE\+\_\+\+DECIMAL}} = float
 \item 
-using \mbox{\hyperlink{namespacecmdline_ac4fa722c54c5e4a2a28e65286b6a3f66}{TYPE\+\_\+\+FLOAT}} = float
+using \mbox{\hyperlink{namespacecmdline_a07ccd203e99050d555b31b6b6b5a36be}{TYPE\+\_\+\+FLOAT}} = float
 \item 
-using \mbox{\hyperlink{namespacecmdline_a359ec5b8ce29f61dc06d630ca55f8bbf}{TYPE\+\_\+\+DOUBLE}} = double
+using \mbox{\hyperlink{namespacecmdline_a3dac61537649cf7e4afdde9c272dad7e}{TYPE\+\_\+\+DOUBLE}} = double
 \item 
-using \mbox{\hyperlink{namespacecmdline_ab1df9bb6f1302b08747032bc1feb260d}{TYPE\+\_\+\+LONGNUMBER}} = long long
+using \mbox{\hyperlink{namespacecmdline_a994f250aea3960cd0cb5558a2c9d30be}{TYPE\+\_\+\+LONGNUMBER}} = long long
 \item 
-using \mbox{\hyperlink{namespacecmdline_a4ef64b6516c332ea13add2c686908a0e}{TYPE\+\_\+\+LONGDECIMAL}} = float
+using \mbox{\hyperlink{namespacecmdline_a58efe8ada1b07409d8cd9e5223e7c04a}{TYPE\+\_\+\+LONGDECIMAL}} = float
 \item 
-using \mbox{\hyperlink{namespacecmdline_af7fd25c4ebdb6a148cd42b49244589aa}{TYPE\+\_\+\+DATE}} = std\+::tm
+using \mbox{\hyperlink{namespacecmdline_acff01f31e995fdaa0ef2982e8d44a915}{TYPE\+\_\+\+DATE}} = std\+::tm
 \item 
-using \mbox{\hyperlink{namespacecmdline_a192df381750096ab953c819c7c1b77af}{TYPE\+\_\+\+TIME}} = std\+::tm
+using \mbox{\hyperlink{namespacecmdline_a0d05d867c539721ba172307d8d328516}{TYPE\+\_\+\+TIME}} = std\+::tm
 \item 
-using \mbox{\hyperlink{namespacecmdline_a8884dd1026318bba8335693106089d72}{TYPE\+\_\+\+DATETIME}} = std\+::tm
+using \mbox{\hyperlink{namespacecmdline_a0059de9a83005aeb2977c1c94f346aad}{TYPE\+\_\+\+DATETIME}} = std\+::tm
 \item 
-using \mbox{\hyperlink{namespacecmdline_aaafcc727f197a7a2ed57ba219c6a5dca}{TYPE\+\_\+\+TMS}} = char $\ast$
+using \mbox{\hyperlink{namespacecmdline_ad61886e3c8249d7bc925ebbbd04ef4e0}{TYPE\+\_\+\+TMS}} = char $\ast$
 \item 
-using \mbox{\hyperlink{namespacecmdline_a05482a38cc9cc71460bc74d64aa0ebbd}{TYPE\+\_\+\+DIR}} = std\+::filesystem\+::path
+using \mbox{\hyperlink{namespacecmdline_a0a05f63416efb924adbf0164a045f2d2}{TYPE\+\_\+\+DIR}} = filesystem\+::path
 \item 
-using \mbox{\hyperlink{namespacecmdline_a399bd9833793b0b31b3fceea840fd425}{TYPE\+\_\+\+FILE}} = std\+::filesystem\+::path
+using \mbox{\hyperlink{namespacecmdline_a2913ad70f54c7e8ae5ca97d2d0f8b60a}{TYPE\+\_\+\+FILE}} = filesystem\+::path
 \item 
-using \mbox{\hyperlink{namespacecmdline_a344da03815b77a8ab30b6a9631bb6763}{Flags}} = std\+::unordered\+\_\+map$<$ std\+::string, bool $>$
+using \mbox{\hyperlink{namespacecmdline_a5c4904e875699ca3028d3a529c77d846}{Flags}} = std\+::unordered\+\_\+map$<$ std\+::string, bool $>$
 \item 
-using \mbox{\hyperlink{namespacecmdline_a94768b8bf837b49db0236df668d78be1}{Options}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$
+using \mbox{\hyperlink{namespacecmdline_a6da1d618a17097557db23c5b84d7dfba}{Options}} = std\+::unordered\+\_\+map$<$ std\+::string, vector$<$ std\+::string $>$ $>$
 \end{DoxyCompactItemize}
-\doxysubsection*{Enumerations}
+\doxysubsection*{Enumeraciones}
 \begin{DoxyCompactItemize}
 \item 
-enum class \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}} \{ \newline
-\mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a63b588d5559f64f89a416e656880b949}{STRING}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a027acd3aa6b1dd7f26119d3cf0f9a063}{CHAR}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15aa97b2c144243b2b9d2c593ec268b62f5}{BOOL}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a34f55eca38e0605a84f169ff61a2a396}{NUMBER}}
+enum class \mbox{\hyperlink{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}{Type}} \{ \newline
+\mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a63b588d5559f64f89a416e656880b949}{STRING}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a027acd3aa6b1dd7f26119d3cf0f9a063}{CHAR}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7aa97b2c144243b2b9d2c593ec268b62f5}{BOOL}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a34f55eca38e0605a84f169ff61a2a396}{NUMBER}}
 , \newline
-\mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a13d992d671957e9a2b3e936ca0cf14a4}{DECIMAL}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a6fa7d57eeaaac1f2a2971bf231783b81}{LONGNUMBER}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a106908fa230adbdbfaf58fc9bbf04a5c}{LONGDECIMAL}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a633a6c7a6b9958f8174250094daf1e6a}{DATE}}
+\mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a13d992d671957e9a2b3e936ca0cf14a4}{DECIMAL}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a6fa7d57eeaaac1f2a2971bf231783b81}{LONGNUMBER}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a106908fa230adbdbfaf58fc9bbf04a5c}{LONGDECIMAL}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a633a6c7a6b9958f8174250094daf1e6a}{DATE}}
 , \newline
-\mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a346ff32eaa3c09983fb2ec057816d352}{TIME}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15aa3eb957bd02f4780a599d5ec4464ca46}{DATETIME}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a9e5dfc0ebc078e4f03650d778f13d412}{TMS}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15ac1561b120842fabe1310417083827590}{DIR}}
+\mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a346ff32eaa3c09983fb2ec057816d352}{TIME}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7aa3eb957bd02f4780a599d5ec4464ca46}{DATETIME}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a9e5dfc0ebc078e4f03650d778f13d412}{TMS}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7ac1561b120842fabe1310417083827590}{DIR}}
 , \newline
-\mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a22991425b1dc3eb5c9ccdcee80eec9aa}{DIR\+\_\+\+EXISTS}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a9fc5887c030f7a3e19821ebec457e719}{FILE}}
-, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a8f20045e0839c2e258547ee09fc961a0}{FILE\+\_\+\+EXISTS}}
+\mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a22991425b1dc3eb5c9ccdcee80eec9aa}{DIR\+\_\+\+EXISTS}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a9fc5887c030f7a3e19821ebec457e719}{FILE}}
+, \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a8f20045e0839c2e258547ee09fc961a0}{FILE\+\_\+\+EXISTS}}
+, {\bfseries FLAG}
  \}
-\item 
-enum class \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}{Source}} \{ \newline
-\mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a5b39c8b553c821e7cddc6da64b5bd2ee}{DEFAULT}}
-, \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a84b2faa3b60428ae499f9c6672c1123d}{ENV}}
-, \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0aeac6d54143273f41f31aa59c9894c430}{CMDLINE}}
-, \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a08054846bbc9933fd0395f8be516a9f9}{CODE}}
+\begin{DoxyCompactList}\small\item\em Define el tipo de dato esperado del parametro. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{group___types_ga176e1eca2d1e3d1c6a064340bc6a351e}{Source}} \{ \newline
+\mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea5b39c8b553c821e7cddc6da64b5bd2ee}{DEFAULT}}
+, \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d}{ENV}}
+, {\bfseries CMDLINE}
+, \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9}{CODE}}
 , \newline
-\mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0ae1f2d5134ed2543d38a0de9751cf75d9}{AUTO}}
+\mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9}{AUTO}}
  \}
-\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\begin{DoxyCompactList}\small\item\em Indicates the origin of thelast value of parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
 \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const vector$<$ T $>$ \mbox{\hyperlink{namespacecmdline_aaa1ee82d26d1353d4e12f6e193381ecc}{get\+Option\+Values\+As}} (const char $\ast$name)
 \item 
 void \mbox{\hyperlink{namespacecmdline_a71f3e031fd5fd65b5c8e346007cb243b}{\+\_\+clean\+Class}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcmdline_1_1_cmd_line}{Cmd\+Line}} $\ast$ \mbox{\hyperlink{namespacecmdline_aff88b407f66f95d268ee8b3f56e16820}{singleton\+\_\+}} = nullptr
+\mbox{\hyperlink{classcmdline_1_1_cmd_line}{Cmd\+Line}} $\ast$ \mbox{\hyperlink{namespacecmdline_aeb721ff8bf1ec47bb0558ec5c9945dd7}{singleton\+\_\+}} = nullptr
 \item 
-char $\ast$$\ast$ \mbox{\hyperlink{namespacecmdline_ac8ab6ff856d104d06b0486ed233c4239}{\+\_\+argv}} = nullptr
+\mbox{\hyperlink{class__cmdline_1_1_command_line}{\+\_\+cmdline\+::\+Command\+Line}} $\ast$ \mbox{\hyperlink{namespacecmdline_ab03af4a168619347d0437b2d29209c42}{\+\_\+command\+Line}}
 \item 
-int \mbox{\hyperlink{namespacecmdline_ac013b293e2c45bdce4f0c29ca7dec44b}{\+\_\+nargc}}
+char $\ast$$\ast$ \mbox{\hyperlink{namespacecmdline_aff61fe53bf74f31923195e008ce82193}{\+\_\+argv}} = nullptr
 \item 
-\mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}} \mbox{\hyperlink{namespacecmdline_a70225d6bdcf87b4a810dad7417242c86}{\+\_\+parms}}
+int \mbox{\hyperlink{namespacecmdline_a38378b03dfd18c3322e44e45e566acf7}{\+\_\+nargc}}
+\item 
+Parameters \mbox{\hyperlink{namespacecmdline_a8dc1a57351bafab9f415d7ec3002b55e}{\+\_\+parms}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Descripción detallada}
+Public namespace to avoid naming mangling. 
+
 Base class for cmdline exceptions
 
 As library process argument from command line it inherits from invalid\+\_\+argument
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em msg} & Text to show \\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{namespacecmdline_a344da03815b77a8ab30b6a9631bb6763}\label{namespacecmdline_a344da03815b77a8ab30b6a9631bb6763}} 
+\doxysubsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\mbox{\Hypertarget{namespacecmdline_a5c4904e875699ca3028d3a529c77d846}\label{namespacecmdline_a5c4904e875699ca3028d3a529c77d846}} 
 \index{cmdline@{cmdline}!Flags@{Flags}}
 \index{Flags@{Flags}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{Flags}{Flags}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a344da03815b77a8ab30b6a9631bb6763}{cmdline\+::\+Flags}} = typedef std\+::unordered\+\_\+map$<$std\+::string, bool$>$}
+{\footnotesize\ttfamily using Flags =  std\+::unordered\+\_\+map$<$std\+::string, bool$>$}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00028}{28}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00038}{38}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a94768b8bf837b49db0236df668d78be1}\label{namespacecmdline_a94768b8bf837b49db0236df668d78be1}} 
+\mbox{\Hypertarget{namespacecmdline_a6da1d618a17097557db23c5b84d7dfba}\label{namespacecmdline_a6da1d618a17097557db23c5b84d7dfba}} 
 \index{cmdline@{cmdline}!Options@{Options}}
 \index{Options@{Options}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{Options}{Options}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a94768b8bf837b49db0236df668d78be1}{cmdline\+::\+Options}} = typedef std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$}
+{\footnotesize\ttfamily using Options =  std\+::unordered\+\_\+map$<$std\+::string, vector$<$std\+::string$>$ $>$}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00029}{29}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00039}{39}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}\label{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}} 
+\mbox{\Hypertarget{namespacecmdline_aa196c85dba607b8b0c719f371c6d6127}\label{namespacecmdline_aa196c85dba607b8b0c719f371c6d6127}} 
 \index{cmdline@{cmdline}!Parameters@{Parameters}}
 \index{Parameters@{Parameters}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{classcmdline_1_1_parm}{Parm}}$>$ \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{cmdline\+::\+Parameters}}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{classcmdline_1_1_parm}{Parm}}$>$ Parameters}
 
 
 
-Definition at line \mbox{\hyperlink{cmdline_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{cmdline_8hpp_source}{cmdline.\+hpp}}.
+Definición en la línea \mbox{\hyperlink{cmdline_8hpp_source_l00077}{77}} del archivo \mbox{\hyperlink{cmdline_8hpp_source}{cmdline.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a9c169e4cdbb4e5829365d477383125c9}\label{namespacecmdline_a9c169e4cdbb4e5829365d477383125c9}} 
+\mbox{\Hypertarget{namespacecmdline_a1759ed76d500e2ded04b2fdc4725f4f7}\label{namespacecmdline_a1759ed76d500e2ded04b2fdc4725f4f7}} 
 \index{cmdline@{cmdline}!TYPE\_BOOL@{TYPE\_BOOL}}
 \index{TYPE\_BOOL@{TYPE\_BOOL}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_BOOL}{TYPE\_BOOL}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a9c169e4cdbb4e5829365d477383125c9}{cmdline\+::\+TYPE\+\_\+\+BOOL}} = typedef bool}
+{\footnotesize\ttfamily using TYPE\+\_\+\+BOOL =  bool}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00012}{12}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00022}{22}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_af7fd25c4ebdb6a148cd42b49244589aa}\label{namespacecmdline_af7fd25c4ebdb6a148cd42b49244589aa}} 
+\mbox{\Hypertarget{namespacecmdline_acff01f31e995fdaa0ef2982e8d44a915}\label{namespacecmdline_acff01f31e995fdaa0ef2982e8d44a915}} 
 \index{cmdline@{cmdline}!TYPE\_DATE@{TYPE\_DATE}}
 \index{TYPE\_DATE@{TYPE\_DATE}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_DATE}{TYPE\_DATE}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_af7fd25c4ebdb6a148cd42b49244589aa}{cmdline\+::\+TYPE\+\_\+\+DATE}} = typedef std\+::tm}
+{\footnotesize\ttfamily using TYPE\+\_\+\+DATE =  std\+::tm}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00021}{21}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00031}{31}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a8884dd1026318bba8335693106089d72}\label{namespacecmdline_a8884dd1026318bba8335693106089d72}} 
+\mbox{\Hypertarget{namespacecmdline_a0059de9a83005aeb2977c1c94f346aad}\label{namespacecmdline_a0059de9a83005aeb2977c1c94f346aad}} 
 \index{cmdline@{cmdline}!TYPE\_DATETIME@{TYPE\_DATETIME}}
 \index{TYPE\_DATETIME@{TYPE\_DATETIME}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_DATETIME}{TYPE\_DATETIME}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a8884dd1026318bba8335693106089d72}{cmdline\+::\+TYPE\+\_\+\+DATETIME}} = typedef std\+::tm}
+{\footnotesize\ttfamily using TYPE\+\_\+\+DATETIME =  std\+::tm}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00023}{23}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00033}{33}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a1522cb6c41a3e27eb5fb1c7fa99af3c4}\label{namespacecmdline_a1522cb6c41a3e27eb5fb1c7fa99af3c4}} 
+\mbox{\Hypertarget{namespacecmdline_a25cb1287749223430f31d10da0fcfc9e}\label{namespacecmdline_a25cb1287749223430f31d10da0fcfc9e}} 
 \index{cmdline@{cmdline}!TYPE\_DECIMAL@{TYPE\_DECIMAL}}
 \index{TYPE\_DECIMAL@{TYPE\_DECIMAL}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_DECIMAL}{TYPE\_DECIMAL}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a1522cb6c41a3e27eb5fb1c7fa99af3c4}{cmdline\+::\+TYPE\+\_\+\+DECIMAL}} = typedef float}
+{\footnotesize\ttfamily using TYPE\+\_\+\+DECIMAL =  float}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00016}{16}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00026}{26}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a05482a38cc9cc71460bc74d64aa0ebbd}\label{namespacecmdline_a05482a38cc9cc71460bc74d64aa0ebbd}} 
+\mbox{\Hypertarget{namespacecmdline_a0a05f63416efb924adbf0164a045f2d2}\label{namespacecmdline_a0a05f63416efb924adbf0164a045f2d2}} 
 \index{cmdline@{cmdline}!TYPE\_DIR@{TYPE\_DIR}}
 \index{TYPE\_DIR@{TYPE\_DIR}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_DIR}{TYPE\_DIR}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a05482a38cc9cc71460bc74d64aa0ebbd}{cmdline\+::\+TYPE\+\_\+\+DIR}} = typedef std\+::filesystem\+::path}
+{\footnotesize\ttfamily using TYPE\+\_\+\+DIR =  filesystem\+::path}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00025}{25}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00035}{35}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a359ec5b8ce29f61dc06d630ca55f8bbf}\label{namespacecmdline_a359ec5b8ce29f61dc06d630ca55f8bbf}} 
+\mbox{\Hypertarget{namespacecmdline_a3dac61537649cf7e4afdde9c272dad7e}\label{namespacecmdline_a3dac61537649cf7e4afdde9c272dad7e}} 
 \index{cmdline@{cmdline}!TYPE\_DOUBLE@{TYPE\_DOUBLE}}
 \index{TYPE\_DOUBLE@{TYPE\_DOUBLE}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_DOUBLE}{TYPE\_DOUBLE}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a359ec5b8ce29f61dc06d630ca55f8bbf}{cmdline\+::\+TYPE\+\_\+\+DOUBLE}} = typedef double}
+{\footnotesize\ttfamily using TYPE\+\_\+\+DOUBLE =  double}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00018}{18}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00028}{28}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a399bd9833793b0b31b3fceea840fd425}\label{namespacecmdline_a399bd9833793b0b31b3fceea840fd425}} 
+\mbox{\Hypertarget{namespacecmdline_a2913ad70f54c7e8ae5ca97d2d0f8b60a}\label{namespacecmdline_a2913ad70f54c7e8ae5ca97d2d0f8b60a}} 
 \index{cmdline@{cmdline}!TYPE\_FILE@{TYPE\_FILE}}
 \index{TYPE\_FILE@{TYPE\_FILE}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_FILE}{TYPE\_FILE}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a399bd9833793b0b31b3fceea840fd425}{cmdline\+::\+TYPE\+\_\+\+FILE}} = typedef std\+::filesystem\+::path}
+{\footnotesize\ttfamily using TYPE\+\_\+\+FILE =  filesystem\+::path}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00026}{26}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00036}{36}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_ac4fa722c54c5e4a2a28e65286b6a3f66}\label{namespacecmdline_ac4fa722c54c5e4a2a28e65286b6a3f66}} 
+\mbox{\Hypertarget{namespacecmdline_a07ccd203e99050d555b31b6b6b5a36be}\label{namespacecmdline_a07ccd203e99050d555b31b6b6b5a36be}} 
 \index{cmdline@{cmdline}!TYPE\_FLOAT@{TYPE\_FLOAT}}
 \index{TYPE\_FLOAT@{TYPE\_FLOAT}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_FLOAT}{TYPE\_FLOAT}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_ac4fa722c54c5e4a2a28e65286b6a3f66}{cmdline\+::\+TYPE\+\_\+\+FLOAT}} = typedef float}
+{\footnotesize\ttfamily using TYPE\+\_\+\+FLOAT =  float}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00017}{17}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00027}{27}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a9f92378a7f9615ecc4dffbc43da401e6}\label{namespacecmdline_a9f92378a7f9615ecc4dffbc43da401e6}} 
+\mbox{\Hypertarget{namespacecmdline_a7c1a8cd11936e7de3d0a47af297c88c9}\label{namespacecmdline_a7c1a8cd11936e7de3d0a47af297c88c9}} 
 \index{cmdline@{cmdline}!TYPE\_INT@{TYPE\_INT}}
 \index{TYPE\_INT@{TYPE\_INT}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_INT}{TYPE\_INT}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a9f92378a7f9615ecc4dffbc43da401e6}{cmdline\+::\+TYPE\+\_\+\+INT}} = typedef int}
+{\footnotesize\ttfamily using TYPE\+\_\+\+INT =  int}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00015}{15}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00025}{25}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_ac7e48d74dd5285d6a2b727ba1807d1f9}\label{namespacecmdline_ac7e48d74dd5285d6a2b727ba1807d1f9}} 
+\mbox{\Hypertarget{namespacecmdline_a99fc066d53206224ee48a39496af5828}\label{namespacecmdline_a99fc066d53206224ee48a39496af5828}} 
 \index{cmdline@{cmdline}!TYPE\_LONG@{TYPE\_LONG}}
 \index{TYPE\_LONG@{TYPE\_LONG}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_LONG}{TYPE\_LONG}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_ac7e48d74dd5285d6a2b727ba1807d1f9}{cmdline\+::\+TYPE\+\_\+\+LONG}} = typedef long}
+{\footnotesize\ttfamily using TYPE\+\_\+\+LONG =  long}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00014}{14}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00024}{24}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a4ef64b6516c332ea13add2c686908a0e}\label{namespacecmdline_a4ef64b6516c332ea13add2c686908a0e}} 
+\mbox{\Hypertarget{namespacecmdline_a58efe8ada1b07409d8cd9e5223e7c04a}\label{namespacecmdline_a58efe8ada1b07409d8cd9e5223e7c04a}} 
 \index{cmdline@{cmdline}!TYPE\_LONGDECIMAL@{TYPE\_LONGDECIMAL}}
 \index{TYPE\_LONGDECIMAL@{TYPE\_LONGDECIMAL}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_LONGDECIMAL}{TYPE\_LONGDECIMAL}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a4ef64b6516c332ea13add2c686908a0e}{cmdline\+::\+TYPE\+\_\+\+LONGDECIMAL}} = typedef float}
+{\footnotesize\ttfamily using TYPE\+\_\+\+LONGDECIMAL =  float}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00020}{20}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00030}{30}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_ab1df9bb6f1302b08747032bc1feb260d}\label{namespacecmdline_ab1df9bb6f1302b08747032bc1feb260d}} 
+\mbox{\Hypertarget{namespacecmdline_a994f250aea3960cd0cb5558a2c9d30be}\label{namespacecmdline_a994f250aea3960cd0cb5558a2c9d30be}} 
 \index{cmdline@{cmdline}!TYPE\_LONGNUMBER@{TYPE\_LONGNUMBER}}
 \index{TYPE\_LONGNUMBER@{TYPE\_LONGNUMBER}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_LONGNUMBER}{TYPE\_LONGNUMBER}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_ab1df9bb6f1302b08747032bc1feb260d}{cmdline\+::\+TYPE\+\_\+\+LONGNUMBER}} = typedef long long}
+{\footnotesize\ttfamily using TYPE\+\_\+\+LONGNUMBER =  long long}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00019}{19}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00029}{29}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_aaf1f725a6e9790a8566d8c92fa6dbad3}\label{namespacecmdline_aaf1f725a6e9790a8566d8c92fa6dbad3}} 
+\mbox{\Hypertarget{namespacecmdline_a4adb6839604609a7da7341bcd26564f3}\label{namespacecmdline_a4adb6839604609a7da7341bcd26564f3}} 
 \index{cmdline@{cmdline}!TYPE\_NUMBER@{TYPE\_NUMBER}}
 \index{TYPE\_NUMBER@{TYPE\_NUMBER}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_NUMBER}{TYPE\_NUMBER}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_aaf1f725a6e9790a8566d8c92fa6dbad3}{cmdline\+::\+TYPE\+\_\+\+NUMBER}} = typedef long}
+{\footnotesize\ttfamily using TYPE\+\_\+\+NUMBER =  long}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00013}{13}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00023}{23}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a9419a1e265d6031653b7ec069d784721}\label{namespacecmdline_a9419a1e265d6031653b7ec069d784721}} 
+\mbox{\Hypertarget{namespacecmdline_af036a3f1da3709f512b9a021c3d9af17}\label{namespacecmdline_af036a3f1da3709f512b9a021c3d9af17}} 
 \index{cmdline@{cmdline}!TYPE\_STRING@{TYPE\_STRING}}
 \index{TYPE\_STRING@{TYPE\_STRING}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_STRING}{TYPE\_STRING}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a9419a1e265d6031653b7ec069d784721}{cmdline\+::\+TYPE\+\_\+\+STRING}} = typedef std\+::string}
+{\footnotesize\ttfamily using TYPE\+\_\+\+STRING =  std\+::string}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00011}{11}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00021}{21}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a192df381750096ab953c819c7c1b77af}\label{namespacecmdline_a192df381750096ab953c819c7c1b77af}} 
+\mbox{\Hypertarget{namespacecmdline_a0d05d867c539721ba172307d8d328516}\label{namespacecmdline_a0d05d867c539721ba172307d8d328516}} 
 \index{cmdline@{cmdline}!TYPE\_TIME@{TYPE\_TIME}}
 \index{TYPE\_TIME@{TYPE\_TIME}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_TIME}{TYPE\_TIME}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_a192df381750096ab953c819c7c1b77af}{cmdline\+::\+TYPE\+\_\+\+TIME}} = typedef std\+::tm}
+{\footnotesize\ttfamily using TYPE\+\_\+\+TIME =  std\+::tm}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00022}{22}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00032}{32}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_aaafcc727f197a7a2ed57ba219c6a5dca}\label{namespacecmdline_aaafcc727f197a7a2ed57ba219c6a5dca}} 
+\mbox{\Hypertarget{namespacecmdline_ad61886e3c8249d7bc925ebbbd04ef4e0}\label{namespacecmdline_ad61886e3c8249d7bc925ebbbd04ef4e0}} 
 \index{cmdline@{cmdline}!TYPE\_TMS@{TYPE\_TMS}}
 \index{TYPE\_TMS@{TYPE\_TMS}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{TYPE\_TMS}{TYPE\_TMS}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecmdline_aaafcc727f197a7a2ed57ba219c6a5dca}{cmdline\+::\+TYPE\+\_\+\+TMS}} = typedef char $\ast$}
+{\footnotesize\ttfamily using TYPE\+\_\+\+TMS =  char$\ast$}
 
 
 
-Definition at line \mbox{\hyperlink{types_8h_source_l00024}{24}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00034}{34}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 
 
-\doxysubsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}\label{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}} 
-\index{cmdline@{cmdline}!Source@{Source}}
-\index{Source@{Source}!cmdline@{cmdline}}
-\doxysubsubsection{\texorpdfstring{Source}{Source}}
-{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}{cmdline\+::\+Source}}\hspace{0.3cm}{\ttfamily [strong]}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFAULT@{DEFAULT}!cmdline@{cmdline}}\index{cmdline@{cmdline}!DEFAULT@{DEFAULT}}}\mbox{\Hypertarget{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a5b39c8b553c821e7cddc6da64b5bd2ee}\label{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a5b39c8b553c821e7cddc6da64b5bd2ee}} 
-DEFAULT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ENV@{ENV}!cmdline@{cmdline}}\index{cmdline@{cmdline}!ENV@{ENV}}}\mbox{\Hypertarget{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a84b2faa3b60428ae499f9c6672c1123d}\label{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a84b2faa3b60428ae499f9c6672c1123d}} 
-ENV&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CMDLINE@{CMDLINE}!cmdline@{cmdline}}\index{cmdline@{cmdline}!CMDLINE@{CMDLINE}}}\mbox{\Hypertarget{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0aeac6d54143273f41f31aa59c9894c430}\label{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0aeac6d54143273f41f31aa59c9894c430}} 
-CMDLINE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CODE@{CODE}!cmdline@{cmdline}}\index{cmdline@{cmdline}!CODE@{CODE}}}\mbox{\Hypertarget{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a08054846bbc9933fd0395f8be516a9f9}\label{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0a08054846bbc9933fd0395f8be516a9f9}} 
-CODE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{AUTO@{AUTO}!cmdline@{cmdline}}\index{cmdline@{cmdline}!AUTO@{AUTO}}}\mbox{\Hypertarget{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0ae1f2d5134ed2543d38a0de9751cf75d9}\label{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0ae1f2d5134ed2543d38a0de9751cf75d9}} 
-AUTO&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-Definition at line \mbox{\hyperlink{types_8h_source_l00009}{9}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
-
-\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}} 
-\index{cmdline@{cmdline}!Type@{Type}}
-\index{Type@{Type}!cmdline@{cmdline}}
-\doxysubsubsection{\texorpdfstring{Type}{Type}}
-{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{cmdline\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!cmdline@{cmdline}}\index{cmdline@{cmdline}!STRING@{STRING}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a63b588d5559f64f89a416e656880b949}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a63b588d5559f64f89a416e656880b949}} 
-STRING&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CHAR@{CHAR}!cmdline@{cmdline}}\index{cmdline@{cmdline}!CHAR@{CHAR}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a027acd3aa6b1dd7f26119d3cf0f9a063}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a027acd3aa6b1dd7f26119d3cf0f9a063}} 
-CHAR&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BOOL@{BOOL}!cmdline@{cmdline}}\index{cmdline@{cmdline}!BOOL@{BOOL}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15aa97b2c144243b2b9d2c593ec268b62f5}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15aa97b2c144243b2b9d2c593ec268b62f5}} 
-BOOL&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{NUMBER@{NUMBER}!cmdline@{cmdline}}\index{cmdline@{cmdline}!NUMBER@{NUMBER}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a34f55eca38e0605a84f169ff61a2a396}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a34f55eca38e0605a84f169ff61a2a396}} 
-NUMBER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DECIMAL@{DECIMAL}!cmdline@{cmdline}}\index{cmdline@{cmdline}!DECIMAL@{DECIMAL}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a13d992d671957e9a2b3e936ca0cf14a4}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a13d992d671957e9a2b3e936ca0cf14a4}} 
-DECIMAL&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{LONGNUMBER@{LONGNUMBER}!cmdline@{cmdline}}\index{cmdline@{cmdline}!LONGNUMBER@{LONGNUMBER}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a6fa7d57eeaaac1f2a2971bf231783b81}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a6fa7d57eeaaac1f2a2971bf231783b81}} 
-LONGNUMBER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{LONGDECIMAL@{LONGDECIMAL}!cmdline@{cmdline}}\index{cmdline@{cmdline}!LONGDECIMAL@{LONGDECIMAL}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a106908fa230adbdbfaf58fc9bbf04a5c}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a106908fa230adbdbfaf58fc9bbf04a5c}} 
-LONGDECIMAL&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DATE@{DATE}!cmdline@{cmdline}}\index{cmdline@{cmdline}!DATE@{DATE}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a633a6c7a6b9958f8174250094daf1e6a}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a633a6c7a6b9958f8174250094daf1e6a}} 
-DATE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TIME@{TIME}!cmdline@{cmdline}}\index{cmdline@{cmdline}!TIME@{TIME}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a346ff32eaa3c09983fb2ec057816d352}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a346ff32eaa3c09983fb2ec057816d352}} 
-TIME&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DATETIME@{DATETIME}!cmdline@{cmdline}}\index{cmdline@{cmdline}!DATETIME@{DATETIME}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15aa3eb957bd02f4780a599d5ec4464ca46}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15aa3eb957bd02f4780a599d5ec4464ca46}} 
-DATETIME&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TMS@{TMS}!cmdline@{cmdline}}\index{cmdline@{cmdline}!TMS@{TMS}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a9e5dfc0ebc078e4f03650d778f13d412}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a9e5dfc0ebc078e4f03650d778f13d412}} 
-TMS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DIR@{DIR}!cmdline@{cmdline}}\index{cmdline@{cmdline}!DIR@{DIR}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15ac1561b120842fabe1310417083827590}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15ac1561b120842fabe1310417083827590}} 
-DIR&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DIR\_EXISTS@{DIR\_EXISTS}!cmdline@{cmdline}}\index{cmdline@{cmdline}!DIR\_EXISTS@{DIR\_EXISTS}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a22991425b1dc3eb5c9ccdcee80eec9aa}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a22991425b1dc3eb5c9ccdcee80eec9aa}} 
-DIR\+\_\+\+EXISTS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE@{FILE}!cmdline@{cmdline}}\index{cmdline@{cmdline}!FILE@{FILE}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a9fc5887c030f7a3e19821ebec457e719}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a9fc5887c030f7a3e19821ebec457e719}} 
-FILE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE\_EXISTS@{FILE\_EXISTS}!cmdline@{cmdline}}\index{cmdline@{cmdline}!FILE\_EXISTS@{FILE\_EXISTS}}}\mbox{\Hypertarget{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a8f20045e0839c2e258547ee09fc961a0}\label{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15a8f20045e0839c2e258547ee09fc961a0}} 
-FILE\+\_\+\+EXISTS&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-Definition at line \mbox{\hyperlink{types_8h_source_l00008}{8}} of file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
-
-
-
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentación de las funciones}
 \mbox{\Hypertarget{namespacecmdline_a71f3e031fd5fd65b5c8e346007cb243b}\label{namespacecmdline_a71f3e031fd5fd65b5c8e346007cb243b}} 
 \index{cmdline@{cmdline}!\_cleanClass@{\_cleanClass}}
 \index{\_cleanClass@{\_cleanClass}!cmdline@{cmdline}}
@@ -446,48 +353,68 @@ Definition at line \mbox{\hyperlink{types_8h_source_l00008}{8}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
+Definición en la línea \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00014}{14}} del archivo \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
+
+\mbox{\Hypertarget{namespacecmdline_aaa1ee82d26d1353d4e12f6e193381ecc}\label{namespacecmdline_aaa1ee82d26d1353d4e12f6e193381ecc}} 
+\index{cmdline@{cmdline}!getOptionValuesAs@{getOptionValuesAs}}
+\index{getOptionValuesAs@{getOptionValuesAs}!cmdline@{cmdline}}
+\doxysubsubsection{\texorpdfstring{getOptionValuesAs()}{getOptionValuesAs()}}
+{\footnotesize\ttfamily const vector$<$ T $>$ cmdline\+::get\+Option\+Values\+As (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 
 
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{namespacecmdline_ac8ab6ff856d104d06b0486ed233c4239}\label{namespacecmdline_ac8ab6ff856d104d06b0486ed233c4239}} 
+Definición en la línea \mbox{\hyperlink{cmdline_8cpp_source_l00063}{63}} del archivo \mbox{\hyperlink{cmdline_8cpp_source}{cmdline.\+cpp}}.
+
+
+
+\doxysubsection{Documentación de las variables}
+\mbox{\Hypertarget{namespacecmdline_aff61fe53bf74f31923195e008ce82193}\label{namespacecmdline_aff61fe53bf74f31923195e008ce82193}} 
 \index{cmdline@{cmdline}!\_argv@{\_argv}}
 \index{\_argv@{\_argv}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{\_argv}{\_argv}}
-{\footnotesize\ttfamily char$\ast$$\ast$ cmdline\+::\+\_\+argv = nullptr}
+{\footnotesize\ttfamily char$\ast$$\ast$ \+\_\+argv = nullptr}
 
 
 
-Definition at line \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
+Definición en la línea \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00010}{10}} del archivo \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_ac013b293e2c45bdce4f0c29ca7dec44b}\label{namespacecmdline_ac013b293e2c45bdce4f0c29ca7dec44b}} 
+\mbox{\Hypertarget{namespacecmdline_ab03af4a168619347d0437b2d29209c42}\label{namespacecmdline_ab03af4a168619347d0437b2d29209c42}} 
+\index{cmdline@{cmdline}!\_commandLine@{\_commandLine}}
+\index{\_commandLine@{\_commandLine}!cmdline@{cmdline}}
+\doxysubsubsection{\texorpdfstring{\_commandLine}{\_commandLine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class__cmdline_1_1_command_line}{\+\_\+cmdline\+::\+Command\+Line}}$\ast$ \+\_\+command\+Line}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8cpp_source_l00015}{15}} del archivo \mbox{\hyperlink{cmdline_8cpp_source}{cmdline.\+cpp}}.
+
+\mbox{\Hypertarget{namespacecmdline_a38378b03dfd18c3322e44e45e566acf7}\label{namespacecmdline_a38378b03dfd18c3322e44e45e566acf7}} 
 \index{cmdline@{cmdline}!\_nargc@{\_nargc}}
 \index{\_nargc@{\_nargc}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{\_nargc}{\_nargc}}
-{\footnotesize\ttfamily int cmdline\+::\+\_\+nargc}
+{\footnotesize\ttfamily int \+\_\+nargc}
 
 
 
-Definition at line \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
+Definición en la línea \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00011}{11}} del archivo \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_a70225d6bdcf87b4a810dad7417242c86}\label{namespacecmdline_a70225d6bdcf87b4a810dad7417242c86}} 
+\mbox{\Hypertarget{namespacecmdline_a8dc1a57351bafab9f415d7ec3002b55e}\label{namespacecmdline_a8dc1a57351bafab9f415d7ec3002b55e}} 
 \index{cmdline@{cmdline}!\_parms@{\_parms}}
 \index{\_parms@{\_parms}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{\_parms}{\_parms}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacecmdline_a9f9be2cfb9ccb8f323afaf85c2dad97b}{Parameters}} cmdline\+::\+\_\+parms}
+{\footnotesize\ttfamily Parameters \+\_\+parms}
 
 
 
-Definition at line \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
+Definición en la línea \mbox{\hyperlink{cmdline__flavors_8cpp_source_l00012}{12}} del archivo \mbox{\hyperlink{cmdline__flavors_8cpp_source}{cmdline\+\_\+flavors.\+cpp}}.
 
-\mbox{\Hypertarget{namespacecmdline_aff88b407f66f95d268ee8b3f56e16820}\label{namespacecmdline_aff88b407f66f95d268ee8b3f56e16820}} 
+\mbox{\Hypertarget{namespacecmdline_aeb721ff8bf1ec47bb0558ec5c9945dd7}\label{namespacecmdline_aeb721ff8bf1ec47bb0558ec5c9945dd7}} 
 \index{cmdline@{cmdline}!singleton\_@{singleton\_}}
 \index{singleton\_@{singleton\_}!cmdline@{cmdline}}
 \doxysubsubsection{\texorpdfstring{singleton\_}{singleton\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classcmdline_1_1_cmd_line}{Cmd\+Line}}$\ast$ cmdline\+::singleton\+\_\+ = nullptr}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcmdline_1_1_cmd_line}{Cmd\+Line}}$\ast$ singleton\+\_\+ = nullptr}
 
 
 
-Definition at line \mbox{\hyperlink{cmdline_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{cmdline_8cpp_source}{cmdline.\+cpp}}.
+Definición en la línea \mbox{\hyperlink{cmdline_8cpp_source_l00012}{12}} del archivo \mbox{\hyperlink{cmdline_8cpp_source}{cmdline.\+cpp}}.
 

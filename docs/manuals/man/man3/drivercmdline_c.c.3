@@ -1,0 +1,72 @@
+.TH "drivercmdline_c/drivercmdline_c.c" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+drivercmdline_c/drivercmdline_c.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'cmdline\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBshowDefinitions\fP (\fBCmdLine\fP *ptr, int expected, char print)"
+.br
+.ti -1c
+.RI "void \fBshowFlags\fP (\fBCmdLine\fP *ptr, int expected, char print)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBParmDef\fP \fBparms\fP []"
+.br
+.ti -1c
+.RI "\fBCmdLine\fP * \fBcmdline\fP = NULL"
+.br
+.in -1c
+.SH "Documentación de las funciones"
+.PP 
+.SS "int main (int argc, char ** argv)"
+
+.PP
+Definición en la línea \fB15\fP del archivo \fBdrivercmdline_c\&.c\fP\&.
+.SS "void showDefinitions (\fBCmdLine\fP * ptr, int expected, char print)"
+
+.PP
+Definición en la línea \fB43\fP del archivo \fBdrivercmdline_c\&.c\fP\&.
+.SS "void showFlags (\fBCmdLine\fP * ptr, int expected, char print)"
+
+.PP
+Definición en la línea \fB59\fP del archivo \fBdrivercmdline_c\&.c\fP\&.
+.SH "Documentación de las variables"
+.PP 
+.SS "\fBCmdLine\fP* cmdline = NULL"
+
+.PP
+Definición en la línea \fB13\fP del archivo \fBdrivercmdline_c\&.c\fP\&.
+.SS "\fBParmDef\fP parms[]"
+\fBValor inicial:\fP
+.PP
+.nf
+= {
+    {"output", FLAG, "1", FALSE}
+    ,0x0
+}
+.fi
+.PP
+Definición en la línea \fB9\fP del archivo \fBdrivercmdline_c\&.c\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

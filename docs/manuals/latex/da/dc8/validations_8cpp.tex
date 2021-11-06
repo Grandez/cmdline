@@ -1,5 +1,5 @@
-\hypertarget{validations_8cpp}{}\doxysection{cmdline/src/validations.cpp File Reference}
-\label{validations_8cpp}\index{cmdline/src/validations.cpp@{cmdline/src/validations.cpp}}
+\hypertarget{validations_8cpp}{}\doxysection{Referencia del Archivo libcmdline/src/validations.cpp}
+\label{validations_8cpp}\index{libcmdline/src/validations.cpp@{libcmdline/src/validations.cpp}}
 {\ttfamily \#include $<$ctime$>$}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include $<$cstdio$>$}\newline
@@ -9,13 +9,12 @@
 {\ttfamily \#include $<$filesystem$>$}\newline
 {\ttfamily \#include $<$direct.\+h$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmdline.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cmdline\+\_\+exceptions.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}validations.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}msg\+\_\+locale.\+h\char`\"{}}\newline
-Include dependency graph for validations.\+cpp\+:
-\nopagebreak
+{\ttfamily \#include \char`\"{}validations.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg\+\_\+locale.\+hpp\char`\"{}}\newline
+Dependencia gráfica adjunta para validations.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,7 +26,7 @@ Include dependency graph for validations.\+cpp\+:
 \item 
 namespace \mbox{\hyperlink{namespace__cmdline}{\+\_\+cmdline}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
 struct tm $\ast$ \mbox{\hyperlink{namespace__cmdline_ade1b540e78711606ef25480c5ff903fc}{\+\_\+cmdline\+::make\+Date\+Time}} (char $\ast$sdate, char $\ast$stime)
@@ -77,4 +76,8 @@ int \mbox{\hyperlink{namespace__cmdline_a9124f48914e15413151365a8a54c52e8}{\+\_\
 float \mbox{\hyperlink{namespace__cmdline_a60f69e7de3e2a87fbb7b5b6d3795e18e}{\+\_\+cmdline\+::make\+Float}} (const char $\ast$value)
 \item 
 struct tm \mbox{\hyperlink{namespace__cmdline_ac7b4158149a8fbd68ca1310a53a748b0}{\+\_\+cmdline\+::make\+Tm}} (const char $\ast$value)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_a9b2158a5f8c41b8ff5b808c7d3d14674}{\+\_\+cmdline\+::val\+Make\+Boolean}} (const char $\ast$value)
+\item 
+bool \mbox{\hyperlink{namespace__cmdline_ab4813bdc2275bf4331df3c25ab37b698}{\+\_\+cmdline\+::val\+Make\+Boolean}} (std\+::string value)
 \end{DoxyCompactItemize}

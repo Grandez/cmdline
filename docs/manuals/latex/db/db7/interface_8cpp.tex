@@ -1,0 +1,385 @@
+\hypertarget{interface_8cpp}{}\doxysection{Referencia del Archivo libcmdline/include/interface.cpp}
+\label{interface_8cpp}\index{libcmdline/include/interface.cpp@{libcmdline/include/interface.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}cmdline.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmdline.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmdline\+\_\+exceptions.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}interface.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmdline\+\_\+errno.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+hpp\char`\"{}}\newline
+Dependencia gráfica adjunta para interface.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d64/interface_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void $\ast$ \mbox{\hyperlink{interface_8cpp_a201a7d1b9e290cf433148e160f826206}{check\+Exception}} (T \&ex)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_a3cd9112e0814e40a6f66e1cdcc5668f2}{has\+Value}} (int target, const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_a223cac6d32154ee11c2a5c3f630bb0a5}{is\+Multiple}} (bool option, const char $\ast$name)
+\item 
+\mbox{\hyperlink{namespacecmdline_af013b84e068f71e923e1dd66193ee46a}{cmdline\+::\+Parameters}} \mbox{\hyperlink{interface_8cpp_ab26dc6760986ef916f48473039506af4}{make\+Parameters}} (\mbox{\hyperlink{include_2types_8h_a319575fdb970e4fa33e65dce49b49c29}{Parm\+Def}} cparms\mbox{[}$\,$\mbox{]})
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_ac5b763efdf9e64d318b0a9925ef246a3}{\+\_\+make\+Array}} (vector$<$ const char $\ast$ $>$ data)
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a91aec5ea9919dae2e893bb308c85180d}{\+\_\+make\+Array}} (vector$<$ string $>$ data)
+\item 
+\mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_acecfa5ee62f6a6b520c70ef6b6ba7184}{\+\_\+make\+Array\+Parameter}} (\mbox{\hyperlink{namespacecmdline_a8ab0c4798f3896bbbed8ce27f3984266}{cmdline\+::\+Options}} data)
+\item 
+const char $\ast$ \mbox{\hyperlink{interface_8cpp_aeaffec3d82126df8f179475872522931}{get\+Value}} (bool option, const char $\ast$name)
+\item 
+int \mbox{\hyperlink{interface_8cpp_ac1b3bb7933862cae932bb48ba52a52e6}{get\+Num\+Values}} (bool option, const char $\ast$name)
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a82017b98646dd0af0c2908147ad1945c}{get\+All\+Values}} (bool option, const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a47e493e5adddc055f5874a69afc30aed}{\+\_\+get\+Options}} (bool def)
+\item 
+\mbox{\hyperlink{include_2types_8h_a6b6ee944c1c74532eb406c781a0a76c0}{Flag}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_aabcbce07240da31199e4c9bd2c3372f4}{make\+Flags}} (\mbox{\hyperlink{namespacecmdline_a4a5370834f07375d59ac54bbbd84861b}{cmdline\+::\+Flags}} flags)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_a7b40a086817159fbc74b5627faa73531}{c\+Has\+Flag}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_a370498287b9993a3e1714eec3fa7b74e}{c\+Has\+Option}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_a9217141e6d15337266b02e1ba3c41eb3}{c\+Has\+Define}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_a35ec00de64c2bf72c6552335413bdc0a}{c\+Is\+Option\+Multiple}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} \mbox{\hyperlink{interface_8cpp_af45f05562c111ea8128656549ad17966}{c\+Is\+Define\+Multiple}} (const char $\ast$name)
+\item 
+int \mbox{\hyperlink{interface_8cpp_a1b329dd3f95f9a0bcc89cf9f46f8fc51}{c\+Get\+Option\+Num\+Values}} (const char $\ast$name)
+\item 
+int \mbox{\hyperlink{interface_8cpp_a5a192fca4c2cc0c103be6f5ecb819d7b}{c\+Get\+Define\+Num\+Values}} (const char $\ast$name)
+\item 
+const char $\ast$ \mbox{\hyperlink{interface_8cpp_a5c2a53ceb9730ff9fca1025dd1c8525b}{c\+Get\+Option}} (const char $\ast$name)
+\item 
+const char $\ast$ \mbox{\hyperlink{interface_8cpp_afc9d83322513a27bdfc1244d00dafad4}{c\+Get\+Define}} (const char $\ast$name)
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_ad27006274178d0b797eee0acd6ee15c4}{c\+Get\+Option\+Values}} (const char $\ast$name)
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_ada1683e16f9b6fff4aeea570fc474de7}{c\+Get\+Define\+Values}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{include_2types_8h_a6b6ee944c1c74532eb406c781a0a76c0}{Flag}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a5f1a67bc5bd121bac1d1966e0a75bbd2}{c\+Get\+Default\+Flags}} (\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} active)
+\item 
+\mbox{\hyperlink{include_2types_8h_a6b6ee944c1c74532eb406c781a0a76c0}{Flag}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a7e27841f0cb2eb11ae94431fcce59750}{c\+Get\+Current\+Flags}} (\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} active)
+\item 
+\mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a87d6b99e2108af324c8d7ebbeafc1980}{c\+Get\+Default\+Options}} ()
+\item 
+\mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_a998b0f39cea03d9cbb721c0fda8cb358}{c\+Get\+Current\+Options}} ()
+\item 
+\mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \mbox{\hyperlink{interface_8cpp_ade75160bfd927d734e05b6bc498b129a}{c\+Get\+Definitions}} ()
+\item 
+\mbox{\hyperlink{class_cmd_line}{Cmd\+Line}} $\ast$ \mbox{\hyperlink{interface_8cpp_aad7b8befdd81bc7eb7009b63b2eadf7f}{cmdline\+\_\+create}} (int argc, char $\ast$$\ast$arg, \mbox{\hyperlink{include_2types_8h_a319575fdb970e4fa33e65dce49b49c29}{Parm\+Def}} cparms\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{interface_8cpp_ae00361a3b75c72181549d305b29200a5}{cmdline\+\_\+delete}} (\mbox{\hyperlink{class_cmd_line}{Cmd\+Line}} $\ast$\mbox{\hyperlink{drivercmdline__c_8c_a037b7aa05469affecdd3dd081a91c1ec}{cmdline}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{interface_8cpp_a47e493e5adddc055f5874a69afc30aed}\label{interface_8cpp_a47e493e5adddc055f5874a69afc30aed}} 
+\index{interface.cpp@{interface.cpp}!\_getOptions@{\_getOptions}}
+\index{\_getOptions@{\_getOptions}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{\_getOptions()}{\_getOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \+\_\+get\+Options (\begin{DoxyParamCaption}\item[{bool}]{def }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00158}{158}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ac5b763efdf9e64d318b0a9925ef246a3}\label{interface_8cpp_ac5b763efdf9e64d318b0a9925ef246a3}} 
+\index{interface.cpp@{interface.cpp}!\_makeArray@{\_makeArray}}
+\index{\_makeArray@{\_makeArray}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{\_makeArray()}{\_makeArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const char $\ast$$\ast$ \+\_\+make\+Array (\begin{DoxyParamCaption}\item[{vector$<$ const char $\ast$ $>$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00075}{75}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a91aec5ea9919dae2e893bb308c85180d}\label{interface_8cpp_a91aec5ea9919dae2e893bb308c85180d}} 
+\index{interface.cpp@{interface.cpp}!\_makeArray@{\_makeArray}}
+\index{\_makeArray@{\_makeArray}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{\_makeArray()}{\_makeArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const char $\ast$$\ast$ \+\_\+make\+Array (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00088}{88}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_acecfa5ee62f6a6b520c70ef6b6ba7184}\label{interface_8cpp_acecfa5ee62f6a6b520c70ef6b6ba7184}} 
+\index{interface.cpp@{interface.cpp}!\_makeArrayParameter@{\_makeArrayParameter}}
+\index{\_makeArrayParameter@{\_makeArrayParameter}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{\_makeArrayParameter()}{\_makeArrayParameter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ \+\_\+make\+Array\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecmdline_a8ab0c4798f3896bbbed8ce27f3984266}{cmdline\+::\+Options}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00102}{102}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a7e27841f0cb2eb11ae94431fcce59750}\label{interface_8cpp_a7e27841f0cb2eb11ae94431fcce59750}} 
+\index{interface.cpp@{interface.cpp}!cGetCurrentFlags@{cGetCurrentFlags}}
+\index{cGetCurrentFlags@{cGetCurrentFlags}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetCurrentFlags()}{cGetCurrentFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a6b6ee944c1c74532eb406c781a0a76c0}{Flag}} $\ast$$\ast$ c\+Get\+Current\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}}]{active }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00226}{226}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a998b0f39cea03d9cbb721c0fda8cb358}\label{interface_8cpp_a998b0f39cea03d9cbb721c0fda8cb358}} 
+\index{interface.cpp@{interface.cpp}!cGetCurrentOptions@{cGetCurrentOptions}}
+\index{cGetCurrentOptions@{cGetCurrentOptions}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetCurrentOptions()}{cGetCurrentOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ c\+Get\+Current\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00239}{239}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a5f1a67bc5bd121bac1d1966e0a75bbd2}\label{interface_8cpp_a5f1a67bc5bd121bac1d1966e0a75bbd2}} 
+\index{interface.cpp@{interface.cpp}!cGetDefaultFlags@{cGetDefaultFlags}}
+\index{cGetDefaultFlags@{cGetDefaultFlags}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetDefaultFlags()}{cGetDefaultFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a6b6ee944c1c74532eb406c781a0a76c0}{Flag}} $\ast$$\ast$ c\+Get\+Default\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}}]{active }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00216}{216}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a87d6b99e2108af324c8d7ebbeafc1980}\label{interface_8cpp_a87d6b99e2108af324c8d7ebbeafc1980}} 
+\index{interface.cpp@{interface.cpp}!cGetDefaultOptions@{cGetDefaultOptions}}
+\index{cGetDefaultOptions@{cGetDefaultOptions}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetDefaultOptions()}{cGetDefaultOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ c\+Get\+Default\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00236}{236}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_afc9d83322513a27bdfc1244d00dafad4}\label{interface_8cpp_afc9d83322513a27bdfc1244d00dafad4}} 
+\index{interface.cpp@{interface.cpp}!cGetDefine@{cGetDefine}}
+\index{cGetDefine@{cGetDefine}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetDefine()}{cGetDefine()}}
+{\footnotesize\ttfamily const char $\ast$ c\+Get\+Define (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00212}{212}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a5a192fca4c2cc0c103be6f5ecb819d7b}\label{interface_8cpp_a5a192fca4c2cc0c103be6f5ecb819d7b}} 
+\index{interface.cpp@{interface.cpp}!cGetDefineNumValues@{cGetDefineNumValues}}
+\index{cGetDefineNumValues@{cGetDefineNumValues}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetDefineNumValues()}{cGetDefineNumValues()}}
+{\footnotesize\ttfamily int c\+Get\+Define\+Num\+Values (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00210}{210}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ada1683e16f9b6fff4aeea570fc474de7}\label{interface_8cpp_ada1683e16f9b6fff4aeea570fc474de7}} 
+\index{interface.cpp@{interface.cpp}!cGetDefineValues@{cGetDefineValues}}
+\index{cGetDefineValues@{cGetDefineValues}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetDefineValues()}{cGetDefineValues()}}
+{\footnotesize\ttfamily const char $\ast$$\ast$ c\+Get\+Define\+Values (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00214}{214}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ade75160bfd927d734e05b6bc498b129a}\label{interface_8cpp_ade75160bfd927d734e05b6bc498b129a}} 
+\index{interface.cpp@{interface.cpp}!cGetDefinitions@{cGetDefinitions}}
+\index{cGetDefinitions@{cGetDefinitions}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetDefinitions()}{cGetDefinitions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a80774926a05375090db3c43d52f8e08f}{Parameter}} $\ast$$\ast$ c\+Get\+Definitions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00242}{242}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a5c2a53ceb9730ff9fca1025dd1c8525b}\label{interface_8cpp_a5c2a53ceb9730ff9fca1025dd1c8525b}} 
+\index{interface.cpp@{interface.cpp}!cGetOption@{cGetOption}}
+\index{cGetOption@{cGetOption}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetOption()}{cGetOption()}}
+{\footnotesize\ttfamily const char $\ast$ c\+Get\+Option (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00211}{211}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a1b329dd3f95f9a0bcc89cf9f46f8fc51}\label{interface_8cpp_a1b329dd3f95f9a0bcc89cf9f46f8fc51}} 
+\index{interface.cpp@{interface.cpp}!cGetOptionNumValues@{cGetOptionNumValues}}
+\index{cGetOptionNumValues@{cGetOptionNumValues}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetOptionNumValues()}{cGetOptionNumValues()}}
+{\footnotesize\ttfamily int c\+Get\+Option\+Num\+Values (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00209}{209}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ad27006274178d0b797eee0acd6ee15c4}\label{interface_8cpp_ad27006274178d0b797eee0acd6ee15c4}} 
+\index{interface.cpp@{interface.cpp}!cGetOptionValues@{cGetOptionValues}}
+\index{cGetOptionValues@{cGetOptionValues}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cGetOptionValues()}{cGetOptionValues()}}
+{\footnotesize\ttfamily const char $\ast$$\ast$ c\+Get\+Option\+Values (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00213}{213}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a9217141e6d15337266b02e1ba3c41eb3}\label{interface_8cpp_a9217141e6d15337266b02e1ba3c41eb3}} 
+\index{interface.cpp@{interface.cpp}!cHasDefine@{cHasDefine}}
+\index{cHasDefine@{cHasDefine}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cHasDefine()}{cHasDefine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} c\+Has\+Define (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00206}{206}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a7b40a086817159fbc74b5627faa73531}\label{interface_8cpp_a7b40a086817159fbc74b5627faa73531}} 
+\index{interface.cpp@{interface.cpp}!cHasFlag@{cHasFlag}}
+\index{cHasFlag@{cHasFlag}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cHasFlag()}{cHasFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} c\+Has\+Flag (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00204}{204}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a370498287b9993a3e1714eec3fa7b74e}\label{interface_8cpp_a370498287b9993a3e1714eec3fa7b74e}} 
+\index{interface.cpp@{interface.cpp}!cHasOption@{cHasOption}}
+\index{cHasOption@{cHasOption}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cHasOption()}{cHasOption()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} c\+Has\+Option (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00205}{205}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a201a7d1b9e290cf433148e160f826206}\label{interface_8cpp_a201a7d1b9e290cf433148e160f826206}} 
+\index{interface.cpp@{interface.cpp}!checkException@{checkException}}
+\index{checkException@{checkException}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{checkException()}{checkException()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void $\ast$ check\+Exception (\begin{DoxyParamCaption}\item[{T \&}]{ex }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00022}{22}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_af45f05562c111ea8128656549ad17966}\label{interface_8cpp_af45f05562c111ea8128656549ad17966}} 
+\index{interface.cpp@{interface.cpp}!cIsDefineMultiple@{cIsDefineMultiple}}
+\index{cIsDefineMultiple@{cIsDefineMultiple}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cIsDefineMultiple()}{cIsDefineMultiple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} c\+Is\+Define\+Multiple (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00208}{208}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a35ec00de64c2bf72c6552335413bdc0a}\label{interface_8cpp_a35ec00de64c2bf72c6552335413bdc0a}} 
+\index{interface.cpp@{interface.cpp}!cIsOptionMultiple@{cIsOptionMultiple}}
+\index{cIsOptionMultiple@{cIsOptionMultiple}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cIsOptionMultiple()}{cIsOptionMultiple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} c\+Is\+Option\+Multiple (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00207}{207}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_aad7b8befdd81bc7eb7009b63b2eadf7f}\label{interface_8cpp_aad7b8befdd81bc7eb7009b63b2eadf7f}} 
+\index{interface.cpp@{interface.cpp}!cmdline\_create@{cmdline\_create}}
+\index{cmdline\_create@{cmdline\_create}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cmdline\_create()}{cmdline\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cmd_line}{Cmd\+Line}} $\ast$ cmdline\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{arg,  }\item[{\mbox{\hyperlink{include_2types_8h_a319575fdb970e4fa33e65dce49b49c29}{Parm\+Def}}}]{cparms\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00247}{247}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ae00361a3b75c72181549d305b29200a5}\label{interface_8cpp_ae00361a3b75c72181549d305b29200a5}} 
+\index{interface.cpp@{interface.cpp}!cmdline\_delete@{cmdline\_delete}}
+\index{cmdline\_delete@{cmdline\_delete}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{cmdline\_delete()}{cmdline\_delete()}}
+{\footnotesize\ttfamily void cmdline\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cmd_line}{Cmd\+Line}} $\ast$}]{cmdline }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00277}{277}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a82017b98646dd0af0c2908147ad1945c}\label{interface_8cpp_a82017b98646dd0af0c2908147ad1945c}} 
+\index{interface.cpp@{interface.cpp}!getAllValues@{getAllValues}}
+\index{getAllValues@{getAllValues}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{getAllValues()}{getAllValues()}}
+{\footnotesize\ttfamily const char $\ast$$\ast$ get\+All\+Values (\begin{DoxyParamCaption}\item[{bool}]{option,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00147}{147}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ac1b3bb7933862cae932bb48ba52a52e6}\label{interface_8cpp_ac1b3bb7933862cae932bb48ba52a52e6}} 
+\index{interface.cpp@{interface.cpp}!getNumValues@{getNumValues}}
+\index{getNumValues@{getNumValues}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{getNumValues()}{getNumValues()}}
+{\footnotesize\ttfamily int get\+Num\+Values (\begin{DoxyParamCaption}\item[{bool}]{option,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00134}{134}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_aeaffec3d82126df8f179475872522931}\label{interface_8cpp_aeaffec3d82126df8f179475872522931}} 
+\index{interface.cpp@{interface.cpp}!getValue@{getValue}}
+\index{getValue@{getValue}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily const char $\ast$ get\+Value (\begin{DoxyParamCaption}\item[{bool}]{option,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00123}{123}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a3cd9112e0814e40a6f66e1cdcc5668f2}\label{interface_8cpp_a3cd9112e0814e40a6f66e1cdcc5668f2}} 
+\index{interface.cpp@{interface.cpp}!hasValue@{hasValue}}
+\index{hasValue@{hasValue}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{hasValue()}{hasValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} has\+Value (\begin{DoxyParamCaption}\item[{int}]{target,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00037}{37}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_a223cac6d32154ee11c2a5c3f630bb0a5}\label{interface_8cpp_a223cac6d32154ee11c2a5c3f630bb0a5}} 
+\index{interface.cpp@{interface.cpp}!isMultiple@{isMultiple}}
+\index{isMultiple@{isMultiple}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{isMultiple()}{isMultiple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} is\+Multiple (\begin{DoxyParamCaption}\item[{bool}]{option,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00052}{52}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_aabcbce07240da31199e4c9bd2c3372f4}\label{interface_8cpp_aabcbce07240da31199e4c9bd2c3372f4}} 
+\index{interface.cpp@{interface.cpp}!makeFlags@{makeFlags}}
+\index{makeFlags@{makeFlags}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{makeFlags()}{makeFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include_2types_8h_a6b6ee944c1c74532eb406c781a0a76c0}{Flag}} $\ast$$\ast$ make\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecmdline_a4a5370834f07375d59ac54bbbd84861b}{cmdline\+::\+Flags}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00186}{186}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+
+\mbox{\Hypertarget{interface_8cpp_ab26dc6760986ef916f48473039506af4}\label{interface_8cpp_ab26dc6760986ef916f48473039506af4}} 
+\index{interface.cpp@{interface.cpp}!makeParameters@{makeParameters}}
+\index{makeParameters@{makeParameters}!interface.cpp@{interface.cpp}}
+\doxysubsubsection{\texorpdfstring{makeParameters()}{makeParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecmdline_af013b84e068f71e923e1dd66193ee46a}{cmdline\+::\+Parameters}} make\+Parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include_2types_8h_a319575fdb970e4fa33e65dce49b49c29}{Parm\+Def}}}]{cparms\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{interface_8cpp_source_l00064}{64}} del archivo \mbox{\hyperlink{interface_8cpp_source}{interface.\+cpp}}.
+

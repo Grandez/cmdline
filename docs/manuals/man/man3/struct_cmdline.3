@@ -1,0 +1,142 @@
+.TH "struct_cmdline" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+struct_cmdline
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cmdline\&.h>\fP
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBlogical\fP(* \fBhasFlag\fP )(const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP(* \fBhasOption\fP )(const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP(* \fBhasDefine\fP )(const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP(* \fBisOptionMultiple\fP )(const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP(* \fBisDefineMultiple\fP )(const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP(* \fBgetFlag\fP )(const char *name)"
+.br
+.ti -1c
+.RI "int(* \fBgetOptionNumValues\fP )(const char *name)"
+.br
+.ti -1c
+.RI "int(* \fBgetDefineNumValues\fP )(const char *name)"
+.br
+.ti -1c
+.RI "const char *(* \fBgetOption\fP )(const char *name)"
+.br
+.ti -1c
+.RI "const char *(* \fBgetDefine\fP )(const char *name)"
+.br
+.ti -1c
+.RI "const char **(* \fBgetOptionValues\fP )(const char *name)"
+.br
+.ti -1c
+.RI "const char **(* \fBgetDefineValues\fP )(const char *name)"
+.br
+.ti -1c
+.RI "\fBFlag\fP **(* \fBgetDefaultFlags\fP )(\fBlogical\fP active)"
+.br
+.ti -1c
+.RI "\fBFlag\fP **(* \fBgetCurrentFlags\fP )(\fBlogical\fP active)"
+.br
+.ti -1c
+.RI "\fBParameter\fP **(* \fBgetDefaultOptions\fP )()"
+.br
+.ti -1c
+.RI "\fBParameter\fP **(* \fBgetCurrentOptions\fP )()"
+.br
+.ti -1c
+.RI "\fBParameter\fP **(* \fBgetDefinitions\fP )()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Definición en la línea \fB4\fP del archivo \fBcmdline\&.h\fP\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBFlag\fP **(* struct_cmdline::getCurrentFlags)(\fBlogical\fP active)"
+
+.PP
+Definición en la línea \fB18\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBParameter\fP **(* struct_cmdline::getCurrentOptions)()"
+
+.PP
+Definición en la línea \fB20\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBFlag\fP **(* struct_cmdline::getDefaultFlags)(\fBlogical\fP active)"
+
+.PP
+Definición en la línea \fB17\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBParameter\fP **(* struct_cmdline::getDefaultOptions)()"
+
+.PP
+Definición en la línea \fB19\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "const char *(* struct_cmdline::getDefine)(const char *name)"
+
+.PP
+Definición en la línea \fB14\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "int(* struct_cmdline::getDefineNumValues)(const char *name)"
+
+.PP
+Definición en la línea \fB12\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "const char **(* struct_cmdline::getDefineValues)(const char *name)"
+
+.PP
+Definición en la línea \fB16\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBParameter\fP **(* struct_cmdline::getDefinitions)()"
+
+.PP
+Definición en la línea \fB21\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBlogical\fP(* struct_cmdline::getFlag)(const char *name)"
+
+.PP
+Definición en la línea \fB10\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "const char *(* struct_cmdline::getOption)(const char *name)"
+
+.PP
+Definición en la línea \fB13\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "int(* struct_cmdline::getOptionNumValues)(const char *name)"
+
+.PP
+Definición en la línea \fB11\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "const char **(* struct_cmdline::getOptionValues)(const char *name)"
+
+.PP
+Definición en la línea \fB15\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBlogical\fP(* struct_cmdline::hasDefine)(const char *name)"
+
+.PP
+Definición en la línea \fB7\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBlogical\fP(* struct_cmdline::hasFlag)(const char *name)"
+
+.PP
+Definición en la línea \fB5\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBlogical\fP(* struct_cmdline::hasOption)(const char *name)"
+
+.PP
+Definición en la línea \fB6\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBlogical\fP(* struct_cmdline::isDefineMultiple)(const char *name)"
+
+.PP
+Definición en la línea \fB9\fP del archivo \fBcmdline\&.h\fP\&.
+.SS "\fBlogical\fP(* struct_cmdline::isOptionMultiple)(const char *name)"
+
+.PP
+Definición en la línea \fB8\fP del archivo \fBcmdline\&.h\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

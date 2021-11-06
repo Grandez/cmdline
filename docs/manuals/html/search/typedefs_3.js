@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['element_5ftype_0',['element_type',['../d9/df4/classtesting_1_1internal_1_1linked__ptr.html#a295c7d1ee4100d916514c4e4385a0063',1,'testing::internal::linked_ptr::element_type()'],['../de/d6a/classtesting_1_1internal_1_1scoped__ptr.html#ae755ffeebada8e20b68c1d1ffa91cf13',1,'testing::internal::scoped_ptr::element_type()']]]
+  ['options_0',['Options',['../d4/d41/namespacecmdline.html#a8ab0c4798f3896bbbed8ce27f3984266',1,'cmdline']]]
 ];

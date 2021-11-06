@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['define_0',['Define',['../d4/d85/class__cmdline_1_1_define.html',1,'_cmdline']]]
+  ['garbage_0',['Garbage',['../db/df8/class_garbage.html',1,'']]],
+  ['group_1',['Group',['../d2/dc1/class__cmdline_1_1_group.html',1,'_cmdline']]]
 ];

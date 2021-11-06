@@ -10,6 +10,7 @@ var class__cmdline_1_1_argument =
     [ "addValue", "d8/de6/class__cmdline_1_1_argument.html#a070383faf05aa2196979a5da4cc48de4", null ],
     [ "addValues", "d8/de6/class__cmdline_1_1_argument.html#a3ea97c6f8b07c135f9b61c5fb1b6a983", null ],
     [ "getBoolean", "d8/de6/class__cmdline_1_1_argument.html#a08049ae39bb1d5e8e16e449757caf1a8", null ],
+    [ "getStringValues", "d8/de6/class__cmdline_1_1_argument.html#afe0661bcb99820c6fddf8f0d1a738e1d", null ],
     [ "getValue", "d8/de6/class__cmdline_1_1_argument.html#a8946d2d314a69e9227bd9ee73e297ef6", null ],
     [ "getValues", "d8/de6/class__cmdline_1_1_argument.html#ac34ca7b1eed1201c2eddb0a2b6dc7af0", null ],
     [ "initValues", "d8/de6/class__cmdline_1_1_argument.html#ab3ed0053b6303e2afc6a7e9fa849d29b", null ],

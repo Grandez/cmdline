@@ -1,4 +1,4 @@
-.TH "testing::internal::linked_ptr< T >" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "testing::internal::linked_ptr< T >" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,14 +8,14 @@ testing::internal::linked_ptr< T >
 .PP
 .PP
 \fC#include <gtest\-linked_ptr\&.h>\fP
-.SS "Public Types"
+.SS "Tipos públicos"
 
 .in +1c
 .ti -1c
 .RI "typedef T \fBelement_type\fP"
 .br
 .in -1c
-.SS "Public Member Functions"
+.SS "Métodos públicos"
 
 .in +1c
 .ti -1c
@@ -61,94 +61,94 @@ testing::internal::linked_ptr< T >
 .RI "template<typename U > bool \fBoperator!=\fP (\fBlinked_ptr\fP< U > const &ptr) const"
 .br
 .in -1c
-.SS "Friends"
+.SS "Amigas"
 
 .in +1c
 .ti -1c
 .RI "template<typename U > class \fBlinked_ptr\fP"
 .br
 .in -1c
-.SH "Detailed Description"
+.SH "Descripción detallada"
 .PP 
 
 .SS "template<typename T>
 .br
 class testing::internal::linked_ptr< T >"
 .PP
-Definition at line \fB146\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
-.SH "Member Typedef Documentation"
+Definición en la línea \fB146\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
+.SH "Documentación de los 'Typedef' miembros de la clase"
 .PP 
 .SS "template<typename T > typedef T \fBtesting::internal::linked_ptr\fP< T >::\fBelement_type\fP"
 
 .PP
-Definition at line \fB148\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
-.SH "Constructor & Destructor Documentation"
+Definición en la línea \fB148\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
+.SH "Documentación del constructor y destructor"
 .PP 
 .SS "template<typename T > \fBtesting::internal::linked_ptr\fP< T >::\fBlinked_ptr\fP (T * ptr = \fCNULL\fP)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
-Definition at line \fB152\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB152\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > \fBtesting::internal::linked_ptr\fP< T >::~\fBlinked_ptr\fP ()\fC [inline]\fP"
 
 .PP
-Definition at line \fB153\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB153\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > template<typename U > \fBtesting::internal::linked_ptr\fP< T >::\fBlinked_ptr\fP (\fBlinked_ptr\fP< U > const & ptr)\fC [inline]\fP"
 
 .PP
-Definition at line \fB156\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB156\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > \fBtesting::internal::linked_ptr\fP< T >::\fBlinked_ptr\fP (\fBlinked_ptr\fP< T > const & ptr)\fC [inline]\fP"
 
 .PP
-Definition at line \fB157\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
-.SH "Member Function Documentation"
+Definición en la línea \fB157\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
+.SH "Documentación de las funciones miembro"
 .PP 
 .SS "template<typename T > T * \fBtesting::internal::linked_ptr\fP< T >::get () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB182\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB182\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > template<typename U > bool \fBtesting::internal::linked_ptr\fP< T >::operator!= (\fBlinked_ptr\fP< U > const & ptr) const\fC [inline]\fP"
 
 .PP
-Definition at line \fB193\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB193\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > bool \fBtesting::internal::linked_ptr\fP< T >::operator!= (T * p) const\fC [inline]\fP"
 
 .PP
-Definition at line \fB187\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB187\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > T & \fBtesting::internal::linked_ptr\fP< T >::operator* () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB184\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB184\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > T * \fBtesting::internal::linked_ptr\fP< T >::operator\-> () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB183\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB183\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > \fBlinked_ptr\fP & \fBtesting::internal::linked_ptr\fP< T >::operator= (\fBlinked_ptr\fP< T > const & ptr)\fC [inline]\fP"
 
 .PP
-Definition at line \fB169\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB169\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > template<typename U > \fBlinked_ptr\fP & \fBtesting::internal::linked_ptr\fP< T >::operator= (\fBlinked_ptr\fP< U > const & ptr)\fC [inline]\fP"
 
 .PP
-Definition at line \fB163\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB163\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > template<typename U > bool \fBtesting::internal::linked_ptr\fP< T >::operator== (\fBlinked_ptr\fP< U > const & ptr) const\fC [inline]\fP"
 
 .PP
-Definition at line \fB189\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB189\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > bool \fBtesting::internal::linked_ptr\fP< T >::operator== (T * p) const\fC [inline]\fP"
 
 .PP
-Definition at line \fB186\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB186\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 .SS "template<typename T > void \fBtesting::internal::linked_ptr\fP< T >::reset (T * ptr = \fCNULL\fP)\fC [inline]\fP"
 
 .PP
-Definition at line \fB178\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
-.SH "Friends And Related Function Documentation"
+Definición en la línea \fB178\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
+.SH "Documentación de las funciones relacionadas y clases amigas"
 .PP 
 .SS "template<typename T > template<typename U > friend class \fBlinked_ptr\fP\fC [friend]\fP"
 
 .PP
-Definition at line \fB199\fP of file \fBgtest\-linked_ptr\&.h\fP\&.
+Definición en la línea \fB199\fP del archivo \fBgtest\-linked_ptr\&.h\fP\&.
 
-.SH "Author"
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

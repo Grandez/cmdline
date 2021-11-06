@@ -1,0 +1,285 @@
+\hypertarget{interface_8cpp_source}{}\doxysection{interface.\+cpp}
+\label{interface_8cpp_source}\index{interface.cpp@{interface.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}cmdline.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}cmdline.h"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}cmdline\_exceptions.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}cmdline.h"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}types.h"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}types.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}interface.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}cmdline\_errno.h"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}tools.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00013}00013 \textcolor{comment}{// Pointer is not null}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00014}00014 \textcolor{comment}{// Theres is enoguh space}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00015}00015 \textcolor{comment}{// it is enum becauase is C}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00016}00016 \textcolor{preprocessor}{\#pragma warning(disable : 26812 6011 6386)}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00017}00017 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00019}00019 \textcolor{keyword}{static} \mbox{\hyperlink{classcmdline_1_1_cmd_line}{cmdline::CmdLine}}* \_cmdLine = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00020}00020 \textcolor{keyword}{static} \mbox{\hyperlink{struct_cmd_line}{CmdLine}}* \_pCmdLine = NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00022}00022 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} * checkException(T\& ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00023}00023     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00024}00024 \textcolor{comment}{    if      constexpr (is\_same<T, cmdline::HelpRequested>::ex)                      errno = ECMDLINE\_HELP;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00025}00025 \textcolor{comment}{    else if constexpr (is\_same<T, cmdline::HelpDetailedRequested>::ex)              errno = ECMDLINE\_HELP\_DETAIL;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00026}00026 \textcolor{comment}{    else if constexpr (is\_same<T, cmdline::CmdLineNotFoundException>::ex)           errno = ECMDLINE\_NOTFND;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00027}00027 \textcolor{comment}{    else if constexpr (is\_same<T, cmdline::CmdLineInvalidTypeException>::ex)        errno = ECMDLINE\_INVTYPE;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00028}00028 \textcolor{comment}{    else if constexpr (is\_same<T, cmdline::CmdLineParameterException>::ex)          errno = ECMDLINE\_INVPARM;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00029}00029 \textcolor{comment}{    else if constexpr (is\_same<T, cmdline::CmdLineValueException>::ex)              errno = ECMDLINE\_INVVALUE;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00030}00030 \textcolor{comment}{    else if constexpr (is\_same<T, cmdline::CmdLineDuplicateArgumentException>::ex)  errno = ECMDLINE\_DUP;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00031}00031 \textcolor{comment}{    else                                                                    errno = ECMDLINE;}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00032}00032 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00033}00033         errno = ECMDLINE;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00034}00034     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00035}00035 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00036}00036 \textcolor{comment}{// Magic numbers are: 1-\/Flag, 2-\/Option, 3-\/Define}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00037}00037 logical     hasValue(\textcolor{keywordtype}{int} target, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00038}00038     \textcolor{keywordtype}{bool} b;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00039}00039     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00040}00040         \textcolor{keywordflow}{switch} (target) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00041}00041                 \textcolor{keywordflow}{case} 1: b = \_cmdLine-\/>hasFlag(name); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00042}00042                 \textcolor{keywordflow}{case} 2: b = \_cmdLine-\/>hasOption(name); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00043}00043                 \textcolor{keywordflow}{case} 3: b = \_cmdLine-\/>hasDefinition(name); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00044}00044         \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00045}00045         \textcolor{keywordflow}{return} (b) ? TRUE : FALSE;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00047}00047     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00048}00048         checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00049}00049         \textcolor{keywordflow}{return} MISSING;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00051}00051 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00052}00052 logical     isMultiple(\textcolor{keywordtype}{bool} option, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00053}00053     \textcolor{keywordtype}{bool} b;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00054}00054     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00055}00055         b = (option) ? \_cmdLine-\/>isOptionMultiple(name) }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00056}00056                      : \_cmdLine-\/>isDefinitionMultiple(name);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00057}00057         \textcolor{keywordflow}{return} (b) ? TRUE : FALSE;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00059}00059     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00060}00060         checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00061}00061         \textcolor{keywordflow}{return} MISSING;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00064}00064 cmdline::Parameters makeParameters(\mbox{\hyperlink{struct_parm_def}{ParmDef}} cparms[]) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00065}00065     vector <cmdline::Parm> parms;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00066}00066     \mbox{\hyperlink{struct_parm_def}{ParmDef}}* cp = cparms;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00067}00067     \textcolor{keywordflow}{while} (cp-\/>name) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00068}00068         \textcolor{keywordtype}{bool} b = (cp-\/>multiple == TRUE) ? \textcolor{stringliteral}{"{}1"{}} : \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00069}00069         \mbox{\hyperlink{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}{cmdline::Type}} t = \mbox{\hyperlink{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}{cmdline::Type}}(cp-\/>type);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00070}00070         parms.push\_back(\mbox{\hyperlink{classcmdline_1_1_parm}{cmdline::Parm}}(cp-\/>name, cp-\/>value, t, b));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00071}00071         cp++;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00073}00073     \textcolor{keywordflow}{return} parms;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00074}00074 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00075}00075 \textcolor{keyword}{const} \textcolor{keywordtype}{char}** \_makeArray(vector<const char *> data) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00076}00076     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00077}00077     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00078}00078         \textcolor{keywordtype}{char}** res = (\textcolor{keywordtype}{char}**)malloc((data.size() + 1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00079}00079         \textcolor{keywordflow}{for} (i = 0; i < data.size(); i++) res[i] = strdup(data[i]);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00080}00080         res[i] = 0x0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00081}00081         \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} **) res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00083}00083     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00084}00084         errno = ECMDLINE\_NOMEM;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00085}00085         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00086}00086     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00088}00088 \textcolor{keyword}{const} \textcolor{keywordtype}{char}** \_makeArray(vector<string> data) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00089}00089     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00090}00090     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00091}00091         \textcolor{keywordtype}{char}** res = (\textcolor{keywordtype}{char}**)malloc((data.size() + 1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00092}00092         \textcolor{keywordflow}{for} (i = 0; i < data.size(); i++) res[i] = (\textcolor{keywordtype}{char} *) strdup(data[i].c\_str());}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00093}00093         res[i] = 0x0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00094}00094         \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} **) res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00095}00095     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00096}00096     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00097}00097         errno = ECMDLINE\_NOMEM;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00098}00098         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00100}00100 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00102}00102 \mbox{\hyperlink{struct_parameter}{Parameter}}** \_makeArrayParameter(cmdline::Options data) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00103}00103     \mbox{\hyperlink{struct_parameter}{Parameter}}** parms = NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00104}00104     \mbox{\hyperlink{struct_parameter}{Parameter}}*  tmp   = NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00105}00105     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00106}00106         parms = (\mbox{\hyperlink{struct_parameter}{Parameter}} **) malloc((data.size() + 1) * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_parameter}{Parameter}} *));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00107}00107         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00108}00108         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it : data) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00109}00109             tmp = (\mbox{\hyperlink{struct_parameter}{Parameter}} *) malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_parameter}{Parameter}}));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00110}00110             tmp-\/>name = strdup(it.first.c\_str());}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00111}00111             tmp-\/>size = (int) it.second.size();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00112}00112             tmp-\/>values = \_makeArray(it.second);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00113}00113             parms[i++] = tmp;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00114}00114         \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00115}00115         parms[i] = 0x0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00116}00116     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00117}00117     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00118}00118         errno = ECMDLINE\_NOMEM;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00119}00119         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00120}00120     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00121}00121     \textcolor{keywordflow}{return} parms;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00122}00122 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00123}00123 \textcolor{keyword}{const} \textcolor{keywordtype}{char}* getValue(\textcolor{keywordtype}{bool} option, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00124}00124     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00125}00125     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00126}00126         res = (option) ? \_cmdLine-\/>getOption(name)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00127}00127                        : \_cmdLine-\/>getDefinition(name);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00128}00128         \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00129}00129     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00130}00130     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00131}00131         \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *) checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00133}00133 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00134}00134 \textcolor{keywordtype}{int} getNumValues(\textcolor{keywordtype}{bool} option, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00135}00135     \textcolor{keywordtype}{int} res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00136}00136     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00137}00137         res = (option) ? \_cmdLine-\/>getOptionNumValues(name)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00138}00138                        : \_cmdLine-\/>getDefinitionNumValues(name);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00139}00139          \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00140}00140     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00141}00141     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00142}00142         checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00143}00143         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00145}00145 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00147}00147 \textcolor{keyword}{const} \textcolor{keywordtype}{char}** getAllValues(\textcolor{keywordtype}{bool} option, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00148}00148     vector<const char *> res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00149}00149     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00150}00150         res = (option) ? \_cmdLine-\/>getOptionValues(name)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00151}00151                        : \_cmdLine-\/>getDefinitionValues(name);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00152}00152         \textcolor{keywordflow}{return} \_makeArray(res);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00153}00153     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00154}00154     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00155}00155         \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}**)checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00156}00156     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00157}00157 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00158}00158 \mbox{\hyperlink{struct_parameter}{Parameter}}** \_getOptions  (\textcolor{keywordtype}{bool} def) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00159}00159     \mbox{\hyperlink{struct_parameter}{Parameter}} **parms = NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00160}00160     cmdline::Options opts;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00161}00161     }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00162}00162     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00163}00163         cmdline::Options opts = (def) ? \_cmdLine-\/>getDefaultOptions()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00164}00164                                       : \_cmdLine-\/>getCurrentOptions();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00165}00165         \textcolor{keywordflow}{return} \_makeArrayParameter(opts);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00166}00166     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00167}00167     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00168}00168         \textcolor{keywordflow}{return} (\mbox{\hyperlink{struct_parameter}{Parameter}}**) checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00169}00169     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00171}00171     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00172}00172         parms = (\mbox{\hyperlink{struct_parameter}{Parameter}} **) malloc((opts.size() + 1) * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_parameter}{Parameter}} *));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00173}00173         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00174}00174         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it : opts) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00175}00175             i++;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00176}00176         \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00177}00177         parms[i] = 0x0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00178}00178     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00179}00179     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00180}00180         errno = ECMDLINE\_NOMEM;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00181}00181         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00182}00182     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00184}00184 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00186}00186 \mbox{\hyperlink{struct_flag}{Flag}}** makeFlags(cmdline::Flags flags) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00187}00187     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00188}00188     \mbox{\hyperlink{struct_flag}{Flag}}* tmp;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00189}00189     \mbox{\hyperlink{struct_flag}{Flag}}** res = (\mbox{\hyperlink{struct_flag}{Flag}}**)malloc((flags.size() + 1) * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_flag}{Flag}}*));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00190}00190     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it : flags) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00191}00191         tmp = (\mbox{\hyperlink{struct_flag}{Flag}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_flag}{Flag}}));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00192}00192         \textcolor{keywordflow}{if} (!tmp) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00193}00193             errno = ECMDLINE\_NOMEM;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00194}00194             \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00195}00195         \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00196}00196         tmp-\/>name = strdup(it.first.c\_str());}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00197}00197         tmp-\/>value = (it.second) ? TRUE : FALSE;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00198}00198         res[i++] = tmp;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00199}00199     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00200}00200     res[i] = 0x0;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00201}00201     \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00202}00202 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00204}00204 logical      cHasFlag            (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} hasValue(1, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00205}00205 logical      cHasOption          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} hasValue(2, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00206}00206 logical      cHasDefine          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} hasValue(3, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00207}00207 logical      cIsOptionMultiple   (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} isMultiple   (\textcolor{keyword}{true}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00208}00208 logical      cIsDefineMultiple   (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} isMultiple   (\textcolor{keyword}{false}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00209}00209 \textcolor{keywordtype}{int}          cGetOptionNumValues (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} getNumValues(\textcolor{keyword}{true}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00210}00210 \textcolor{keywordtype}{int}          cGetDefineNumValues (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} getNumValues(\textcolor{keyword}{false}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00211}00211 \textcolor{keyword}{const} \textcolor{keywordtype}{char}*  cGetOption          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} getValue     (\textcolor{keyword}{true}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00212}00212 \textcolor{keyword}{const} \textcolor{keywordtype}{char}*  cGetDefine          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} getValue     (\textcolor{keyword}{false}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00213}00213 \textcolor{keyword}{const} \textcolor{keywordtype}{char}** cGetOptionValues    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} getAllValues (\textcolor{keyword}{true}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00214}00214 \textcolor{keyword}{const} \textcolor{keywordtype}{char}** cGetDefineValues    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name) \{ \textcolor{keywordflow}{return} getAllValues (\textcolor{keyword}{false}, name); \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00216}00216 \mbox{\hyperlink{struct_flag}{Flag}} **cGetDefaultFlags  (logical active) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00217}00217     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00218}00218         \textcolor{keywordtype}{bool} b = (active == TRUE) ? \textcolor{keyword}{false} : \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00219}00219         cmdline::Flags flags = \_cmdLine-\/>getDefaultFlags(b);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00220}00220         \textcolor{keywordflow}{return} makeFlags(flags);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00221}00221     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00222}00222     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00223}00223         \textcolor{keywordflow}{return} (\mbox{\hyperlink{struct_flag}{Flag}} **) checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00224}00224     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00225}00225 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00226}00226 \mbox{\hyperlink{struct_flag}{Flag}} **cGetCurrentFlags  (logical active) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00227}00227     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00228}00228         \textcolor{keywordtype}{bool} b = (active == TRUE) ? \textcolor{keyword}{false} : \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00229}00229         cmdline::Flags flags = \_cmdLine-\/>getCurrentFlags(b);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00230}00230         \textcolor{keywordflow}{return} makeFlags(flags);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00231}00231     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00232}00232     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00233}00233         \textcolor{keywordflow}{return} (\mbox{\hyperlink{struct_flag}{Flag}} **) checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00234}00234     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00235}00235 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00236}00236 \mbox{\hyperlink{struct_parameter}{Parameter}}** cGetDefaultOptions  () \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00237}00237     \textcolor{keywordflow}{return} \_getOptions(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00238}00238 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00239}00239 \mbox{\hyperlink{struct_parameter}{Parameter}}** cGetCurrentOptions  () \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00240}00240     \textcolor{keywordflow}{return} \_getOptions(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00241}00241 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00242}00242 \mbox{\hyperlink{struct_parameter}{Parameter}}** cGetDefinitions  () \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00243}00243     cmdline::Options defs = \_cmdLine-\/>getDefinitions();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00244}00244     \textcolor{keywordflow}{return} \_makeArrayParameter(defs);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00245}00245 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00246}00246 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00247}00247 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \mbox{\hyperlink{struct_cmd_line}{CmdLine}}*  cmdline\_create(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** arg, \mbox{\hyperlink{struct_parm_def}{ParmDef}} cparms[]) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00248}00248     \textcolor{keywordflow}{if} (\_pCmdLine != \textcolor{keyword}{nullptr}) \textcolor{keywordflow}{return} \_pCmdLine;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00249}00249     cmdline::Parameters parms = makeParameters(cparms);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00250}00250     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00251}00251         \_cmdLine = \textcolor{keyword}{new} \mbox{\hyperlink{classcmdline_1_1_cmd_line}{cmdline::CmdLine}}(argc, arg, parms);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00253}00253         \_pCmdLine = (\mbox{\hyperlink{struct_cmd_line}{CmdLine}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}));}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00254}00254         \_pCmdLine-\/>hasFlag            = \&cHasFlag;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00255}00255         \_pCmdLine-\/>hasOption          = \&cHasOption;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00256}00256         \_pCmdLine-\/>hasDefine          = \&cHasDefine;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00257}00257         \_pCmdLine-\/>getOption          = \&cGetOption;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00258}00258         \_pCmdLine-\/>getDefine          = \&cGetDefine;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00259}00259         \_pCmdLine-\/>getOptionValues    = \&cGetOptionValues;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00260}00260         \_pCmdLine-\/>getDefineValues    = \&cGetDefineValues;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00261}00261         \_pCmdLine-\/>getOptionNumValues = \&cGetOptionNumValues;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00262}00262         \_pCmdLine-\/>getDefineNumValues = \&cGetDefineNumValues;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00264}00264         \_pCmdLine-\/>isOptionMultiple  = \&cIsOptionMultiple;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00265}00265         \_pCmdLine-\/>isDefineMultiple  = \&cIsDefineMultiple;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00266}00266         \_pCmdLine-\/>getDefaultFlags   = \&cGetDefaultFlags; }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00267}00267         \_pCmdLine-\/>getDefaultOptions = \&cGetDefaultOptions; }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00268}00268         \_pCmdLine-\/>getCurrentOptions = \&cGetCurrentOptions; }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00269}00269         \_pCmdLine-\/>getDefinitions    = \&cGetDefinitions; }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00270}00270 \textcolor{comment}{//        memcpy(\&\_ppCmdLine, \_pCmdLine, sizeof(cCmdLine));}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00271}00271         \textcolor{keywordflow}{return} \_pCmdLine;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00272}00272     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00273}00273     \textcolor{keywordflow}{catch} (exception ex) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00274}00274         \textcolor{keywordflow}{return} (\mbox{\hyperlink{struct_cmd_line}{CmdLine}} *) checkException(ex);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00275}00275     \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00276}00276 \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00277}00277 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \textcolor{keywordtype}{void} cmdline\_delete(\mbox{\hyperlink{struct_cmd_line}{CmdLine}} *\mbox{\hyperlink{namespacecmdline}{cmdline}}) \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00278}00278     std::cout << \textcolor{stringliteral}{"{}delete\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00279}00279 \}}
+
+\end{DoxyCode}

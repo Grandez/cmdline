@@ -1,20 +1,18 @@
-\hypertarget{gtest-param-test_8h}{}\doxysection{packages/\+Microsoft.googletest.\+v140.\+windesktop.\+msvcstl.\+static.\+rt-\/dyn.1.8.1.4/build/native/include/gtest/gtest-\/param-\/test.h File Reference}
+\hypertarget{gtest-param-test_8h}{}\doxysection{Referencia del Archivo packages/\+Microsoft.googletest.\+v140.\+windesktop.\+msvcstl.\+static.\+rt-\/dyn.1.8.1.4/build/native/include/gtest/gtest-\/param-\/test.h}
 \label{gtest-param-test_8h}\index{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.4/build/native/include/gtest/gtest-\/param-\/test.h@{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.4/build/native/include/gtest/gtest-\/param-\/test.h}}
 {\ttfamily \#include \char`\"{}gtest/internal/gtest-\/port.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include \char`\"{}gtest/internal/gtest-\/internal.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}gtest/internal/gtest-\/param-\/util.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}gtest/internal/gtest-\/param-\/util-\/generated.\+h\char`\"{}}\newline
-Include dependency graph for gtest-\/param-\/test.h\+:
-\nopagebreak
+Dependencia gráfica adjunta para gtest-\/param-\/test.h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dd/db6/gtest-param-test_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,14 +24,14 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 namespace \mbox{\hyperlink{namespacetesting}{testing}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Macros}
+\doxysubsection*{defines}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{gtest-param-test_8h_abd3bb216dafbffa36044a6030216ecda}{TEST\+\_\+P}}(test\+\_\+case\+\_\+name,  test\+\_\+name)
 \item 
 \#define \mbox{\hyperlink{gtest-param-test_8h_a9e411d086a08ba0cd14b73fb2f8d028f}{INSTANTIATE\+\_\+\+TEST\+\_\+\+CASE\+\_\+P}}(prefix,  test\+\_\+case\+\_\+name,  generator, ...)
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T , typename IncrementT $>$ }\\internal\+::\+Param\+Generator$<$ T $>$ \mbox{\hyperlink{namespacetesting_a4f2c9978ad0c764f57e0cbd6f72cb540}{testing\+::\+Range}} (T start, T end, IncrementT step)
@@ -150,14 +148,14 @@ internal\+::\+Param\+Generator$<$ bool $>$ \mbox{\hyperlink{namespacetesting_a1a
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
 \mbox{\Hypertarget{gtest-param-test_8h_a9e411d086a08ba0cd14b73fb2f8d028f}\label{gtest-param-test_8h_a9e411d086a08ba0cd14b73fb2f8d028f}} 
 \index{gtest-\/param-\/test.h@{gtest-\/param-\/test.h}!INSTANTIATE\_TEST\_CASE\_P@{INSTANTIATE\_TEST\_CASE\_P}}
 \index{INSTANTIATE\_TEST\_CASE\_P@{INSTANTIATE\_TEST\_CASE\_P}!gtest-\/param-\/test.h@{gtest-\/param-\/test.h}}
 \doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_CASE\_P}{INSTANTIATE\_TEST\_CASE\_P}}
 {\footnotesize\ttfamily \#define INSTANTIATE\+\_\+\+TEST\+\_\+\+CASE\+\_\+P(\begin{DoxyParamCaption}\item[{}]{prefix,  }\item[{}]{test\+\_\+case\+\_\+name,  }\item[{}]{generator,  }\item[{}]{... }\end{DoxyParamCaption})}
 
-{\bfseries Value\+:}
+{\bfseries Valor\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{  static ::testing::internal::ParamGenerator<test\_case\_name::ParamType> \(\backslash\)}
 \DoxyCodeLine{      gtest\_\#\#prefix\#\#test\_case\_name\#\#\_EvalGenerator\_() \{ \textcolor{keywordflow}{return} generator; \} \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{\(\backslash\)}}}
@@ -180,7 +178,7 @@ internal\+::\+Param\+Generator$<$ bool $>$ \mbox{\hyperlink{namespacetesting_a1a
 \end{DoxyCode}
 
 
-Definition at line \mbox{\hyperlink{gtest-param-test_8h_source_l01413}{1413}} of file \mbox{\hyperlink{gtest-param-test_8h_source}{gtest-\/param-\/test.\+h}}.
+Definición en la línea \mbox{\hyperlink{gtest-param-test_8h_source_l01413}{1413}} del archivo \mbox{\hyperlink{gtest-param-test_8h_source}{gtest-\/param-\/test.\+h}}.
 
 \mbox{\Hypertarget{gtest-param-test_8h_abd3bb216dafbffa36044a6030216ecda}\label{gtest-param-test_8h_abd3bb216dafbffa36044a6030216ecda}} 
 \index{gtest-\/param-\/test.h@{gtest-\/param-\/test.h}!TEST\_P@{TEST\_P}}
@@ -188,7 +186,7 @@ Definition at line \mbox{\hyperlink{gtest-param-test_8h_source_l01413}{1413}} of
 \doxysubsubsection{\texorpdfstring{TEST\_P}{TEST\_P}}
 {\footnotesize\ttfamily \#define TEST\+\_\+P(\begin{DoxyParamCaption}\item[{}]{test\+\_\+case\+\_\+name,  }\item[{}]{test\+\_\+name }\end{DoxyParamCaption})}
 
-{\bfseries Value\+:}
+{\bfseries Valor\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{  \textcolor{keyword}{class }\mbox{\hyperlink{gtest-internal_8h_a87a1ee3a3b9b798195236d053f2e5dcc}{GTEST\_TEST\_CLASS\_NAME\_}}(test\_case\_name, test\_name) \(\backslash\)}
 \DoxyCodeLine{      : \textcolor{keyword}{public} test\_case\_name \{ \(\backslash\)}
@@ -221,5 +219,5 @@ Definition at line \mbox{\hyperlink{gtest-param-test_8h_source_l01413}{1413}} of
 \end{DoxyCode}
 
 
-Definition at line \mbox{\hyperlink{gtest-param-test_8h_source_l01372}{1372}} of file \mbox{\hyperlink{gtest-param-test_8h_source}{gtest-\/param-\/test.\+h}}.
+Definición en la línea \mbox{\hyperlink{gtest-param-test_8h_source_l01372}{1372}} del archivo \mbox{\hyperlink{gtest-param-test_8h_source}{gtest-\/param-\/test.\+h}}.
 

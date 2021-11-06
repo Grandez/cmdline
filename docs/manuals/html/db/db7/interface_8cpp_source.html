@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Command Line Processor: Fichero Fuente interface.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Command Line Processor<span id="projectnumber">&#160;0.2.3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('db/db7/interface_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">interface.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;cmdline.hpp&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;cmdline.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;cmdline_exceptions.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;cmdline.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;types.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;types.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;interface.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;cmdline_errno.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;tools.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Pointer is not null</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Theres is enoguh space</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// it is enum becauase is C</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#pragma warning(disable : 26812 6011 6386)</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">static</span> <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">cmdline::CmdLine</a>* _cmdLine = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">static</span> <a class="code hl_class" href="../../d8/d7f/struct_cmd_line.html">CmdLine</a>* _pCmdLine = NULL;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> * checkException(T&amp; ex) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">    if      constexpr (is_same&lt;T, cmdline::HelpRequested&gt;::ex)                      errno = ECMDLINE_HELP;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    else if constexpr (is_same&lt;T, cmdline::HelpDetailedRequested&gt;::ex)              errno = ECMDLINE_HELP_DETAIL;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">    else if constexpr (is_same&lt;T, cmdline::CmdLineNotFoundException&gt;::ex)           errno = ECMDLINE_NOTFND;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    else if constexpr (is_same&lt;T, cmdline::CmdLineInvalidTypeException&gt;::ex)        errno = ECMDLINE_INVTYPE;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    else if constexpr (is_same&lt;T, cmdline::CmdLineParameterException&gt;::ex)          errno = ECMDLINE_INVPARM;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    else if constexpr (is_same&lt;T, cmdline::CmdLineValueException&gt;::ex)              errno = ECMDLINE_INVVALUE;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">    else if constexpr (is_same&lt;T, cmdline::CmdLineDuplicateArgumentException&gt;::ex)  errno = ECMDLINE_DUP;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    else                                                                    errno = ECMDLINE;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        errno = ECMDLINE;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Magic numbers are: 1-Flag, 2-Option, 3-Define</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>logical     hasValue(<span class="keywordtype">int</span> target, <span class="keyword">const</span> <span class="keywordtype">char</span>* name) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> b;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">switch</span> (target) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">case</span> 1: b = _cmdLine-&gt;hasFlag(name); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">case</span> 2: b = _cmdLine-&gt;hasOption(name); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">case</span> 3: b = _cmdLine-&gt;hasDefinition(name); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> (b) ? TRUE : FALSE;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        checkException(ex);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> MISSING;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>logical     isMultiple(<span class="keywordtype">bool</span> option, <span class="keyword">const</span> <span class="keywordtype">char</span>* name) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> b;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        b = (option) ? _cmdLine-&gt;isOptionMultiple(name) </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                     : _cmdLine-&gt;isDefinitionMultiple(name);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> (b) ? TRUE : FALSE;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        checkException(ex);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> MISSING;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>cmdline::Parameters makeParameters(<a class="code hl_struct" href="../../db/d47/struct_parm_def.html">ParmDef</a> cparms[]) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    vector &lt;cmdline::Parm&gt; parms;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_struct" href="../../db/d47/struct_parm_def.html">ParmDef</a>* cp = cparms;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">while</span> (cp-&gt;name) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">bool</span> b = (cp-&gt;multiple == TRUE) ? <span class="stringliteral">&quot;1&quot;</span> : <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_enumeration" href="../../df/d4e/group___types.html#ga1d1cfd8ffb84e947f82999c682b666a7">cmdline::Type</a> t = <a class="code hl_enumeration" href="../../df/d4e/group___types.html#ga1d1cfd8ffb84e947f82999c682b666a7">cmdline::Type</a>(cp-&gt;type);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        parms.push_back(<a class="code hl_class" href="../../d9/dff/classcmdline_1_1_parm.html">cmdline::Parm</a>(cp-&gt;name, cp-&gt;value, t, b));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        cp++;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> parms;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">const</span> <span class="keywordtype">char</span>** _makeArray(vector&lt;const char *&gt; data) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">char</span>** res = (<span class="keywordtype">char</span>**)malloc((data.size() + 1) * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">for</span> (i = 0; i &lt; data.size(); i++) res[i] = strdup(data[i]);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        res[i] = 0x0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> **) res;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        errno = ECMDLINE_NOMEM;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">const</span> <span class="keywordtype">char</span>** _makeArray(vector&lt;string&gt; data) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">char</span>** res = (<span class="keywordtype">char</span>**)malloc((data.size() + 1) * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">for</span> (i = 0; i &lt; data.size(); i++) res[i] = (<span class="keywordtype">char</span> *) strdup(data[i].c_str());</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        res[i] = 0x0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">return</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> **) res;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        errno = ECMDLINE_NOMEM;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>** _makeArrayParameter(cmdline::Options data) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>** parms = NULL;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>*  tmp   = NULL;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        parms = (<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a> **) malloc((data.size() + 1) * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a> *));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it : data) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            tmp = (<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a> *) malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            tmp-&gt;name = strdup(it.first.c_str());</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            tmp-&gt;size = (int) it.second.size();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            tmp-&gt;values = _makeArray(it.second);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            parms[i++] = tmp;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        parms[i] = 0x0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        errno = ECMDLINE_NOMEM;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">return</span> parms;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">const</span> <span class="keywordtype">char</span>* getValue(<span class="keywordtype">bool</span> option, <span class="keyword">const</span> <span class="keywordtype">char</span>* name) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* res;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        res = (option) ? _cmdLine-&gt;getOption(name)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                       : _cmdLine-&gt;getDefinition(name);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> *) checkException(ex);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keywordtype">int</span> getNumValues(<span class="keywordtype">bool</span> option, <span class="keyword">const</span> <span class="keywordtype">char</span>* name) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">int</span> res;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        res = (option) ? _cmdLine-&gt;getOptionNumValues(name)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                       : _cmdLine-&gt;getDefinitionNumValues(name);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>         <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        checkException(ex);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>}</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">const</span> <span class="keywordtype">char</span>** getAllValues(<span class="keywordtype">bool</span> option, <span class="keyword">const</span> <span class="keywordtype">char</span>* name) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    vector&lt;const char *&gt; res;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        res = (option) ? _cmdLine-&gt;getOptionValues(name)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                       : _cmdLine-&gt;getDefinitionValues(name);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">return</span> _makeArray(res);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>**)checkException(ex);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>** _getOptions  (<span class="keywordtype">bool</span> def) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a> **parms = NULL;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    cmdline::Options opts;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        cmdline::Options opts = (def) ? _cmdLine-&gt;getDefaultOptions()</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                      : _cmdLine-&gt;getCurrentOptions();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> _makeArrayParameter(opts);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> (<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>**) checkException(ex);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        parms = (<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a> **) malloc((opts.size() + 1) * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a> *));</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it : opts) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            i++;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        parms[i] = 0x0;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        errno = ECMDLINE_NOMEM;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>** makeFlags(cmdline::Flags flags) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>* tmp;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>** res = (<a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>**)malloc((flags.size() + 1) * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>*));</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it : flags) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        tmp = (<a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a>));</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">if</span> (!tmp) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            errno = ECMDLINE_NOMEM;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        tmp-&gt;name = strdup(it.first.c_str());</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        tmp-&gt;value = (it.second) ? TRUE : FALSE;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        res[i++] = tmp;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    res[i] = 0x0;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>logical      cHasFlag            (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> hasValue(1, name); }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>logical      cHasOption          (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> hasValue(2, name); }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>logical      cHasDefine          (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> hasValue(3, name); }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>logical      cIsOptionMultiple   (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> isMultiple   (<span class="keyword">true</span>, name); }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>logical      cIsDefineMultiple   (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> isMultiple   (<span class="keyword">false</span>, name); }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keywordtype">int</span>          cGetOptionNumValues (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> getNumValues(<span class="keyword">true</span>, name); }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keywordtype">int</span>          cGetDefineNumValues (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> getNumValues(<span class="keyword">false</span>, name); }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">const</span> <span class="keywordtype">char</span>*  cGetOption          (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> getValue     (<span class="keyword">true</span>, name); }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keyword">const</span> <span class="keywordtype">char</span>*  cGetDefine          (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> getValue     (<span class="keyword">false</span>, name); }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keyword">const</span> <span class="keywordtype">char</span>** cGetOptionValues    (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> getAllValues (<span class="keyword">true</span>, name); }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">const</span> <span class="keywordtype">char</span>** cGetDefineValues    (<span class="keyword">const</span> <span class="keywordtype">char</span>* name) { <span class="keywordflow">return</span> getAllValues (<span class="keyword">false</span>, name); }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a> **cGetDefaultFlags  (logical active) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordtype">bool</span> b = (active == TRUE) ? <span class="keyword">false</span> : <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        cmdline::Flags flags = _cmdLine-&gt;getDefaultFlags(b);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keywordflow">return</span> makeFlags(flags);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span> (<a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a> **) checkException(ex);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a> **cGetCurrentFlags  (logical active) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordtype">bool</span> b = (active == TRUE) ? <span class="keyword">false</span> : <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        cmdline::Flags flags = _cmdLine-&gt;getCurrentFlags(b);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">return</span> makeFlags(flags);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">return</span> (<a class="code hl_struct" href="../../d5/dbf/struct_flag.html">Flag</a> **) checkException(ex);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>** cGetDefaultOptions  () {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keywordflow">return</span> _getOptions(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>** cGetCurrentOptions  () {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">return</span> _getOptions(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><a class="code hl_struct" href="../../d2/d3f/struct_parameter.html">Parameter</a>** cGetDefinitions  () {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    cmdline::Options defs = _cmdLine-&gt;getDefinitions();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">return</span> _makeArrayParameter(defs);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>}</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code hl_class" href="../../d8/d7f/struct_cmd_line.html">CmdLine</a>*  cmdline_create(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** arg, <a class="code hl_struct" href="../../db/d47/struct_parm_def.html">ParmDef</a> cparms[]) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (_pCmdLine != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> _pCmdLine;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    cmdline::Parameters parms = makeParameters(cparms);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        _cmdLine = <span class="keyword">new</span> <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">cmdline::CmdLine</a>(argc, arg, parms);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        _pCmdLine = (<a class="code hl_class" href="../../d8/d7f/struct_cmd_line.html">CmdLine</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d8/d7f/struct_cmd_line.html">CmdLine</a>));</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        _pCmdLine-&gt;hasFlag            = &amp;cHasFlag;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        _pCmdLine-&gt;hasOption          = &amp;cHasOption;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        _pCmdLine-&gt;hasDefine          = &amp;cHasDefine;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        _pCmdLine-&gt;getOption          = &amp;cGetOption;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        _pCmdLine-&gt;getDefine          = &amp;cGetDefine;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        _pCmdLine-&gt;getOptionValues    = &amp;cGetOptionValues;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        _pCmdLine-&gt;getDefineValues    = &amp;cGetDefineValues;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        _pCmdLine-&gt;getOptionNumValues = &amp;cGetOptionNumValues;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        _pCmdLine-&gt;getDefineNumValues = &amp;cGetDefineNumValues;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        _pCmdLine-&gt;isOptionMultiple  = &amp;cIsOptionMultiple;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        _pCmdLine-&gt;isDefineMultiple  = &amp;cIsDefineMultiple;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        _pCmdLine-&gt;getDefaultFlags   = &amp;cGetDefaultFlags; </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        _pCmdLine-&gt;getDefaultOptions = &amp;cGetDefaultOptions; </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        _pCmdLine-&gt;getCurrentOptions = &amp;cGetCurrentOptions; </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        _pCmdLine-&gt;getDefinitions    = &amp;cGetDefinitions; </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">//        memcpy(&amp;_ppCmdLine, _pCmdLine, sizeof(cCmdLine));</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">return</span> _pCmdLine;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordflow">catch</span> (exception ex) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">return</span> (<a class="code hl_class" href="../../d8/d7f/struct_cmd_line.html">CmdLine</a> *) checkException(ex);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> cmdline_delete(<a class="code hl_class" href="../../d8/d7f/struct_cmd_line.html">CmdLine</a> *<a class="code hl_namespace" href="../../d4/d41/namespacecmdline.html">cmdline</a>) {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;delete\n&quot;</span>;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>}</div>
+<div class="ttc" id="aclasscmdline_1_1_cmd_line_html"><div class="ttname"><a href="../../dd/d07/classcmdline_1_1_cmd_line.html">cmdline::CmdLine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dea/cmdline_8hpp_source.html#l00079">cmdline.hpp:79</a></div></div>
+<div class="ttc" id="aclasscmdline_1_1_parm_html"><div class="ttname"><a href="../../d9/dff/classcmdline_1_1_parm.html">cmdline::Parm</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dea/cmdline_8hpp_source.html#l00031">cmdline.hpp:31</a></div></div>
+<div class="ttc" id="agroup___types_html_ga1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../df/d4e/group___types.html#ga1d1cfd8ffb84e947f82999c682b666a7">cmdline::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Define el tipo de dato esperado del parametro.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00013">types.hpp:13</a></div></div>
+<div class="ttc" id="anamespacecmdline_html"><div class="ttname"><a href="../../d4/d41/namespacecmdline.html">cmdline</a></div><div class="ttdoc">Public namespace to avoid naming mangling.</div></div>
+<div class="ttc" id="astruct_cmd_line_html"><div class="ttname"><a href="../../d8/d7f/struct_cmd_line.html">CmdLine</a></div><div class="ttdoc">Singleton encargado de mantener la informacion pasada por la linea de comandos.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/cmdline_8h_source.html#l00004">cmdline.h:4</a></div></div>
+<div class="ttc" id="astruct_flag_html"><div class="ttname"><a href="../../d5/dbf/struct_flag.html">Flag</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d49/types_8h_source.html#l00031">types.h:31</a></div></div>
+<div class="ttc" id="astruct_parameter_html"><div class="ttname"><a href="../../d2/d3f/struct_parameter.html">Parameter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d49/types_8h_source.html#l00026">types.h:26</a></div></div>
+<div class="ttc" id="astruct_parm_def_html"><div class="ttname"><a href="../../db/d47/struct_parm_def.html">ParmDef</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d49/types_8h_source.html#l00019">types.h:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_fedd67a8c96aee38c54230a4e25bd216.html">libcmdline</a></li><li class="navelem"><a class="el" href="../../dir_3733bffed18876eee98e80d935ac9490.html">include</a></li><li class="navelem"><b>interface.cpp</b></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

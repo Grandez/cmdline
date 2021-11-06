@@ -1,8 +1,8 @@
-.TH "cmdline/src/validations.cpp" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/src/validations.cpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline/src/validations.cpp
+libcmdline/src/validations.cpp
 .SH SYNOPSIS
 .br
 .PP
@@ -24,15 +24,15 @@ cmdline/src/validations.cpp
 .br
 \fC#include <vector>\fP
 .br
-\fC#include 'tools\&.h'\fP
+\fC#include 'cmdline\&.hpp'\fP
 .br
-\fC#include 'types\&.h'\fP
+\fC#include 'tools\&.hpp'\fP
 .br
 \fC#include 'cmdline_exceptions\&.hpp'\fP
 .br
-\fC#include 'validations\&.h'\fP
+\fC#include 'validations\&.hpp'\fP
 .br
-\fC#include 'msg_locale\&.h'\fP
+\fC#include 'msg_locale\&.hpp'\fP
 .br
 
 .SS "Namespaces"
@@ -42,7 +42,7 @@ cmdline/src/validations.cpp
 .RI "namespace \fB_cmdline\fP"
 .br
 .in -1c
-.SS "Functions"
+.SS "Funciones"
 
 .in +1c
 .ti -1c
@@ -117,7 +117,13 @@ cmdline/src/validations.cpp
 .ti -1c
 .RI "struct tm \fB_cmdline::makeTm\fP (const char *value)"
 .br
+.ti -1c
+.RI "bool \fB_cmdline::valMakeBoolean\fP (const char *value)"
+.br
+.ti -1c
+.RI "bool \fB_cmdline::valMakeBoolean\fP (std::string value)"
+.br
 .in -1c
-.SH "Author"
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

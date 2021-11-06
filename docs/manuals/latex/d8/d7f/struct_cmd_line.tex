@@ -1,0 +1,238 @@
+\hypertarget{struct_cmd_line}{}\doxysection{Referencia de la Clase Cmd\+Line}
+\label{struct_cmd_line}\index{CmdLine@{CmdLine}}
+
+
+Singleton encargado de mantener la informacion pasada por la linea de comandos.  
+
+
+
+
+Diagrama de colaboración para Cmd\+Line\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{d3/d13/struct_cmd_line__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+logical($\ast$ \mbox{\hyperlink{struct_cmd_line_a5e736fb89c0a28ce18bb6b8afca76c26}{has\+Flag}} )(const char $\ast$name)
+\item 
+logical($\ast$ \mbox{\hyperlink{struct_cmd_line_a86b9284b89a5321206a3431bfeefd9f1}{has\+Option}} )(const char $\ast$name)
+\item 
+logical($\ast$ \mbox{\hyperlink{struct_cmd_line_a1baeda61a2a83cb8ac550ab46b73df49}{has\+Define}} )(const char $\ast$name)
+\item 
+logical($\ast$ \mbox{\hyperlink{struct_cmd_line_a32ca537feda93ee63fdb48bd514cf29c}{is\+Option\+Multiple}} )(const char $\ast$name)
+\item 
+logical($\ast$ \mbox{\hyperlink{struct_cmd_line_a6d95a8e17070e963273d68622fe5d0d4}{is\+Define\+Multiple}} )(const char $\ast$name)
+\item 
+logical($\ast$ \mbox{\hyperlink{struct_cmd_line_a5b408b7f2a5a90e1f68acc7e93e7ab27}{get\+Flag}} )(const char $\ast$name)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_cmd_line_a83ec8c0d25b5ebec4468a2ca7c35a845}{get\+Option\+Num\+Values}} )(const char $\ast$name)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_cmd_line_acd93a6eefc18dc49aa91733f7cd2b17e}{get\+Define\+Num\+Values}} )(const char $\ast$name)
+\item 
+const char $\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_aa64488b04cd8f222bfa8a0bbf31e8050}{get\+Option}} )(const char $\ast$name)
+\item 
+const char $\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a3b4bb39d4598a9391e450bbe9698ffcf}{get\+Define}} )(const char $\ast$name)
+\item 
+const char $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a68bdae59a2e618f3e2d53e414e79c28b}{get\+Option\+Values}} )(const char $\ast$name)
+\item 
+const char $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a998481d0257641237f3fb4f3db6f3712}{get\+Define\+Values}} )(const char $\ast$name)
+\item 
+\mbox{\hyperlink{struct_flag}{Flag}} $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a3ed47d793fa84a2ee9002c50a50826ff}{get\+Default\+Flags}} )(logical active)
+\item 
+\mbox{\hyperlink{struct_flag}{Flag}} $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a67991d833a9d518fc9defa30cc9c275f}{get\+Current\+Flags}} )(logical active)
+\item 
+\mbox{\hyperlink{struct_parameter}{Parameter}} $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a8e91e84d2fcdf9c982f710a7f4996793}{get\+Default\+Options}} )()
+\item 
+\mbox{\hyperlink{struct_parameter}{Parameter}} $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a41adb5267fe2ba3037bee59c21bf27f0}{get\+Current\+Options}} )()
+\item 
+\mbox{\hyperlink{struct_parameter}{Parameter}} $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct_cmd_line_a84925838150fea04e50036ff03b477d7}{get\+Definitions}} )()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Singleton encargado de mantener la informacion pasada por la linea de comandos. 
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00004}{4}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{struct_cmd_line_a67991d833a9d518fc9defa30cc9c275f}\label{struct_cmd_line_a67991d833a9d518fc9defa30cc9c275f}} 
+\index{CmdLine@{CmdLine}!getCurrentFlags@{getCurrentFlags}}
+\index{getCurrentFlags@{getCurrentFlags}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getCurrentFlags}{getCurrentFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_flag}{Flag}} $\ast$$\ast$($\ast$ get\+Current\+Flags) (logical active)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00018}{18}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a41adb5267fe2ba3037bee59c21bf27f0}\label{struct_cmd_line_a41adb5267fe2ba3037bee59c21bf27f0}} 
+\index{CmdLine@{CmdLine}!getCurrentOptions@{getCurrentOptions}}
+\index{getCurrentOptions@{getCurrentOptions}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getCurrentOptions}{getCurrentOptions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_parameter}{Parameter}} $\ast$$\ast$($\ast$ get\+Current\+Options) ()}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00020}{20}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a3ed47d793fa84a2ee9002c50a50826ff}\label{struct_cmd_line_a3ed47d793fa84a2ee9002c50a50826ff}} 
+\index{CmdLine@{CmdLine}!getDefaultFlags@{getDefaultFlags}}
+\index{getDefaultFlags@{getDefaultFlags}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getDefaultFlags}{getDefaultFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_flag}{Flag}} $\ast$$\ast$($\ast$ get\+Default\+Flags) (logical active)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00017}{17}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a8e91e84d2fcdf9c982f710a7f4996793}\label{struct_cmd_line_a8e91e84d2fcdf9c982f710a7f4996793}} 
+\index{CmdLine@{CmdLine}!getDefaultOptions@{getDefaultOptions}}
+\index{getDefaultOptions@{getDefaultOptions}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getDefaultOptions}{getDefaultOptions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_parameter}{Parameter}} $\ast$$\ast$($\ast$ get\+Default\+Options) ()}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00019}{19}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a3b4bb39d4598a9391e450bbe9698ffcf}\label{struct_cmd_line_a3b4bb39d4598a9391e450bbe9698ffcf}} 
+\index{CmdLine@{CmdLine}!getDefine@{getDefine}}
+\index{getDefine@{getDefine}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getDefine}{getDefine}}
+{\footnotesize\ttfamily const char $\ast$($\ast$ get\+Define) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00014}{14}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_acd93a6eefc18dc49aa91733f7cd2b17e}\label{struct_cmd_line_acd93a6eefc18dc49aa91733f7cd2b17e}} 
+\index{CmdLine@{CmdLine}!getDefineNumValues@{getDefineNumValues}}
+\index{getDefineNumValues@{getDefineNumValues}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getDefineNumValues}{getDefineNumValues}}
+{\footnotesize\ttfamily int($\ast$ get\+Define\+Num\+Values) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00012}{12}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a998481d0257641237f3fb4f3db6f3712}\label{struct_cmd_line_a998481d0257641237f3fb4f3db6f3712}} 
+\index{CmdLine@{CmdLine}!getDefineValues@{getDefineValues}}
+\index{getDefineValues@{getDefineValues}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getDefineValues}{getDefineValues}}
+{\footnotesize\ttfamily const char $\ast$$\ast$($\ast$ get\+Define\+Values) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00016}{16}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a84925838150fea04e50036ff03b477d7}\label{struct_cmd_line_a84925838150fea04e50036ff03b477d7}} 
+\index{CmdLine@{CmdLine}!getDefinitions@{getDefinitions}}
+\index{getDefinitions@{getDefinitions}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getDefinitions}{getDefinitions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_parameter}{Parameter}} $\ast$$\ast$($\ast$ get\+Definitions) ()}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00021}{21}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a5b408b7f2a5a90e1f68acc7e93e7ab27}\label{struct_cmd_line_a5b408b7f2a5a90e1f68acc7e93e7ab27}} 
+\index{CmdLine@{CmdLine}!getFlag@{getFlag}}
+\index{getFlag@{getFlag}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getFlag}{getFlag}}
+{\footnotesize\ttfamily logical($\ast$ get\+Flag) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00010}{10}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_aa64488b04cd8f222bfa8a0bbf31e8050}\label{struct_cmd_line_aa64488b04cd8f222bfa8a0bbf31e8050}} 
+\index{CmdLine@{CmdLine}!getOption@{getOption}}
+\index{getOption@{getOption}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getOption}{getOption}}
+{\footnotesize\ttfamily const char $\ast$($\ast$ get\+Option) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00013}{13}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a83ec8c0d25b5ebec4468a2ca7c35a845}\label{struct_cmd_line_a83ec8c0d25b5ebec4468a2ca7c35a845}} 
+\index{CmdLine@{CmdLine}!getOptionNumValues@{getOptionNumValues}}
+\index{getOptionNumValues@{getOptionNumValues}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getOptionNumValues}{getOptionNumValues}}
+{\footnotesize\ttfamily int($\ast$ get\+Option\+Num\+Values) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00011}{11}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a68bdae59a2e618f3e2d53e414e79c28b}\label{struct_cmd_line_a68bdae59a2e618f3e2d53e414e79c28b}} 
+\index{CmdLine@{CmdLine}!getOptionValues@{getOptionValues}}
+\index{getOptionValues@{getOptionValues}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{getOptionValues}{getOptionValues}}
+{\footnotesize\ttfamily const char $\ast$$\ast$($\ast$ get\+Option\+Values) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00015}{15}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a1baeda61a2a83cb8ac550ab46b73df49}\label{struct_cmd_line_a1baeda61a2a83cb8ac550ab46b73df49}} 
+\index{CmdLine@{CmdLine}!hasDefine@{hasDefine}}
+\index{hasDefine@{hasDefine}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{hasDefine}{hasDefine}}
+{\footnotesize\ttfamily logical($\ast$ has\+Define) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00007}{7}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a5e736fb89c0a28ce18bb6b8afca76c26}\label{struct_cmd_line_a5e736fb89c0a28ce18bb6b8afca76c26}} 
+\index{CmdLine@{CmdLine}!hasFlag@{hasFlag}}
+\index{hasFlag@{hasFlag}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{hasFlag}{hasFlag}}
+{\footnotesize\ttfamily logical($\ast$ has\+Flag) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00005}{5}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a86b9284b89a5321206a3431bfeefd9f1}\label{struct_cmd_line_a86b9284b89a5321206a3431bfeefd9f1}} 
+\index{CmdLine@{CmdLine}!hasOption@{hasOption}}
+\index{hasOption@{hasOption}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{hasOption}{hasOption}}
+{\footnotesize\ttfamily logical($\ast$ has\+Option) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00006}{6}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a6d95a8e17070e963273d68622fe5d0d4}\label{struct_cmd_line_a6d95a8e17070e963273d68622fe5d0d4}} 
+\index{CmdLine@{CmdLine}!isDefineMultiple@{isDefineMultiple}}
+\index{isDefineMultiple@{isDefineMultiple}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{isDefineMultiple}{isDefineMultiple}}
+{\footnotesize\ttfamily logical($\ast$ is\+Define\+Multiple) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00009}{9}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+\mbox{\Hypertarget{struct_cmd_line_a32ca537feda93ee63fdb48bd514cf29c}\label{struct_cmd_line_a32ca537feda93ee63fdb48bd514cf29c}} 
+\index{CmdLine@{CmdLine}!isOptionMultiple@{isOptionMultiple}}
+\index{isOptionMultiple@{isOptionMultiple}!CmdLine@{CmdLine}}
+\doxysubsubsection{\texorpdfstring{isOptionMultiple}{isOptionMultiple}}
+{\footnotesize\ttfamily logical($\ast$ is\+Option\+Multiple) (const char $\ast$name)}
+
+
+
+Definición en la línea \mbox{\hyperlink{cmdline_8h_source_l00008}{8}} del archivo \mbox{\hyperlink{cmdline_8h_source}{cmdline.\+h}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+cmdline.\+h\end{DoxyCompactItemize}

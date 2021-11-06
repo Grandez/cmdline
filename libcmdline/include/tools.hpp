@@ -23,7 +23,7 @@ namespace _cmdline {
 	vector<std::string> splitArgument(const char* parm);
 	vector<std::string> tokenize(const char* src, const char* pat);
 	vector<int>         tokenizeNumber(const char* src, const char* pat);
-	char*               myStrdup(const char* s, int size);
-	char*               myStrdup(const char* s);
+	char*               myStrdup(const char* s, int size); /*!< @private */
+	char*               myStrdup(const char* s);           /*!< @private */
 	void                defaultDate(char* aux);
 }

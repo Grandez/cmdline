@@ -1,62 +1,57 @@
-.TH "cmdline::CmdLineI" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "CmdLineI" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline::CmdLineI
+CmdLineI
 .SH SYNOPSIS
 .br
 .PP
 .PP
-\fC#include <cmdline\&.hpp>\fP
+Herencias \fBCmdLine\fP\&.
 .PP
-Inherits \fBcmdline::CmdLine\fP\&.
-.PP
-Inherited by \fBcmdline::CmdLineIS\fP\&.
-.SS "Public Member Functions"
+Heredado por \fBCmdLineIS\fP\&.
+.SS "Métodos públicos"
 
 .in +1c
 .ti -1c
-.RI "\fBCmdLineI\fP (int argc, char **argv, \fBParameters\fP \fBparms\fP)"
+.RI "\fBCmdLineI\fP (int argc, char **argv, Parameters parms)"
 .br
 .ti -1c
-.RI "\fBCmdLineI\fP (int argc, char **argv, \fBcmdline::Parameters\fP \fBparms\fP, bool strict)"
-.br
-.ti -1c
-.RI "\fB~CmdLineI\fP ()"
+.RI "\fBCmdLineI\fP (int argc, char **argv, cmdline::Parameters parms, bool strict)"
 .br
 .in -1c
-.SS "Static Public Member Functions"
+.SS "Métodos públicos estáticos"
 
 .in +1c
 .ti -1c
-.RI "static \fBCmdLine\fP \fBgetInstance\fP (int argc, char **argv, \fBParameters\fP \fBparms\fP)"
+.RI "static \fBCmdLine\fP \fBgetInstance\fP (int argc, char **argv, Parameters parms)"
 .br
 .in -1c
-.SS "Additional Inherited Members"
-.SH "Detailed Description"
+.SS "Otros miembros heredados"
+.SH "Descripción detallada"
 .PP 
-Definition at line \fB232\fP of file \fBcmdline\&.hpp\fP\&.
-.SH "Constructor & Destructor Documentation"
+Definición en la línea \fB153\fP del archivo \fBcmdline\&.hpp\fP\&.
+.SH "Documentación del constructor y destructor"
 .PP 
-.SS "cmdline::CmdLineI::CmdLineI (int argc, char ** argv, \fBcmdline::Parameters\fP parms)"
+.SS "\fBCmdLineI\fP (int argc, char ** argv, cmdline::Parameters parms)"
 
 .PP
-Definition at line \fB21\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SS "cmdline::CmdLineI::CmdLineI (int argc, char ** argv, \fBcmdline::Parameters\fP parms, bool strict)"
+Definición en la línea \fB21\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SS "\fBCmdLineI\fP (int argc, char ** argv, cmdline::Parameters parms, bool strict)"
 
 .PP
-Definition at line \fB22\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SS "cmdline::CmdLineI::~CmdLineI ()"
+Definición en la línea \fB22\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SS "~\fBCmdLineI\fP ()"
 
 .PP
-Definition at line \fB18\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SH "Member Function Documentation"
+Definición en la línea \fB18\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SH "Documentación de las funciones miembro"
 .PP 
-.SS "\fBCmdLine\fP cmdline::CmdLineI::getInstance (int argc, char ** argv, \fBcmdline::Parameters\fP parms)\fC [static]\fP"
+.SS "\fBCmdLine\fP getInstance (int argc, char ** argv, cmdline::Parameters parms)\fC [static]\fP"
 
 .PP
-Definition at line \fB23\fP of file \fBcmdline_flavors\&.cpp\fP\&.
+Definición en la línea \fB23\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
 
-.SH "Author"
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

@@ -1,0 +1,246 @@
+.TH "libcmdline/include/interface.cpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libcmdline/include/interface.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include 'cmdline\&.hpp'\fP
+.br
+\fC#include 'cmdline\&.h'\fP
+.br
+\fC#include 'cmdline_exceptions\&.hpp'\fP
+.br
+\fC#include 'types\&.h'\fP
+.br
+\fC#include 'types\&.hpp'\fP
+.br
+\fC#include 'interface\&.hpp'\fP
+.br
+\fC#include 'cmdline_errno\&.h'\fP
+.br
+\fC#include 'tools\&.hpp'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > void * \fBcheckException\fP (T &ex)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBhasValue\fP (int target, const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBisMultiple\fP (bool option, const char *name)"
+.br
+.ti -1c
+.RI "\fBcmdline::Parameters\fP \fBmakeParameters\fP (\fBParmDef\fP cparms[])"
+.br
+.ti -1c
+.RI "const char ** \fB_makeArray\fP (vector< const char * > data)"
+.br
+.ti -1c
+.RI "const char ** \fB_makeArray\fP (vector< string > data)"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fB_makeArrayParameter\fP (\fBcmdline::Options\fP data)"
+.br
+.ti -1c
+.RI "const char * \fBgetValue\fP (bool option, const char *name)"
+.br
+.ti -1c
+.RI "int \fBgetNumValues\fP (bool option, const char *name)"
+.br
+.ti -1c
+.RI "const char ** \fBgetAllValues\fP (bool option, const char *name)"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fB_getOptions\fP (bool def)"
+.br
+.ti -1c
+.RI "\fBFlag\fP ** \fBmakeFlags\fP (\fBcmdline::Flags\fP flags)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBcHasFlag\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBcHasOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBcHasDefine\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBcIsOptionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBlogical\fP \fBcIsDefineMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBcGetOptionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBcGetDefineNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBcGetOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBcGetDefine\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char ** \fBcGetOptionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char ** \fBcGetDefineValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBFlag\fP ** \fBcGetDefaultFlags\fP (\fBlogical\fP active)"
+.br
+.ti -1c
+.RI "\fBFlag\fP ** \fBcGetCurrentFlags\fP (\fBlogical\fP active)"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fBcGetDefaultOptions\fP ()"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fBcGetCurrentOptions\fP ()"
+.br
+.ti -1c
+.RI "\fBParameter\fP ** \fBcGetDefinitions\fP ()"
+.br
+.ti -1c
+.RI "\fBCmdLine\fP * \fBcmdline_create\fP (int argc, char **arg, \fBParmDef\fP cparms[])"
+.br
+.ti -1c
+.RI "void \fBcmdline_delete\fP (\fBCmdLine\fP *\fBcmdline\fP)"
+.br
+.in -1c
+.SH "Documentación de las funciones"
+.PP 
+.SS "\fBParameter\fP ** _getOptions (bool def)"
+
+.PP
+Definición en la línea \fB158\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char ** _makeArray (vector< const char * > data)"
+
+.PP
+Definición en la línea \fB75\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char ** _makeArray (vector< string > data)"
+
+.PP
+Definición en la línea \fB88\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBParameter\fP ** _makeArrayParameter (\fBcmdline::Options\fP data)"
+
+.PP
+Definición en la línea \fB102\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBFlag\fP ** cGetCurrentFlags (\fBlogical\fP active)"
+
+.PP
+Definición en la línea \fB226\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBParameter\fP ** cGetCurrentOptions ()"
+
+.PP
+Definición en la línea \fB239\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBFlag\fP ** cGetDefaultFlags (\fBlogical\fP active)"
+
+.PP
+Definición en la línea \fB216\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBParameter\fP ** cGetDefaultOptions ()"
+
+.PP
+Definición en la línea \fB236\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char * cGetDefine (const char * name)"
+
+.PP
+Definición en la línea \fB212\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "int cGetDefineNumValues (const char * name)"
+
+.PP
+Definición en la línea \fB210\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char ** cGetDefineValues (const char * name)"
+
+.PP
+Definición en la línea \fB214\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBParameter\fP ** cGetDefinitions ()"
+
+.PP
+Definición en la línea \fB242\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char * cGetOption (const char * name)"
+
+.PP
+Definición en la línea \fB211\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "int cGetOptionNumValues (const char * name)"
+
+.PP
+Definición en la línea \fB209\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char ** cGetOptionValues (const char * name)"
+
+.PP
+Definición en la línea \fB213\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP cHasDefine (const char * name)"
+
+.PP
+Definición en la línea \fB206\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP cHasFlag (const char * name)"
+
+.PP
+Definición en la línea \fB204\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP cHasOption (const char * name)"
+
+.PP
+Definición en la línea \fB205\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "template<typename T > void * checkException (T & ex)"
+
+.PP
+Definición en la línea \fB22\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP cIsDefineMultiple (const char * name)"
+
+.PP
+Definición en la línea \fB208\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP cIsOptionMultiple (const char * name)"
+
+.PP
+Definición en la línea \fB207\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBCmdLine\fP * cmdline_create (int argc, char ** arg, \fBParmDef\fP cparms[])"
+
+.PP
+Definición en la línea \fB247\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "void cmdline_delete (\fBCmdLine\fP * cmdline)"
+
+.PP
+Definición en la línea \fB277\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char ** getAllValues (bool option, const char * name)"
+
+.PP
+Definición en la línea \fB147\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "int getNumValues (bool option, const char * name)"
+
+.PP
+Definición en la línea \fB134\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "const char * getValue (bool option, const char * name)"
+
+.PP
+Definición en la línea \fB123\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP hasValue (int target, const char * name)"
+
+.PP
+Definición en la línea \fB37\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBlogical\fP isMultiple (bool option, const char * name)"
+
+.PP
+Definición en la línea \fB52\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBFlag\fP ** makeFlags (\fBcmdline::Flags\fP flags)"
+
+.PP
+Definición en la línea \fB186\fP del archivo \fBinterface\&.cpp\fP\&.
+.SS "\fBcmdline::Parameters\fP makeParameters (\fBParmDef\fP cparms[])"
+
+.PP
+Definición en la línea \fB64\fP del archivo \fBinterface\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

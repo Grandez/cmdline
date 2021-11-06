@@ -1,0 +1,65 @@
+.TH "libcmdline/include/tools.hpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libcmdline/include/tools.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <unordered_map>\fP
+.br
+\fC#include 'parameter_tree\&.hpp'\fP
+.br
+\fC#include 'msg_locale\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fB_cmdline\fP"
+.br
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fB_cmdline::add2tree\fP (ParameterTree *root[], const char *word)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::makeChar\fP (std::string str)"
+.br
+.ti -1c
+.RI "bool \fB_cmdline::makeBoolean\fP (const char *value)"
+.br
+.ti -1c
+.RI "bool \fB_cmdline::makeBoolean\fP (std::string value)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::makeUpper\fP (const char *str)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::strUpper\fP (const char *str)"
+.br
+.ti -1c
+.RI "vector< std::string > \fB_cmdline::splitArgument\fP (const char *parm)"
+.br
+.ti -1c
+.RI "vector< std::string > \fB_cmdline::tokenize\fP (const char *src, const char *pat)"
+.br
+.ti -1c
+.RI "vector< int > \fB_cmdline::tokenizeNumber\fP (const char *src, const char *pat)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::myStrdup\fP (const char *s, int size)"
+.br
+.ti -1c
+.RI "char * \fB_cmdline::myStrdup\fP (const char *s)"
+.br
+.ti -1c
+.RI "void \fB_cmdline::defaultDate\fP (char *aux)"
+.br
+.in -1c
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

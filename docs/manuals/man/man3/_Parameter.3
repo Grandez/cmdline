@@ -1,4 +1,4 @@
-.TH "_Parameter" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "_Parameter" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,31 +7,38 @@ _Parameter
 .br
 .PP
 .PP
-\fC#include <cmdline_types\&.h>\fP
-.SS "Public Attributes"
+\fC#include <types\&.h>\fP
+.SS "Atributos públicos"
 
 .in +1c
 .ti -1c
 .RI "const char * \fBname\fP"
 .br
 .ti -1c
-.RI "const char * \fBvalues\fP []"
+.RI "const char ** \fBvalues\fP"
+.br
+.ti -1c
+.RI "int \fBsize\fP"
 .br
 .in -1c
-.SH "Detailed Description"
+.SH "Descripción detallada"
 .PP 
-Definition at line \fB30\fP of file \fBcmdline_types\&.h\fP\&.
-.SH "Member Data Documentation"
+Definición en la línea \fB26\fP del archivo \fBtypes\&.h\fP\&.
+.SH "Documentación de los datos miembro"
 .PP 
-.SS "const char* _Parameter::name"
+.SS "const char * _Parameter::name"
 
 .PP
-Definition at line \fB31\fP of file \fBcmdline_types\&.h\fP\&.
-.SS "const char* _Parameter::values[]"
+Definición en la línea \fB27\fP del archivo \fBtypes\&.h\fP\&.
+.SS "int _Parameter::size"
 
 .PP
-Definition at line \fB32\fP of file \fBcmdline_types\&.h\fP\&.
+Definición en la línea \fB29\fP del archivo \fBtypes\&.h\fP\&.
+.SS "const char ** _Parameter::values"
 
-.SH "Author"
+.PP
+Definición en la línea \fB28\fP del archivo \fBtypes\&.h\fP\&.
+
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

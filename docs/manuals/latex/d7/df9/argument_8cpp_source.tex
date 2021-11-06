@@ -1,175 +1,185 @@
 \hypertarget{argument_8cpp_source}{}\doxysection{argument.\+cpp}
-\label{argument_8cpp_source}\index{cmdline/src/argument.cpp@{cmdline/src/argument.cpp}}
-\mbox{\hyperlink{argument_8cpp}{Go to the documentation of this file.}}
+\label{argument_8cpp_source}\index{argument.cpp@{argument.cpp}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <string>}}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <algorithm>}}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <filesystem>}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{argument_8hpp}{argument.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tools_8h}{tools.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{types_8h}{types.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00009}00009 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00010}00010 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00011}00011 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00012}00012 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00013}00013 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00014}\mbox{\hyperlink{class__cmdline_1_1_argument_a31c2ae77153ed74e132a4f4aa0993ddc}{00014}}     \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument::Argument}}(\mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} *parm) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00015}00015         \textcolor{comment}{// Initial constructor. from default data}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00016}00016         \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}} = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(parm-\/>\mbox{\hyperlink{classcmdline_1_1_parm_ac639fadb973300e6d0f61a364d3ee197}{name}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00017}00017         \mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}} = parm-\/>\mbox{\hyperlink{classcmdline_1_1_parm_a5d33b5c097c8dc80998d7a33f022795a}{type}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00018}00018         \mbox{\hyperlink{class__cmdline_1_1_argument_acaf36fb32eaef2230a3508dc5f0b7f04}{multiple}} = parm-\/>\mbox{\hyperlink{classcmdline_1_1_parm_a4a97857fd0ee681dec325218910b70f9}{multiple}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00019}00019         \mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}} = applyDefault(parm-\/>\mbox{\hyperlink{classcmdline_1_1_parm_a438f50127ec06e789e564e3e9401aab7}{value}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00020}00020         validateDefault();}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00021}00021     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00022}\mbox{\hyperlink{class__cmdline_1_1_argument_a63554324ab1fc00e43c4f306cb6b335f}{00022}}     \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument::Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00023}00023         \textcolor{comment}{// Copy contructor}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00024}00024         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}} = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00025}00025         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}} = arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00026}00026         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_acaf36fb32eaef2230a3508dc5f0b7f04}{multiple}} = arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_acaf36fb32eaef2230a3508dc5f0b7f04}{multiple}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00027}00027         \textcolor{keywordflow}{if} (arg-\/>first.length()    > 0) this-\/>first    = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(arg-\/>first);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00028}00028         \textcolor{keywordflow}{if} (arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}}.length() > 0) this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}} = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00029}00029         \textcolor{keywordflow}{if} (arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.size() > 0) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00030}00030             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} s : arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}) this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.insert(s);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00031}00031         \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00032}00032         validateDefault();}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00033}00033     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00034}\mbox{\hyperlink{class__cmdline_1_1_argument_a05673b6b0a568730428dc2e84d7a00bc}{00034}}     \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument::Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00035}00035         this-\/>name     = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00036}00036         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}} = applyDefault(value); }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}argument.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}tools.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}validations.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#pragma warning( disable : 4996 )}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00015}00015 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00016}00016 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00019}00019     Argument::Argument(\mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} *parm) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00020}00020         \textcolor{comment}{// Initial constructor. from default data}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00021}00021         name = string(parm-\/>name);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00022}00022         type = parm-\/>type;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00023}00023         multiple = parm-\/>multiple;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00024}00024         defValue = applyDefault(parm-\/>value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00025}00025         validateDefault();}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00027}00027     Argument::Argument(Argument *arg) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00028}00028         \textcolor{comment}{// Copy contructor}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00029}00029         this-\/>name = string(arg-\/>name);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00030}00030         this-\/>type = arg-\/>type;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00031}00031         this-\/>multiple = arg-\/>multiple;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00032}00032         \textcolor{keywordflow}{if} (arg-\/>first.length()    > 0) this-\/>first    = string(arg-\/>first);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00033}00033         \textcolor{keywordflow}{if} (arg-\/>defValue.length() > 0) this-\/>defValue = string(arg-\/>defValue);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00034}00034         \textcolor{keywordflow}{if} (arg-\/>values.size() > 0) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00035}00035             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} s : arg-\/>values) this-\/>values.insert(s);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00036}00036         \}}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00037}00037         validateDefault();}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00038}00038     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00039}\mbox{\hyperlink{class__cmdline_1_1_argument_a984d502228629b1ec5652df491a30230}{00039}}     \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument::Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *value, \mbox{\hyperlink{namespacecmdline_a9cf344615f8bead94f73d5d5924283e0}{Source}} source) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00040}00040         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_a30e3e62e1e9c0a652107aa27f1415d3a}{source}} == \mbox{\hyperlink{cmdline__types_8h_a176e1eca2d1e3d1c6a064340bc6a351ea88ec7d5086d2469ba843c7fcceade8a6}{Source::DEFAULT}}) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00041}00041             this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}} = applyDefault(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00042}00042         \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00043}00043         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00044}00044             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.size() == 0) this-\/>first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00045}00045             this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.emplace(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00046}00046         \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00047}00047         this-\/>name = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00048}00048         this-\/>source = \mbox{\hyperlink{class__cmdline_1_1_argument_a30e3e62e1e9c0a652107aa27f1415d3a}{source}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00049}00049         validateDefault();}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00050}00050     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00051}\mbox{\hyperlink{class__cmdline_1_1_argument_a9cca39a0bd9c7ca0ae8629865172d2b9}{00051}}     \mbox{\hyperlink{class__cmdline_1_1_argument_ae1ff84f08898d1a9d4f87a7fc8dbb4de}{Argument::Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}} type) : \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(name, value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00052}00052         this-\/>type = \mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00053}00053         validateDefault();}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00054}00054     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00055}\mbox{\hyperlink{class__cmdline_1_1_argument_ad6915197122944fb270074dd5c62e258}{00055}}     \mbox{\hyperlink{class__cmdline_1_1_argument_ad6915197122944fb270074dd5c62e258}{Argument::\string~Argument}}() \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00056}00056         \textcolor{comment}{// if (defValue) free(defValue);}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00057}00057     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00058}00058 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00059}\mbox{\hyperlink{class__cmdline_1_1_argument_a8946d2d314a69e9227bd9ee73e297ef6}{00059}}     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class__cmdline_1_1_argument_a8946d2d314a69e9227bd9ee73e297ef6}{Argument::getValue}}() \{ }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00060}00060         \textcolor{keywordflow}{return} (first.length() > 0) ? first.c\_str() : \mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}}.c\_str();}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00061}00061     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00062}\mbox{\hyperlink{class__cmdline_1_1_argument_ac34ca7b1eed1201c2eddb0a2b6dc7af0}{00062}}     vector<const char *>  \mbox{\hyperlink{class__cmdline_1_1_argument_ac34ca7b1eed1201c2eddb0a2b6dc7af0}{Argument::getValues}}() \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00063}00063         \textcolor{keywordtype}{int} i = 0;}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00064}00064         vector<const char*> v(\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.size());}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00065}00065         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} val : \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00066}00066             v[i++] = \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}((val.c\_str()));}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00067}00067         \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00068}00068         \textcolor{keywordflow}{return} v;}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00069}00069     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00070}00070 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00071}\mbox{\hyperlink{class__cmdline_1_1_argument_a08049ae39bb1d5e8e16e449757caf1a8}{00071}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class__cmdline_1_1_argument_a08049ae39bb1d5e8e16e449757caf1a8}{Argument::getBoolean}}() \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00072}00072         \textcolor{keywordtype}{string} val = (first.length() > 0) ? first : \mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00073}00073 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00074}00074         \textcolor{keywordflow}{if} (val.length() == 0)         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00075}00075         \textcolor{keywordflow}{if} (val.at(0) == \textcolor{charliteral}{'0'})          \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00076}00076         \textcolor{keywordflow}{if} (val.at(0) == \textcolor{charliteral}{'1'})          \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00077}00077         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}-\/1"{}})    == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00078}00078         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}no"{}})    == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00079}00079         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}false"{}}) == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00080}00080         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}yes"{}})   == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00081}00081         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}true"{}})  == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00082}00082         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}si"{}})    == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00083}00083         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00084}00084     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00085}\mbox{\hyperlink{class__cmdline_1_1_argument_ab3ed0053b6303e2afc6a7e9fa849d29b}{00085}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_ab3ed0053b6303e2afc6a7e9fa849d29b}{Argument::initValues}}(vector<string> values) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00086}00086         first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}[0]);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00087}00087         this-\/>values.clear();}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00088}00088         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} s : \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}) this-\/>values.emplace(s);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00089}00089         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00090}00090     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00091}00091 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00092}\mbox{\hyperlink{class__cmdline_1_1_argument_a9da77f9a75c30db3a5186198593f5d3b}{00092}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a9da77f9a75c30db3a5186198593f5d3b}{Argument::setFromEnv}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00093}00093         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.size() == 0) first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00094}00094         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.emplace(\mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}}(value));}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00095}00095         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a30e3e62e1e9c0a652107aa27f1415d3a}{source}} = \mbox{\hyperlink{cmdline__types_8h_a176e1eca2d1e3d1c6a064340bc6a351ea90a589408899045d76b41b0b3520afaf}{Source::ENV}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00096}00096         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00097}00097     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00098}\mbox{\hyperlink{class__cmdline_1_1_argument_a6412742aae6e9eb5e5c4d9efc18597a9}{00098}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{Argument::setValue}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00099}00099         first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00100}00100         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.emplace(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00101}00101         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00102}00102     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00103}\mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{00103}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{Argument::setValue}}(\textcolor{keywordtype}{bool} value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00104}00104         \textcolor{keywordtype}{string} s = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(value ? \textcolor{stringliteral}{"{}1"{}} : \textcolor{stringliteral}{"{}0"{}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00105}00105         first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(s);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00106}00106         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.emplace(s);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00107}00107         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00108}00108     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00109}\mbox{\hyperlink{class__cmdline_1_1_argument_aa5568748298e81520fd3ae9064a737e6}{00109}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a69d74f9ecb5998c779ecde456c5bc879}{Argument::setValue}}(\mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}} value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00110}00110         first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00111}00111         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.emplace(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00112}00112         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00113}00113     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00114}\mbox{\hyperlink{class__cmdline_1_1_argument_a070383faf05aa2196979a5da4cc48de4}{00114}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a070383faf05aa2196979a5da4cc48de4}{Argument::addValue}}(\mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{std::string}} value) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00115}00115         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.size() == 0) first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(value);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00116}00116         this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.emplace(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00039}00039     Argument::Argument(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00040}00040         this-\/>name     = string(name);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00041}00041         this-\/>defValue = applyDefault(value); }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00042}00042         validateDefault();}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00044}00044     Argument::Argument(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *value, Source source) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00045}00045         \textcolor{keywordflow}{if} (source == Source::DEFAULT) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00046}00046             this-\/>defValue = applyDefault(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00048}00048         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00049}00049             \textcolor{keywordflow}{if} (values.size() == 0) this-\/>first = string(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00050}00050             this-\/>values.emplace(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00051}00051         \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00052}00052         this-\/>name = string(name);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00053}00053         this-\/>source = source;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00054}00054         validateDefault();}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00056}00056     Argument::Argument(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, Type type) : Argument(name, value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00057}00057         this-\/>type = type;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00058}00058         validateDefault();}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00060}00060     Argument::\string~Argument() \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00061}00061         \textcolor{comment}{// if (defValue) free(defValue);}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00064}00064     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* Argument::getValue() \{ }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00065}00065         \textcolor{keywordflow}{return} (first.length() > 0) ? first.c\_str() : defValue.c\_str();}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00067}00067     vector<const char *>  Argument::getValues() \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00068}00068         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00069}00069         vector<const char*> v(values.size());}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00070}00070         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} val : values) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00071}00071             v[i++] = strdup((val.c\_str()));}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00072}00072         \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00073}00073         \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00075}00075     vector<string>  Argument::getStringValues() \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00076}00076         std::vector<string> v(values.size());}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00077}00077         std::copy(values.begin(), values.end(), v.begin());}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00078}00078         \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00079}00079     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00081}00081     \textcolor{keywordtype}{bool} Argument::getBoolean() \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00082}00082         \textcolor{keywordtype}{string} val = (first.length() > 0) ? first : defValue;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00084}00084         \textcolor{keywordflow}{if} (val.length() == 0)         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00085}00085         \textcolor{keywordflow}{if} (val.at(0) == \textcolor{charliteral}{'0'})          \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00086}00086         \textcolor{keywordflow}{if} (val.at(0) == \textcolor{charliteral}{'1'})          \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00087}00087         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}-\/1"{}})    == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00088}00088         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}no"{}})    == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00089}00089         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}false"{}}) == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00090}00090         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}yes"{}})   == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00091}00091         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}true"{}})  == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00092}00092         \textcolor{keywordflow}{if} (val.compare(\textcolor{stringliteral}{"{}si"{}})    == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00093}00093         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00095}00095     Argument\& Argument::initValues(vector<string> values) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00096}00096         first = string(values[0]);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00097}00097         this-\/>values.clear();}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00098}00098         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} s : values) this-\/>values.emplace(s);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00099}00099         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00100}00100     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00102}00102     Argument\& Argument::setFromEnv(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00103}00103         \textcolor{keywordflow}{if} (values.size() == 0) first = string(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00104}00104         this-\/>values.emplace(std::string(value));}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00105}00105         this-\/>source = Source::ENV;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00106}00106         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00107}00107     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00108}00108     Argument\& Argument::setValue(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00109}00109         first = string(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00110}00110         this-\/>values.emplace(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00111}00111         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00113}00113     Argument\& Argument::setValue(\textcolor{keywordtype}{bool} value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00114}00114         \textcolor{keywordtype}{string} s = string(value ? \textcolor{stringliteral}{"{}1"{}} : \textcolor{stringliteral}{"{}0"{}});}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00115}00115         first = string(s);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00116}00116         this-\/>values.emplace(s);}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00117}00117         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00118}00118     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00119}\mbox{\hyperlink{class__cmdline_1_1_argument_a3ea97c6f8b07c135f9b61c5fb1b6a983}{00119}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_a3ea97c6f8b07c135f9b61c5fb1b6a983}{Argument::addValues}}(vector<string> values) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00120}00120         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}.size() == 0) first = \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(\mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}[0]);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00121}00121         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} v : \mbox{\hyperlink{class__cmdline_1_1_argument_afde8a2e46c353938646805cecb7f28dc}{values}}) this-\/>values.emplace(v);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00119}00119     Argument\& Argument::setValue(std::string value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00120}00120         first = string(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00121}00121         this-\/>values.emplace(value);}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00122}00122         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00123}00123     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00124}\mbox{\hyperlink{class__cmdline_1_1_argument_afad7c4433716a1ccacae2ed4c697ef3a}{00124}}     \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& \mbox{\hyperlink{class__cmdline_1_1_argument_afad7c4433716a1ccacae2ed4c697ef3a}{Argument::makeUpper}}() \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00125}00125         for\_each(\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}.begin(), \mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}.end(), [](\textcolor{keywordtype}{char}\& c) \{ c = ::toupper(c);\});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00126}00126         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00127}00127     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00128}00128     \textcolor{keywordtype}{void} Argument::validateDefault() \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00129}00129         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}}.length() == 0) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00130}00130         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}} == \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3aee847e634a4297b274316de8a8ca9921}{Type::STRING}}) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00131}00131         \mbox{\hyperlink{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}{validateValue}}(\mbox{\hyperlink{class__cmdline_1_1_argument_a313c8a273197b9a0f6d3385369daa3b3}{defValue}}.c\_str(), \mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00132}00132     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00133}00133     \textcolor{keywordtype}{string} Argument::applyDefault(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* txt) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00134}00134         \textcolor{keywordtype}{char} aux[256] = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00135}00135         \textcolor{keywordflow}{if} (txt != NULL \&\& strlen(txt) > 0) \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(txt);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00136}00136         std::time\_t t = std::time(0);   }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00137}00137         std::tm* now = std::localtime(\&t);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00138}00138         \textcolor{keywordflow}{switch} (this-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a9a4e30d637f497d942f3222ca06ee617}{type}}) \{}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00139}00139                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3a0ace72efd9e987dfd807365d0ca50141}{Type::DATE}}: }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00140}00140                     \mbox{\hyperlink{namespace__cmdline_a1546b166647f2d3b462cf683185fd80d}{defaultDate}}(aux);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00141}00141                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00142}00142                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3ae9e4c627760f36823cdd153c24229157}{Type::TIME}}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00143}00143                     sprintf(aux, \textcolor{stringliteral}{"{}\%02d:\%02d:\%02d"{}}, now-\/>tm\_hour, now-\/>tm\_min, now-\/>tm\_sec);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00144}00144                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00145}00145                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3a86797ee5836338ee241ceee5cfc669e2}{Type::DATETIME}}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00146}00146                     sprintf(aux, \textcolor{stringliteral}{"{}\%04d-\/\%02d-\/\%02d \%02d:\%02d:\%02d"{}},}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00147}00147                                  now-\/>tm\_year + 1900, now-\/>tm\_mon + 1, now-\/>tm\_mday,}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00148}00148                                  now-\/>tm\_hour, now-\/>tm\_min, now-\/>tm\_sec);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00149}00149                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00150}00150                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3a8ab7d2437fdcb262d58574673056f161}{Type::TMS}}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00151}00151                     sprintf(aux, \textcolor{stringliteral}{"{}\%04d-\/\%02d-\/\%02d-\/\%02d:\%02d:\%02d.000000"{}},}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00152}00152                     now-\/>tm\_year + 1900, now-\/>tm\_mon + 1, now-\/>tm\_mday,}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00153}00153                     now-\/>tm\_hour, now-\/>tm\_min, now-\/>tm\_sec);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00124}00124     Argument\& Argument::addValue(std::string value) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00125}00125         \textcolor{keywordflow}{if} (values.size() == 0) first = string(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00126}00126         this-\/>values.emplace(value);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00127}00127         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00129}00129     Argument\& Argument::addValues(vector<string> values) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00130}00130         \textcolor{keywordflow}{if} (this-\/>values.size() == 0) first = string(values[0]);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00131}00131         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} v : values) this-\/>values.emplace(v);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00132}00132         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00134}00134     Argument\& Argument::makeUpper() \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00135}00135         for\_each(name.begin(), name.end(), [](\textcolor{keywordtype}{char}\& c) \{ c = ::toupper(c);\});}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00136}00136         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00137}00137     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00138}00138     \textcolor{keywordtype}{void} Argument::validateDefault() \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00139}00139         \textcolor{keywordflow}{if} (defValue.length() == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00140}00140         \textcolor{keywordflow}{if} (type == Type::STRING) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00141}00141         validateValue(defValue.c\_str(), type);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00142}00142     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00143}00143     \textcolor{keywordtype}{string} Argument::applyDefault(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* txt) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00144}00144         \textcolor{keywordtype}{char} aux[256] = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00145}00145         \textcolor{keywordflow}{if} (txt != NULL \&\& strlen(txt) > 0) \textcolor{keywordflow}{return} string(txt);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00146}00146         std::time\_t t = std::time(0);   }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00147}00147         std::tm* now = std::localtime(\&t);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00148}00148         \textcolor{keywordflow}{switch} (this-\/>type) \{}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00149}00149                \textcolor{keywordflow}{case} Type::DATE: }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00150}00150                     defaultDate(aux);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00151}00151                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00152}00152                \textcolor{keywordflow}{case} Type::TIME:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00153}00153                     sprintf(aux, \textcolor{stringliteral}{"{}\%02d:\%02d:\%02d"{}}, now-\/>tm\_hour, now-\/>tm\_min, now-\/>tm\_sec);}
 \DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00154}00154                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00155}00155                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3a68a38057d09a4789d8d25e55adc5b0e6}{Type::DIR}}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00156}00156                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3ae763361828f75d5c198b1e0210b6a2e0}{Type::DIR\_EXISTS}}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00157}00157                     strcpy(aux, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *) std::filesystem::current\_path().\textcolor{keywordtype}{string}().c\_str());}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00158}00158                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00159}00159                \textcolor{keywordflow}{case} \mbox{\hyperlink{cmdline__types_8h_aee777019d0884c4c38d9a4b33b447af3ae663dbb8f8244e122acb5bd6b2c216e1}{Type::BOOL}}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00160}00160                     aux[0] = \textcolor{charliteral}{'0'}; aux[1] = 0x0;}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00161}00161                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00162}00162                \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00163}00163                     \textcolor{keywordflow}{if} (txt == NULL) \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00164}00164                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetesting_1_1internal_a5ca8a348395a6145775c1a2334e21889}{string}}(aux);}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00165}00165         \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00166}00166         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{string}(aux));}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00167}00167     \}}
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00168}00168 }
-\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00169}00169 \};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00155}00155                \textcolor{keywordflow}{case} Type::DATETIME:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00156}00156                     sprintf(aux, \textcolor{stringliteral}{"{}\%04d-\/\%02d-\/\%02d \%02d:\%02d:\%02d"{}},}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00157}00157                                  now-\/>tm\_year + 1900, now-\/>tm\_mon + 1, now-\/>tm\_mday,}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00158}00158                                  now-\/>tm\_hour, now-\/>tm\_min, now-\/>tm\_sec);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00159}00159                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00160}00160                \textcolor{keywordflow}{case} Type::TMS:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00161}00161                     sprintf(aux, \textcolor{stringliteral}{"{}\%04d-\/\%02d-\/\%02d-\/\%02d:\%02d:\%02d.000000"{}},}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00162}00162                     now-\/>tm\_year + 1900, now-\/>tm\_mon + 1, now-\/>tm\_mday,}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00163}00163                     now-\/>tm\_hour, now-\/>tm\_min, now-\/>tm\_sec);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00164}00164                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00165}00165                \textcolor{keywordflow}{case} Type::DIR:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00166}00166                \textcolor{keywordflow}{case} Type::DIR\_EXISTS:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00167}00167                     strcpy(aux, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *) std::filesystem::current\_path().\textcolor{keywordtype}{string}().c\_str());}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00168}00168                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00169}00169                \textcolor{keywordflow}{case} Type::BOOL:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00170}00170                     aux[0] = \textcolor{charliteral}{'0'}; aux[1] = 0x0;}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00171}00171                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00172}00172                \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00173}00173                     \textcolor{keywordflow}{if} (txt == NULL) \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00174}00174                     \textcolor{keywordflow}{return} string(aux);}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00175}00175         \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00176}00176         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{string}(aux));}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00177}00177     \}}
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{argument_8cpp_source_l00179}00179 \};}
 
 \end{DoxyCode}

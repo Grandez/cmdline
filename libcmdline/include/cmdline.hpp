@@ -34,7 +34,7 @@ namespace cmdline {
 		Type type = Type::STRING;  // Type
 		char* value;   // default value
 		bool multiple = false;   // Allow multiple values?
-		Parm() { name = nullptr; } // default
+		Parm() = delete ; // { name = nullptr; } // default
 		Parm(const char* name);
 		Parm(const char* name, const char* value);
 		Parm(const char* name, const char* value, Type type, bool multiple = false);
@@ -52,7 +52,6 @@ namespace cmdline {
 	 * Parm(const char* name, const char* value): name/value (false/true)
 	 *
 	 */
-
 	class ParmFlag : public Parm {
 	public:
 		ParmFlag() = delete;
@@ -65,24 +64,23 @@ namespace cmdline {
 	 * Parm(const char* name, const char* value): name/value (false/true)
 	 *
 	 */
-
 	class ParmOption : public Parm {
 	public:
 		ParmOption() = delete;
 		ParmOption(const char* name, const char* value) : Parm(name, value) {};
 		ParmOption(const char* name, Type type) : Parm(name, NULL, type) {}
 		ParmOption(const char* name, const char* value, bool multiple) : Parm(name, value, Type::STRING, multiple) {};
-		ParmOption(const char* name, const char* value, Type type, bool multiple = false) : Parm(name, value, type, multiple) {};
+		ParmOption(const char* name, Type type, bool multiple) : Parm(name, NULL, type, multiple) {};
+		ParmOption(const char* name, const char* value, Type type,  bool multiple = false) : Parm(name, value, type, multiple) {};
 	};
 	typedef std::vector<Parm>                 Parameters;
-
 	class CmdLine {
 	public:
 		CmdLine() {};
-		CmdLine(int argc, char **argv, Parameters parms); 
+		CmdLine(int argc, const char **argv, Parameters parms); 
 		~CmdLine(); 
-		static CmdLine getInstance(int argc, char** argv, Parameters parms = Parameters());
-		static CmdLine getInstance(Parameters parms, int argc, char** argv);
+		static CmdLine *getInstance(int argc, const char** argv, Parameters parms = Parameters());
+		static CmdLine *getInstance(Parameters parms, int argc, const char** argv);
 		static void freeInstance();  // Just for test
 		// Arguments
 		vector<const char*> args();
@@ -94,6 +92,7 @@ namespace cmdline {
 		Flags getCurrentFlags(bool all = true);
 
 		// Options control
+		Type                 getType(const char* name); 
 		bool                 hasOption(const char* name);
 		bool                 hasOption(string name);
 		bool                 isOptionMultiple(const char* name);
@@ -105,17 +104,19 @@ namespace cmdline {
 
 		int       getOptionNumValues(const char* name);
 		int       getOptionNumValues(string name);
-		Options   getDefaultOptions();
+		unordered_map<string,string>   getDefaultOptions();
 		Options   getCurrentOptions();
-
+		/*
 		template <typename T> const T         getOptionAs(T t, const char* name) {
 			return getOptionAs<T>(name);
-		}
-		template <typename T> const T         getOptionAs(const char* name) {
+		}*/
+		template <typename T> T         getOptionAs(const char* name);
+		/*
+		{
 			const char* value = getOption(name);
 			return castByNative<T>(value);
 		}
-
+		*/
 		template <typename T> const T         getOptionAs(string name) { return getOptionAs<T>(name.c_str()); }
 		template <typename T> const vector<T> getOptionValuesAs(string name) { return getOptionValuesAs<T>(name.c_str()); };
 		template <typename T> const vector<T> getOptionValuesAs(const char* name);
@@ -143,30 +144,27 @@ namespace cmdline {
 		vector<const char*>  getDefinitionValues(const char* name);
 		vector<const char*>  getDefinitionValues(string name);
 	protected:
-		static CmdLine pGetInstance(int argc, char** argv, Parameters parms, bool sensitive = false, bool strict = false);
-		CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
-		CmdLine(int argc, char **argv, Parameters parms, bool sensitive) : CmdLine(argc, argv, parms, sensitive, false) {}
-	private:
-		#include "templates.hpp"
-		// template <typename T> T castByNative(const char* value);
+		static CmdLine *pGetInstance(int argc, const char** argv, Parameters parms, bool sensitive = false, bool strict = false);
+		CmdLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict);
+		CmdLine(int argc, const char **argv, Parameters parms, bool sensitive);
 	};
 	class CmdLineI : public CmdLine {
 	public:
-		CmdLineI(int argc, char** argv, Parameters parms);
-		CmdLineI(int argc, char** argv, cmdline::Parameters parms, bool strict);
-		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+		CmdLineI(int argc, const char** argv, Parameters parms);
+		CmdLineI(int argc, const char** argv, cmdline::Parameters parms, bool strict);
+		static CmdLine* getInstance(int argc, const char** argv, Parameters parms);
 		~CmdLineI();
 	};
 	class CmdLineS : public CmdLine {
 	public:
-		CmdLineS(int argc, char** argv, Parameters parms);
-		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+		CmdLineS(int argc, const char** argv, Parameters parms);
+		static CmdLine* getInstance(int argc, const char** argv, Parameters parms);
 	};
 	class CmdLineIS : public CmdLineI {
 	public:
-		CmdLineIS(int argc, char** argv, Parameters parms);
+		CmdLineIS(int argc, const char** argv, Parameters parms);
 		~CmdLineIS();
-		static CmdLine getInstance(int argc, char** argv, Parameters parms);
+		static CmdLine* getInstance(int argc, const char** argv, Parameters parms);
 	};
 
 }

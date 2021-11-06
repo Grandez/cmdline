@@ -1,0 +1,109 @@
+.TH "Types" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Types \- Tipos definidos para C++
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
+.br
+.RI "Define el tipo de dato esperado del parametro\&. "
+.ti -1c
+.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP }"
+.br
+.RI "Indicates the origin of thelast value of parameter\&. "
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Conjunto de tipos para simplificar la codificacion 
+.SH "Documentación de las enumeraciones"
+.PP 
+.SS "enum class \fBSource\fP\fC [strong]\fP"
+
+.PP
+Indicates the origin of thelast value of parameter\&. 
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fIDEFAULT \fP\fP
+Default value 
+.TP
+\fB\fIENV \fP\fP
+Value has been set in the environment 
+.TP
+\fB\fICODE \fP\fP
+Value has been update programatically 
+.TP
+\fB\fIAUTO \fP\fP
+\fBReserved\fP Hide parameter from queries 
+.PP
+Definición en la línea \fB19\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "enum class \fBType\fP\fC [strong]\fP"
+
+.PP
+Define el tipo de dato esperado del parametro\&. Define the expected type of the string passed as parameter\&.
+.PP
+It will be used to check the validity of the input 
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fISTRING \fP\fP
+string (valor por defecto) 
+.TP
+\fB\fICHAR \fP\fP
+const char * 
+.br
+ 
+.TP
+\fB\fIBOOL \fP\fP
+boolean 
+.br
+ 
+.TP
+\fB\fINUMBER \fP\fP
+Whole number (long/int) 
+.TP
+\fB\fIDECIMAL \fP\fP
+Decimal number (double/float) 
+.TP
+\fB\fILONGNUMBER \fP\fP
+Whole number (long long/long int) 
+.TP
+\fB\fILONGDECIMAL \fP\fP
+Whole number (long double/long float) 
+.TP
+\fB\fIDATE \fP\fP
+A date formatted as locale\&. Example: \fCdd/mm/yy\fP 
+.TP
+\fB\fITIME \fP\fP
+A time in format \fChh:mm:ss\fP 
+.TP
+\fB\fIDATETIME \fP\fP
+An string like \fCyyyy/mm/dd[ -]hh:mm:ss\fP Note that using space requires quote the parameter 
+.TP
+\fB\fITMS \fP\fP
+An string like \fCyyyy/mm/dd-hh:mm:ss\&.nnnnnn\fP Note that spaces is not allowed 
+.TP
+\fB\fIDIR \fP\fP
+A possibly correct path 
+.TP
+\fB\fIDIR_EXISTS \fP\fP
+An existing path before execution 
+.TP
+\fB\fIFILE \fP\fP
+A possibly correct file name 
+.TP
+\fB\fIFILE_EXISTS \fP\fP
+An existing file before execution 
+.PP
+Definición en la línea \fB13\fP del archivo \fBtypes\&.hpp\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

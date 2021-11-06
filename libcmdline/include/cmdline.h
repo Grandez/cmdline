@@ -24,7 +24,7 @@ typedef struct struct_cmdline {
 #ifdef __cplusplus
 extern "C" {
 #endif
-	CmdLine *cmdline_create(int argc, char **argv, ParmDef parms[]);
+	CmdLine *cmdline_create(int argc, const char **argv, ParmDef parms[]);
 
 	void cmdline_delete(CmdLine *cmdline);
 

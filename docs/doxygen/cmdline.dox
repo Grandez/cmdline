@@ -1,0 +1,4 @@
+/** \class CmdLine
+    \brief Singleton encargado de mantener la informacion pasada por la linea de comandos
+    
+*/

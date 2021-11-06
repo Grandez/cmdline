@@ -1,4 +1,4 @@
-.TH "testing::internal::edit_distance" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "testing::internal::edit_distance" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,14 +6,14 @@ testing::internal::edit_distance
 .SH SYNOPSIS
 .br
 .PP
-.SS "Enumerations"
+.SS "Enumeraciones"
 
 .in +1c
 .ti -1c
 .RI "enum \fBEditType\fP { \fBkMatch\fP, \fBkAdd\fP, \fBkRemove\fP, \fBkReplace\fP }"
 .br
 .in -1c
-.SS "Functions"
+.SS "Funciones"
 
 .in +1c
 .ti -1c
@@ -26,12 +26,12 @@ testing::internal::edit_distance
 .RI "\fBGTEST_API_\fP std::string \fBCreateUnifiedDiff\fP (const std::vector< std::string > &left, const std::vector< std::string > &right, size_t context=2)"
 .br
 .in -1c
-.SH "Enumeration Type Documentation"
+.SH "Documentación de las enumeraciones"
 .PP 
 .SS "enum \fBtesting::internal::edit_distance::EditType\fP"
 
 .PP
-\fBEnumerator\fP
+\fBValores de enumeraciones\fP
 .in +1c
 .TP
 \fB\fIkMatch \fP\fP
@@ -42,8 +42,8 @@ testing::internal::edit_distance
 .TP
 \fB\fIkReplace \fP\fP
 .PP
-Definition at line \fB168\fP of file \fBgtest\-internal\&.h\fP\&.
-.SH "Function Documentation"
+Definición en la línea \fB168\fP del archivo \fBgtest\-internal\&.h\fP\&.
+.SH "Documentación de las funciones"
 .PP 
 .SS "\fBGTEST_API_\fP std::vector< \fBEditType\fP > testing::internal::edit_distance::CalculateOptimalEdits (const std::vector< size_t > & left, const std::vector< size_t > & right)"
 
@@ -51,6 +51,6 @@ Definition at line \fB168\fP of file \fBgtest\-internal\&.h\fP\&.
 
 .SS "\fBGTEST_API_\fP std::string testing::internal::edit_distance::CreateUnifiedDiff (const std::vector< std::string > & left, const std::vector< std::string > & right, size_t context = \fC2\fP)"
 
-.SH "Author"
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

@@ -2,8 +2,16 @@
 
 #include <vector>
 #include "types.hpp"
+#include "validations.hpp"
+#include "cmdline_exceptions.hpp"
+
 #ifndef __CLASS_CMDLINE__
 #define __CLASS_CMDLINE__
+
+#ifdef _WIN32
+#pragma warning( disable : 4244)
+#endif
+
 namespace cmdline {
 	/**
 	 * Generic Class to define defined flags and options
@@ -64,7 +72,8 @@ namespace cmdline {
 		ParmOption(const char* name, const char* value) : Parm(name, value) {};
 		ParmOption(const char* name, Type type) : Parm(name, NULL, type) {}
 		ParmOption(const char* name, const char* value, bool multiple) : Parm(name, value, Type::STRING, multiple) {};
-		ParmOption(const char* name, const char* value, Type type, bool multiple = false) : Parm(name, value, type, multiple) {};
+		ParmOption(const char* name, Type type, bool multiple) : Parm(name, NULL, type, multiple) {};
+		ParmOption(const char* name, const char* value, Type type,  bool multiple = false) : Parm(name, value, type, multiple) {};
 	};
 	typedef std::vector<Parm>                 Parameters;
 
@@ -73,8 +82,8 @@ namespace cmdline {
 		CmdLine() {};
 		CmdLine(int argc, char **argv, Parameters parms); 
 		~CmdLine(); 
-		static CmdLine getInstance(int argc, char** argv, Parameters parms = Parameters());
-		static CmdLine getInstance(Parameters parms, int argc, char** argv);
+		static CmdLine *getInstance(int argc, const char** argv, Parameters parms = Parameters());
+		static CmdLine *getInstance(Parameters parms, int argc, const char** argv);
 		static void freeInstance();  // Just for test
 		// Arguments
 		vector<const char*> args();
@@ -86,6 +95,7 @@ namespace cmdline {
 		Flags getCurrentFlags(bool all = true);
 
 		// Options control
+		Type                 getType(const char* name); 
 		bool                 hasOption(const char* name);
 		bool                 hasOption(string name);
 		bool                 isOptionMultiple(const char* name);
@@ -97,16 +107,19 @@ namespace cmdline {
 
 		int       getOptionNumValues(const char* name);
 		int       getOptionNumValues(string name);
-		Options   getDefaultOptions();
+		unordered_map<string,string>   getDefaultOptions();
 		Options   getCurrentOptions();
-
+		/*
 		template <typename T> const T         getOptionAs(T t, const char* name) {
 			return getOptionAs<T>(name);
-		}
-		template <typename T> const T         getOptionAs(const char* name) {
+		}*/
+		template <typename T> T         getOptionAs(const char* name);
+		/*
+		{
 			const char* value = getOption(name);
 			return castByNative<T>(value);
 		}
+		*/
 		template <typename T> const T         getOptionAs(string name) { return getOptionAs<T>(name.c_str()); }
 		template <typename T> const vector<T> getOptionValuesAs(string name) { return getOptionValuesAs<T>(name.c_str()); };
 		template <typename T> const vector<T> getOptionValuesAs(const char* name);
@@ -134,10 +147,12 @@ namespace cmdline {
 		vector<const char*>  getDefinitionValues(const char* name);
 		vector<const char*>  getDefinitionValues(string name);
 	protected:
-		static CmdLine pGetInstance(int argc, char** argv, Parameters parms, bool sensitive = false, bool strict = false);
+		static CmdLine *pGetInstance(int argc, char** argv, Parameters parms, bool sensitive = false, bool strict = false);
 		CmdLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict);
+		CmdLine(int argc, char **argv, Parameters parms, bool sensitive) : CmdLine(argc, argv, parms, sensitive, false) {}
 	private:
-		template <typename T> T castByNative(const char* value);
+		#include "templates.hpp"
+		// template <typename T> T castByNative(const char* value);
 	};
 	class CmdLineI : public CmdLine {
 	public:

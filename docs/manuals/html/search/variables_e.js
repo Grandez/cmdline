@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['singleton_5f_0',['singleton_',['../d4/d41/namespacecmdline.html#aff88b407f66f95d268ee8b3f56e16820',1,'cmdline']]],
-  ['source_1',['source',['../d8/de6/class__cmdline_1_1_argument.html#a30e3e62e1e9c0a652107aa27f1415d3a',1,'_cmdline::Argument']]],
-  ['string_2',['string',['../d0/da7/namespacetesting_1_1internal.html#a5ca8a348395a6145775c1a2334e21889',1,'testing::internal']]]
+  ['value_0',['value',['../d9/dff/classcmdline_1_1_parm.html#ae2eb554e0a68f1267ee0ea1878951e83',1,'cmdline::Parm::value()'],['../d9/d97/struct___parm_def.html#ae1c27b01c4773f6e17a3d91305091095',1,'_ParmDef::value()'],['../d3/ddc/struct___flag.html#a250f7e7b14d0fda2f4ba1c0e912b5466',1,'_Flag::value()']]],
+  ['values_1',['values',['../d2/df3/struct___parameter.html#a1af3154e59e98a2363606a5f5bd32c10',1,'_Parameter::values()'],['../d8/de6/class__cmdline_1_1_argument.html#afde8a2e46c353938646805cecb7f28dc',1,'_cmdline::Argument::values()']]]
 ];

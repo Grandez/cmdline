@@ -1,12 +1,13 @@
-.TH "cmdline" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "cmdline" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline
+cmdline \- Public namespace to avoid naming mangling\&.  
+
 .SH SYNOPSIS
 .br
 .PP
-.SS "Classes"
+.SS "Clases"
 
 .in +1c
 .ti -1c
@@ -43,6 +44,9 @@ cmdline
 .RI "class \fBHelpDetailedRequested\fP"
 .br
 .ti -1c
+.RI "class \fBHelpException\fP"
+.br
+.ti -1c
 .RI "class \fBHelpRequested\fP"
 .br
 .ti -1c
@@ -55,11 +59,11 @@ cmdline
 .RI "class \fBParmOption\fP"
 .br
 .in -1c
-.SS "Typedefs"
+.SS "typedefs"
 
 .in +1c
 .ti -1c
-.RI "typedef vector< \fBParm\fP > \fBParameters\fP"
+.RI "typedef std::vector< \fBParm\fP > \fBParameters\fP"
 .br
 .ti -1c
 .RI "using \fBTYPE_STRING\fP = std::string"
@@ -104,31 +108,36 @@ cmdline
 .RI "using \fBTYPE_TMS\fP = char *"
 .br
 .ti -1c
-.RI "using \fBTYPE_DIR\fP = std::filesystem::path"
+.RI "using \fBTYPE_DIR\fP = filesystem::path"
 .br
 .ti -1c
-.RI "using \fBTYPE_FILE\fP = std::filesystem::path"
+.RI "using \fBTYPE_FILE\fP = filesystem::path"
 .br
 .ti -1c
 .RI "using \fBFlags\fP = std::unordered_map< std::string, bool >"
 .br
 .ti -1c
-.RI "using \fBOptions\fP = std::unordered_map< std::string, std::string >"
+.RI "using \fBOptions\fP = std::unordered_map< std::string, vector< std::string > >"
 .br
 .in -1c
-.SS "Enumerations"
+.SS "Enumeraciones"
 
 .in +1c
 .ti -1c
-.RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP }"
+.RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
 .br
+.RI "Define el tipo de dato esperado del parametro\&. "
 .ti -1c
 .RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP }"
 .br
+.RI "Indicates the origin of thelast value of parameter\&. "
 .in -1c
-.SS "Functions"
+.SS "Funciones"
 
 .in +1c
+.ti -1c
+.RI "template<typename T > const vector< T > \fBgetOptionValuesAs\fP (const char *name)"
+.br
 .ti -1c
 .RI "void \fB_cleanClass\fP ()"
 .br
@@ -140,185 +149,142 @@ cmdline
 .RI "\fBCmdLine\fP * \fBsingleton_\fP = nullptr"
 .br
 .ti -1c
+.RI "\fB_cmdline::CommandLine\fP * \fB_commandLine\fP"
+.br
+.ti -1c
 .RI "char ** \fB_argv\fP = nullptr"
 .br
 .ti -1c
 .RI "int \fB_nargc\fP"
 .br
 .ti -1c
-.RI "\fBParameters\fP \fB_parms\fP"
+.RI "Parameters \fB_parms\fP"
 .br
 .in -1c
-.SH "Detailed Description"
+.SH "Descripción detallada"
 .PP 
+Public namespace to avoid naming mangling\&. 
+
 Base class for cmdline exceptions
 .PP
 As library process argument from command line it inherits from invalid_argument
 .PP
-\fBParameters\fP
+\fBParámetros\fP
 .RS 4
 \fImsg\fP Text to show 
 .RE
 .PP
 
-.SH "Typedef Documentation"
+.SH "Documentación de los 'typedefs'"
 .PP 
-.SS "using \fBcmdline::Flags\fP = typedef std::unordered_map<std::string, bool>"
+.SS "using Flags =  std::unordered_map<std::string, bool>"
 
 .PP
-Definition at line \fB28\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::Options\fP = typedef std::unordered_map<std::string, std::string>"
+Definición en la línea \fB38\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using Options =  std::unordered_map<std::string, vector<std::string> >"
 
 .PP
-Definition at line \fB29\fP of file \fBtypes\&.h\fP\&.
-.SS "typedef vector<\fBParm\fP> \fBcmdline::Parameters\fP"
+Definición en la línea \fB39\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "typedef std::vector<\fBParm\fP> Parameters"
 
 .PP
-Definition at line \fB53\fP of file \fBcmdline\&.hpp\fP\&.
-.SS "using \fBcmdline::TYPE_BOOL\fP = typedef bool"
+Definición en la línea \fB77\fP del archivo \fBcmdline\&.hpp\fP\&.
+.SS "using TYPE_BOOL =  bool"
 
 .PP
-Definition at line \fB12\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_DATE\fP = typedef std::tm"
+Definición en la línea \fB22\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_DATE =  std::tm"
 
 .PP
-Definition at line \fB21\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_DATETIME\fP = typedef std::tm"
+Definición en la línea \fB31\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_DATETIME =  std::tm"
 
 .PP
-Definition at line \fB23\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_DECIMAL\fP = typedef float"
+Definición en la línea \fB33\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_DECIMAL =  float"
 
 .PP
-Definition at line \fB16\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_DIR\fP = typedef std::filesystem::path"
+Definición en la línea \fB26\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_DIR =  filesystem::path"
 
 .PP
-Definition at line \fB25\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_DOUBLE\fP = typedef double"
+Definición en la línea \fB35\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_DOUBLE =  double"
 
 .PP
-Definition at line \fB18\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_FILE\fP = typedef std::filesystem::path"
+Definición en la línea \fB28\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_FILE =  filesystem::path"
 
 .PP
-Definition at line \fB26\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_FLOAT\fP = typedef float"
+Definición en la línea \fB36\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_FLOAT =  float"
 
 .PP
-Definition at line \fB17\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_INT\fP = typedef int"
+Definición en la línea \fB27\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_INT =  int"
 
 .PP
-Definition at line \fB15\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_LONG\fP = typedef long"
+Definición en la línea \fB25\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_LONG =  long"
 
 .PP
-Definition at line \fB14\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_LONGDECIMAL\fP = typedef float"
+Definición en la línea \fB24\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_LONGDECIMAL =  float"
 
 .PP
-Definition at line \fB20\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_LONGNUMBER\fP = typedef long long"
+Definición en la línea \fB30\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_LONGNUMBER =  long long"
 
 .PP
-Definition at line \fB19\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_NUMBER\fP = typedef long"
+Definición en la línea \fB29\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_NUMBER =  long"
 
 .PP
-Definition at line \fB13\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_STRING\fP = typedef std::string"
+Definición en la línea \fB23\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_STRING =  std::string"
 
 .PP
-Definition at line \fB11\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_TIME\fP = typedef std::tm"
+Definición en la línea \fB21\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_TIME =  std::tm"
 
 .PP
-Definition at line \fB22\fP of file \fBtypes\&.h\fP\&.
-.SS "using \fBcmdline::TYPE_TMS\fP = typedef char *"
+Definición en la línea \fB32\fP del archivo \fBtypes\&.hpp\fP\&.
+.SS "using TYPE_TMS =  char*"
 
 .PP
-Definition at line \fB24\fP of file \fBtypes\&.h\fP\&.
-.SH "Enumeration Type Documentation"
-.PP 
-.SS "enum class \fBcmdline::Source\fP\fC [strong]\fP"
-
-.PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\fB\fIDEFAULT \fP\fP
-.TP
-\fB\fIENV \fP\fP
-.TP
-\fB\fICMDLINE \fP\fP
-.TP
-\fB\fICODE \fP\fP
-.TP
-\fB\fIAUTO \fP\fP
-.PP
-Definition at line \fB9\fP of file \fBtypes\&.h\fP\&.
-.SS "enum class \fBcmdline::Type\fP\fC [strong]\fP"
-
-.PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\fB\fISTRING \fP\fP
-.TP
-\fB\fICHAR \fP\fP
-.TP
-\fB\fIBOOL \fP\fP
-.TP
-\fB\fINUMBER \fP\fP
-.TP
-\fB\fIDECIMAL \fP\fP
-.TP
-\fB\fILONGNUMBER \fP\fP
-.TP
-\fB\fILONGDECIMAL \fP\fP
-.TP
-\fB\fIDATE \fP\fP
-.TP
-\fB\fITIME \fP\fP
-.TP
-\fB\fIDATETIME \fP\fP
-.TP
-\fB\fITMS \fP\fP
-.TP
-\fB\fIDIR \fP\fP
-.TP
-\fB\fIDIR_EXISTS \fP\fP
-.TP
-\fB\fIFILE \fP\fP
-.TP
-\fB\fIFILE_EXISTS \fP\fP
-.PP
-Definition at line \fB8\fP of file \fBtypes\&.h\fP\&.
-.SH "Function Documentation"
+Definición en la línea \fB34\fP del archivo \fBtypes\&.hpp\fP\&.
+.SH "Documentación de las funciones"
 .PP 
 .SS "void cmdline::_cleanClass ()"
 
 .PP
-Definition at line \fB14\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SH "Variable Documentation"
+Definición en la línea \fB14\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SS "const vector< T > cmdline::getOptionValuesAs (const char * name)"
+
+.PP
+Definición en la línea \fB63\fP del archivo \fBcmdline\&.cpp\fP\&.
+.SH "Documentación de las variables"
 .PP 
-.SS "char** cmdline::_argv = nullptr"
+.SS "char** _argv = nullptr"
 
 .PP
-Definition at line \fB10\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SS "int cmdline::_nargc"
+Definición en la línea \fB10\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SS "\fB_cmdline::CommandLine\fP* _commandLine"
 
 .PP
-Definition at line \fB11\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SS "\fBParameters\fP cmdline::_parms"
+Definición en la línea \fB15\fP del archivo \fBcmdline\&.cpp\fP\&.
+.SS "int _nargc"
 
 .PP
-Definition at line \fB12\fP of file \fBcmdline_flavors\&.cpp\fP\&.
-.SS "\fBCmdLine\fP* cmdline::singleton_ = nullptr"
+Definición en la línea \fB11\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SS "Parameters _parms"
 
 .PP
-Definition at line \fB11\fP of file \fBcmdline\&.cpp\fP\&.
-.SH "Author"
+Definición en la línea \fB12\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
+.SS "\fBCmdLine\fP* singleton_ = nullptr"
+
+.PP
+Definición en la línea \fB12\fP del archivo \fBcmdline\&.cpp\fP\&.
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

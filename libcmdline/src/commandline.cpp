@@ -14,8 +14,8 @@ using namespace std;
 namespace _cmdline {
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
-
-	CommandLine::CommandLine(int argc, char** argv, Parameters parms, bool sensitive, bool strict) {
+    const char *programName = nullptr;
+	CommandLine::CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
 		std::cout << "Crea CommandLine\n";
 		this->sensitive = sensitive;
 		this->strict = strict;
@@ -23,7 +23,6 @@ namespace _cmdline {
 		postInit();
 		parse(argc, argv);
 	}
-
 	CommandLine::~CommandLine() {
 		std::cout << "Delete CommandLine\n";
 	}
@@ -59,12 +58,12 @@ namespace _cmdline {
 	const char* CommandLine::getOption(const char* name) {
 		return getValue(&options, name);
 	}
-
-	Options  CommandLine::getDefaultOptions() {
+	unordered_map<string,string>  CommandLine::getDefaultOptions() {
 		return getOptionsValue(true);
 	}
 	Options CommandLine::getCurrentOptions() {
-		return getOptionsValue(false);
+//		return getOptionsValues(false);
+		return Options();
 	}
 	bool            CommandLine::hasDefinition(const char* name) {
 		Argument* opt = findPointer(&defines, name);
@@ -89,23 +88,27 @@ namespace _cmdline {
 		}
         return opts;
 	}
-	Options CommandLine::getOptionsValue(bool def) {
-		Options act;
-/*
+	unordered_map<string, string> CommandLine::getOptionsValue(bool def) {
+		unordered_map<string, string> act;
 		for (auto it : options) {
-			string str((def ? it.second.defValue : it.second.getValue()));
-			vector<string> v;
-			v.push_back(def ? it.second.defValue : it.second.getValue());
-			if (it.second.source != Source::AUTO) act.emplace(it.second.name, v);
+			act.emplace(it.first, it.second.getValue());
+//			string str((def ? it.second.defValue : it.second.getValue()));
+//			vector<string> v;
+//			v.push_back(def ? it.second.defValue : it.second.getValue());
+//			if (it.second.source != Source::AUTO) act.emplace(it.second.name, v);
 		}
-*/
 		return act;
 	}
-
+	cmdline::Type CommandLine::getType(const char *name) {
+		Argument* opt = options.find(name);
+		return opt->type;
+	}
+	
 	// /////////////////////////////////////////////////////////////
 	// PRIVATES
 	// /////////////////////////////////////////////////////////////
-	void CommandLine::parse(int argc, char** argv) {
+	void CommandLine::parse(int argc, const char** argv) {
+		programName = argv[0];
 		char c;
 		char szOpt[64] = "";
 		std::string in;
@@ -136,8 +139,8 @@ namespace _cmdline {
 				if (prev != NULL) prev = addValueToOption(argv[i], prev);
 			}
 		}
-		if (hasFlag("HELP")) throw HelpDetailedRequested();
-		if (hasFlag("help")) throw HelpRequested();
+		if (hasFlag("HELP")) throw HelpDetailedRequested(programName, getDefaultFlags(false), getDefaultOptions());
+		if (hasFlag("help")) throw HelpSimpleRequested(programName, getDefaultFlags(false), getDefaultOptions());
 	}
 	char* CommandLine::updateOption(const char* option, char* prev) {
 		size_t pos = std::string(option).find("=");

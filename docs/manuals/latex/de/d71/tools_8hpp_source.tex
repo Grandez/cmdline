@@ -1,0 +1,35 @@
+\hypertarget{tools_8hpp_source}{}\doxysection{tools.\+hpp}
+\label{tools_8hpp_source}\index{tools.hpp@{tools.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}parameter\_tree.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}msg\_locale.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00007}00007 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00010}00010 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00011}00011 \textcolor{preprocessor}{   \#define chdir(a) \_chdir(a)}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00012}00012 \textcolor{preprocessor}{   \#define getcwd(a, b) \_getcwd(a, b)}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00013}00013 \textcolor{preprocessor}{   \#define strdup(a) \_cmdline::myStrdup(a)}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00014}00014 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00016}00016     \textcolor{keywordtype}{void}  add2tree(ParameterTree* root[], \textcolor{keyword}{const} \textcolor{keywordtype}{char}* word);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00017}00017     \textcolor{keywordtype}{char}* makeChar   (std::string str);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00018}00018     \textcolor{keywordtype}{bool}  makeBoolean(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00019}00019     \textcolor{keywordtype}{bool}  makeBoolean(std::string value);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00020}00020     \textcolor{keywordtype}{char}* makeUpper(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* str);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00021}00021     \textcolor{keywordtype}{char}* strUpper(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* str);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00023}00023     vector<std::string> splitArgument(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00024}00024     vector<std::string> tokenize(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* src, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pat);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00025}00025     vector<int>         tokenizeNumber(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* src, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pat);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00026}00026     \textcolor{keywordtype}{char}*               myStrdup(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s, \textcolor{keywordtype}{int} size); }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00027}00027     \textcolor{keywordtype}{char}*               myStrdup(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s);           }
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00028}00028     \textcolor{keywordtype}{void}                defaultDate(\textcolor{keywordtype}{char}* aux);}
+\DoxyCodeLine{\Hypertarget{tools_8hpp_source_l00029}00029 \}}
+
+\end{DoxyCode}

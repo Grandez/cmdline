@@ -1,5 +1,5 @@
-<map id="cmdline/include/parameter_tree.hpp" name="cmdline/include/parameter_tree.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="12,95,67,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,95,201,121"/>
+<map id="libcmdline/include/parameter_tree.hpp" name="libcmdline/include/parameter_tree.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="17,5,155,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,60,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="84,95,195,121"/>
 </map>

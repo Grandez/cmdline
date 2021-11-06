@@ -18,17 +18,17 @@ namespace cmdline {
 	CmdLineI::~CmdLineI() {
 		_cleanClass();
 	}
-	CmdLineI::CmdLineI(int argc, char** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, true) {}
-	CmdLineI::CmdLineI(int argc, char** argv, cmdline::Parameters parms, bool strict) : CmdLine(argc, argv, parms, true, strict) {}
-    CmdLine CmdLineI::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
+	CmdLineI::CmdLineI(int argc, const char** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, true) {}
+	CmdLineI::CmdLineI(int argc, const char** argv, cmdline::Parameters parms, bool strict) : CmdLine(argc, argv, parms, true, strict) {}
+    CmdLine* CmdLineI::getInstance(int argc,  const char** argv, cmdline::Parameters parms) {
 		return CmdLine::pGetInstance(argc, argv, parms, true);
 	}
-	CmdLineS::CmdLineS(int argc, char** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, false, true) {}
-	CmdLineIS::CmdLineIS(int argc, char** argv, cmdline::Parameters parms) : CmdLineI(argc, argv, parms, true) {}
-	CmdLine CmdLineS::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
+	CmdLineS::CmdLineS(int argc, const char** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, false, true) {}
+	CmdLineIS::CmdLineIS(int argc, const char** argv, cmdline::Parameters parms) : CmdLineI(argc, argv, parms, true) {}
+	CmdLine* CmdLineS::getInstance(int argc,  const char** argv, cmdline::Parameters parms) {
 		return CmdLine::pGetInstance(argc, argv, parms, false, true);
 	}
-	CmdLine CmdLineIS::getInstance(int argc,  char** argv, cmdline::Parameters parms) {
+	CmdLine* CmdLineIS::getInstance(int argc,  const char** argv, cmdline::Parameters parms) {
 		return CmdLine::pGetInstance(argc, argv, parms, true, true);
 	}
 	CmdLineIS::~CmdLineIS() {

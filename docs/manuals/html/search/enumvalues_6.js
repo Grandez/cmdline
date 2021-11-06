@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['gtest_5ferror_0',['GTEST_ERROR',['../d0/da7/namespacetesting_1_1internal.html#aa6255ef3b023c5b4e1a2198d887fb977a651e9cd2a904e0c8210536271b875f75',1,'testing::internal']]],
-  ['gtest_5ffatal_1',['GTEST_FATAL',['../d0/da7/namespacetesting_1_1internal.html#aa6255ef3b023c5b4e1a2198d887fb977a75063567740f6bf7da419b1b9197b12e',1,'testing::internal']]],
-  ['gtest_5finfo_2',['GTEST_INFO',['../d0/da7/namespacetesting_1_1internal.html#aa6255ef3b023c5b4e1a2198d887fb977aff315e0913fcda86fe4de882bf5e33e9',1,'testing::internal']]],
-  ['gtest_5fwarning_3',['GTEST_WARNING',['../d0/da7/namespacetesting_1_1internal.html#aa6255ef3b023c5b4e1a2198d887fb977a7a051bc2794f15a4bf0eab40562a304c',1,'testing::internal']]]
+  ['longdecimal_0',['LONGDECIMAL',['../df/d4e/group___types.html#gga1d1cfd8ffb84e947f82999c682b666a7a106908fa230adbdbfaf58fc9bbf04a5c',1,'cmdline']]],
+  ['longnumber_1',['LONGNUMBER',['../df/d4e/group___types.html#gga1d1cfd8ffb84e947f82999c682b666a7a6fa7d57eeaaac1f2a2971bf231783b81',1,'cmdline']]]
 ];

@@ -1,12 +1,13 @@
-\hypertarget{tools_8cpp}{}\doxysection{cmdline/src/tools.cpp File Reference}
-\label{tools_8cpp}\index{cmdline/src/tools.cpp@{cmdline/src/tools.cpp}}
+\hypertarget{tools_8cpp}{}\doxysection{Referencia del Archivo libcmdline/src/tools.cpp}
+\label{tools_8cpp}\index{libcmdline/src/tools.cpp@{libcmdline/src/tools.cpp}}
 {\ttfamily \#include $<$regex$>$}\newline
 {\ttfamily \#include $<$ctime$>$}\newline
 {\ttfamily \#include $<$locale$>$}\newline
-{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include \char`\"{}tools.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parameter\+\_\+tree.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cmdline\+\_\+exceptions.\+hpp\char`\"{}}\newline
-Include dependency graph for tools.\+cpp\+:
-\nopagebreak
+Dependencia gráfica adjunta para tools.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,7 +19,12 @@ Include dependency graph for tools.\+cpp\+:
 \item 
 namespace \mbox{\hyperlink{namespace__cmdline}{\+\_\+cmdline}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tools_8cpp_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
 Parameter\+Tree $\ast$ \mbox{\hyperlink{namespace__cmdline_af790cb1bc53e9c5b47e30f7093de5a72}{\+\_\+cmdline\+::create\+Tree}} (const char $\ast$word)
@@ -32,6 +38,8 @@ char $\ast$ \mbox{\hyperlink{namespace__cmdline_a42a90c303b9f0517b033719749ea245
 bool \mbox{\hyperlink{namespace__cmdline_ac4e01eeebef63139e9f3b3e028d67c9b}{\+\_\+cmdline\+::make\+Boolean}} (const char $\ast$value)
 \item 
 bool \mbox{\hyperlink{namespace__cmdline_a9a96acb82031d2a0396cf51c73ddc08a}{\+\_\+cmdline\+::make\+Boolean}} (string value)
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_a70377767725c817586a2b575e0fdac7e}{\+\_\+cmdline\+::make\+Upper}} (const char $\ast$str)
 \item 
 vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace__cmdline_a73c00c909fb29335362ef07259e967df}{\+\_\+cmdline\+::split\+Argument}} (const char $\ast$parm)
 \item 
@@ -47,3 +55,21 @@ char $\ast$ \mbox{\hyperlink{namespace__cmdline_a9744d157661e45183a67f5b78b2760e
 \item 
 void \mbox{\hyperlink{namespace__cmdline_a1546b166647f2d3b462cf683185fd80d}{\+\_\+cmdline\+::default\+Date}} (char $\ast$aux)
 \end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{namespace__cmdline_aecf9a3be04888c0d13fda7a0449ae0c1}{\+\_\+cmdline\+::\+\_\+upper}} \mbox{[}64\mbox{]} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{tools_8cpp_af08ec37a8c99d747fb60fa15bc28678b}\label{tools_8cpp_af08ec37a8c99d747fb60fa15bc28678b}} 
+\index{tools.cpp@{tools.cpp}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
+\index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!tools.cpp@{tools.cpp}}
+\doxysubsubsection{\texorpdfstring{\_CRT\_SECURE\_NO\_WARNINGS}{\_CRT\_SECURE\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \#define \+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}
+
+
+
+Definición en la línea \mbox{\hyperlink{tools_8cpp_source_l00001}{1}} del archivo \mbox{\hyperlink{tools_8cpp_source}{tools.\+cpp}}.
+

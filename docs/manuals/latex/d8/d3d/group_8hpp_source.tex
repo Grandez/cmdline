@@ -1,33 +1,33 @@
 \hypertarget{group_8hpp_source}{}\doxysection{group.\+hpp}
-\label{group_8hpp_source}\index{cmdline/include/group.hpp@{cmdline/include/group.hpp}}
-\mbox{\hyperlink{group_8hpp}{Go to the documentation of this file.}}
+\label{group_8hpp_source}\index{group.hpp@{group.hpp}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00002}00002 \textcolor{preprocessor}{\#include <iostream>}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <unordered\_map>}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <iterator>}}
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00005}00005 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00005}00005 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{argument_8hpp}{argument.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}argument.hpp"{}}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00008}00008 }
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00010}\mbox{\hyperlink{class__cmdline_1_1_group}{00010}}     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_group}{Group}} : \textcolor{keyword}{public} unordered\_map<string, Argument> \{}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00011}00011     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00012}\mbox{\hyperlink{class__cmdline_1_1_group_a5c81d62e1c486374fd3b0bc0e22fd33d}{00012}}         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& \mbox{\hyperlink{class__cmdline_1_1_group_a5c81d62e1c486374fd3b0bc0e22fd33d}{add}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg) \{}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00012}00012         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& add(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg) \{}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00013}00013             insert\_or\_assign(name, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(arg));}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00014}00014             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00015}00015         \}}
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00016}\mbox{\hyperlink{class__cmdline_1_1_group_a224188682cd5078994766d5bd3d8118a}{00016}}         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& \mbox{\hyperlink{class__cmdline_1_1_group_a224188682cd5078994766d5bd3d8118a}{add}}(\textcolor{keywordtype}{string} name, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}* arg) \{}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00016}00016         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& add(\textcolor{keywordtype}{string} name, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}* arg) \{}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00017}00017             insert\_or\_assign(name.c\_str(), \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(arg));}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00018}00018             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00019}00019         \}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00021}\mbox{\hyperlink{class__cmdline_1_1_group_a112626a58e7192239e7dd903a3c29a95}{00021}}         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& \mbox{\hyperlink{class__cmdline_1_1_group_a112626a58e7192239e7dd903a3c29a95}{add}}(\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg) \{}
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00022}00022             insert\_or\_assign(arg-\/>\mbox{\hyperlink{class__cmdline_1_1_argument_a347ac9b53282620bd1ef7629da84c5f7}{name}}, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(arg));}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00021}00021         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& add(\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg) \{}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00022}00022             insert\_or\_assign(arg-\/>name, \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(arg));}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00023}00023             cout << \textcolor{stringliteral}{"{}para"{}} << size() << endl;}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00024}00024             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00025}00025         \}}
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00026}\mbox{\hyperlink{class__cmdline_1_1_group_acd4bf471f7fc8bd99a57b7ede073dd19}{00026}}         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}* \mbox{\hyperlink{class__cmdline_1_1_group_acd4bf471f7fc8bd99a57b7ede073dd19}{find}}(\textcolor{keywordtype}{string} what) \{}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00026}00026         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}* find(\textcolor{keywordtype}{string} what) \{}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00027}00027             \textcolor{keywordflow}{try} \{}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00028}00028                 \textcolor{keywordflow}{return} \&(at(what));}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00029}00029             \}}
@@ -35,7 +35,7 @@
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00031}00031                 \textcolor{keywordflow}{return} (\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}*) \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00032}00032             \}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00033}00033         \}}
-\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00034}\mbox{\hyperlink{class__cmdline_1_1_group_aa845cd55507c7c0a92dea438e8bc7484}{00034}}         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}* \mbox{\hyperlink{class__cmdline_1_1_group_aa845cd55507c7c0a92dea438e8bc7484}{operator[]}}(\textcolor{keywordtype}{string} what) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class__cmdline_1_1_group_acd4bf471f7fc8bd99a57b7ede073dd19}{find}}(what); \}}
+\DoxyCodeLine{\Hypertarget{group_8hpp_source_l00034}00034         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}* operator[](\textcolor{keywordtype}{string} what) \{ \textcolor{keywordflow}{return} find(what); \}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00035}00035     \};}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00036}00036 \}}
 \DoxyCodeLine{\Hypertarget{group_8hpp_source_l00037}00037 }

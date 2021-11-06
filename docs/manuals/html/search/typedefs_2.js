@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['difference_5ftype_0',['difference_type',['../d1/d44/classtesting_1_1internal_1_1_param_iterator.html#a6c37240a04ba3fc4c56f6c413cf4771d',1,'testing::internal::ParamIterator']]],
-  ['double_1',['Double',['../d0/da7/namespacetesting_1_1internal.html#a66a7579b1893b260c31dad577f7a5c48',1,'testing::internal']]]
+  ['logical_0',['logical',['../d6/de6/include_2types_8h.html#a139be01697d63f6c073ae7cbc5aa848f',1,'logical():&#160;types.h'],['../dc/d4e/libcmdline_2include_2types_8h.html#a139be01697d63f6c073ae7cbc5aa848f',1,'logical():&#160;types.h']]]
 ];

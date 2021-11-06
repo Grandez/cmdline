@@ -1,104 +1,200 @@
-.TH "cmdline/include/types.h" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/include/types.h" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline/include/types.h
+libcmdline/include/types.h
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <unordered_map>\fP
-.br
-\fC#include <filesystem>\fP
-.br
-
-.SS "Namespaces"
+.SS "Clases"
 
 .in +1c
 .ti -1c
-.RI "namespace \fBcmdline\fP"
+.RI "struct \fB_ParmDef\fP"
+.br
+.ti -1c
+.RI "struct \fB_Parameter\fP"
+.br
+.ti -1c
+.RI "struct \fB_Flag\fP"
 .br
 .in -1c
-.SS "Macros"
+.SS "defines"
 
 .in +1c
 .ti -1c
-.RI "#define \fB__CMDLINE_TYPES__\fP"
+.RI "#define \fB__CMDLINE_CTYPES__\fP"
 .br
 .in -1c
-.SS "Typedefs"
+.SS "typedefs"
 
 .in +1c
 .ti -1c
-.RI "using \fBcmdline::TYPE_STRING\fP = std::string"
+.RI "typedef enum \fB_Type\fP \fBType\fP"
 .br
 .ti -1c
-.RI "using \fBcmdline::TYPE_BOOL\fP = bool"
+.RI "typedef enum \fB_logical\fP \fBlogical\fP"
 .br
 .ti -1c
-.RI "using \fBcmdline::TYPE_NUMBER\fP = long"
+.RI "typedef struct \fB_ParmDef\fP \fBParmDef\fP"
 .br
 .ti -1c
-.RI "using \fBcmdline::TYPE_LONG\fP = long"
+.RI "typedef struct \fB_Parameter\fP \fBParameter\fP"
 .br
 .ti -1c
-.RI "using \fBcmdline::TYPE_INT\fP = int"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_DECIMAL\fP = float"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_FLOAT\fP = float"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_DOUBLE\fP = double"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_LONGNUMBER\fP = long long"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_LONGDECIMAL\fP = float"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_DATE\fP = std::tm"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_TIME\fP = std::tm"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_DATETIME\fP = std::tm"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_TMS\fP = char *"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_DIR\fP = std::filesystem::path"
-.br
-.ti -1c
-.RI "using \fBcmdline::TYPE_FILE\fP = std::filesystem::path"
-.br
-.ti -1c
-.RI "using \fBcmdline::Flags\fP = std::unordered_map< std::string, bool >"
-.br
-.ti -1c
-.RI "using \fBcmdline::Options\fP = std::unordered_map< std::string, std::string >"
+.RI "typedef struct \fB_Flag\fP \fBFlag\fP"
 .br
 .in -1c
-.SS "Enumerations"
+.SS "Enumeraciones"
 
 .in +1c
 .ti -1c
-.RI "enum class \fBcmdline::Type\fP { \fBcmdline::STRING\fP, \fBcmdline::CHAR\fP, \fBcmdline::BOOL\fP, \fBcmdline::NUMBER\fP, \fBcmdline::DECIMAL\fP, \fBcmdline::LONGNUMBER\fP, \fBcmdline::LONGDECIMAL\fP, \fBcmdline::DATE\fP, \fBcmdline::TIME\fP, \fBcmdline::DATETIME\fP, \fBcmdline::TMS\fP, \fBcmdline::DIR\fP, \fBcmdline::DIR_EXISTS\fP, \fBcmdline::FILE\fP, \fBcmdline::FILE_EXISTS\fP }"
+.RI "enum \fB_Type\fP { \fBSTRING\fP =0, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILES\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP, \fBSTRING\fP =0, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILES\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
 .br
 .ti -1c
-.RI "enum class \fBcmdline::Source\fP { \fBcmdline::DEFAULT\fP, \fBcmdline::ENV\fP, \fBcmdline::CMDLINE\fP, \fBcmdline::CODE\fP, \fBcmdline::AUTO\fP }"
+.RI "enum \fB_logical\fP { \fBTRUE\fP =-1, \fBFALSE\fP = 0, \fBMISSING\fP =1, \fBTRUE\fP =-1, \fBFALSE\fP = 0, \fBMISSING\fP =1 }"
+.br
+.ti -1c
+.RI "enum \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP, \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP }"
 .br
 .in -1c
-.SH "Macro Definition Documentation"
+.SH "Documentación de los 'defines'"
 .PP 
-.SS "#define __CMDLINE_TYPES__"
+.SS "#define __CMDLINE_CTYPES__"
 
 .PP
-Definition at line \fB6\fP of file \fBtypes\&.h\fP\&.
-.SH "Author"
+Definición en la línea \fB4\fP del archivo \fBtypes\&.h\fP\&.
+.SH "Documentación de los 'typedefs'"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+.SS "typedef struct \fB_Flag\fP \fBFlag\fP"
+
+.SS "typedef enum \fB_logical\fP \fBlogical\fP"
+
+.SS "typedef struct \fB_Parameter\fP \fBParameter\fP"
+
+.SS "typedef struct \fB_ParmDef\fP \fBParmDef\fP"
+
+.SS "typedef enum \fB_Type\fP \fBType\fP"
+
+.SH "Documentación de las enumeraciones"
+.PP 
+.SS "enum \fB_logical\fP"
+
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fITRUE \fP\fP
+.TP
+\fB\fIFALSE \fP\fP
+.TP
+\fB\fIMISSING \fP\fP
+.TP
+\fB\fITRUE \fP\fP
+.TP
+\fB\fIFALSE \fP\fP
+.TP
+\fB\fIMISSING \fP\fP
+.PP
+Definición en la línea \fB14\fP del archivo \fBtypes\&.h\fP\&.
+.SS "enum \fB_Type\fP"
+
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fISTRING \fP\fP
+.TP
+\fB\fICHAR \fP\fP
+.TP
+\fB\fIBOOL \fP\fP
+.TP
+\fB\fINUMBER \fP\fP
+.TP
+\fB\fIDECIMAL \fP\fP
+.TP
+\fB\fILONGNUMBER \fP\fP
+.TP
+\fB\fILONGDECIMAL \fP\fP
+.TP
+\fB\fIDATE \fP\fP
+.TP
+\fB\fITIME \fP\fP
+.TP
+\fB\fIDATETIME \fP\fP
+.TP
+\fB\fITMS \fP\fP
+.TP
+\fB\fIDIR \fP\fP
+.TP
+\fB\fIDIR_EXISTS \fP\fP
+.TP
+\fB\fIFILES \fP\fP
+.TP
+\fB\fIFILE_EXISTS \fP\fP
+.TP
+\fB\fIFLAG \fP\fP
+.TP
+\fB\fISTRING \fP\fP
+.TP
+\fB\fICHAR \fP\fP
+.TP
+\fB\fIBOOL \fP\fP
+.TP
+\fB\fINUMBER \fP\fP
+.TP
+\fB\fIDECIMAL \fP\fP
+.TP
+\fB\fILONGNUMBER \fP\fP
+.TP
+\fB\fILONGDECIMAL \fP\fP
+.TP
+\fB\fIDATE \fP\fP
+.TP
+\fB\fITIME \fP\fP
+.TP
+\fB\fIDATETIME \fP\fP
+.TP
+\fB\fITMS \fP\fP
+.TP
+\fB\fIDIR \fP\fP
+.TP
+\fB\fIDIR_EXISTS \fP\fP
+.TP
+\fB\fIFILES \fP\fP
+.TP
+\fB\fIFILE_EXISTS \fP\fP
+.TP
+\fB\fIFLAG \fP\fP
+.PP
+Definición en la línea \fB7\fP del archivo \fBtypes\&.h\fP\&.
+.SS "enum \fBSource\fP"
+
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fIDEFAULT \fP\fP
+.TP
+\fB\fIENV \fP\fP
+.TP
+\fB\fICMDLINE \fP\fP
+.TP
+\fB\fICODE \fP\fP
+.TP
+\fB\fIAUTO \fP\fP
+.TP
+\fB\fIDEFAULT \fP\fP
+.TP
+\fB\fIENV \fP\fP
+.TP
+\fB\fICMDLINE \fP\fP
+.TP
+\fB\fICODE \fP\fP
+.TP
+\fB\fIAUTO \fP\fP
+.PP
+Definición en la línea \fB16\fP del archivo \fBtypes\&.h\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

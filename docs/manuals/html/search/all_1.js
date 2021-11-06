@@ -1,20 +1,6 @@
 var searchData=
 [
-  ['_5f_5fcmdline_5fctypes_5f_5f_0',['__CMDLINE_CTYPES__',['../d6/dff/cmdline__types_8h.html#ac27a2e52d9c68436f61d0a74f593be49',1,'cmdline_types.h']]],
-  ['_5f_5fcmdline_5fh_5f_5f_1',['__CMDLINE_H__',['../d1/d13/cmdline_8h.html#ad26aa1a74110d9cd89c1a43a5d8ecf95',1,'cmdline.h']]],
-  ['_5f_5fcmdline_5ftypes_5f_5f_2',['__CMDLINE_TYPES__',['../d9/d49/types_8h.html#aaf142c3d74f5786760a1e716bf2c355a',1,'types.h']]],
-  ['_5f_5ftool_5f_5f_3',['__tool__',['../d1/dec/_0btool_8hpp.html#aac807166349daf72b6dd12e876afd6de',1,'$tool.hpp']]],
-  ['_5fargv_4',['_argv',['../d4/d41/namespacecmdline.html#ac8ab6ff856d104d06b0486ed233c4239',1,'cmdline']]],
-  ['_5fcleanclass_5',['_cleanClass',['../d4/d41/namespacecmdline.html#a71f3e031fd5fd65b5c8e346007cb243b',1,'cmdline']]],
-  ['_5fcmdline_6',['_cmdline',['../d4/d6e/namespace__cmdline.html',1,'']]],
-  ['_5fcommandline_7',['_CommandLine',['../d4/dd7/class__cmdline_1_1___command_line.html',1,'_cmdline::_CommandLine'],['../d4/dd7/class__cmdline_1_1___command_line.html#a75d67fa8e3295c500561ec9ad8761ccd',1,'_cmdline::_CommandLine::_CommandLine()']]],
-  ['_5fflag_8',['_Flag',['../d3/ddc/struct___flag.html',1,'']]],
-  ['_5flogical_9',['_logical',['../d6/dff/cmdline__types_8h.html#a1d8d7b6a3fa0d91462315dd5c7281548',1,'cmdline_types.h']]],
-  ['_5fnargc_10',['_nargc',['../d4/d41/namespacecmdline.html#ac013b293e2c45bdce4f0c29ca7dec44b',1,'cmdline']]],
-  ['_5foption_11',['_option',['../d9/ded/struct__option.html',1,'']]],
-  ['_5fparameter_12',['_Parameter',['../d2/df3/struct___parameter.html',1,'']]],
-  ['_5fparmdef_13',['_ParmDef',['../d9/d97/struct___parm_def.html',1,'']]],
-  ['_5fparms_14',['_parms',['../d4/d41/namespacecmdline.html#a70225d6bdcf87b4a810dad7417242c86',1,'cmdline']]],
-  ['_5ftype_15',['_Type',['../d6/dff/cmdline__types_8h.html#aee777019d0884c4c38d9a4b33b447af3',1,'cmdline_types.h']]],
-  ['_5fupper_16',['_upper',['../d4/d6e/namespace__cmdline.html#aecf9a3be04888c0d13fda7a0449ae0c1',1,'_cmdline']]]
+  ['an_20holistic_20proposal_20and_20tool_20to_20parse_20command_20line_20input_0',['An holistic proposal and tool to parse command line input',['../d3/dcc/md__r_e_a_d_m_e.html',1,'']]],
+  ['argument_1',['Argument',['../d8/de6/class__cmdline_1_1_argument.html',1,'_cmdline']]],
+  ['auto_2',['AUTO',['../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9',1,'cmdline']]]
 ];

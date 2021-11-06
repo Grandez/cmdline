@@ -1,6 +1,7 @@
 p:\c\cmdline\libs\libcmdline64.pdb
 p:\c\cmdline\libcmdline\x64\release\validations.obj
 p:\c\cmdline\libcmdline\x64\release\tools.obj
+p:\c\cmdline\libcmdline\x64\release\templates.obj
 p:\c\cmdline\libcmdline\x64\release\parm.obj
 p:\c\cmdline\libcmdline\x64\release\parameter_tree.obj
 p:\c\cmdline\libcmdline\x64\release\commandline.obj

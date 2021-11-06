@@ -1,0 +1,81 @@
+\hypertarget{drivercmdline__c_8c_source}{}\doxysection{drivercmdline\+\_\+c.\+c}
+\label{drivercmdline__c_8c_source}\index{drivercmdline\_c.c@{drivercmdline\_c.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00001}00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00002}00002 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00004}00004 \textcolor{preprocessor}{\#include "{}cmdline.h"{}}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00006}00006 \textcolor{keywordtype}{void} showDefinitions(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00007}00007 \textcolor{keywordtype}{void} showFlags(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00009}00009 \mbox{\hyperlink{struct_parm_def}{ParmDef}} parms[] = \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00010}00010     \{\textcolor{stringliteral}{"{}output"{}}, FLAG, \textcolor{stringliteral}{"{}1"{}}, FALSE\}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00011}00011     ,0x0}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00012}00012 \};}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00013}00013 \mbox{\hyperlink{struct_cmd_line}{CmdLine}}* \mbox{\hyperlink{namespacecmdline}{cmdline}} = NULL;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00015}00015 \textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00016}00016     printf(\textcolor{stringliteral}{"{}Hello World!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00017}00017     \textcolor{keywordtype}{char} *argv2[] = \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00018}00018         \textcolor{stringliteral}{"{}Program"{}}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00019}00019         ,\textcolor{stringliteral}{"{}/def1=define1"{}}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00020}00020         ,\textcolor{stringliteral}{"{}/def2=define2"{}}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00021}00021     \};}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00022}00022     \textcolor{comment}{//CmdLine *cmdline = cmdline\_create(argc,argv, parms);}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00023}00023     \mbox{\hyperlink{namespacecmdline}{cmdline}} = cmdline\_create(3,argv2, parms);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00024}00024     showDefinitions(0x0, 2, 0x0);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00025}00025     showFlags(0x0, 1, 0x0);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00026}00026     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00027}00027 \textcolor{comment}{    logical res  = cmdline-\/>hasFlag("{}output"{});}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00028}00028 \textcolor{comment}{    Parameter** defs = cmdline.getDefinitions();}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00029}00029 \textcolor{comment}{    Parameter *p = defs[0];}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00030}00030 \textcolor{comment}{    int i = 0;}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00031}00031 \textcolor{comment}{    while (defs[i]) \{}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00032}00032 \textcolor{comment}{        printf("{}\%s"{}, defs[i]-\/>name);}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00033}00033 \textcolor{comment}{        i++;}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00034}00034 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00035}00035 \textcolor{comment}{    //  logical res  = cmdline-\/>hashFlag("{}output"{});}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00036}00036 \textcolor{comment}{//  Flag **flags = cmdline-\/>getDefaultFlags(UNCHECKED);}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00037}00037 \textcolor{comment}{//  if (res == UNKNOW) \{}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00038}00038 \textcolor{comment}{//      printf("{}Error\(\backslash\)n"{});}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00039}00039 \textcolor{comment}{//  \}}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00040}00040 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00041}00041     cmdline\_delete(\mbox{\hyperlink{namespacecmdline}{cmdline}});}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00042}00042 \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00043}00043 \textcolor{keywordtype}{void} showDefinitions(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00044}00044     printf(\textcolor{stringliteral}{"{}Checking definitions\(\backslash\)t"{}});}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00045}00045     \textcolor{keywordflow}{if} (ptr == NULL) ptr = \mbox{\hyperlink{namespacecmdline}{cmdline}} ;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00046}00046     \mbox{\hyperlink{struct_parameter}{Parameter}}** defs = ptr-\/>getDefinitions();}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00047}00047     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00048}00048     \textcolor{keywordflow}{while} (defs[i]) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00049}00049         \textcolor{keywordflow}{if} (print) printf(\textcolor{stringliteral}{"{}\%s"{}}, defs[i]-\/>name);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00050}00050         i++;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00052}00052     \textcolor{keywordflow}{if} (i == expected) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00053}00053         printf(\textcolor{stringliteral}{"{}OK\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00054}00054     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00055}00055         printf(\textcolor{stringliteral}{"{}KO -\/ Expected \%d -\/ found \%d\(\backslash\)n"{}}, expected, i);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00056}00056         exit(1);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00058}00058 \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00059}00059 \textcolor{keywordtype}{void} showFlags(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00060}00060     printf(\textcolor{stringliteral}{"{}Checking Flags\(\backslash\)t"{}});}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00061}00061     \textcolor{keywordflow}{if} (ptr == NULL) ptr = \mbox{\hyperlink{namespacecmdline}{cmdline}} ;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00062}00062     \mbox{\hyperlink{struct_flag}{Flag}}** flags = ptr-\/>getCurrentFlags(FALSE);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00063}00063     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00064}00064     \textcolor{keywordflow}{while} (flags[i]) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00065}00065         \textcolor{keywordflow}{if} (print) printf(\textcolor{stringliteral}{"{}\%s"{}}, flags[i]-\/>name);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00066}00066         i++;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00068}00068     \textcolor{keywordflow}{if} (i == expected) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00069}00069         printf(\textcolor{stringliteral}{"{}OK\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00070}00070     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00071}00071         printf(\textcolor{stringliteral}{"{}KO -\/ Expected \%d -\/ found \%d\(\backslash\)n"{}}, expected, i);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00072}00072         exit(1);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00074}00074 \}}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00075}00075 }
+
+\end{DoxyCode}

@@ -1,35 +1,37 @@
 \hypertarget{_0btool_8hpp_source}{}\doxysection{\$tool.\+hpp}
 \label{_0btool_8hpp_source}\index{testcmdline/\$tool.hpp@{testcmdline/\$tool.hpp}}
-\mbox{\hyperlink{_0btool_8hpp}{Go to the documentation of this file.}}
+\mbox{\hyperlink{_0btool_8hpp}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00002}00002 \textcolor{preprocessor}{\#include <chrono>}}
 \DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <ctime>}}
 \DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}../include/cmdline.hpp"{}}}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}../cmdline/include/tools.h"{}}}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00008}00008 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00009}00009 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00010}00010 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00011}00011 }
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00012}\mbox{\hyperlink{class_tool}{00012}} \textcolor{keyword}{class }\mbox{\hyperlink{class_tool}{Tool}} \{}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00013}00013 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00014}\mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{00014}}      \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{argv}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00015}\mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{00015}}      \textcolor{keywordtype}{int}    \mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{argc}} = 0;}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00016}\mbox{\hyperlink{class_tool_a1728fa4ff78145c124389ce8bc65062f}{00016}}      \textcolor{keyword}{struct }tm \mbox{\hyperlink{class_tool_a1728fa4ff78145c124389ce8bc65062f}{now}};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00017}00017      \mbox{\hyperlink{class_tool_a33dabf2428a98104084741a0f024a033}{Tool}}();}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00018}00018     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tool_aa75acde8263345da3b5b039d184c54f2}{reset}}();}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00019}00019     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* arg);}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00020}00020     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00021}00021     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a9bcf6828a7e1672452ccc0749339c8aa}{getArgc}}();}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00022}00022     \textcolor{keyword}{inline} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_tool_a3a9a085ed7e4c6646e3fbf1119f711b0}{mystrdup}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* str);}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00023}00023      }
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00024}00024 \};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#ifndef \_\_tool\_\_}}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00027}\mbox{\hyperlink{_0btool_8hpp_aac807166349daf72b6dd12e876afd6de}{00027}} \textcolor{preprocessor}{\#define \_\_tool\_\_}}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00028}00028 \textcolor{keyword}{extern} \mbox{\hyperlink{class_tool}{Tool}} \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}};}
-\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00029}00029 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}cmdline.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}types.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tools_8hpp}{tools.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmdline__exceptions_8hpp}{cmdline\_exceptions.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00010}00010 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00011}00011 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00012}00012 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00014}\mbox{\hyperlink{class_tool}{00014}} \textcolor{keyword}{class }\mbox{\hyperlink{class_tool}{Tool}} \{}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00015}00015 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00016}\mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{00016}}      \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_tool_a431b61a157b5817d8602c999b58db8b4}{argv}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00017}\mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{00017}}      \textcolor{keywordtype}{int}    \mbox{\hyperlink{class_tool_a19943cd9bdd6fdcd081ac60f170271b4}{argc}} = 0;}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00018}\mbox{\hyperlink{class_tool_a1728fa4ff78145c124389ce8bc65062f}{00018}}      \textcolor{keyword}{struct }tm \mbox{\hyperlink{class_tool_a1728fa4ff78145c124389ce8bc65062f}{now}};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00019}00019      \mbox{\hyperlink{class_tool_a33dabf2428a98104084741a0f024a033}{Tool}}();}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00020}00020     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tool_aa75acde8263345da3b5b039d184c54f2}{reset}}();}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00021}00021     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* arg);}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00022}00022     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a13f19118fd537ae2b00fa690f8b81252}{addArg}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00023}00023     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a9bcf6828a7e1672452ccc0749339c8aa}{getArgc}}();}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00024}00024     \textcolor{keyword}{inline} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_tool_a3a9a085ed7e4c6646e3fbf1119f711b0}{mystrdup}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* str);}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00025}00025      }
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00026}00026 \};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00028}00028 \textcolor{preprocessor}{\#ifndef \_\_tool\_\_}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00029}\mbox{\hyperlink{_0btool_8hpp_aac807166349daf72b6dd12e876afd6de}{00029}} \textcolor{preprocessor}{\#define \_\_tool\_\_}}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00030}00030 \textcolor{keyword}{extern} \mbox{\hyperlink{class_tool}{Tool}} \mbox{\hyperlink{_0btool_8hpp_a95ceb07ef37166fe2eb4a49196ec22d2}{tool}};}
+\DoxyCodeLine{\Hypertarget{_0btool_8hpp_source_l00031}00031 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -1,0 +1,217 @@
+
+
+# Delimiters
+/Delimiters = ! "tab$%&'()*+,-./:;<=>?@[\]^_{|}~
+# Defines a list of delimiters used to determine where a keyword starts
+# and finishes.
+# "tab" must be replaced after copying from the browser window
+# to the ASCII file by a real horizontal tab character.
+#
+# A character which is a delimiter may not be part of the keyword, with
+# an exception of <, </ and > in HTML_LANG and XML_LANG which can
+# be at start or end of a keyword.
+# Since UE v10.00 it is allowed that a delimiter character is the
+# start character of a keyword or substring in the color groups.
+#
+# The default delimiters are used if no delimiters are specified.
+# Delimiters should contain always a SPACE and a TAB character.
+# It is possible to add delimiter characters in various color
+# groups to highlight them in different colors.
+
+    \a
+    \addindex
+    \addtogroup
+    \anchor
+    \arg
+    \attention
+    \author
+    \authors
+    \b
+    \brief
+    \bug
+    \c
+    \callergraph
+    \callgraph
+    \category
+    \cite
+    \class
+    \code
+    \concept
+    \cond
+    \copybrief
+    \copydetails
+    \copydoc
+    \copyright
+    \date
+    \def
+    \defgroup
+    \deprecated
+    \details
+    \diafile
+    \dir
+    \docbookinclude
+    \docbookonly
+    \dontinclude
+    \dot
+    \dotfile
+    \e
+    \else
+    \elseif
+    \em
+    \emoji
+    \endcode
+    \endcond
+    \enddocbookonly
+    \enddot
+    \endhtmlonly
+    \endif
+    \endinternal
+    \endlatexonly
+    \endlink
+    \endmanonly
+    \endmsc
+    \endparblock
+    \endrtfonly
+    \endsecreflist
+    \endverbatim
+    \enduml
+    \endxmlonly
+    \enum
+    \example
+    \exception
+    \extends
+    \f(
+    \f)
+    \f$
+    \f[
+    \f]
+    \f{
+    \f}
+    \file
+    \fn
+    \headerfile
+    \hidecallergraph
+    \hidecallgraph
+    \hiderefby
+    \hiderefs
+    \hideinitializer
+    \htmlinclude
+    \htmlonly
+    \idlexcept
+    \if
+    \ifnot
+    \image
+    \implements
+    \include
+    \includedoc
+    \includelineno
+    \ingroup
+    \internal
+    \invariant
+    \interface
+    \latexinclude
+    \latexonly
+    \li
+    \line
+    \link
+    \mainpage
+    \maninclude
+    \manonly
+    \memberof
+    \msc
+    \mscfile
+    \n
+    \name
+    \namespace
+    \noop
+    \nosubgrouping
+    \note
+    \overload
+    \p
+    \package
+    \page
+    \par
+    \paragraph
+    \param
+    \parblock
+    \post
+    \pre
+    \private
+    \privatesection
+    \property
+    \protected
+    \protectedsection
+    \protocol
+    \public
+    \publicsection
+    \pure
+    \ref
+    \refitem
+    \related
+    \relates
+    \relatedalso
+    \relatesalso
+    \remark
+    \remarks
+    \result
+    \return
+    \returns
+    \retval
+    \rtfinclude
+    \rtfonly
+    \sa
+    \secreflist
+    \section
+    \see
+    \short
+    \showinitializer
+    \showrefby
+    \showrefs
+    \since
+    \skip
+    \skipline
+    \snippet
+    \snippetdoc
+    \snippetlineno
+    \static
+    \startuml
+    \struct
+    \subpage
+    \subsection
+    \subsubsection
+    \tableofcontents
+    \test
+    \throw
+    \throws
+    \todo
+    \tparam
+    \typedef
+    \union
+    \until
+    \var
+    \verbatim
+    \verbinclude
+    \version
+    \vhdlflow
+    \warning
+    \weakgroup
+    \xmlinclude
+    \xmlonly
+    \xrefitem
+    \$
+    \@
+    \\
+    \&
+    \~
+    \<
+    \=
+    \>
+    \#
+    \%
+    \"
+    \.
+    \::
+    \|
+    \--
+    \---
+

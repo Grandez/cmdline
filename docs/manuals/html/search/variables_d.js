@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rootflags_0',['rootFlags',['../d4/d6e/namespace__cmdline.html#a895dee29a8e3d7fdd55aa1f7b89d696c',1,'_cmdline']]],
-  ['rootoptions_1',['rootOptions',['../d4/d6e/namespace__cmdline.html#ad390392958a00da14168d6204e74f6a5',1,'_cmdline']]]
+  ['type_0',['type',['../d9/dff/classcmdline_1_1_parm.html#a5d33b5c097c8dc80998d7a33f022795a',1,'cmdline::Parm::type()'],['../d9/d97/struct___parm_def.html#af46134d54a0f5f3877a09f12206af24c',1,'_ParmDef::type()'],['../d8/de6/class__cmdline_1_1_argument.html#a9a4e30d637f497d942f3222ca06ee617',1,'_cmdline::Argument::type()']]]
 ];

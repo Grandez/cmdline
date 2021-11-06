@@ -2,7 +2,9 @@
 #include <cstdarg>
 #include <cstring>
 #include <cstdio>
-
+#include <filesystem>
+#include "msg_locale.hpp"
+#include "types.hpp"
 #include "cmdline_exceptions.hpp"
 
 #ifdef _WIN32
@@ -58,5 +60,25 @@ namespace cmdline {
 		this->runtime_error::~runtime_error(); // destroy the base class
 		new (this) runtime_error((char*)txt.c_str()); //
 	}
+	HelpRequested::HelpRequested( const char *programName
+		                         ,const char *txt, bool detailed
+		                                        , unordered_map<string,bool> flags  
+		                                        , unordered_map<string,string> options)  
+		: CmdLineException(txt) {
+		filesystem::path fs(programName);
+		string f = fs.filename().string();
+		this->name = f.c_str();
+		this->detailed = detailed;
+		this->flags   =  flags;
+		this->options = options;
+	};
+	HelpSimpleRequested::HelpSimpleRequested( const char *programName
+		                                     ,unordered_map<string,bool> flags  
+		                                     ,unordered_map<string,string> options)       
+		                : HelpRequested(programName, TXT_HELP, false, flags, options) {};
+	HelpDetailedRequested::HelpDetailedRequested( const char *programName
+		                                         ,unordered_map<string,bool> flags  
+		                                         ,unordered_map<string,string> options)
+		                 : HelpRequested(programName, TXT_HELP_DETAIL, true, flags, options) {};
 }
 

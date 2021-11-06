@@ -23,5 +23,7 @@ var validations_8cpp =
     [ "validateNumber", "da/dc8/validations_8cpp.html#afd3fa1bb6804f9721ed1f0396f3a6c53", null ],
     [ "validateTime", "da/dc8/validations_8cpp.html#a157e7ae9485d8fbf716ce2d2d4786c5b", null ],
     [ "validateTimestamp", "da/dc8/validations_8cpp.html#ad33443a73ced46819f4499bcaf4d6318", null ],
-    [ "validateValue", "da/dc8/validations_8cpp.html#afebb559c0eb8407b4c6a00c0efe4bebd", null ]
+    [ "validateValue", "da/dc8/validations_8cpp.html#afebb559c0eb8407b4c6a00c0efe4bebd", null ],
+    [ "valMakeBoolean", "da/dc8/validations_8cpp.html#a9b2158a5f8c41b8ff5b808c7d3d14674", null ],
+    [ "valMakeBoolean", "da/dc8/validations_8cpp.html#ab4813bdc2275bf4331df3c25ab37b698", null ]
 ];

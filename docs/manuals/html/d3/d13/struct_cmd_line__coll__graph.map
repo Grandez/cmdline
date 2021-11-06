@@ -1,0 +1,5 @@
+<map id="CmdLine" name="CmdLine">
+<area shape="rect" id="node1" title="Singleton encargado de mantener la informacion pasada por la linea de comandos." alt="" coords="56,124,129,151"/>
+<area shape="rect" id="node2" href="$d5/dbf/struct_flag.html" title=" " alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node3" href="$d2/d3f/struct_parameter.html" title=" " alt="" coords="115,5,198,32"/>
+</map>

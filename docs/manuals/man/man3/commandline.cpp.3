@@ -1,34 +1,26 @@
-.TH "cmdline/src/commandline.cpp" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/src/commandline.cpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline/src/commandline.cpp
+libcmdline/src/commandline.cpp
 .SH SYNOPSIS
 .br
 .PP
 \fC#include <iostream>\fP
 .br
-\fC#include <type_traits>\fP
-.br
-\fC#include <chrono>\fP
-.br
-\fC#include <any>\fP
-.br
-\fC#include <utility>\fP
-.br
-\fC#include 'parameter_tree\&.hpp'\fP
-.br
-\fC#include 'tools\&.h'\fP
-.br
-\fC#include 'defines\&.hpp'\fP
-.br
-\fC#include 'cmdline_exceptions\&.hpp'\fP
-.br
-\fC#include 'validations\&.h'\fP
+\fC#include <vector>\fP
 .br
 \fC#include 'commandline\&.hpp'\fP
 .br
-\fC#include 'msg_locale\&.h'\fP
+\fC#include 'argument\&.hpp'\fP
+.br
+\fC#include 'tools\&.hpp'\fP
+.br
+\fC#include 'validations\&.hpp'\fP
+.br
+\fC#include 'cmdline_exceptions\&.hpp'\fP
+.br
+\fC#include 'defines\&.hpp'\fP
 .br
 
 .SS "Namespaces"
@@ -38,18 +30,11 @@ cmdline/src/commandline.cpp
 .RI "namespace \fB_cmdline\fP"
 .br
 .in -1c
-.SS "Macros"
+.SS "defines"
 
 .in +1c
 .ti -1c
-.RI "#define \fBENV_PREFFIX\fP   'env_preffix'"
-.br
-.in -1c
-.SS "Functions"
-
-.in +1c
-.ti -1c
-.RI "char * \fB_cmdline::makeUpper\fP (const char *str)"
+.RI "#define \fB_CRT_SECURE_NO_WARNINGS\fP"
 .br
 .in -1c
 .SS "Variables"
@@ -61,16 +46,13 @@ cmdline/src/commandline.cpp
 .ti -1c
 .RI "ParameterTree * \fB_cmdline::rootFlags\fP [128]"
 .br
-.ti -1c
-.RI "char \fB_cmdline::_upper\fP [64] = ''"
-.br
 .in -1c
-.SH "Macro Definition Documentation"
+.SH "Documentación de los 'defines'"
 .PP 
-.SS "#define ENV_PREFFIX   'env_preffix'"
+.SS "#define _CRT_SECURE_NO_WARNINGS"
 
 .PP
-Definition at line \fB29\fP of file \fBcommandline\&.cpp\fP\&.
-.SH "Author"
+Definición en la línea \fB1\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

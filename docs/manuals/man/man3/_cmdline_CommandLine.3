@@ -1,0 +1,153 @@
+.TH "CommandLine" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommandLine
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandLine\fP (int argc, char **argv, Parameters parms, bool sensitive, bool strict)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetArgs\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhasFlag\fP (const char *flag)"
+.br
+.ti -1c
+.RI "Flags \fBgetDefaultFlags\fP (bool all)"
+.br
+.ti -1c
+.RI "Flags \fBgetCurrentFlags\fP (bool all)"
+.br
+.ti -1c
+.RI "int \fBgetOptionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBisOptionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "Options \fBgetDefaultOptions\fP ()"
+.br
+.ti -1c
+.RI "Options \fBgetCurrentOptions\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBgetOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetOptionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasDefinition\fP (const char *def)"
+.br
+.ti -1c
+.RI "bool \fBisDefinitionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBgetDefinitionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBgetDefinition\fP (const char *name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetDefinitionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "Options \fBgetDefinitions\fP ()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Definición en la línea \fB14\fP del archivo \fBcommandline\&.hpp\fP\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "\fBCommandLine\fP (int argc, char ** argv, Parameters parms, bool sensitive, bool strict)"
+
+.PP
+Definición en la línea \fB18\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "~\fBCommandLine\fP ()"
+
+.PP
+Definición en la línea \fB27\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "vector< const char * > getArgs ()"
+
+.PP
+Definición en la línea \fB30\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "Flags getCurrentFlags (bool all)"
+
+.PP
+Definición en la línea \fB40\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "Options getCurrentOptions ()"
+
+.PP
+Definición en la línea \fB66\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "Flags getDefaultFlags (bool all)"
+
+.PP
+Definición en la línea \fB37\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "Options getDefaultOptions ()"
+
+.PP
+Definición en la línea \fB63\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "const char * getDefinition (const char * name)\fC [inline]\fP"
+
+.PP
+Definición en la línea \fB39\fP del archivo \fBcommandline\&.hpp\fP\&.
+.SS "int getDefinitionNumValues (const char * name)"
+
+.PP
+Definición en la línea \fB81\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "Options getDefinitions ()"
+
+.PP
+Definición en la línea \fB85\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "vector< const char * > getDefinitionValues (const char * name)"
+
+.PP
+Definición en la línea \fB77\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "const char * getOption (const char * name)"
+
+.PP
+Definición en la línea \fB59\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "int getOptionNumValues (const char * name)"
+
+.PP
+Definición en la línea \fB55\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "vector< const char * > getOptionValues (const char * name)"
+
+.PP
+Definición en la línea \fB51\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "bool hasDefinition (const char * def)"
+
+.PP
+Definición en la línea \fB69\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "bool hasFlag (const char * flag)"
+
+.PP
+Definición en la línea \fB33\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "bool hasOption (const char * name)"
+
+.PP
+Definición en la línea \fB43\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "bool isDefinitionMultiple (const char * name)"
+
+.PP
+Definición en la línea \fB73\fP del archivo \fBcommandline\&.cpp\fP\&.
+.SS "bool isOptionMultiple (const char * name)"
+
+.PP
+Definición en la línea \fB47\fP del archivo \fBcommandline\&.cpp\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

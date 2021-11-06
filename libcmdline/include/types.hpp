@@ -7,13 +7,14 @@
 using namespace std;
 
 namespace cmdline {
-	enum class Type {
-		STRING=0, CHAR, BOOL,
-		NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL,
-		DATE, TIME, DATETIME, TMS,
-		DIR, DIR_EXISTS, FILE, FILE_EXISTS,
-		FLAG
-
+/** @ingroup Types
+ *  @brief Define el tipo de dato esperado del parametro
+ */
+	enum class Type { STRING,CHAR,BOOL
+		             ,NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL
+		             ,DATE, TIME, DATETIME, TMS
+		             ,DIR, DIR_EXISTS, FILE, FILE_EXISTS
+		             ,FLAG
 	};
 	enum class Source { DEFAULT, ENV, CMDLINE, CODE, AUTO };
 

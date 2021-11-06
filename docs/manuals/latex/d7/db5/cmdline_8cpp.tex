@@ -1,10 +1,12 @@
-\hypertarget{cmdline_8cpp}{}\doxysection{cmdline/src/cmdline.cpp File Reference}
-\label{cmdline_8cpp}\index{cmdline/src/cmdline.cpp@{cmdline/src/cmdline.cpp}}
-{\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include \char`\"{}commandline.\+hpp\char`\"{}}\newline
+\hypertarget{cmdline_8cpp}{}\doxysection{Referencia del Archivo libcmdline/src/cmdline.cpp}
+\label{cmdline_8cpp}\index{libcmdline/src/cmdline.cpp@{libcmdline/src/cmdline.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include \char`\"{}cmdline.\+hpp\char`\"{}}\newline
-Include dependency graph for cmdline.\+cpp\+:
-\nopagebreak
+{\ttfamily \#include \char`\"{}commandline.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}validations.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+hpp\char`\"{}}\newline
+Dependencia gráfica adjunta para cmdline.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +18,15 @@ Include dependency graph for cmdline.\+cpp\+:
 \item 
 namespace \mbox{\hyperlink{namespacecmdline}{cmdline}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const vector$<$ T $>$ \mbox{\hyperlink{namespacecmdline_aaa1ee82d26d1353d4e12f6e193381ecc}{cmdline\+::get\+Option\+Values\+As}} (const char $\ast$name)
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classcmdline_1_1_cmd_line}{Cmd\+Line}} $\ast$ \mbox{\hyperlink{namespacecmdline_aff88b407f66f95d268ee8b3f56e16820}{cmdline\+::singleton\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{class__cmdline_1_1_command_line}{\+\_\+cmdline\+::\+Command\+Line}} $\ast$ \mbox{\hyperlink{namespacecmdline_aab68dff708cf9a837b6ac07368c8a81c}{cmdline\+::\+\_\+command\+Line}}
 \end{DoxyCompactItemize}

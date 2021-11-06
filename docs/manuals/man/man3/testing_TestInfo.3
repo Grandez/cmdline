@@ -1,4 +1,4 @@
-.TH "testing::TestInfo" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "testing::TestInfo" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ testing::TestInfo
 .PP
 .PP
 \fC#include <gtest\&.h>\fP
-.SS "Public Member Functions"
+.SS "Métodos públicos"
 
 .in +1c
 .ti -1c
@@ -45,7 +45,7 @@ testing::TestInfo
 .RI "const \fBTestResult\fP * \fBresult\fP () const"
 .br
 .in -1c
-.SS "Friends"
+.SS "Amigas"
 
 .in +1c
 .ti -1c
@@ -64,76 +64,76 @@ testing::TestInfo
 .RI "\fBTestInfo\fP * \fBinternal::MakeAndRegisterTestInfo\fP (const char *\fBtest_case_name\fP, const char *\fBname\fP, const char *\fBtype_param\fP, const char *\fBvalue_param\fP, \fBinternal::CodeLocation\fP code_location, \fBinternal::TypeId\fP fixture_class_id, \fBTest::SetUpTestCaseFunc\fP set_up_tc, \fBTest::TearDownTestCaseFunc\fP tear_down_tc, \fBinternal::TestFactoryBase\fP *factory)"
 .br
 .in -1c
-.SH "Detailed Description"
+.SH "Descripción detallada"
 .PP 
-Definition at line \fB682\fP of file \fBgtest\&.h\fP\&.
-.SH "Constructor & Destructor Documentation"
+Definición en la línea \fB682\fP del archivo \fBgtest\&.h\fP\&.
+.SH "Documentación del constructor y destructor"
 .PP 
 .SS "testing::TestInfo::~TestInfo ()"
 
-.SH "Member Function Documentation"
+.SH "Documentación de las funciones miembro"
 .PP 
 .SS "const char * testing::TestInfo::file () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB711\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB711\fP del archivo \fBgtest\&.h\fP\&.
 .SS "bool testing::TestInfo::is_in_another_shard () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB717\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB717\fP del archivo \fBgtest\&.h\fP\&.
 .SS "bool testing::TestInfo::is_reportable () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB738\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB738\fP del archivo \fBgtest\&.h\fP\&.
 .SS "int testing::TestInfo::line () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB714\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB714\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const char * testing::TestInfo::name () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB692\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB692\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const \fBTestResult\fP * testing::TestInfo::result () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB745\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB745\fP del archivo \fBgtest\&.h\fP\&.
 .SS "bool testing::TestInfo::should_run () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB735\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB735\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const char * testing::TestInfo::test_case_name () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB689\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB689\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const char * testing::TestInfo::type_param () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB696\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB696\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const char * testing::TestInfo::value_param () const\fC [inline]\fP"
 
 .PP
-Definition at line \fB704\fP of file \fBgtest\&.h\fP\&.
-.SH "Friends And Related Function Documentation"
+Definición en la línea \fB704\fP del archivo \fBgtest\&.h\fP\&.
+.SH "Documentación de las funciones relacionadas y clases amigas"
 .PP 
 .SS "\fBTestInfo\fP * \fBinternal::MakeAndRegisterTestInfo\fP (const char * test_case_name, const char * name, const char * type_param, const char * value_param, \fBinternal::CodeLocation\fP code_location, \fBinternal::TypeId\fP fixture_class_id, \fBTest::SetUpTestCaseFunc\fP set_up_tc, \fBTest::TearDownTestCaseFunc\fP tear_down_tc, \fBinternal::TestFactoryBase\fP * factory)\fC [friend]\fP"
 
 .SS "friend class internal::StreamingListenerTest\fC [friend]\fP"
 
 .PP
-Definition at line \fB754\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB754\fP del archivo \fBgtest\&.h\fP\&.
 .SS "friend class internal::UnitTestImpl\fC [friend]\fP"
 
 .PP
-Definition at line \fB753\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB753\fP del archivo \fBgtest\&.h\fP\&.
 .SS "friend class \fBTest\fP\fC [friend]\fP"
 
 .PP
-Definition at line \fB751\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB751\fP del archivo \fBgtest\&.h\fP\&.
 .SS "friend class \fBTestCase\fP\fC [friend]\fP"
 
 .PP
-Definition at line \fB752\fP of file \fBgtest\&.h\fP\&.
+Definición en la línea \fB752\fP del archivo \fBgtest\&.h\fP\&.
 
-.SH "Author"
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

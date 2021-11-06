@@ -1,24 +1,83 @@
-.TH "cmdline/include/cmdline_errno.h" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/include/cmdline_errno.h" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline/include/cmdline_errno.h
+libcmdline/include/cmdline_errno.h
 .SH SYNOPSIS
 .br
 .PP
-.SS "Macros"
+\fC#include 'config\&.h'\fP
+.br
+
+.SS "defines"
 
 .in +1c
 .ti -1c
-.RI "#define \fBERR_CMDLINE_EXCEPTION\fP   16000"
+.RI "#define \fBECMDLINE\fP   \fBCMDLINE_ERRNO\fP"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_NOTFND\fP   \fBCMDLINE_ERRNO\fP +  1"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_INVTYPE\fP   \fBCMDLINE_ERRNO\fP +  2"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_INVPARM\fP   \fBCMDLINE_ERRNO\fP +  3"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_INVVALUE\fP   \fBCMDLINE_ERRNO\fP +  4"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_DUP\fP   \fBCMDLINE_ERRNO\fP +  5"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_HELP\fP   \fBCMDLINE_ERRNO\fP + 10"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_HELP_DETAIL\fP   \fBCMDLINE_ERRNO\fP + 11"
+.br
+.ti -1c
+.RI "#define \fBECMDLINE_NOMEM\fP   \fBCMDLINE_ERRNO\fP + 20"
 .br
 .in -1c
-.SH "Macro Definition Documentation"
+.SH "Documentación de los 'defines'"
 .PP 
-.SS "#define ERR_CMDLINE_EXCEPTION   16000"
+.SS "#define ECMDLINE   \fBCMDLINE_ERRNO\fP"
 
 .PP
-Definition at line \fB3\fP of file \fBcmdline_errno\&.h\fP\&.
-.SH "Author"
+Definición en la línea \fB5\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_DUP   \fBCMDLINE_ERRNO\fP +  5"
+
+.PP
+Definición en la línea \fB10\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_HELP   \fBCMDLINE_ERRNO\fP + 10"
+
+.PP
+Definición en la línea \fB11\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_HELP_DETAIL   \fBCMDLINE_ERRNO\fP + 11"
+
+.PP
+Definición en la línea \fB12\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_INVPARM   \fBCMDLINE_ERRNO\fP +  3"
+
+.PP
+Definición en la línea \fB8\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_INVTYPE   \fBCMDLINE_ERRNO\fP +  2"
+
+.PP
+Definición en la línea \fB7\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_INVVALUE   \fBCMDLINE_ERRNO\fP +  4"
+
+.PP
+Definición en la línea \fB9\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_NOMEM   \fBCMDLINE_ERRNO\fP + 20"
+
+.PP
+Definición en la línea \fB13\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SS "#define ECMDLINE_NOTFND   \fBCMDLINE_ERRNO\fP +  1"
+
+.PP
+Definición en la línea \fB6\fP del archivo \fBcmdline_errno\&.h\fP\&.
+.SH "Autor"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

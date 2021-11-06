@@ -1,31 +1,23 @@
-.TH "cmdline/include/cmdline.hpp" 3 "Wed Nov 3 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/include/cmdline.hpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline/include/cmdline.hpp
+libcmdline/include/cmdline.hpp
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <string>\fP
-.br
 \fC#include <vector>\fP
 .br
-\fC#include <unordered_map>\fP
+\fC#include 'types\&.hpp'\fP
 .br
-\fC#include <filesystem>\fP
+\fC#include 'validations\&.hpp'\fP
 .br
 \fC#include 'cmdline_exceptions\&.hpp'\fP
 .br
-\fC#include 'validations\&.h'\fP
-.br
-\fC#include 'types\&.h'\fP
-.br
-\fC#include 'tools\&.h'\fP
-.br
-\fC#include <any>\fP
+\fC#include 'templates\&.hpp'\fP
 .br
 
-.SS "Classes"
+.SS "Clases"
 
 .in +1c
 .ti -1c
@@ -54,19 +46,22 @@ cmdline/include/cmdline.hpp
 
 .in +1c
 .ti -1c
-.RI "namespace \fB_cmdline\fP"
-.br
-.ti -1c
 .RI "namespace \fBcmdline\fP"
 .br
 .in -1c
-.SS "Typedefs"
+.SS "defines"
 
 .in +1c
 .ti -1c
-.RI "typedef vector< Parm > \fBcmdline::Parameters\fP"
+.RI "#define \fB__CLASS_CMDLINE__\fP"
 .br
 .in -1c
-.SH "Author"
+.SH "Documentación de los 'defines'"
 .PP 
-Generated automatically by Doxygen for Command Line Processor from the source code\&.
+.SS "#define __CLASS_CMDLINE__"
+
+.PP
+Definición en la línea \fB9\fP del archivo \fBcmdline\&.hpp\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

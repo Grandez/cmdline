@@ -160,8 +160,15 @@ Parameter** _getOptions  (bool def) {
     cmdline::Options opts;
     
     try {
-        cmdline::Options opts = (def) ? _cmdLine->getDefaultOptions()
-                                      : _cmdLine->getCurrentOptions();
+        if (!def) {
+            opts = _cmdLine->getCurrentOptions();
+        } else {
+            for (auto it: _cmdLine->getDefaultOptions()) {
+                vector<string> v;
+                v.push_back(it.second);
+                opts.emplace(it.first, v);
+            }
+        }
         return _makeArrayParameter(opts);
     }
     catch (exception ex) {
@@ -244,7 +251,7 @@ Parameter** cGetDefinitions  () {
     return _makeArrayParameter(defs);
 }
 
-extern "C" CmdLine*  cmdline_create(int argc, char** arg, ParmDef cparms[]) {
+extern "C" CmdLine*  cmdline_create(int argc, const char** arg, ParmDef cparms[]) {
     if (_pCmdLine != nullptr) return _pCmdLine;
     cmdline::Parameters parms = makeParameters(cparms);
     try {

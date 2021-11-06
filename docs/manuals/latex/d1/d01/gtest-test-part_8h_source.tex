@@ -1,6 +1,6 @@
 \hypertarget{gtest-test-part_8h_source}{}\doxysection{gtest-\/test-\/part.h}
 \label{gtest-test-part_8h_source}\index{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.4/build/native/include/gtest/gtest-\/test-\/part.h@{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.4/build/native/include/gtest/gtest-\/test-\/part.h}}
-\mbox{\hyperlink{gtest-test-part_8h}{Go to the documentation of this file.}}
+\mbox{\hyperlink{gtest-test-part_8h}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00001}00001 \textcolor{comment}{// Copyright 2008, Google Inc.}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00002}00002 \textcolor{comment}{// All rights reserved.}}
@@ -54,7 +54,7 @@
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00050}00050  \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00051}00051   \textcolor{comment}{// The possible outcomes of a test part (i.e. an assertion or an}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00052}00052   \textcolor{comment}{// explicit SUCCEED(), FAIL(), or ADD\_FAILURE()).}}
-\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00053}00053   \textcolor{keyword}{enum} \mbox{\hyperlink{cmdline__types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} \{}
+\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00053}00053   \textcolor{keyword}{enum} \mbox{\hyperlink{include_2types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} \{}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00054}00054     kSuccess,          \textcolor{comment}{// Succeeded.}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00055}00055     kNonFatalFailure,  \textcolor{comment}{// Failed but the test can continue.}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00056}00056     kFatalFailure      \textcolor{comment}{// Failed and the test should be terminated.}}
@@ -63,7 +63,7 @@
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00059}00059   \textcolor{comment}{// C'tor.  TestPartResult does NOT have a default constructor.}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00060}00060   \textcolor{comment}{// Always use this constructor (with parameters) to create a}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00061}00061   \textcolor{comment}{// TestPartResult object.}}
-\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00062}00062   TestPartResult(\mbox{\hyperlink{cmdline__types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} a\_type,}
+\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00062}00062   TestPartResult(\mbox{\hyperlink{include_2types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} a\_type,}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00063}00063                  \textcolor{keyword}{const} \textcolor{keywordtype}{char}* a\_file\_name,}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00064}00064                  \textcolor{keywordtype}{int} a\_line\_number,}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00065}00065                  \textcolor{keyword}{const} \textcolor{keywordtype}{char}* a\_message)}
@@ -75,7 +75,7 @@
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00071}00071   \}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00072}00072 }
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00073}00073   \textcolor{comment}{// Gets the outcome of the test part.}}
-\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00074}00074   \mbox{\hyperlink{cmdline__types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} type()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} type\_; \}}
+\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00074}00074   \mbox{\hyperlink{include_2types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} type()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} type\_; \}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00075}00075 }
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00076}00076   \textcolor{comment}{// Gets the name of the source file where the test part took place, or}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00077}00077   \textcolor{comment}{// NULL if it's unknown.}}
@@ -106,7 +106,7 @@
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00102}00102   \textcolor{keywordtype}{bool} fatally\_failed()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} type\_ == kFatalFailure; \}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00103}00103 }
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00104}00104  \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00105}00105   \mbox{\hyperlink{cmdline__types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} type\_;}
+\DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00105}00105   \mbox{\hyperlink{include_2types_8h_a39ee0cc0a0347076a6a12aff45459e70}{Type}} type\_;}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00106}00106 }
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00107}00107   \textcolor{comment}{// Gets the summary of the failure message by omitting the stack}}
 \DoxyCodeLine{\Hypertarget{gtest-test-part_8h_source_l00108}00108   \textcolor{comment}{// trace in it.}}

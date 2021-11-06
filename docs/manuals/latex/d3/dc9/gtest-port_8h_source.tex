@@ -1,6 +1,6 @@
 \hypertarget{gtest-port_8h_source}{}\doxysection{gtest-\/port.h}
 \label{gtest-port_8h_source}\index{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.4/build/native/include/gtest/internal/gtest-\/port.h@{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.4/build/native/include/gtest/internal/gtest-\/port.h}}
-\mbox{\hyperlink{gtest-port_8h}{Go to the documentation of this file.}}
+\mbox{\hyperlink{gtest-port_8h}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l00001}00001 \textcolor{comment}{// Copyright 2005, Google Inc.}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l00002}00002 \textcolor{comment}{// All rights reserved.}}
@@ -2458,7 +2458,7 @@
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02454}02454 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a1ef2385a7f8e4c706054da35967e76bd}{StrCaseCmp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* s2) \{}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02455}02455   \textcolor{keywordflow}{return} stricmp(s1, s2);}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02456}02456 \}}
-\DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02457}02457 \textcolor{keyword}{inline} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c}{StrDup}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* src) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}(src); \}}
+\DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02457}02457 \textcolor{keyword}{inline} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c}{StrDup}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* src) \{ \textcolor{keywordflow}{return} strdup(src); \}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02458}02458 \textcolor{preprocessor}{\# else  }\textcolor{comment}{// !\_\_BORLANDC\_\_}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02459}02459 \textcolor{preprocessor}{\#  if GTEST\_OS\_WINDOWS\_MOBILE}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02460}02460 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a16ebe936b3a8ea462a94191635aedc27}{IsATTY}}(\textcolor{keywordtype}{int} \textcolor{comment}{/* fd */}) \{ \textcolor{keywordflow}{return} 0; \}}
@@ -2494,7 +2494,7 @@
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02490}\mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a1ef2385a7f8e4c706054da35967e76bd}{02490}} \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a1ef2385a7f8e4c706054da35967e76bd}{StrCaseCmp}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* s2) \{}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02491}02491   \textcolor{keywordflow}{return} strcasecmp(s1, s2);}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02492}02492 \}}
-\DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02493}\mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c}{02493}} \textcolor{keyword}{inline} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c}{StrDup}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* src) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{tools_8h_a33bc8f85636226ba23bf348f78352aef}{strdup}}(src); \}}
+\DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02493}\mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c}{02493}} \textcolor{keyword}{inline} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c}{StrDup}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* src) \{ \textcolor{keywordflow}{return} strdup(src); \}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02494}\mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_acbad5d4ea5b73fd1765f5f760642932a}{02494}} \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_acbad5d4ea5b73fd1765f5f760642932a}{RmDir}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* dir) \{ \textcolor{keywordflow}{return} rmdir(dir); \}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02495}\mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_af0d04ed5baeed28353fa38742748a421}{02495}} \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_af0d04ed5baeed28353fa38742748a421}{IsDir}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacetesting_1_1internal_1_1posix_a8eb9f08d3af29941c2d2a964cfff3ecb}{StatStruct}}\& st) \{ \textcolor{keywordflow}{return} S\_ISDIR(st.st\_mode); \}}
 \DoxyCodeLine{\Hypertarget{gtest-port_8h_source_l02496}02496 }
