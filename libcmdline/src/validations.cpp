@@ -298,7 +298,7 @@ namespace _cmdline {
 		int rc = stat(value, &info);
 		if (stat(value, &info) != 0) throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NO_DIR);
 		unsigned short mask = info.st_mode & S_IFDIR;
-		mask ^= 16384; // 100 0000 0000 0000
+		//mask ^= 16384; // 100 0000 0000 0000
 		if (mask == 0)          throw CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR_NOTFND);
 		//if ((info.st_mode & S_IFDIR) == 0)               throw CmdLineValueException(value, "is not a directory");
 		return filesystem::path(value);

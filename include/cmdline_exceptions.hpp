@@ -11,7 +11,22 @@
 #include <stdexcept>
 #include <unordered_map>
 #include <cstdarg>
+/*
+namespace cmdline {
+	class CmdLineNotFoundException;
+	class CmdLineInvalidTypeException;
+	class CmdLineException;
+	class CmdLineParameterException;
+	class CmdLineValueException;
+	class CmdLineDuplicateArgumentException;
+	class HelpRequested;
+	class HelpSimpleRequested;
+	class HelpDetailedRequested;
+}
+*/
 
+#ifndef __CMDLINE_EXCEPTIONS__
+#define __CMDLINE_EXCEPTIONS__
 namespace cmdline {
 	class CmdLineNotFoundException : public std::runtime_error {
 	public:
@@ -54,7 +69,7 @@ namespace cmdline {
 
 	class HelpRequested : public CmdLineException {
 	public:
-		const char *name = nullptr;
+		char *name;
 		bool detailed = false;
 		std::unordered_map<std::string, bool>        flags;
 		std::unordered_map<std::string, std::string> options;
@@ -67,14 +82,15 @@ namespace cmdline {
 	};
 	class HelpSimpleRequested : public HelpRequested {
 	public:
-		HelpSimpleRequested( const char *programName
+		HelpSimpleRequested( const char * programName
 			                ,unordered_map<string,bool> flags  
 		                    ,unordered_map<string,string> options);       
 	};
 	class HelpDetailedRequested : public HelpRequested {
 	public:
-		HelpDetailedRequested( const char *programName
+		HelpDetailedRequested( const char * programName
 			                  ,unordered_map<string,bool> flags  
 		                      ,unordered_map<string,string> options);
 	};
 }
+#endif

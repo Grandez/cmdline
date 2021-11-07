@@ -33,6 +33,16 @@ namespace cmdline {
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return singleton_;
 	}
+//	CmdLine* CmdLine::getInstance(int argc, char** argv, Parameters parms) {
+//		return getInstance(argc, (const char**) argv, parms);
+//	}
+	CmdLine* CmdLine::getInstance(int argc, char* argv[], Parameters parms) {
+		return getInstance(argc, (const char**) argv, parms);
+	}
+//	CmdLine* CmdLine::getInstance(int argc, const char* argv[], Parameters parms) {
+//		return getInstance(argc, (const char**) argv, parms);
+//	}
+
 	CmdLine* CmdLine::pGetInstance(int argc,  const char**  argv, Parameters parms, bool sensitive, bool strict) {
 		cmdline::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, sensitive, strict);

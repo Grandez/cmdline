@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 
+#include "config.h"
 #include "commandline.hpp"
 #include "argument.hpp"
 #include "tools.hpp"
@@ -14,7 +15,31 @@ using namespace std;
 namespace _cmdline {
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
-    const char *programName = nullptr;
+    char *programName = nullptr;
+	void checkHelp(CommandLine *ptr) {
+		int help = 0;
+		HelpRequested *ex = nullptr;
+		if (ptr->hasFlag("HELP")) help |= 2;
+		if (ptr->hasFlag("help")) help |= 1;
+		if (help) {
+			Flags flags = ptr->getDefaultFlags(false);
+			std::unordered_map<string, string> options = ptr->getDefaultOptions();
+			delete ptr;
+		    if (help >= 2) throw new HelpDetailedRequested(strdup(programName), flags, options);
+			throw new HelpSimpleRequested(strdup(programName), flags, options);
+		}
+	}
+    void findConfig(int argc, const char **argv) {
+		char c;
+		for (int i = 1; i < argc; i++) {
+			if (strcmp(argv[i], CMDLINE_CONFIG) == 0) {
+				if ((i+1) == argc)  cout << "error"; // Error
+				c = argv[i+1][0];
+				if (c == '/' || c == '-' || c == '+') cout << "error"; // error
+				// process config
+			}
+		}
+	}
 	CommandLine::CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
 		std::cout << "Crea CommandLine\n";
 		this->sensitive = sensitive;
@@ -25,6 +50,18 @@ namespace _cmdline {
 	}
 	CommandLine::~CommandLine() {
 		std::cout << "Delete CommandLine\n";
+		for (int i = 0; i < 128; i++) {
+			
+			if (rootOptions[i]) {
+				std::cout << "deleting option " << i << "\n";
+				delete rootOptions[i];
+			}
+			if (rootFlags[i])  {
+				std::cout << "deleting flag " << i << "\n";
+				delete rootFlags[i];
+			}
+		}
+		std::cout << "Fin Delete CommandLine\n";
 	}
 	vector<const char*> CommandLine::getArgs() {
 		return inputs;
@@ -108,7 +145,9 @@ namespace _cmdline {
 	// PRIVATES
 	// /////////////////////////////////////////////////////////////
 	void CommandLine::parse(int argc, const char** argv) {
-		programName = argv[0];
+		findConfig(argc, argv);
+
+		programName = strdup(argv[0]);
 		char c;
 		char szOpt[64] = "";
 		std::string in;
@@ -130,17 +169,20 @@ namespace _cmdline {
 			case '+': if (prev != nullptr) throw CmdLineException(ERR_ARG_MISSING, prev);
 				prev = updateFlag(szOpt, argv[i], true);   break;
 			case '-': in = string(szOpt);
-				prev = (in == std::string("-h") || in == std::string("--help")) ?
-					updateFlag((char*)"+help", prev, true) :
+				if (in == std::string("-h") || in == std::string("--help")) {
+					updateFlag((char*)"+help", prev, true);
+				} else if (in == std::string("-H") || in == std::string("--HELP")) {
+					updateFlag((char*)"+HELP", prev, true);
+				} else {
 					updateFlag(argv[i], prev, false);
+				}
 				break;
 			default:
 				if (prev == NULL) inputs.push_back(argv[i]);
 				if (prev != NULL) prev = addValueToOption(argv[i], prev);
 			}
 		}
-		if (hasFlag("HELP")) throw HelpDetailedRequested(programName, getDefaultFlags(false), getDefaultOptions());
-		if (hasFlag("help")) throw HelpSimpleRequested(programName, getDefaultFlags(false), getDefaultOptions());
+		checkHelp(this);
 	}
 	char* CommandLine::updateOption(const char* option, char* prev) {
 		size_t pos = std::string(option).find("=");

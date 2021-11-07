@@ -12,6 +12,7 @@ template <typename T> const T         getOptionAs(const char* name) {
 		
 	bool            CmdLine::isOptionMultiple(string name) { return _commandLine->isOptionMultiple(name.c_str()); };
 */
+/*
 namespace cmdline {
 template<> string CmdLine::getOptionAs<string>(const char* name) {
 	const char* value = getOption(name);
@@ -38,6 +39,7 @@ template<> any CmdLine::getOptionAs<>(const char* name) {
 }
 
 }
+*/
 /*
 template <typename T> T castByNative(const char* value) {
 		if constexpr (is_same<T, const char*>::value)      return value;

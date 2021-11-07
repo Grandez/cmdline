@@ -1,24 +1,25 @@
-﻿Build started 05/11/2021 22:39:50.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" on node 3 (Build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 07/11/2021 17:19:29.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" on node 3 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Release\drivercm.fb0009be.tlog\drivercmdline_cpp.lastbuildstate".
+       InitializeBuildStatus:
          Creating "x64\Release\drivercm.fb0009be.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D CODE_ANALYSIS /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /analyze /analyze:projectdirectory"P:\C\cmdline\drivercmdline_cpp" /analyze:rulesetdirectory";C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\\Rule Sets;" /analyze:ruleset"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\Rule Sets\NativeRecommendedRules.ruleset" /analyze:quiet /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\EspXEngine.dll" /FC /errorReport:prompt drivercmdline_cpp.cpp
+         drivercmdline_cpp.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\x64\Release\drivercmdline_cpp.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\x64\Release\drivercmdline_cpp.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"x64\Release\drivercmdline_cpp.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\x64\Release\drivercmdline_cpp.lib" /MACHINE:X64 x64\Release\drivercmdline_cpp.obj
          P:\C\cmdline\libs\libcmdline64.lib
-         Generating code
-         Previous IPDB and IOBJ mismatch, fall back to full compilation.
-         All 207 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-         Finished generating code
-         drivercmdline_cpp.vcxproj -> P:\C\cmdline\x64\Release\drivercmdline_cpp.exe
-       FinalizeBuildStatus:
-         Deleting file "x64\Release\drivercm.fb0009be.tlog\unsuccessfulbuild".
-         Touching "x64\Release\drivercm.fb0009be.tlog\drivercmdline_cpp.lastbuildstate".
-     1>Done Building Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" (Build target(s)).
+     1>LINK : fatal error LNK1181: cannot open input file 'P:\C\cmdline\libs\libcmdline64.lib'
+     1>Done Building Project "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
+
+       "P:\C\cmdline\drivercmdline_cpp\drivercmdline_cpp.vcxproj" (Rebuild target) (1) ->
+       (Link target) -> 
+         LINK : fatal error LNK1181: cannot open input file 'P:\C\cmdline\libs\libcmdline64.lib'
+
     0 Warning(s)
-    0 Error(s)
+    1 Error(s)
 
-Time Elapsed 00:00:01.00
+Time Elapsed 00:00:04.35

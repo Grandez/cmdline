@@ -1,8 +1,35 @@
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+// #include <vld.h>
+
 #include <iostream>
 
 #include "cmdline.hpp"
 
 using namespace cmdline;
+
+void showHelpSimple(HelpRequested* help) {
+    string flags("[?verbose] [?summary] [?overwrite]");
+    string options("[/input list] [/output dir] [/ext pattern_list] [/pattern pattern_list]");
+    cout << "A sample program about use parameters" << endl;
+    cout << "Use: " << help->name << " " << flags << " " << options << endl;
+    delete help;
+}
+void showHelpDetail(HelpRequested* help) {
+    string flags("[?verbose] [?summary] [?overwrite]");
+    string options("[/input list] [/output dir] [/ext pattern_list] [/pattern pattern_list]");
+    cout << "A sample program about use parameters" << endl;
+    cout << "Use: " << help->name << " " << flags << " " << options << endl;
+    cout << "\tverbose:" << "\t show progress information. Default: " << help->flags.at("verbose") << endl;
+    cout << "\tsummary:" << "\t Print summary info after process. Default: " << help->flags.at("summary") << endl;
+    cout << "\toverwrite:" << "\t Overwrite existing file?. Default: " << help->flags.at("overwrite") << endl;
+    delete help;
+
+}
+void showHelp(HelpRequested *help) {
+    (help->detailed) ? showHelpDetail(help) : showHelpSimple(help);
+}
 
 Parameters  parms = { 
     ParmFlag("verbose",  true)  // Show progress
@@ -14,28 +41,30 @@ Parameters  parms = {
    ,ParmOption("pattern", Type::STRING, true)              // regexp for name
 };
 
-void showHelpSimple(HelpRequested& help) {
-    string flags("[?verbose] [?summary] [?overwrite]");
-    string options("[/input list] [/output dir] [/ext pattern_list] [/pattern pattern_list]");
-    cout << "A sample program about use parameters" << endl;
-    cout << "Use: " << help.name << flags << " " << options << endl;
-}
-void showHelpDetail(HelpRequested& help) {
-}
-void showHelp(HelpRequested& help) {
-    (help.detailed) ? showHelpDetail(help) : showHelpSimple(help);
-}
-
-
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
+    _CrtMemState s1, s2, s3;
+    _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
+    _crtBreakAlloc = 246;
+    {
     CmdLine *cmdline = nullptr;
     try {
+        
+_CrtMemCheckpoint( &s1 );
+
        cmdline = CmdLine::getInstance(argc, argv,parms);
     }
-    catch (HelpRequested help) { showHelp(help); } 
-    catch (CmdLineException ex) {
+    catch (HelpRequested *help) { 
+        showHelp(help); 
+        delete cmdline;
+    } 
+    catch (CmdLineException *ex) {
+        cout << "error\n";
     }
-
+    }
+_CrtMemCheckpoint( &s2 );
+if ( _CrtMemDifference( &s3, &s1, &s2) )
+   _CrtMemDumpStatistics( &s3 );
+    cout << "Esto seria el final\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

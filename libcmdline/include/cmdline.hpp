@@ -79,6 +79,9 @@ namespace cmdline {
 		CmdLine() {};
 		CmdLine(int argc, const char **argv, Parameters parms); 
 		~CmdLine(); 
+//		static CmdLine *getInstance(int argc, char** argv, Parameters parms = Parameters());
+		static CmdLine *getInstance(int argc, char* argv[], Parameters parms = Parameters());
+//		static CmdLine *getInstance(int argc, const char* argv[], Parameters parms = Parameters());
 		static CmdLine *getInstance(int argc, const char** argv, Parameters parms = Parameters());
 		static CmdLine *getInstance(Parameters parms, int argc, const char** argv);
 		static void freeInstance();  // Just for test

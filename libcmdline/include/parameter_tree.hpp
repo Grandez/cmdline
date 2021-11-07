@@ -12,9 +12,12 @@ namespace _cmdline {
         ParameterTree() = delete;
         ParameterTree(ParameterTree&) = delete;
         ParameterTree(ParameterTree&&) = delete;
-        ParameterTree(const char* parm, ParameterTree* parent = nullptr) { letter = parm[0]; this->parent = parent;  }
+        ParameterTree(const char* parm, ParameterTree* parent = nullptr) { 
+            letter = parm[0]; 
+            this->parent = parent;  
+        }
+        ~ParameterTree();
         ParameterTree&  addBranch(ParameterTree* tree);
-        std::string     getName(const std::string parm, int pos = 1);
         char*           getWord();
         char*           getReversedWord();
         ParameterTree*  getNext();

@@ -1,4 +1,4 @@
-﻿Build started 06/11/2021 20:35:45.
+﻿Build started 07/11/2021 15:38:15.
 Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\libcmdline\libcmdline.vcxproj" on node 2 (Rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "x64\Release\libcmdline.tlog\libcmdline.lastbuildstate".
@@ -15,7 +15,6 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\libcmdline\libc
          parameter_tree.cpp
          parm.cpp
          templates.cpp
-     1>P:\C\cmdline\libcmdline\src\templates.cpp(36,1): warning C4060: switch statement contains no 'case' or 'default' labels
          tools.cpp
          validations.cpp
        Lib:
@@ -37,12 +36,7 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\libcmdline\libc
      1>Done Building Project "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
-
-       "P:\C\cmdline\libcmdline\libcmdline.vcxproj" (Rebuild target) (1) ->
-       (ClCompile target) -> 
-         P:\C\cmdline\libcmdline\src\templates.cpp(36,1): warning C4060: switch statement contains no 'case' or 'default' labels
-
-    1 Warning(s)
+    0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:14.02
+Time Elapsed 00:00:14.13

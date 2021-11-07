@@ -1,0 +1,32 @@
+﻿Build started 07/11/2021 15:40:58.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\sample_cpp\sample_cpp.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Release\sample_cpp.tlog\sample_cpp.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "x64\Release\sample_cpp.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt sample_cpp.cpp
+         sample_cpp.cpp
+     1>P:\C\cmdline\sample_cpp\sample_cpp.cpp(44,30): warning C4101: 'ex': unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\x64\Release\sample_cpp.exe" /INCREMENTAL:NO /NOLOGO P:\C\cmdline\libs\libcmdline64.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\x64\Release\sample_cpp.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"x64\Release\sample_cpp.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\x64\Release\sample_cpp.lib" /MACHINE:X64 x64\Release\sample_cpp.obj
+         Generating code
+         Previous IPDB not found, fall back to full compilation.
+         All 2666 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         Finished generating code
+         sample_cpp.vcxproj -> P:\C\cmdline\x64\Release\sample_cpp.exe
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\sample_cpp.tlog\unsuccessfulbuild".
+         Touching "x64\Release\sample_cpp.tlog\sample_cpp.lastbuildstate".
+     1>Done Building Project "P:\C\cmdline\sample_cpp\sample_cpp.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+       "P:\C\cmdline\sample_cpp\sample_cpp.vcxproj" (Rebuild target) (1) ->
+       (ClCompile target) -> 
+         P:\C\cmdline\sample_cpp\sample_cpp.cpp(44,30): warning C4101: 'ex': unreferenced local variable
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.28

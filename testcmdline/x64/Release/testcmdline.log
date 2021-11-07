@@ -1,41 +1,268 @@
-﻿Build started 05/11/2021 22:39:50.
-Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 07/11/2021 17:19:29.
+Logging verbosity is set to: Normal.     1>Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
+       InitializeBuildStatus:
          Creating "x64\Release\testcmdline.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
-         All outputs are up-to-date.
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\cmdline\x64\Release\testcmdline.exe" /NOLOGO "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest_main.lib" "P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x64\Release\gtest.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\cmdline\x64\Release\testcmdline.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\cmdline\x64\Release\testcmdline.lib" /MACHINE:X64 /SAFESEH:NO x64\Release\argumentTest.obj
-         x64\Release\defaultValuesTest.obj
-         x64\Release\exceptionsDefaultTest.obj
-         x64\Release\exceptionsTest.obj
-         x64\Release\exceptionsValueTest.obj
-         x64\Release\mainTest.obj
-         x64\Release\pch.obj
-         x64\Release\caseTest.obj
-         x64\Release\defaultsTest.obj
-         x64\Release\definesTest.obj
-         x64\Release\flagsTest.obj
-         x64\Release\helpTest.obj
-         x64\Release\inputTest.obj
-         x64\Release\optionsTest.obj
-         x64\Release\TypesTest.obj
-         "x64\Release\$tool.obj"
-         x64\Release\test_tree.obj
-         x64\Release\validationsTest.obj
-         P:\C\cmdline\libs\libcmdline64.lib
-         libcmdline64.lib(parm.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-         Generating code
-         Finished generating code
-         testcmdline.vcxproj -> P:\C\cmdline\x64\Release\testcmdline.exe
-       FinalizeBuildStatus:
-         Deleting file "x64\Release\testcmdline.tlog\unsuccessfulbuild".
-         Touching "x64\Release\testcmdline.tlog\testcmdline.lastbuildstate".
-     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /O2 /D X64 /D NDEBUG /D _CONSOLE /D CODE_ANALYSIS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yc"pch.h" /Fp"x64\Release\testcmdline.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /analyze /analyze:projectdirectory"P:\C\cmdline\testcmdline" /analyze:rulesetdirectory";C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\\Rule Sets;" /analyze:ruleset"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\Rule Sets\NativeRecommendedRules.ruleset" /analyze:quiet /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\EspXEngine.dll" /FC /errorReport:prompt pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /I"P:\C\cmdline\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\include" /Zi /nologo /W3 /WX- /diagnostics:column /O2 /D X64 /D NDEBUG /D _CONSOLE /D CODE_ANALYSIS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Yu"pch.h" /Fp"x64\Release\testcmdline.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc142.pdb" /external:W3 /Gd /TP /analyze /analyze:projectdirectory"P:\C\cmdline\testcmdline" /analyze:rulesetdirectory";C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\\Rule Sets;" /analyze:ruleset"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\Rule Sets\NativeRecommendedRules.ruleset" /analyze:quiet /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\EspXEngine.dll" /FC /errorReport:prompt argumentTest.cpp defaultValuesTest.cpp exceptionsDefaultTest.cpp exceptionsTest.cpp exceptionsValueTest.cpp mainTest.cpp caseTest.cpp defaultsTest.cpp definesTest.cpp flagsTest.cpp helpTest.cpp inputTest.cpp optionsTest.cpp TypesTest.cpp "$tool.cpp" test_tree.cpp validationsTest.cpp
+         argumentTest.cpp
+     1>P:\C\cmdline\testcmdline\argumentTest.cpp(7,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\argumentTest.cpp(7,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\argumentTest.cpp(15,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\argumentTest.cpp(15,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\argumentTest.cpp(22,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\argumentTest.cpp(22,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\argumentTest.cpp(29,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\argumentTest.cpp(29,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\argumentTest.cpp(41,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\argumentTest.cpp(41,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         defaultValuesTest.cpp
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(23,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(23,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(32,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(32,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(42,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(42,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(51,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(51,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(60,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(60,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(69,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(69,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultValuesTest.cpp(78,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultValuesTest.cpp(78,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         exceptionsDefaultTest.cpp
+         exceptionsTest.cpp
+     1>P:\C\cmdline\testcmdline\exceptionsTest.cpp(13,62): error C2679: binary '=': no operator found which takes a right-hand operand of type 'cmdline::CmdLine *' (or there is no acceptable conversion)
+       P:\C\cmdline\libcmdline\include\cmdline.hpp(153,2): message : could be 'cmdline::CmdLine &cmdline::CmdLine::operator =(const cmdline::CmdLine &)'
+       P:\C\cmdline\testcmdline\exceptionsTest.cpp(13,62): message : while trying to match the argument list '(cmdline::CmdLine, cmdline::CmdLine *)'
+     1>P:\C\cmdline\testcmdline\exceptionsTest.cpp(30,62): error C2679: binary '=': no operator found which takes a right-hand operand of type 'cmdline::CmdLine *' (or there is no acceptable conversion)
+       P:\C\cmdline\libcmdline\include\cmdline.hpp(153,2): message : could be 'cmdline::CmdLine &cmdline::CmdLine::operator =(const cmdline::CmdLine &)'
+       P:\C\cmdline\testcmdline\exceptionsTest.cpp(30,62): message : while trying to match the argument list '(cmdline::CmdLine, cmdline::CmdLine *)'
+     1>P:\C\cmdline\testcmdline\exceptionsTest.cpp(47,62): error C2679: binary '=': no operator found which takes a right-hand operand of type 'cmdline::CmdLine *' (or there is no acceptable conversion)
+       P:\C\cmdline\libcmdline\include\cmdline.hpp(153,2): message : could be 'cmdline::CmdLine &cmdline::CmdLine::operator =(const cmdline::CmdLine &)'
+       P:\C\cmdline\testcmdline\exceptionsTest.cpp(47,62): message : while trying to match the argument list '(cmdline::CmdLine, cmdline::CmdLine *)'
+         exceptionsValueTest.cpp
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(20,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(20,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(26,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(26,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(32,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(32,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(38,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(38,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(44,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(44,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(50,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(50,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(56,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(56,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(62,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(62,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(77,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(77,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(110,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(110,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         mainTest.cpp
+         caseTest.cpp
+     1>P:\C\cmdline\testcmdline\caseTest.cpp(10,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+       P:\C\cmdline\testcmdline\caseTest.cpp(10,66): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\caseTest.cpp(21,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+       P:\C\cmdline\testcmdline\caseTest.cpp(21,66): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\caseTest.cpp(32,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+       P:\C\cmdline\testcmdline\caseTest.cpp(32,66): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\caseTest.cpp(45,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+       P:\C\cmdline\testcmdline\caseTest.cpp(45,66): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         defaultsTest.cpp
+     1>P:\C\cmdline\testcmdline\defaultsTest.cpp(11,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultsTest.cpp(11,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultsTest.cpp(23,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultsTest.cpp(23,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultsTest.cpp(31,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultsTest.cpp(31,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultsTest.cpp(38,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\defaultsTest.cpp(38,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\defaultsTest.cpp(39,46): error C2440: 'initializing': cannot convert from 'std::unordered_map<std::string,std::string,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,std::string>>>' to 'std::unordered_map<std::string,std::vector<std::string,std::allocator<std::string>>,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,std::vector<std::string,std::allocator<std::string>>>>>'
+       P:\C\cmdline\testcmdline\defaultsTest.cpp(39,17): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+         definesTest.cpp
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(16,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(16,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(24,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(24,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(33,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(33,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(41,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(41,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(50,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(50,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(58,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(58,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(64,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(64,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(70,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(70,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(77,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(77,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\definesTest.cpp(86,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\definesTest.cpp(86,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         flagsTest.cpp
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(9,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(9,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(16,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(16,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(23,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(23,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(32,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(32,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(42,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(42,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(50,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(50,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(57,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(57,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\flagsTest.cpp(64,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\flagsTest.cpp(64,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         helpTest.cpp
+     1>P:\C\cmdline\testcmdline\helpTest.cpp(12,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\helpTest.cpp(12,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\helpTest.cpp(19,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\helpTest.cpp(19,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\helpTest.cpp(26,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\helpTest.cpp(26,2): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         inputTest.cpp
+         optionsTest.cpp
+     1>P:\C\cmdline\testcmdline\optionsTest.cpp(10,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\optionsTest.cpp(10,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\optionsTest.cpp(22,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\optionsTest.cpp(22,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\optionsTest.cpp(36,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\optionsTest.cpp(36,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\optionsTest.cpp(50,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\optionsTest.cpp(50,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\optionsTest.cpp(64,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\optionsTest.cpp(64,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         TypesTest.cpp
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(10,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(10,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(20,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(20,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(29,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(29,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(38,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(38,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(47,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(47,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(56,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(56,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(65,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(65,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(74,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(74,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(83,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(83,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(92,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(92,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(101,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(101,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(111,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(111,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(122,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(122,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(132,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(132,55): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>P:\C\cmdline\testcmdline\TypesTest.cpp(143,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+       P:\C\cmdline\testcmdline\TypesTest.cpp(143,69): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+         $tool.cpp
+         test_tree.cpp
+         validationsTest.cpp
+         Running Code Analysis for C/C++...
+         Generating Code...
+     1>Done Building Project "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
+
+       "P:\C\cmdline\testcmdline\testcmdline.vcxproj" (Rebuild target) (1) ->
+       (ClCompile target) -> 
+         P:\C\cmdline\testcmdline\argumentTest.cpp(7,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\argumentTest.cpp(15,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\argumentTest.cpp(22,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\argumentTest.cpp(29,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\argumentTest.cpp(41,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(23,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(32,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(42,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(51,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(60,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(69,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultValuesTest.cpp(78,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsTest.cpp(13,62): error C2679: binary '=': no operator found which takes a right-hand operand of type 'cmdline::CmdLine *' (or there is no acceptable conversion)
+         P:\C\cmdline\testcmdline\exceptionsTest.cpp(30,62): error C2679: binary '=': no operator found which takes a right-hand operand of type 'cmdline::CmdLine *' (or there is no acceptable conversion)
+         P:\C\cmdline\testcmdline\exceptionsTest.cpp(47,62): error C2679: binary '=': no operator found which takes a right-hand operand of type 'cmdline::CmdLine *' (or there is no acceptable conversion)
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(20,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(26,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(32,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(38,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(44,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(50,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(56,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(62,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(77,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\exceptionsValueTest.cpp(110,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\caseTest.cpp(10,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+         P:\C\cmdline\testcmdline\caseTest.cpp(21,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+         P:\C\cmdline\testcmdline\caseTest.cpp(32,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+         P:\C\cmdline\testcmdline\caseTest.cpp(45,66): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLineI'
+         P:\C\cmdline\testcmdline\defaultsTest.cpp(11,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultsTest.cpp(23,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultsTest.cpp(31,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultsTest.cpp(38,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\defaultsTest.cpp(39,46): error C2440: 'initializing': cannot convert from 'std::unordered_map<std::string,std::string,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,std::string>>>' to 'std::unordered_map<std::string,std::vector<std::string,std::allocator<std::string>>,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,std::vector<std::string,std::allocator<std::string>>>>>'
+         P:\C\cmdline\testcmdline\definesTest.cpp(16,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(24,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(33,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(41,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(50,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(58,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(64,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(70,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(77,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\definesTest.cpp(86,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(9,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(16,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(23,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(32,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(42,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(50,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(57,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\flagsTest.cpp(64,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\helpTest.cpp(12,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\helpTest.cpp(19,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\helpTest.cpp(26,2): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\optionsTest.cpp(10,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\optionsTest.cpp(22,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\optionsTest.cpp(36,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\optionsTest.cpp(50,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\optionsTest.cpp(64,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(10,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(20,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(29,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(38,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(47,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(56,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(65,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(74,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(83,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(92,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(101,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(111,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(122,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(132,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'cmdline::CmdLine'
+         P:\C\cmdline\testcmdline\TypesTest.cpp(143,69): error C2440: 'initializing': cannot convert from 'cmdline::CmdLine *' to 'cmdline::CmdLine'
+
     0 Warning(s)
-    0 Error(s)
+    75 Error(s)
 
-Time Elapsed 00:00:01.19
+Time Elapsed 00:00:19.66

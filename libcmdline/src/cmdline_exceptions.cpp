@@ -60,19 +60,22 @@ namespace cmdline {
 		this->runtime_error::~runtime_error(); // destroy the base class
 		new (this) runtime_error((char*)txt.c_str()); //
 	}
-	HelpRequested::HelpRequested( const char *programName
-		                         ,const char *txt, bool detailed
-		                                        , unordered_map<string,bool> flags  
-		                                        , unordered_map<string,string> options)  
+        HelpRequested::HelpRequested(const char *programName, const char *txt, bool detailed
+		                             , std::unordered_map<std::string, bool> flags
+		                             , std::unordered_map<std::string, string> options)
+
 		: CmdLineException(txt) {
 		filesystem::path fs(programName);
-		string f = fs.filename().string();
-		this->name = f.c_str();
+		this->name = strdup(fs.filename().string().c_str());
 		this->detailed = detailed;
 		this->flags   =  flags;
 		this->options = options;
 	};
-	HelpSimpleRequested::HelpSimpleRequested( const char *programName
+     HelpRequested::~HelpRequested() {
+		 cout << "delete HelpRequested\n";
+		 free((void *) name);
+	 }
+	HelpSimpleRequested::HelpSimpleRequested( char* programName
 		                                     ,unordered_map<string,bool> flags  
 		                                     ,unordered_map<string,string> options)       
 		                : HelpRequested(programName, TXT_HELP, false, flags, options) {};
