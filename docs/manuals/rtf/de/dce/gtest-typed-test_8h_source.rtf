@@ -1,0 +1,734 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-typed-test.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-typed-test.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-typed-test.h}
+{\bkmkstart AAAAAAALQH}
+{\bkmkend AAAAAAALQH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALQI" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAALQJ}{\bkmkend AAAAAAALQJ}
+00001 {\cf20 // Copyright 2008 Google Inc.}\par
+{\bkmkstart AAAAAAALQK}{\bkmkend AAAAAAALQK}
+00002 {\cf20 // All Rights Reserved.}\par
+{\bkmkstart AAAAAAALQL}{\bkmkend AAAAAAALQL}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAALQM}{\bkmkend AAAAAAALQM}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAALQN}{\bkmkend AAAAAAALQN}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAALQO}{\bkmkend AAAAAAALQO}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAALQP}{\bkmkend AAAAAAALQP}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAALQQ}{\bkmkend AAAAAAALQQ}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAALQR}{\bkmkend AAAAAAALQR}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAALQS}{\bkmkend AAAAAAALQS}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAALQT}{\bkmkend AAAAAAALQT}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAALQU}{\bkmkend AAAAAAALQU}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAALQV}{\bkmkend AAAAAAALQV}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAALQW}{\bkmkend AAAAAAALQW}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAALQX}{\bkmkend AAAAAAALQX}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAALQY}{\bkmkend AAAAAAALQY}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAALQZ}{\bkmkend AAAAAAALQZ}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAALRA}{\bkmkend AAAAAAALRA}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAALRB}{\bkmkend AAAAAAALRB}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAALRC}{\bkmkend AAAAAAALRC}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAALRD}{\bkmkend AAAAAAALRD}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAALRE}{\bkmkend AAAAAAALRE}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAALRF}{\bkmkend AAAAAAALRF}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAALRG}{\bkmkend AAAAAAALRG}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAALRH}{\bkmkend AAAAAAALRH}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAALRI}{\bkmkend AAAAAAALRI}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAALRJ}{\bkmkend AAAAAAALRJ}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAALRK}{\bkmkend AAAAAAALRK}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAALRL}{\bkmkend AAAAAAALRL}
+00029 \par
+{\bkmkstart AAAAAAALRM}{\bkmkend AAAAAAALRM}
+00030 \par
+{\bkmkstart AAAAAAALRN}{\bkmkend AAAAAAALRN}
+00031 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAALRO}{\bkmkend AAAAAAALRO}
+00032 \par
+{\bkmkstart AAAAAAALRP}{\bkmkend AAAAAAALRP}
+00033 {\cf21 #ifndef GTEST_INCLUDE_GTEST_GTEST_TYPED_TEST_H_}\par
+{\bkmkstart AAAAAAALRQ}{\bkmkend AAAAAAALRQ}
+00034 {\cf21 #define GTEST_INCLUDE_GTEST_GTEST_TYPED_TEST_H_}\par
+{\bkmkstart AAAAAAALRR}{\bkmkend AAAAAAALRR}
+00035 \par
+{\bkmkstart AAAAAAALRS}{\bkmkend AAAAAAALRS}
+00036 {\cf20 // This header implements typed tests and type-parameterized tests.}\par
+{\bkmkstart AAAAAAALRT}{\bkmkend AAAAAAALRT}
+00037 \par
+{\bkmkstart AAAAAAALRU}{\bkmkend AAAAAAALRU}
+00038 {\cf20 // Typed (aka type-driven) tests repeat the same test for types in a}\par
+{\bkmkstart AAAAAAALRV}{\bkmkend AAAAAAALRV}
+00039 {\cf20 // list.  You must know which types you want to test with when writing}\par
+{\bkmkstart AAAAAAALRW}{\bkmkend AAAAAAALRW}
+00040 {\cf20 // typed tests. Here's how you do it:}\par
+{\bkmkstart AAAAAAALRX}{\bkmkend AAAAAAALRX}
+00041 \par
+{\bkmkstart AAAAAAALRY}{\bkmkend AAAAAAALRY}
+00042 {\cf21 #if 0}\par
+{\bkmkstart AAAAAAALRZ}{\bkmkend AAAAAAALRZ}
+00043 \par
+{\bkmkstart AAAAAAALSA}{\bkmkend AAAAAAALSA}
+00044 {\cf20 // First, define a fixture class template.  It should be parameterized}\par
+{\bkmkstart AAAAAAALSB}{\bkmkend AAAAAAALSB}
+00045 {\cf20 // by a type.  Remember to derive it from testing::Test.}\par
+{\bkmkstart AAAAAAALSC}{\bkmkend AAAAAAALSC}
+00046 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAALSD}{\bkmkend AAAAAAALSD}
+00047 {\cf17 class }FooTest : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHCP" }{}}{\fldrslt {\cs37\ul\cf2 testing::Test}}}
+ \{\par
+{\bkmkstart AAAAAAALSE}{\bkmkend AAAAAAALSE}
+00048  {\cf17 public}:\par
+{\bkmkstart AAAAAAALSF}{\bkmkend AAAAAAALSF}
+00049   ...\par
+{\bkmkstart AAAAAAALSG}{\bkmkend AAAAAAALSG}
+00050   {\cf17 typedef} std::list<T> List;\par
+{\bkmkstart AAAAAAALSH}{\bkmkend AAAAAAALSH}
+00051   {\cf17 static} T shared_;\par
+{\bkmkstart AAAAAAALSI}{\bkmkend AAAAAAALSI}
+00052   T value_;\par
+{\bkmkstart AAAAAAALSJ}{\bkmkend AAAAAAALSJ}
+00053 \};\par
+{\bkmkstart AAAAAAALSK}{\bkmkend AAAAAAALSK}
+00054 \par
+{\bkmkstart AAAAAAALSL}{\bkmkend AAAAAAALSL}
+00055 {\cf20 // Next, associate a list of types with the test case, which will be}\par
+{\bkmkstart AAAAAAALSM}{\bkmkend AAAAAAALSM}
+00056 {\cf20 // repeated for each type in the list.  The typedef is necessary for}\par
+{\bkmkstart AAAAAAALSN}{\bkmkend AAAAAAALSN}
+00057 {\cf20 // the macro to parse correctly.}\par
+{\bkmkstart AAAAAAALSO}{\bkmkend AAAAAAALSO}
+00058 {\cf17 typedef} testing::Types<char, int, unsigned int> MyTypes;\par
+{\bkmkstart AAAAAAALSP}{\bkmkend AAAAAAALSP}
+00059 TYPED_TEST_CASE(FooTest, MyTypes);\par
+{\bkmkstart AAAAAAALSQ}{\bkmkend AAAAAAALSQ}
+00060 \par
+{\bkmkstart AAAAAAALSR}{\bkmkend AAAAAAALSR}
+00061 {\cf20 // If the type list contains only one type, you can write that type}\par
+{\bkmkstart AAAAAAALSS}{\bkmkend AAAAAAALSS}
+00062 {\cf20 // directly without Types<...>:}\par
+{\bkmkstart AAAAAAALST}{\bkmkend AAAAAAALST}
+00063 {\cf20 //   TYPED_TEST_CASE(FooTest, int);}\par
+{\bkmkstart AAAAAAALSU}{\bkmkend AAAAAAALSU}
+00064 \par
+{\bkmkstart AAAAAAALSV}{\bkmkend AAAAAAALSV}
+00065 {\cf20 // Then, use TYPED_TEST() instead of TEST_F() to define as many typed}\par
+{\bkmkstart AAAAAAALSW}{\bkmkend AAAAAAALSW}
+00066 {\cf20 // tests for this test case as you want.}\par
+{\bkmkstart AAAAAAALSX}{\bkmkend AAAAAAALSX}
+00067 TYPED_TEST(FooTest, DoesBlah) \{\par
+{\bkmkstart AAAAAAALSY}{\bkmkend AAAAAAALSY}
+00068   {\cf20 // Inside a test, refer to TypeParam to get the type parameter.}\par
+{\bkmkstart AAAAAAALSZ}{\bkmkend AAAAAAALSZ}
+00069   {\cf20 // Since we are inside a derived class template, C++ requires use to}\par
+{\bkmkstart AAAAAAALTA}{\bkmkend AAAAAAALTA}
+00070   {\cf20 // visit the members of FooTest via 'this'.}\par
+{\bkmkstart AAAAAAALTB}{\bkmkend AAAAAAALTB}
+00071   TypeParam n = this->value_;\par
+{\bkmkstart AAAAAAALTC}{\bkmkend AAAAAAALTC}
+00072 \par
+{\bkmkstart AAAAAAALTD}{\bkmkend AAAAAAALTD}
+00073   {\cf20 // To visit static members of the fixture, add the TestFixture::}\par
+{\bkmkstart AAAAAAALTE}{\bkmkend AAAAAAALTE}
+00074   {\cf20 // prefix.}\par
+{\bkmkstart AAAAAAALTF}{\bkmkend AAAAAAALTF}
+00075   n += TestFixture::shared_;\par
+{\bkmkstart AAAAAAALTG}{\bkmkend AAAAAAALTG}
+00076 \par
+{\bkmkstart AAAAAAALTH}{\bkmkend AAAAAAALTH}
+00077   {\cf20 // To refer to typedefs in the fixture, add the "typename}\par
+{\bkmkstart AAAAAAALTI}{\bkmkend AAAAAAALTI}
+00078   {\cf20 // TestFixture::" prefix.}\par
+{\bkmkstart AAAAAAALTJ}{\bkmkend AAAAAAALTJ}
+00079   {\cf17 typename} TestFixture::List values;\par
+{\bkmkstart AAAAAAALTK}{\bkmkend AAAAAAALTK}
+00080   values.push_back(n);\par
+{\bkmkstart AAAAAAALTL}{\bkmkend AAAAAAALTL}
+00081   ...\par
+{\bkmkstart AAAAAAALTM}{\bkmkend AAAAAAALTM}
+00082 \}\par
+{\bkmkstart AAAAAAALTN}{\bkmkend AAAAAAALTN}
+00083 \par
+{\bkmkstart AAAAAAALTO}{\bkmkend AAAAAAALTO}
+00084 TYPED_TEST(FooTest, HasPropertyA) \{ ... \}\par
+{\bkmkstart AAAAAAALTP}{\bkmkend AAAAAAALTP}
+00085 \par
+{\bkmkstart AAAAAAALTQ}{\bkmkend AAAAAAALTQ}
+00086 {\cf20 // TYPED_TEST_CASE takes an optional third argument which allows to specify a}\par
+{\bkmkstart AAAAAAALTR}{\bkmkend AAAAAAALTR}
+00087 {\cf20 // class that generates custom test name suffixes based on the type. This should}\par
+{\bkmkstart AAAAAAALTS}{\bkmkend AAAAAAALTS}
+00088 {\cf20 // be a class which has a static template function GetName(int index) returning}\par
+{\bkmkstart AAAAAAALTT}{\bkmkend AAAAAAALTT}
+00089 {\cf20 // a string for each type. The provided integer index equals the index of the}\par
+{\bkmkstart AAAAAAALTU}{\bkmkend AAAAAAALTU}
+00090 {\cf20 // type in the provided type list. In many cases the index can be ignored.}\par
+{\bkmkstart AAAAAAALTV}{\bkmkend AAAAAAALTV}
+00091 {\cf20 //}\par
+{\bkmkstart AAAAAAALTW}{\bkmkend AAAAAAALTW}
+00092 {\cf20 // For example:}\par
+{\bkmkstart AAAAAAALTX}{\bkmkend AAAAAAALTX}
+00093 {\cf20 //   class MyTypeNames \{}\par
+{\bkmkstart AAAAAAALTY}{\bkmkend AAAAAAALTY}
+00094 {\cf20 //    public:}\par
+{\bkmkstart AAAAAAALTZ}{\bkmkend AAAAAAALTZ}
+00095 {\cf20 //     template <typename T>}\par
+{\bkmkstart AAAAAAALUA}{\bkmkend AAAAAAALUA}
+00096 {\cf20 //     static std::string GetName(int) \{}\par
+{\bkmkstart AAAAAAALUB}{\bkmkend AAAAAAALUB}
+00097 {\cf20 //       if (std::is_same<T, char>()) return "char";}\par
+{\bkmkstart AAAAAAALUC}{\bkmkend AAAAAAALUC}
+00098 {\cf20 //       if (std::is_same<T, int>()) return "int";}\par
+{\bkmkstart AAAAAAALUD}{\bkmkend AAAAAAALUD}
+00099 {\cf20 //       if (std::is_same<T, unsigned int>()) return "unsignedInt";}\par
+{\bkmkstart AAAAAAALUE}{\bkmkend AAAAAAALUE}
+00100 {\cf20 //     \}}\par
+{\bkmkstart AAAAAAALUF}{\bkmkend AAAAAAALUF}
+00101 {\cf20 //   \};}\par
+{\bkmkstart AAAAAAALUG}{\bkmkend AAAAAAALUG}
+00102 {\cf20 //   TYPED_TEST_CASE(FooTest, MyTypes, MyTypeNames);}\par
+{\bkmkstart AAAAAAALUH}{\bkmkend AAAAAAALUH}
+00103 \par
+{\bkmkstart AAAAAAALUI}{\bkmkend AAAAAAALUI}
+00104 {\cf21 #endif  }{\cf20 // 0}\par
+{\bkmkstart AAAAAAALUJ}{\bkmkend AAAAAAALUJ}
+00105 \par
+{\bkmkstart AAAAAAALUK}{\bkmkend AAAAAAALUK}
+00106 {\cf20 // Type-parameterized tests are abstract test patterns parameterized}\par
+{\bkmkstart AAAAAAALUL}{\bkmkend AAAAAAALUL}
+00107 {\cf20 // by a type.  Compared with typed tests, type-parameterized tests}\par
+{\bkmkstart AAAAAAALUM}{\bkmkend AAAAAAALUM}
+00108 {\cf20 // allow you to define the test pattern without knowing what the type}\par
+{\bkmkstart AAAAAAALUN}{\bkmkend AAAAAAALUN}
+00109 {\cf20 // parameters are.  The defined pattern can be instantiated with}\par
+{\bkmkstart AAAAAAALUO}{\bkmkend AAAAAAALUO}
+00110 {\cf20 // different types any number of times, in any number of translation}\par
+{\bkmkstart AAAAAAALUP}{\bkmkend AAAAAAALUP}
+00111 {\cf20 // units.}\par
+{\bkmkstart AAAAAAALUQ}{\bkmkend AAAAAAALUQ}
+00112 {\cf20 //}\par
+{\bkmkstart AAAAAAALUR}{\bkmkend AAAAAAALUR}
+00113 {\cf20 // If you are designing an interface or concept, you can define a}\par
+{\bkmkstart AAAAAAALUS}{\bkmkend AAAAAAALUS}
+00114 {\cf20 // suite of type-parameterized tests to verify properties that any}\par
+{\bkmkstart AAAAAAALUT}{\bkmkend AAAAAAALUT}
+00115 {\cf20 // valid implementation of the interface/concept should have.  Then,}\par
+{\bkmkstart AAAAAAALUU}{\bkmkend AAAAAAALUU}
+00116 {\cf20 // each implementation can easily instantiate the test suite to verify}\par
+{\bkmkstart AAAAAAALUV}{\bkmkend AAAAAAALUV}
+00117 {\cf20 // that it conforms to the requirements, without having to write}\par
+{\bkmkstart AAAAAAALUW}{\bkmkend AAAAAAALUW}
+00118 {\cf20 // similar tests repeatedly.  Here's an example:}\par
+{\bkmkstart AAAAAAALUX}{\bkmkend AAAAAAALUX}
+00119 \par
+{\bkmkstart AAAAAAALUY}{\bkmkend AAAAAAALUY}
+00120 {\cf21 #if 0}\par
+{\bkmkstart AAAAAAALUZ}{\bkmkend AAAAAAALUZ}
+00121 \par
+{\bkmkstart AAAAAAALVA}{\bkmkend AAAAAAALVA}
+00122 {\cf20 // First, define a fixture class template.  It should be parameterized}\par
+{\bkmkstart AAAAAAALVB}{\bkmkend AAAAAAALVB}
+00123 {\cf20 // by a type.  Remember to derive it from testing::Test.}\par
+{\bkmkstart AAAAAAALVC}{\bkmkend AAAAAAALVC}
+00124 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAALVD}{\bkmkend AAAAAAALVD}
+00125 {\cf17 class }FooTest : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHCP" }{}}{\fldrslt {\cs37\ul\cf2 testing::Test}}}
+ \{\par
+{\bkmkstart AAAAAAALVE}{\bkmkend AAAAAAALVE}
+00126   ...\par
+{\bkmkstart AAAAAAALVF}{\bkmkend AAAAAAALVF}
+00127 \};\par
+{\bkmkstart AAAAAAALVG}{\bkmkend AAAAAAALVG}
+00128 \par
+{\bkmkstart AAAAAAALVH}{\bkmkend AAAAAAALVH}
+00129 {\cf20 // Next, declare that you will define a type-parameterized test case}\par
+{\bkmkstart AAAAAAALVI}{\bkmkend AAAAAAALVI}
+00130 {\cf20 // (the _P suffix is for "parameterized" or "pattern", whichever you}\par
+{\bkmkstart AAAAAAALVJ}{\bkmkend AAAAAAALVJ}
+00131 {\cf20 // prefer):}\par
+{\bkmkstart AAAAAAALVK}{\bkmkend AAAAAAALVK}
+00132 TYPED_TEST_CASE_P(FooTest);\par
+{\bkmkstart AAAAAAALVL}{\bkmkend AAAAAAALVL}
+00133 \par
+{\bkmkstart AAAAAAALVM}{\bkmkend AAAAAAALVM}
+00134 {\cf20 // Then, use TYPED_TEST_P() to define as many type-parameterized tests}\par
+{\bkmkstart AAAAAAALVN}{\bkmkend AAAAAAALVN}
+00135 {\cf20 // for this type-parameterized test case as you want.}\par
+{\bkmkstart AAAAAAALVO}{\bkmkend AAAAAAALVO}
+00136 TYPED_TEST_P(FooTest, DoesBlah) \{\par
+{\bkmkstart AAAAAAALVP}{\bkmkend AAAAAAALVP}
+00137   {\cf20 // Inside a test, refer to TypeParam to get the type parameter.}\par
+{\bkmkstart AAAAAAALVQ}{\bkmkend AAAAAAALVQ}
+00138   TypeParam n = 0;\par
+{\bkmkstart AAAAAAALVR}{\bkmkend AAAAAAALVR}
+00139   ...\par
+{\bkmkstart AAAAAAALVS}{\bkmkend AAAAAAALVS}
+00140 \}\par
+{\bkmkstart AAAAAAALVT}{\bkmkend AAAAAAALVT}
+00141 \par
+{\bkmkstart AAAAAAALVU}{\bkmkend AAAAAAALVU}
+00142 TYPED_TEST_P(FooTest, HasPropertyA) \{ ... \}\par
+{\bkmkstart AAAAAAALVV}{\bkmkend AAAAAAALVV}
+00143 \par
+{\bkmkstart AAAAAAALVW}{\bkmkend AAAAAAALVW}
+00144 {\cf20 // Now the tricky part: you need to register all test patterns before}\par
+{\bkmkstart AAAAAAALVX}{\bkmkend AAAAAAALVX}
+00145 {\cf20 // you can instantiate them.  The first argument of the macro is the}\par
+{\bkmkstart AAAAAAALVY}{\bkmkend AAAAAAALVY}
+00146 {\cf20 // test case name; the rest are the names of the tests in this test}\par
+{\bkmkstart AAAAAAALVZ}{\bkmkend AAAAAAALVZ}
+00147 {\cf20 // case.}\par
+{\bkmkstart AAAAAAALWA}{\bkmkend AAAAAAALWA}
+00148 REGISTER_TYPED_TEST_CASE_P(FooTest,\par
+{\bkmkstart AAAAAAALWB}{\bkmkend AAAAAAALWB}
+00149                            DoesBlah, HasPropertyA);\par
+{\bkmkstart AAAAAAALWC}{\bkmkend AAAAAAALWC}
+00150 \par
+{\bkmkstart AAAAAAALWD}{\bkmkend AAAAAAALWD}
+00151 {\cf20 // Finally, you are free to instantiate the pattern with the types you}\par
+{\bkmkstart AAAAAAALWE}{\bkmkend AAAAAAALWE}
+00152 {\cf20 // want.  If you put the above code in a header file, you can #include}\par
+{\bkmkstart AAAAAAALWF}{\bkmkend AAAAAAALWF}
+00153 {\cf20 // it in multiple C++ source files and instantiate it multiple times.}\par
+{\bkmkstart AAAAAAALWG}{\bkmkend AAAAAAALWG}
+00154 {\cf20 //}\par
+{\bkmkstart AAAAAAALWH}{\bkmkend AAAAAAALWH}
+00155 {\cf20 // To distinguish different instances of the pattern, the first}\par
+{\bkmkstart AAAAAAALWI}{\bkmkend AAAAAAALWI}
+00156 {\cf20 // argument to the INSTANTIATE_* macro is a prefix that will be added}\par
+{\bkmkstart AAAAAAALWJ}{\bkmkend AAAAAAALWJ}
+00157 {\cf20 // to the actual test case name.  Remember to pick unique prefixes for}\par
+{\bkmkstart AAAAAAALWK}{\bkmkend AAAAAAALWK}
+00158 {\cf20 // different instances.}\par
+{\bkmkstart AAAAAAALWL}{\bkmkend AAAAAAALWL}
+00159 {\cf17 typedef} testing::Types<char, int, unsigned int> MyTypes;\par
+{\bkmkstart AAAAAAALWM}{\bkmkend AAAAAAALWM}
+00160 INSTANTIATE_TYPED_TEST_CASE_P(My, FooTest, MyTypes);\par
+{\bkmkstart AAAAAAALWN}{\bkmkend AAAAAAALWN}
+00161 \par
+{\bkmkstart AAAAAAALWO}{\bkmkend AAAAAAALWO}
+00162 {\cf20 // If the type list contains only one type, you can write that type}\par
+{\bkmkstart AAAAAAALWP}{\bkmkend AAAAAAALWP}
+00163 {\cf20 // directly without Types<...>:}\par
+{\bkmkstart AAAAAAALWQ}{\bkmkend AAAAAAALWQ}
+00164 {\cf20 //   INSTANTIATE_TYPED_TEST_CASE_P(My, FooTest, int);}\par
+{\bkmkstart AAAAAAALWR}{\bkmkend AAAAAAALWR}
+00165 {\cf20 //}\par
+{\bkmkstart AAAAAAALWS}{\bkmkend AAAAAAALWS}
+00166 {\cf20 // Similar to the optional argument of TYPED_TEST_CASE above,}\par
+{\bkmkstart AAAAAAALWT}{\bkmkend AAAAAAALWT}
+00167 {\cf20 // INSTANTIATE_TEST_CASE_P takes an optional fourth argument which allows to}\par
+{\bkmkstart AAAAAAALWU}{\bkmkend AAAAAAALWU}
+00168 {\cf20 // generate custom names.}\par
+{\bkmkstart AAAAAAALWV}{\bkmkend AAAAAAALWV}
+00169 {\cf20 //   INSTANTIATE_TYPED_TEST_CASE_P(My, FooTest, MyTypes, MyTypeNames);}\par
+{\bkmkstart AAAAAAALWW}{\bkmkend AAAAAAALWW}
+00170 \par
+{\bkmkstart AAAAAAALWX}{\bkmkend AAAAAAALWX}
+00171 {\cf21 #endif  }{\cf20 // 0}\par
+{\bkmkstart AAAAAAALWY}{\bkmkend AAAAAAALWY}
+00172 \par
+{\bkmkstart AAAAAAALWZ}{\bkmkend AAAAAAALWZ}
+00173 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNN" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-port.h}}}
+"}\par
+{\bkmkstart AAAAAAALXA}{\bkmkend AAAAAAALXA}
+00174 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALXB" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-type-util.h}}}
+"}\par
+{\bkmkstart AAAAAAALXC}{\bkmkend AAAAAAALXC}
+00175 \par
+{\bkmkstart AAAAAAALXD}{\bkmkend AAAAAAALXD}
+00176 {\cf20 // Implements typed tests.}\par
+{\bkmkstart AAAAAAALXE}{\bkmkend AAAAAAALXE}
+00177 \par
+{\bkmkstart AAAAAAALXF}{\bkmkend AAAAAAALXF}
+00178 {\cf21 #if GTEST_HAS_TYPED_TEST}\par
+{\bkmkstart AAAAAAALXG}{\bkmkend AAAAAAALXG}
+00179 \par
+{\bkmkstart AAAAAAALXH}{\bkmkend AAAAAAALXH}
+00180 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAAALXI}{\bkmkend AAAAAAALXI}
+00181 {\cf20 //}\par
+{\bkmkstart AAAAAAALXJ}{\bkmkend AAAAAAALXJ}
+00182 {\cf20 // Expands to the name of the typedef for the type parameters of the}\par
+{\bkmkstart AAAAAAALXK}{\bkmkend AAAAAAALXK}
+00183 {\cf20 // given test case.}\par
+{\bkmkstart AAAAAAALXL}{\bkmkend AAAAAAALXL}
+00184 {\cf21 # define GTEST_TYPE_PARAMS_(TestCaseName) gtest_type_params_##TestCaseName##_}\par
+{\bkmkstart AAAAAAALXM}{\bkmkend AAAAAAALXM}
+00185 \par
+{\bkmkstart AAAAAAALXN}{\bkmkend AAAAAAALXN}
+00186 {\cf20 // Expands to the name of the typedef for the NameGenerator, responsible for}\par
+{\bkmkstart AAAAAAALXO}{\bkmkend AAAAAAALXO}
+00187 {\cf20 // creating the suffixes of the name.}\par
+{\bkmkstart AAAAAAALXP}{\bkmkend AAAAAAALXP}
+00188 {\cf21 #define GTEST_NAME_GENERATOR_(TestCaseName) \\}\par
+{\bkmkstart AAAAAAALXQ}{\bkmkend AAAAAAALXQ}
+00189 {\cf21   gtest_type_params_##TestCaseName##_NameGenerator}\par
+{\bkmkstart AAAAAAALXR}{\bkmkend AAAAAAALXR}
+00190 \par
+{\bkmkstart AAAAAAALXS}{\bkmkend AAAAAAALXS}
+00191 {\cf20 // The 'Types' template argument below must have spaces around it}\par
+{\bkmkstart AAAAAAALXT}{\bkmkend AAAAAAALXT}
+00192 {\cf20 // since some compilers may choke on '>>' when passing a template}\par
+{\bkmkstart AAAAAAALXU}{\bkmkend AAAAAAALXU}
+00193 {\cf20 // instance (e.g. Types<int>)}\par
+{\bkmkstart AAAAAAALXV}{\bkmkend AAAAAAALXV}
+00194 {\cf21 # define TYPED_TEST_CASE(CaseName, Types, ...)                             \\}\par
+{\bkmkstart AAAAAAALXW}{\bkmkend AAAAAAALXW}
+00195 {\cf21   typedef ::testing::internal::TypeList< Types >::type GTEST_TYPE_PARAMS_( \\}\par
+{\bkmkstart AAAAAAALXX}{\bkmkend AAAAAAALXX}
+00196 {\cf21       CaseName);                                                           \\}\par
+{\bkmkstart AAAAAAALXY}{\bkmkend AAAAAAALXY}
+00197 {\cf21   typedef ::testing::internal::NameGeneratorSelector<__VA_ARGS__>::type    \\}\par
+{\bkmkstart AAAAAAALXZ}{\bkmkend AAAAAAALXZ}
+00198 {\cf21       GTEST_NAME_GENERATOR_(CaseName)}\par
+{\bkmkstart AAAAAAALYA}{\bkmkend AAAAAAALYA}
+00199 \par
+{\bkmkstart AAAAAAALYB}{\bkmkend AAAAAAALYB}
+00200 {\cf21 # define TYPED_TEST(CaseName, TestName)                                       \\}\par
+{\bkmkstart AAAAAAALYC}{\bkmkend AAAAAAALYC}
+00201 {\cf21   template <typename gtest_TypeParam_>                                        \\}\par
+{\bkmkstart AAAAAAALYD}{\bkmkend AAAAAAALYD}
+00202 {\cf21   class GTEST_TEST_CLASS_NAME_(CaseName, TestName)                            \\}\par
+{\bkmkstart AAAAAAALYE}{\bkmkend AAAAAAALYE}
+00203 {\cf21       : public CaseName<gtest_TypeParam_> \{                                   \\}\par
+{\bkmkstart AAAAAAALYF}{\bkmkend AAAAAAALYF}
+00204 {\cf21    private:                                                                   \\}\par
+{\bkmkstart AAAAAAALYG}{\bkmkend AAAAAAALYG}
+00205 {\cf21     typedef CaseName<gtest_TypeParam_> TestFixture;                           \\}\par
+{\bkmkstart AAAAAAALYH}{\bkmkend AAAAAAALYH}
+00206 {\cf21     typedef gtest_TypeParam_ TypeParam;                                       \\}\par
+{\bkmkstart AAAAAAALYI}{\bkmkend AAAAAAALYI}
+00207 {\cf21     virtual void TestBody();                                                  \\}\par
+{\bkmkstart AAAAAAALYJ}{\bkmkend AAAAAAALYJ}
+00208 {\cf21   \};                                                                          \\}\par
+{\bkmkstart AAAAAAALYK}{\bkmkend AAAAAAALYK}
+00209 {\cf21   static bool gtest_##CaseName##_##TestName##_registered_                     \\}\par
+{\bkmkstart AAAAAAALYL}{\bkmkend AAAAAAALYL}
+00210 {\cf21         GTEST_ATTRIBUTE_UNUSED_ =                                             \\}\par
+{\bkmkstart AAAAAAALYM}{\bkmkend AAAAAAALYM}
+00211 {\cf21       ::testing::internal::TypeParameterizedTest<                             \\}\par
+{\bkmkstart AAAAAAALYN}{\bkmkend AAAAAAALYN}
+00212 {\cf21           CaseName,                                                           \\}\par
+{\bkmkstart AAAAAAALYO}{\bkmkend AAAAAAALYO}
+00213 {\cf21           ::testing::internal::TemplateSel<GTEST_TEST_CLASS_NAME_(CaseName,   \\}\par
+{\bkmkstart AAAAAAALYP}{\bkmkend AAAAAAALYP}
+00214 {\cf21                                                                   TestName)>, \\}\par
+{\bkmkstart AAAAAAALYQ}{\bkmkend AAAAAAALYQ}
+00215 {\cf21           GTEST_TYPE_PARAMS_(                                                 \\}\par
+{\bkmkstart AAAAAAALYR}{\bkmkend AAAAAAALYR}
+00216 {\cf21               CaseName)>::Register(""},                                        \\\par
+{\bkmkstart AAAAAAALYS}{\bkmkend AAAAAAALYS}
+00217                                    ::testing::internal::CodeLocation(         \\\par
+{\bkmkstart AAAAAAALYT}{\bkmkend AAAAAAALYT}
+00218                                        __FILE__, __LINE__),                   \\\par
+{\bkmkstart AAAAAAALYU}{\bkmkend AAAAAAALYU}
+00219                                    #CaseName, #TestName, 0,                   \\\par
+{\bkmkstart AAAAAAALYV}{\bkmkend AAAAAAALYV}
+00220                                    ::testing::internal::GenerateNames<        \\\par
+{\bkmkstart AAAAAAALYW}{\bkmkend AAAAAAALYW}
+00221                                        GTEST_NAME_GENERATOR_(CaseName),       \\\par
+{\bkmkstart AAAAAAALYX}{\bkmkend AAAAAAALYX}
+00222                                        GTEST_TYPE_PARAMS_(CaseName)>());      \\\par
+{\bkmkstart AAAAAAALYY}{\bkmkend AAAAAAALYY}
+00223   template <typename gtest_TypeParam_>                                        \\\par
+{\bkmkstart AAAAAAALYZ}{\bkmkend AAAAAAALYZ}
+00224   void GTEST_TEST_CLASS_NAME_(CaseName,                                       \\\par
+{\bkmkstart AAAAAAALZA}{\bkmkend AAAAAAALZA}
+00225                               TestName)<gtest_TypeParam_>::TestBody()\par
+{\bkmkstart AAAAAAALZB}{\bkmkend AAAAAAALZB}
+00226 \par
+{\bkmkstart AAAAAAALZC}{\bkmkend AAAAAAALZC}
+00227 {\cf21 #endif  }{\cf20 // GTEST_HAS_TYPED_TEST}\par
+{\bkmkstart AAAAAAALZD}{\bkmkend AAAAAAALZD}
+00228 \par
+{\bkmkstart AAAAAAALZE}{\bkmkend AAAAAAALZE}
+00229 {\cf20 // Implements type-parameterized tests.}\par
+{\bkmkstart AAAAAAALZF}{\bkmkend AAAAAAALZF}
+00230 \par
+{\bkmkstart AAAAAAALZG}{\bkmkend AAAAAAALZG}
+00231 {\cf21 #if GTEST_HAS_TYPED_TEST_P}\par
+{\bkmkstart AAAAAAALZH}{\bkmkend AAAAAAALZH}
+00232 \par
+{\bkmkstart AAAAAAALZI}{\bkmkend AAAAAAALZI}
+00233 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAAALZJ}{\bkmkend AAAAAAALZJ}
+00234 {\cf20 //}\par
+{\bkmkstart AAAAAAALZK}{\bkmkend AAAAAAALZK}
+00235 {\cf20 // Expands to the namespace name that the type-parameterized tests for}\par
+{\bkmkstart AAAAAAALZL}{\bkmkend AAAAAAALZL}
+00236 {\cf20 // the given type-parameterized test case are defined in.  The exact}\par
+{\bkmkstart AAAAAAALZM}{\bkmkend AAAAAAALZM}
+00237 {\cf20 // name of the namespace is subject to change without notice.}\par
+{\bkmkstart AAAAAAALZN}{\bkmkend AAAAAAALZN}
+00238 {\cf21 # define GTEST_CASE_NAMESPACE_(TestCaseName) \\}\par
+{\bkmkstart AAAAAAALZO}{\bkmkend AAAAAAALZO}
+00239 {\cf21   gtest_case_##TestCaseName##_}\par
+{\bkmkstart AAAAAAALZP}{\bkmkend AAAAAAALZP}
+00240 \par
+{\bkmkstart AAAAAAALZQ}{\bkmkend AAAAAAALZQ}
+00241 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAAALZR}{\bkmkend AAAAAAALZR}
+00242 {\cf20 //}\par
+{\bkmkstart AAAAAAALZS}{\bkmkend AAAAAAALZS}
+00243 {\cf20 // Expands to the name of the variable used to remember the names of}\par
+{\bkmkstart AAAAAAALZT}{\bkmkend AAAAAAALZT}
+00244 {\cf20 // the defined tests in the given test case.}\par
+{\bkmkstart AAAAAAALZU}{\bkmkend AAAAAAALZU}
+00245 {\cf21 # define GTEST_TYPED_TEST_CASE_P_STATE_(TestCaseName) \\}\par
+{\bkmkstart AAAAAAALZV}{\bkmkend AAAAAAALZV}
+00246 {\cf21   gtest_typed_test_case_p_state_##TestCaseName##_}\par
+{\bkmkstart AAAAAAALZW}{\bkmkend AAAAAAALZW}
+00247 \par
+{\bkmkstart AAAAAAALZX}{\bkmkend AAAAAAALZX}
+00248 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE DIRECTLY.}\par
+{\bkmkstart AAAAAAALZY}{\bkmkend AAAAAAALZY}
+00249 {\cf20 //}\par
+{\bkmkstart AAAAAAALZZ}{\bkmkend AAAAAAALZZ}
+00250 {\cf20 // Expands to the name of the variable used to remember the names of}\par
+{\bkmkstart AAAAAAAMAA}{\bkmkend AAAAAAAMAA}
+00251 {\cf20 // the registered tests in the given test case.}\par
+{\bkmkstart AAAAAAAMAB}{\bkmkend AAAAAAAMAB}
+00252 {\cf21 # define GTEST_REGISTERED_TEST_NAMES_(TestCaseName) \\}\par
+{\bkmkstart AAAAAAAMAC}{\bkmkend AAAAAAAMAC}
+00253 {\cf21   gtest_registered_test_names_##TestCaseName##_}\par
+{\bkmkstart AAAAAAAMAD}{\bkmkend AAAAAAAMAD}
+00254 \par
+{\bkmkstart AAAAAAAMAE}{\bkmkend AAAAAAAMAE}
+00255 {\cf20 // The variables defined in the type-parameterized test macros are}\par
+{\bkmkstart AAAAAAAMAF}{\bkmkend AAAAAAAMAF}
+00256 {\cf20 // static as typically these macros are used in a .h file that can be}\par
+{\bkmkstart AAAAAAAMAG}{\bkmkend AAAAAAAMAG}
+00257 {\cf20 // #included in multiple translation units linked together.}\par
+{\bkmkstart AAAAAAAMAH}{\bkmkend AAAAAAAMAH}
+00258 {\cf21 # define TYPED_TEST_CASE_P(CaseName) \\}\par
+{\bkmkstart AAAAAAAMAI}{\bkmkend AAAAAAAMAI}
+00259 {\cf21   static ::testing::internal::TypedTestCasePState \\}\par
+{\bkmkstart AAAAAAAMAJ}{\bkmkend AAAAAAAMAJ}
+00260 {\cf21       GTEST_TYPED_TEST_CASE_P_STATE_(CaseName)}\par
+{\bkmkstart AAAAAAAMAK}{\bkmkend AAAAAAAMAK}
+00261 \par
+{\bkmkstart AAAAAAAMAL}{\bkmkend AAAAAAAMAL}
+00262 {\cf21 # define TYPED_TEST_P(CaseName, TestName) \\}\par
+{\bkmkstart AAAAAAAMAM}{\bkmkend AAAAAAAMAM}
+00263 {\cf21   namespace GTEST_CASE_NAMESPACE_(CaseName) \{ \\}\par
+{\bkmkstart AAAAAAAMAN}{\bkmkend AAAAAAAMAN}
+00264 {\cf21   template <typename gtest_TypeParam_> \\}\par
+{\bkmkstart AAAAAAAMAO}{\bkmkend AAAAAAAMAO}
+00265 {\cf21   class TestName : public CaseName<gtest_TypeParam_> \{ \\}\par
+{\bkmkstart AAAAAAAMAP}{\bkmkend AAAAAAAMAP}
+00266 {\cf21    private: \\}\par
+{\bkmkstart AAAAAAAMAQ}{\bkmkend AAAAAAAMAQ}
+00267 {\cf21     typedef CaseName<gtest_TypeParam_> TestFixture; \\}\par
+{\bkmkstart AAAAAAAMAR}{\bkmkend AAAAAAAMAR}
+00268 {\cf21     typedef gtest_TypeParam_ TypeParam; \\}\par
+{\bkmkstart AAAAAAAMAS}{\bkmkend AAAAAAAMAS}
+00269 {\cf21     virtual void TestBody(); \\}\par
+{\bkmkstart AAAAAAAMAT}{\bkmkend AAAAAAAMAT}
+00270 {\cf21   \}; \\}\par
+{\bkmkstart AAAAAAAMAU}{\bkmkend AAAAAAAMAU}
+00271 {\cf21   static bool gtest_##TestName##_defined_ GTEST_ATTRIBUTE_UNUSED_ = \\}\par
+{\bkmkstart AAAAAAAMAV}{\bkmkend AAAAAAAMAV}
+00272 {\cf21       GTEST_TYPED_TEST_CASE_P_STATE_(CaseName).AddTestName(\\}\par
+{\bkmkstart AAAAAAAMAW}{\bkmkend AAAAAAAMAW}
+00273 {\cf21           __FILE__, __LINE__, #CaseName, #TestName); \\}\par
+{\bkmkstart AAAAAAAMAX}{\bkmkend AAAAAAAMAX}
+00274 {\cf21   \} \\}\par
+{\bkmkstart AAAAAAAMAY}{\bkmkend AAAAAAAMAY}
+00275 {\cf21   template <typename gtest_TypeParam_> \\}\par
+{\bkmkstart AAAAAAAMAZ}{\bkmkend AAAAAAAMAZ}
+00276 {\cf21   void GTEST_CASE_NAMESPACE_(CaseName)::TestName<gtest_TypeParam_>::TestBody()}\par
+{\bkmkstart AAAAAAAMBA}{\bkmkend AAAAAAAMBA}
+00277 \par
+{\bkmkstart AAAAAAAMBB}{\bkmkend AAAAAAAMBB}
+00278 {\cf21 # define REGISTER_TYPED_TEST_CASE_P(CaseName, ...) \\}\par
+{\bkmkstart AAAAAAAMBC}{\bkmkend AAAAAAAMBC}
+00279 {\cf21   namespace GTEST_CASE_NAMESPACE_(CaseName) \{ \\}\par
+{\bkmkstart AAAAAAAMBD}{\bkmkend AAAAAAAMBD}
+00280 {\cf21   typedef ::testing::internal::Templates<__VA_ARGS__>::type gtest_AllTests_; \\}\par
+{\bkmkstart AAAAAAAMBE}{\bkmkend AAAAAAAMBE}
+00281 {\cf21   \} \\}\par
+{\bkmkstart AAAAAAAMBF}{\bkmkend AAAAAAAMBF}
+00282 {\cf21   static const char* const GTEST_REGISTERED_TEST_NAMES_(CaseName) \\}\par
+{\bkmkstart AAAAAAAMBG}{\bkmkend AAAAAAAMBG}
+00283 {\cf21       GTEST_ATTRIBUTE_UNUSED_ = \\}\par
+{\bkmkstart AAAAAAAMBH}{\bkmkend AAAAAAAMBH}
+00284 {\cf21           GTEST_TYPED_TEST_CASE_P_STATE_(CaseName).VerifyRegisteredTestNames( \\}\par
+{\bkmkstart AAAAAAAMBI}{\bkmkend AAAAAAAMBI}
+00285 {\cf21               __FILE__, __LINE__, #__VA_ARGS__)}\par
+{\bkmkstart AAAAAAAMBJ}{\bkmkend AAAAAAAMBJ}
+00286 \par
+{\bkmkstart AAAAAAAMBK}{\bkmkend AAAAAAAMBK}
+00287 {\cf20 // The 'Types' template argument below must have spaces around it}\par
+{\bkmkstart AAAAAAAMBL}{\bkmkend AAAAAAAMBL}
+00288 {\cf20 // since some compilers may choke on '>>' when passing a template}\par
+{\bkmkstart AAAAAAAMBM}{\bkmkend AAAAAAAMBM}
+00289 {\cf20 // instance (e.g. Types<int>)}\par
+{\bkmkstart AAAAAAAMBN}{\bkmkend AAAAAAAMBN}
+00290 {\cf21 # define INSTANTIATE_TYPED_TEST_CASE_P(Prefix, CaseName, Types, ...)      \\}\par
+{\bkmkstart AAAAAAAMBO}{\bkmkend AAAAAAAMBO}
+00291 {\cf21   static bool gtest_##Prefix##_##CaseName GTEST_ATTRIBUTE_UNUSED_ =       \\}\par
+{\bkmkstart AAAAAAAMBP}{\bkmkend AAAAAAAMBP}
+00292 {\cf21       ::testing::internal::TypeParameterizedTestCase<                     \\}\par
+{\bkmkstart AAAAAAAMBQ}{\bkmkend AAAAAAAMBQ}
+00293 {\cf21           CaseName, GTEST_CASE_NAMESPACE_(CaseName)::gtest_AllTests_,     \\}\par
+{\bkmkstart AAAAAAAMBR}{\bkmkend AAAAAAAMBR}
+00294 {\cf21           ::testing::internal::TypeList< Types >::type>::                 \\}\par
+{\bkmkstart AAAAAAAMBS}{\bkmkend AAAAAAAMBS}
+00295 {\cf21           Register(#Prefix,                                               \\}\par
+{\bkmkstart AAAAAAAMBT}{\bkmkend AAAAAAAMBT}
+00296 {\cf21                    ::testing::internal::CodeLocation(__FILE__, __LINE__), \\}\par
+{\bkmkstart AAAAAAAMBU}{\bkmkend AAAAAAAMBU}
+00297 {\cf21                    &GTEST_TYPED_TEST_CASE_P_STATE_(CaseName), #CaseName,  \\}\par
+{\bkmkstart AAAAAAAMBV}{\bkmkend AAAAAAAMBV}
+00298 {\cf21                    GTEST_REGISTERED_TEST_NAMES_(CaseName),                \\}\par
+{\bkmkstart AAAAAAAMBW}{\bkmkend AAAAAAAMBW}
+00299 {\cf21                    ::testing::internal::GenerateNames<                    \\}\par
+{\bkmkstart AAAAAAAMBX}{\bkmkend AAAAAAAMBX}
+00300 {\cf21                        ::testing::internal::NameGeneratorSelector<        \\}\par
+{\bkmkstart AAAAAAAMBY}{\bkmkend AAAAAAAMBY}
+00301 {\cf21                            __VA_ARGS__>::type,                            \\}\par
+{\bkmkstart AAAAAAAMBZ}{\bkmkend AAAAAAAMBZ}
+00302 {\cf21                        ::testing::internal::TypeList< Types >::type>())}\par
+{\bkmkstart AAAAAAAMCA}{\bkmkend AAAAAAAMCA}
+00303 \par
+{\bkmkstart AAAAAAAMCB}{\bkmkend AAAAAAAMCB}
+00304 {\cf21 #endif  }{\cf20 // GTEST_HAS_TYPED_TEST_P}\par
+{\bkmkstart AAAAAAAMCC}{\bkmkend AAAAAAAMCC}
+00305 \par
+{\bkmkstart AAAAAAAMCD}{\bkmkend AAAAAAAMCD}
+00306 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_GTEST_TYPED_TEST_H_}\par
+}
+}

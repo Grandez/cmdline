@@ -1,4 +1,4 @@
-.TH "ParmOption" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "ParmOption" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,6 +23,9 @@ Herencias \fBParm\fP\&.
 .RI "\fBParmOption\fP (const char *name, const char *value, bool multiple)"
 .br
 .ti -1c
+.RI "\fBParmOption\fP (const char *name, \fBType\fP type, bool multiple)"
+.br
+.ti -1c
 .RI "\fBParmOption\fP (const char *name, const char *value, \fBType\fP type, bool multiple=false)"
 .br
 .in -1c
@@ -31,27 +34,7 @@ Herencias \fBParm\fP\&.
 .PP 
 Utility subclass for defining Options
 .PP
-Parm(const char* name, const char* value): name/value (false/true) 
-.PP
-Definición en la línea \fB69\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SH "Documentación del constructor y destructor"
-.PP 
-.SS "\fBParmOption\fP (const char * name, const char * value)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB72\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "\fBParmOption\fP (const char * name, \fBType\fP type)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB73\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "\fBParmOption\fP (const char * name, const char * value, bool multiple)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB74\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "\fBParmOption\fP (const char * name, const char * value, \fBType\fP type, bool multiple = \fCfalse\fP)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB75\fP del archivo \fBcmdline\&.hpp\fP\&.
+\fBParm(const char* name, const char* value)\fP: name/value (false/true) 
 
 .SH "Autor"
 .PP 

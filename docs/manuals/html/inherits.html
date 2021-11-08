@@ -24,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="prompt2.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Command Line Processor<span id="projectnumber">&#160;0.2.3</span>
    </div>
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_cmd_line" alt=""/>
 <map name="a_cmd_line" id="a_cmd_line">
-<area shape="rect" href="d8/d7f/struct_cmd_line.html" title="Singleton encargado de mantener la informacion pasada por la linea de comandos." alt="" coords="5,5,79,32"/>
+<area shape="rect" href="d8/d7f/struct_cmd_line.html" title="Singleton encargado de mantener la informacion pasada por la linea de comandos @detail Aqui ponemos m..." alt="" coords="5,5,79,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_cmd_line" alt=""/>
@@ -109,42 +110,41 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </td></tr>
 <tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_cmd_line_exception" alt=""/>
 <map name="a_cmd_line_exception" id="a_cmd_line_exception">
+<area shape="rect" href="db/d2d/class_cmd_line_exception.html" title="Clase base para cualquier excepcion generada en el sistema @detail Distinguimos tres tipos de excepci..." alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_cmd_line_exception" alt=""/>
+<map name="a_cmd_line_exception" id="a_cmd_line_exception">
 <area shape="rect" title=" " alt="" coords="5,97,124,123"/>
 <area shape="rect" href="d3/dfd/classcmdline_1_1_cmd_line_exception.html" title=" " alt="" coords="172,97,303,123"/>
 <area shape="rect" href="d6/dd7/classcmdline_1_1_cmd_line_duplicate_argument_exception.html" title=" " alt="" coords="355,5,537,47"/>
 <area shape="rect" href="d1/d0b/classcmdline_1_1_cmd_line_parameter_exception.html" title=" " alt="" coords="351,71,541,98"/>
 <area shape="rect" href="d8/d74/classcmdline_1_1_cmd_line_value_exception.html" title=" " alt="" coords="364,122,528,149"/>
-<area shape="rect" href="d5/d97/classcmdline_1_1_help_exception.html" title=" " alt="" coords="393,173,499,199"/>
+<area shape="rect" href="df/db7/classcmdline_1_1_help_requested.html" title=" " alt="" coords="391,173,501,199"/>
 <area shape="rect" href="d7/db2/classcmdline_1_1_help_detailed_requested.html" title=" " alt="" coords="589,147,747,174"/>
-<area shape="rect" href="df/db7/classcmdline_1_1_help_requested.html" title=" " alt="" coords="613,198,723,225"/>
+<area shape="rect" href="d4/ddb/classcmdline_1_1_help_simple_requested.html" title=" " alt="" coords="593,198,743,225"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_cmd_line_invalid_type_exception" alt=""/>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_cmd_line_invalid_type_exception" alt=""/>
 <map name="a_cmd_line_invalid_type_exception" id="a_cmd_line_invalid_type_exception">
 <area shape="rect" title=" " alt="" coords="5,31,104,57"/>
 <area shape="rect" href="db/d21/classcmdline_1_1_cmd_line_invalid_type_exception.html" title=" " alt="" coords="152,5,347,32"/>
 <area shape="rect" href="d3/dd2/classcmdline_1_1_cmd_line_not_found_exception.html" title=" " alt="" coords="156,56,343,83"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_command_line" alt=""/>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_command_line" alt=""/>
 <map name="a_command_line" id="a_command_line">
 <area shape="rect" href="d1/d0c/class__cmdline_1_1_command_line.html" title=" " alt="" coords="5,5,111,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_flag" alt=""/>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_flag" alt=""/>
 <map name="a_flag" id="a_flag">
 <area shape="rect" href="d5/dbf/struct_flag.html" title=" " alt="" coords="5,5,52,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_garbage" alt=""/>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_garbage" alt=""/>
 <map name="a_garbage" id="a_garbage">
 <area shape="rect" href="db/df8/class_garbage.html" title=" " alt="" coords="5,5,76,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_group" alt=""/>
-<map name="a_group" id="a_group">
-<area shape="rect" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" href="d2/dc1/class__cmdline_1_1_group.html" title=" " alt="" coords="164,5,221,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_parameter" alt=""/>
@@ -164,9 +164,25 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="d3/d85/classcmdline_1_1_parm_option.html" title=" " alt="" coords="107,56,197,83"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_parm_def" alt=""/>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_parm" alt=""/>
+<map name="a_parm" id="a_parm">
+<area shape="rect" href="df/de1/class_parm.html" title="Generic Class to define defined flags and options" alt="" coords="5,5,59,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#a_parm_def" alt=""/>
 <map name="a_parm_def" id="a_parm_def">
 <area shape="rect" href="db/d47/struct_parm_def.html" title=" " alt="" coords="5,5,77,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#a_parm_flag" alt=""/>
+<map name="a_parm_flag" id="a_parm_flag">
+<area shape="rect" href="da/d2a/class_parm_flag.html" title="Wrapper of Parm to define Flags" alt="" coords="5,5,84,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#aunordered__map" alt=""/>
+<map name="aunordered__map" id="aunordered__map">
+<area shape="rect" href="db/d70/classunordered__map.html" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" href="d2/dc1/class__cmdline_1_1_group.html" title=" " alt="" coords="164,5,221,32"/>
 </map>
 </td></tr>
 </table>

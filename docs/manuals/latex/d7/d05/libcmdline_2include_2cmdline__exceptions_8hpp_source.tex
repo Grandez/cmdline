@@ -1,0 +1,80 @@
+\hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source}{}\doxysection{cmdline\+\_\+exceptions.\+hpp}
+\label{libcmdline_2include_2cmdline__exceptions_8hpp_source}\index{libcmdline/include/cmdline\_exceptions.hpp@{libcmdline/include/cmdline\_exceptions.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00011}00011 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00012}00012 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00013}00013 \textcolor{preprocessor}{\#include <cstdarg>}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00014}00014 \textcolor{preprocessor}{\#ifndef \_\_CMDLINE\_EXCEPTIONS\_\_}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00015}00015 \textcolor{preprocessor}{\#define \_\_CMDLINE\_EXCEPTIONS\_\_}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00016}00016 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00017}00017     \textcolor{keyword}{class }CmdLineNotFoundException : \textcolor{keyword}{public} std::runtime\_error \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00018}00018     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00019}00019         CmdLineNotFoundException() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00020}00020         CmdLineNotFoundException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00021}00021     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00022}00022     \textcolor{keyword}{class }CmdLineInvalidTypeException : \textcolor{keyword}{public} std::runtime\_error \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00023}00023     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00024}00024         CmdLineInvalidTypeException() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00025}00025         CmdLineInvalidTypeException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00026}00026     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00028}00028     \textcolor{keyword}{class }CmdLineException : \textcolor{keyword}{public} std::invalid\_argument \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00029}00029     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00030}00030         CmdLineException() : invalid\_argument(\textcolor{stringliteral}{"{}"{}}) \{\};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00031}00031         \string~CmdLineException() \{\};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00032}00032 \textcolor{comment}{//      CmdLineException(const CmdLineException\& test) : invalid\_argument(test) \{\};}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00034}00034         CmdLineException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...); }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00035}00035         CmdLineException(\textcolor{keywordtype}{char}* txt);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00036}00036     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00038}00038     \textcolor{keyword}{class }CmdLineParameterException : \textcolor{keyword}{public} CmdLineException \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00039}00039     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00040}00040         CmdLineParameterException() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00041}00041         CmdLineParameterException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00042}00042     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00043}00043     \textcolor{keyword}{class }CmdLineValueException : \textcolor{keyword}{public} CmdLineException \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00044}00044     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00045}00045         CmdLineValueException() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00046}00046         CmdLineValueException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00047}00047     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00048}00048     \textcolor{keyword}{class }CmdLineDuplicateArgumentException : \textcolor{keyword}{public} CmdLineException \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00049}00049     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00050}00050         CmdLineDuplicateArgumentException() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00051}00051         CmdLineDuplicateArgumentException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00052}00052     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00054}00054      \textcolor{comment}{// Exception indicating HELP has been requested}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00056}00056     \textcolor{keyword}{class }HelpRequested : \textcolor{keyword}{public} CmdLineException \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00057}00057     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00058}00058         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *name;}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00059}00059         \textcolor{keywordtype}{bool} detailed = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00060}00060         std::unordered\_map<std::string, bool>        flags;}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00061}00061         std::unordered\_map<std::string, std::string> options;}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00063}00063         HelpRequested() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00064}00064         \string~HelpRequested();}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00065}00065     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00066}00066         HelpRequested(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * programName, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *txt, \textcolor{keywordtype}{bool} detailed}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00067}00067                                      , std::unordered\_map<std::string, bool> flags}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00068}00068                                      , std::unordered\_map<std::string, string> options);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00069}00069     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00070}00070     \textcolor{keyword}{class }HelpSimpleRequested : \textcolor{keyword}{public} HelpRequested \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00071}00071     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00072}00072         HelpSimpleRequested( \textcolor{keywordtype}{char} * programName}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00073}00073                             ,unordered\_map<string,bool> flags  }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00074}00074                             ,unordered\_map<string,string> options);       }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00075}00075     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00076}00076     \textcolor{keyword}{class }HelpDetailedRequested : \textcolor{keyword}{public} HelpRequested \{}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00077}00077     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00078}00078         HelpDetailedRequested( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * programName}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00079}00079                               ,unordered\_map<string,bool> flags  }
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00080}00080                               ,unordered\_map<string,string> options);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00081}00081     \};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00082}00082 \}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline__exceptions_8hpp_source_l00083}00083 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

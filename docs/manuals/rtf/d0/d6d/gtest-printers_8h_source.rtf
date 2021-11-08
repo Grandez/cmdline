@@ -1,0 +1,2639 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-printers.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-printers.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-printers.h}
+{\bkmkstart AAAAAAAJDX}
+{\bkmkend AAAAAAAJDX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJDY" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAJDZ}{\bkmkend AAAAAAAJDZ}
+00001 {\cf20 // Copyright 2007, Google Inc.}\par
+{\bkmkstart AAAAAAAJEA}{\bkmkend AAAAAAAJEA}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAJEB}{\bkmkend AAAAAAAJEB}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAJEC}{\bkmkend AAAAAAAJEC}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAAJED}{\bkmkend AAAAAAAJED}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAAJEE}{\bkmkend AAAAAAAJEE}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAAJEF}{\bkmkend AAAAAAAJEF}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAAJEG}{\bkmkend AAAAAAAJEG}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAAJEH}{\bkmkend AAAAAAAJEH}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAAJEI}{\bkmkend AAAAAAAJEI}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAAJEJ}{\bkmkend AAAAAAAJEJ}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAAJEK}{\bkmkend AAAAAAAJEK}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAAJEL}{\bkmkend AAAAAAAJEL}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAAJEM}{\bkmkend AAAAAAAJEM}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAAJEN}{\bkmkend AAAAAAAJEN}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAAJEO}{\bkmkend AAAAAAAJEO}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAAJEP}{\bkmkend AAAAAAAJEP}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAAJEQ}{\bkmkend AAAAAAAJEQ}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAAJER}{\bkmkend AAAAAAAJER}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAJES}{\bkmkend AAAAAAAJES}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAAJET}{\bkmkend AAAAAAAJET}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAAJEU}{\bkmkend AAAAAAAJEU}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAAJEV}{\bkmkend AAAAAAAJEV}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAJEW}{\bkmkend AAAAAAAJEW}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAAJEX}{\bkmkend AAAAAAAJEX}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAAJEY}{\bkmkend AAAAAAAJEY}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAAJEZ}{\bkmkend AAAAAAAJEZ}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAAJFA}{\bkmkend AAAAAAAJFA}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAAJFB}{\bkmkend AAAAAAAJFB}
+00029 \par
+{\bkmkstart AAAAAAAJFC}{\bkmkend AAAAAAAJFC}
+00030 \par
+{\bkmkstart AAAAAAAJFD}{\bkmkend AAAAAAAJFD}
+00031 {\cf20 // Google Test - The Google C++ Testing and Mocking Framework}\par
+{\bkmkstart AAAAAAAJFE}{\bkmkend AAAAAAAJFE}
+00032 {\cf20 //}\par
+{\bkmkstart AAAAAAAJFF}{\bkmkend AAAAAAAJFF}
+00033 {\cf20 // This file implements a universal value printer that can print a}\par
+{\bkmkstart AAAAAAAJFG}{\bkmkend AAAAAAAJFG}
+00034 {\cf20 // value of any type T:}\par
+{\bkmkstart AAAAAAAJFH}{\bkmkend AAAAAAAJFH}
+00035 {\cf20 //}\par
+{\bkmkstart AAAAAAAJFI}{\bkmkend AAAAAAAJFI}
+00036 {\cf20 //   void ::testing::internal::UniversalPrinter<T>::Print(value, ostream_ptr);}\par
+{\bkmkstart AAAAAAAJFJ}{\bkmkend AAAAAAAJFJ}
+00037 {\cf20 //}\par
+{\bkmkstart AAAAAAAJFK}{\bkmkend AAAAAAAJFK}
+00038 {\cf20 // A user can teach this function how to print a class type T by}\par
+{\bkmkstart AAAAAAAJFL}{\bkmkend AAAAAAAJFL}
+00039 {\cf20 // defining either operator<<() or PrintTo() in the namespace that}\par
+{\bkmkstart AAAAAAAJFM}{\bkmkend AAAAAAAJFM}
+00040 {\cf20 // defines T.  More specifically, the FIRST defined function in the}\par
+{\bkmkstart AAAAAAAJFN}{\bkmkend AAAAAAAJFN}
+00041 {\cf20 // following list will be used (assuming T is defined in namespace}\par
+{\bkmkstart AAAAAAAJFO}{\bkmkend AAAAAAAJFO}
+00042 {\cf20 // foo):}\par
+{\bkmkstart AAAAAAAJFP}{\bkmkend AAAAAAAJFP}
+00043 {\cf20 //}\par
+{\bkmkstart AAAAAAAJFQ}{\bkmkend AAAAAAAJFQ}
+00044 {\cf20 //   1. foo::PrintTo(const T&, ostream*)}\par
+{\bkmkstart AAAAAAAJFR}{\bkmkend AAAAAAAJFR}
+00045 {\cf20 //   2. operator<<(ostream&, const T&) defined in either foo or the}\par
+{\bkmkstart AAAAAAAJFS}{\bkmkend AAAAAAAJFS}
+00046 {\cf20 //      global namespace.}\par
+{\bkmkstart AAAAAAAJFT}{\bkmkend AAAAAAAJFT}
+00047 {\cf20 //}\par
+{\bkmkstart AAAAAAAJFU}{\bkmkend AAAAAAAJFU}
+00048 {\cf20 // However if T is an STL-style container then it is printed element-wise}\par
+{\bkmkstart AAAAAAAJFV}{\bkmkend AAAAAAAJFV}
+00049 {\cf20 // unless foo::PrintTo(const T&, ostream*) is defined. Note that}\par
+{\bkmkstart AAAAAAAJFW}{\bkmkend AAAAAAAJFW}
+00050 {\cf20 // operator<<() is ignored for container types.}\par
+{\bkmkstart AAAAAAAJFX}{\bkmkend AAAAAAAJFX}
+00051 {\cf20 //}\par
+{\bkmkstart AAAAAAAJFY}{\bkmkend AAAAAAAJFY}
+00052 {\cf20 // If none of the above is defined, it will print the debug string of}\par
+{\bkmkstart AAAAAAAJFZ}{\bkmkend AAAAAAAJFZ}
+00053 {\cf20 // the value if it is a protocol buffer, or print the raw bytes in the}\par
+{\bkmkstart AAAAAAAJGA}{\bkmkend AAAAAAAJGA}
+00054 {\cf20 // value otherwise.}\par
+{\bkmkstart AAAAAAAJGB}{\bkmkend AAAAAAAJGB}
+00055 {\cf20 //}\par
+{\bkmkstart AAAAAAAJGC}{\bkmkend AAAAAAAJGC}
+00056 {\cf20 // To aid debugging: when T is a reference type, the address of the}\par
+{\bkmkstart AAAAAAAJGD}{\bkmkend AAAAAAAJGD}
+00057 {\cf20 // value is also printed; when T is a (const) char pointer, both the}\par
+{\bkmkstart AAAAAAAJGE}{\bkmkend AAAAAAAJGE}
+00058 {\cf20 // pointer value and the NUL-terminated string it points to are}\par
+{\bkmkstart AAAAAAAJGF}{\bkmkend AAAAAAAJGF}
+00059 {\cf20 // printed.}\par
+{\bkmkstart AAAAAAAJGG}{\bkmkend AAAAAAAJGG}
+00060 {\cf20 //}\par
+{\bkmkstart AAAAAAAJGH}{\bkmkend AAAAAAAJGH}
+00061 {\cf20 // We also provide some convenient wrappers:}\par
+{\bkmkstart AAAAAAAJGI}{\bkmkend AAAAAAAJGI}
+00062 {\cf20 //}\par
+{\bkmkstart AAAAAAAJGJ}{\bkmkend AAAAAAAJGJ}
+00063 {\cf20 //   // Prints a value to a string.  For a (const or not) char}\par
+{\bkmkstart AAAAAAAJGK}{\bkmkend AAAAAAAJGK}
+00064 {\cf20 //   // pointer, the NUL-terminated string (but not the pointer) is}\par
+{\bkmkstart AAAAAAAJGL}{\bkmkend AAAAAAAJGL}
+00065 {\cf20 //   // printed.}\par
+{\bkmkstart AAAAAAAJGM}{\bkmkend AAAAAAAJGM}
+00066 {\cf20 //   std::string ::testing::PrintToString(const T& value);}\par
+{\bkmkstart AAAAAAAJGN}{\bkmkend AAAAAAAJGN}
+00067 {\cf20 //}\par
+{\bkmkstart AAAAAAAJGO}{\bkmkend AAAAAAAJGO}
+00068 {\cf20 //   // Prints a value tersely: for a reference type, the referenced}\par
+{\bkmkstart AAAAAAAJGP}{\bkmkend AAAAAAAJGP}
+00069 {\cf20 //   // value (but not the address) is printed; for a (const or not) char}\par
+{\bkmkstart AAAAAAAJGQ}{\bkmkend AAAAAAAJGQ}
+00070 {\cf20 //   // pointer, the NUL-terminated string (but not the pointer) is}\par
+{\bkmkstart AAAAAAAJGR}{\bkmkend AAAAAAAJGR}
+00071 {\cf20 //   // printed.}\par
+{\bkmkstart AAAAAAAJGS}{\bkmkend AAAAAAAJGS}
+00072 {\cf20 //   void ::testing::internal::UniversalTersePrint(const T& value, ostream*);}\par
+{\bkmkstart AAAAAAAJGT}{\bkmkend AAAAAAAJGT}
+00073 {\cf20 //}\par
+{\bkmkstart AAAAAAAJGU}{\bkmkend AAAAAAAJGU}
+00074 {\cf20 //   // Prints value using the type inferred by the compiler.  The difference}\par
+{\bkmkstart AAAAAAAJGV}{\bkmkend AAAAAAAJGV}
+00075 {\cf20 //   // from UniversalTersePrint() is that this function prints both the}\par
+{\bkmkstart AAAAAAAJGW}{\bkmkend AAAAAAAJGW}
+00076 {\cf20 //   // pointer and the NUL-terminated string for a (const or not) char pointer.}\par
+{\bkmkstart AAAAAAAJGX}{\bkmkend AAAAAAAJGX}
+00077 {\cf20 //   void ::testing::internal::UniversalPrint(const T& value, ostream*);}\par
+{\bkmkstart AAAAAAAJGY}{\bkmkend AAAAAAAJGY}
+00078 {\cf20 //}\par
+{\bkmkstart AAAAAAAJGZ}{\bkmkend AAAAAAAJGZ}
+00079 {\cf20 //   // Prints the fields of a tuple tersely to a string vector, one}\par
+{\bkmkstart AAAAAAAJHA}{\bkmkend AAAAAAAJHA}
+00080 {\cf20 //   // element for each field. Tuple support must be enabled in}\par
+{\bkmkstart AAAAAAAJHB}{\bkmkend AAAAAAAJHB}
+00081 {\cf20 //   // gtest-port.h.}\par
+{\bkmkstart AAAAAAAJHC}{\bkmkend AAAAAAAJHC}
+00082 {\cf20 //   std::vector<string> UniversalTersePrintTupleFieldsToStrings(}\par
+{\bkmkstart AAAAAAAJHD}{\bkmkend AAAAAAAJHD}
+00083 {\cf20 //       const Tuple& value);}\par
+{\bkmkstart AAAAAAAJHE}{\bkmkend AAAAAAAJHE}
+00084 {\cf20 //}\par
+{\bkmkstart AAAAAAAJHF}{\bkmkend AAAAAAAJHF}
+00085 {\cf20 // Known limitation:}\par
+{\bkmkstart AAAAAAAJHG}{\bkmkend AAAAAAAJHG}
+00086 {\cf20 //}\par
+{\bkmkstart AAAAAAAJHH}{\bkmkend AAAAAAAJHH}
+00087 {\cf20 // The print primitives print the elements of an STL-style container}\par
+{\bkmkstart AAAAAAAJHI}{\bkmkend AAAAAAAJHI}
+00088 {\cf20 // using the compiler-inferred type of *iter where iter is a}\par
+{\bkmkstart AAAAAAAJHJ}{\bkmkend AAAAAAAJHJ}
+00089 {\cf20 // const_iterator of the container.  When const_iterator is an input}\par
+{\bkmkstart AAAAAAAJHK}{\bkmkend AAAAAAAJHK}
+00090 {\cf20 // iterator but not a forward iterator, this inferred type may not}\par
+{\bkmkstart AAAAAAAJHL}{\bkmkend AAAAAAAJHL}
+00091 {\cf20 // match value_type, and the print output may be incorrect.  In}\par
+{\bkmkstart AAAAAAAJHM}{\bkmkend AAAAAAAJHM}
+00092 {\cf20 // practice, this is rarely a problem as for most containers}\par
+{\bkmkstart AAAAAAAJHN}{\bkmkend AAAAAAAJHN}
+00093 {\cf20 // const_iterator is a forward iterator.  We'll fix this if there's an}\par
+{\bkmkstart AAAAAAAJHO}{\bkmkend AAAAAAAJHO}
+00094 {\cf20 // actual need for it.  Note that this fix cannot rely on value_type}\par
+{\bkmkstart AAAAAAAJHP}{\bkmkend AAAAAAAJHP}
+00095 {\cf20 // being defined as many user-defined container types don't have}\par
+{\bkmkstart AAAAAAAJHQ}{\bkmkend AAAAAAAJHQ}
+00096 {\cf20 // value_type.}\par
+{\bkmkstart AAAAAAAJHR}{\bkmkend AAAAAAAJHR}
+00097 \par
+{\bkmkstart AAAAAAAJHS}{\bkmkend AAAAAAAJHS}
+00098 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAJHT}{\bkmkend AAAAAAAJHT}
+00099 \par
+{\bkmkstart AAAAAAAJHU}{\bkmkend AAAAAAAJHU}
+00100 {\cf21 #ifndef GTEST_INCLUDE_GTEST_GTEST_PRINTERS_H_}\par
+{\bkmkstart AAAAAAAJHV}{\bkmkend AAAAAAAJHV}
+00101 {\cf21 #define GTEST_INCLUDE_GTEST_GTEST_PRINTERS_H_}\par
+{\bkmkstart AAAAAAAJHW}{\bkmkend AAAAAAAJHW}
+00102 \par
+{\bkmkstart AAAAAAAJHX}{\bkmkend AAAAAAAJHX}
+00103 {\cf21 #include <ostream>}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAAAJHY}{\bkmkend AAAAAAAJHY}
+00104 {\cf21 #include <sstream>}\par
+{\bkmkstart AAAAAAAJHZ}{\bkmkend AAAAAAAJHZ}
+00105 {\cf21 #include <string>}\par
+{\bkmkstart AAAAAAAJIA}{\bkmkend AAAAAAAJIA}
+00106 {\cf21 #include <utility>}\par
+{\bkmkstart AAAAAAAJIB}{\bkmkend AAAAAAAJIB}
+00107 {\cf21 #include <vector>}\par
+{\bkmkstart AAAAAAAJIC}{\bkmkend AAAAAAAJIC}
+00108 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNN" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-port.h}}}
+"}\par
+{\bkmkstart AAAAAAAJID}{\bkmkend AAAAAAAJID}
+00109 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHDS" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-internal.h}}}
+"}\par
+{\bkmkstart AAAAAAAJIE}{\bkmkend AAAAAAAJIE}
+00110 \par
+{\bkmkstart AAAAAAAJIF}{\bkmkend AAAAAAAJIF}
+00111 {\cf21 #if GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAJIG}{\bkmkend AAAAAAAJIG}
+00112 {\cf21 # include <tuple>}\par
+{\bkmkstart AAAAAAAJIH}{\bkmkend AAAAAAAJIH}
+00113 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJII}{\bkmkend AAAAAAAJII}
+00114 \par
+{\bkmkstart AAAAAAAJIJ}{\bkmkend AAAAAAAJIJ}
+00115 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAJIK}{\bkmkend AAAAAAAJIK}
+00116 {\cf21 #include "absl/strings/string_view.h"}\par
+{\bkmkstart AAAAAAAJIL}{\bkmkend AAAAAAAJIL}
+00117 {\cf21 #include "absl/types/optional.h"}\par
+{\bkmkstart AAAAAAAJIM}{\bkmkend AAAAAAAJIM}
+00118 {\cf21 #include "absl/types/variant.h"}\par
+{\bkmkstart AAAAAAAJIN}{\bkmkend AAAAAAAJIN}
+00119 {\cf21 #endif  }{\cf20 // GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAJIO}{\bkmkend AAAAAAAJIO}
+00120 \par
+{\bkmkstart AAAAAAAJIP}{\bkmkend AAAAAAAJIP}
+00121 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAJIQ}{\bkmkend AAAAAAAJIQ}
+00122 \par
+{\bkmkstart AAAAAAAJIR}{\bkmkend AAAAAAAJIR}
+00123 {\cf20 // Definitions in the 'internal' and 'internal2' name spaces are}\par
+{\bkmkstart AAAAAAAJIS}{\bkmkend AAAAAAAJIS}
+00124 {\cf20 // subject to change without notice.  DO NOT USE THEM IN USER CODE!}\par
+{\bkmkstart AAAAAAAJIT}{\bkmkend AAAAAAAJIT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJIU" }{}}{\fldrslt {\cs37\ul\cf2 00125}}}
+ {\cf17 namespace }internal2 \{\par
+{\bkmkstart AAAAAAAJIV}{\bkmkend AAAAAAAJIV}
+00126 \par
+{\bkmkstart AAAAAAAJIW}{\bkmkend AAAAAAAJIW}
+00127 {\cf20 // Prints the given number of bytes in the given object to the given}\par
+{\bkmkstart AAAAAAAJIX}{\bkmkend AAAAAAAJIX}
+00128 {\cf20 // ostream.}\par
+{\bkmkstart AAAAAAAJIY}{\bkmkend AAAAAAAJIY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJIZ" }{}}{\fldrslt {\cs37\ul\cf2 00129}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJIZ" }{}}{\fldrslt {\cs37\ul\cf2 PrintBytesInObjectTo}}}
+({\cf17 const} {\cf18 unsigned} {\cf18 char}* obj_bytes,\par
+{\bkmkstart AAAAAAAJJA}{\bkmkend AAAAAAAJJA}
+00130                                      {\cf18 size_t} count,\par
+{\bkmkstart AAAAAAAJJB}{\bkmkend AAAAAAAJJB}
+00131                                      ::std::ostream* os);\par
+{\bkmkstart AAAAAAAJJC}{\bkmkend AAAAAAAJJC}
+00132 \par
+{\bkmkstart AAAAAAAJJD}{\bkmkend AAAAAAAJJD}
+00133 {\cf20 // For selecting which printer to use when a given type has neither <<}\par
+{\bkmkstart AAAAAAAJJE}{\bkmkend AAAAAAAJJE}
+00134 {\cf20 // nor PrintTo().}\par
+{\bkmkstart AAAAAAAJJF}{\bkmkend AAAAAAAJJF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJG" }{}}{\fldrslt {\cs37\ul\cf2 00135}}}
+ {\cf17 enum} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJG" }{}}{\fldrslt {\cs37\ul\cf2 TypeKind}}}
+ \{\par
+{\bkmkstart AAAAAAAJJH}{\bkmkend AAAAAAAJJH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJI" }{}}{\fldrslt {\cs37\ul\cf2 00136}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJI" }{}}{\fldrslt {\cs37\ul\cf2 kProtobuf}}}
+,              {\cf20 // a protobuf type}\par
+{\bkmkstart AAAAAAAJJJ}{\bkmkend AAAAAAAJJJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJK" }{}}{\fldrslt {\cs37\ul\cf2 00137}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJK" }{}}{\fldrslt {\cs37\ul\cf2 kConvertibleToInteger}}}
+,  {\cf20 // a type implicitly convertible to BiggestInt}\par
+{\bkmkstart AAAAAAAJJL}{\bkmkend AAAAAAAJJL}
+00138                           {\cf20 // (e.g. a named or unnamed enum type)}\par
+{\bkmkstart AAAAAAAJJM}{\bkmkend AAAAAAAJJM}
+00139 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAJJN}{\bkmkend AAAAAAAJJN}
+00140   kConvertibleToStringView,  {\cf20 // a type implicitly convertible to}\par
+{\bkmkstart AAAAAAAJJO}{\bkmkend AAAAAAAJJO}
+00141                              {\cf20 // absl::string_view}\par
+{\bkmkstart AAAAAAAJJP}{\bkmkend AAAAAAAJJP}
+00142 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJJQ}{\bkmkend AAAAAAAJJQ}
+00143   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJR" }{}}{\fldrslt {\cs37\ul\cf2 kOtherType}}}
+  {\cf20 // anything else}\par
+{\bkmkstart AAAAAAAJJS}{\bkmkend AAAAAAAJJS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJR" }{}}{\fldrslt {\cs37\ul\cf2 00144}}}
+ \};\par
+{\bkmkstart AAAAAAAJJT}{\bkmkend AAAAAAAJJT}
+00145 \par
+{\bkmkstart AAAAAAAJJU}{\bkmkend AAAAAAAJJU}
+00146 {\cf20 // TypeWithoutFormatter<T, kTypeKind>::PrintValue(value, os) is called}\par
+{\bkmkstart AAAAAAAJJV}{\bkmkend AAAAAAAJJV}
+00147 {\cf20 // by the universal printer to print a value of type T when neither}\par
+{\bkmkstart AAAAAAAJJW}{\bkmkend AAAAAAAJJW}
+00148 {\cf20 // operator<< nor PrintTo() is defined for T, where kTypeKind is the}\par
+{\bkmkstart AAAAAAAJJX}{\bkmkend AAAAAAAJJX}
+00149 {\cf20 // "kind" of T as defined by enum TypeKind.}\par
+{\bkmkstart AAAAAAAJJY}{\bkmkend AAAAAAAJJY}
+00150 {\cf17 template} <{\cf17 typename} T, TypeKind kTypeKind>\par
+{\bkmkstart AAAAAAAJJZ}{\bkmkend AAAAAAAJJZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKA" }{}}{\fldrslt {\cs37\ul\cf2 00151}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKA" }{}}{\fldrslt {\cs37\ul\cf2 TypeWithoutFormatter}}}
+ \{\par
+{\bkmkstart AAAAAAAJKB}{\bkmkend AAAAAAAJKB}
+00152  {\cf17 public}:\par
+{\bkmkstart AAAAAAAJKC}{\bkmkend AAAAAAAJKC}
+00153   {\cf20 // This default version is called when kTypeKind is kOtherType.}\par
+{\bkmkstart AAAAAAAJKD}{\bkmkend AAAAAAAJKD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKE" }{}}{\fldrslt {\cs37\ul\cf2 00154}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKE" }{}}{\fldrslt {\cs37\ul\cf2 PrintValue}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJKF}{\bkmkend AAAAAAAJKF}
+00155     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJIZ" }{}}{\fldrslt {\cs37\ul\cf2 PrintBytesInObjectTo}}}
+({\cf17 static_cast<}{\cf17 const }{\cf18 unsigned} {\cf18 char}*{\cf17 >}(\par
+{\bkmkstart AAAAAAAJKG}{\bkmkend AAAAAAAJKG}
+00156                              {\cf17 reinterpret_cast<}{\cf17 const }{\cf18 void}*{\cf17 >}(&value)),\par
+{\bkmkstart AAAAAAAJKH}{\bkmkend AAAAAAAJKH}
+00157                          {\cf17 sizeof}(value), os);\par
+{\bkmkstart AAAAAAAJKI}{\bkmkend AAAAAAAJKI}
+00158   \}\par
+{\bkmkstart AAAAAAAJKJ}{\bkmkend AAAAAAAJKJ}
+00159 \};\par
+{\bkmkstart AAAAAAAJKK}{\bkmkend AAAAAAAJKK}
+00160 \par
+{\bkmkstart AAAAAAAJKL}{\bkmkend AAAAAAAJKL}
+00161 {\cf20 // We print a protobuf using its ShortDebugString() when the string}\par
+{\bkmkstart AAAAAAAJKM}{\bkmkend AAAAAAAJKM}
+00162 {\cf20 // doesn't exceed this many characters; otherwise we print it using}\par
+{\bkmkstart AAAAAAAJKN}{\bkmkend AAAAAAAJKN}
+00163 {\cf20 // DebugString() for better readability.}\par
+{\bkmkstart AAAAAAAJKO}{\bkmkend AAAAAAAJKO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKP" }{}}{\fldrslt {\cs37\ul\cf2 00164}}}
+ {\cf17 const} {\cf18 size_t} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKP" }{}}{\fldrslt {\cs37\ul\cf2 kProtobufOneLinerMaxLength}}}
+ = 50;\par
+{\bkmkstart AAAAAAAJKQ}{\bkmkend AAAAAAAJKQ}
+00165 \par
+{\bkmkstart AAAAAAAJKR}{\bkmkend AAAAAAAJKR}
+00166 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJKS}{\bkmkend AAAAAAAJKS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKT" }{}}{\fldrslt {\cs37\ul\cf2 00167}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKA" }{}}{\fldrslt {\cs37\ul\cf2 TypeWithoutFormatter}}}
+<T, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJI" }{}}{\fldrslt {\cs37\ul\cf2 kProtobuf}}}
+> \{\par
+{\bkmkstart AAAAAAAJKU}{\bkmkend AAAAAAAJKU}
+00168  {\cf17 public}:\par
+{\bkmkstart AAAAAAAJKV}{\bkmkend AAAAAAAJKV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKW" }{}}{\fldrslt {\cs37\ul\cf2 00169}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKW" }{}}{\fldrslt {\cs37\ul\cf2 PrintValue}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJKX}{\bkmkend AAAAAAAJKX}
+00170     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ pretty_str = value.ShortDebugString();\par
+{\bkmkstart AAAAAAAJKY}{\bkmkend AAAAAAAJKY}
+00171     {\cf19 if} (pretty_str.length() > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKP" }{}}{\fldrslt {\cs37\ul\cf2 kProtobufOneLinerMaxLength}}}
+) \{\par
+{\bkmkstart AAAAAAAJKZ}{\bkmkend AAAAAAAJKZ}
+00172       pretty_str = {\cf22 "\\n"} + value.DebugString();\par
+{\bkmkstart AAAAAAAJLA}{\bkmkend AAAAAAAJLA}
+00173     \}\par
+{\bkmkstart AAAAAAAJLB}{\bkmkend AAAAAAAJLB}
+00174     *os << ({\cf22 "<"} + pretty_str + {\cf22 ">"});\par
+{\bkmkstart AAAAAAAJLC}{\bkmkend AAAAAAAJLC}
+00175   \}\par
+{\bkmkstart AAAAAAAJLD}{\bkmkend AAAAAAAJLD}
+00176 \};\par
+{\bkmkstart AAAAAAAJLE}{\bkmkend AAAAAAAJLE}
+00177 \par
+{\bkmkstart AAAAAAAJLF}{\bkmkend AAAAAAAJLF}
+00178 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJLG}{\bkmkend AAAAAAAJLG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJLH" }{}}{\fldrslt {\cs37\ul\cf2 00179}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKA" }{}}{\fldrslt {\cs37\ul\cf2 TypeWithoutFormatter}}}
+<T, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJK" }{}}{\fldrslt {\cs37\ul\cf2 kConvertibleToInteger}}}
+> \{\par
+{\bkmkstart AAAAAAAJLI}{\bkmkend AAAAAAAJLI}
+00180  {\cf17 public}:\par
+{\bkmkstart AAAAAAAJLJ}{\bkmkend AAAAAAAJLJ}
+00181   {\cf20 // Since T has no << operator or PrintTo() but can be implicitly}\par
+{\bkmkstart AAAAAAAJLK}{\bkmkend AAAAAAAJLK}
+00182   {\cf20 // converted to BiggestInt, we print it as a BiggestInt.}\par
+{\bkmkstart AAAAAAAJLL}{\bkmkend AAAAAAAJLL}
+00183   {\cf20 //}\par
+{\bkmkstart AAAAAAAJLM}{\bkmkend AAAAAAAJLM}
+00184   {\cf20 // Most likely T is an enum type (either named or unnamed), in which}\par
+{\bkmkstart AAAAAAAJLN}{\bkmkend AAAAAAAJLN}
+00185   {\cf20 // case printing it as an integer is the desired behavior.  In case}\par
+{\bkmkstart AAAAAAAJLO}{\bkmkend AAAAAAAJLO}
+00186   {\cf20 // T is not an enum, printing it as an integer is the best we can do}\par
+{\bkmkstart AAAAAAAJLP}{\bkmkend AAAAAAAJLP}
+00187   {\cf20 // given that it has no user-defined printer.}\par
+{\bkmkstart AAAAAAAJLQ}{\bkmkend AAAAAAAJLQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJLR" }{}}{\fldrslt {\cs37\ul\cf2 00188}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJLR" }{}}{\fldrslt {\cs37\ul\cf2 PrintValue}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJLS}{\bkmkend AAAAAAAJLS}
+00189     {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJLT" }{}}{\fldrslt {\cs37\ul\cf2 internal::BiggestInt}}}
+ kBigInt = value;\par
+{\bkmkstart AAAAAAAJLU}{\bkmkend AAAAAAAJLU}
+00190     *os << kBigInt;\par
+{\bkmkstart AAAAAAAJLV}{\bkmkend AAAAAAAJLV}
+00191   \}\par
+{\bkmkstart AAAAAAAJLW}{\bkmkend AAAAAAAJLW}
+00192 \};\par
+{\bkmkstart AAAAAAAJLX}{\bkmkend AAAAAAAJLX}
+00193 \par
+{\bkmkstart AAAAAAAJLY}{\bkmkend AAAAAAAJLY}
+00194 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAJLZ}{\bkmkend AAAAAAAJLZ}
+00195 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJMA}{\bkmkend AAAAAAAJMA}
+00196 {\cf17 class }TypeWithoutFormatter<T, kConvertibleToStringView> \{\par
+{\bkmkstart AAAAAAAJMB}{\bkmkend AAAAAAAJMB}
+00197  {\cf17 public}:\par
+{\bkmkstart AAAAAAAJMC}{\bkmkend AAAAAAAJMC}
+00198   {\cf20 // Since T has neither operator<< nor PrintTo() but can be implicitly}\par
+{\bkmkstart AAAAAAAJMD}{\bkmkend AAAAAAAJMD}
+00199   {\cf20 // converted to absl::string_view, we print it as a absl::string_view.}\par
+{\bkmkstart AAAAAAAJME}{\bkmkend AAAAAAAJME}
+00200   {\cf20 //}\par
+{\bkmkstart AAAAAAAJMF}{\bkmkend AAAAAAAJMF}
+00201   {\cf20 // Note: the implementation is further below, as it depends on}\par
+{\bkmkstart AAAAAAAJMG}{\bkmkend AAAAAAAJMG}
+00202   {\cf20 // internal::PrintTo symbol which is defined later in the file.}\par
+{\bkmkstart AAAAAAAJMH}{\bkmkend AAAAAAAJMH}
+00203   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKE" }{}}{\fldrslt {\cs37\ul\cf2 PrintValue}}}
+({\cf17 const} T& value, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAJMI}{\bkmkend AAAAAAAJMI}
+00204 \};\par
+{\bkmkstart AAAAAAAJMJ}{\bkmkend AAAAAAAJMJ}
+00205 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJMK}{\bkmkend AAAAAAAJMK}
+00206 \par
+{\bkmkstart AAAAAAAJML}{\bkmkend AAAAAAAJML}
+00207 {\cf20 // Prints the given value to the given ostream.  If the value is a}\par
+{\bkmkstart AAAAAAAJMM}{\bkmkend AAAAAAAJMM}
+00208 {\cf20 // protocol message, its debug string is printed; if it's an enum or}\par
+{\bkmkstart AAAAAAAJMN}{\bkmkend AAAAAAAJMN}
+00209 {\cf20 // of a type implicitly convertible to BiggestInt, it's printed as an}\par
+{\bkmkstart AAAAAAAJMO}{\bkmkend AAAAAAAJMO}
+00210 {\cf20 // integer; otherwise the bytes in the value are printed.  This is}\par
+{\bkmkstart AAAAAAAJMP}{\bkmkend AAAAAAAJMP}
+00211 {\cf20 // what UniversalPrinter<T>::Print() does when it knows nothing about}\par
+{\bkmkstart AAAAAAAJMQ}{\bkmkend AAAAAAAJMQ}
+00212 {\cf20 // type T and T has neither << operator nor PrintTo().}\par
+{\bkmkstart AAAAAAAJMR}{\bkmkend AAAAAAAJMR}
+00213 {\cf20 //}\par
+{\bkmkstart AAAAAAAJMS}{\bkmkend AAAAAAAJMS}
+00214 {\cf20 // A user can override this behavior for a class type Foo by defining}\par
+{\bkmkstart AAAAAAAJMT}{\bkmkend AAAAAAAJMT}
+00215 {\cf20 // a << operator in the namespace where Foo is defined.}\par
+{\bkmkstart AAAAAAAJMU}{\bkmkend AAAAAAAJMU}
+00216 {\cf20 //}\par
+{\bkmkstart AAAAAAAJMV}{\bkmkend AAAAAAAJMV}
+00217 {\cf20 // We put this operator in namespace 'internal2' instead of 'internal'}\par
+{\bkmkstart AAAAAAAJMW}{\bkmkend AAAAAAAJMW}
+00218 {\cf20 // to simplify the implementation, as much code in 'internal' needs to}\par
+{\bkmkstart AAAAAAAJMX}{\bkmkend AAAAAAAJMX}
+00219 {\cf20 // use << in STL, which would conflict with our own << were it defined}\par
+{\bkmkstart AAAAAAAJMY}{\bkmkend AAAAAAAJMY}
+00220 {\cf20 // in 'internal'.}\par
+{\bkmkstart AAAAAAAJMZ}{\bkmkend AAAAAAAJMZ}
+00221 {\cf20 //}\par
+{\bkmkstart AAAAAAAJNA}{\bkmkend AAAAAAAJNA}
+00222 {\cf20 // Note that this operator<< takes a generic std::basic_ostream<Char,}\par
+{\bkmkstart AAAAAAAJNB}{\bkmkend AAAAAAAJNB}
+00223 {\cf20 // CharTraits> type instead of the more restricted std::ostream.  If}\par
+{\bkmkstart AAAAAAAJNC}{\bkmkend AAAAAAAJNC}
+00224 {\cf20 // we define it to take an std::ostream instead, we'll get an}\par
+{\bkmkstart AAAAAAAJND}{\bkmkend AAAAAAAJND}
+00225 {\cf20 // "ambiguous overloads" compiler error when trying to print a type}\par
+{\bkmkstart AAAAAAAJNE}{\bkmkend AAAAAAAJNE}
+00226 {\cf20 // Foo that supports streaming to std::basic_ostream<Char,}\par
+{\bkmkstart AAAAAAAJNF}{\bkmkend AAAAAAAJNF}
+00227 {\cf20 // CharTraits>, as the compiler cannot tell whether}\par
+{\bkmkstart AAAAAAAJNG}{\bkmkend AAAAAAAJNG}
+00228 {\cf20 // operator<<(std::ostream&, const T&) or}\par
+{\bkmkstart AAAAAAAJNH}{\bkmkend AAAAAAAJNH}
+00229 {\cf20 // operator<<(std::basic_stream<Char, CharTraits>, const Foo&) is more}\par
+{\bkmkstart AAAAAAAJNI}{\bkmkend AAAAAAAJNI}
+00230 {\cf20 // specific.}\par
+{\bkmkstart AAAAAAAJNJ}{\bkmkend AAAAAAAJNJ}
+00231 {\cf17 template} <{\cf17 typename} Char, {\cf17 typename} CharTraits, {\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJNK}{\bkmkend AAAAAAAJNK}
+00232 ::std::basic_ostream<Char, CharTraits>& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJNL" }{}}{\fldrslt {\cs37\ul\cf2 operator<<}}}
+(\par
+{\bkmkstart AAAAAAAJNM}{\bkmkend AAAAAAAJNM}
+00233     ::std::basic_ostream<Char, CharTraits>& os, {\cf17 const} T& x) \{\par
+{\bkmkstart AAAAAAAJNN}{\bkmkend AAAAAAAJNN}
+00234   TypeWithoutFormatter<T, ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJNO" }{}}{\fldrslt {\cs37\ul\cf2 internal::IsAProtocolMessage<T>::value}}}
+\par
+{\bkmkstart AAAAAAAJNP}{\bkmkend AAAAAAAJNP}
+00235                                ? {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJI" }{}}{\fldrslt {\cs37\ul\cf2 kProtobuf}}}
+\par
+{\bkmkstart AAAAAAAJNQ}{\bkmkend AAAAAAAJNQ}
+00236                                : internal::ImplicitlyConvertible<\par
+{\bkmkstart AAAAAAAJNR}{\bkmkend AAAAAAAJNR}
+00237                                      {\cf17 const} T&, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJLT" }{}}{\fldrslt {\cs37\ul\cf2 internal::BiggestInt}}}
+>::value\par
+{\bkmkstart AAAAAAAJNS}{\bkmkend AAAAAAAJNS}
+00238                                      ? {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJK" }{}}{\fldrslt {\cs37\ul\cf2 kConvertibleToInteger}}}
+\par
+{\bkmkstart AAAAAAAJNT}{\bkmkend AAAAAAAJNT}
+00239                                      :\par
+{\bkmkstart AAAAAAAJNU}{\bkmkend AAAAAAAJNU}
+00240 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAJNV}{\bkmkend AAAAAAAJNV}
+00241                                      internal::ImplicitlyConvertible<\par
+{\bkmkstart AAAAAAAJNW}{\bkmkend AAAAAAAJNW}
+00242                                          {\cf17 const} T&, absl::string_view>::value\par
+{\bkmkstart AAAAAAAJNX}{\bkmkend AAAAAAAJNX}
+00243                                          ? kConvertibleToStringView\par
+{\bkmkstart AAAAAAAJNY}{\bkmkend AAAAAAAJNY}
+00244                                          :\par
+{\bkmkstart AAAAAAAJNZ}{\bkmkend AAAAAAAJNZ}
+00245 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJOA}{\bkmkend AAAAAAAJOA}
+00246                                          {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJJR" }{}}{\fldrslt {\cs37\ul\cf2 kOtherType}}}
+)>::PrintValue(x, &os);\par
+{\bkmkstart AAAAAAAJOB}{\bkmkend AAAAAAAJOB}
+00247   {\cf19 return} os;\par
+{\bkmkstart AAAAAAAJOC}{\bkmkend AAAAAAAJOC}
+00248 \}\par
+{\bkmkstart AAAAAAAJOD}{\bkmkend AAAAAAAJOD}
+00249 \par
+{\bkmkstart AAAAAAAJOE}{\bkmkend AAAAAAAJOE}
+00250 \}  {\cf20 // namespace internal2}\par
+{\bkmkstart AAAAAAAJOF}{\bkmkend AAAAAAAJOF}
+00251 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAJOG}{\bkmkend AAAAAAAJOG}
+00252 \par
+{\bkmkstart AAAAAAAJOH}{\bkmkend AAAAAAAJOH}
+00253 {\cf20 // This namespace MUST NOT BE NESTED IN ::testing, or the name look-up}\par
+{\bkmkstart AAAAAAAJOI}{\bkmkend AAAAAAAJOI}
+00254 {\cf20 // magic needed for implementing UniversalPrinter won't work.}\par
+{\bkmkstart AAAAAAAJOJ}{\bkmkend AAAAAAAJOJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJOK" }{}}{\fldrslt {\cs37\ul\cf2 00255}}}
+ {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJOK" }{}}{\fldrslt {\cs37\ul\cf2 testing_internal}}}
+ \{\par
+{\bkmkstart AAAAAAAJOL}{\bkmkend AAAAAAAJOL}
+00256 \par
+{\bkmkstart AAAAAAAJOM}{\bkmkend AAAAAAAJOM}
+00257 {\cf20 // Used to print a value that is not an STL-style container when the}\par
+{\bkmkstart AAAAAAAJON}{\bkmkend AAAAAAAJON}
+00258 {\cf20 // user doesn't define PrintTo() for it.}\par
+{\bkmkstart AAAAAAAJOO}{\bkmkend AAAAAAAJOO}
+00259 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJOP}{\bkmkend AAAAAAAJOP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJOQ" }{}}{\fldrslt {\cs37\ul\cf2 00260}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJOQ" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrintNonContainerTo}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJOR}{\bkmkend AAAAAAAJOR}
+00261   {\cf20 // With the following statement, during unqualified name lookup,}\par
+{\bkmkstart AAAAAAAJOS}{\bkmkend AAAAAAAJOS}
+00262   {\cf20 // testing::internal2::operator<< appears as if it was declared in}\par
+{\bkmkstart AAAAAAAJOT}{\bkmkend AAAAAAAJOT}
+00263   {\cf20 // the nearest enclosing namespace that contains both}\par
+{\bkmkstart AAAAAAAJOU}{\bkmkend AAAAAAAJOU}
+00264   {\cf20 // ::testing_internal and ::testing::internal2, i.e. the global}\par
+{\bkmkstart AAAAAAAJOV}{\bkmkend AAAAAAAJOV}
+00265   {\cf20 // namespace.  For more details, refer to the C++ Standard section}\par
+{\bkmkstart AAAAAAAJOW}{\bkmkend AAAAAAAJOW}
+00266   {\cf20 // 7.3.4-1 [namespace.udir].  This allows us to fall back onto}\par
+{\bkmkstart AAAAAAAJOX}{\bkmkend AAAAAAAJOX}
+00267   {\cf20 // testing::internal2::operator<< in case T doesn't come with a <<}\par
+{\bkmkstart AAAAAAAJOY}{\bkmkend AAAAAAAJOY}
+00268   {\cf20 // operator.}\par
+{\bkmkstart AAAAAAAJOZ}{\bkmkend AAAAAAAJOZ}
+00269   {\cf20 //}\par
+{\bkmkstart AAAAAAAJPA}{\bkmkend AAAAAAAJPA}
+00270   {\cf20 // We cannot write 'using ::testing::internal2::operator<<;', which}\par
+{\bkmkstart AAAAAAAJPB}{\bkmkend AAAAAAAJPB}
+00271   {\cf20 // gcc 3.3 fails to compile due to a compiler bug.}\par
+{\bkmkstart AAAAAAAJPC}{\bkmkend AAAAAAAJPC}
+00272   {\cf17 using namespace }::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJIU" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal2}}}
+;  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAAAJPD}{\bkmkend AAAAAAAJPD}
+00273 \par
+{\bkmkstart AAAAAAAJPE}{\bkmkend AAAAAAAJPE}
+00274   {\cf20 // Assuming T is defined in namespace foo, in the next statement,}\par
+{\bkmkstart AAAAAAAJPF}{\bkmkend AAAAAAAJPF}
+00275   {\cf20 // the compiler will consider all of:}\par
+{\bkmkstart AAAAAAAJPG}{\bkmkend AAAAAAAJPG}
+00276   {\cf20 //}\par
+{\bkmkstart AAAAAAAJPH}{\bkmkend AAAAAAAJPH}
+00277   {\cf20 //   1. foo::operator<< (thanks to Koenig look-up),}\par
+{\bkmkstart AAAAAAAJPI}{\bkmkend AAAAAAAJPI}
+00278   {\cf20 //   2. ::operator<< (as the current namespace is enclosed in ::),}\par
+{\bkmkstart AAAAAAAJPJ}{\bkmkend AAAAAAAJPJ}
+00279   {\cf20 //   3. testing::internal2::operator<< (thanks to the using statement above).}\par
+{\bkmkstart AAAAAAAJPK}{\bkmkend AAAAAAAJPK}
+00280   {\cf20 //}\par
+{\bkmkstart AAAAAAAJPL}{\bkmkend AAAAAAAJPL}
+00281   {\cf20 // The operator<< whose type matches T best will be picked.}\par
+{\bkmkstart AAAAAAAJPM}{\bkmkend AAAAAAAJPM}
+00282   {\cf20 //}\par
+{\bkmkstart AAAAAAAJPN}{\bkmkend AAAAAAAJPN}
+00283   {\cf20 // We deliberately allow #2 to be a candidate, as sometimes it's}\par
+{\bkmkstart AAAAAAAJPO}{\bkmkend AAAAAAAJPO}
+00284   {\cf20 // impossible to define #1 (e.g. when foo is ::std, defining}\par
+{\bkmkstart AAAAAAAJPP}{\bkmkend AAAAAAAJPP}
+00285   {\cf20 // anything in it is undefined behavior unless you are a compiler}\par
+{\bkmkstart AAAAAAAJPQ}{\bkmkend AAAAAAAJPQ}
+00286   {\cf20 // vendor.).}\par
+{\bkmkstart AAAAAAAJPR}{\bkmkend AAAAAAAJPR}
+00287   *os << value;\par
+{\bkmkstart AAAAAAAJPS}{\bkmkend AAAAAAAJPS}
+00288 \}\par
+{\bkmkstart AAAAAAAJPT}{\bkmkend AAAAAAAJPT}
+00289 \par
+{\bkmkstart AAAAAAAJPU}{\bkmkend AAAAAAAJPU}
+00290 \}  {\cf20 // namespace testing_internal}\par
+{\bkmkstart AAAAAAAJPV}{\bkmkend AAAAAAAJPV}
+00291 \par
+{\bkmkstart AAAAAAAJPW}{\bkmkend AAAAAAAJPW}
+00292 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAJPX}{\bkmkend AAAAAAAJPX}
+00293 {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAAAJPY}{\bkmkend AAAAAAAJPY}
+00294 \par
+{\bkmkstart AAAAAAAJPZ}{\bkmkend AAAAAAAJPZ}
+00295 {\cf20 // FormatForComparison<ToPrint, OtherOperand>::Format(value) formats a}\par
+{\bkmkstart AAAAAAAJQA}{\bkmkend AAAAAAAJQA}
+00296 {\cf20 // value of type ToPrint that is an operand of a comparison assertion}\par
+{\bkmkstart AAAAAAAJQB}{\bkmkend AAAAAAAJQB}
+00297 {\cf20 // (e.g. ASSERT_EQ).  OtherOperand is the type of the other operand in}\par
+{\bkmkstart AAAAAAAJQC}{\bkmkend AAAAAAAJQC}
+00298 {\cf20 // the comparison, and is used to help determine the best way to}\par
+{\bkmkstart AAAAAAAJQD}{\bkmkend AAAAAAAJQD}
+00299 {\cf20 // format the value.  In particular, when the value is a C string}\par
+{\bkmkstart AAAAAAAJQE}{\bkmkend AAAAAAAJQE}
+00300 {\cf20 // (char pointer) and the other operand is an STL string object, we}\par
+{\bkmkstart AAAAAAAJQF}{\bkmkend AAAAAAAJQF}
+00301 {\cf20 // want to format the C string as a string, since we know it is}\par
+{\bkmkstart AAAAAAAJQG}{\bkmkend AAAAAAAJQG}
+00302 {\cf20 // compared by value with the string object.  If the value is a char}\par
+{\bkmkstart AAAAAAAJQH}{\bkmkend AAAAAAAJQH}
+00303 {\cf20 // pointer but the other operand is not an STL string object, we don't}\par
+{\bkmkstart AAAAAAAJQI}{\bkmkend AAAAAAAJQI}
+00304 {\cf20 // know whether the pointer is supposed to point to a NUL-terminated}\par
+{\bkmkstart AAAAAAAJQJ}{\bkmkend AAAAAAAJQJ}
+00305 {\cf20 // string, and thus want to print it as a pointer to be safe.}\par
+{\bkmkstart AAAAAAAJQK}{\bkmkend AAAAAAAJQK}
+00306 {\cf20 //}\par
+{\bkmkstart AAAAAAAJQL}{\bkmkend AAAAAAAJQL}
+00307 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.}\par
+{\bkmkstart AAAAAAAJQM}{\bkmkend AAAAAAAJQM}
+00308 \par
+{\bkmkstart AAAAAAAJQN}{\bkmkend AAAAAAAJQN}
+00309 {\cf20 // The default case.}\par
+{\bkmkstart AAAAAAAJQO}{\bkmkend AAAAAAAJQO}
+00310 {\cf17 template} <{\cf17 typename} ToPr{\cf18 int}, {\cf17 typename} OtherOperand>\par
+{\bkmkstart AAAAAAAJQP}{\bkmkend AAAAAAAJQP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQQ" }{}}{\fldrslt {\cs37\ul\cf2 00311}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQQ" }{}}{\fldrslt {\cs37\ul\cf2 FormatForComparison}}}
+ \{\par
+{\bkmkstart AAAAAAAJQR}{\bkmkend AAAAAAAJQR}
+00312  {\cf17 public}:\par
+{\bkmkstart AAAAAAAJQS}{\bkmkend AAAAAAAJQS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQT" }{}}{\fldrslt {\cs37\ul\cf2 00313}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 static ::std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQT" }{}}{\fldrslt {\cs37\ul\cf2 Format}}}
+({\cf17 const} ToPrint& value) \{\par
+{\bkmkstart AAAAAAAJQU}{\bkmkend AAAAAAAJQU}
+00314     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQV" }{}}{\fldrslt {\cs37\ul\cf2 return ::testing::PrintToString}}}
+(value);\par
+{\bkmkstart AAAAAAAJQW}{\bkmkend AAAAAAAJQW}
+00315   \}\par
+{\bkmkstart AAAAAAAJQX}{\bkmkend AAAAAAAJQX}
+00316 \};\par
+{\bkmkstart AAAAAAAJQY}{\bkmkend AAAAAAAJQY}
+00317 \par
+{\bkmkstart AAAAAAAJQZ}{\bkmkend AAAAAAAJQZ}
+00318 {\cf20 // Array.}\par
+{\bkmkstart AAAAAAAJRA}{\bkmkend AAAAAAAJRA}
+00319 {\cf17 template} <{\cf17 typename} ToPr{\cf18 int}, {\cf18 size_t} N, {\cf17 typename} OtherOperand>\par
+{\bkmkstart AAAAAAAJRB}{\bkmkend AAAAAAAJRB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRC" }{}}{\fldrslt {\cs37\ul\cf2 00320}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQQ" }{}}{\fldrslt {\cs37\ul\cf2 FormatForComparison}}}
+<ToPrint[N], OtherOperand> \{\par
+{\bkmkstart AAAAAAAJRD}{\bkmkend AAAAAAAJRD}
+00321  {\cf17 public}:\par
+{\bkmkstart AAAAAAAJRE}{\bkmkend AAAAAAAJRE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRF" }{}}{\fldrslt {\cs37\ul\cf2 00322}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 static ::std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRF" }{}}{\fldrslt {\cs37\ul\cf2 Format}}}
+({\cf17 const} ToPrint* value) \{\par
+{\bkmkstart AAAAAAAJRG}{\bkmkend AAAAAAAJRG}
+00323     {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQT" }{}}{\fldrslt {\cs37\ul\cf2 FormatForComparison<const ToPrint*, OtherOperand>::Format}}}
+(value);\par
+{\bkmkstart AAAAAAAJRH}{\bkmkend AAAAAAAJRH}
+00324   \}\par
+{\bkmkstart AAAAAAAJRI}{\bkmkend AAAAAAAJRI}
+00325 \};\par
+{\bkmkstart AAAAAAAJRJ}{\bkmkend AAAAAAAJRJ}
+00326 \par
+{\bkmkstart AAAAAAAJRK}{\bkmkend AAAAAAAJRK}
+00327 {\cf20 // By default, print C string as pointers to be safe, as we don't know}\par
+{\bkmkstart AAAAAAAJRL}{\bkmkend AAAAAAAJRL}
+00328 {\cf20 // whether they actually point to a NUL-terminated string.}\par
+{\bkmkstart AAAAAAAJRM}{\bkmkend AAAAAAAJRM}
+00329 \par
+{\bkmkstart AAAAAAAJRN}{\bkmkend AAAAAAAJRN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRO" }{}}{\fldrslt {\cs37\ul\cf2 00330}}}
+ {\cf21 #define GTEST_IMPL_FORMAT_C_STRING_AS_POINTER_(CharType)                \\}\par
+{\bkmkstart AAAAAAAJRP}{\bkmkend AAAAAAAJRP}
+00331 {\cf21   template <typename OtherOperand>                                      \\}\par
+{\bkmkstart AAAAAAAJRQ}{\bkmkend AAAAAAAJRQ}
+00332 {\cf21   class FormatForComparison<CharType*, OtherOperand> \{                  \\}\par
+{\bkmkstart AAAAAAAJRR}{\bkmkend AAAAAAAJRR}
+00333 {\cf21    public:                                                              \\}\par
+{\bkmkstart AAAAAAAJRS}{\bkmkend AAAAAAAJRS}
+00334 {\cf21     static ::std::string Format(CharType* value) \{                      \\}\par
+{\bkmkstart AAAAAAAJRT}{\bkmkend AAAAAAAJRT}
+00335 {\cf21       return ::testing::PrintToString(static_cast<const void*>(value)); \\}\par
+{\bkmkstart AAAAAAAJRU}{\bkmkend AAAAAAAJRU}
+00336 {\cf21     \}                                                                   \\}\par
+{\bkmkstart AAAAAAAJRV}{\bkmkend AAAAAAAJRV}
+00337 {\cf21   \}}\par
+{\bkmkstart AAAAAAAJRW}{\bkmkend AAAAAAAJRW}
+00338 \par
+{\bkmkstart AAAAAAAJRX}{\bkmkend AAAAAAAJRX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRY" }{}}{\fldrslt {\cs37\ul\cf2 00339}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_POINTER_}}}
+({\cf18 char});\par
+{\bkmkstart AAAAAAAJRZ}{\bkmkend AAAAAAAJRZ}
+00340 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_POINTER_}}}
+({\cf17 const} {\cf18 char});\par
+{\bkmkstart AAAAAAAJSA}{\bkmkend AAAAAAAJSA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSB" }{}}{\fldrslt {\cs37\ul\cf2 00341}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_POINTER_}}}
+({\cf18 wchar_t});\par
+{\bkmkstart AAAAAAAJSC}{\bkmkend AAAAAAAJSC}
+00342 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_POINTER_}}}
+({\cf17 const} {\cf18 wchar_t});\par
+{\bkmkstart AAAAAAAJSD}{\bkmkend AAAAAAAJSD}
+00343 \par
+{\bkmkstart AAAAAAAJSE}{\bkmkend AAAAAAAJSE}
+00344 {\cf21 #undef GTEST_IMPL_FORMAT_C_STRING_AS_POINTER_}\par
+{\bkmkstart AAAAAAAJSF}{\bkmkend AAAAAAAJSF}
+00345 \par
+{\bkmkstart AAAAAAAJSG}{\bkmkend AAAAAAAJSG}
+00346 {\cf20 // If a C string is compared with an STL string object, we know it's meant}\par
+{\bkmkstart AAAAAAAJSH}{\bkmkend AAAAAAAJSH}
+00347 {\cf20 // to point to a NUL-terminated string, and thus can print it as a string.}\par
+{\bkmkstart AAAAAAAJSI}{\bkmkend AAAAAAAJSI}
+00348 \par
+{\bkmkstart AAAAAAAJSJ}{\bkmkend AAAAAAAJSJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSK" }{}}{\fldrslt {\cs37\ul\cf2 00349}}}
+ {\cf21 #define GTEST_IMPL_FORMAT_C_STRING_AS_STRING_(CharType, OtherStringType) \\}\par
+{\bkmkstart AAAAAAAJSL}{\bkmkend AAAAAAAJSL}
+00350 {\cf21   template <>                                                           \\}\par
+{\bkmkstart AAAAAAAJSM}{\bkmkend AAAAAAAJSM}
+00351 {\cf21   class FormatForComparison<CharType*, OtherStringType> \{               \\}\par
+{\bkmkstart AAAAAAAJSN}{\bkmkend AAAAAAAJSN}
+00352 {\cf21    public:                                                              \\}\par
+{\bkmkstart AAAAAAAJSO}{\bkmkend AAAAAAAJSO}
+00353 {\cf21     static ::std::string Format(CharType* value) \{                      \\}\par
+{\bkmkstart AAAAAAAJSP}{\bkmkend AAAAAAAJSP}
+00354 {\cf21       return ::testing::PrintToString(value);                           \\}\par
+{\bkmkstart AAAAAAAJSQ}{\bkmkend AAAAAAAJSQ}
+00355 {\cf21     \}                                                                   \\}\par
+{\bkmkstart AAAAAAAJSR}{\bkmkend AAAAAAAJSR}
+00356 {\cf21   \}}\par
+{\bkmkstart AAAAAAAJSS}{\bkmkend AAAAAAAJSS}
+00357 \par
+{\bkmkstart AAAAAAAJST}{\bkmkend AAAAAAAJST}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 00358}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf18 char}, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+);\par
+{\bkmkstart AAAAAAAJSV}{\bkmkend AAAAAAAJSV}
+00359 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf17 const} {\cf18 char}, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+);\par
+{\bkmkstart AAAAAAAJSW}{\bkmkend AAAAAAAJSW}
+00360 \par
+{\bkmkstart AAAAAAAJSX}{\bkmkend AAAAAAAJSX}
+00361 {\cf21 #if GTEST_HAS_GLOBAL_STRING}\par
+{\bkmkstart AAAAAAAJSY}{\bkmkend AAAAAAAJSY}
+00362 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf18 char}, ::{\cf18 string});\par
+{\bkmkstart AAAAAAAJSZ}{\bkmkend AAAAAAAJSZ}
+00363 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf17 const} {\cf18 char}, ::{\cf18 string});\par
+{\bkmkstart AAAAAAAJTA}{\bkmkend AAAAAAAJTA}
+00364 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJTB}{\bkmkend AAAAAAAJTB}
+00365 \par
+{\bkmkstart AAAAAAAJTC}{\bkmkend AAAAAAAJTC}
+00366 {\cf21 #if GTEST_HAS_GLOBAL_WSTRING}\par
+{\bkmkstart AAAAAAAJTD}{\bkmkend AAAAAAAJTD}
+00367 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf18 wchar_t}, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 wstring}}}
+);\par
+{\bkmkstart AAAAAAAJTE}{\bkmkend AAAAAAAJTE}
+00368 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf17 const} {\cf18 wchar_t}, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 wstring}}}
+);\par
+{\bkmkstart AAAAAAAJTF}{\bkmkend AAAAAAAJTF}
+00369 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJTG}{\bkmkend AAAAAAAJTG}
+00370 \par
+{\bkmkstart AAAAAAAJTH}{\bkmkend AAAAAAAJTH}
+00371 {\cf21 #if GTEST_HAS_STD_WSTRING}\par
+{\bkmkstart AAAAAAAJTI}{\bkmkend AAAAAAAJTI}
+00372 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf18 wchar_t}, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 std::wstring}}}
+);\par
+{\bkmkstart AAAAAAAJTJ}{\bkmkend AAAAAAAJTJ}
+00373 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJSU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}}}
+({\cf17 const} {\cf18 wchar_t}, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 std::wstring}}}
+);\par
+{\bkmkstart AAAAAAAJTK}{\bkmkend AAAAAAAJTK}
+00374 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAJTL}{\bkmkend AAAAAAAJTL}
+00375 \par
+{\bkmkstart AAAAAAAJTM}{\bkmkend AAAAAAAJTM}
+00376 {\cf21 #undef GTEST_IMPL_FORMAT_C_STRING_AS_STRING_}\par
+{\bkmkstart AAAAAAAJTN}{\bkmkend AAAAAAAJTN}
+00377 \par
+{\bkmkstart AAAAAAAJTO}{\bkmkend AAAAAAAJTO}
+00378 {\cf20 // Formats a comparison assertion (e.g. ASSERT_EQ, EXPECT_LT, and etc)}\par
+{\bkmkstart AAAAAAAJTP}{\bkmkend AAAAAAAJTP}
+00379 {\cf20 // operand to be used in a failure message.  The type (but not value)}\par
+{\bkmkstart AAAAAAAJTQ}{\bkmkend AAAAAAAJTQ}
+00380 {\cf20 // of the other operand may affect the format.  This allows us to}\par
+{\bkmkstart AAAAAAAJTR}{\bkmkend AAAAAAAJTR}
+00381 {\cf20 // print a char* as a raw pointer when it is compared against another}\par
+{\bkmkstart AAAAAAAJTS}{\bkmkend AAAAAAAJTS}
+00382 {\cf20 // char* or void*, and print it as a C string when it is compared}\par
+{\bkmkstart AAAAAAAJTT}{\bkmkend AAAAAAAJTT}
+00383 {\cf20 // against an std::string object, for example.}\par
+{\bkmkstart AAAAAAAJTU}{\bkmkend AAAAAAAJTU}
+00384 {\cf20 //}\par
+{\bkmkstart AAAAAAAJTV}{\bkmkend AAAAAAAJTV}
+00385 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.}\par
+{\bkmkstart AAAAAAAJTW}{\bkmkend AAAAAAAJTW}
+00386 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2>\par
+{\bkmkstart AAAAAAAJTX}{\bkmkend AAAAAAAJTX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJTY" }{}}{\fldrslt {\cs37\ul\cf2 00387}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJTY" }{}}{\fldrslt {\cs37\ul\cf2 FormatForComparisonFailureMessage}}}
+(\par
+{\bkmkstart AAAAAAAJTZ}{\bkmkend AAAAAAAJTZ}
+00388     {\cf17 const} T1& value, {\cf17 const} T2& {\cf20 /* other_operand */}) \{\par
+{\bkmkstart AAAAAAAJUA}{\bkmkend AAAAAAAJUA}
+00389   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQT" }{}}{\fldrslt {\cs37\ul\cf2 FormatForComparison<T1, T2>::Format}}}
+(value);\par
+{\bkmkstart AAAAAAAJUB}{\bkmkend AAAAAAAJUB}
+00390 \}\par
+{\bkmkstart AAAAAAAJUC}{\bkmkend AAAAAAAJUC}
+00391 \par
+{\bkmkstart AAAAAAAJUD}{\bkmkend AAAAAAAJUD}
+00392 {\cf20 // UniversalPrinter<T>::Print(value, ostream_ptr) prints the given}\par
+{\bkmkstart AAAAAAAJUE}{\bkmkend AAAAAAAJUE}
+00393 {\cf20 // value to the given ostream.  The caller must ensure that}\par
+{\bkmkstart AAAAAAAJUF}{\bkmkend AAAAAAAJUF}
+00394 {\cf20 // 'ostream_ptr' is not NULL, or the behavior is undefined.}\par
+{\bkmkstart AAAAAAAJUG}{\bkmkend AAAAAAAJUG}
+00395 {\cf20 //}\par
+{\bkmkstart AAAAAAAJUH}{\bkmkend AAAAAAAJUH}
+00396 {\cf20 // We define UniversalPrinter as a class template (as opposed to a}\par
+{\bkmkstart AAAAAAAJUI}{\bkmkend AAAAAAAJUI}
+00397 {\cf20 // function template), as we need to partially specialize it for}\par
+{\bkmkstart AAAAAAAJUJ}{\bkmkend AAAAAAAJUJ}
+00398 {\cf20 // reference types, which cannot be done with function templates.}\par
+{\bkmkstart AAAAAAAJUK}{\bkmkend AAAAAAAJUK}
+00399 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJUL}{\bkmkend AAAAAAAJUL}
+00400 {\cf17 class }UniversalPrinter;\par
+{\bkmkstart AAAAAAAJUM}{\bkmkend AAAAAAAJUM}
+00401 \par
+{\bkmkstart AAAAAAAJUN}{\bkmkend AAAAAAAJUN}
+00402 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJUO}{\bkmkend AAAAAAAJUO}
+00403 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+({\cf17 const} T& value, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAJUQ}{\bkmkend AAAAAAAJUQ}
+00404 \par
+{\bkmkstart AAAAAAAJUR}{\bkmkend AAAAAAAJUR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUS" }{}}{\fldrslt {\cs37\ul\cf2 00405}}}
+ {\cf17 enum} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUS" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrinterType}}}
+ \{\par
+{\bkmkstart AAAAAAAJUT}{\bkmkend AAAAAAAJUT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUU" }{}}{\fldrslt {\cs37\ul\cf2 00406}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUU" }{}}{\fldrslt {\cs37\ul\cf2 kPrintContainer}}}
+,\par
+{\bkmkstart AAAAAAAJUV}{\bkmkend AAAAAAAJUV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUW" }{}}{\fldrslt {\cs37\ul\cf2 00407}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUW" }{}}{\fldrslt {\cs37\ul\cf2 kPrintPointer}}}
+,\par
+{\bkmkstart AAAAAAAJUX}{\bkmkend AAAAAAAJUX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUY" }{}}{\fldrslt {\cs37\ul\cf2 00408}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUY" }{}}{\fldrslt {\cs37\ul\cf2 kPrintFunctionPointer}}}
+,\par
+{\bkmkstart AAAAAAAJUZ}{\bkmkend AAAAAAAJUZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVA" }{}}{\fldrslt {\cs37\ul\cf2 00409}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVA" }{}}{\fldrslt {\cs37\ul\cf2 kPrintOther}}}
+,\par
+{\bkmkstart AAAAAAAJVB}{\bkmkend AAAAAAAJVB}
+00410 \};\par
+{\bkmkstart AAAAAAAJVC}{\bkmkend AAAAAAAJVC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 00411}}}
+ {\cf17 template} <DefaultPr{\cf18 int}erType type> {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 WrapPrinterType}}}
+ \{\};\par
+{\bkmkstart AAAAAAAJVE}{\bkmkend AAAAAAAJVE}
+00412 \par
+{\bkmkstart AAAAAAAJVF}{\bkmkend AAAAAAAJVF}
+00413 {\cf20 // Used to print an STL-style container when the user doesn't define}\par
+{\bkmkstart AAAAAAAJVG}{\bkmkend AAAAAAAJVG}
+00414 {\cf20 // a PrintTo() for it.}\par
+{\bkmkstart AAAAAAAJVH}{\bkmkend AAAAAAAJVH}
+00415 {\cf17 template} <{\cf17 typename} C>\par
+{\bkmkstart AAAAAAAJVI}{\bkmkend AAAAAAAJVI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVJ" }{}}{\fldrslt {\cs37\ul\cf2 00416}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVJ" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 WrapPrinterType<kPrintContainer>}}}
+ {\cf20 /* dummy */},\par
+{\bkmkstart AAAAAAAJVK}{\bkmkend AAAAAAAJVK}
+00417                     {\cf17 const} C& container, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJVL}{\bkmkend AAAAAAAJVL}
+00418   {\cf17 const} {\cf18 size_t} kMaxCount = 32;  {\cf20 // The maximum number of elements to print.}\par
+{\bkmkstart AAAAAAAJVM}{\bkmkend AAAAAAAJVM}
+00419   *os << {\cf23 '\{'};\par
+{\bkmkstart AAAAAAAJVN}{\bkmkend AAAAAAAJVN}
+00420   {\cf18 size_t} count = 0;\par
+{\bkmkstart AAAAAAAJVO}{\bkmkend AAAAAAAJVO}
+00421   {\cf19 for} ({\cf17 typename} C::const_iterator it = container.begin();\par
+{\bkmkstart AAAAAAAJVP}{\bkmkend AAAAAAAJVP}
+00422        it != container.end(); ++it, ++count) \{\par
+{\bkmkstart AAAAAAAJVQ}{\bkmkend AAAAAAAJVQ}
+00423     {\cf19 if} (count > 0) \{\par
+{\bkmkstart AAAAAAAJVR}{\bkmkend AAAAAAAJVR}
+00424       *os << {\cf23 ','};\par
+{\bkmkstart AAAAAAAJVS}{\bkmkend AAAAAAAJVS}
+00425       {\cf19 if} (count == kMaxCount) \{  {\cf20 // Enough has been printed.}\par
+{\bkmkstart AAAAAAAJVT}{\bkmkend AAAAAAAJVT}
+00426         *os << {\cf22 " ..."};\par
+{\bkmkstart AAAAAAAJVU}{\bkmkend AAAAAAAJVU}
+00427         {\cf19 break};\par
+{\bkmkstart AAAAAAAJVV}{\bkmkend AAAAAAAJVV}
+00428       \}\par
+{\bkmkstart AAAAAAAJVW}{\bkmkend AAAAAAAJVW}
+00429     \}\par
+{\bkmkstart AAAAAAAJVX}{\bkmkend AAAAAAAJVX}
+00430     *os << {\cf23 ' '};\par
+{\bkmkstart AAAAAAAJVY}{\bkmkend AAAAAAAJVY}
+00431     {\cf20 // We cannot call PrintTo(*it, os) here as PrintTo() doesn't}\par
+{\bkmkstart AAAAAAAJVZ}{\bkmkend AAAAAAAJVZ}
+00432     {\cf20 // handle *it being a native array.}\par
+{\bkmkstart AAAAAAAJWA}{\bkmkend AAAAAAAJWA}
+00433     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 internal::UniversalPrint}}}
+(*it, os);\par
+{\bkmkstart AAAAAAAJWB}{\bkmkend AAAAAAAJWB}
+00434   \}\par
+{\bkmkstart AAAAAAAJWC}{\bkmkend AAAAAAAJWC}
+00435 \par
+{\bkmkstart AAAAAAAJWD}{\bkmkend AAAAAAAJWD}
+00436   {\cf19 if} (count > 0) \{\par
+{\bkmkstart AAAAAAAJWE}{\bkmkend AAAAAAAJWE}
+00437     *os << {\cf23 ' '};\par
+{\bkmkstart AAAAAAAJWF}{\bkmkend AAAAAAAJWF}
+00438   \}\par
+{\bkmkstart AAAAAAAJWG}{\bkmkend AAAAAAAJWG}
+00439   *os << {\cf23 '\}'};\par
+{\bkmkstart AAAAAAAJWH}{\bkmkend AAAAAAAJWH}
+00440 \}\par
+{\bkmkstart AAAAAAAJWI}{\bkmkend AAAAAAAJWI}
+00441 \par
+{\bkmkstart AAAAAAAJWJ}{\bkmkend AAAAAAAJWJ}
+00442 {\cf20 // Used to print a pointer that is neither a char pointer nor a member}\par
+{\bkmkstart AAAAAAAJWK}{\bkmkend AAAAAAAJWK}
+00443 {\cf20 // pointer, when the user doesn't define PrintTo() for it.  (A member}\par
+{\bkmkstart AAAAAAAJWL}{\bkmkend AAAAAAAJWL}
+00444 {\cf20 // variable pointer or member function pointer doesn't really point to}\par
+{\bkmkstart AAAAAAAJWM}{\bkmkend AAAAAAAJWM}
+00445 {\cf20 // a location in the address space.  Their representation is}\par
+{\bkmkstart AAAAAAAJWN}{\bkmkend AAAAAAAJWN}
+00446 {\cf20 // implementation-defined.  Therefore they will be printed as raw}\par
+{\bkmkstart AAAAAAAJWO}{\bkmkend AAAAAAAJWO}
+00447 {\cf20 // bytes.)}\par
+{\bkmkstart AAAAAAAJWP}{\bkmkend AAAAAAAJWP}
+00448 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJWQ}{\bkmkend AAAAAAAJWQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJWR" }{}}{\fldrslt {\cs37\ul\cf2 00449}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVJ" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 WrapPrinterType<kPrintPointer>}}}
+ {\cf20 /* dummy */},\par
+{\bkmkstart AAAAAAAJWS}{\bkmkend AAAAAAAJWS}
+00450                     T* p, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJWT}{\bkmkend AAAAAAAJWT}
+00451   {\cf19 if} (p == NULL) \{\par
+{\bkmkstart AAAAAAAJWU}{\bkmkend AAAAAAAJWU}
+00452     *os << {\cf22 "NULL"};\par
+{\bkmkstart AAAAAAAJWV}{\bkmkend AAAAAAAJWV}
+00453   \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAJWW}{\bkmkend AAAAAAAJWW}
+00454     {\cf20 // T is not a function type.  We just call << to print p,}\par
+{\bkmkstart AAAAAAAJWX}{\bkmkend AAAAAAAJWX}
+00455     {\cf20 // relying on ADL to pick up user-defined << for their pointer}\par
+{\bkmkstart AAAAAAAJWY}{\bkmkend AAAAAAAJWY}
+00456     {\cf20 // types, if any.}\par
+{\bkmkstart AAAAAAAJWZ}{\bkmkend AAAAAAAJWZ}
+00457     *os << p;\par
+{\bkmkstart AAAAAAAJXA}{\bkmkend AAAAAAAJXA}
+00458   \}\par
+{\bkmkstart AAAAAAAJXB}{\bkmkend AAAAAAAJXB}
+00459 \}\par
+{\bkmkstart AAAAAAAJXC}{\bkmkend AAAAAAAJXC}
+00460 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJXD}{\bkmkend AAAAAAAJXD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJXE" }{}}{\fldrslt {\cs37\ul\cf2 00461}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVJ" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 WrapPrinterType<kPrintFunctionPointer>}}}
+ {\cf20 /* dummy */},\par
+{\bkmkstart AAAAAAAJXF}{\bkmkend AAAAAAAJXF}
+00462                     T* p, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJXG}{\bkmkend AAAAAAAJXG}
+00463   {\cf19 if} (p == NULL) \{\par
+{\bkmkstart AAAAAAAJXH}{\bkmkend AAAAAAAJXH}
+00464     *os << {\cf22 "NULL"};\par
+{\bkmkstart AAAAAAAJXI}{\bkmkend AAAAAAAJXI}
+00465   \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAJXJ}{\bkmkend AAAAAAAJXJ}
+00466     {\cf20 // T is a function type, so '*os << p' doesn't do what we want}\par
+{\bkmkstart AAAAAAAJXK}{\bkmkend AAAAAAAJXK}
+00467     {\cf20 // (it just prints p as bool).  We want to print p as a const}\par
+{\bkmkstart AAAAAAAJXL}{\bkmkend AAAAAAAJXL}
+00468     {\cf20 // void*.}\par
+{\bkmkstart AAAAAAAJXM}{\bkmkend AAAAAAAJXM}
+00469     *os << reinterpret_cast<const void*>(p);\par
+{\bkmkstart AAAAAAAJXN}{\bkmkend AAAAAAAJXN}
+00470   \}\par
+{\bkmkstart AAAAAAAJXO}{\bkmkend AAAAAAAJXO}
+00471 \}\par
+{\bkmkstart AAAAAAAJXP}{\bkmkend AAAAAAAJXP}
+00472 \par
+{\bkmkstart AAAAAAAJXQ}{\bkmkend AAAAAAAJXQ}
+00473 {\cf20 // Used to print a non-container, non-pointer value when the user}\par
+{\bkmkstart AAAAAAAJXR}{\bkmkend AAAAAAAJXR}
+00474 {\cf20 // doesn't define PrintTo() for it.}\par
+{\bkmkstart AAAAAAAJXS}{\bkmkend AAAAAAAJXS}
+00475 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJXT}{\bkmkend AAAAAAAJXT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJXU" }{}}{\fldrslt {\cs37\ul\cf2 00476}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVJ" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 WrapPrinterType<kPrintOther>}}}
+ {\cf20 /* dummy */},\par
+{\bkmkstart AAAAAAAJXV}{\bkmkend AAAAAAAJXV}
+00477                     {\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJXW}{\bkmkend AAAAAAAJXW}
+00478   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJOQ" }{}}{\fldrslt {\cs37\ul\cf2 ::testing_internal::DefaultPrintNonContainerTo}}}
+(value, os);\par
+{\bkmkstart AAAAAAAJXX}{\bkmkend AAAAAAAJXX}
+00479 \}\par
+{\bkmkstart AAAAAAAJXY}{\bkmkend AAAAAAAJXY}
+00480 \par
+{\bkmkstart AAAAAAAJXZ}{\bkmkend AAAAAAAJXZ}
+00481 {\cf20 // Prints the given value using the << operator if it has one;}\par
+{\bkmkstart AAAAAAAJYA}{\bkmkend AAAAAAAJYA}
+00482 {\cf20 // otherwise prints the bytes in it.  This is what}\par
+{\bkmkstart AAAAAAAJYB}{\bkmkend AAAAAAAJYB}
+00483 {\cf20 // UniversalPrinter<T>::Print() does when PrintTo() is not specialized}\par
+{\bkmkstart AAAAAAAJYC}{\bkmkend AAAAAAAJYC}
+00484 {\cf20 // or overloaded for type T.}\par
+{\bkmkstart AAAAAAAJYD}{\bkmkend AAAAAAAJYD}
+00485 {\cf20 //}\par
+{\bkmkstart AAAAAAAJYE}{\bkmkend AAAAAAAJYE}
+00486 {\cf20 // A user can override this behavior for a class type Foo by defining}\par
+{\bkmkstart AAAAAAAJYF}{\bkmkend AAAAAAAJYF}
+00487 {\cf20 // an overload of PrintTo() in the namespace where Foo is defined.  We}\par
+{\bkmkstart AAAAAAAJYG}{\bkmkend AAAAAAAJYG}
+00488 {\cf20 // give the user this option as sometimes defining a << operator for}\par
+{\bkmkstart AAAAAAAJYH}{\bkmkend AAAAAAAJYH}
+00489 {\cf20 // Foo is not desirable (e.g. the coding style may prevent doing it,}\par
+{\bkmkstart AAAAAAAJYI}{\bkmkend AAAAAAAJYI}
+00490 {\cf20 // or there is already a << operator but it doesn't do what the user}\par
+{\bkmkstart AAAAAAAJYJ}{\bkmkend AAAAAAAJYJ}
+00491 {\cf20 // wants).}\par
+{\bkmkstart AAAAAAAJYK}{\bkmkend AAAAAAAJYK}
+00492 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAJYL}{\bkmkend AAAAAAAJYL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 00493}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAJYN}{\bkmkend AAAAAAAJYN}
+00494   {\cf20 // DefaultPrintTo() is overloaded.  The type of its first argument}\par
+{\bkmkstart AAAAAAAJYO}{\bkmkend AAAAAAAJYO}
+00495   {\cf20 // determines which version will be picked.}\par
+{\bkmkstart AAAAAAAJYP}{\bkmkend AAAAAAAJYP}
+00496   {\cf20 //}\par
+{\bkmkstart AAAAAAAJYQ}{\bkmkend AAAAAAAJYQ}
+00497   {\cf20 // Note that we check for container types here, prior to we check}\par
+{\bkmkstart AAAAAAAJYR}{\bkmkend AAAAAAAJYR}
+00498   {\cf20 // for protocol message types in our operator<<.  The rationale is:}\par
+{\bkmkstart AAAAAAAJYS}{\bkmkend AAAAAAAJYS}
+00499   {\cf20 //}\par
+{\bkmkstart AAAAAAAJYT}{\bkmkend AAAAAAAJYT}
+00500   {\cf20 // For protocol messages, we want to give people a chance to}\par
+{\bkmkstart AAAAAAAJYU}{\bkmkend AAAAAAAJYU}
+00501   {\cf20 // override Google Mock's format by defining a PrintTo() or}\par
+{\bkmkstart AAAAAAAJYV}{\bkmkend AAAAAAAJYV}
+00502   {\cf20 // operator<<.  For STL containers, other formats can be}\par
+{\bkmkstart AAAAAAAJYW}{\bkmkend AAAAAAAJYW}
+00503   {\cf20 // incompatible with Google Mock's format for the container}\par
+{\bkmkstart AAAAAAAJYX}{\bkmkend AAAAAAAJYX}
+00504   {\cf20 // elements; therefore we check for container types here to ensure}\par
+{\bkmkstart AAAAAAAJYY}{\bkmkend AAAAAAAJYY}
+00505   {\cf20 // that our format is used.}\par
+{\bkmkstart AAAAAAAJYZ}{\bkmkend AAAAAAAJYZ}
+00506   {\cf20 //}\par
+{\bkmkstart AAAAAAAJZA}{\bkmkend AAAAAAAJZA}
+00507   {\cf20 // Note that MSVC and clang-cl do allow an implicit conversion from}\par
+{\bkmkstart AAAAAAAJZB}{\bkmkend AAAAAAAJZB}
+00508   {\cf20 // pointer-to-function to pointer-to-object, but clang-cl warns on it.}\par
+{\bkmkstart AAAAAAAJZC}{\bkmkend AAAAAAAJZC}
+00509   {\cf20 // So don't use ImplicitlyConvertible if it can be helped since it will}\par
+{\bkmkstart AAAAAAAJZD}{\bkmkend AAAAAAAJZD}
+00510   {\cf20 // cause this warning, and use a separate overload of DefaultPrintTo for}\par
+{\bkmkstart AAAAAAAJZE}{\bkmkend AAAAAAAJZE}
+00511   {\cf20 // function pointers so that the `*os << p` in the object pointer overload}\par
+{\bkmkstart AAAAAAAJZF}{\bkmkend AAAAAAAJZF}
+00512   {\cf20 // doesn't cause that warning either.}\par
+{\bkmkstart AAAAAAAJZG}{\bkmkend AAAAAAAJZG}
+00513   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVJ" }{}}{\fldrslt {\cs37\ul\cf2 DefaultPrintTo}}}
+(\par
+{\bkmkstart AAAAAAAJZH}{\bkmkend AAAAAAAJZH}
+00514       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVD" }{}}{\fldrslt {\cs37\ul\cf2 WrapPrinterType}}}
+ <\par
+{\bkmkstart AAAAAAAJZI}{\bkmkend AAAAAAAJZI}
+00515                   ({\cf17 sizeof}(IsContainerTest<T>(0)) == {\cf17 sizeof}({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZJ" }{}}{\fldrslt {\cs37\ul\cf2 IsContainer}}}
+)) &&\par
+{\bkmkstart AAAAAAAJZK}{\bkmkend AAAAAAAJZK}
+00516               !{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZL" }{}}{\fldrslt {\cs37\ul\cf2 IsRecursiveContainer<T>::value}}}
+\par
+{\bkmkstart AAAAAAAJZM}{\bkmkend AAAAAAAJZM}
+00517           ? {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUU" }{}}{\fldrslt {\cs37\ul\cf2 kPrintContainer}}}
+\par
+{\bkmkstart AAAAAAAJZN}{\bkmkend AAAAAAAJZN}
+00518           : !{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZO" }{}}{\fldrslt {\cs37\ul\cf2 is_pointer<T>::value}}}
+\par
+{\bkmkstart AAAAAAAJZP}{\bkmkend AAAAAAAJZP}
+00519                 ? {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJVA" }{}}{\fldrslt {\cs37\ul\cf2 kPrintOther}}}
+\par
+{\bkmkstart AAAAAAAJZQ}{\bkmkend AAAAAAAJZQ}
+00520 #{\cf19 if} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_LANG_CXX11}}}
+\par
+{\bkmkstart AAAAAAAJZS}{\bkmkend AAAAAAAJZS}
+00521                 : std::is_function<{\cf17 typename} std::remove_pointer<T>::type>::value\par
+{\bkmkstart AAAAAAAJZT}{\bkmkend AAAAAAAJZT}
+00522 #{\cf19 else}\par
+{\bkmkstart AAAAAAAJZU}{\bkmkend AAAAAAAJZU}
+00523                 : !{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZV" }{}}{\fldrslt {\cs37\ul\cf2 internal::ImplicitlyConvertible<T, const void*>::value}}}
+\par
+{\bkmkstart AAAAAAAJZW}{\bkmkend AAAAAAAJZW}
+00524 #endif\par
+{\bkmkstart AAAAAAAJZX}{\bkmkend AAAAAAAJZX}
+00525                       ? {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUY" }{}}{\fldrslt {\cs37\ul\cf2 kPrintFunctionPointer}}}
+\par
+{\bkmkstart AAAAAAAJZY}{\bkmkend AAAAAAAJZY}
+00526                       : {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUW" }{}}{\fldrslt {\cs37\ul\cf2 kPrintPointer}}}
+ > (),\par
+{\bkmkstart AAAAAAAJZZ}{\bkmkend AAAAAAAJZZ}
+00527       value, os);\par
+{\bkmkstart AAAAAAAKAA}{\bkmkend AAAAAAAKAA}
+00528 \}\par
+{\bkmkstart AAAAAAAKAB}{\bkmkend AAAAAAAKAB}
+00529 \par
+{\bkmkstart AAAAAAAKAC}{\bkmkend AAAAAAAKAC}
+00530 {\cf20 // The following list of PrintTo() overloads tells}\par
+{\bkmkstart AAAAAAAKAD}{\bkmkend AAAAAAAKAD}
+00531 {\cf20 // UniversalPrinter<T>::Print() how to print standard types (built-in}\par
+{\bkmkstart AAAAAAAKAE}{\bkmkend AAAAAAAKAE}
+00532 {\cf20 // types, strings, plain arrays, and pointers).}\par
+{\bkmkstart AAAAAAAKAF}{\bkmkend AAAAAAAKAF}
+00533 \par
+{\bkmkstart AAAAAAAKAG}{\bkmkend AAAAAAAKAG}
+00534 {\cf20 // Overloads for various char types.}\par
+{\bkmkstart AAAAAAAKAH}{\bkmkend AAAAAAAKAH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKAI" }{}}{\fldrslt {\cs37\ul\cf2 00535}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 unsigned} {\cf18 char} c, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKAJ}{\bkmkend AAAAAAAKAJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKAK" }{}}{\fldrslt {\cs37\ul\cf2 00536}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 signed} {\cf18 char} c, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKAL}{\bkmkend AAAAAAAKAL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKAM" }{}}{\fldrslt {\cs37\ul\cf2 00537}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 char} c, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKAN}{\bkmkend AAAAAAAKAN}
+00538   {\cf20 // When printing a plain char, we always treat it as unsigned.  This}\par
+{\bkmkstart AAAAAAAKAO}{\bkmkend AAAAAAAKAO}
+00539   {\cf20 // way, the output won't be affected by whether the compiler thinks}\par
+{\bkmkstart AAAAAAAKAP}{\bkmkend AAAAAAAKAP}
+00540   {\cf20 // char is signed or not.}\par
+{\bkmkstart AAAAAAAKAQ}{\bkmkend AAAAAAAKAQ}
+00541   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf17 static_cast<}{\cf18 unsigned} {\cf18 char}{\cf17 >}(c), os);\par
+{\bkmkstart AAAAAAAKAR}{\bkmkend AAAAAAAKAR}
+00542 \}\par
+{\bkmkstart AAAAAAAKAS}{\bkmkend AAAAAAAKAS}
+00543 \par
+{\bkmkstart AAAAAAAKAT}{\bkmkend AAAAAAAKAT}
+00544 {\cf20 // Overloads for other simple built-in types.}\par
+{\bkmkstart AAAAAAAKAU}{\bkmkend AAAAAAAKAU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKAV" }{}}{\fldrslt {\cs37\ul\cf2 00545}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 bool} x, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKAW}{\bkmkend AAAAAAAKAW}
+00546   *os << (x ? {\cf22 "true"} : {\cf22 "false"});\par
+{\bkmkstart AAAAAAAKAX}{\bkmkend AAAAAAAKAX}
+00547 \}\par
+{\bkmkstart AAAAAAAKAY}{\bkmkend AAAAAAAKAY}
+00548 \par
+{\bkmkstart AAAAAAAKAZ}{\bkmkend AAAAAAAKAZ}
+00549 {\cf20 // Overload for wchar_t type.}\par
+{\bkmkstart AAAAAAAKBA}{\bkmkend AAAAAAAKBA}
+00550 {\cf20 // Prints a wchar_t as a symbol if it is printable or as its internal}\par
+{\bkmkstart AAAAAAAKBB}{\bkmkend AAAAAAAKBB}
+00551 {\cf20 // code otherwise and also as its decimal code (except for L'\\0').}\par
+{\bkmkstart AAAAAAAKBC}{\bkmkend AAAAAAAKBC}
+00552 {\cf20 // The L'\\0' char is printed as "L'\\\\0'". The decimal code is printed}\par
+{\bkmkstart AAAAAAAKBD}{\bkmkend AAAAAAAKBD}
+00553 {\cf20 // as signed integer when wchar_t is implemented by the compiler}\par
+{\bkmkstart AAAAAAAKBE}{\bkmkend AAAAAAAKBE}
+00554 {\cf20 // as a signed type and is printed as an unsigned integer when wchar_t}\par
+{\bkmkstart AAAAAAAKBF}{\bkmkend AAAAAAAKBF}
+00555 {\cf20 // is implemented as an unsigned type.}\par
+{\bkmkstart AAAAAAAKBG}{\bkmkend AAAAAAAKBG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKBH" }{}}{\fldrslt {\cs37\ul\cf2 00556}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 wchar_t} wc, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKBI}{\bkmkend AAAAAAAKBI}
+00557 \par
+{\bkmkstart AAAAAAAKBJ}{\bkmkend AAAAAAAKBJ}
+00558 {\cf20 // Overloads for C strings.}\par
+{\bkmkstart AAAAAAAKBK}{\bkmkend AAAAAAAKBK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKBL" }{}}{\fldrslt {\cs37\ul\cf2 00559}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf17 const} {\cf18 char}* s, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKBM}{\bkmkend AAAAAAAKBM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKBN" }{}}{\fldrslt {\cs37\ul\cf2 00560}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 char}* s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKBO}{\bkmkend AAAAAAAKBO}
+00561   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(ImplicitCast_<const char*>(s), os);\par
+{\bkmkstart AAAAAAAKBP}{\bkmkend AAAAAAAKBP}
+00562 \}\par
+{\bkmkstart AAAAAAAKBQ}{\bkmkend AAAAAAAKBQ}
+00563 \par
+{\bkmkstart AAAAAAAKBR}{\bkmkend AAAAAAAKBR}
+00564 {\cf20 // signed/unsigned char is often used for representing binary data, so}\par
+{\bkmkstart AAAAAAAKBS}{\bkmkend AAAAAAAKBS}
+00565 {\cf20 // we print pointers to it as void* to be safe.}\par
+{\bkmkstart AAAAAAAKBT}{\bkmkend AAAAAAAKBT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKBU" }{}}{\fldrslt {\cs37\ul\cf2 00566}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf17 const} {\cf18 signed} {\cf18 char}* s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKBV}{\bkmkend AAAAAAAKBV}
+00567   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(ImplicitCast_<const void*>(s), os);\par
+{\bkmkstart AAAAAAAKBW}{\bkmkend AAAAAAAKBW}
+00568 \}\par
+{\bkmkstart AAAAAAAKBX}{\bkmkend AAAAAAAKBX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKBY" }{}}{\fldrslt {\cs37\ul\cf2 00569}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 signed} {\cf18 char}* s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKBZ}{\bkmkend AAAAAAAKBZ}
+00570   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(ImplicitCast_<const void*>(s), os);\par
+{\bkmkstart AAAAAAAKCA}{\bkmkend AAAAAAAKCA}
+00571 \}\par
+{\bkmkstart AAAAAAAKCB}{\bkmkend AAAAAAAKCB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKCC" }{}}{\fldrslt {\cs37\ul\cf2 00572}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf17 const} {\cf18 unsigned} {\cf18 char}* s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKCD}{\bkmkend AAAAAAAKCD}
+00573   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(ImplicitCast_<const void*>(s), os);\par
+{\bkmkstart AAAAAAAKCE}{\bkmkend AAAAAAAKCE}
+00574 \}\par
+{\bkmkstart AAAAAAAKCF}{\bkmkend AAAAAAAKCF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKCG" }{}}{\fldrslt {\cs37\ul\cf2 00575}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 unsigned} {\cf18 char}* s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKCH}{\bkmkend AAAAAAAKCH}
+00576   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(ImplicitCast_<const void*>(s), os);\par
+{\bkmkstart AAAAAAAKCI}{\bkmkend AAAAAAAKCI}
+00577 \}\par
+{\bkmkstart AAAAAAAKCJ}{\bkmkend AAAAAAAKCJ}
+00578 \par
+{\bkmkstart AAAAAAAKCK}{\bkmkend AAAAAAAKCK}
+00579 {\cf20 // MSVC can be configured to define wchar_t as a typedef of unsigned}\par
+{\bkmkstart AAAAAAAKCL}{\bkmkend AAAAAAAKCL}
+00580 {\cf20 // short.  It defines _NATIVE_WCHAR_T_DEFINED when wchar_t is a native}\par
+{\bkmkstart AAAAAAAKCM}{\bkmkend AAAAAAAKCM}
+00581 {\cf20 // type.  When wchar_t is a typedef, defining an overload for const}\par
+{\bkmkstart AAAAAAAKCN}{\bkmkend AAAAAAAKCN}
+00582 {\cf20 // wchar_t* would cause unsigned short* be printed as a wide string,}\par
+{\bkmkstart AAAAAAAKCO}{\bkmkend AAAAAAAKCO}
+00583 {\cf20 // possibly causing invalid memory accesses.}\par
+{\bkmkstart AAAAAAAKCP}{\bkmkend AAAAAAAKCP}
+00584 {\cf21 #if !defined(_MSC_VER) || defined(_NATIVE_WCHAR_T_DEFINED)}\par
+{\bkmkstart AAAAAAAKCQ}{\bkmkend AAAAAAAKCQ}
+00585 {\cf20 // Overloads for wide C strings}\par
+{\bkmkstart AAAAAAAKCR}{\bkmkend AAAAAAAKCR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKCS" }{}}{\fldrslt {\cs37\ul\cf2 00586}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf17 const} {\cf18 wchar_t}* s, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKCT}{\bkmkend AAAAAAAKCT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKCU" }{}}{\fldrslt {\cs37\ul\cf2 00587}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\cf18 wchar_t}* s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKCV}{\bkmkend AAAAAAAKCV}
+00588   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(ImplicitCast_<const wchar_t*>(s), os);\par
+{\bkmkstart AAAAAAAKCW}{\bkmkend AAAAAAAKCW}
+00589 \}\par
+{\bkmkstart AAAAAAAKCX}{\bkmkend AAAAAAAKCX}
+00590 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAKCY}{\bkmkend AAAAAAAKCY}
+00591 \par
+{\bkmkstart AAAAAAAKCZ}{\bkmkend AAAAAAAKCZ}
+00592 {\cf20 // Overload for C arrays.  Multi-dimensional arrays are printed}\par
+{\bkmkstart AAAAAAAKDA}{\bkmkend AAAAAAAKDA}
+00593 {\cf20 // properly.}\par
+{\bkmkstart AAAAAAAKDB}{\bkmkend AAAAAAAKDB}
+00594 \par
+{\bkmkstart AAAAAAAKDC}{\bkmkend AAAAAAAKDC}
+00595 {\cf20 // Prints the given number of elements in an array, without printing}\par
+{\bkmkstart AAAAAAAKDD}{\bkmkend AAAAAAAKDD}
+00596 {\cf20 // the curly braces.}\par
+{\bkmkstart AAAAAAAKDE}{\bkmkend AAAAAAAKDE}
+00597 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKDF}{\bkmkend AAAAAAAKDF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDG" }{}}{\fldrslt {\cs37\ul\cf2 00598}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDG" }{}}{\fldrslt {\cs37\ul\cf2 PrintRawArrayTo}}}
+({\cf17 const} T a[], {\cf18 size_t} count, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKDH}{\bkmkend AAAAAAAKDH}
+00599   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(a[0], os);\par
+{\bkmkstart AAAAAAAKDI}{\bkmkend AAAAAAAKDI}
+00600   {\cf19 for} ({\cf18 size_t} i = 1; i != count; i++) \{\par
+{\bkmkstart AAAAAAAKDJ}{\bkmkend AAAAAAAKDJ}
+00601     *os << {\cf22 ", "};\par
+{\bkmkstart AAAAAAAKDK}{\bkmkend AAAAAAAKDK}
+00602     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(a[i], os);\par
+{\bkmkstart AAAAAAAKDL}{\bkmkend AAAAAAAKDL}
+00603   \}\par
+{\bkmkstart AAAAAAAKDM}{\bkmkend AAAAAAAKDM}
+00604 \}\par
+{\bkmkstart AAAAAAAKDN}{\bkmkend AAAAAAAKDN}
+00605 \par
+{\bkmkstart AAAAAAAKDO}{\bkmkend AAAAAAAKDO}
+00606 {\cf20 // Overloads for ::string and ::std::string.}\par
+{\bkmkstart AAAAAAAKDP}{\bkmkend AAAAAAAKDP}
+00607 {\cf21 #if GTEST_HAS_GLOBAL_STRING}\par
+{\bkmkstart AAAAAAAKDQ}{\bkmkend AAAAAAAKDQ}
+00608 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDR" }{}}{\fldrslt {\cs37\ul\cf2 PrintStringTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 const ::string}}}
+&s, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKDS}{\bkmkend AAAAAAAKDS}
+00609 {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 const ::string}}}
+& s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKDT}{\bkmkend AAAAAAAKDT}
+00610   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDR" }{}}{\fldrslt {\cs37\ul\cf2 PrintStringTo}}}
+(s, os);\par
+{\bkmkstart AAAAAAAKDU}{\bkmkend AAAAAAAKDU}
+00611 \}\par
+{\bkmkstart AAAAAAAKDV}{\bkmkend AAAAAAAKDV}
+00612 {\cf21 #endif  }{\cf20 // GTEST_HAS_GLOBAL_STRING}\par
+{\bkmkstart AAAAAAAKDW}{\bkmkend AAAAAAAKDW}
+00613 \par
+{\bkmkstart AAAAAAAKDX}{\bkmkend AAAAAAAKDX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDR" }{}}{\fldrslt {\cs37\ul\cf2 00614}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDR" }{}}{\fldrslt {\cs37\ul\cf2 PrintStringTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 const ::std::string}}}
+&s, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKDY}{\bkmkend AAAAAAAKDY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDZ" }{}}{\fldrslt {\cs37\ul\cf2 00615}}}
+ {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 const ::std::string}}}
+& s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKEA}{\bkmkend AAAAAAAKEA}
+00616   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDR" }{}}{\fldrslt {\cs37\ul\cf2 PrintStringTo}}}
+(s, os);\par
+{\bkmkstart AAAAAAAKEB}{\bkmkend AAAAAAAKEB}
+00617 \}\par
+{\bkmkstart AAAAAAAKEC}{\bkmkend AAAAAAAKEC}
+00618 \par
+{\bkmkstart AAAAAAAKED}{\bkmkend AAAAAAAKED}
+00619 {\cf20 // Overloads for ::wstring and ::std::wstring.}\par
+{\bkmkstart AAAAAAAKEE}{\bkmkend AAAAAAAKEE}
+00620 {\cf21 #if GTEST_HAS_GLOBAL_WSTRING}\par
+{\bkmkstart AAAAAAAKEF}{\bkmkend AAAAAAAKEF}
+00621 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} PrintWideStringTo({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 const ::wstring}}}
+&s, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKEG}{\bkmkend AAAAAAAKEG}
+00622 {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 const ::wstring}}}
+& s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKEH}{\bkmkend AAAAAAAKEH}
+00623   PrintWideStringTo(s, os);\par
+{\bkmkstart AAAAAAAKEI}{\bkmkend AAAAAAAKEI}
+00624 \}\par
+{\bkmkstart AAAAAAAKEJ}{\bkmkend AAAAAAAKEJ}
+00625 {\cf21 #endif  }{\cf20 // GTEST_HAS_GLOBAL_WSTRING}\par
+{\bkmkstart AAAAAAAKEK}{\bkmkend AAAAAAAKEK}
+00626 \par
+{\bkmkstart AAAAAAAKEL}{\bkmkend AAAAAAAKEL}
+00627 {\cf21 #if GTEST_HAS_STD_WSTRING}\par
+{\bkmkstart AAAAAAAKEM}{\bkmkend AAAAAAAKEM}
+00628 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} PrintWideStringTo({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 const ::std::wstring}}}
+&s, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKEN}{\bkmkend AAAAAAAKEN}
+00629 {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 const ::std::wstring}}}
+& s, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKEO}{\bkmkend AAAAAAAKEO}
+00630   PrintWideStringTo(s, os);\par
+{\bkmkstart AAAAAAAKEP}{\bkmkend AAAAAAAKEP}
+00631 \}\par
+{\bkmkstart AAAAAAAKEQ}{\bkmkend AAAAAAAKEQ}
+00632 {\cf21 #endif  }{\cf20 // GTEST_HAS_STD_WSTRING}\par
+{\bkmkstart AAAAAAAKER}{\bkmkend AAAAAAAKER}
+00633 \par
+{\bkmkstart AAAAAAAKES}{\bkmkend AAAAAAAKES}
+00634 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAKET}{\bkmkend AAAAAAAKET}
+00635 {\cf20 // Overload for absl::string_view.}\par
+{\bkmkstart AAAAAAAKEU}{\bkmkend AAAAAAAKEU}
+00636 {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(absl::string_view sp, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKEV}{\bkmkend AAAAAAAKEV}
+00637   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+(sp), os);\par
+{\bkmkstart AAAAAAAKEW}{\bkmkend AAAAAAAKEW}
+00638 \}\par
+{\bkmkstart AAAAAAAKEX}{\bkmkend AAAAAAAKEX}
+00639 {\cf21 #endif  }{\cf20 // GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAKEY}{\bkmkend AAAAAAAKEY}
+00640 \par
+{\bkmkstart AAAAAAAKEZ}{\bkmkend AAAAAAAKEZ}
+00641 {\cf21 #if GTEST_LANG_CXX11}\par
+{\bkmkstart AAAAAAAKFA}{\bkmkend AAAAAAAKFA}
+00642 {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(std::nullptr_t, ::std::ostream* os) \{ *os << {\cf22 "(nullptr)"}; \}\par
+{\bkmkstart AAAAAAAKFB}{\bkmkend AAAAAAAKFB}
+00643 {\cf21 #endif  }{\cf20 // GTEST_LANG_CXX11}\par
+{\bkmkstart AAAAAAAKFC}{\bkmkend AAAAAAAKFC}
+00644 \par
+{\bkmkstart AAAAAAAKFD}{\bkmkend AAAAAAAKFD}
+00645 {\cf21 #if GTEST_HAS_TR1_TUPLE || GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKFE}{\bkmkend AAAAAAAKFE}
+00646 {\cf20 // Helper function for printing a tuple.  T must be instantiated with}\par
+{\bkmkstart AAAAAAAKFF}{\bkmkend AAAAAAAKFF}
+00647 {\cf20 // a tuple type.}\par
+{\bkmkstart AAAAAAAKFG}{\bkmkend AAAAAAAKFG}
+00648 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKFH}{\bkmkend AAAAAAAKFH}
+00649 {\cf18 void} PrintTupleTo({\cf17 const} T& t, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKFI}{\bkmkend AAAAAAAKFI}
+00650 {\cf21 #endif  }{\cf20 // GTEST_HAS_TR1_TUPLE || GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKFJ}{\bkmkend AAAAAAAKFJ}
+00651 \par
+{\bkmkstart AAAAAAAKFK}{\bkmkend AAAAAAAKFK}
+00652 {\cf21 #if GTEST_HAS_TR1_TUPLE}\par
+{\bkmkstart AAAAAAAKFL}{\bkmkend AAAAAAAKFL}
+00653 {\cf20 // Overload for ::std::tr1::tuple.  Needed for printing function arguments,}\par
+{\bkmkstart AAAAAAAKFM}{\bkmkend AAAAAAAKFM}
+00654 {\cf20 // which are packed as tuples.}\par
+{\bkmkstart AAAAAAAKFN}{\bkmkend AAAAAAAKFN}
+00655 \par
+{\bkmkstart AAAAAAAKFO}{\bkmkend AAAAAAAKFO}
+00656 {\cf20 // Overloaded PrintTo() for tuples of various arities.  We support}\par
+{\bkmkstart AAAAAAAKFP}{\bkmkend AAAAAAAKFP}
+00657 {\cf20 // tuples of up-to 10 fields.  The following implementation works}\par
+{\bkmkstart AAAAAAAKFQ}{\bkmkend AAAAAAAKFQ}
+00658 {\cf20 // regardless of whether tr1::tuple is implemented using the}\par
+{\bkmkstart AAAAAAAKFR}{\bkmkend AAAAAAAKFR}
+00659 {\cf20 // non-standard variadic template feature or not.}\par
+{\bkmkstart AAAAAAAKFS}{\bkmkend AAAAAAAKFS}
+00660 \par
+{\bkmkstart AAAAAAAKFT}{\bkmkend AAAAAAAKFT}
+00661 {\cf17 inline} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<>& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKFU}{\bkmkend AAAAAAAKFU}
+00662   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKFV}{\bkmkend AAAAAAAKFV}
+00663 \}\par
+{\bkmkstart AAAAAAAKFW}{\bkmkend AAAAAAAKFW}
+00664 \par
+{\bkmkstart AAAAAAAKFX}{\bkmkend AAAAAAAKFX}
+00665 {\cf17 template} <{\cf17 typename} T1>\par
+{\bkmkstart AAAAAAAKFY}{\bkmkend AAAAAAAKFY}
+00666 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1>& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKFZ}{\bkmkend AAAAAAAKFZ}
+00667   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKGA}{\bkmkend AAAAAAAKGA}
+00668 \}\par
+{\bkmkstart AAAAAAAKGB}{\bkmkend AAAAAAAKGB}
+00669 \par
+{\bkmkstart AAAAAAAKGC}{\bkmkend AAAAAAAKGC}
+00670 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2>\par
+{\bkmkstart AAAAAAAKGD}{\bkmkend AAAAAAAKGD}
+00671 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2>& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKGE}{\bkmkend AAAAAAAKGE}
+00672   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKGF}{\bkmkend AAAAAAAKGF}
+00673 \}\par
+{\bkmkstart AAAAAAAKGG}{\bkmkend AAAAAAAKGG}
+00674 \par
+{\bkmkstart AAAAAAAKGH}{\bkmkend AAAAAAAKGH}
+00675 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3>\par
+{\bkmkstart AAAAAAAKGI}{\bkmkend AAAAAAAKGI}
+00676 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3>& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKGJ}{\bkmkend AAAAAAAKGJ}
+00677   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKGK}{\bkmkend AAAAAAAKGK}
+00678 \}\par
+{\bkmkstart AAAAAAAKGL}{\bkmkend AAAAAAAKGL}
+00679 \par
+{\bkmkstart AAAAAAAKGM}{\bkmkend AAAAAAAKGM}
+00680 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4>\par
+{\bkmkstart AAAAAAAKGN}{\bkmkend AAAAAAAKGN}
+00681 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3, T4>& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKGO}{\bkmkend AAAAAAAKGO}
+00682   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKGP}{\bkmkend AAAAAAAKGP}
+00683 \}\par
+{\bkmkstart AAAAAAAKGQ}{\bkmkend AAAAAAAKGQ}
+00684 \par
+{\bkmkstart AAAAAAAKGR}{\bkmkend AAAAAAAKGR}
+00685 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4, {\cf17 typename} T5>\par
+{\bkmkstart AAAAAAAKGS}{\bkmkend AAAAAAAKGS}
+00686 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3, T4, T5>& t,\par
+{\bkmkstart AAAAAAAKGT}{\bkmkend AAAAAAAKGT}
+00687              ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKGU}{\bkmkend AAAAAAAKGU}
+00688   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKGV}{\bkmkend AAAAAAAKGV}
+00689 \}\par
+{\bkmkstart AAAAAAAKGW}{\bkmkend AAAAAAAKGW}
+00690 \par
+{\bkmkstart AAAAAAAKGX}{\bkmkend AAAAAAAKGX}
+00691 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4, {\cf17 typename} T5,\par
+{\bkmkstart AAAAAAAKGY}{\bkmkend AAAAAAAKGY}
+00692           {\cf17 typename} T6>\par
+{\bkmkstart AAAAAAAKGZ}{\bkmkend AAAAAAAKGZ}
+00693 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3, T4, T5, T6>& t,\par
+{\bkmkstart AAAAAAAKHA}{\bkmkend AAAAAAAKHA}
+00694              ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKHB}{\bkmkend AAAAAAAKHB}
+00695   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKHC}{\bkmkend AAAAAAAKHC}
+00696 \}\par
+{\bkmkstart AAAAAAAKHD}{\bkmkend AAAAAAAKHD}
+00697 \par
+{\bkmkstart AAAAAAAKHE}{\bkmkend AAAAAAAKHE}
+00698 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4, {\cf17 typename} T5,\par
+{\bkmkstart AAAAAAAKHF}{\bkmkend AAAAAAAKHF}
+00699           {\cf17 typename} T6, {\cf17 typename} T7>\par
+{\bkmkstart AAAAAAAKHG}{\bkmkend AAAAAAAKHG}
+00700 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3, T4, T5, T6, T7>& t,\par
+{\bkmkstart AAAAAAAKHH}{\bkmkend AAAAAAAKHH}
+00701              ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKHI}{\bkmkend AAAAAAAKHI}
+00702   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKHJ}{\bkmkend AAAAAAAKHJ}
+00703 \}\par
+{\bkmkstart AAAAAAAKHK}{\bkmkend AAAAAAAKHK}
+00704 \par
+{\bkmkstart AAAAAAAKHL}{\bkmkend AAAAAAAKHL}
+00705 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4, {\cf17 typename} T5,\par
+{\bkmkstart AAAAAAAKHM}{\bkmkend AAAAAAAKHM}
+00706           {\cf17 typename} T6, {\cf17 typename} T7, {\cf17 typename} T8>\par
+{\bkmkstart AAAAAAAKHN}{\bkmkend AAAAAAAKHN}
+00707 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3, T4, T5, T6, T7, T8>& t,\par
+{\bkmkstart AAAAAAAKHO}{\bkmkend AAAAAAAKHO}
+00708              ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKHP}{\bkmkend AAAAAAAKHP}
+00709   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKHQ}{\bkmkend AAAAAAAKHQ}
+00710 \}\par
+{\bkmkstart AAAAAAAKHR}{\bkmkend AAAAAAAKHR}
+00711 \par
+{\bkmkstart AAAAAAAKHS}{\bkmkend AAAAAAAKHS}
+00712 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4, {\cf17 typename} T5,\par
+{\bkmkstart AAAAAAAKHT}{\bkmkend AAAAAAAKHT}
+00713           {\cf17 typename} T6, {\cf17 typename} T7, {\cf17 typename} T8, {\cf17 typename} T9>\par
+{\bkmkstart AAAAAAAKHU}{\bkmkend AAAAAAAKHU}
+00714 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tr1::tuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>& t,\par
+{\bkmkstart AAAAAAAKHV}{\bkmkend AAAAAAAKHV}
+00715              ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKHW}{\bkmkend AAAAAAAKHW}
+00716   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKHX}{\bkmkend AAAAAAAKHX}
+00717 \}\par
+{\bkmkstart AAAAAAAKHY}{\bkmkend AAAAAAAKHY}
+00718 \par
+{\bkmkstart AAAAAAAKHZ}{\bkmkend AAAAAAAKHZ}
+00719 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2, {\cf17 typename} T3, {\cf17 typename} T4, {\cf17 typename} T5,\par
+{\bkmkstart AAAAAAAKIA}{\bkmkend AAAAAAAKIA}
+00720           {\cf17 typename} T6, {\cf17 typename} T7, {\cf17 typename} T8, {\cf17 typename} T9, {\cf17 typename} T10>\par
+{\bkmkstart AAAAAAAKIB}{\bkmkend AAAAAAAKIB}
+00721 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(\par
+{\bkmkstart AAAAAAAKIC}{\bkmkend AAAAAAAKIC}
+00722     const ::std::tr1::tuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>& t,\par
+{\bkmkstart AAAAAAAKID}{\bkmkend AAAAAAAKID}
+00723     ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKIE}{\bkmkend AAAAAAAKIE}
+00724   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKIF}{\bkmkend AAAAAAAKIF}
+00725 \}\par
+{\bkmkstart AAAAAAAKIG}{\bkmkend AAAAAAAKIG}
+00726 {\cf21 #endif  }{\cf20 // GTEST_HAS_TR1_TUPLE}\par
+{\bkmkstart AAAAAAAKIH}{\bkmkend AAAAAAAKIH}
+00727 \par
+{\bkmkstart AAAAAAAKII}{\bkmkend AAAAAAAKII}
+00728 {\cf21 #if GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKIJ}{\bkmkend AAAAAAAKIJ}
+00729 {\cf17 template} <{\cf17 typename}... Types>\par
+{\bkmkstart AAAAAAAKIK}{\bkmkend AAAAAAAKIK}
+00730 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::tuple<Types...>& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKIL}{\bkmkend AAAAAAAKIL}
+00731   PrintTupleTo(t, os);\par
+{\bkmkstart AAAAAAAKIM}{\bkmkend AAAAAAAKIM}
+00732 \}\par
+{\bkmkstart AAAAAAAKIN}{\bkmkend AAAAAAAKIN}
+00733 {\cf21 #endif  }{\cf20 // GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKIO}{\bkmkend AAAAAAAKIO}
+00734 \par
+{\bkmkstart AAAAAAAKIP}{\bkmkend AAAAAAAKIP}
+00735 {\cf20 // Overload for std::pair.}\par
+{\bkmkstart AAAAAAAKIQ}{\bkmkend AAAAAAAKIQ}
+00736 {\cf17 template} <{\cf17 typename} T1, {\cf17 typename} T2>\par
+{\bkmkstart AAAAAAAKIR}{\bkmkend AAAAAAAKIR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIS" }{}}{\fldrslt {\cs37\ul\cf2 00737}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(const ::std::pair<T1, T2>& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKIT}{\bkmkend AAAAAAAKIT}
+00738   *os << {\cf23 '('};\par
+{\bkmkstart AAAAAAAKIU}{\bkmkend AAAAAAAKIU}
+00739   {\cf20 // We cannot use UniversalPrint(value.first, os) here, as T1 may be}\par
+{\bkmkstart AAAAAAAKIV}{\bkmkend AAAAAAAKIV}
+00740   {\cf20 // a reference type.  The same for printing value.second.}\par
+{\bkmkstart AAAAAAAKIW}{\bkmkend AAAAAAAKIW}
+00741   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter<T1>::Print}}}
+(value.first, os);\par
+{\bkmkstart AAAAAAAKIY}{\bkmkend AAAAAAAKIY}
+00742   *os << {\cf22 ", "};\par
+{\bkmkstart AAAAAAAKIZ}{\bkmkend AAAAAAAKIZ}
+00743   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter<T2>::Print}}}
+(value.second, os);\par
+{\bkmkstart AAAAAAAKJA}{\bkmkend AAAAAAAKJA}
+00744   *os << {\cf23 ')'};\par
+{\bkmkstart AAAAAAAKJB}{\bkmkend AAAAAAAKJB}
+00745 \}\par
+{\bkmkstart AAAAAAAKJC}{\bkmkend AAAAAAAKJC}
+00746 \par
+{\bkmkstart AAAAAAAKJD}{\bkmkend AAAAAAAKJD}
+00747 {\cf20 // Implements printing a non-reference type T by letting the compiler}\par
+{\bkmkstart AAAAAAAKJE}{\bkmkend AAAAAAAKJE}
+00748 {\cf20 // pick the right overload of PrintTo() for T.}\par
+{\bkmkstart AAAAAAAKJF}{\bkmkend AAAAAAAKJF}
+00749 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKJG}{\bkmkend AAAAAAAKJG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKJH" }{}}{\fldrslt {\cs37\ul\cf2 00750}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKJH" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter}}}
+ \{\par
+{\bkmkstart AAAAAAAKJI}{\bkmkend AAAAAAAKJI}
+00751  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKJJ}{\bkmkend AAAAAAAKJJ}
+00752   {\cf20 // MSVC warns about adding const to a function type, so we want to}\par
+{\bkmkstart AAAAAAAKJK}{\bkmkend AAAAAAAKJK}
+00753   {\cf20 // disable the warning.}\par
+{\bkmkstart AAAAAAAKJL}{\bkmkend AAAAAAAKJL}
+00754   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_PUSH_}}}
+(4180)\par
+{\bkmkstart AAAAAAAKJM}{\bkmkend AAAAAAAKJM}
+00755 \par
+{\bkmkstart AAAAAAAKJN}{\bkmkend AAAAAAAKJN}
+00756   {\cf20 // Note: we deliberately don't call this PrintTo(), as that name}\par
+{\bkmkstart AAAAAAAKJO}{\bkmkend AAAAAAAKJO}
+00757   {\cf20 // conflicts with ::testing::internal::PrintTo in the body of the}\par
+{\bkmkstart AAAAAAAKJP}{\bkmkend AAAAAAAKJP}
+00758   {\cf20 // function.}\par
+{\bkmkstart AAAAAAAKJQ}{\bkmkend AAAAAAAKJQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 00759}}}
+   static {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+(const T& value, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 std}}}
+::ostream* os) \{\par
+{\bkmkstart AAAAAAAKJR}{\bkmkend AAAAAAAKJR}
+00760     {\cf20 // By default, ::testing::internal::PrintTo() is used for printing}\par
+{\bkmkstart AAAAAAAKJS}{\bkmkend AAAAAAAKJS}
+00761     {\cf20 // the value.}\par
+{\bkmkstart AAAAAAAKJT}{\bkmkend AAAAAAAKJT}
+00762     {\cf20 //}\par
+{\bkmkstart AAAAAAAKJU}{\bkmkend AAAAAAAKJU}
+00763     {\cf20 // Thanks to Koenig look-up, if T is a class and has its own}\par
+{\bkmkstart AAAAAAAKJV}{\bkmkend AAAAAAAKJV}
+00764     {\cf20 // PrintTo() function defined in its namespace, that function will}\par
+{\bkmkstart AAAAAAAKJW}{\bkmkend AAAAAAAKJW}
+00765     {\cf20 // be visible here.  Since it is more specific than the generic ones}\par
+{\bkmkstart AAAAAAAKJX}{\bkmkend AAAAAAAKJX}
+00766     {\cf20 // in ::testing::internal, it will be picked by the compiler in the}\par
+{\bkmkstart AAAAAAAKJY}{\bkmkend AAAAAAAKJY}
+00767     {\cf20 // following statement - exactly what we want.}\par
+{\bkmkstart AAAAAAAKJZ}{\bkmkend AAAAAAAKJZ}
+00768     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 PrintTo}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKKA}{\bkmkend AAAAAAAKKA}
+00769   \}\par
+{\bkmkstart AAAAAAAKKB}{\bkmkend AAAAAAAKKB}
+00770 \par
+{\bkmkstart AAAAAAAKKC}{\bkmkend AAAAAAAKKC}
+00771   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_POP_}}}
+()\par
+{\bkmkstart AAAAAAAKKD}{\bkmkend AAAAAAAKKD}
+00772 \};\par
+{\bkmkstart AAAAAAAKKE}{\bkmkend AAAAAAAKKE}
+00773 \par
+{\bkmkstart AAAAAAAKKF}{\bkmkend AAAAAAAKKF}
+00774 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAKKG}{\bkmkend AAAAAAAKKG}
+00775 \par
+{\bkmkstart AAAAAAAKKH}{\bkmkend AAAAAAAKKH}
+00776 {\cf20 // Printer for absl::optional}\par
+{\bkmkstart AAAAAAAKKI}{\bkmkend AAAAAAAKKI}
+00777 \par
+{\bkmkstart AAAAAAAKKJ}{\bkmkend AAAAAAAKKJ}
+00778 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKKK}{\bkmkend AAAAAAAKKK}
+00779 {\cf17 class }UniversalPrinter<::absl::optional<T>> \{\par
+{\bkmkstart AAAAAAAKKL}{\bkmkend AAAAAAAKKL}
+00780  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKKM}{\bkmkend AAAAAAAKKM}
+00781   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+(const ::absl::optional<T>& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKKN}{\bkmkend AAAAAAAKKN}
+00782     *os << {\cf23 '('};\par
+{\bkmkstart AAAAAAAKKO}{\bkmkend AAAAAAAKKO}
+00783     {\cf19 if} (!value) \{\par
+{\bkmkstart AAAAAAAKKP}{\bkmkend AAAAAAAKKP}
+00784       *os << {\cf22 "nullopt"};\par
+{\bkmkstart AAAAAAAKKQ}{\bkmkend AAAAAAAKKQ}
+00785     \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAKKR}{\bkmkend AAAAAAAKKR}
+00786       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(*value, os);\par
+{\bkmkstart AAAAAAAKKS}{\bkmkend AAAAAAAKKS}
+00787     \}\par
+{\bkmkstart AAAAAAAKKT}{\bkmkend AAAAAAAKKT}
+00788     *os << {\cf23 ')'};\par
+{\bkmkstart AAAAAAAKKU}{\bkmkend AAAAAAAKKU}
+00789   \}\par
+{\bkmkstart AAAAAAAKKV}{\bkmkend AAAAAAAKKV}
+00790 \};\par
+{\bkmkstart AAAAAAAKKW}{\bkmkend AAAAAAAKKW}
+00791 \par
+{\bkmkstart AAAAAAAKKX}{\bkmkend AAAAAAAKKX}
+00792 {\cf20 // Printer for absl::variant}\par
+{\bkmkstart AAAAAAAKKY}{\bkmkend AAAAAAAKKY}
+00793 \par
+{\bkmkstart AAAAAAAKKZ}{\bkmkend AAAAAAAKKZ}
+00794 {\cf17 template} <{\cf17 typename}... T>\par
+{\bkmkstart AAAAAAAKLA}{\bkmkend AAAAAAAKLA}
+00795 {\cf17 class }UniversalPrinter<::absl::variant<T...>> \{\par
+{\bkmkstart AAAAAAAKLB}{\bkmkend AAAAAAAKLB}
+00796  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKLC}{\bkmkend AAAAAAAKLC}
+00797   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+(const ::absl::variant<T...>& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKLD}{\bkmkend AAAAAAAKLD}
+00798     *os << {\cf23 '('};\par
+{\bkmkstart AAAAAAAKLE}{\bkmkend AAAAAAAKLE}
+00799     absl::visit(Visitor\{os\}, value);\par
+{\bkmkstart AAAAAAAKLF}{\bkmkend AAAAAAAKLF}
+00800     *os << {\cf23 ')'};\par
+{\bkmkstart AAAAAAAKLG}{\bkmkend AAAAAAAKLG}
+00801   \}\par
+{\bkmkstart AAAAAAAKLH}{\bkmkend AAAAAAAKLH}
+00802 \par
+{\bkmkstart AAAAAAAKLI}{\bkmkend AAAAAAAKLI}
+00803  {\cf17 private}:\par
+{\bkmkstart AAAAAAAKLJ}{\bkmkend AAAAAAAKLJ}
+00804   {\cf17 struct }Visitor \{\par
+{\bkmkstart AAAAAAAKLK}{\bkmkend AAAAAAAKLK}
+00805     {\cf17 template} <{\cf17 typename} U>\par
+{\bkmkstart AAAAAAAKLL}{\bkmkend AAAAAAAKLL}
+00806     {\cf18 void} operator()({\cf17 const} U& u){\cf17  const }\{\par
+{\bkmkstart AAAAAAAKLM}{\bkmkend AAAAAAAKLM}
+00807       *os << {\cf22 "'"} << GetTypeName<U>() << {\cf22 "' with value "};\par
+{\bkmkstart AAAAAAAKLN}{\bkmkend AAAAAAAKLN}
+00808       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(u, os);\par
+{\bkmkstart AAAAAAAKLO}{\bkmkend AAAAAAAKLO}
+00809     \}\par
+{\bkmkstart AAAAAAAKLP}{\bkmkend AAAAAAAKLP}
+00810     ::std::ostream* os;\par
+{\bkmkstart AAAAAAAKLQ}{\bkmkend AAAAAAAKLQ}
+00811   \};\par
+{\bkmkstart AAAAAAAKLR}{\bkmkend AAAAAAAKLR}
+00812 \};\par
+{\bkmkstart AAAAAAAKLS}{\bkmkend AAAAAAAKLS}
+00813 \par
+{\bkmkstart AAAAAAAKLT}{\bkmkend AAAAAAAKLT}
+00814 {\cf21 #endif  }{\cf20 // GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAKLU}{\bkmkend AAAAAAAKLU}
+00815 \par
+{\bkmkstart AAAAAAAKLV}{\bkmkend AAAAAAAKLV}
+00816 {\cf20 // UniversalPrintArray(begin, len, os) prints an array of 'len'}\par
+{\bkmkstart AAAAAAAKLW}{\bkmkend AAAAAAAKLW}
+00817 {\cf20 // elements, starting at address 'begin'.}\par
+{\bkmkstart AAAAAAAKLX}{\bkmkend AAAAAAAKLX}
+00818 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKLY}{\bkmkend AAAAAAAKLY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKLZ" }{}}{\fldrslt {\cs37\ul\cf2 00819}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKLZ" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrintArray}}}
+({\cf17 const} T* begin, {\cf18 size_t} len, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKMA}{\bkmkend AAAAAAAKMA}
+00820   {\cf19 if} (len == 0) \{\par
+{\bkmkstart AAAAAAAKMB}{\bkmkend AAAAAAAKMB}
+00821     *os << {\cf22 "\{\}"};\par
+{\bkmkstart AAAAAAAKMC}{\bkmkend AAAAAAAKMC}
+00822   \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAKMD}{\bkmkend AAAAAAAKMD}
+00823     *os << {\cf22 "\{ "};\par
+{\bkmkstart AAAAAAAKME}{\bkmkend AAAAAAAKME}
+00824     {\cf17 const} {\cf18 size_t} kThreshold = 18;\par
+{\bkmkstart AAAAAAAKMF}{\bkmkend AAAAAAAKMF}
+00825     {\cf17 const} {\cf18 size_t} kChunkSize = 8;\par
+{\bkmkstart AAAAAAAKMG}{\bkmkend AAAAAAAKMG}
+00826     {\cf20 // If the array has more than kThreshold elements, we'll have to}\par
+{\bkmkstart AAAAAAAKMH}{\bkmkend AAAAAAAKMH}
+00827     {\cf20 // omit some details by printing only the first and the last}\par
+{\bkmkstart AAAAAAAKMI}{\bkmkend AAAAAAAKMI}
+00828     {\cf20 // kChunkSize elements.}\par
+{\bkmkstart AAAAAAAKMJ}{\bkmkend AAAAAAAKMJ}
+00829     {\cf20 // FIXME: let the user control the threshold using a flag.}\par
+{\bkmkstart AAAAAAAKMK}{\bkmkend AAAAAAAKMK}
+00830     {\cf19 if} (len <= kThreshold) \{\par
+{\bkmkstart AAAAAAAKML}{\bkmkend AAAAAAAKML}
+00831       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDG" }{}}{\fldrslt {\cs37\ul\cf2 PrintRawArrayTo}}}
+(begin, len, os);\par
+{\bkmkstart AAAAAAAKMM}{\bkmkend AAAAAAAKMM}
+00832     \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAKMN}{\bkmkend AAAAAAAKMN}
+00833       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDG" }{}}{\fldrslt {\cs37\ul\cf2 PrintRawArrayTo}}}
+(begin, kChunkSize, os);\par
+{\bkmkstart AAAAAAAKMO}{\bkmkend AAAAAAAKMO}
+00834       *os << {\cf22 ", ..., "};\par
+{\bkmkstart AAAAAAAKMP}{\bkmkend AAAAAAAKMP}
+00835       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKDG" }{}}{\fldrslt {\cs37\ul\cf2 PrintRawArrayTo}}}
+(begin + len - kChunkSize, kChunkSize, os);\par
+{\bkmkstart AAAAAAAKMQ}{\bkmkend AAAAAAAKMQ}
+00836     \}\par
+{\bkmkstart AAAAAAAKMR}{\bkmkend AAAAAAAKMR}
+00837     *os << {\cf22 " \}"};\par
+{\bkmkstart AAAAAAAKMS}{\bkmkend AAAAAAAKMS}
+00838   \}\par
+{\bkmkstart AAAAAAAKMT}{\bkmkend AAAAAAAKMT}
+00839 \}\par
+{\bkmkstart AAAAAAAKMU}{\bkmkend AAAAAAAKMU}
+00840 {\cf20 // This overload prints a (const) char array compactly.}\par
+{\bkmkstart AAAAAAAKMV}{\bkmkend AAAAAAAKMV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKMW" }{}}{\fldrslt {\cs37\ul\cf2 00841}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKLZ" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrintArray}}}
+(\par
+{\bkmkstart AAAAAAAKMX}{\bkmkend AAAAAAAKMX}
+00842     {\cf17 const} {\cf18 char}* begin, {\cf18 size_t} len, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKMY}{\bkmkend AAAAAAAKMY}
+00843 \par
+{\bkmkstart AAAAAAAKMZ}{\bkmkend AAAAAAAKMZ}
+00844 {\cf20 // This overload prints a (const) wchar_t array compactly.}\par
+{\bkmkstart AAAAAAAKNA}{\bkmkend AAAAAAAKNA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKNB" }{}}{\fldrslt {\cs37\ul\cf2 00845}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKLZ" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrintArray}}}
+(\par
+{\bkmkstart AAAAAAAKNC}{\bkmkend AAAAAAAKNC}
+00846     {\cf17 const} {\cf18 wchar_t}* begin, {\cf18 size_t} len, ::std::ostream* os);\par
+{\bkmkstart AAAAAAAKND}{\bkmkend AAAAAAAKND}
+00847 \par
+{\bkmkstart AAAAAAAKNE}{\bkmkend AAAAAAAKNE}
+00848 {\cf20 // Implements printing an array type T[N].}\par
+{\bkmkstart AAAAAAAKNF}{\bkmkend AAAAAAAKNF}
+00849 {\cf17 template} <{\cf17 typename} T, {\cf18 size_t} N>\par
+{\bkmkstart AAAAAAAKNG}{\bkmkend AAAAAAAKNG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKNH" }{}}{\fldrslt {\cs37\ul\cf2 00850}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKJH" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter}}}
+<T[N]> \{\par
+{\bkmkstart AAAAAAAKNI}{\bkmkend AAAAAAAKNI}
+00851  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKNJ}{\bkmkend AAAAAAAKNJ}
+00852   {\cf20 // Prints the given array, omitting some elements when there are too}\par
+{\bkmkstart AAAAAAAKNK}{\bkmkend AAAAAAAKNK}
+00853   {\cf20 // many.}\par
+{\bkmkstart AAAAAAAKNL}{\bkmkend AAAAAAAKNL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKNM" }{}}{\fldrslt {\cs37\ul\cf2 00854}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKNM" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf17 const} T (&a)[N], ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKNN}{\bkmkend AAAAAAAKNN}
+00855     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKLZ" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrintArray}}}
+(a, N, os);\par
+{\bkmkstart AAAAAAAKNO}{\bkmkend AAAAAAAKNO}
+00856   \}\par
+{\bkmkstart AAAAAAAKNP}{\bkmkend AAAAAAAKNP}
+00857 \};\par
+{\bkmkstart AAAAAAAKNQ}{\bkmkend AAAAAAAKNQ}
+00858 \par
+{\bkmkstart AAAAAAAKNR}{\bkmkend AAAAAAAKNR}
+00859 {\cf20 // Implements printing a reference type T&.}\par
+{\bkmkstart AAAAAAAKNS}{\bkmkend AAAAAAAKNS}
+00860 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKNT}{\bkmkend AAAAAAAKNT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKNU" }{}}{\fldrslt {\cs37\ul\cf2 00861}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKJH" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter}}}
+<T&> \{\par
+{\bkmkstart AAAAAAAKNV}{\bkmkend AAAAAAAKNV}
+00862  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKNW}{\bkmkend AAAAAAAKNW}
+00863   {\cf20 // MSVC warns about adding const to a function type, so we want to}\par
+{\bkmkstart AAAAAAAKNX}{\bkmkend AAAAAAAKNX}
+00864   {\cf20 // disable the warning.}\par
+{\bkmkstart AAAAAAAKNY}{\bkmkend AAAAAAAKNY}
+00865   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_PUSH_}}}
+(4180)\par
+{\bkmkstart AAAAAAAKNZ}{\bkmkend AAAAAAAKNZ}
+00866 \par
+{\bkmkstart AAAAAAAKOA}{\bkmkend AAAAAAAKOA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOB" }{}}{\fldrslt {\cs37\ul\cf2 00867}}}
+   static {\cf18 void} Print(const T& value, ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 std}}}
+::ostream* os) \{\par
+{\bkmkstart AAAAAAAKOC}{\bkmkend AAAAAAAKOC}
+00868     {\cf20 // Prints the address of the value.  We use reinterpret_cast here}\par
+{\bkmkstart AAAAAAAKOD}{\bkmkend AAAAAAAKOD}
+00869     {\cf20 // as static_cast doesn't compile when T is a function type.}\par
+{\bkmkstart AAAAAAAKOE}{\bkmkend AAAAAAAKOE}
+00870     *os << {\cf22 "@"} << {\cf17 reinterpret_cast<}{\cf17 const }{\cf18 void}*{\cf17 >}(&value) << {\cf22 " "};\par
+{\bkmkstart AAAAAAAKOF}{\bkmkend AAAAAAAKOF}
+00871 \par
+{\bkmkstart AAAAAAAKOG}{\bkmkend AAAAAAAKOG}
+00872     {\cf20 // Then prints the value itself.}\par
+{\bkmkstart AAAAAAAKOH}{\bkmkend AAAAAAAKOH}
+00873     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKOI}{\bkmkend AAAAAAAKOI}
+00874   \}\par
+{\bkmkstart AAAAAAAKOJ}{\bkmkend AAAAAAAKOJ}
+00875 \par
+{\bkmkstart AAAAAAAKOK}{\bkmkend AAAAAAAKOK}
+00876   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_POP_}}}
+()\par
+{\bkmkstart AAAAAAAKOL}{\bkmkend AAAAAAAKOL}
+00877 \};\par
+{\bkmkstart AAAAAAAKOM}{\bkmkend AAAAAAAKOM}
+00878 \par
+{\bkmkstart AAAAAAAKON}{\bkmkend AAAAAAAKON}
+00879 {\cf20 // Prints a value tersely: for a reference type, the referenced value}\par
+{\bkmkstart AAAAAAAKOO}{\bkmkend AAAAAAAKOO}
+00880 {\cf20 // (but not the address) is printed; for a (const) char pointer, the}\par
+{\bkmkstart AAAAAAAKOP}{\bkmkend AAAAAAAKOP}
+00881 {\cf20 // NUL-terminated string (but not the pointer) is printed.}\par
+{\bkmkstart AAAAAAAKOQ}{\bkmkend AAAAAAAKOQ}
+00882 \par
+{\bkmkstart AAAAAAAKOR}{\bkmkend AAAAAAAKOR}
+00883 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKOS}{\bkmkend AAAAAAAKOS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 00884}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter}}}
+ \{\par
+{\bkmkstart AAAAAAAKOU}{\bkmkend AAAAAAAKOU}
+00885  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKOV}{\bkmkend AAAAAAAKOV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOW" }{}}{\fldrslt {\cs37\ul\cf2 00886}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOW" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKOX}{\bkmkend AAAAAAAKOX}
+00887     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKOY}{\bkmkend AAAAAAAKOY}
+00888   \}\par
+{\bkmkstart AAAAAAAKOZ}{\bkmkend AAAAAAAKOZ}
+00889 \};\par
+{\bkmkstart AAAAAAAKPA}{\bkmkend AAAAAAAKPA}
+00890 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKPB}{\bkmkend AAAAAAAKPB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPC" }{}}{\fldrslt {\cs37\ul\cf2 00891}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter}}}
+<T&> \{\par
+{\bkmkstart AAAAAAAKPD}{\bkmkend AAAAAAAKPD}
+00892  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKPE}{\bkmkend AAAAAAAKPE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPF" }{}}{\fldrslt {\cs37\ul\cf2 00893}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPF" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKPG}{\bkmkend AAAAAAAKPG}
+00894     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKPH}{\bkmkend AAAAAAAKPH}
+00895   \}\par
+{\bkmkstart AAAAAAAKPI}{\bkmkend AAAAAAAKPI}
+00896 \};\par
+{\bkmkstart AAAAAAAKPJ}{\bkmkend AAAAAAAKPJ}
+00897 {\cf17 template} <{\cf17 typename} T, {\cf18 size_t} N>\par
+{\bkmkstart AAAAAAAKPK}{\bkmkend AAAAAAAKPK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPL" }{}}{\fldrslt {\cs37\ul\cf2 00898}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter}}}
+<T[N]> \{\par
+{\bkmkstart AAAAAAAKPM}{\bkmkend AAAAAAAKPM}
+00899  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKPN}{\bkmkend AAAAAAAKPN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPO" }{}}{\fldrslt {\cs37\ul\cf2 00900}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPO" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf17 const} T (&value)[N], ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKPP}{\bkmkend AAAAAAAKPP}
+00901     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter<T[N]>::Print}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKPQ}{\bkmkend AAAAAAAKPQ}
+00902   \}\par
+{\bkmkstart AAAAAAAKPR}{\bkmkend AAAAAAAKPR}
+00903 \};\par
+{\bkmkstart AAAAAAAKPS}{\bkmkend AAAAAAAKPS}
+00904 {\cf17 template} <>\par
+{\bkmkstart AAAAAAAKPT}{\bkmkend AAAAAAAKPT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPU" }{}}{\fldrslt {\cs37\ul\cf2 00905}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter}}}
+<const char*> \{\par
+{\bkmkstart AAAAAAAKPV}{\bkmkend AAAAAAAKPV}
+00906  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKPW}{\bkmkend AAAAAAAKPW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPX" }{}}{\fldrslt {\cs37\ul\cf2 00907}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKPX" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf17 const} {\cf18 char}* str, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKPY}{\bkmkend AAAAAAAKPY}
+00908     {\cf19 if} (str == NULL) \{\par
+{\bkmkstart AAAAAAAKPZ}{\bkmkend AAAAAAAKPZ}
+00909       *os << {\cf22 "NULL"};\par
+{\bkmkstart AAAAAAAKQA}{\bkmkend AAAAAAAKQA}
+00910     \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAKQB}{\bkmkend AAAAAAAKQB}
+00911       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+(str), os);\par
+{\bkmkstart AAAAAAAKQC}{\bkmkend AAAAAAAKQC}
+00912     \}\par
+{\bkmkstart AAAAAAAKQD}{\bkmkend AAAAAAAKQD}
+00913   \}\par
+{\bkmkstart AAAAAAAKQE}{\bkmkend AAAAAAAKQE}
+00914 \};\par
+{\bkmkstart AAAAAAAKQF}{\bkmkend AAAAAAAKQF}
+00915 {\cf17 template} <>\par
+{\bkmkstart AAAAAAAKQG}{\bkmkend AAAAAAAKQG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKQH" }{}}{\fldrslt {\cs37\ul\cf2 00916}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter}}}
+<char*> \{\par
+{\bkmkstart AAAAAAAKQI}{\bkmkend AAAAAAAKQI}
+00917  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKQJ}{\bkmkend AAAAAAAKQJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKQK" }{}}{\fldrslt {\cs37\ul\cf2 00918}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKQK" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf18 char}* str, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKQL}{\bkmkend AAAAAAAKQL}
+00919     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOW" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter<const char*>::Print}}}
+(str, os);\par
+{\bkmkstart AAAAAAAKQM}{\bkmkend AAAAAAAKQM}
+00920   \}\par
+{\bkmkstart AAAAAAAKQN}{\bkmkend AAAAAAAKQN}
+00921 \};\par
+{\bkmkstart AAAAAAAKQO}{\bkmkend AAAAAAAKQO}
+00922 \par
+{\bkmkstart AAAAAAAKQP}{\bkmkend AAAAAAAKQP}
+00923 {\cf21 #if GTEST_HAS_STD_WSTRING}\par
+{\bkmkstart AAAAAAAKQQ}{\bkmkend AAAAAAAKQQ}
+00924 {\cf17 template} <>\par
+{\bkmkstart AAAAAAAKQR}{\bkmkend AAAAAAAKQR}
+00925 {\cf17 class }UniversalTersePrinter<const wchar_t*> \{\par
+{\bkmkstart AAAAAAAKQS}{\bkmkend AAAAAAAKQS}
+00926  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKQT}{\bkmkend AAAAAAAKQT}
+00927   {\cf17 static} {\cf18 void} Print({\cf17 const} {\cf18 wchar_t}* str, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKQU}{\bkmkend AAAAAAAKQU}
+00928     {\cf19 if} (str == NULL) \{\par
+{\bkmkstart AAAAAAAKQV}{\bkmkend AAAAAAAKQV}
+00929       *os << {\cf22 "NULL"};\par
+{\bkmkstart AAAAAAAKQW}{\bkmkend AAAAAAAKQW}
+00930     \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAKQX}{\bkmkend AAAAAAAKQX}
+00931       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+(::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 std::wstring}}}
+(str), os);\par
+{\bkmkstart AAAAAAAKQY}{\bkmkend AAAAAAAKQY}
+00932     \}\par
+{\bkmkstart AAAAAAAKQZ}{\bkmkend AAAAAAAKQZ}
+00933   \}\par
+{\bkmkstart AAAAAAAKRA}{\bkmkend AAAAAAAKRA}
+00934 \};\par
+{\bkmkstart AAAAAAAKRB}{\bkmkend AAAAAAAKRB}
+00935 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAKRC}{\bkmkend AAAAAAAKRC}
+00936 \par
+{\bkmkstart AAAAAAAKRD}{\bkmkend AAAAAAAKRD}
+00937 {\cf17 template} <>\par
+{\bkmkstart AAAAAAAKRE}{\bkmkend AAAAAAAKRE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKRF" }{}}{\fldrslt {\cs37\ul\cf2 00938}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOT" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter}}}
+<wchar_t*> \{\par
+{\bkmkstart AAAAAAAKRG}{\bkmkend AAAAAAAKRG}
+00939  {\cf17 public}:\par
+{\bkmkstart AAAAAAAKRH}{\bkmkend AAAAAAAKRH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKRI" }{}}{\fldrslt {\cs37\ul\cf2 00940}}}
+   {\cf17 static} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKRI" }{}}{\fldrslt {\cs37\ul\cf2 Print}}}
+({\cf18 wchar_t}* str, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKRJ}{\bkmkend AAAAAAAKRJ}
+00941     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOW" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter<const wchar_t*>::Print}}}
+(str, os);\par
+{\bkmkstart AAAAAAAKRK}{\bkmkend AAAAAAAKRK}
+00942   \}\par
+{\bkmkstart AAAAAAAKRL}{\bkmkend AAAAAAAKRL}
+00943 \};\par
+{\bkmkstart AAAAAAAKRM}{\bkmkend AAAAAAAKRM}
+00944 \par
+{\bkmkstart AAAAAAAKRN}{\bkmkend AAAAAAAKRN}
+00945 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKRO}{\bkmkend AAAAAAAKRO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKRP" }{}}{\fldrslt {\cs37\ul\cf2 00946}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKRP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrint}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKRQ}{\bkmkend AAAAAAAKRQ}
+00947   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOW" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrinter<T>::Print}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKRR}{\bkmkend AAAAAAAKRR}
+00948 \}\par
+{\bkmkstart AAAAAAAKRS}{\bkmkend AAAAAAAKRS}
+00949 \par
+{\bkmkstart AAAAAAAKRT}{\bkmkend AAAAAAAKRT}
+00950 {\cf20 // Prints a value using the type inferred by the compiler.  The}\par
+{\bkmkstart AAAAAAAKRU}{\bkmkend AAAAAAAKRU}
+00951 {\cf20 // difference between this and UniversalTersePrint() is that for a}\par
+{\bkmkstart AAAAAAAKRV}{\bkmkend AAAAAAAKRV}
+00952 {\cf20 // (const) char pointer, this prints both the pointer and the}\par
+{\bkmkstart AAAAAAAKRW}{\bkmkend AAAAAAAKRW}
+00953 {\cf20 // NUL-terminated string.}\par
+{\bkmkstart AAAAAAAKRX}{\bkmkend AAAAAAAKRX}
+00954 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKRY}{\bkmkend AAAAAAAKRY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 00955}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJUP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrint}}}
+({\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKRZ}{\bkmkend AAAAAAAKRZ}
+00956   {\cf20 // A workarond for the bug in VC++ 7.1 that prevents us from instantiating}\par
+{\bkmkstart AAAAAAAKSA}{\bkmkend AAAAAAAKSA}
+00957   {\cf20 // UniversalPrinter with T directly.}\par
+{\bkmkstart AAAAAAAKSB}{\bkmkend AAAAAAAKSB}
+00958   {\cf17 typedef} T T1;\par
+{\bkmkstart AAAAAAAKSC}{\bkmkend AAAAAAAKSC}
+00959   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKIX" }{}}{\fldrslt {\cs37\ul\cf2 UniversalPrinter<T1>::Print}}}
+(value, os);\par
+{\bkmkstart AAAAAAAKSD}{\bkmkend AAAAAAAKSD}
+00960 \}\par
+{\bkmkstart AAAAAAAKSE}{\bkmkend AAAAAAAKSE}
+00961 \par
+{\bkmkstart AAAAAAAKSF}{\bkmkend AAAAAAAKSF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSG" }{}}{\fldrslt {\cs37\ul\cf2 00962}}}
+ typedef ::std::vector< ::std::string> {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSG" }{}}{\fldrslt {\cs37\ul\cf2 Strings}}}
+;\par
+{\bkmkstart AAAAAAAKSH}{\bkmkend AAAAAAAKSH}
+00963 \par
+{\bkmkstart AAAAAAAKSI}{\bkmkend AAAAAAAKSI}
+00964 {\cf20 // TuplePolicy<TupleT> must provide:}\par
+{\bkmkstart AAAAAAAKSJ}{\bkmkend AAAAAAAKSJ}
+00965 {\cf20 // - tuple_size}\par
+{\bkmkstart AAAAAAAKSK}{\bkmkend AAAAAAAKSK}
+00966 {\cf20 //     size of tuple TupleT.}\par
+{\bkmkstart AAAAAAAKSL}{\bkmkend AAAAAAAKSL}
+00967 {\cf20 // - get<size_t I>(const TupleT& t)}\par
+{\bkmkstart AAAAAAAKSM}{\bkmkend AAAAAAAKSM}
+00968 {\cf20 //     static function extracting element I of tuple TupleT.}\par
+{\bkmkstart AAAAAAAKSN}{\bkmkend AAAAAAAKSN}
+00969 {\cf20 // - tuple_element<size_t I>::type}\par
+{\bkmkstart AAAAAAAKSO}{\bkmkend AAAAAAAKSO}
+00970 {\cf20 //     type of element I of tuple TupleT.}\par
+{\bkmkstart AAAAAAAKSP}{\bkmkend AAAAAAAKSP}
+00971 {\cf17 template} <{\cf17 typename} TupleT>\par
+{\bkmkstart AAAAAAAKSQ}{\bkmkend AAAAAAAKSQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSR" }{}}{\fldrslt {\cs37\ul\cf2 00972}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSR" }{}}{\fldrslt {\cs37\ul\cf2 TuplePolicy}}}
+;\par
+{\bkmkstart AAAAAAAKSS}{\bkmkend AAAAAAAKSS}
+00973 \par
+{\bkmkstart AAAAAAAKST}{\bkmkend AAAAAAAKST}
+00974 {\cf21 #if GTEST_HAS_TR1_TUPLE}\par
+{\bkmkstart AAAAAAAKSU}{\bkmkend AAAAAAAKSU}
+00975 {\cf17 template} <{\cf17 typename} TupleT>\par
+{\bkmkstart AAAAAAAKSV}{\bkmkend AAAAAAAKSV}
+00976 {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSR" }{}}{\fldrslt {\cs37\ul\cf2 TuplePolicy}}}
+ \{\par
+{\bkmkstart AAAAAAAKSW}{\bkmkend AAAAAAAKSW}
+00977   {\cf17 typedef} TupleT Tuple;\par
+{\bkmkstart AAAAAAAKSX}{\bkmkend AAAAAAAKSX}
+00978   {\cf17 static} {\cf17 const} {\cf18 size_t} tuple_size = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 ::std::tr1::tuple_size<Tuple>::value}}}
+;\par
+{\bkmkstart AAAAAAAKSZ}{\bkmkend AAAAAAAKSZ}
+00979 \par
+{\bkmkstart AAAAAAAKTA}{\bkmkend AAAAAAAKTA}
+00980   {\cf17 template} <{\cf18 size_t} I>\par
+{\bkmkstart AAAAAAAKTB}{\bkmkend AAAAAAAKTB}
+00981   {\cf17 struct }tuple_element : {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKTC" }{}}{\fldrslt {\cs37\ul\cf2 ::std::tr1::tuple_element}}}
+<static_cast<int>(I), Tuple> \{\par
+{\bkmkstart AAAAAAAKTD}{\bkmkend AAAAAAAKTD}
+00982   \};\par
+{\bkmkstart AAAAAAAKTE}{\bkmkend AAAAAAAKTE}
+00983 \par
+{\bkmkstart AAAAAAAKTF}{\bkmkend AAAAAAAKTF}
+00984   {\cf17 template} <{\cf18 size_t} I>\par
+{\bkmkstart AAAAAAAKTG}{\bkmkend AAAAAAAKTG}
+00985   {\cf17 static} {\cf17 typename} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKTH" }{}}{\fldrslt {\cs37\ul\cf2 AddReference}}}
+<{\cf17 const} typename ::std::tr1::tuple_element<\par
+{\bkmkstart AAAAAAAKTI}{\bkmkend AAAAAAAKTI}
+00986       {\cf17 static_cast<}{\cf18 int}{\cf17 >}(I), Tuple>::type>::type\par
+{\bkmkstart AAAAAAAKTJ}{\bkmkend AAAAAAAKTJ}
+00987   get({\cf17 const} Tuple& tuple) \{\par
+{\bkmkstart AAAAAAAKTK}{\bkmkend AAAAAAAKTK}
+00988     return ::std::tr1::get<I>(tuple);\par
+{\bkmkstart AAAAAAAKTL}{\bkmkend AAAAAAAKTL}
+00989   \}\par
+{\bkmkstart AAAAAAAKTM}{\bkmkend AAAAAAAKTM}
+00990 \};\par
+{\bkmkstart AAAAAAAKTN}{\bkmkend AAAAAAAKTN}
+00991 {\cf17 template} <{\cf17 typename} TupleT>\par
+{\bkmkstart AAAAAAAKTO}{\bkmkend AAAAAAAKTO}
+00992 {\cf17 const} {\cf18 size_t} TuplePolicy<TupleT>::tuple_size;\par
+{\bkmkstart AAAAAAAKTP}{\bkmkend AAAAAAAKTP}
+00993 {\cf21 #endif  }{\cf20 // GTEST_HAS_TR1_TUPLE}\par
+{\bkmkstart AAAAAAAKTQ}{\bkmkend AAAAAAAKTQ}
+00994 \par
+{\bkmkstart AAAAAAAKTR}{\bkmkend AAAAAAAKTR}
+00995 {\cf21 #if GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKTS}{\bkmkend AAAAAAAKTS}
+00996 {\cf17 template} <{\cf17 typename}... Types>\par
+{\bkmkstart AAAAAAAKTT}{\bkmkend AAAAAAAKTT}
+00997 {\cf17 struct }TuplePolicy< ::std::tuple<Types...> > \{\par
+{\bkmkstart AAAAAAAKTU}{\bkmkend AAAAAAAKTU}
+00998   {\cf17 typedef} ::std::tuple<Types...> Tuple;\par
+{\bkmkstart AAAAAAAKTV}{\bkmkend AAAAAAAKTV}
+00999   {\cf17 static} {\cf17 const} {\cf18 size_t} tuple_size = ::std::tuple_size<Tuple>::value;\par
+{\bkmkstart AAAAAAAKTW}{\bkmkend AAAAAAAKTW}
+01000 \par
+{\bkmkstart AAAAAAAKTX}{\bkmkend AAAAAAAKTX}
+01001   {\cf17 template} <{\cf18 size_t} I>\par
+{\bkmkstart AAAAAAAKTY}{\bkmkend AAAAAAAKTY}
+01002   {\cf17 struct }tuple_element : ::std::tuple_element<I, Tuple> \{\};\par
+{\bkmkstart AAAAAAAKTZ}{\bkmkend AAAAAAAKTZ}
+01003 \par
+{\bkmkstart AAAAAAAKUA}{\bkmkend AAAAAAAKUA}
+01004   {\cf17 template} <{\cf18 size_t} I>\par
+{\bkmkstart AAAAAAAKUB}{\bkmkend AAAAAAAKUB}
+01005   {\cf17 static} {\cf17 const} typename ::std::tuple_element<I, Tuple>::type& get(\par
+{\bkmkstart AAAAAAAKUC}{\bkmkend AAAAAAAKUC}
+01006       {\cf17 const} Tuple& tuple) \{\par
+{\bkmkstart AAAAAAAKUD}{\bkmkend AAAAAAAKUD}
+01007     return ::std::get<I>(tuple);\par
+{\bkmkstart AAAAAAAKUE}{\bkmkend AAAAAAAKUE}
+01008   \}\par
+{\bkmkstart AAAAAAAKUF}{\bkmkend AAAAAAAKUF}
+01009 \};\par
+{\bkmkstart AAAAAAAKUG}{\bkmkend AAAAAAAKUG}
+01010 {\cf17 template} <{\cf17 typename}... Types>\par
+{\bkmkstart AAAAAAAKUH}{\bkmkend AAAAAAAKUH}
+01011 {\cf17 const} {\cf18 size_t} TuplePolicy< ::std::tuple<Types...> >::tuple_size;\par
+{\bkmkstart AAAAAAAKUI}{\bkmkend AAAAAAAKUI}
+01012 {\cf21 #endif  }{\cf20 // GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKUJ}{\bkmkend AAAAAAAKUJ}
+01013 \par
+{\bkmkstart AAAAAAAKUK}{\bkmkend AAAAAAAKUK}
+01014 {\cf21 #if GTEST_HAS_TR1_TUPLE || GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKUL}{\bkmkend AAAAAAAKUL}
+01015 {\cf20 // This helper template allows PrintTo() for tuples and}\par
+{\bkmkstart AAAAAAAKUM}{\bkmkend AAAAAAAKUM}
+01016 {\cf20 // UniversalTersePrintTupleFieldsToStrings() to be defined by}\par
+{\bkmkstart AAAAAAAKUN}{\bkmkend AAAAAAAKUN}
+01017 {\cf20 // induction on the number of tuple fields.  The idea is that}\par
+{\bkmkstart AAAAAAAKUO}{\bkmkend AAAAAAAKUO}
+01018 {\cf20 // TuplePrefixPrinter<N>::PrintPrefixTo(t, os) prints the first N}\par
+{\bkmkstart AAAAAAAKUP}{\bkmkend AAAAAAAKUP}
+01019 {\cf20 // fields in tuple t, and can be defined in terms of}\par
+{\bkmkstart AAAAAAAKUQ}{\bkmkend AAAAAAAKUQ}
+01020 {\cf20 // TuplePrefixPrinter<N - 1>.}\par
+{\bkmkstart AAAAAAAKUR}{\bkmkend AAAAAAAKUR}
+01021 {\cf20 //}\par
+{\bkmkstart AAAAAAAKUS}{\bkmkend AAAAAAAKUS}
+01022 {\cf20 // The inductive case.}\par
+{\bkmkstart AAAAAAAKUT}{\bkmkend AAAAAAAKUT}
+01023 {\cf17 template} <{\cf18 size_t} N>\par
+{\bkmkstart AAAAAAAKUU}{\bkmkend AAAAAAAKUU}
+01024 {\cf17 struct }TuplePrefixPrinter \{\par
+{\bkmkstart AAAAAAAKUV}{\bkmkend AAAAAAAKUV}
+01025   {\cf20 // Prints the first N fields of a tuple.}\par
+{\bkmkstart AAAAAAAKUW}{\bkmkend AAAAAAAKUW}
+01026   {\cf17 template} <{\cf17 typename} Tuple>\par
+{\bkmkstart AAAAAAAKUX}{\bkmkend AAAAAAAKUX}
+01027   {\cf17 static} {\cf18 void} PrintPrefixTo({\cf17 const} Tuple& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKUY}{\bkmkend AAAAAAAKUY}
+01028     TuplePrefixPrinter<N - 1>::PrintPrefixTo(t, os);\par
+{\bkmkstart AAAAAAAKUZ}{\bkmkend AAAAAAAKUZ}
+01029     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKVA" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_INTENTIONAL_CONST_COND_PUSH_}}}
+()\par
+{\bkmkstart AAAAAAAKVB}{\bkmkend AAAAAAAKVB}
+01030     if (N > 1) \{\par
+{\bkmkstart AAAAAAAKVC}{\bkmkend AAAAAAAKVC}
+01031     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKVD" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_INTENTIONAL_CONST_COND_POP_}}}
+()\par
+{\bkmkstart AAAAAAAKVE}{\bkmkend AAAAAAAKVE}
+01032       *os << {\cf22 ", "};\par
+{\bkmkstart AAAAAAAKVF}{\bkmkend AAAAAAAKVF}
+01033     \}\par
+{\bkmkstart AAAAAAAKVG}{\bkmkend AAAAAAAKVG}
+01034     UniversalPrinter<\par
+{\bkmkstart AAAAAAAKVH}{\bkmkend AAAAAAAKVH}
+01035         {\cf17 typename} TuplePolicy<Tuple>::template tuple_element<N - 1>::type>\par
+{\bkmkstart AAAAAAAKVI}{\bkmkend AAAAAAAKVI}
+01036         ::Print(TuplePolicy<Tuple>::template get<N - 1>(t), os);\par
+{\bkmkstart AAAAAAAKVJ}{\bkmkend AAAAAAAKVJ}
+01037   \}\par
+{\bkmkstart AAAAAAAKVK}{\bkmkend AAAAAAAKVK}
+01038 \par
+{\bkmkstart AAAAAAAKVL}{\bkmkend AAAAAAAKVL}
+01039   {\cf20 // Tersely prints the first N fields of a tuple to a string vector,}\par
+{\bkmkstart AAAAAAAKVM}{\bkmkend AAAAAAAKVM}
+01040   {\cf20 // one element for each field.}\par
+{\bkmkstart AAAAAAAKVN}{\bkmkend AAAAAAAKVN}
+01041   {\cf17 template} <{\cf17 typename} Tuple>\par
+{\bkmkstart AAAAAAAKVO}{\bkmkend AAAAAAAKVO}
+01042   {\cf17 static} {\cf18 void} TersePrintPrefixToStrings({\cf17 const} Tuple& t, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSG" }{}}{\fldrslt {\cs37\ul\cf2 Strings}}}
+* strings) \{\par
+{\bkmkstart AAAAAAAKVP}{\bkmkend AAAAAAAKVP}
+01043     TuplePrefixPrinter<N - 1>::TersePrintPrefixToStrings(t, strings);\par
+{\bkmkstart AAAAAAAKVQ}{\bkmkend AAAAAAAKVQ}
+01044     ::std::stringstream ss;\par
+{\bkmkstart AAAAAAAKVR}{\bkmkend AAAAAAAKVR}
+01045     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKRP" }{}}{\fldrslt {\cs37\ul\cf2 UniversalTersePrint}}}
+(TuplePolicy<Tuple>::template get<N - 1>(t), &ss);\par
+{\bkmkstart AAAAAAAKVS}{\bkmkend AAAAAAAKVS}
+01046     strings->push_back(ss.str());\par
+{\bkmkstart AAAAAAAKVT}{\bkmkend AAAAAAAKVT}
+01047   \}\par
+{\bkmkstart AAAAAAAKVU}{\bkmkend AAAAAAAKVU}
+01048 \};\par
+{\bkmkstart AAAAAAAKVV}{\bkmkend AAAAAAAKVV}
+01049 \par
+{\bkmkstart AAAAAAAKVW}{\bkmkend AAAAAAAKVW}
+01050 {\cf20 // Base case.}\par
+{\bkmkstart AAAAAAAKVX}{\bkmkend AAAAAAAKVX}
+01051 {\cf17 template} <>\par
+{\bkmkstart AAAAAAAKVY}{\bkmkend AAAAAAAKVY}
+01052 {\cf17 struct }TuplePrefixPrinter<0> \{\par
+{\bkmkstart AAAAAAAKVZ}{\bkmkend AAAAAAAKVZ}
+01053   {\cf17 template} <{\cf17 typename} Tuple>\par
+{\bkmkstart AAAAAAAKWA}{\bkmkend AAAAAAAKWA}
+01054   {\cf17 static} {\cf18 void} PrintPrefixTo({\cf17 const} Tuple&, ::std::ostream*) \{\}\par
+{\bkmkstart AAAAAAAKWB}{\bkmkend AAAAAAAKWB}
+01055 \par
+{\bkmkstart AAAAAAAKWC}{\bkmkend AAAAAAAKWC}
+01056   {\cf17 template} <{\cf17 typename} Tuple>\par
+{\bkmkstart AAAAAAAKWD}{\bkmkend AAAAAAAKWD}
+01057   {\cf17 static} {\cf18 void} TersePrintPrefixToStrings({\cf17 const} Tuple&, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSG" }{}}{\fldrslt {\cs37\ul\cf2 Strings}}}
+*) \{\}\par
+{\bkmkstart AAAAAAAKWE}{\bkmkend AAAAAAAKWE}
+01058 \};\par
+{\bkmkstart AAAAAAAKWF}{\bkmkend AAAAAAAKWF}
+01059 \par
+{\bkmkstart AAAAAAAKWG}{\bkmkend AAAAAAAKWG}
+01060 {\cf20 // Helper function for printing a tuple.}\par
+{\bkmkstart AAAAAAAKWH}{\bkmkend AAAAAAAKWH}
+01061 {\cf20 // Tuple must be either std::tr1::tuple or std::tuple type.}\par
+{\bkmkstart AAAAAAAKWI}{\bkmkend AAAAAAAKWI}
+01062 {\cf17 template} <{\cf17 typename} Tuple>\par
+{\bkmkstart AAAAAAAKWJ}{\bkmkend AAAAAAAKWJ}
+01063 {\cf18 void} PrintTupleTo({\cf17 const} Tuple& t, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKWK}{\bkmkend AAAAAAAKWK}
+01064   *os << {\cf22 "("};\par
+{\bkmkstart AAAAAAAKWL}{\bkmkend AAAAAAAKWL}
+01065   TuplePrefixPrinter<TuplePolicy<Tuple>::tuple_size>::PrintPrefixTo(t, os);\par
+{\bkmkstart AAAAAAAKWM}{\bkmkend AAAAAAAKWM}
+01066   *os << {\cf22 ")"};\par
+{\bkmkstart AAAAAAAKWN}{\bkmkend AAAAAAAKWN}
+01067 \}\par
+{\bkmkstart AAAAAAAKWO}{\bkmkend AAAAAAAKWO}
+01068 \par
+{\bkmkstart AAAAAAAKWP}{\bkmkend AAAAAAAKWP}
+01069 {\cf20 // Prints the fields of a tuple tersely to a string vector, one}\par
+{\bkmkstart AAAAAAAKWQ}{\bkmkend AAAAAAAKWQ}
+01070 {\cf20 // element for each field.  See the comment before}\par
+{\bkmkstart AAAAAAAKWR}{\bkmkend AAAAAAAKWR}
+01071 {\cf20 // UniversalTersePrint() for how we define "tersely".}\par
+{\bkmkstart AAAAAAAKWS}{\bkmkend AAAAAAAKWS}
+01072 {\cf17 template} <{\cf17 typename} Tuple>\par
+{\bkmkstart AAAAAAAKWT}{\bkmkend AAAAAAAKWT}
+01073 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSG" }{}}{\fldrslt {\cs37\ul\cf2 Strings}}}
+ UniversalTersePrintTupleFieldsToStrings({\cf17 const} Tuple& value) \{\par
+{\bkmkstart AAAAAAAKWU}{\bkmkend AAAAAAAKWU}
+01074   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSG" }{}}{\fldrslt {\cs37\ul\cf2 Strings}}}
+ result;\par
+{\bkmkstart AAAAAAAKWV}{\bkmkend AAAAAAAKWV}
+01075   TuplePrefixPrinter<TuplePolicy<Tuple>::tuple_size>::\par
+{\bkmkstart AAAAAAAKWW}{\bkmkend AAAAAAAKWW}
+01076       TersePrintPrefixToStrings(value, &result);\par
+{\bkmkstart AAAAAAAKWX}{\bkmkend AAAAAAAKWX}
+01077   {\cf19 return} result;\par
+{\bkmkstart AAAAAAAKWY}{\bkmkend AAAAAAAKWY}
+01078 \}\par
+{\bkmkstart AAAAAAAKWZ}{\bkmkend AAAAAAAKWZ}
+01079 {\cf21 #endif  }{\cf20 // GTEST_HAS_TR1_TUPLE || GTEST_HAS_STD_TUPLE_}\par
+{\bkmkstart AAAAAAAKXA}{\bkmkend AAAAAAAKXA}
+01080 \par
+{\bkmkstart AAAAAAAKXB}{\bkmkend AAAAAAAKXB}
+01081 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAAAKXC}{\bkmkend AAAAAAAKXC}
+01082 \par
+{\bkmkstart AAAAAAAKXD}{\bkmkend AAAAAAAKXD}
+01083 {\cf21 #if GTEST_HAS_ABSL}\par
+{\bkmkstart AAAAAAAKXE}{\bkmkend AAAAAAAKXE}
+01084 {\cf17 namespace }internal2 \{\par
+{\bkmkstart AAAAAAAKXF}{\bkmkend AAAAAAAKXF}
+01085 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKXG}{\bkmkend AAAAAAAKXG}
+01086 {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJKE" }{}}{\fldrslt {\cs37\ul\cf2 TypeWithoutFormatter<T, kConvertibleToStringView>::PrintValue}}}
+(\par
+{\bkmkstart AAAAAAAKXH}{\bkmkend AAAAAAAKXH}
+01087     {\cf17 const} T& value, ::std::ostream* os) \{\par
+{\bkmkstart AAAAAAAKXI}{\bkmkend AAAAAAAKXI}
+01088   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJYM" }{}}{\fldrslt {\cs37\ul\cf2 internal::PrintTo}}}
+(absl::string_view(value), os);\par
+{\bkmkstart AAAAAAAKXJ}{\bkmkend AAAAAAAKXJ}
+01089 \}\par
+{\bkmkstart AAAAAAAKXK}{\bkmkend AAAAAAAKXK}
+01090 \}  {\cf20 // namespace internal2}\par
+{\bkmkstart AAAAAAAKXL}{\bkmkend AAAAAAAKXL}
+01091 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAKXM}{\bkmkend AAAAAAAKXM}
+01092 \par
+{\bkmkstart AAAAAAAKXN}{\bkmkend AAAAAAAKXN}
+01093 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAKXO}{\bkmkend AAAAAAAKXO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQV" }{}}{\fldrslt {\cs37\ul\cf2 01094}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 ::std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQV" }{}}{\fldrslt {\cs37\ul\cf2 PrintToString}}}
+({\cf17 const} T& value) \{\par
+{\bkmkstart AAAAAAAKXP}{\bkmkend AAAAAAAKXP}
+01095   ::std::stringstream ss;\par
+{\bkmkstart AAAAAAAKXQ}{\bkmkend AAAAAAAKXQ}
+01096   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKOW" }{}}{\fldrslt {\cs37\ul\cf2 internal::UniversalTersePrinter<T>::Print}}}
+(value, &ss);\par
+{\bkmkstart AAAAAAAKXR}{\bkmkend AAAAAAAKXR}
+01097   {\cf19 return} ss.str();\par
+{\bkmkstart AAAAAAAKXS}{\bkmkend AAAAAAAKXS}
+01098 \}\par
+{\bkmkstart AAAAAAAKXT}{\bkmkend AAAAAAAKXT}
+01099 \par
+{\bkmkstart AAAAAAAKXU}{\bkmkend AAAAAAAKXU}
+01100 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAKXV}{\bkmkend AAAAAAAKXV}
+01101 \par
+{\bkmkstart AAAAAAAKXW}{\bkmkend AAAAAAAKXW}
+01102 {\cf20 // Include any custom printer added by the local installation.}\par
+{\bkmkstart AAAAAAAKXX}{\bkmkend AAAAAAAKXX}
+01103 {\cf20 // We must include this header at the end to make sure it can use the}\par
+{\bkmkstart AAAAAAAKXY}{\bkmkend AAAAAAAKXY}
+01104 {\cf20 // declarations from this file.}\par
+{\bkmkstart AAAAAAAKXZ}{\bkmkend AAAAAAAKXZ}
+01105 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKYA" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/custom/gtest-printers.h}}}
+"}\par
+{\bkmkstart AAAAAAAKYB}{\bkmkend AAAAAAAKYB}
+01106 \par
+{\bkmkstart AAAAAAAKYC}{\bkmkend AAAAAAAKYC}
+01107 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_GTEST_PRINTERS_H_}\par
+}
+}

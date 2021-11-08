@@ -1,4 +1,4 @@
-.TH "testing::internal::ParameterizedTestCaseInfo< TestCase >" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "testing::internal::ParameterizedTestCaseInfo< TestCase >" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,8 +9,8 @@ testing::internal::ParameterizedTestCaseInfo< TestCase >
 .PP
 \fC#include <gtest\-param\-util\&.h>\fP
 .PP
-Herencias \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
-.SS "Tipos públicos"
+Inherits \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+.SS "Public Types"
 
 .in +1c
 .ti -1c
@@ -20,7 +20,7 @@ Herencias \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
 .RI "typedef \fBParamNameGenFunc\fP< \fBParamType\fP >::\fBType\fP \fBParamNameGeneratorFunc\fP"
 .br
 .in -1c
-.SS "Métodos públicos"
+.SS "Public Member Functions"
 
 .in +1c
 .ti -1c
@@ -45,62 +45,62 @@ Herencias \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
 .RI "virtual void \fBRegisterTests\fP ()"
 .br
 .in -1c
-.SS "Otros miembros heredados"
-.SH "Descripción detallada"
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
 .PP 
 
 .SS "template<class \fBTestCase\fP>
 .br
 class testing::internal::ParameterizedTestCaseInfo< TestCase >"
 .PP
-Definición en la línea \fB495\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación de los 'Typedef' miembros de la clase"
+Definition at line \fB495\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Typedef Documentation"
 .PP 
 .SS "template<class \fBTestCase\fP > typedef \fBParamNameGenFunc\fP<\fBParamType\fP>::\fBType\fP \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParamNameGeneratorFunc\fP"
 
 .PP
-Definición en la línea \fB503\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB503\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<class \fBTestCase\fP > typedef TestCase::ParamType \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParamType\fP"
 
 .PP
-Definición en la línea \fB500\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación del constructor y destructor"
+Definition at line \fB500\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
 .PP 
 .SS "template<class \fBTestCase\fP > \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParameterizedTestCaseInfo\fP (const char * name, \fBCodeLocation\fP code_location)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
-Definición en la línea \fB505\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación de las funciones miembro"
+Definition at line \fB505\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Function Documentation"
 .PP 
 .SS "template<class \fBTestCase\fP > int \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::AddTestCaseInstantiation (const std::string & instantiation_name, GeneratorCreationFunc * func, \fBParamNameGeneratorFunc\fP * name_func, const char * file, int line)\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB528\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB528\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<class \fBTestCase\fP > void \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::AddTestPattern (const char * test_case_name, const char * test_base_name, \fBTestMetaFactoryBase\fP< \fBParamType\fP > * meta_factory)\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB519\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB519\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<class \fBTestCase\fP > virtual const std::string & \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::GetTestCaseName () const\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Implementa \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+Implements \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
 .PP
-Definición en la línea \fB510\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB510\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<class \fBTestCase\fP > virtual \fBTypeId\fP \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::GetTestCaseTypeId () const\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Implementa \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+Implements \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
 .PP
-Definición en la línea \fB512\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB512\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<class \fBTestCase\fP > typedef \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::\fBParamGenerator\fP (GeneratorCreationFunc)"
 
 .SS "template<class \fBTestCase\fP > virtual void \fBtesting::internal::ParameterizedTestCaseInfo\fP< \fBTestCase\fP >::RegisterTests ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Implementa \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
+Implements \fBtesting::internal::ParameterizedTestCaseInfoBase\fP\&.
 .PP
-Definición en la línea \fB541\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB541\fP of file \fBgtest\-param\-util\&.h\fP\&.
 
-.SH "Autor"
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

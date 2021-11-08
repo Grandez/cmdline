@@ -6,63 +6,88 @@
 \DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <cstdarg>}}
 \DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <cstring>}}
 \DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <cstdio>}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}cmdline\_exceptions.hpp"{}}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#ifdef \_WIN32}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#pragma warning( disable : 4996)}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00011}00011 }
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}} \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00013}00013     \textcolor{keyword}{static} std::string mountMessage(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, va\_list list) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00014}00014         \textcolor{keywordtype}{char} t[255];}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00015}00015         std::vsprintf(t, fmt, list);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00016}00016         \textcolor{keywordflow}{return} std::string(t);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00017}00017     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00018}00018     CmdLineException::CmdLineException(\textcolor{keywordtype}{char}* txt) : invalid\_argument(txt) \{\};}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00019}00019     CmdLineException::CmdLineException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) : invalid\_argument(\textcolor{stringliteral}{"{}"{}}) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00020}00020         va\_list args;}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00021}00021         va\_start(args, fmt);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00022}00022         std::string txt = mountMessage(fmt, args);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00023}00023         this-\/>invalid\_argument::\string~invalid\_argument();}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00024}00024         \textcolor{keyword}{new} (\textcolor{keyword}{this}) invalid\_argument(txt); \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00025}00025     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00026}00026     CmdLineParameterException::CmdLineParameterException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00027}00027         va\_list args;}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00028}00028         va\_start(args, fmt);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00029}00029         std::string txt = mountMessage(fmt, args);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00030}00030         this-\/>CmdLineException::\string~CmdLineException(); \textcolor{comment}{// destroy the base class}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00031}00031         \textcolor{keyword}{new} (\textcolor{keyword}{this}) CmdLineException((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00032}00032     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00033}00033     CmdLineValueException::CmdLineValueException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00034}00034         va\_list args;}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00035}00035         va\_start(args, fmt);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00036}00036         std::string txt = mountMessage(fmt, args);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00037}00037         this-\/>CmdLineException::\string~CmdLineException(); \textcolor{comment}{// destroy the base class}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00038}00038         \textcolor{keyword}{new} (\textcolor{keyword}{this}) CmdLineException((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00039}00039     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00040}00040     CmdLineDuplicateArgumentException::CmdLineDuplicateArgumentException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00041}00041         va\_list args;}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00042}00042         va\_start(args, fmt);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00043}00043         std::string txt = mountMessage(fmt, args);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00044}00044         this-\/>CmdLineException::\string~CmdLineException(); \textcolor{comment}{// destroy the base class}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00045}00045         \textcolor{keyword}{new} (\textcolor{keyword}{this}) CmdLineException((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00046}00046     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00047}00047     CmdLineNotFoundException::CmdLineNotFoundException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) : std::runtime\_error(\textcolor{stringliteral}{"{}unchecked"{}}) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00048}00048         va\_list args;}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00049}00049         va\_start(args, fmt);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00050}00050         std::string txt = mountMessage(fmt, args);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00051}00051         this-\/>runtime\_error::\string~runtime\_error(); \textcolor{comment}{// destroy the base class}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00052}00052         \textcolor{keyword}{new} (\textcolor{keyword}{this}) runtime\_error((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00053}00053     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00054}00054     CmdLineInvalidTypeException::CmdLineInvalidTypeException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) : std::runtime\_error(\textcolor{stringliteral}{"{}unchecked"{}}) \{}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00055}00055         va\_list args;}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00056}00056         va\_start(args, fmt);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00057}00057         std::string txt = mountMessage(fmt, args);}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00058}00058         this-\/>runtime\_error::\string~runtime\_error(); \textcolor{comment}{// destroy the base class}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00059}00059         \textcolor{keyword}{new} (\textcolor{keyword}{this}) runtime\_error((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00060}00060     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00061}00061 \}}
-\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}msg\_locale.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}types.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}cmdline\_exceptions.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#pragma warning( disable : 4996)}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}} \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00015}00015     \textcolor{keyword}{static} std::string mountMessage(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, va\_list list) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00016}00016         \textcolor{keywordtype}{char} t[255];}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00017}00017         std::vsprintf(t, fmt, list);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00018}00018         \textcolor{keywordflow}{return} std::string(t);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00020}00020     CmdLineException::CmdLineException(\textcolor{keywordtype}{char}* txt) : invalid\_argument(txt) \{\};}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00021}00021     CmdLineException::CmdLineException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) : invalid\_argument(\textcolor{stringliteral}{"{}"{}}) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00022}00022         va\_list args;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00023}00023         va\_start(args, fmt);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00024}00024         std::string txt = mountMessage(fmt, args);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00025}00025         this-\/>invalid\_argument::\string~invalid\_argument();}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00026}00026         \textcolor{keyword}{new} (\textcolor{keyword}{this}) invalid\_argument(txt); \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00028}00028     CmdLineParameterException::CmdLineParameterException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00029}00029         va\_list args;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00030}00030         va\_start(args, fmt);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00031}00031         std::string txt = mountMessage(fmt, args);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00032}00032         this-\/>CmdLineException::\string~CmdLineException(); \textcolor{comment}{// destroy the base class}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00033}00033         \textcolor{keyword}{new} (\textcolor{keyword}{this}) CmdLineException((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00034}00034     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00035}00035     CmdLineValueException::CmdLineValueException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00036}00036         va\_list args;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00037}00037         va\_start(args, fmt);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00038}00038         std::string txt = mountMessage(fmt, args);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00039}00039         this-\/>CmdLineException::\string~CmdLineException(); \textcolor{comment}{// destroy the base class}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00040}00040         \textcolor{keyword}{new} (\textcolor{keyword}{this}) CmdLineException((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00041}00041     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00042}00042     CmdLineDuplicateArgumentException::CmdLineDuplicateArgumentException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00043}00043         va\_list args;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00044}00044         va\_start(args, fmt);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00045}00045         std::string txt = mountMessage(fmt, args);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00046}00046         this-\/>CmdLineException::\string~CmdLineException(); \textcolor{comment}{// destroy the base class}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00047}00047         \textcolor{keyword}{new} (\textcolor{keyword}{this}) CmdLineException((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00049}00049     CmdLineNotFoundException::CmdLineNotFoundException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) : std::runtime\_error(\textcolor{stringliteral}{"{}unchecked"{}}) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00050}00050         va\_list args;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00051}00051         va\_start(args, fmt);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00052}00052         std::string txt = mountMessage(fmt, args);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00053}00053         this-\/>runtime\_error::\string~runtime\_error(); \textcolor{comment}{// destroy the base class}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00054}00054         \textcolor{keyword}{new} (\textcolor{keyword}{this}) runtime\_error((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00056}00056     CmdLineInvalidTypeException::CmdLineInvalidTypeException(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fmt, ...) : std::runtime\_error(\textcolor{stringliteral}{"{}unchecked"{}}) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00057}00057         va\_list args;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00058}00058         va\_start(args, fmt);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00059}00059         std::string txt = mountMessage(fmt, args);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00060}00060         this-\/>runtime\_error::\string~runtime\_error(); \textcolor{comment}{// destroy the base class}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00061}00061         \textcolor{keyword}{new} (\textcolor{keyword}{this}) runtime\_error((\textcolor{keywordtype}{char}*)txt.c\_str()); \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00063}00063         HelpRequested::HelpRequested(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *programName, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *txt, \textcolor{keywordtype}{bool} detailed}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00064}00064                                      , std::unordered\_map<std::string, bool> flags}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00065}00065                                      , std::unordered\_map<std::string, string> options)}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00067}00067         : CmdLineException(txt) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00068}00068         filesystem::path fs(programName);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00069}00069         this-\/>name = strdup(fs.filename().string().c\_str());}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00070}00070         this-\/>detailed = detailed;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00071}00071         this-\/>flags   =  flags;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00072}00072         this-\/>options = options;}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00073}00073     \};}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00074}00074      HelpRequested::\string~HelpRequested() \{}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00075}00075          cout << \textcolor{stringliteral}{"{}delete HelpRequested\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00076}00076          free((\textcolor{keywordtype}{void} *) name);}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00077}00077      \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00078}00078     HelpSimpleRequested::HelpSimpleRequested( \textcolor{keywordtype}{char}* programName}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00079}00079                                              ,unordered\_map<string,bool> flags  }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00080}00080                                              ,unordered\_map<string,string> options)       }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00081}00081                         : HelpRequested(programName, TXT\_HELP, false, flags, options) \{\};}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00082}00082     HelpDetailedRequested::HelpDetailedRequested( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *programName}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00083}00083                                                  ,unordered\_map<string,bool> flags  }
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00084}00084                                                  ,unordered\_map<string,string> options)}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00085}00085                          : HelpRequested(programName, TXT\_HELP\_DETAIL, true, flags, options) \{\};}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00086}00086 \}}
+\DoxyCodeLine{\Hypertarget{cmdline__exceptions_8cpp_source_l00087}00087 }
 
 \end{DoxyCode}

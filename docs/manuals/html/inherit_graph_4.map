@@ -1,5 +1,10 @@
 <map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,104,57"/>
-<area shape="rect" id="node2" href="$db/d21/classcmdline_1_1_cmd_line_invalid_type_exception.html" title=" " alt="" coords="152,5,347,32"/>
-<area shape="rect" id="node3" href="$d3/dd2/classcmdline_1_1_cmd_line_not_found_exception.html" title=" " alt="" coords="156,56,343,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,97,124,123"/>
+<area shape="rect" id="node2" href="$d3/dfd/classcmdline_1_1_cmd_line_exception.html" title=" " alt="" coords="172,97,303,123"/>
+<area shape="rect" id="node3" href="$d6/dd7/classcmdline_1_1_cmd_line_duplicate_argument_exception.html" title=" " alt="" coords="355,5,537,47"/>
+<area shape="rect" id="node4" href="$d1/d0b/classcmdline_1_1_cmd_line_parameter_exception.html" title=" " alt="" coords="351,71,541,98"/>
+<area shape="rect" id="node5" href="$d8/d74/classcmdline_1_1_cmd_line_value_exception.html" title=" " alt="" coords="364,122,528,149"/>
+<area shape="rect" id="node6" href="$df/db7/classcmdline_1_1_help_requested.html" title=" " alt="" coords="391,173,501,199"/>
+<area shape="rect" id="node7" href="$d7/db2/classcmdline_1_1_help_detailed_requested.html" title=" " alt="" coords="589,147,747,174"/>
+<area shape="rect" id="node8" href="$d4/ddb/classcmdline_1_1_help_simple_requested.html" title=" " alt="" coords="593,198,743,225"/>
 </map>

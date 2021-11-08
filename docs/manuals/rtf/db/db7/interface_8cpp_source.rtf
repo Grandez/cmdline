@@ -1,0 +1,698 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+interface.cpp\par \pard\plain 
+{\tc\tcl2 \v interface.cpp}
+{\xe \v interface.cpp}
+{\bkmkstart AAAAAAAATO}
+{\bkmkend AAAAAAAATO}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAATP}{\bkmkend AAAAAAAATP}
+00001 {\cf21 #include <iostream>}\par
+{\bkmkstart AAAAAAAATQ}{\bkmkend AAAAAAAATQ}
+00002 {\cf21 #include "cmdline.hpp"}\par
+{\bkmkstart AAAAAAAATR}{\bkmkend AAAAAAAATR}
+00003 {\cf21 #include "cmdline.h"}\par
+{\bkmkstart AAAAAAAATS}{\bkmkend AAAAAAAATS}
+00004 {\cf21 #include "cmdline_exceptions.hpp"}\par
+{\bkmkstart AAAAAAAATT}{\bkmkend AAAAAAAATT}
+00005 {\cf21 #include "cmdline.h"}\par
+{\bkmkstart AAAAAAAATU}{\bkmkend AAAAAAAATU}
+00006 {\cf21 #include "types.h"}\par
+{\bkmkstart AAAAAAAATV}{\bkmkend AAAAAAAATV}
+00007 {\cf21 #include "types.hpp"}\par
+{\bkmkstart AAAAAAAATW}{\bkmkend AAAAAAAATW}
+00008 {\cf21 #include "interface.hpp"}\par
+{\bkmkstart AAAAAAAATX}{\bkmkend AAAAAAAATX}
+00009 {\cf21 #include "cmdline_errno.h"}\par
+{\bkmkstart AAAAAAAATY}{\bkmkend AAAAAAAATY}
+00010 {\cf21 #include "tools.hpp"}\par
+{\bkmkstart AAAAAAAATZ}{\bkmkend AAAAAAAATZ}
+00011 \par
+{\bkmkstart AAAAAAAAUA}{\bkmkend AAAAAAAAUA}
+00012 {\cf21 #ifdef _WIN32}\par
+{\bkmkstart AAAAAAAAUB}{\bkmkend AAAAAAAAUB}
+00013 {\cf20 // Pointer is not null}\par
+{\bkmkstart AAAAAAAAUC}{\bkmkend AAAAAAAAUC}
+00014 {\cf20 // Theres is enoguh space}\par
+{\bkmkstart AAAAAAAAUD}{\bkmkend AAAAAAAAUD}
+00015 {\cf20 // it is enum becauase is C}\par
+{\bkmkstart AAAAAAAAUE}{\bkmkend AAAAAAAAUE}
+00016 {\cf21 #pragma warning(disable : 26812 6011 6386)}\par
+{\bkmkstart AAAAAAAAUF}{\bkmkend AAAAAAAAUF}
+00017 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAAUG}{\bkmkend AAAAAAAAUG}
+00018 \par
+{\bkmkstart AAAAAAAAUH}{\bkmkend AAAAAAAAUH}
+00019 {\cf17 static} cmdline::CmdLine* _cmdLine = {\cf17 nullptr};\par
+{\bkmkstart AAAAAAAAUI}{\bkmkend AAAAAAAAUI}
+00020 {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+* _pCmdLine = NULL;\par
+{\bkmkstart AAAAAAAAUJ}{\bkmkend AAAAAAAAUJ}
+00021 \par
+{\bkmkstart AAAAAAAAUK}{\bkmkend AAAAAAAAUK}
+00022 {\cf17 template} <{\cf17 typename} T> {\cf18 void} * checkException(T& ex) \{\par
+{\bkmkstart AAAAAAAAUL}{\bkmkend AAAAAAAAUL}
+00023     {\cf20 /*}\par
+{\bkmkstart AAAAAAAAUM}{\bkmkend AAAAAAAAUM}
+00024 {\cf20     if      constexpr (is_same<T, cmdline::HelpRequested>::ex)                      errno = ECMDLINE_HELP;}\par
+{\bkmkstart AAAAAAAAUN}{\bkmkend AAAAAAAAUN}
+00025 {\cf20     else if constexpr (is_same<T, cmdline::HelpDetailedRequested>::ex)              errno = ECMDLINE_HELP_DETAIL;}\par
+{\bkmkstart AAAAAAAAUO}{\bkmkend AAAAAAAAUO}
+00026 {\cf20     else if constexpr (is_same<T, cmdline::CmdLineNotFoundException>::ex)           errno = ECMDLINE_NOTFND;}\par
+{\bkmkstart AAAAAAAAUP}{\bkmkend AAAAAAAAUP}
+00027 {\cf20     else if constexpr (is_same<T, cmdline::CmdLineInvalidTypeException>::ex)        errno = ECMDLINE_INVTYPE;}\par
+{\bkmkstart AAAAAAAAUQ}{\bkmkend AAAAAAAAUQ}
+00028 {\cf20     else if constexpr (is_same<T, cmdline::CmdLineParameterException>::ex)          errno = ECMDLINE_INVPARM;}\par
+{\bkmkstart AAAAAAAAUR}{\bkmkend AAAAAAAAUR}
+00029 {\cf20     else if constexpr (is_same<T, cmdline::CmdLineValueException>::ex)              errno = ECMDLINE_INVVALUE;}\par
+{\bkmkstart AAAAAAAAUS}{\bkmkend AAAAAAAAUS}
+00030 {\cf20     else if constexpr (is_same<T, cmdline::CmdLineDuplicateArgumentException>::ex)  errno = ECMDLINE_DUP;}\par
+{\bkmkstart AAAAAAAAUT}{\bkmkend AAAAAAAAUT}
+00031 {\cf20     else                                                                    errno = ECMDLINE;}\par
+{\bkmkstart AAAAAAAAUU}{\bkmkend AAAAAAAAUU}
+00032 {\cf20     */}\par
+{\bkmkstart AAAAAAAAUV}{\bkmkend AAAAAAAAUV}
+00033         errno = ECMDLINE;\par
+{\bkmkstart AAAAAAAAUW}{\bkmkend AAAAAAAAUW}
+00034     {\cf19 return} NULL;\par
+{\bkmkstart AAAAAAAAUX}{\bkmkend AAAAAAAAUX}
+00035 \}\par
+{\bkmkstart AAAAAAAAUY}{\bkmkend AAAAAAAAUY}
+00036 {\cf20 // Magic numbers are: 1-Flag, 2-Option, 3-Define}\par
+{\bkmkstart AAAAAAAAUZ}{\bkmkend AAAAAAAAUZ}
+00037 logical     hasValue({\cf18 int} target, {\cf17 const} {\cf18 char}* name) \{\par
+{\bkmkstart AAAAAAAAVA}{\bkmkend AAAAAAAAVA}
+00038     {\cf18 bool} b;\par
+{\bkmkstart AAAAAAAAVB}{\bkmkend AAAAAAAAVB}
+00039     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAVC}{\bkmkend AAAAAAAAVC}
+00040         {\cf19 switch} (target) \{\par
+{\bkmkstart AAAAAAAAVD}{\bkmkend AAAAAAAAVD}
+00041                 {\cf19 case} 1: b = _cmdLine->hasFlag(name); {\cf19 break};\par
+{\bkmkstart AAAAAAAAVE}{\bkmkend AAAAAAAAVE}
+00042                 {\cf19 case} 2: b = _cmdLine->hasOption(name); {\cf19 break};\par
+{\bkmkstart AAAAAAAAVF}{\bkmkend AAAAAAAAVF}
+00043                 {\cf19 case} 3: b = _cmdLine->hasDefinition(name); {\cf19 break};\par
+{\bkmkstart AAAAAAAAVG}{\bkmkend AAAAAAAAVG}
+00044         \}\par
+{\bkmkstart AAAAAAAAVH}{\bkmkend AAAAAAAAVH}
+00045         {\cf19 return} (b) ? TRUE : FALSE;\par
+{\bkmkstart AAAAAAAAVI}{\bkmkend AAAAAAAAVI}
+00046     \}\par
+{\bkmkstart AAAAAAAAVJ}{\bkmkend AAAAAAAAVJ}
+00047     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAVK}{\bkmkend AAAAAAAAVK}
+00048         checkException(ex);\par
+{\bkmkstart AAAAAAAAVL}{\bkmkend AAAAAAAAVL}
+00049         {\cf19 return} MISSING;\par
+{\bkmkstart AAAAAAAAVM}{\bkmkend AAAAAAAAVM}
+00050     \}\par
+{\bkmkstart AAAAAAAAVN}{\bkmkend AAAAAAAAVN}
+00051 \}\par
+{\bkmkstart AAAAAAAAVO}{\bkmkend AAAAAAAAVO}
+00052 logical     isMultiple({\cf18 bool} option, {\cf17 const} {\cf18 char}* name) \{\par
+{\bkmkstart AAAAAAAAVP}{\bkmkend AAAAAAAAVP}
+00053     {\cf18 bool} b;\par
+{\bkmkstart AAAAAAAAVQ}{\bkmkend AAAAAAAAVQ}
+00054     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAVR}{\bkmkend AAAAAAAAVR}
+00055         b = (option) ? _cmdLine->isOptionMultiple(name) \par
+{\bkmkstart AAAAAAAAVS}{\bkmkend AAAAAAAAVS}
+00056                      : _cmdLine->isDefinitionMultiple(name);\par
+{\bkmkstart AAAAAAAAVT}{\bkmkend AAAAAAAAVT}
+00057         {\cf19 return} (b) ? TRUE : FALSE;\par
+{\bkmkstart AAAAAAAAVU}{\bkmkend AAAAAAAAVU}
+00058     \}\par
+{\bkmkstart AAAAAAAAVV}{\bkmkend AAAAAAAAVV}
+00059     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAVW}{\bkmkend AAAAAAAAVW}
+00060         checkException(ex);\par
+{\bkmkstart AAAAAAAAVX}{\bkmkend AAAAAAAAVX}
+00061         {\cf19 return} MISSING;\par
+{\bkmkstart AAAAAAAAVY}{\bkmkend AAAAAAAAVY}
+00062     \}\par
+{\bkmkstart AAAAAAAAVZ}{\bkmkend AAAAAAAAVZ}
+00063 \}\par
+{\bkmkstart AAAAAAAAWA}{\bkmkend AAAAAAAAWA}
+00064 cmdline::Parameters makeParameters(ParmDef cparms[]) \{\par
+{\bkmkstart AAAAAAAAWB}{\bkmkend AAAAAAAAWB}
+00065     vector <cmdline::Parm> parms;\par
+{\bkmkstart AAAAAAAAWC}{\bkmkend AAAAAAAAWC}
+00066     ParmDef* cp = cparms;\par
+{\bkmkstart AAAAAAAAWD}{\bkmkend AAAAAAAAWD}
+00067     {\cf19 while} (cp->name) \{\par
+{\bkmkstart AAAAAAAAWE}{\bkmkend AAAAAAAAWE}
+00068         {\cf18 bool} b = (cp->multiple == TRUE) ? {\cf22 "1"} : {\cf22 "0"};\par
+{\bkmkstart AAAAAAAAWF}{\bkmkend AAAAAAAAWF}
+00069         {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFA" }{}}{\fldrslt {\cs37\ul\cf2 cmdline::Type}}}
+ t = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFA" }{}}{\fldrslt {\cs37\ul\cf2 cmdline::Type}}}
+(cp->type);\par
+{\bkmkstart AAAAAAAAWG}{\bkmkend AAAAAAAAWG}
+00070         parms.push_back(cmdline::Parm(cp->name, cp->value, t, b));\par
+{\bkmkstart AAAAAAAAWH}{\bkmkend AAAAAAAAWH}
+00071         cp++;\par
+{\bkmkstart AAAAAAAAWI}{\bkmkend AAAAAAAAWI}
+00072     \}\par
+{\bkmkstart AAAAAAAAWJ}{\bkmkend AAAAAAAAWJ}
+00073     {\cf19 return} parms;\par
+{\bkmkstart AAAAAAAAWK}{\bkmkend AAAAAAAAWK}
+00074 \}\par
+{\bkmkstart AAAAAAAAWL}{\bkmkend AAAAAAAAWL}
+00075 {\cf17 const} {\cf18 char}** _makeArray(vector<const char *> data) \{\par
+{\bkmkstart AAAAAAAAWM}{\bkmkend AAAAAAAAWM}
+00076     {\cf18 int} i = 0;\par
+{\bkmkstart AAAAAAAAWN}{\bkmkend AAAAAAAAWN}
+00077     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAWO}{\bkmkend AAAAAAAAWO}
+00078         {\cf18 char}** res = ({\cf18 char}**)malloc((data.size() + 1) * {\cf17 sizeof}({\cf18 char}*));\par
+{\bkmkstart AAAAAAAAWP}{\bkmkend AAAAAAAAWP}
+00079         {\cf19 for} (i = 0; i < data.size(); i++) res[i] = strdup(data[i]);\par
+{\bkmkstart AAAAAAAAWQ}{\bkmkend AAAAAAAAWQ}
+00080         res[i] = 0x0;\par
+{\bkmkstart AAAAAAAAWR}{\bkmkend AAAAAAAAWR}
+00081         {\cf19 return} ({\cf17 const} {\cf18 char} **) res;\par
+{\bkmkstart AAAAAAAAWS}{\bkmkend AAAAAAAAWS}
+00082     \}\par
+{\bkmkstart AAAAAAAAWT}{\bkmkend AAAAAAAAWT}
+00083     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAWU}{\bkmkend AAAAAAAAWU}
+00084         errno = ECMDLINE_NOMEM;\par
+{\bkmkstart AAAAAAAAWV}{\bkmkend AAAAAAAAWV}
+00085         {\cf19 return} NULL;\par
+{\bkmkstart AAAAAAAAWW}{\bkmkend AAAAAAAAWW}
+00086     \}\par
+{\bkmkstart AAAAAAAAWX}{\bkmkend AAAAAAAAWX}
+00087 \}\par
+{\bkmkstart AAAAAAAAWY}{\bkmkend AAAAAAAAWY}
+00088 {\cf17 const} {\cf18 char}** _makeArray(vector<string> data) \{\par
+{\bkmkstart AAAAAAAAWZ}{\bkmkend AAAAAAAAWZ}
+00089     {\cf18 int} i = 0;\par
+{\bkmkstart AAAAAAAAXA}{\bkmkend AAAAAAAAXA}
+00090     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAXB}{\bkmkend AAAAAAAAXB}
+00091         {\cf18 char}** res = ({\cf18 char}**)malloc((data.size() + 1) * {\cf17 sizeof}({\cf18 char}*));\par
+{\bkmkstart AAAAAAAAXC}{\bkmkend AAAAAAAAXC}
+00092         {\cf19 for} (i = 0; i < data.size(); i++) res[i] = ({\cf18 char} *) strdup(data[i].c_str());\par
+{\bkmkstart AAAAAAAAXD}{\bkmkend AAAAAAAAXD}
+00093         res[i] = 0x0;\par
+{\bkmkstart AAAAAAAAXE}{\bkmkend AAAAAAAAXE}
+00094         {\cf19 return} ({\cf17 const} {\cf18 char} **) res;\par
+{\bkmkstart AAAAAAAAXF}{\bkmkend AAAAAAAAXF}
+00095     \}\par
+{\bkmkstart AAAAAAAAXG}{\bkmkend AAAAAAAAXG}
+00096     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAXH}{\bkmkend AAAAAAAAXH}
+00097         errno = ECMDLINE_NOMEM;\par
+{\bkmkstart AAAAAAAAXI}{\bkmkend AAAAAAAAXI}
+00098         {\cf19 return} NULL;\par
+{\bkmkstart AAAAAAAAXJ}{\bkmkend AAAAAAAAXJ}
+00099     \}\par
+{\bkmkstart AAAAAAAAXK}{\bkmkend AAAAAAAAXK}
+00100 \}\par
+{\bkmkstart AAAAAAAAXL}{\bkmkend AAAAAAAAXL}
+00101 \par
+{\bkmkstart AAAAAAAAXM}{\bkmkend AAAAAAAAXM}
+00102 Parameter** _makeArrayParameter(cmdline::Options data) \{\par
+{\bkmkstart AAAAAAAAXN}{\bkmkend AAAAAAAAXN}
+00103     Parameter** parms = NULL;\par
+{\bkmkstart AAAAAAAAXO}{\bkmkend AAAAAAAAXO}
+00104     Parameter*  tmp   = NULL;\par
+{\bkmkstart AAAAAAAAXP}{\bkmkend AAAAAAAAXP}
+00105     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAXQ}{\bkmkend AAAAAAAAXQ}
+00106         parms = (Parameter **) malloc((data.size() + 1) * {\cf17 sizeof}(Parameter *));\par
+{\bkmkstart AAAAAAAAXR}{\bkmkend AAAAAAAAXR}
+00107         {\cf18 int} i = 0;\par
+{\bkmkstart AAAAAAAAXS}{\bkmkend AAAAAAAAXS}
+00108         {\cf19 for} ({\cf17 auto} it : data) \{\par
+{\bkmkstart AAAAAAAAXT}{\bkmkend AAAAAAAAXT}
+00109             tmp = (Parameter *) malloc({\cf17 sizeof}(Parameter));\par
+{\bkmkstart AAAAAAAAXU}{\bkmkend AAAAAAAAXU}
+00110             tmp->name = strdup(it.first.c_str());\par
+{\bkmkstart AAAAAAAAXV}{\bkmkend AAAAAAAAXV}
+00111             tmp->size = (int) it.second.size();\par
+{\bkmkstart AAAAAAAAXW}{\bkmkend AAAAAAAAXW}
+00112             tmp->values = _makeArray(it.second);\par
+{\bkmkstart AAAAAAAAXX}{\bkmkend AAAAAAAAXX}
+00113             parms[i++] = tmp;\par
+{\bkmkstart AAAAAAAAXY}{\bkmkend AAAAAAAAXY}
+00114         \}\par
+{\bkmkstart AAAAAAAAXZ}{\bkmkend AAAAAAAAXZ}
+00115         parms[i] = 0x0;\par
+{\bkmkstart AAAAAAAAYA}{\bkmkend AAAAAAAAYA}
+00116     \}\par
+{\bkmkstart AAAAAAAAYB}{\bkmkend AAAAAAAAYB}
+00117     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAYC}{\bkmkend AAAAAAAAYC}
+00118         errno = ECMDLINE_NOMEM;\par
+{\bkmkstart AAAAAAAAYD}{\bkmkend AAAAAAAAYD}
+00119         {\cf19 return} NULL;\par
+{\bkmkstart AAAAAAAAYE}{\bkmkend AAAAAAAAYE}
+00120     \}\par
+{\bkmkstart AAAAAAAAYF}{\bkmkend AAAAAAAAYF}
+00121     {\cf19 return} parms;\par
+{\bkmkstart AAAAAAAAYG}{\bkmkend AAAAAAAAYG}
+00122 \}\par
+{\bkmkstart AAAAAAAAYH}{\bkmkend AAAAAAAAYH}
+00123 {\cf17 const} {\cf18 char}* getValue({\cf18 bool} option, {\cf17 const} {\cf18 char}* name) \{\par
+{\bkmkstart AAAAAAAAYI}{\bkmkend AAAAAAAAYI}
+00124     {\cf17 const} {\cf18 char}* res;\par
+{\bkmkstart AAAAAAAAYJ}{\bkmkend AAAAAAAAYJ}
+00125     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAYK}{\bkmkend AAAAAAAAYK}
+00126         res = (option) ? _cmdLine->getOption(name)\par
+{\bkmkstart AAAAAAAAYL}{\bkmkend AAAAAAAAYL}
+00127                        : _cmdLine->getDefinition(name);\par
+{\bkmkstart AAAAAAAAYM}{\bkmkend AAAAAAAAYM}
+00128         {\cf19 return} res;\par
+{\bkmkstart AAAAAAAAYN}{\bkmkend AAAAAAAAYN}
+00129     \}\par
+{\bkmkstart AAAAAAAAYO}{\bkmkend AAAAAAAAYO}
+00130     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAYP}{\bkmkend AAAAAAAAYP}
+00131         {\cf19 return} ({\cf17 const} {\cf18 char} *) checkException(ex);\par
+{\bkmkstart AAAAAAAAYQ}{\bkmkend AAAAAAAAYQ}
+00132     \}\par
+{\bkmkstart AAAAAAAAYR}{\bkmkend AAAAAAAAYR}
+00133 \}\par
+{\bkmkstart AAAAAAAAYS}{\bkmkend AAAAAAAAYS}
+00134 {\cf18 int} getNumValues({\cf18 bool} option, {\cf17 const} {\cf18 char}* name) \{\par
+{\bkmkstart AAAAAAAAYT}{\bkmkend AAAAAAAAYT}
+00135     {\cf18 int} res;\par
+{\bkmkstart AAAAAAAAYU}{\bkmkend AAAAAAAAYU}
+00136     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAYV}{\bkmkend AAAAAAAAYV}
+00137         res = (option) ? _cmdLine->getOptionNumValues(name)\par
+{\bkmkstart AAAAAAAAYW}{\bkmkend AAAAAAAAYW}
+00138                        : _cmdLine->getDefinitionNumValues(name);\par
+{\bkmkstart AAAAAAAAYX}{\bkmkend AAAAAAAAYX}
+00139          {\cf19 return} res;\par
+{\bkmkstart AAAAAAAAYY}{\bkmkend AAAAAAAAYY}
+00140     \}\par
+{\bkmkstart AAAAAAAAYZ}{\bkmkend AAAAAAAAYZ}
+00141     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAZA}{\bkmkend AAAAAAAAZA}
+00142         checkException(ex);\par
+{\bkmkstart AAAAAAAAZB}{\bkmkend AAAAAAAAZB}
+00143         {\cf19 return} -1;\par
+{\bkmkstart AAAAAAAAZC}{\bkmkend AAAAAAAAZC}
+00144     \}\par
+{\bkmkstart AAAAAAAAZD}{\bkmkend AAAAAAAAZD}
+00145 \}\par
+{\bkmkstart AAAAAAAAZE}{\bkmkend AAAAAAAAZE}
+00146 \par
+{\bkmkstart AAAAAAAAZF}{\bkmkend AAAAAAAAZF}
+00147 {\cf17 const} {\cf18 char}** getAllValues({\cf18 bool} option, {\cf17 const} {\cf18 char}* name) \{\par
+{\bkmkstart AAAAAAAAZG}{\bkmkend AAAAAAAAZG}
+00148     vector<const char *> res;\par
+{\bkmkstart AAAAAAAAZH}{\bkmkend AAAAAAAAZH}
+00149     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAZI}{\bkmkend AAAAAAAAZI}
+00150         res = (option) ? _cmdLine->getOptionValues(name)\par
+{\bkmkstart AAAAAAAAZJ}{\bkmkend AAAAAAAAZJ}
+00151                        : _cmdLine->getDefinitionValues(name);\par
+{\bkmkstart AAAAAAAAZK}{\bkmkend AAAAAAAAZK}
+00152         {\cf19 return} _makeArray(res);\par
+{\bkmkstart AAAAAAAAZL}{\bkmkend AAAAAAAAZL}
+00153     \}\par
+{\bkmkstart AAAAAAAAZM}{\bkmkend AAAAAAAAZM}
+00154     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAAZN}{\bkmkend AAAAAAAAZN}
+00155         {\cf19 return} ({\cf17 const} {\cf18 char}**)checkException(ex);\par
+{\bkmkstart AAAAAAAAZO}{\bkmkend AAAAAAAAZO}
+00156     \}\par
+{\bkmkstart AAAAAAAAZP}{\bkmkend AAAAAAAAZP}
+00157 \}\par
+{\bkmkstart AAAAAAAAZQ}{\bkmkend AAAAAAAAZQ}
+00158 Parameter** _getOptions  ({\cf18 bool} def) \{\par
+{\bkmkstart AAAAAAAAZR}{\bkmkend AAAAAAAAZR}
+00159     Parameter **parms = NULL;\par
+{\bkmkstart AAAAAAAAZS}{\bkmkend AAAAAAAAZS}
+00160     cmdline::Options opts;\par
+{\bkmkstart AAAAAAAAZT}{\bkmkend AAAAAAAAZT}
+00161     \par
+{\bkmkstart AAAAAAAAZU}{\bkmkend AAAAAAAAZU}
+00162     {\cf19 try} \{\par
+{\bkmkstart AAAAAAAAZV}{\bkmkend AAAAAAAAZV}
+00163         {\cf19 if} (!def) \{\par
+{\bkmkstart AAAAAAAAZW}{\bkmkend AAAAAAAAZW}
+00164             opts = _cmdLine->getCurrentOptions();\par
+{\bkmkstart AAAAAAAAZX}{\bkmkend AAAAAAAAZX}
+00165         \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAAZY}{\bkmkend AAAAAAAAZY}
+00166             {\cf19 for} ({\cf17 auto} it: _cmdLine->getDefaultOptions()) \{\par
+{\bkmkstart AAAAAAAAZZ}{\bkmkend AAAAAAAAZZ}
+00167                 vector<string> v;\par
+{\bkmkstart AAAAAAABAA}{\bkmkend AAAAAAABAA}
+00168                 v.push_back(it.second);\par
+{\bkmkstart AAAAAAABAB}{\bkmkend AAAAAAABAB}
+00169                 opts.emplace(it.first, v);\par
+{\bkmkstart AAAAAAABAC}{\bkmkend AAAAAAABAC}
+00170             \}\par
+{\bkmkstart AAAAAAABAD}{\bkmkend AAAAAAABAD}
+00171         \}\par
+{\bkmkstart AAAAAAABAE}{\bkmkend AAAAAAABAE}
+00172         {\cf19 return} _makeArrayParameter(opts);\par
+{\bkmkstart AAAAAAABAF}{\bkmkend AAAAAAABAF}
+00173     \}\par
+{\bkmkstart AAAAAAABAG}{\bkmkend AAAAAAABAG}
+00174     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAABAH}{\bkmkend AAAAAAABAH}
+00175         {\cf19 return} (Parameter**) checkException(ex);\par
+{\bkmkstart AAAAAAABAI}{\bkmkend AAAAAAABAI}
+00176     \}\par
+{\bkmkstart AAAAAAABAJ}{\bkmkend AAAAAAABAJ}
+00177 \par
+{\bkmkstart AAAAAAABAK}{\bkmkend AAAAAAABAK}
+00178     {\cf19 try} \{\par
+{\bkmkstart AAAAAAABAL}{\bkmkend AAAAAAABAL}
+00179         parms = (Parameter **) malloc((opts.size() + 1) * {\cf17 sizeof}(Parameter *));\par
+{\bkmkstart AAAAAAABAM}{\bkmkend AAAAAAABAM}
+00180         {\cf18 int} i = 0;\par
+{\bkmkstart AAAAAAABAN}{\bkmkend AAAAAAABAN}
+00181         {\cf19 for} ({\cf17 auto} it : opts) \{\par
+{\bkmkstart AAAAAAABAO}{\bkmkend AAAAAAABAO}
+00182             i++;\par
+{\bkmkstart AAAAAAABAP}{\bkmkend AAAAAAABAP}
+00183         \}\par
+{\bkmkstart AAAAAAABAQ}{\bkmkend AAAAAAABAQ}
+00184         parms[i] = 0x0;\par
+{\bkmkstart AAAAAAABAR}{\bkmkend AAAAAAABAR}
+00185     \}\par
+{\bkmkstart AAAAAAABAS}{\bkmkend AAAAAAABAS}
+00186     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAABAT}{\bkmkend AAAAAAABAT}
+00187         errno = ECMDLINE_NOMEM;\par
+{\bkmkstart AAAAAAABAU}{\bkmkend AAAAAAABAU}
+00188         {\cf19 return} NULL;\par
+{\bkmkstart AAAAAAABAV}{\bkmkend AAAAAAABAV}
+00189     \}\par
+{\bkmkstart AAAAAAABAW}{\bkmkend AAAAAAABAW}
+00190 \par
+{\bkmkstart AAAAAAABAX}{\bkmkend AAAAAAABAX}
+00191 \}\par
+{\bkmkstart AAAAAAABAY}{\bkmkend AAAAAAABAY}
+00192 \par
+{\bkmkstart AAAAAAABAZ}{\bkmkend AAAAAAABAZ}
+00193 Flag** makeFlags(cmdline::Flags flags) \{\par
+{\bkmkstart AAAAAAABBA}{\bkmkend AAAAAAABBA}
+00194     {\cf18 int} i = 0;\par
+{\bkmkstart AAAAAAABBB}{\bkmkend AAAAAAABBB}
+00195     Flag* tmp;\par
+{\bkmkstart AAAAAAABBC}{\bkmkend AAAAAAABBC}
+00196     Flag** res = (Flag**)malloc((flags.size() + 1) * {\cf17 sizeof}(Flag*));\par
+{\bkmkstart AAAAAAABBD}{\bkmkend AAAAAAABBD}
+00197     {\cf19 for} ({\cf17 auto} it : flags) \{\par
+{\bkmkstart AAAAAAABBE}{\bkmkend AAAAAAABBE}
+00198         tmp = (Flag*)malloc({\cf17 sizeof}(Flag));\par
+{\bkmkstart AAAAAAABBF}{\bkmkend AAAAAAABBF}
+00199         {\cf19 if} (!tmp) \{\par
+{\bkmkstart AAAAAAABBG}{\bkmkend AAAAAAABBG}
+00200             errno = ECMDLINE_NOMEM;\par
+{\bkmkstart AAAAAAABBH}{\bkmkend AAAAAAABBH}
+00201             {\cf19 return} NULL;\par
+{\bkmkstart AAAAAAABBI}{\bkmkend AAAAAAABBI}
+00202         \}\par
+{\bkmkstart AAAAAAABBJ}{\bkmkend AAAAAAABBJ}
+00203         tmp->name = strdup(it.first.c_str());\par
+{\bkmkstart AAAAAAABBK}{\bkmkend AAAAAAABBK}
+00204         tmp->value = (it.second) ? TRUE : FALSE;\par
+{\bkmkstart AAAAAAABBL}{\bkmkend AAAAAAABBL}
+00205         res[i++] = tmp;\par
+{\bkmkstart AAAAAAABBM}{\bkmkend AAAAAAABBM}
+00206     \}\par
+{\bkmkstart AAAAAAABBN}{\bkmkend AAAAAAABBN}
+00207     res[i] = 0x0;\par
+{\bkmkstart AAAAAAABBO}{\bkmkend AAAAAAABBO}
+00208     {\cf19 return} res;\par
+{\bkmkstart AAAAAAABBP}{\bkmkend AAAAAAABBP}
+00209 \}\par
+{\bkmkstart AAAAAAABBQ}{\bkmkend AAAAAAABBQ}
+00210 \par
+{\bkmkstart AAAAAAABBR}{\bkmkend AAAAAAABBR}
+00211 logical      cHasFlag            ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} hasValue(1, name); \}\par
+{\bkmkstart AAAAAAABBS}{\bkmkend AAAAAAABBS}
+00212 logical      cHasOption          ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} hasValue(2, name); \}\par
+{\bkmkstart AAAAAAABBT}{\bkmkend AAAAAAABBT}
+00213 logical      cHasDefine          ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} hasValue(3, name); \}\par
+{\bkmkstart AAAAAAABBU}{\bkmkend AAAAAAABBU}
+00214 logical      cIsOptionMultiple   ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} isMultiple   ({\cf17 true}, name); \}\par
+{\bkmkstart AAAAAAABBV}{\bkmkend AAAAAAABBV}
+00215 logical      cIsDefineMultiple   ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} isMultiple   ({\cf17 false}, name); \}\par
+{\bkmkstart AAAAAAABBW}{\bkmkend AAAAAAABBW}
+00216 {\cf18 int}          cGetOptionNumValues ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} getNumValues({\cf17 true}, name); \}\par
+{\bkmkstart AAAAAAABBX}{\bkmkend AAAAAAABBX}
+00217 {\cf18 int}          cGetDefineNumValues ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} getNumValues({\cf17 false}, name); \}\par
+{\bkmkstart AAAAAAABBY}{\bkmkend AAAAAAABBY}
+00218 {\cf17 const} {\cf18 char}*  cGetOption          ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} getValue     ({\cf17 true}, name); \}\par
+{\bkmkstart AAAAAAABBZ}{\bkmkend AAAAAAABBZ}
+00219 {\cf17 const} {\cf18 char}*  cGetDefine          ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} getValue     ({\cf17 false}, name); \}\par
+{\bkmkstart AAAAAAABCA}{\bkmkend AAAAAAABCA}
+00220 {\cf17 const} {\cf18 char}** cGetOptionValues    ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} getAllValues ({\cf17 true}, name); \}\par
+{\bkmkstart AAAAAAABCB}{\bkmkend AAAAAAABCB}
+00221 {\cf17 const} {\cf18 char}** cGetDefineValues    ({\cf17 const} {\cf18 char}* name) \{ {\cf19 return} getAllValues ({\cf17 false}, name); \}\par
+{\bkmkstart AAAAAAABCC}{\bkmkend AAAAAAABCC}
+00222 \par
+{\bkmkstart AAAAAAABCD}{\bkmkend AAAAAAABCD}
+00223 Flag **cGetDefaultFlags  (logical active) \{\par
+{\bkmkstart AAAAAAABCE}{\bkmkend AAAAAAABCE}
+00224     {\cf19 try} \{\par
+{\bkmkstart AAAAAAABCF}{\bkmkend AAAAAAABCF}
+00225         {\cf18 bool} b = (active == TRUE) ? {\cf17 false} : {\cf17 true};\par
+{\bkmkstart AAAAAAABCG}{\bkmkend AAAAAAABCG}
+00226         cmdline::Flags flags = _cmdLine->getDefaultFlags(b);\par
+{\bkmkstart AAAAAAABCH}{\bkmkend AAAAAAABCH}
+00227         {\cf19 return} makeFlags(flags);\par
+{\bkmkstart AAAAAAABCI}{\bkmkend AAAAAAABCI}
+00228     \}\par
+{\bkmkstart AAAAAAABCJ}{\bkmkend AAAAAAABCJ}
+00229     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAABCK}{\bkmkend AAAAAAABCK}
+00230         {\cf19 return} (Flag **) checkException(ex);\par
+{\bkmkstart AAAAAAABCL}{\bkmkend AAAAAAABCL}
+00231     \}\par
+{\bkmkstart AAAAAAABCM}{\bkmkend AAAAAAABCM}
+00232 \}\par
+{\bkmkstart AAAAAAABCN}{\bkmkend AAAAAAABCN}
+00233 Flag **cGetCurrentFlags  (logical active) \{\par
+{\bkmkstart AAAAAAABCO}{\bkmkend AAAAAAABCO}
+00234     {\cf19 try} \{\par
+{\bkmkstart AAAAAAABCP}{\bkmkend AAAAAAABCP}
+00235         {\cf18 bool} b = (active == TRUE) ? {\cf17 false} : {\cf17 true};\par
+{\bkmkstart AAAAAAABCQ}{\bkmkend AAAAAAABCQ}
+00236         cmdline::Flags flags = _cmdLine->getCurrentFlags(b);\par
+{\bkmkstart AAAAAAABCR}{\bkmkend AAAAAAABCR}
+00237         {\cf19 return} makeFlags(flags);\par
+{\bkmkstart AAAAAAABCS}{\bkmkend AAAAAAABCS}
+00238     \}\par
+{\bkmkstart AAAAAAABCT}{\bkmkend AAAAAAABCT}
+00239     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAABCU}{\bkmkend AAAAAAABCU}
+00240         {\cf19 return} (Flag **) checkException(ex);\par
+{\bkmkstart AAAAAAABCV}{\bkmkend AAAAAAABCV}
+00241     \}\par
+{\bkmkstart AAAAAAABCW}{\bkmkend AAAAAAABCW}
+00242 \}\par
+{\bkmkstart AAAAAAABCX}{\bkmkend AAAAAAABCX}
+00243 Parameter** cGetDefaultOptions  () \{\par
+{\bkmkstart AAAAAAABCY}{\bkmkend AAAAAAABCY}
+00244     {\cf19 return} _getOptions({\cf17 true});\par
+{\bkmkstart AAAAAAABCZ}{\bkmkend AAAAAAABCZ}
+00245 \}\par
+{\bkmkstart AAAAAAABDA}{\bkmkend AAAAAAABDA}
+00246 Parameter** cGetCurrentOptions  () \{\par
+{\bkmkstart AAAAAAABDB}{\bkmkend AAAAAAABDB}
+00247     {\cf19 return} _getOptions({\cf17 false});\par
+{\bkmkstart AAAAAAABDC}{\bkmkend AAAAAAABDC}
+00248 \}\par
+{\bkmkstart AAAAAAABDD}{\bkmkend AAAAAAABDD}
+00249 Parameter** cGetDefinitions  () \{\par
+{\bkmkstart AAAAAAABDE}{\bkmkend AAAAAAABDE}
+00250     cmdline::Options defs = _cmdLine->getDefinitions();\par
+{\bkmkstart AAAAAAABDF}{\bkmkend AAAAAAABDF}
+00251     {\cf19 return} _makeArrayParameter(defs);\par
+{\bkmkstart AAAAAAABDG}{\bkmkend AAAAAAABDG}
+00252 \}\par
+{\bkmkstart AAAAAAABDH}{\bkmkend AAAAAAABDH}
+00253 \par
+{\bkmkstart AAAAAAABDI}{\bkmkend AAAAAAABDI}
+00254 {\cf17 extern} {\cf22 "C"} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+*  cmdline_create({\cf18 int} argc, {\cf17 const} {\cf18 char}** arg, ParmDef cparms[]) \{\par
+{\bkmkstart AAAAAAABDJ}{\bkmkend AAAAAAABDJ}
+00255     {\cf19 if} (_pCmdLine != {\cf17 nullptr}) {\cf19 return} _pCmdLine;\par
+{\bkmkstart AAAAAAABDK}{\bkmkend AAAAAAABDK}
+00256     cmdline::Parameters parms = makeParameters(cparms);\par
+{\bkmkstart AAAAAAABDL}{\bkmkend AAAAAAABDL}
+00257     {\cf19 try} \{\par
+{\bkmkstart AAAAAAABDM}{\bkmkend AAAAAAABDM}
+00258         _cmdLine = {\cf17 new} cmdline::CmdLine(argc, arg, parms);\par
+{\bkmkstart AAAAAAABDN}{\bkmkend AAAAAAABDN}
+00259 \par
+{\bkmkstart AAAAAAABDO}{\bkmkend AAAAAAABDO}
+00260         _pCmdLine = ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+*)malloc({\cf17 sizeof}({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+));\par
+{\bkmkstart AAAAAAABDP}{\bkmkend AAAAAAABDP}
+00261         _pCmdLine->hasFlag            = &cHasFlag;\par
+{\bkmkstart AAAAAAABDQ}{\bkmkend AAAAAAABDQ}
+00262         _pCmdLine->hasOption          = &cHasOption;\par
+{\bkmkstart AAAAAAABDR}{\bkmkend AAAAAAABDR}
+00263         _pCmdLine->hasDefine          = &cHasDefine;\par
+{\bkmkstart AAAAAAABDS}{\bkmkend AAAAAAABDS}
+00264         _pCmdLine->getOption          = &cGetOption;\par
+{\bkmkstart AAAAAAABDT}{\bkmkend AAAAAAABDT}
+00265         _pCmdLine->getDefine          = &cGetDefine;\par
+{\bkmkstart AAAAAAABDU}{\bkmkend AAAAAAABDU}
+00266         _pCmdLine->getOptionValues    = &cGetOptionValues;\par
+{\bkmkstart AAAAAAABDV}{\bkmkend AAAAAAABDV}
+00267         _pCmdLine->getDefineValues    = &cGetDefineValues;\par
+{\bkmkstart AAAAAAABDW}{\bkmkend AAAAAAABDW}
+00268         _pCmdLine->getOptionNumValues = &cGetOptionNumValues;\par
+{\bkmkstart AAAAAAABDX}{\bkmkend AAAAAAABDX}
+00269         _pCmdLine->getDefineNumValues = &cGetDefineNumValues;\par
+{\bkmkstart AAAAAAABDY}{\bkmkend AAAAAAABDY}
+00270 \par
+{\bkmkstart AAAAAAABDZ}{\bkmkend AAAAAAABDZ}
+00271         _pCmdLine->isOptionMultiple  = &cIsOptionMultiple;\par
+{\bkmkstart AAAAAAABEA}{\bkmkend AAAAAAABEA}
+00272         _pCmdLine->isDefineMultiple  = &cIsDefineMultiple;\par
+{\bkmkstart AAAAAAABEB}{\bkmkend AAAAAAABEB}
+00273         _pCmdLine->getDefaultFlags   = &cGetDefaultFlags; \par
+{\bkmkstart AAAAAAABEC}{\bkmkend AAAAAAABEC}
+00274         _pCmdLine->getDefaultOptions = &cGetDefaultOptions; \par
+{\bkmkstart AAAAAAABED}{\bkmkend AAAAAAABED}
+00275         _pCmdLine->getCurrentOptions = &cGetCurrentOptions; \par
+{\bkmkstart AAAAAAABEE}{\bkmkend AAAAAAABEE}
+00276         _pCmdLine->getDefinitions    = &cGetDefinitions; \par
+{\bkmkstart AAAAAAABEF}{\bkmkend AAAAAAABEF}
+00277 {\cf20 //        memcpy(&_ppCmdLine, _pCmdLine, sizeof(cCmdLine));}\par
+{\bkmkstart AAAAAAABEG}{\bkmkend AAAAAAABEG}
+00278         {\cf19 return} _pCmdLine;\par
+{\bkmkstart AAAAAAABEH}{\bkmkend AAAAAAABEH}
+00279     \}\par
+{\bkmkstart AAAAAAABEI}{\bkmkend AAAAAAABEI}
+00280     {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAABEJ}{\bkmkend AAAAAAABEJ}
+00281         {\cf19 return} ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ *) checkException(ex);\par
+{\bkmkstart AAAAAAABEK}{\bkmkend AAAAAAABEK}
+00282     \}\par
+{\bkmkstart AAAAAAABEL}{\bkmkend AAAAAAABEL}
+00283 \}\par
+{\bkmkstart AAAAAAABEM}{\bkmkend AAAAAAABEM}
+00284 {\cf17 extern} {\cf22 "C"} {\cf18 void} cmdline_delete({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAABZ" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ *{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAJ" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+) \{\par
+{\bkmkstart AAAAAAABEN}{\bkmkend AAAAAAABEN}
+00285     std::cout << {\cf22 "delete\\n"};\par
+{\bkmkstart AAAAAAABEO}{\bkmkend AAAAAAABEO}
+00286 \}\par
+}
+}

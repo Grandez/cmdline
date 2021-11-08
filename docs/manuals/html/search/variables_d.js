@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type_0',['type',['../d9/dff/classcmdline_1_1_parm.html#a5d33b5c097c8dc80998d7a33f022795a',1,'cmdline::Parm::type()'],['../d9/d97/struct___parm_def.html#af46134d54a0f5f3877a09f12206af24c',1,'_ParmDef::type()'],['../d8/de6/class__cmdline_1_1_argument.html#a9a4e30d637f497d942f3222ca06ee617',1,'_cmdline::Argument::type()']]]
+  ['option_5for_5fdefinition_0',['OPTION_OR_DEFINITION',['../d4/d6e/namespace__cmdline.html#a50c59785d8ba8f60227c17161e4df02a',1,'_cmdline']]],
+  ['options_1',['options',['../df/db7/classcmdline_1_1_help_requested.html#a69c7f0712ac6368c711c0a95762661f3',1,'cmdline::HelpRequested']]]
 ];

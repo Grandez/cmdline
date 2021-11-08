@@ -1,0 +1,11 @@
+/**
+ *  @namespace cmdline
+ *  @brief Public namespace to avoid naming mangling
+ *
+ */
+
+/** 
+  *  @namespace _cmdline
+  *  @brief Private namespace
+  *
+  */

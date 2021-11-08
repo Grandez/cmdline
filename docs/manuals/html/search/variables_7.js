@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['letter_0',['letter',['../d2/db9/class__cmdline_1_1_parameter_tree.html#a57b3b6041f2ee96b59ccdacef8506515',1,'_cmdline::ParameterTree']]]
+  ['hasdefine_0',['hasDefine',['../d1/dea/structstruct__cmdline.html#a33a88f14ea764697056a9a376b78a9c6',1,'struct_cmdline']]],
+  ['hasflag_1',['hasFlag',['../d1/dea/structstruct__cmdline.html#a9f15e6c122f3450dcc6446d5671180d9',1,'struct_cmdline']]],
+  ['hasoption_2',['hasOption',['../d1/dea/structstruct__cmdline.html#a5953c7b6b6db774a2e742d78a693c942',1,'struct_cmdline']]]
 ];

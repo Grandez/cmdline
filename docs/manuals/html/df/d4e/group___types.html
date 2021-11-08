@@ -24,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../prompt2.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Command Line Processor<span id="projectnumber">&#160;0.2.3</span>
    </div>
@@ -112,22 +113,27 @@ Enumeraciones</h2></td></tr>
 , <b>FLAG</b>
 <br />
  }</td></tr>
-<tr class="memdesc:ga1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define el tipo de dato esperado del parametro.  <a href="../../df/d4e/group___types.html#ga1d1cfd8ffb84e947f82999c682b666a7">Más...</a><br /></td></tr>
+<tr class="memdesc:ga1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the expected type of the string passed as parameter.  <a href="../../df/d4e/group___types.html#ga1d1cfd8ffb84e947f82999c682b666a7">Más...</a><br /></td></tr>
 <tr class="separator:ga1d1cfd8ffb84e947f82999c682b666a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga176e1eca2d1e3d1c6a064340bc6a351e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4e/group___types.html#ga176e1eca2d1e3d1c6a064340bc6a351e">Source</a> { <br />
 &#160;&#160;<a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>
 , <a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d">ENV</a>
-, <b>CMDLINE</b>
-, <a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9">CODE</a>
+, <a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430">CMDLINE</a>
+, <a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719">FILE</a>
 , <br />
-&#160;&#160;<a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9">AUTO</a>
+&#160;&#160;<a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9">CODE</a>
+, <a class="el" href="../../df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9">AUTO</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ga176e1eca2d1e3d1c6a064340bc6a351e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the origin of thelast value of parameter.  <a href="../../df/d4e/group___types.html#ga176e1eca2d1e3d1c6a064340bc6a351e">Más...</a><br /></td></tr>
 <tr class="separator:ga176e1eca2d1e3d1c6a064340bc6a351e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<p >Conjunto de tipos para simplificar la codificacion </p>
+<p >Conjunto de tipos para simplificar la codificacion</p>
+<p >Se usan en la declaracion de los parametros que soporta la aplicacion</p><ol type="1">
+<li><b>Type</b> Indica el tipo de dato que se espera</li>
+<li><b>Source</b> Indica la fuente del ultimo valor aplicado </li>
+</ol>
 <h2 class="groupheader">Documentación de las enumeraciones</h2>
 <a id="ga176e1eca2d1e3d1c6a064340bc6a351e" name="ga176e1eca2d1e3d1c6a064340bc6a351e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga176e1eca2d1e3d1c6a064340bc6a351e">&#9670;&nbsp;</a></span>Source</h2>
@@ -155,13 +161,15 @@ Enumeraciones</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d" name="gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d"></a>ENV&#160;</td><td class="fielddoc"><p >Value has been set in the environment </p>
 </td></tr>
+<tr><td class="fieldname"><a id="gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430" name="gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430"></a>CMDLINE&#160;</td><td class="fielddoc"><p >Value has been set thru command line </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719" name="gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719"></a>FILE&#160;</td><td class="fielddoc"><p >Value has been set thru a config file </p>
+</td></tr>
 <tr><td class="fieldname"><a id="gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9" name="gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9"></a>CODE&#160;</td><td class="fielddoc"><p >Value has been update programatically </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9" name="gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9"></a>AUTO&#160;</td><td class="fielddoc"><p ><b>Reserved</b> Hide parameter from queries </p>
 </td></tr>
 </table>
-
-<p class="definition">Definición en la línea <a class="el" href="../../dd/de3/types_8hpp_source.html#l00019">19</a> del archivo <a class="el" href="../../dd/de3/types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -185,8 +193,7 @@ Enumeraciones</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Define el tipo de dato esperado del parametro. </p>
-<p >Define the expected type of the string passed as parameter.</p>
+<p>Define the expected type of the string passed as parameter. </p>
 <p >It will be used to check the validity of the input </p>
 <table class="fieldtable">
 <tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="gga1d1cfd8ffb84e947f82999c682b666a7a63b588d5559f64f89a416e656880b949" name="gga1d1cfd8ffb84e947f82999c682b666a7a63b588d5559f64f89a416e656880b949"></a>STRING&#160;</td><td class="fielddoc"><p >string (valor por defecto) </p>
@@ -222,8 +229,6 @@ Enumeraciones</h2></td></tr>
 <tr><td class="fieldname"><a id="gga1d1cfd8ffb84e947f82999c682b666a7a8f20045e0839c2e258547ee09fc961a0" name="gga1d1cfd8ffb84e947f82999c682b666a7a8f20045e0839c2e258547ee09fc961a0"></a>FILE_EXISTS&#160;</td><td class="fielddoc"><p >An existing file before execution </p>
 </td></tr>
 </table>
-
-<p class="definition">Definición en la línea <a class="el" href="../../dd/de3/types_8hpp_source.html#l00013">13</a> del archivo <a class="el" href="../../dd/de3/types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

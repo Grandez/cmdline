@@ -19,15 +19,19 @@ var annotated_dup =
       [ "CmdLineS", "d0/d1b/classcmdline_1_1_cmd_line_s.html", null ],
       [ "CmdLineValueException", "d8/d74/classcmdline_1_1_cmd_line_value_exception.html", null ],
       [ "HelpDetailedRequested", "d7/db2/classcmdline_1_1_help_detailed_requested.html", null ],
-      [ "HelpException", "d5/d97/classcmdline_1_1_help_exception.html", null ],
       [ "HelpRequested", "df/db7/classcmdline_1_1_help_requested.html", null ],
+      [ "HelpSimpleRequested", "d4/ddb/classcmdline_1_1_help_simple_requested.html", null ],
       [ "Parm", "d9/dff/classcmdline_1_1_parm.html", null ],
       [ "ParmFlag", "d0/d79/classcmdline_1_1_parm_flag.html", null ],
       [ "ParmOption", "d3/d85/classcmdline_1_1_parm_option.html", null ]
     ] ],
     [ "CmdLine", "d8/d7f/struct_cmd_line.html", null ],
+    [ "CmdLineException", "db/d2d/class_cmd_line_exception.html", null ],
     [ "Flag", "d5/dbf/struct_flag.html", null ],
     [ "Garbage", "db/df8/class_garbage.html", null ],
     [ "Parameter", "d2/d3f/struct_parameter.html", null ],
-    [ "ParmDef", "db/d47/struct_parm_def.html", null ]
+    [ "Parm", "df/de1/class_parm.html", null ],
+    [ "ParmDef", "db/d47/struct_parm_def.html", null ],
+    [ "ParmFlag", "da/d2a/class_parm_flag.html", null ],
+    [ "unordered_map", "db/d70/classunordered__map.html", null ]
 ];

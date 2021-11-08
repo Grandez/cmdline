@@ -1,0 +1,13 @@
+/**  @class CmdLineException
+  *  @brief Clase  base para cualquier excepcion generada en el sistema
+  *  @detail Distinguimos tres tipos de excepciones
+  *  A) Las que "solo" se pueden producir durante el tiempo de desarrollo
+  *  B) Las que se producen en tiempo de ejecucion
+  *  C) El usuario ha solicitado la ayuda del programa
+  *
+  * Las primeras son derivadas de errores en el proceso de desarollo, por ejemplo, un error en el nombre del parametro. Estas excepciones derivan de runtime_error
+  * Las segundas son derivadas del proceso de analisis en tiempo de ejecución, dado que C++ ya define una invalid_argument excepcion `CmdLineException` deriva de esta clase
+  *
+  * A su vez, exisena clases especializadas en funcion del tipo de error que se haya producido
+  */
+  

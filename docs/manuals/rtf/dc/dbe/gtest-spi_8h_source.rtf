@@ -1,0 +1,605 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-spi.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-spi.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-spi.h}
+{\bkmkstart AAAAAAAKZU}
+{\bkmkend AAAAAAAKZU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKZV" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAKZW}{\bkmkend AAAAAAAKZW}
+00001 {\cf20 // Copyright 2007, Google Inc.}\par
+{\bkmkstart AAAAAAAKZX}{\bkmkend AAAAAAAKZX}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAKZY}{\bkmkend AAAAAAAKZY}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAKZZ}{\bkmkend AAAAAAAKZZ}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAALAA}{\bkmkend AAAAAAALAA}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAALAB}{\bkmkend AAAAAAALAB}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAALAC}{\bkmkend AAAAAAALAC}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAALAD}{\bkmkend AAAAAAALAD}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAALAE}{\bkmkend AAAAAAALAE}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAALAF}{\bkmkend AAAAAAALAF}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAALAG}{\bkmkend AAAAAAALAG}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAALAH}{\bkmkend AAAAAAALAH}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAALAI}{\bkmkend AAAAAAALAI}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAALAJ}{\bkmkend AAAAAAALAJ}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAALAK}{\bkmkend AAAAAAALAK}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAALAL}{\bkmkend AAAAAAALAL}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAALAM}{\bkmkend AAAAAAALAM}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAALAN}{\bkmkend AAAAAAALAN}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAALAO}{\bkmkend AAAAAAALAO}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAALAP}{\bkmkend AAAAAAALAP}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAALAQ}{\bkmkend AAAAAAALAQ}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAALAR}{\bkmkend AAAAAAALAR}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAALAS}{\bkmkend AAAAAAALAS}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAALAT}{\bkmkend AAAAAAALAT}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAALAU}{\bkmkend AAAAAAALAU}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAALAV}{\bkmkend AAAAAAALAV}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAALAW}{\bkmkend AAAAAAALAW}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAALAX}{\bkmkend AAAAAAALAX}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAALAY}{\bkmkend AAAAAAALAY}
+00029 \par
+{\bkmkstart AAAAAAALAZ}{\bkmkend AAAAAAALAZ}
+00030 {\cf20 //}\par
+{\bkmkstart AAAAAAALBA}{\bkmkend AAAAAAALBA}
+00031 {\cf20 // Utilities for testing Google Test itself and code that uses Google Test}\par
+{\bkmkstart AAAAAAALBB}{\bkmkend AAAAAAALBB}
+00032 {\cf20 // (e.g. frameworks built on top of Google Test).}\par
+{\bkmkstart AAAAAAALBC}{\bkmkend AAAAAAALBC}
+00033 \par
+{\bkmkstart AAAAAAALBD}{\bkmkend AAAAAAALBD}
+00034 {\cf20 // GOOGLETEST_CM0004 DO NOT DELETE}\par
+{\bkmkstart AAAAAAALBE}{\bkmkend AAAAAAALBE}
+00035 \par
+{\bkmkstart AAAAAAALBF}{\bkmkend AAAAAAALBF}
+00036 {\cf21 #ifndef GTEST_INCLUDE_GTEST_GTEST_SPI_H_}\par
+{\bkmkstart AAAAAAALBG}{\bkmkend AAAAAAALBG}
+00037 {\cf21 #define GTEST_INCLUDE_GTEST_GTEST_SPI_H_}\par
+{\bkmkstart AAAAAAALBH}{\bkmkend AAAAAAALBH}
+00038 \par
+{\bkmkstart AAAAAAALBI}{\bkmkend AAAAAAALBI}
+00039 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALBJ" }{}}{\fldrslt {\cs37\ul\cf2 gtest/gtest.h}}}
+"}\par
+{\bkmkstart AAAAAAALBK}{\bkmkend AAAAAAALBK}
+00040 \par
+{\bkmkstart AAAAAAALBL}{\bkmkend AAAAAAALBL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALBM" }{}}{\fldrslt {\cs37\ul\cf2 00041}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALBM" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_PUSH_}}}
+(4251 \\\par
+{\bkmkstart AAAAAAALBN}{\bkmkend AAAAAAALBN}
+00042 {\cf20 /* class A needs to have dll-interface to be used by clients of class B */})\par
+{\bkmkstart AAAAAAALBO}{\bkmkend AAAAAAALBO}
+00043 \par
+{\bkmkstart AAAAAAALBP}{\bkmkend AAAAAAALBP}
+00044 namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAALBQ}{\bkmkend AAAAAAALBQ}
+00045 \par
+{\bkmkstart AAAAAAALBR}{\bkmkend AAAAAAALBR}
+00046 {\cf20 // This helper class can be used to mock out Google Test failure reporting}\par
+{\bkmkstart AAAAAAALBS}{\bkmkend AAAAAAALBS}
+00047 {\cf20 // so that we can test Google Test or code that builds on Google Test.}\par
+{\bkmkstart AAAAAAALBT}{\bkmkend AAAAAAALBT}
+00048 {\cf20 //}\par
+{\bkmkstart AAAAAAALBU}{\bkmkend AAAAAAALBU}
+00049 {\cf20 // An object of this class appends a TestPartResult object to the}\par
+{\bkmkstart AAAAAAALBV}{\bkmkend AAAAAAALBV}
+00050 {\cf20 // TestPartResultArray object given in the constructor whenever a Google Test}\par
+{\bkmkstart AAAAAAALBW}{\bkmkend AAAAAAALBW}
+00051 {\cf20 // failure is reported. It can either intercept only failures that are}\par
+{\bkmkstart AAAAAAALBX}{\bkmkend AAAAAAALBX}
+00052 {\cf20 // generated in the same thread that created this object or it can intercept}\par
+{\bkmkstart AAAAAAALBY}{\bkmkend AAAAAAALBY}
+00053 {\cf20 // all generated failures. The scope of this mock object can be controlled with}\par
+{\bkmkstart AAAAAAALBZ}{\bkmkend AAAAAAALBZ}
+00054 {\cf20 // the second argument to the two arguments constructor.}\par
+{\bkmkstart AAAAAAALCA}{\bkmkend AAAAAAALCA}
+00055 {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ ScopedFakeTestPartResultReporter\par
+{\bkmkstart AAAAAAALCB}{\bkmkend AAAAAAALCB}
+00056     : {\cf17 public} TestPartResultReporterInterface \{\par
+{\bkmkstart AAAAAAALCC}{\bkmkend AAAAAAALCC}
+00057  {\cf17 public}:\par
+{\bkmkstart AAAAAAALCD}{\bkmkend AAAAAAALCD}
+00058   {\cf20 // The two possible mocking modes of this object.}\par
+{\bkmkstart AAAAAAALCE}{\bkmkend AAAAAAALCE}
+00059   {\cf17 enum} InterceptMode \{\par
+{\bkmkstart AAAAAAALCF}{\bkmkend AAAAAAALCF}
+00060     INTERCEPT_ONLY_CURRENT_THREAD,  {\cf20 // Intercepts only thread local failures.}\par
+{\bkmkstart AAAAAAALCG}{\bkmkend AAAAAAALCG}
+00061     INTERCEPT_ALL_THREADS           {\cf20 // Intercepts all failures.}\par
+{\bkmkstart AAAAAAALCH}{\bkmkend AAAAAAALCH}
+00062   \};\par
+{\bkmkstart AAAAAAALCI}{\bkmkend AAAAAAALCI}
+00063 \par
+{\bkmkstart AAAAAAALCJ}{\bkmkend AAAAAAALCJ}
+00064   {\cf20 // The c'tor sets this object as the test part result reporter used}\par
+{\bkmkstart AAAAAAALCK}{\bkmkend AAAAAAALCK}
+00065   {\cf20 // by Google Test.  The 'result' parameter specifies where to report the}\par
+{\bkmkstart AAAAAAALCL}{\bkmkend AAAAAAALCL}
+00066   {\cf20 // results. This reporter will only catch failures generated in the current}\par
+{\bkmkstart AAAAAAALCM}{\bkmkend AAAAAAALCM}
+00067   {\cf20 // thread. DEPRECATED}\par
+{\bkmkstart AAAAAAALCN}{\bkmkend AAAAAAALCN}
+00068   {\cf17 explicit} ScopedFakeTestPartResultReporter(TestPartResultArray* result);\par
+{\bkmkstart AAAAAAALCO}{\bkmkend AAAAAAALCO}
+00069 \par
+{\bkmkstart AAAAAAALCP}{\bkmkend AAAAAAALCP}
+00070   {\cf20 // Same as above, but you can choose the interception scope of this object.}\par
+{\bkmkstart AAAAAAALCQ}{\bkmkend AAAAAAALCQ}
+00071   ScopedFakeTestPartResultReporter(InterceptMode intercept_mode,\par
+{\bkmkstart AAAAAAALCR}{\bkmkend AAAAAAALCR}
+00072                                    TestPartResultArray* result);\par
+{\bkmkstart AAAAAAALCS}{\bkmkend AAAAAAALCS}
+00073 \par
+{\bkmkstart AAAAAAALCT}{\bkmkend AAAAAAALCT}
+00074   {\cf20 // The d'tor restores the previous test part result reporter.}\par
+{\bkmkstart AAAAAAALCU}{\bkmkend AAAAAAALCU}
+00075   {\cf17 virtual} ~ScopedFakeTestPartResultReporter();\par
+{\bkmkstart AAAAAAALCV}{\bkmkend AAAAAAALCV}
+00076 \par
+{\bkmkstart AAAAAAALCW}{\bkmkend AAAAAAALCW}
+00077   {\cf20 // Appends the TestPartResult object to the TestPartResultArray}\par
+{\bkmkstart AAAAAAALCX}{\bkmkend AAAAAAALCX}
+00078   {\cf20 // received in the constructor.}\par
+{\bkmkstart AAAAAAALCY}{\bkmkend AAAAAAALCY}
+00079   {\cf20 //}\par
+{\bkmkstart AAAAAAALCZ}{\bkmkend AAAAAAALCZ}
+00080   {\cf20 // This method is from the TestPartResultReporterInterface}\par
+{\bkmkstart AAAAAAALDA}{\bkmkend AAAAAAALDA}
+00081   {\cf20 // interface.}\par
+{\bkmkstart AAAAAAALDB}{\bkmkend AAAAAAALDB}
+00082   {\cf17 virtual} {\cf18 void} ReportTestPartResult({\cf17 const} TestPartResult& result);\par
+{\bkmkstart AAAAAAALDC}{\bkmkend AAAAAAALDC}
+00083  {\cf17 private}:\par
+{\bkmkstart AAAAAAALDD}{\bkmkend AAAAAAALDD}
+00084   {\cf18 void} Init();\par
+{\bkmkstart AAAAAAALDE}{\bkmkend AAAAAAALDE}
+00085 \par
+{\bkmkstart AAAAAAALDF}{\bkmkend AAAAAAALDF}
+00086   {\cf17 const} InterceptMode intercept_mode_;\par
+{\bkmkstart AAAAAAALDG}{\bkmkend AAAAAAALDG}
+00087   TestPartResultReporterInterface* old_reporter_;\par
+{\bkmkstart AAAAAAALDH}{\bkmkend AAAAAAALDH}
+00088   TestPartResultArray* {\cf17 const} result_;\par
+{\bkmkstart AAAAAAALDI}{\bkmkend AAAAAAALDI}
+00089 \par
+{\bkmkstart AAAAAAALDJ}{\bkmkend AAAAAAALDJ}
+00090   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALDK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISALLOW_COPY_AND_ASSIGN_}}}
+(ScopedFakeTestPartResultReporter);\par
+{\bkmkstart AAAAAAALDL}{\bkmkend AAAAAAALDL}
+00091 \};\par
+{\bkmkstart AAAAAAALDM}{\bkmkend AAAAAAALDM}
+00092 \par
+{\bkmkstart AAAAAAALDN}{\bkmkend AAAAAAALDN}
+00093 {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAAALDO}{\bkmkend AAAAAAALDO}
+00094 \par
+{\bkmkstart AAAAAAALDP}{\bkmkend AAAAAAALDP}
+00095 {\cf20 // A helper class for implementing EXPECT_FATAL_FAILURE() and}\par
+{\bkmkstart AAAAAAALDQ}{\bkmkend AAAAAAALDQ}
+00096 {\cf20 // EXPECT_NONFATAL_FAILURE().  Its destructor verifies that the given}\par
+{\bkmkstart AAAAAAALDR}{\bkmkend AAAAAAALDR}
+00097 {\cf20 // TestPartResultArray contains exactly one failure that has the given}\par
+{\bkmkstart AAAAAAALDS}{\bkmkend AAAAAAALDS}
+00098 {\cf20 // type and contains the given substring.  If that's not the case, a}\par
+{\bkmkstart AAAAAAALDT}{\bkmkend AAAAAAALDT}
+00099 {\cf20 // non-fatal failure will be generated.}\par
+{\bkmkstart AAAAAAALDU}{\bkmkend AAAAAAALDU}
+00100 {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ SingleFailureChecker \{\par
+{\bkmkstart AAAAAAALDV}{\bkmkend AAAAAAALDV}
+00101  {\cf17 public}:\par
+{\bkmkstart AAAAAAALDW}{\bkmkend AAAAAAALDW}
+00102   {\cf20 // The constructor remembers the arguments.}\par
+{\bkmkstart AAAAAAALDX}{\bkmkend AAAAAAALDX}
+00103   SingleFailureChecker({\cf17 const} TestPartResultArray* results,\par
+{\bkmkstart AAAAAAALDY}{\bkmkend AAAAAAALDY}
+00104                        {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIP" }{}}{\fldrslt {\cs37\ul\cf2 TestPartResult::Type}}}
+ type, {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& substr);\par
+{\bkmkstart AAAAAAALDZ}{\bkmkend AAAAAAALDZ}
+00105   ~SingleFailureChecker();\par
+{\bkmkstart AAAAAAALEA}{\bkmkend AAAAAAALEA}
+00106  {\cf17 private}:\par
+{\bkmkstart AAAAAAALEB}{\bkmkend AAAAAAALEB}
+00107   {\cf17 const} TestPartResultArray* {\cf17 const} results_;\par
+{\bkmkstart AAAAAAALEC}{\bkmkend AAAAAAALEC}
+00108   {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAIP" }{}}{\fldrslt {\cs37\ul\cf2 TestPartResult::Type}}}
+ type_;\par
+{\bkmkstart AAAAAAALED}{\bkmkend AAAAAAALED}
+00109   {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ substr_;\par
+{\bkmkstart AAAAAAALEE}{\bkmkend AAAAAAALEE}
+00110 \par
+{\bkmkstart AAAAAAALEF}{\bkmkend AAAAAAALEF}
+00111   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALDK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISALLOW_COPY_AND_ASSIGN_}}}
+(SingleFailureChecker);\par
+{\bkmkstart AAAAAAALEG}{\bkmkend AAAAAAALEG}
+00112 \};\par
+{\bkmkstart AAAAAAALEH}{\bkmkend AAAAAAALEH}
+00113 \par
+{\bkmkstart AAAAAAALEI}{\bkmkend AAAAAAALEI}
+00114 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAAALEJ}{\bkmkend AAAAAAALEJ}
+00115 \par
+{\bkmkstart AAAAAAALEK}{\bkmkend AAAAAAALEK}
+00116 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAALEL}{\bkmkend AAAAAAALEL}
+00117 \par
+{\bkmkstart AAAAAAALEM}{\bkmkend AAAAAAALEM}
+00118 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_POP_}}}
+()  {\cf20 //  4251}\par
+{\bkmkstart AAAAAAALEN}{\bkmkend AAAAAAALEN}
+00119 \par
+{\bkmkstart AAAAAAALEO}{\bkmkend AAAAAAALEO}
+00120 {\cf20 // A set of macros for testing Google Test assertions or code that's expected}\par
+{\bkmkstart AAAAAAALEP}{\bkmkend AAAAAAALEP}
+00121 {\cf20 // to generate Google Test fatal failures.  It verifies that the given}\par
+{\bkmkstart AAAAAAALEQ}{\bkmkend AAAAAAALEQ}
+00122 {\cf20 // statement will cause exactly one fatal Google Test failure with 'substr'}\par
+{\bkmkstart AAAAAAALER}{\bkmkend AAAAAAALER}
+00123 {\cf20 // being part of the failure message.}\par
+{\bkmkstart AAAAAAALES}{\bkmkend AAAAAAALES}
+00124 {\cf20 //}\par
+{\bkmkstart AAAAAAALET}{\bkmkend AAAAAAALET}
+00125 {\cf20 // There are two different versions of this macro. EXPECT_FATAL_FAILURE only}\par
+{\bkmkstart AAAAAAALEU}{\bkmkend AAAAAAALEU}
+00126 {\cf20 // affects and considers failures generated in the current thread and}\par
+{\bkmkstart AAAAAAALEV}{\bkmkend AAAAAAALEV}
+00127 {\cf20 // EXPECT_FATAL_FAILURE_ON_ALL_THREADS does the same but for all threads.}\par
+{\bkmkstart AAAAAAALEW}{\bkmkend AAAAAAALEW}
+00128 {\cf20 //}\par
+{\bkmkstart AAAAAAALEX}{\bkmkend AAAAAAALEX}
+00129 {\cf20 // The verification of the assertion is done correctly even when the statement}\par
+{\bkmkstart AAAAAAALEY}{\bkmkend AAAAAAALEY}
+00130 {\cf20 // throws an exception or aborts the current function.}\par
+{\bkmkstart AAAAAAALEZ}{\bkmkend AAAAAAALEZ}
+00131 {\cf20 //}\par
+{\bkmkstart AAAAAAALFA}{\bkmkend AAAAAAALFA}
+00132 {\cf20 // Known restrictions:}\par
+{\bkmkstart AAAAAAALFB}{\bkmkend AAAAAAALFB}
+00133 {\cf20 //   - 'statement' cannot reference local non-static variables or}\par
+{\bkmkstart AAAAAAALFC}{\bkmkend AAAAAAALFC}
+00134 {\cf20 //     non-static members of the current object.}\par
+{\bkmkstart AAAAAAALFD}{\bkmkend AAAAAAALFD}
+00135 {\cf20 //   - 'statement' cannot return a value.}\par
+{\bkmkstart AAAAAAALFE}{\bkmkend AAAAAAALFE}
+00136 {\cf20 //   - You cannot stream a failure message to this macro.}\par
+{\bkmkstart AAAAAAALFF}{\bkmkend AAAAAAALFF}
+00137 {\cf20 //}\par
+{\bkmkstart AAAAAAALFG}{\bkmkend AAAAAAALFG}
+00138 {\cf20 // Note that even though the implementations of the following two}\par
+{\bkmkstart AAAAAAALFH}{\bkmkend AAAAAAALFH}
+00139 {\cf20 // macros are much alike, we cannot refactor them to use a common}\par
+{\bkmkstart AAAAAAALFI}{\bkmkend AAAAAAALFI}
+00140 {\cf20 // helper macro, due to some peculiarity in how the preprocessor}\par
+{\bkmkstart AAAAAAALFJ}{\bkmkend AAAAAAALFJ}
+00141 {\cf20 // works.  The AcceptsMacroThatExpandsToUnprotectedComma test in}\par
+{\bkmkstart AAAAAAALFK}{\bkmkend AAAAAAALFK}
+00142 {\cf20 // gtest_unittest.cc will fail to compile if we do that.}\par
+{\bkmkstart AAAAAAALFL}{\bkmkend AAAAAAALFL}
+00143 {\cf21 #define EXPECT_FATAL_FAILURE(statement, substr) \\}\par
+{\bkmkstart AAAAAAALFM}{\bkmkend AAAAAAALFM}
+00144 {\cf21   do \{ \\}\par
+{\bkmkstart AAAAAAALFN}{\bkmkend AAAAAAALFN}
+00145 {\cf21     class GTestExpectFatalFailureHelper \{\\}\par
+{\bkmkstart AAAAAAALFO}{\bkmkend AAAAAAALFO}
+00146 {\cf21      public:\\}\par
+{\bkmkstart AAAAAAALFP}{\bkmkend AAAAAAALFP}
+00147 {\cf21       static void Execute() \{ statement; \}\\}\par
+{\bkmkstart AAAAAAALFQ}{\bkmkend AAAAAAALFQ}
+00148 {\cf21     \};\\}\par
+{\bkmkstart AAAAAAALFR}{\bkmkend AAAAAAALFR}
+00149 {\cf21     ::testing::TestPartResultArray gtest_failures;\\}\par
+{\bkmkstart AAAAAAALFS}{\bkmkend AAAAAAALFS}
+00150 {\cf21     ::testing::internal::SingleFailureChecker gtest_checker(\\}\par
+{\bkmkstart AAAAAAALFT}{\bkmkend AAAAAAALFT}
+00151 {\cf21         &gtest_failures, ::testing::TestPartResult::kFatalFailure, (substr));\\}\par
+{\bkmkstart AAAAAAALFU}{\bkmkend AAAAAAALFU}
+00152 {\cf21     \{\\}\par
+{\bkmkstart AAAAAAALFV}{\bkmkend AAAAAAALFV}
+00153 {\cf21       ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\\}\par
+{\bkmkstart AAAAAAALFW}{\bkmkend AAAAAAALFW}
+00154 {\cf21           ::testing::ScopedFakeTestPartResultReporter:: \\}\par
+{\bkmkstart AAAAAAALFX}{\bkmkend AAAAAAALFX}
+00155 {\cf21           INTERCEPT_ONLY_CURRENT_THREAD, &gtest_failures);\\}\par
+{\bkmkstart AAAAAAALFY}{\bkmkend AAAAAAALFY}
+00156 {\cf21       GTestExpectFatalFailureHelper::Execute();\\}\par
+{\bkmkstart AAAAAAALFZ}{\bkmkend AAAAAAALFZ}
+00157 {\cf21     \}\\}\par
+{\bkmkstart AAAAAAALGA}{\bkmkend AAAAAAALGA}
+00158 {\cf21   \} while (::testing::internal::AlwaysFalse())}\par
+{\bkmkstart AAAAAAALGB}{\bkmkend AAAAAAALGB}
+00159 \par
+{\bkmkstart AAAAAAALGC}{\bkmkend AAAAAAALGC}
+00160 {\cf21 #define EXPECT_FATAL_FAILURE_ON_ALL_THREADS(statement, substr) \\}\par
+{\bkmkstart AAAAAAALGD}{\bkmkend AAAAAAALGD}
+00161 {\cf21   do \{ \\}\par
+{\bkmkstart AAAAAAALGE}{\bkmkend AAAAAAALGE}
+00162 {\cf21     class GTestExpectFatalFailureHelper \{\\}\par
+{\bkmkstart AAAAAAALGF}{\bkmkend AAAAAAALGF}
+00163 {\cf21      public:\\}\par
+{\bkmkstart AAAAAAALGG}{\bkmkend AAAAAAALGG}
+00164 {\cf21       static void Execute() \{ statement; \}\\}\par
+{\bkmkstart AAAAAAALGH}{\bkmkend AAAAAAALGH}
+00165 {\cf21     \};\\}\par
+{\bkmkstart AAAAAAALGI}{\bkmkend AAAAAAALGI}
+00166 {\cf21     ::testing::TestPartResultArray gtest_failures;\\}\par
+{\bkmkstart AAAAAAALGJ}{\bkmkend AAAAAAALGJ}
+00167 {\cf21     ::testing::internal::SingleFailureChecker gtest_checker(\\}\par
+{\bkmkstart AAAAAAALGK}{\bkmkend AAAAAAALGK}
+00168 {\cf21         &gtest_failures, ::testing::TestPartResult::kFatalFailure, (substr));\\}\par
+{\bkmkstart AAAAAAALGL}{\bkmkend AAAAAAALGL}
+00169 {\cf21     \{\\}\par
+{\bkmkstart AAAAAAALGM}{\bkmkend AAAAAAALGM}
+00170 {\cf21       ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\\}\par
+{\bkmkstart AAAAAAALGN}{\bkmkend AAAAAAALGN}
+00171 {\cf21           ::testing::ScopedFakeTestPartResultReporter:: \\}\par
+{\bkmkstart AAAAAAALGO}{\bkmkend AAAAAAALGO}
+00172 {\cf21           INTERCEPT_ALL_THREADS, &gtest_failures);\\}\par
+{\bkmkstart AAAAAAALGP}{\bkmkend AAAAAAALGP}
+00173 {\cf21       GTestExpectFatalFailureHelper::Execute();\\}\par
+{\bkmkstart AAAAAAALGQ}{\bkmkend AAAAAAALGQ}
+00174 {\cf21     \}\\}\par
+{\bkmkstart AAAAAAALGR}{\bkmkend AAAAAAALGR}
+00175 {\cf21   \} while (::testing::internal::AlwaysFalse())}\par
+{\bkmkstart AAAAAAALGS}{\bkmkend AAAAAAALGS}
+00176 \par
+{\bkmkstart AAAAAAALGT}{\bkmkend AAAAAAALGT}
+00177 {\cf20 // A macro for testing Google Test assertions or code that's expected to}\par
+{\bkmkstart AAAAAAALGU}{\bkmkend AAAAAAALGU}
+00178 {\cf20 // generate Google Test non-fatal failures.  It asserts that the given}\par
+{\bkmkstart AAAAAAALGV}{\bkmkend AAAAAAALGV}
+00179 {\cf20 // statement will cause exactly one non-fatal Google Test failure with 'substr'}\par
+{\bkmkstart AAAAAAALGW}{\bkmkend AAAAAAALGW}
+00180 {\cf20 // being part of the failure message.}\par
+{\bkmkstart AAAAAAALGX}{\bkmkend AAAAAAALGX}
+00181 {\cf20 //}\par
+{\bkmkstart AAAAAAALGY}{\bkmkend AAAAAAALGY}
+00182 {\cf20 // There are two different versions of this macro. EXPECT_NONFATAL_FAILURE only}\par
+{\bkmkstart AAAAAAALGZ}{\bkmkend AAAAAAALGZ}
+00183 {\cf20 // affects and considers failures generated in the current thread and}\par
+{\bkmkstart AAAAAAALHA}{\bkmkend AAAAAAALHA}
+00184 {\cf20 // EXPECT_NONFATAL_FAILURE_ON_ALL_THREADS does the same but for all threads.}\par
+{\bkmkstart AAAAAAALHB}{\bkmkend AAAAAAALHB}
+00185 {\cf20 //}\par
+{\bkmkstart AAAAAAALHC}{\bkmkend AAAAAAALHC}
+00186 {\cf20 // 'statement' is allowed to reference local variables and members of}\par
+{\bkmkstart AAAAAAALHD}{\bkmkend AAAAAAALHD}
+00187 {\cf20 // the current object.}\par
+{\bkmkstart AAAAAAALHE}{\bkmkend AAAAAAALHE}
+00188 {\cf20 //}\par
+{\bkmkstart AAAAAAALHF}{\bkmkend AAAAAAALHF}
+00189 {\cf20 // The verification of the assertion is done correctly even when the statement}\par
+{\bkmkstart AAAAAAALHG}{\bkmkend AAAAAAALHG}
+00190 {\cf20 // throws an exception or aborts the current function.}\par
+{\bkmkstart AAAAAAALHH}{\bkmkend AAAAAAALHH}
+00191 {\cf20 //}\par
+{\bkmkstart AAAAAAALHI}{\bkmkend AAAAAAALHI}
+00192 {\cf20 // Known restrictions:}\par
+{\bkmkstart AAAAAAALHJ}{\bkmkend AAAAAAALHJ}
+00193 {\cf20 //   - You cannot stream a failure message to this macro.}\par
+{\bkmkstart AAAAAAALHK}{\bkmkend AAAAAAALHK}
+00194 {\cf20 //}\par
+{\bkmkstart AAAAAAALHL}{\bkmkend AAAAAAALHL}
+00195 {\cf20 // Note that even though the implementations of the following two}\par
+{\bkmkstart AAAAAAALHM}{\bkmkend AAAAAAALHM}
+00196 {\cf20 // macros are much alike, we cannot refactor them to use a common}\par
+{\bkmkstart AAAAAAALHN}{\bkmkend AAAAAAALHN}
+00197 {\cf20 // helper macro, due to some peculiarity in how the preprocessor}\par
+{\bkmkstart AAAAAAALHO}{\bkmkend AAAAAAALHO}
+00198 {\cf20 // works.  If we do that, the code won't compile when the user gives}\par
+{\bkmkstart AAAAAAALHP}{\bkmkend AAAAAAALHP}
+00199 {\cf20 // EXPECT_NONFATAL_FAILURE() a statement that contains a macro that}\par
+{\bkmkstart AAAAAAALHQ}{\bkmkend AAAAAAALHQ}
+00200 {\cf20 // expands to code containing an unprotected comma.  The}\par
+{\bkmkstart AAAAAAALHR}{\bkmkend AAAAAAALHR}
+00201 {\cf20 // AcceptsMacroThatExpandsToUnprotectedComma test in gtest_unittest.cc}\par
+{\bkmkstart AAAAAAALHS}{\bkmkend AAAAAAALHS}
+00202 {\cf20 // catches that.}\par
+{\bkmkstart AAAAAAALHT}{\bkmkend AAAAAAALHT}
+00203 {\cf20 //}\par
+{\bkmkstart AAAAAAALHU}{\bkmkend AAAAAAALHU}
+00204 {\cf20 // For the same reason, we have to write}\par
+{\bkmkstart AAAAAAALHV}{\bkmkend AAAAAAALHV}
+00205 {\cf20 //   if (::testing::internal::AlwaysTrue()) \{ statement; \}}\par
+{\bkmkstart AAAAAAALHW}{\bkmkend AAAAAAALHW}
+00206 {\cf20 // instead of}\par
+{\bkmkstart AAAAAAALHX}{\bkmkend AAAAAAALHX}
+00207 {\cf20 //   GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement)}\par
+{\bkmkstart AAAAAAALHY}{\bkmkend AAAAAAALHY}
+00208 {\cf20 // to avoid an MSVC warning on unreachable code.}\par
+{\bkmkstart AAAAAAALHZ}{\bkmkend AAAAAAALHZ}
+00209 {\cf21 #define EXPECT_NONFATAL_FAILURE(statement, substr) \\}\par
+{\bkmkstart AAAAAAALIA}{\bkmkend AAAAAAALIA}
+00210 {\cf21   do \{\\}\par
+{\bkmkstart AAAAAAALIB}{\bkmkend AAAAAAALIB}
+00211 {\cf21     ::testing::TestPartResultArray gtest_failures;\\}\par
+{\bkmkstart AAAAAAALIC}{\bkmkend AAAAAAALIC}
+00212 {\cf21     ::testing::internal::SingleFailureChecker gtest_checker(\\}\par
+{\bkmkstart AAAAAAALID}{\bkmkend AAAAAAALID}
+00213 {\cf21         &gtest_failures, ::testing::TestPartResult::kNonFatalFailure, \\}\par
+{\bkmkstart AAAAAAALIE}{\bkmkend AAAAAAALIE}
+00214 {\cf21         (substr));\\}\par
+{\bkmkstart AAAAAAALIF}{\bkmkend AAAAAAALIF}
+00215 {\cf21     \{\\}\par
+{\bkmkstart AAAAAAALIG}{\bkmkend AAAAAAALIG}
+00216 {\cf21       ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\\}\par
+{\bkmkstart AAAAAAALIH}{\bkmkend AAAAAAALIH}
+00217 {\cf21           ::testing::ScopedFakeTestPartResultReporter:: \\}\par
+{\bkmkstart AAAAAAALII}{\bkmkend AAAAAAALII}
+00218 {\cf21           INTERCEPT_ONLY_CURRENT_THREAD, &gtest_failures);\\}\par
+{\bkmkstart AAAAAAALIJ}{\bkmkend AAAAAAALIJ}
+00219 {\cf21       if (::testing::internal::AlwaysTrue()) \{ statement; \}\\}\par
+{\bkmkstart AAAAAAALIK}{\bkmkend AAAAAAALIK}
+00220 {\cf21     \}\\}\par
+{\bkmkstart AAAAAAALIL}{\bkmkend AAAAAAALIL}
+00221 {\cf21   \} while (::testing::internal::AlwaysFalse())}\par
+{\bkmkstart AAAAAAALIM}{\bkmkend AAAAAAALIM}
+00222 \par
+{\bkmkstart AAAAAAALIN}{\bkmkend AAAAAAALIN}
+00223 {\cf21 #define EXPECT_NONFATAL_FAILURE_ON_ALL_THREADS(statement, substr) \\}\par
+{\bkmkstart AAAAAAALIO}{\bkmkend AAAAAAALIO}
+00224 {\cf21   do \{\\}\par
+{\bkmkstart AAAAAAALIP}{\bkmkend AAAAAAALIP}
+00225 {\cf21     ::testing::TestPartResultArray gtest_failures;\\}\par
+{\bkmkstart AAAAAAALIQ}{\bkmkend AAAAAAALIQ}
+00226 {\cf21     ::testing::internal::SingleFailureChecker gtest_checker(\\}\par
+{\bkmkstart AAAAAAALIR}{\bkmkend AAAAAAALIR}
+00227 {\cf21         &gtest_failures, ::testing::TestPartResult::kNonFatalFailure, \\}\par
+{\bkmkstart AAAAAAALIS}{\bkmkend AAAAAAALIS}
+00228 {\cf21         (substr));\\}\par
+{\bkmkstart AAAAAAALIT}{\bkmkend AAAAAAALIT}
+00229 {\cf21     \{\\}\par
+{\bkmkstart AAAAAAALIU}{\bkmkend AAAAAAALIU}
+00230 {\cf21       ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\\}\par
+{\bkmkstart AAAAAAALIV}{\bkmkend AAAAAAALIV}
+00231 {\cf21           ::testing::ScopedFakeTestPartResultReporter::INTERCEPT_ALL_THREADS, \\}\par
+{\bkmkstart AAAAAAALIW}{\bkmkend AAAAAAALIW}
+00232 {\cf21           &gtest_failures);\\}\par
+{\bkmkstart AAAAAAALIX}{\bkmkend AAAAAAALIX}
+00233 {\cf21       if (::testing::internal::AlwaysTrue()) \{ statement; \}\\}\par
+{\bkmkstart AAAAAAALIY}{\bkmkend AAAAAAALIY}
+00234 {\cf21     \}\\}\par
+{\bkmkstart AAAAAAALIZ}{\bkmkend AAAAAAALIZ}
+00235 {\cf21   \} while (::testing::internal::AlwaysFalse())}\par
+{\bkmkstart AAAAAAALJA}{\bkmkend AAAAAAALJA}
+00236 \par
+{\bkmkstart AAAAAAALJB}{\bkmkend AAAAAAALJB}
+00237 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_GTEST_SPI_H_}\par
+}
+}

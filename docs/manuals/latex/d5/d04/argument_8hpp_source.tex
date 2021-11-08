@@ -12,7 +12,7 @@
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00008}00008 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00009}00009 }
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00011}\mbox{\hyperlink{class__cmdline_1_1_argument}{00011}}     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} \{}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00011}00011     \textcolor{keyword}{class }Argument \{}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00012}00012     \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00013}00013         \textcolor{keywordtype}{string} name;}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00014}00014         Source source   = Source::DEFAULT;}
@@ -20,25 +20,25 @@
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00016}00016         \textcolor{keywordtype}{bool}   multiple = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00017}00017         \textcolor{keywordtype}{string} defValue;}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00018}00018         set<string> values; \textcolor{comment}{// avoid duplicates}}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00019}00019         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}() = \textcolor{keyword}{delete};}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00020}00020         \mbox{\hyperlink{class__cmdline_1_1_argument}{\string~Argument}}();}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00021}00021         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}} *arg);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00022}00022         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\mbox{\hyperlink{classcmdline_1_1_parm}{Parm}} *parm);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00023}00023         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00024}00024         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, Source source);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00025}00025         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, Type type);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00026}00026         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& setFromEnv(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00027}00027         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& setValue  (\textcolor{keywordtype}{bool} value);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00028}00028         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& setValue  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00029}00029         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& setValue  (std::string value);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00030}00030         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& addValue  (std::string value);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00031}00031         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\& addValues (vector<string> values);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00019}00019         Argument() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00020}00020         \string~Argument();}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00021}00021         Argument(Argument *arg);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00022}00022         Argument(Parm *parm);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00023}00023         Argument(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00024}00024         Argument(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, Source source);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00025}00025         Argument(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, Type type);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00026}00026         Argument\& setFromEnv(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00027}00027         Argument\& setValue  (\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00028}00028         Argument\& setValue  (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00029}00029         Argument\& setValue  (std::string value);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00030}00030         Argument\& addValue  (std::string value);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00031}00031         Argument\& addValues (vector<string> values);}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00032}00032         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* getValue();}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00033}00033         vector<const char *>  getValues();}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00034}00034         vector<string>        getStringValues();}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00035}00035         \textcolor{keywordtype}{bool}            getBoolean();}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00036}00036         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\&       initValues(vector<string> values);}
-\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00037}00037         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\&       makeUpper();}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00036}00036         Argument\&       initValues(vector<string> values);}
+\DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00037}00037         Argument\&       makeUpper();}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00038}00038     \textcolor{keyword}{private}:}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00039}00039         \textcolor{keywordtype}{string} first;}
 \DoxyCodeLine{\Hypertarget{argument_8hpp_source_l00040}00040         \textcolor{keywordtype}{void}   validateDefault();}

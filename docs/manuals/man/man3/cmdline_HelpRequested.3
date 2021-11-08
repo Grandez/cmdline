@@ -1,4 +1,4 @@
-.TH "HelpRequested" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "HelpRequested" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,17 +7,34 @@ HelpRequested
 .br
 .PP
 .PP
-Herencias \fBHelpException\fP\&.
-.SS "Otros miembros heredados"
-.SH "Descripción detallada"
-.PP 
-Definición en la línea \fB59\fP del archivo \fBcmdline_exceptions\&.hpp\fP\&.
-.SH "Documentación del constructor y destructor"
-.PP 
-.SS "\fBHelpRequested\fP ()\fC [inline]\fP"
-
+Herencias \fBCmdLineException\fP\&.
 .PP
-Definición en la línea \fB61\fP del archivo \fBcmdline_exceptions\&.hpp\fP\&.
+Heredado por \fBHelpDetailedRequested\fP y \fBHelpSimpleRequested\fP\&.
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBname\fP"
+.br
+.ti -1c
+.RI "bool \fBdetailed\fP = false"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, bool > \fBflags\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, std::string > \fBoptions\fP"
+.br
+.in -1c
+.SS "Métodos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBHelpRequested\fP (const char *programName, const char *txt, bool detailed, std::unordered_map< std::string, bool > flags, std::unordered_map< std::string, string > options)"
+.br
+.in -1c
+.SS "Otros miembros heredados"
+
 
 .SH "Autor"
 .PP 

@@ -1,0 +1,983 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-tuple.h File Reference\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-tuple.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-tuple.h}
+{\bkmkstart AAAAAAARXH}
+{\bkmkend AAAAAAARXH}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <utility>}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for gtest-tuple.h:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "db/dcd/gtest-tuple_8h__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "d0/d6e/gtest-tuple_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQO" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::ByRef< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYG" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::ByRef< T & >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRC" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::AddRef< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYH" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::AddRef< T & >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRX" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 0, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISF" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 1, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISM" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 2, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIST" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 3, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITA" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 4, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITH" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 5, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITO" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 6, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITV" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 7, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUC" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 8, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUJ" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::TupleElement< true, 9, GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUS" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple<>}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple<>}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRD" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_0_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRK" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_1_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRR" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_2_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRY" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_3_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSF" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_4_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSM" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_5_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJST" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_6_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTA" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_7_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTH" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_8_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTO" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_9_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTV" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_size< GTEST_10_TUPLE_(T) >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKTC" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::tuple_element< k, Tuple >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUP" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 0 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVE" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 1 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVT" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 2 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWI" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 3 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWX" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 4 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXM" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 5 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYB" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 6 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYQ" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 7 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZF" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 8 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZU" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::Get< 9 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBM" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::SameSizeTuplePrefixComparator< 0, 0 >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBW" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::SameSizeTuplePrefixComparator< k, k >}}}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 std}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPW" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQI" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal}}}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINE" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_0_TUPLE_}}}
+(T)\~ tuple<>\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABING" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINM" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINV" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOB" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOE" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOM" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_0_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOO" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TYPENAMES_}}}
+(T)\~ typename T##0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TYPENAMES_}}}
+(T)\~ typename T##0, typename T##1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TYPENAMES_}}}
+(T)\~ typename T##0, typename T##1, typename T##2\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPA" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPD" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQV" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T)\~ typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQO" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::ByRef}}}
+<T>::type\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+(T)\~ typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRC" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::AddRef}}}
+<T>::type\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(k,  Tuple)\~ typename tuple_element<k, Tuple >::type\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOO" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_1_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_2_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_3_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_4_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_5_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPA" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_6_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPD" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_7_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_8_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TYPENAMES_}}}
+(T) > class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_9_TUPLE_}}}
+ (T)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+tuple {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::make_tuple}}}
+ ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOO" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJOL" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_1_TUPLE_}}}
+ (T) make_tuple(const T0 &f0)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYI" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_2_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYJ" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_3_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPB" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_4_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPI" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_5_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPA" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPP" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_6_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPD" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPW" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_7_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJQD" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_8_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJQK" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_9_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_10_TUPLE_}}}
+ (T) make_tuple(const T0 &f0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<int k, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKAL" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_ADD_REF_}}}
+ ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(k, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T))) get({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) &t)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<int k, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(T) > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::GTEST_BY_REF_}}}
+ ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(k, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T))) get(const {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) &t)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(T) , {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(U) > bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKCJ" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::operator==}}}
+ (const {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)&t, const {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)&u)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(T) , {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TYPENAMES_}}}
+(U) > bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKCS" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::operator!=}}}
+ (const {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)&t, const {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)&u)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f1}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f2}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f3}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 const T4 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f4}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 const T4 const T5 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f5}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 const T4 const T5 const T6 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f6}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 const T4 const T5 const T6 const T7 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f7}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 const T4 const T5 const T6 const T7 const T8 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f8}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const T1 const T2 const T3 const T4 const T5 const T6 const T7 const T8 const T9 & {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLR" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::f9}}}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GTEST_0_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_0_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_0_TUPLE_( T)\~ tuple<>}}
+\par
+{\bkmkstart AAAAAABINE}
+{\bkmkend AAAAAABINE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYK" }{}}{\fldrslt {\cs37\ul\cf2 66}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_0_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_0_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_0_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIOM}
+{\bkmkend AAAAAABIOM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYL" }{}}{\fldrslt {\cs37\ul\cf2 89}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_10_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_10_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_10_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABIOH}
+{\bkmkend AAAAAABIOH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\\par
+    T##7, T##8, T##9>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYM" }{}}{\fldrslt {\cs37\ul\cf2 85}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_10_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_10_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_10_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIPN}
+{\bkmkend AAAAAABIPN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3, {\cf17 typename} T##4, {\cf17 typename} T##5, {\cf17 typename} T##6, \\\par
+    typename T##7, {\cf17 typename} T##8, {\cf17 typename} T##9\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYN" }{}}{\fldrslt {\cs37\ul\cf2 106}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_1_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_1_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_1_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABING}
+{\bkmkend AAAAAABING}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, void, void, void, void, void, void, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYO" }{}}{\fldrslt {\cs37\ul\cf2 67}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_1_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_1_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_1_TYPENAMES_( T)\~ typename T##0}}
+\par
+{\bkmkstart AAAAAABIOO}
+{\bkmkend AAAAAABIOO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYP" }{}}{\fldrslt {\cs37\ul\cf2 90}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_2_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_2_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_2_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABINJ}
+{\bkmkend AAAAAABINJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, void, void, void, void, void, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYQ" }{}}{\fldrslt {\cs37\ul\cf2 69}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_2_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_2_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_2_TYPENAMES_( T)\~ typename T##0, typename T##1}}
+\par
+{\bkmkstart AAAAAABIOQ}
+{\bkmkend AAAAAABIOQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYR" }{}}{\fldrslt {\cs37\ul\cf2 91}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_3_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_3_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_3_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABINM}
+{\bkmkend AAAAAABINM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, void, void, void, void, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYS" }{}}{\fldrslt {\cs37\ul\cf2 71}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_3_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_3_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_3_TYPENAMES_( T)\~ typename T##0, typename T##1, typename T##2}}
+\par
+{\bkmkstart AAAAAABIOS}
+{\bkmkend AAAAAABIOS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYT" }{}}{\fldrslt {\cs37\ul\cf2 92}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_4_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_4_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_4_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABINP}
+{\bkmkend AAAAAABINP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, void, void, void, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYU" }{}}{\fldrslt {\cs37\ul\cf2 73}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_4_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_4_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_4_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIOU}
+{\bkmkend AAAAAABIOU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYV" }{}}{\fldrslt {\cs37\ul\cf2 93}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_5_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_5_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_5_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABINS}
+{\bkmkend AAAAAABINS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, T##4, void, void, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYW" }{}}{\fldrslt {\cs37\ul\cf2 75}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_5_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_5_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_5_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIOX}
+{\bkmkend AAAAAABIOX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3, {\cf17 typename} T##4\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYX" }{}}{\fldrslt {\cs37\ul\cf2 95}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_6_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_6_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_6_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABINV}
+{\bkmkend AAAAAABINV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, T##4, T##5, void, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYY" }{}}{\fldrslt {\cs37\ul\cf2 77}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_6_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_6_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_6_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIPA}
+{\bkmkend AAAAAABIPA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3, {\cf17 typename} T##4, {\cf17 typename} T##5\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYZ" }{}}{\fldrslt {\cs37\ul\cf2 97}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_7_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_7_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_7_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABINY}
+{\bkmkend AAAAAABINY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\\par
+    void, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZA" }{}}{\fldrslt {\cs37\ul\cf2 79}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_7_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_7_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_7_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIPD}
+{\bkmkend AAAAAABIPD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3, {\cf17 typename} T##4, {\cf17 typename} T##5, {\cf17 typename} T##6\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZB" }{}}{\fldrslt {\cs37\ul\cf2 99}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_8_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_8_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_8_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABIOB}
+{\bkmkend AAAAAABIOB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\\par
+    T##7, void, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZC" }{}}{\fldrslt {\cs37\ul\cf2 81}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_8_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_8_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_8_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIPG}
+{\bkmkend AAAAAABIPG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3, {\cf17 typename} T##4, {\cf17 typename} T##5, {\cf17 typename} T##6, {\cf17 typename} T##7\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZD" }{}}{\fldrslt {\cs37\ul\cf2 101}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_9_TUPLE_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_9_TUPLE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_9_TUPLE_( T)}}
+\par
+{\bkmkstart AAAAAABIOE}
+{\bkmkend AAAAAABIOE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\\par
+    T##7, T##8, {\cf18 void}>\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZE" }{}}{\fldrslt {\cs37\ul\cf2 83}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_9_TYPENAMES_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_9_TYPENAMES_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_9_TYPENAMES_( T)}}
+\par
+{\bkmkstart AAAAAABIPJ}
+{\bkmkend AAAAAABIPJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 typename} T##0, {\cf17 typename} T##1, {\cf17 typename} T##2, \\\par
+    typename T##3, {\cf17 typename} T##4, {\cf17 typename} T##5, {\cf17 typename} T##6, \\\par
+    typename T##7, {\cf17 typename} T##8\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZF" }{}}{\fldrslt {\cs37\ul\cf2 103}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_ADD_REF_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_ADD_REF_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_ADD_REF_( T)\~ typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRC" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::AddRef}}}
+<T>::type}}
+\par
+{\bkmkstart AAAAAABIRJ}
+{\bkmkend AAAAAABIRJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZG" }{}}{\fldrslt {\cs37\ul\cf2 143}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_BY_REF_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_BY_REF_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_BY_REF_( T)\~ typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQO" }{}}{\fldrslt {\cs37\ul\cf2 std::tr1::gtest_internal::ByRef}}}
+<T>::type}}
+\par
+{\bkmkstart AAAAAABIQV}
+{\bkmkend AAAAAABIQV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZH" }{}}{\fldrslt {\cs37\ul\cf2 133}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_DECLARE_TUPLE_AS_FRIEND_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_DECLARE_TUPLE_AS_FRIEND_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_DECLARE_TUPLE_AS_FRIEND_}}
+\par
+{\bkmkstart AAAAAABIMP}
+{\bkmkend AAAAAABIMP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     {\cf17 template} <GTEST_10_TYPENAMES_(U)> {\cf17 friend} {\cf17 class }tuple; \\\par
+   private:\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZI" }{}}{\fldrslt {\cs37\ul\cf2 52}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+{\xe \v GTEST_TUPLE_ELEMENT_\:gtest-tuple.h}
+{\xe \v gtest-tuple.h\:GTEST_TUPLE_ELEMENT_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TUPLE_ELEMENT_( k,  Tuple)\~ typename tuple_element<k, Tuple >::type}}
+\par
+{\bkmkstart AAAAAABJUH}
+{\bkmkend AAAAAABJUH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRZJ" }{}}{\fldrslt {\cs37\ul\cf2 802}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKN" }{}}{\fldrslt {\cs37\ul\cf2 gtest-tuple.h}}}
+.}\par
+}
+}

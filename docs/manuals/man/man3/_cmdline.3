@@ -1,4 +1,4 @@
-.TH "_cmdline" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "_cmdline" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -117,6 +117,9 @@ _cmdline \- Private namespace\&.
 .RI "bool \fBvalMakeBoolean\fP (std::string value)"
 .br
 .ti -1c
+.RI "void \fBlaunchHelpIfActive\fP (\fBCommandLine\fP *ptr)"
+.br
+.ti -1c
 .RI "\fBParameterTree\fP * \fBcreateTree\fP (const char *word)"
 .br
 .ti -1c
@@ -157,10 +160,22 @@ _cmdline \- Private namespace\&.
 
 .in +1c
 .ti -1c
+.RI "constexpr auto \fBOPTION_OR_DEFINITION\fP = '/'"
+.br
+.ti -1c
+.RI "constexpr auto \fBFLAG_ACTIVE\fP = '+'"
+.br
+.ti -1c
+.RI "constexpr auto \fBFLAG_INACTIVE\fP = '\-'"
+.br
+.ti -1c
 .RI "\fBParameterTree\fP * \fBrootOptions\fP [128]"
 .br
 .ti -1c
 .RI "\fBParameterTree\fP * \fBrootFlags\fP [128]"
+.br
+.ti -1c
+.RI "char * \fBprogramName\fP = nullptr"
 .br
 .ti -1c
 .RI "char \fB_upper\fP [64] = ''"
@@ -169,174 +184,6 @@ _cmdline \- Private namespace\&.
 .SH "Descripción detallada"
 .PP 
 Private namespace\&. 
-.SH "Documentación de las funciones"
-.PP 
-.SS "void add2tree (\fBParameterTree\fP * root[], const char * word)"
-
-.PP
-Definición en la línea \fB54\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "void _cmdline::checkValue (auto value)"
-
-.PP
-Definición en la línea \fB356\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "\fBParameterTree\fP * _cmdline::createTree (const char * word)"
-
-.PP
-Definición en la línea \fB17\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "void defaultDate (char * aux)"
-
-.PP
-Definición en la línea \fB172\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "T _cmdline::getValue (const char * value, Type type)"
-
-.PP
-Definición en la línea \fB339\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "int _cmdline::isLeap (int year)"
-
-.PP
-Definición en la línea \fB65\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "\fBParameterTree\fP * _cmdline::joinTree (\fBParameterTree\fP * root, const char * word)"
-
-.PP
-Definición en la línea \fB28\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "bool makeBoolean (const char * value)"
-
-.PP
-Definición en la línea \fB76\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "bool _cmdline::makeBoolean (string value)"
-
-.PP
-Definición en la línea \fB83\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "char * _cmdline::makeChar (string str)"
-
-.PP
-Definición en la línea \fB70\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "struct tm * _cmdline::makeDateTime (char * sdate, char * stime)"
-
-.PP
-Definición en la línea \fB35\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "float makeFloat (const char * value)"
-
-.PP
-Definición en la línea \fB366\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "int makeInteger (const char * value)"
-
-.PP
-Definición en la línea \fB361\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "struct tm makeTm (const char * value)"
-
-.PP
-Definición en la línea \fB371\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "char * makeUpper (const char * str)"
-
-.PP
-Definición en la línea \fB86\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "vector< string > splitArgument (const char * parm)"
-
-.PP
-Definición en la línea \fB94\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "char * strUpper (const char * str)"
-
-.PP
-Definición en la línea \fB152\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "vector< string > tokenize (const char * src, const char * pat)"
-
-.PP
-Definición en la línea \fB136\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "vector< int > tokenizeNumber (const char * src, const char * pat)"
-
-.PP
-Definición en la línea \fB145\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "struct tm * validateDate (const char * value, int fmt = \fC\-1\fP)"
-
-.PP
-Definición en la línea \fB198\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "struct tm * validateDateTime (const char * value)"
-
-.PP
-Definición en la línea \fB228\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "void _cmdline::validateDateValue (const char * value, vector< int > dt)"
-
-.PP
-Definición en la línea \fB189\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "double validateDecimal (const char * value)"
-
-.PP
-Definición en la línea \fB126\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "double _cmdline::validateDecimal2 (const char * value)"
-
-.PP
-Definición en la línea \fB71\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "filesystem::path validateDir (const char * value)"
-
-.PP
-Definición en la línea \fB273\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "filesystem::path validateDirExist (const char * value)"
-
-.PP
-Definición en la línea \fB295\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "void validateEntry (const char * parm, const char * prev)"
-
-.PP
-Definición en la línea \fB98\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "filesystem::path validateFile (const char * value)"
-
-.PP
-Definición en la línea \fB306\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "filesystem::path validateFileExist (const char * value)"
-
-.PP
-Definición en la línea \fB314\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "long double validateLongDecimal (const char * value)"
-
-.PP
-Definición en la línea \fB151\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "long double _cmdline::validateLongDecimal2 (const char * value)"
-
-.PP
-Definición en la línea \fB84\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "long long validateLongNumber (const char * value)"
-
-.PP
-Definición en la línea \fB114\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "long validateNumber (const char * value)"
-
-.PP
-Definición en la línea \fB102\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "struct tm * validateTime (const char * value)"
-
-.PP
-Definición en la línea \fB177\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "char * validateTimestamp (const char * value)"
-
-.PP
-Definición en la línea \fB248\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "void _cmdline::validateValue (const char * value, Type type)"
-
-.PP
-Definición en la línea \fB321\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "bool valMakeBoolean (const char * value)"
-
-.PP
-Definición en la línea \fB400\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SS "bool valMakeBoolean (std::string value)"
-
-.PP
-Definición en la línea \fB403\fP del archivo \fBvalidations\&.cpp\fP\&.
-.SH "Documentación de las variables"
-.PP 
-.SS "char _upper[64] = ''"
-
-.PP
-Definición en la línea \fB16\fP del archivo \fBtools\&.cpp\fP\&.
-.SS "\fBParameterTree\fP* rootFlags[128]"
-
-.PP
-Definición en la línea \fB16\fP del archivo \fBcommandline\&.cpp\fP\&.
-.SS "\fBParameterTree\fP* rootOptions[128]"
-
-.PP
-Definición en la línea \fB15\fP del archivo \fBcommandline\&.cpp\fP\&.
 .SH "Autor"
 .PP 
 Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

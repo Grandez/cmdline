@@ -1,0 +1,879 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest_pred_impl.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest_pred_impl.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest_pred_impl.h}
+{\bkmkstart AAAAAAAQAX}
+{\bkmkend AAAAAAAQAX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAMRC" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAQAY}{\bkmkend AAAAAAAQAY}
+00001 {\cf20 // Copyright 2006, Google Inc.}\par
+{\bkmkstart AAAAAAAQAZ}{\bkmkend AAAAAAAQAZ}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAQBA}{\bkmkend AAAAAAAQBA}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAQBB}{\bkmkend AAAAAAAQBB}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAAQBC}{\bkmkend AAAAAAAQBC}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAAQBD}{\bkmkend AAAAAAAQBD}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAAQBE}{\bkmkend AAAAAAAQBE}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAAQBF}{\bkmkend AAAAAAAQBF}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAAQBG}{\bkmkend AAAAAAAQBG}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAAQBH}{\bkmkend AAAAAAAQBH}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAAQBI}{\bkmkend AAAAAAAQBI}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAAQBJ}{\bkmkend AAAAAAAQBJ}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAAQBK}{\bkmkend AAAAAAAQBK}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAAQBL}{\bkmkend AAAAAAAQBL}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAAQBM}{\bkmkend AAAAAAAQBM}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAAQBN}{\bkmkend AAAAAAAQBN}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAAQBO}{\bkmkend AAAAAAAQBO}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAAQBP}{\bkmkend AAAAAAAQBP}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAAQBQ}{\bkmkend AAAAAAAQBQ}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAQBR}{\bkmkend AAAAAAAQBR}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAAQBS}{\bkmkend AAAAAAAQBS}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAAQBT}{\bkmkend AAAAAAAQBT}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAAQBU}{\bkmkend AAAAAAAQBU}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAQBV}{\bkmkend AAAAAAAQBV}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAAQBW}{\bkmkend AAAAAAAQBW}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAAQBX}{\bkmkend AAAAAAAQBX}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAAQBY}{\bkmkend AAAAAAAQBY}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAAQBZ}{\bkmkend AAAAAAAQBZ}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAAQCA}{\bkmkend AAAAAAAQCA}
+00029 \par
+{\bkmkstart AAAAAAAQCB}{\bkmkend AAAAAAAQCB}
+00030 {\cf20 // This file is AUTOMATICALLY GENERATED on 01/02/2018 by command}\par
+{\bkmkstart AAAAAAAQCC}{\bkmkend AAAAAAAQCC}
+00031 {\cf20 // 'gen_gtest_pred_impl.py 5'.  DO NOT EDIT BY HAND!}\par
+{\bkmkstart AAAAAAAQCD}{\bkmkend AAAAAAAQCD}
+00032 {\cf20 //}\par
+{\bkmkstart AAAAAAAQCE}{\bkmkend AAAAAAAQCE}
+00033 {\cf20 // Implements a family of generic predicate assertion macros.}\par
+{\bkmkstart AAAAAAAQCF}{\bkmkend AAAAAAAQCF}
+00034 \par
+{\bkmkstart AAAAAAAQCG}{\bkmkend AAAAAAAQCG}
+00035 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAQCH}{\bkmkend AAAAAAAQCH}
+00036 \par
+{\bkmkstart AAAAAAAQCI}{\bkmkend AAAAAAAQCI}
+00037 {\cf21 #ifndef GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_}\par
+{\bkmkstart AAAAAAAQCJ}{\bkmkend AAAAAAAQCJ}
+00038 {\cf21 #define GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_}\par
+{\bkmkstart AAAAAAAQCK}{\bkmkend AAAAAAAQCK}
+00039 \par
+{\bkmkstart AAAAAAAQCL}{\bkmkend AAAAAAAQCL}
+00040 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALBJ" }{}}{\fldrslt {\cs37\ul\cf2 gtest/gtest.h}}}
+"}\par
+{\bkmkstart AAAAAAAQCM}{\bkmkend AAAAAAAQCM}
+00041 \par
+{\bkmkstart AAAAAAAQCN}{\bkmkend AAAAAAAQCN}
+00042 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAQCO}{\bkmkend AAAAAAAQCO}
+00043 \par
+{\bkmkstart AAAAAAAQCP}{\bkmkend AAAAAAAQCP}
+00044 {\cf20 // This header implements a family of generic predicate assertion}\par
+{\bkmkstart AAAAAAAQCQ}{\bkmkend AAAAAAAQCQ}
+00045 {\cf20 // macros:}\par
+{\bkmkstart AAAAAAAQCR}{\bkmkend AAAAAAAQCR}
+00046 {\cf20 //}\par
+{\bkmkstart AAAAAAAQCS}{\bkmkend AAAAAAAQCS}
+00047 {\cf20 //   ASSERT_PRED_FORMAT1(pred_format, v1)}\par
+{\bkmkstart AAAAAAAQCT}{\bkmkend AAAAAAAQCT}
+00048 {\cf20 //   ASSERT_PRED_FORMAT2(pred_format, v1, v2)}\par
+{\bkmkstart AAAAAAAQCU}{\bkmkend AAAAAAAQCU}
+00049 {\cf20 //   ...}\par
+{\bkmkstart AAAAAAAQCV}{\bkmkend AAAAAAAQCV}
+00050 {\cf20 //}\par
+{\bkmkstart AAAAAAAQCW}{\bkmkend AAAAAAAQCW}
+00051 {\cf20 // where pred_format is a function or functor that takes n (in the}\par
+{\bkmkstart AAAAAAAQCX}{\bkmkend AAAAAAAQCX}
+00052 {\cf20 // case of ASSERT_PRED_FORMATn) values and their source expression}\par
+{\bkmkstart AAAAAAAQCY}{\bkmkend AAAAAAAQCY}
+00053 {\cf20 // text, and returns a testing::AssertionResult.  See the definition}\par
+{\bkmkstart AAAAAAAQCZ}{\bkmkend AAAAAAAQCZ}
+00054 {\cf20 // of ASSERT_EQ in gtest.h for an example.}\par
+{\bkmkstart AAAAAAAQDA}{\bkmkend AAAAAAAQDA}
+00055 {\cf20 //}\par
+{\bkmkstart AAAAAAAQDB}{\bkmkend AAAAAAAQDB}
+00056 {\cf20 // If you don't care about formatting, you can use the more}\par
+{\bkmkstart AAAAAAAQDC}{\bkmkend AAAAAAAQDC}
+00057 {\cf20 // restrictive version:}\par
+{\bkmkstart AAAAAAAQDD}{\bkmkend AAAAAAAQDD}
+00058 {\cf20 //}\par
+{\bkmkstart AAAAAAAQDE}{\bkmkend AAAAAAAQDE}
+00059 {\cf20 //   ASSERT_PRED1(pred, v1)}\par
+{\bkmkstart AAAAAAAQDF}{\bkmkend AAAAAAAQDF}
+00060 {\cf20 //   ASSERT_PRED2(pred, v1, v2)}\par
+{\bkmkstart AAAAAAAQDG}{\bkmkend AAAAAAAQDG}
+00061 {\cf20 //   ...}\par
+{\bkmkstart AAAAAAAQDH}{\bkmkend AAAAAAAQDH}
+00062 {\cf20 //}\par
+{\bkmkstart AAAAAAAQDI}{\bkmkend AAAAAAAQDI}
+00063 {\cf20 // where pred is an n-ary function or functor that returns bool,}\par
+{\bkmkstart AAAAAAAQDJ}{\bkmkend AAAAAAAQDJ}
+00064 {\cf20 // and the values v1, v2, ..., must support the << operator for}\par
+{\bkmkstart AAAAAAAQDK}{\bkmkend AAAAAAAQDK}
+00065 {\cf20 // streaming to std::ostream.}\par
+{\bkmkstart AAAAAAAQDL}{\bkmkend AAAAAAAQDL}
+00066 {\cf20 //}\par
+{\bkmkstart AAAAAAAQDM}{\bkmkend AAAAAAAQDM}
+00067 {\cf20 // We also define the EXPECT_* variations.}\par
+{\bkmkstart AAAAAAAQDN}{\bkmkend AAAAAAAQDN}
+00068 {\cf20 //}\par
+{\bkmkstart AAAAAAAQDO}{\bkmkend AAAAAAAQDO}
+00069 {\cf20 // For now we only support predicates whose arity is at most 5.}\par
+{\bkmkstart AAAAAAAQDP}{\bkmkend AAAAAAAQDP}
+00070 \par
+{\bkmkstart AAAAAAAQDQ}{\bkmkend AAAAAAAQDQ}
+00071 {\cf20 // GTEST_ASSERT_ is the basic statement to which all of the assertions}\par
+{\bkmkstart AAAAAAAQDR}{\bkmkend AAAAAAAQDR}
+00072 {\cf20 // in this file reduce.  Don't use this in your code.}\par
+{\bkmkstart AAAAAAAQDS}{\bkmkend AAAAAAAQDS}
+00073 \par
+{\bkmkstart AAAAAAAQDT}{\bkmkend AAAAAAAQDT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQDU" }{}}{\fldrslt {\cs37\ul\cf2 00074}}}
+ {\cf21 #define GTEST_ASSERT_(expression, on_failure) \\}\par
+{\bkmkstart AAAAAAAQDV}{\bkmkend AAAAAAAQDV}
+00075 {\cf21   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\}\par
+{\bkmkstart AAAAAAAQDW}{\bkmkend AAAAAAAQDW}
+00076 {\cf21   if (const ::testing::AssertionResult gtest_ar = (expression)) \\}\par
+{\bkmkstart AAAAAAAQDX}{\bkmkend AAAAAAAQDX}
+00077 {\cf21     ; \\}\par
+{\bkmkstart AAAAAAAQDY}{\bkmkend AAAAAAAQDY}
+00078 {\cf21   else \\}\par
+{\bkmkstart AAAAAAAQDZ}{\bkmkend AAAAAAAQDZ}
+00079 {\cf21     on_failure(gtest_ar.failure_message())}\par
+{\bkmkstart AAAAAAAQEA}{\bkmkend AAAAAAAQEA}
+00080 \par
+{\bkmkstart AAAAAAAQEB}{\bkmkend AAAAAAAQEB}
+00081 \par
+{\bkmkstart AAAAAAAQEC}{\bkmkend AAAAAAAQEC}
+00082 {\cf20 // Helper function for implementing \{EXPECT|ASSERT\}_PRED1.  Don't use}\par
+{\bkmkstart AAAAAAAQED}{\bkmkend AAAAAAAQED}
+00083 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQEE}{\bkmkend AAAAAAAQEE}
+00084 {\cf17 template} <{\cf17 typename} Pred,\par
+{\bkmkstart AAAAAAAQEF}{\bkmkend AAAAAAAQEF}
+00085           {\cf17 typename} T1>\par
+{\bkmkstart AAAAAAAQEG}{\bkmkend AAAAAAAQEG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQEH" }{}}{\fldrslt {\cs37\ul\cf2 00086}}}
+ AssertionResult {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQEH" }{}}{\fldrslt {\cs37\ul\cf2 AssertPred1Helper}}}
+({\cf17 const} {\cf18 char}* pred_text,\par
+{\bkmkstart AAAAAAAQEI}{\bkmkend AAAAAAAQEI}
+00087                                   {\cf17 const} {\cf18 char}* e1,\par
+{\bkmkstart AAAAAAAQEJ}{\bkmkend AAAAAAAQEJ}
+00088                                   Pred pred,\par
+{\bkmkstart AAAAAAAQEK}{\bkmkend AAAAAAAQEK}
+00089                                   {\cf17 const} T1& v1) \{\par
+{\bkmkstart AAAAAAAQEL}{\bkmkend AAAAAAAQEL}
+00090   {\cf19 if} (pred(v1)) {\cf19 return} AssertionSuccess();\par
+{\bkmkstart AAAAAAAQEM}{\bkmkend AAAAAAAQEM}
+00091 \par
+{\bkmkstart AAAAAAAQEN}{\bkmkend AAAAAAAQEN}
+00092   {\cf19 return} AssertionFailure() << pred_text << {\cf22 "("}\par
+{\bkmkstart AAAAAAAQEO}{\bkmkend AAAAAAAQEO}
+00093                             << e1 << {\cf22 ") evaluates to false, where"}\par
+{\bkmkstart AAAAAAAQEP}{\bkmkend AAAAAAAQEP}
+00094                             << {\cf22 "\\n"} << e1 << {\cf22 " evaluates to "} << v1;\par
+{\bkmkstart AAAAAAAQEQ}{\bkmkend AAAAAAAQEQ}
+00095 \}\par
+{\bkmkstart AAAAAAAQER}{\bkmkend AAAAAAAQER}
+00096 \par
+{\bkmkstart AAAAAAAQES}{\bkmkend AAAAAAAQES}
+00097 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED_FORMAT1.}\par
+{\bkmkstart AAAAAAAQET}{\bkmkend AAAAAAAQET}
+00098 {\cf20 // Don't use this in your code.}\par
+{\bkmkstart AAAAAAAQEU}{\bkmkend AAAAAAAQEU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQEV" }{}}{\fldrslt {\cs37\ul\cf2 00099}}}
+ {\cf21 #define GTEST_PRED_FORMAT1_(pred_format, v1, on_failure)\\}\par
+{\bkmkstart AAAAAAAQEW}{\bkmkend AAAAAAAQEW}
+00100 {\cf21   GTEST_ASSERT_(pred_format(#v1, v1), \\}\par
+{\bkmkstart AAAAAAAQEX}{\bkmkend AAAAAAAQEX}
+00101 {\cf21                 on_failure)}\par
+{\bkmkstart AAAAAAAQEY}{\bkmkend AAAAAAAQEY}
+00102 \par
+{\bkmkstart AAAAAAAQEZ}{\bkmkend AAAAAAAQEZ}
+00103 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED1.  Don't use}\par
+{\bkmkstart AAAAAAAQFA}{\bkmkend AAAAAAAQFA}
+00104 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQFB}{\bkmkend AAAAAAAQFB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQFC" }{}}{\fldrslt {\cs37\ul\cf2 00105}}}
+ {\cf21 #define GTEST_PRED1_(pred, v1, on_failure)\\}\par
+{\bkmkstart AAAAAAAQFD}{\bkmkend AAAAAAAQFD}
+00106 {\cf21   GTEST_ASSERT_(::testing::AssertPred1Helper(#pred, \\}\par
+{\bkmkstart AAAAAAAQFE}{\bkmkend AAAAAAAQFE}
+00107 {\cf21                                              #v1, \\}\par
+{\bkmkstart AAAAAAAQFF}{\bkmkend AAAAAAAQFF}
+00108 {\cf21                                              pred, \\}\par
+{\bkmkstart AAAAAAAQFG}{\bkmkend AAAAAAAQFG}
+00109 {\cf21                                              v1), on_failure)}\par
+{\bkmkstart AAAAAAAQFH}{\bkmkend AAAAAAAQFH}
+00110 \par
+{\bkmkstart AAAAAAAQFI}{\bkmkend AAAAAAAQFI}
+00111 {\cf20 // Unary predicate assertion macros.}\par
+{\bkmkstart AAAAAAAQFJ}{\bkmkend AAAAAAAQFJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQFK" }{}}{\fldrslt {\cs37\ul\cf2 00112}}}
+ {\cf21 #define EXPECT_PRED_FORMAT1(pred_format, v1) \\}\par
+{\bkmkstart AAAAAAAQFL}{\bkmkend AAAAAAAQFL}
+00113 {\cf21   GTEST_PRED_FORMAT1_(pred_format, v1, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQFM}{\bkmkend AAAAAAAQFM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQFN" }{}}{\fldrslt {\cs37\ul\cf2 00114}}}
+ {\cf21 #define EXPECT_PRED1(pred, v1) \\}\par
+{\bkmkstart AAAAAAAQFO}{\bkmkend AAAAAAAQFO}
+00115 {\cf21   GTEST_PRED1_(pred, v1, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQFP}{\bkmkend AAAAAAAQFP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQFQ" }{}}{\fldrslt {\cs37\ul\cf2 00116}}}
+ {\cf21 #define ASSERT_PRED_FORMAT1(pred_format, v1) \\}\par
+{\bkmkstart AAAAAAAQFR}{\bkmkend AAAAAAAQFR}
+00117 {\cf21   GTEST_PRED_FORMAT1_(pred_format, v1, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQFS}{\bkmkend AAAAAAAQFS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQFT" }{}}{\fldrslt {\cs37\ul\cf2 00118}}}
+ {\cf21 #define ASSERT_PRED1(pred, v1) \\}\par
+{\bkmkstart AAAAAAAQFU}{\bkmkend AAAAAAAQFU}
+00119 {\cf21   GTEST_PRED1_(pred, v1, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQFV}{\bkmkend AAAAAAAQFV}
+00120 \par
+{\bkmkstart AAAAAAAQFW}{\bkmkend AAAAAAAQFW}
+00121 \par
+{\bkmkstart AAAAAAAQFX}{\bkmkend AAAAAAAQFX}
+00122 \par
+{\bkmkstart AAAAAAAQFY}{\bkmkend AAAAAAAQFY}
+00123 {\cf20 // Helper function for implementing \{EXPECT|ASSERT\}_PRED2.  Don't use}\par
+{\bkmkstart AAAAAAAQFZ}{\bkmkend AAAAAAAQFZ}
+00124 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQGA}{\bkmkend AAAAAAAQGA}
+00125 {\cf17 template} <{\cf17 typename} Pred,\par
+{\bkmkstart AAAAAAAQGB}{\bkmkend AAAAAAAQGB}
+00126           {\cf17 typename} T1,\par
+{\bkmkstart AAAAAAAQGC}{\bkmkend AAAAAAAQGC}
+00127           {\cf17 typename} T2>\par
+{\bkmkstart AAAAAAAQGD}{\bkmkend AAAAAAAQGD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQGE" }{}}{\fldrslt {\cs37\ul\cf2 00128}}}
+ AssertionResult {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQGE" }{}}{\fldrslt {\cs37\ul\cf2 AssertPred2Helper}}}
+({\cf17 const} {\cf18 char}* pred_text,\par
+{\bkmkstart AAAAAAAQGF}{\bkmkend AAAAAAAQGF}
+00129                                   {\cf17 const} {\cf18 char}* e1,\par
+{\bkmkstart AAAAAAAQGG}{\bkmkend AAAAAAAQGG}
+00130                                   {\cf17 const} {\cf18 char}* e2,\par
+{\bkmkstart AAAAAAAQGH}{\bkmkend AAAAAAAQGH}
+00131                                   Pred pred,\par
+{\bkmkstart AAAAAAAQGI}{\bkmkend AAAAAAAQGI}
+00132                                   {\cf17 const} T1& v1,\par
+{\bkmkstart AAAAAAAQGJ}{\bkmkend AAAAAAAQGJ}
+00133                                   {\cf17 const} T2& v2) \{\par
+{\bkmkstart AAAAAAAQGK}{\bkmkend AAAAAAAQGK}
+00134   {\cf19 if} (pred(v1, v2)) {\cf19 return} AssertionSuccess();\par
+{\bkmkstart AAAAAAAQGL}{\bkmkend AAAAAAAQGL}
+00135 \par
+{\bkmkstart AAAAAAAQGM}{\bkmkend AAAAAAAQGM}
+00136   {\cf19 return} AssertionFailure() << pred_text << {\cf22 "("}\par
+{\bkmkstart AAAAAAAQGN}{\bkmkend AAAAAAAQGN}
+00137                             << e1 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQGO}{\bkmkend AAAAAAAQGO}
+00138                             << e2 << {\cf22 ") evaluates to false, where"}\par
+{\bkmkstart AAAAAAAQGP}{\bkmkend AAAAAAAQGP}
+00139                             << {\cf22 "\\n"} << e1 << {\cf22 " evaluates to "} << v1\par
+{\bkmkstart AAAAAAAQGQ}{\bkmkend AAAAAAAQGQ}
+00140                             << {\cf22 "\\n"} << e2 << {\cf22 " evaluates to "} << v2;\par
+{\bkmkstart AAAAAAAQGR}{\bkmkend AAAAAAAQGR}
+00141 \}\par
+{\bkmkstart AAAAAAAQGS}{\bkmkend AAAAAAAQGS}
+00142 \par
+{\bkmkstart AAAAAAAQGT}{\bkmkend AAAAAAAQGT}
+00143 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED_FORMAT2.}\par
+{\bkmkstart AAAAAAAQGU}{\bkmkend AAAAAAAQGU}
+00144 {\cf20 // Don't use this in your code.}\par
+{\bkmkstart AAAAAAAQGV}{\bkmkend AAAAAAAQGV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQGW" }{}}{\fldrslt {\cs37\ul\cf2 00145}}}
+ {\cf21 #define GTEST_PRED_FORMAT2_(pred_format, v1, v2, on_failure)\\}\par
+{\bkmkstart AAAAAAAQGX}{\bkmkend AAAAAAAQGX}
+00146 {\cf21   GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2), \\}\par
+{\bkmkstart AAAAAAAQGY}{\bkmkend AAAAAAAQGY}
+00147 {\cf21                 on_failure)}\par
+{\bkmkstart AAAAAAAQGZ}{\bkmkend AAAAAAAQGZ}
+00148 \par
+{\bkmkstart AAAAAAAQHA}{\bkmkend AAAAAAAQHA}
+00149 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED2.  Don't use}\par
+{\bkmkstart AAAAAAAQHB}{\bkmkend AAAAAAAQHB}
+00150 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQHC}{\bkmkend AAAAAAAQHC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQHD" }{}}{\fldrslt {\cs37\ul\cf2 00151}}}
+ {\cf21 #define GTEST_PRED2_(pred, v1, v2, on_failure)\\}\par
+{\bkmkstart AAAAAAAQHE}{\bkmkend AAAAAAAQHE}
+00152 {\cf21   GTEST_ASSERT_(::testing::AssertPred2Helper(#pred, \\}\par
+{\bkmkstart AAAAAAAQHF}{\bkmkend AAAAAAAQHF}
+00153 {\cf21                                              #v1, \\}\par
+{\bkmkstart AAAAAAAQHG}{\bkmkend AAAAAAAQHG}
+00154 {\cf21                                              #v2, \\}\par
+{\bkmkstart AAAAAAAQHH}{\bkmkend AAAAAAAQHH}
+00155 {\cf21                                              pred, \\}\par
+{\bkmkstart AAAAAAAQHI}{\bkmkend AAAAAAAQHI}
+00156 {\cf21                                              v1, \\}\par
+{\bkmkstart AAAAAAAQHJ}{\bkmkend AAAAAAAQHJ}
+00157 {\cf21                                              v2), on_failure)}\par
+{\bkmkstart AAAAAAAQHK}{\bkmkend AAAAAAAQHK}
+00158 \par
+{\bkmkstart AAAAAAAQHL}{\bkmkend AAAAAAAQHL}
+00159 {\cf20 // Binary predicate assertion macros.}\par
+{\bkmkstart AAAAAAAQHM}{\bkmkend AAAAAAAQHM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQHN" }{}}{\fldrslt {\cs37\ul\cf2 00160}}}
+ {\cf21 #define EXPECT_PRED_FORMAT2(pred_format, v1, v2) \\}\par
+{\bkmkstart AAAAAAAQHO}{\bkmkend AAAAAAAQHO}
+00161 {\cf21   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQHP}{\bkmkend AAAAAAAQHP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQHQ" }{}}{\fldrslt {\cs37\ul\cf2 00162}}}
+ {\cf21 #define EXPECT_PRED2(pred, v1, v2) \\}\par
+{\bkmkstart AAAAAAAQHR}{\bkmkend AAAAAAAQHR}
+00163 {\cf21   GTEST_PRED2_(pred, v1, v2, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQHS}{\bkmkend AAAAAAAQHS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQHT" }{}}{\fldrslt {\cs37\ul\cf2 00164}}}
+ {\cf21 #define ASSERT_PRED_FORMAT2(pred_format, v1, v2) \\}\par
+{\bkmkstart AAAAAAAQHU}{\bkmkend AAAAAAAQHU}
+00165 {\cf21   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQHV}{\bkmkend AAAAAAAQHV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQHW" }{}}{\fldrslt {\cs37\ul\cf2 00166}}}
+ {\cf21 #define ASSERT_PRED2(pred, v1, v2) \\}\par
+{\bkmkstart AAAAAAAQHX}{\bkmkend AAAAAAAQHX}
+00167 {\cf21   GTEST_PRED2_(pred, v1, v2, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQHY}{\bkmkend AAAAAAAQHY}
+00168 \par
+{\bkmkstart AAAAAAAQHZ}{\bkmkend AAAAAAAQHZ}
+00169 \par
+{\bkmkstart AAAAAAAQIA}{\bkmkend AAAAAAAQIA}
+00170 \par
+{\bkmkstart AAAAAAAQIB}{\bkmkend AAAAAAAQIB}
+00171 {\cf20 // Helper function for implementing \{EXPECT|ASSERT\}_PRED3.  Don't use}\par
+{\bkmkstart AAAAAAAQIC}{\bkmkend AAAAAAAQIC}
+00172 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQID}{\bkmkend AAAAAAAQID}
+00173 {\cf17 template} <{\cf17 typename} Pred,\par
+{\bkmkstart AAAAAAAQIE}{\bkmkend AAAAAAAQIE}
+00174           {\cf17 typename} T1,\par
+{\bkmkstart AAAAAAAQIF}{\bkmkend AAAAAAAQIF}
+00175           {\cf17 typename} T2,\par
+{\bkmkstart AAAAAAAQIG}{\bkmkend AAAAAAAQIG}
+00176           {\cf17 typename} T3>\par
+{\bkmkstart AAAAAAAQIH}{\bkmkend AAAAAAAQIH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQII" }{}}{\fldrslt {\cs37\ul\cf2 00177}}}
+ AssertionResult {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQII" }{}}{\fldrslt {\cs37\ul\cf2 AssertPred3Helper}}}
+({\cf17 const} {\cf18 char}* pred_text,\par
+{\bkmkstart AAAAAAAQIJ}{\bkmkend AAAAAAAQIJ}
+00178                                   {\cf17 const} {\cf18 char}* e1,\par
+{\bkmkstart AAAAAAAQIK}{\bkmkend AAAAAAAQIK}
+00179                                   {\cf17 const} {\cf18 char}* e2,\par
+{\bkmkstart AAAAAAAQIL}{\bkmkend AAAAAAAQIL}
+00180                                   {\cf17 const} {\cf18 char}* e3,\par
+{\bkmkstart AAAAAAAQIM}{\bkmkend AAAAAAAQIM}
+00181                                   Pred pred,\par
+{\bkmkstart AAAAAAAQIN}{\bkmkend AAAAAAAQIN}
+00182                                   {\cf17 const} T1& v1,\par
+{\bkmkstart AAAAAAAQIO}{\bkmkend AAAAAAAQIO}
+00183                                   {\cf17 const} T2& v2,\par
+{\bkmkstart AAAAAAAQIP}{\bkmkend AAAAAAAQIP}
+00184                                   {\cf17 const} T3& v3) \{\par
+{\bkmkstart AAAAAAAQIQ}{\bkmkend AAAAAAAQIQ}
+00185   {\cf19 if} (pred(v1, v2, v3)) {\cf19 return} AssertionSuccess();\par
+{\bkmkstart AAAAAAAQIR}{\bkmkend AAAAAAAQIR}
+00186 \par
+{\bkmkstart AAAAAAAQIS}{\bkmkend AAAAAAAQIS}
+00187   {\cf19 return} AssertionFailure() << pred_text << {\cf22 "("}\par
+{\bkmkstart AAAAAAAQIT}{\bkmkend AAAAAAAQIT}
+00188                             << e1 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQIU}{\bkmkend AAAAAAAQIU}
+00189                             << e2 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQIV}{\bkmkend AAAAAAAQIV}
+00190                             << e3 << {\cf22 ") evaluates to false, where"}\par
+{\bkmkstart AAAAAAAQIW}{\bkmkend AAAAAAAQIW}
+00191                             << {\cf22 "\\n"} << e1 << {\cf22 " evaluates to "} << v1\par
+{\bkmkstart AAAAAAAQIX}{\bkmkend AAAAAAAQIX}
+00192                             << {\cf22 "\\n"} << e2 << {\cf22 " evaluates to "} << v2\par
+{\bkmkstart AAAAAAAQIY}{\bkmkend AAAAAAAQIY}
+00193                             << {\cf22 "\\n"} << e3 << {\cf22 " evaluates to "} << v3;\par
+{\bkmkstart AAAAAAAQIZ}{\bkmkend AAAAAAAQIZ}
+00194 \}\par
+{\bkmkstart AAAAAAAQJA}{\bkmkend AAAAAAAQJA}
+00195 \par
+{\bkmkstart AAAAAAAQJB}{\bkmkend AAAAAAAQJB}
+00196 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED_FORMAT3.}\par
+{\bkmkstart AAAAAAAQJC}{\bkmkend AAAAAAAQJC}
+00197 {\cf20 // Don't use this in your code.}\par
+{\bkmkstart AAAAAAAQJD}{\bkmkend AAAAAAAQJD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQJE" }{}}{\fldrslt {\cs37\ul\cf2 00198}}}
+ {\cf21 #define GTEST_PRED_FORMAT3_(pred_format, v1, v2, v3, on_failure)\\}\par
+{\bkmkstart AAAAAAAQJF}{\bkmkend AAAAAAAQJF}
+00199 {\cf21   GTEST_ASSERT_(pred_format(#v1, #v2, #v3, v1, v2, v3), \\}\par
+{\bkmkstart AAAAAAAQJG}{\bkmkend AAAAAAAQJG}
+00200 {\cf21                 on_failure)}\par
+{\bkmkstart AAAAAAAQJH}{\bkmkend AAAAAAAQJH}
+00201 \par
+{\bkmkstart AAAAAAAQJI}{\bkmkend AAAAAAAQJI}
+00202 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED3.  Don't use}\par
+{\bkmkstart AAAAAAAQJJ}{\bkmkend AAAAAAAQJJ}
+00203 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQJK}{\bkmkend AAAAAAAQJK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQJL" }{}}{\fldrslt {\cs37\ul\cf2 00204}}}
+ {\cf21 #define GTEST_PRED3_(pred, v1, v2, v3, on_failure)\\}\par
+{\bkmkstart AAAAAAAQJM}{\bkmkend AAAAAAAQJM}
+00205 {\cf21   GTEST_ASSERT_(::testing::AssertPred3Helper(#pred, \\}\par
+{\bkmkstart AAAAAAAQJN}{\bkmkend AAAAAAAQJN}
+00206 {\cf21                                              #v1, \\}\par
+{\bkmkstart AAAAAAAQJO}{\bkmkend AAAAAAAQJO}
+00207 {\cf21                                              #v2, \\}\par
+{\bkmkstart AAAAAAAQJP}{\bkmkend AAAAAAAQJP}
+00208 {\cf21                                              #v3, \\}\par
+{\bkmkstart AAAAAAAQJQ}{\bkmkend AAAAAAAQJQ}
+00209 {\cf21                                              pred, \\}\par
+{\bkmkstart AAAAAAAQJR}{\bkmkend AAAAAAAQJR}
+00210 {\cf21                                              v1, \\}\par
+{\bkmkstart AAAAAAAQJS}{\bkmkend AAAAAAAQJS}
+00211 {\cf21                                              v2, \\}\par
+{\bkmkstart AAAAAAAQJT}{\bkmkend AAAAAAAQJT}
+00212 {\cf21                                              v3), on_failure)}\par
+{\bkmkstart AAAAAAAQJU}{\bkmkend AAAAAAAQJU}
+00213 \par
+{\bkmkstart AAAAAAAQJV}{\bkmkend AAAAAAAQJV}
+00214 {\cf20 // Ternary predicate assertion macros.}\par
+{\bkmkstart AAAAAAAQJW}{\bkmkend AAAAAAAQJW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQJX" }{}}{\fldrslt {\cs37\ul\cf2 00215}}}
+ {\cf21 #define EXPECT_PRED_FORMAT3(pred_format, v1, v2, v3) \\}\par
+{\bkmkstart AAAAAAAQJY}{\bkmkend AAAAAAAQJY}
+00216 {\cf21   GTEST_PRED_FORMAT3_(pred_format, v1, v2, v3, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQJZ}{\bkmkend AAAAAAAQJZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQKA" }{}}{\fldrslt {\cs37\ul\cf2 00217}}}
+ {\cf21 #define EXPECT_PRED3(pred, v1, v2, v3) \\}\par
+{\bkmkstart AAAAAAAQKB}{\bkmkend AAAAAAAQKB}
+00218 {\cf21   GTEST_PRED3_(pred, v1, v2, v3, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQKC}{\bkmkend AAAAAAAQKC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQKD" }{}}{\fldrslt {\cs37\ul\cf2 00219}}}
+ {\cf21 #define ASSERT_PRED_FORMAT3(pred_format, v1, v2, v3) \\}\par
+{\bkmkstart AAAAAAAQKE}{\bkmkend AAAAAAAQKE}
+00220 {\cf21   GTEST_PRED_FORMAT3_(pred_format, v1, v2, v3, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQKF}{\bkmkend AAAAAAAQKF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQKG" }{}}{\fldrslt {\cs37\ul\cf2 00221}}}
+ {\cf21 #define ASSERT_PRED3(pred, v1, v2, v3) \\}\par
+{\bkmkstart AAAAAAAQKH}{\bkmkend AAAAAAAQKH}
+00222 {\cf21   GTEST_PRED3_(pred, v1, v2, v3, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQKI}{\bkmkend AAAAAAAQKI}
+00223 \par
+{\bkmkstart AAAAAAAQKJ}{\bkmkend AAAAAAAQKJ}
+00224 \par
+{\bkmkstart AAAAAAAQKK}{\bkmkend AAAAAAAQKK}
+00225 \par
+{\bkmkstart AAAAAAAQKL}{\bkmkend AAAAAAAQKL}
+00226 {\cf20 // Helper function for implementing \{EXPECT|ASSERT\}_PRED4.  Don't use}\par
+{\bkmkstart AAAAAAAQKM}{\bkmkend AAAAAAAQKM}
+00227 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQKN}{\bkmkend AAAAAAAQKN}
+00228 {\cf17 template} <{\cf17 typename} Pred,\par
+{\bkmkstart AAAAAAAQKO}{\bkmkend AAAAAAAQKO}
+00229           {\cf17 typename} T1,\par
+{\bkmkstart AAAAAAAQKP}{\bkmkend AAAAAAAQKP}
+00230           {\cf17 typename} T2,\par
+{\bkmkstart AAAAAAAQKQ}{\bkmkend AAAAAAAQKQ}
+00231           {\cf17 typename} T3,\par
+{\bkmkstart AAAAAAAQKR}{\bkmkend AAAAAAAQKR}
+00232           {\cf17 typename} T4>\par
+{\bkmkstart AAAAAAAQKS}{\bkmkend AAAAAAAQKS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQKT" }{}}{\fldrslt {\cs37\ul\cf2 00233}}}
+ AssertionResult {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQKT" }{}}{\fldrslt {\cs37\ul\cf2 AssertPred4Helper}}}
+({\cf17 const} {\cf18 char}* pred_text,\par
+{\bkmkstart AAAAAAAQKU}{\bkmkend AAAAAAAQKU}
+00234                                   {\cf17 const} {\cf18 char}* e1,\par
+{\bkmkstart AAAAAAAQKV}{\bkmkend AAAAAAAQKV}
+00235                                   {\cf17 const} {\cf18 char}* e2,\par
+{\bkmkstart AAAAAAAQKW}{\bkmkend AAAAAAAQKW}
+00236                                   {\cf17 const} {\cf18 char}* e3,\par
+{\bkmkstart AAAAAAAQKX}{\bkmkend AAAAAAAQKX}
+00237                                   {\cf17 const} {\cf18 char}* e4,\par
+{\bkmkstart AAAAAAAQKY}{\bkmkend AAAAAAAQKY}
+00238                                   Pred pred,\par
+{\bkmkstart AAAAAAAQKZ}{\bkmkend AAAAAAAQKZ}
+00239                                   {\cf17 const} T1& v1,\par
+{\bkmkstart AAAAAAAQLA}{\bkmkend AAAAAAAQLA}
+00240                                   {\cf17 const} T2& v2,\par
+{\bkmkstart AAAAAAAQLB}{\bkmkend AAAAAAAQLB}
+00241                                   {\cf17 const} T3& v3,\par
+{\bkmkstart AAAAAAAQLC}{\bkmkend AAAAAAAQLC}
+00242                                   {\cf17 const} T4& v4) \{\par
+{\bkmkstart AAAAAAAQLD}{\bkmkend AAAAAAAQLD}
+00243   {\cf19 if} (pred(v1, v2, v3, v4)) {\cf19 return} AssertionSuccess();\par
+{\bkmkstart AAAAAAAQLE}{\bkmkend AAAAAAAQLE}
+00244 \par
+{\bkmkstart AAAAAAAQLF}{\bkmkend AAAAAAAQLF}
+00245   {\cf19 return} AssertionFailure() << pred_text << {\cf22 "("}\par
+{\bkmkstart AAAAAAAQLG}{\bkmkend AAAAAAAQLG}
+00246                             << e1 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQLH}{\bkmkend AAAAAAAQLH}
+00247                             << e2 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQLI}{\bkmkend AAAAAAAQLI}
+00248                             << e3 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQLJ}{\bkmkend AAAAAAAQLJ}
+00249                             << e4 << {\cf22 ") evaluates to false, where"}\par
+{\bkmkstart AAAAAAAQLK}{\bkmkend AAAAAAAQLK}
+00250                             << {\cf22 "\\n"} << e1 << {\cf22 " evaluates to "} << v1\par
+{\bkmkstart AAAAAAAQLL}{\bkmkend AAAAAAAQLL}
+00251                             << {\cf22 "\\n"} << e2 << {\cf22 " evaluates to "} << v2\par
+{\bkmkstart AAAAAAAQLM}{\bkmkend AAAAAAAQLM}
+00252                             << {\cf22 "\\n"} << e3 << {\cf22 " evaluates to "} << v3\par
+{\bkmkstart AAAAAAAQLN}{\bkmkend AAAAAAAQLN}
+00253                             << {\cf22 "\\n"} << e4 << {\cf22 " evaluates to "} << v4;\par
+{\bkmkstart AAAAAAAQLO}{\bkmkend AAAAAAAQLO}
+00254 \}\par
+{\bkmkstart AAAAAAAQLP}{\bkmkend AAAAAAAQLP}
+00255 \par
+{\bkmkstart AAAAAAAQLQ}{\bkmkend AAAAAAAQLQ}
+00256 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED_FORMAT4.}\par
+{\bkmkstart AAAAAAAQLR}{\bkmkend AAAAAAAQLR}
+00257 {\cf20 // Don't use this in your code.}\par
+{\bkmkstart AAAAAAAQLS}{\bkmkend AAAAAAAQLS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQLT" }{}}{\fldrslt {\cs37\ul\cf2 00258}}}
+ {\cf21 #define GTEST_PRED_FORMAT4_(pred_format, v1, v2, v3, v4, on_failure)\\}\par
+{\bkmkstart AAAAAAAQLU}{\bkmkend AAAAAAAQLU}
+00259 {\cf21   GTEST_ASSERT_(pred_format(#v1, #v2, #v3, #v4, v1, v2, v3, v4), \\}\par
+{\bkmkstart AAAAAAAQLV}{\bkmkend AAAAAAAQLV}
+00260 {\cf21                 on_failure)}\par
+{\bkmkstart AAAAAAAQLW}{\bkmkend AAAAAAAQLW}
+00261 \par
+{\bkmkstart AAAAAAAQLX}{\bkmkend AAAAAAAQLX}
+00262 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED4.  Don't use}\par
+{\bkmkstart AAAAAAAQLY}{\bkmkend AAAAAAAQLY}
+00263 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQLZ}{\bkmkend AAAAAAAQLZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQMA" }{}}{\fldrslt {\cs37\ul\cf2 00264}}}
+ {\cf21 #define GTEST_PRED4_(pred, v1, v2, v3, v4, on_failure)\\}\par
+{\bkmkstart AAAAAAAQMB}{\bkmkend AAAAAAAQMB}
+00265 {\cf21   GTEST_ASSERT_(::testing::AssertPred4Helper(#pred, \\}\par
+{\bkmkstart AAAAAAAQMC}{\bkmkend AAAAAAAQMC}
+00266 {\cf21                                              #v1, \\}\par
+{\bkmkstart AAAAAAAQMD}{\bkmkend AAAAAAAQMD}
+00267 {\cf21                                              #v2, \\}\par
+{\bkmkstart AAAAAAAQME}{\bkmkend AAAAAAAQME}
+00268 {\cf21                                              #v3, \\}\par
+{\bkmkstart AAAAAAAQMF}{\bkmkend AAAAAAAQMF}
+00269 {\cf21                                              #v4, \\}\par
+{\bkmkstart AAAAAAAQMG}{\bkmkend AAAAAAAQMG}
+00270 {\cf21                                              pred, \\}\par
+{\bkmkstart AAAAAAAQMH}{\bkmkend AAAAAAAQMH}
+00271 {\cf21                                              v1, \\}\par
+{\bkmkstart AAAAAAAQMI}{\bkmkend AAAAAAAQMI}
+00272 {\cf21                                              v2, \\}\par
+{\bkmkstart AAAAAAAQMJ}{\bkmkend AAAAAAAQMJ}
+00273 {\cf21                                              v3, \\}\par
+{\bkmkstart AAAAAAAQMK}{\bkmkend AAAAAAAQMK}
+00274 {\cf21                                              v4), on_failure)}\par
+{\bkmkstart AAAAAAAQML}{\bkmkend AAAAAAAQML}
+00275 \par
+{\bkmkstart AAAAAAAQMM}{\bkmkend AAAAAAAQMM}
+00276 {\cf20 // 4-ary predicate assertion macros.}\par
+{\bkmkstart AAAAAAAQMN}{\bkmkend AAAAAAAQMN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQMO" }{}}{\fldrslt {\cs37\ul\cf2 00277}}}
+ {\cf21 #define EXPECT_PRED_FORMAT4(pred_format, v1, v2, v3, v4) \\}\par
+{\bkmkstart AAAAAAAQMP}{\bkmkend AAAAAAAQMP}
+00278 {\cf21   GTEST_PRED_FORMAT4_(pred_format, v1, v2, v3, v4, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQMQ}{\bkmkend AAAAAAAQMQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQMR" }{}}{\fldrslt {\cs37\ul\cf2 00279}}}
+ {\cf21 #define EXPECT_PRED4(pred, v1, v2, v3, v4) \\}\par
+{\bkmkstart AAAAAAAQMS}{\bkmkend AAAAAAAQMS}
+00280 {\cf21   GTEST_PRED4_(pred, v1, v2, v3, v4, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQMT}{\bkmkend AAAAAAAQMT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQMU" }{}}{\fldrslt {\cs37\ul\cf2 00281}}}
+ {\cf21 #define ASSERT_PRED_FORMAT4(pred_format, v1, v2, v3, v4) \\}\par
+{\bkmkstart AAAAAAAQMV}{\bkmkend AAAAAAAQMV}
+00282 {\cf21   GTEST_PRED_FORMAT4_(pred_format, v1, v2, v3, v4, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQMW}{\bkmkend AAAAAAAQMW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQMX" }{}}{\fldrslt {\cs37\ul\cf2 00283}}}
+ {\cf21 #define ASSERT_PRED4(pred, v1, v2, v3, v4) \\}\par
+{\bkmkstart AAAAAAAQMY}{\bkmkend AAAAAAAQMY}
+00284 {\cf21   GTEST_PRED4_(pred, v1, v2, v3, v4, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQMZ}{\bkmkend AAAAAAAQMZ}
+00285 \par
+{\bkmkstart AAAAAAAQNA}{\bkmkend AAAAAAAQNA}
+00286 \par
+{\bkmkstart AAAAAAAQNB}{\bkmkend AAAAAAAQNB}
+00287 \par
+{\bkmkstart AAAAAAAQNC}{\bkmkend AAAAAAAQNC}
+00288 {\cf20 // Helper function for implementing \{EXPECT|ASSERT\}_PRED5.  Don't use}\par
+{\bkmkstart AAAAAAAQND}{\bkmkend AAAAAAAQND}
+00289 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQNE}{\bkmkend AAAAAAAQNE}
+00290 {\cf17 template} <{\cf17 typename} Pred,\par
+{\bkmkstart AAAAAAAQNF}{\bkmkend AAAAAAAQNF}
+00291           {\cf17 typename} T1,\par
+{\bkmkstart AAAAAAAQNG}{\bkmkend AAAAAAAQNG}
+00292           {\cf17 typename} T2,\par
+{\bkmkstart AAAAAAAQNH}{\bkmkend AAAAAAAQNH}
+00293           {\cf17 typename} T3,\par
+{\bkmkstart AAAAAAAQNI}{\bkmkend AAAAAAAQNI}
+00294           {\cf17 typename} T4,\par
+{\bkmkstart AAAAAAAQNJ}{\bkmkend AAAAAAAQNJ}
+00295           {\cf17 typename} T5>\par
+{\bkmkstart AAAAAAAQNK}{\bkmkend AAAAAAAQNK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQNL" }{}}{\fldrslt {\cs37\ul\cf2 00296}}}
+ AssertionResult {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQNL" }{}}{\fldrslt {\cs37\ul\cf2 AssertPred5Helper}}}
+({\cf17 const} {\cf18 char}* pred_text,\par
+{\bkmkstart AAAAAAAQNM}{\bkmkend AAAAAAAQNM}
+00297                                   {\cf17 const} {\cf18 char}* e1,\par
+{\bkmkstart AAAAAAAQNN}{\bkmkend AAAAAAAQNN}
+00298                                   {\cf17 const} {\cf18 char}* e2,\par
+{\bkmkstart AAAAAAAQNO}{\bkmkend AAAAAAAQNO}
+00299                                   {\cf17 const} {\cf18 char}* e3,\par
+{\bkmkstart AAAAAAAQNP}{\bkmkend AAAAAAAQNP}
+00300                                   {\cf17 const} {\cf18 char}* e4,\par
+{\bkmkstart AAAAAAAQNQ}{\bkmkend AAAAAAAQNQ}
+00301                                   {\cf17 const} {\cf18 char}* e5,\par
+{\bkmkstart AAAAAAAQNR}{\bkmkend AAAAAAAQNR}
+00302                                   Pred pred,\par
+{\bkmkstart AAAAAAAQNS}{\bkmkend AAAAAAAQNS}
+00303                                   {\cf17 const} T1& v1,\par
+{\bkmkstart AAAAAAAQNT}{\bkmkend AAAAAAAQNT}
+00304                                   {\cf17 const} T2& v2,\par
+{\bkmkstart AAAAAAAQNU}{\bkmkend AAAAAAAQNU}
+00305                                   {\cf17 const} T3& v3,\par
+{\bkmkstart AAAAAAAQNV}{\bkmkend AAAAAAAQNV}
+00306                                   {\cf17 const} T4& v4,\par
+{\bkmkstart AAAAAAAQNW}{\bkmkend AAAAAAAQNW}
+00307                                   {\cf17 const} T5& v5) \{\par
+{\bkmkstart AAAAAAAQNX}{\bkmkend AAAAAAAQNX}
+00308   {\cf19 if} (pred(v1, v2, v3, v4, v5)) {\cf19 return} AssertionSuccess();\par
+{\bkmkstart AAAAAAAQNY}{\bkmkend AAAAAAAQNY}
+00309 \par
+{\bkmkstart AAAAAAAQNZ}{\bkmkend AAAAAAAQNZ}
+00310   {\cf19 return} AssertionFailure() << pred_text << {\cf22 "("}\par
+{\bkmkstart AAAAAAAQOA}{\bkmkend AAAAAAAQOA}
+00311                             << e1 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQOB}{\bkmkend AAAAAAAQOB}
+00312                             << e2 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQOC}{\bkmkend AAAAAAAQOC}
+00313                             << e3 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQOD}{\bkmkend AAAAAAAQOD}
+00314                             << e4 << {\cf22 ", "}\par
+{\bkmkstart AAAAAAAQOE}{\bkmkend AAAAAAAQOE}
+00315                             << e5 << {\cf22 ") evaluates to false, where"}\par
+{\bkmkstart AAAAAAAQOF}{\bkmkend AAAAAAAQOF}
+00316                             << {\cf22 "\\n"} << e1 << {\cf22 " evaluates to "} << v1\par
+{\bkmkstart AAAAAAAQOG}{\bkmkend AAAAAAAQOG}
+00317                             << {\cf22 "\\n"} << e2 << {\cf22 " evaluates to "} << v2\par
+{\bkmkstart AAAAAAAQOH}{\bkmkend AAAAAAAQOH}
+00318                             << {\cf22 "\\n"} << e3 << {\cf22 " evaluates to "} << v3\par
+{\bkmkstart AAAAAAAQOI}{\bkmkend AAAAAAAQOI}
+00319                             << {\cf22 "\\n"} << e4 << {\cf22 " evaluates to "} << v4\par
+{\bkmkstart AAAAAAAQOJ}{\bkmkend AAAAAAAQOJ}
+00320                             << {\cf22 "\\n"} << e5 << {\cf22 " evaluates to "} << v5;\par
+{\bkmkstart AAAAAAAQOK}{\bkmkend AAAAAAAQOK}
+00321 \}\par
+{\bkmkstart AAAAAAAQOL}{\bkmkend AAAAAAAQOL}
+00322 \par
+{\bkmkstart AAAAAAAQOM}{\bkmkend AAAAAAAQOM}
+00323 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED_FORMAT5.}\par
+{\bkmkstart AAAAAAAQON}{\bkmkend AAAAAAAQON}
+00324 {\cf20 // Don't use this in your code.}\par
+{\bkmkstart AAAAAAAQOO}{\bkmkend AAAAAAAQOO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQOP" }{}}{\fldrslt {\cs37\ul\cf2 00325}}}
+ {\cf21 #define GTEST_PRED_FORMAT5_(pred_format, v1, v2, v3, v4, v5, on_failure)\\}\par
+{\bkmkstart AAAAAAAQOQ}{\bkmkend AAAAAAAQOQ}
+00326 {\cf21   GTEST_ASSERT_(pred_format(#v1, #v2, #v3, #v4, #v5, v1, v2, v3, v4, v5), \\}\par
+{\bkmkstart AAAAAAAQOR}{\bkmkend AAAAAAAQOR}
+00327 {\cf21                 on_failure)}\par
+{\bkmkstart AAAAAAAQOS}{\bkmkend AAAAAAAQOS}
+00328 \par
+{\bkmkstart AAAAAAAQOT}{\bkmkend AAAAAAAQOT}
+00329 {\cf20 // Internal macro for implementing \{EXPECT|ASSERT\}_PRED5.  Don't use}\par
+{\bkmkstart AAAAAAAQOU}{\bkmkend AAAAAAAQOU}
+00330 {\cf20 // this in your code.}\par
+{\bkmkstart AAAAAAAQOV}{\bkmkend AAAAAAAQOV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQOW" }{}}{\fldrslt {\cs37\ul\cf2 00331}}}
+ {\cf21 #define GTEST_PRED5_(pred, v1, v2, v3, v4, v5, on_failure)\\}\par
+{\bkmkstart AAAAAAAQOX}{\bkmkend AAAAAAAQOX}
+00332 {\cf21   GTEST_ASSERT_(::testing::AssertPred5Helper(#pred, \\}\par
+{\bkmkstart AAAAAAAQOY}{\bkmkend AAAAAAAQOY}
+00333 {\cf21                                              #v1, \\}\par
+{\bkmkstart AAAAAAAQOZ}{\bkmkend AAAAAAAQOZ}
+00334 {\cf21                                              #v2, \\}\par
+{\bkmkstart AAAAAAAQPA}{\bkmkend AAAAAAAQPA}
+00335 {\cf21                                              #v3, \\}\par
+{\bkmkstart AAAAAAAQPB}{\bkmkend AAAAAAAQPB}
+00336 {\cf21                                              #v4, \\}\par
+{\bkmkstart AAAAAAAQPC}{\bkmkend AAAAAAAQPC}
+00337 {\cf21                                              #v5, \\}\par
+{\bkmkstart AAAAAAAQPD}{\bkmkend AAAAAAAQPD}
+00338 {\cf21                                              pred, \\}\par
+{\bkmkstart AAAAAAAQPE}{\bkmkend AAAAAAAQPE}
+00339 {\cf21                                              v1, \\}\par
+{\bkmkstart AAAAAAAQPF}{\bkmkend AAAAAAAQPF}
+00340 {\cf21                                              v2, \\}\par
+{\bkmkstart AAAAAAAQPG}{\bkmkend AAAAAAAQPG}
+00341 {\cf21                                              v3, \\}\par
+{\bkmkstart AAAAAAAQPH}{\bkmkend AAAAAAAQPH}
+00342 {\cf21                                              v4, \\}\par
+{\bkmkstart AAAAAAAQPI}{\bkmkend AAAAAAAQPI}
+00343 {\cf21                                              v5), on_failure)}\par
+{\bkmkstart AAAAAAAQPJ}{\bkmkend AAAAAAAQPJ}
+00344 \par
+{\bkmkstart AAAAAAAQPK}{\bkmkend AAAAAAAQPK}
+00345 {\cf20 // 5-ary predicate assertion macros.}\par
+{\bkmkstart AAAAAAAQPL}{\bkmkend AAAAAAAQPL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQPM" }{}}{\fldrslt {\cs37\ul\cf2 00346}}}
+ {\cf21 #define EXPECT_PRED_FORMAT5(pred_format, v1, v2, v3, v4, v5) \\}\par
+{\bkmkstart AAAAAAAQPN}{\bkmkend AAAAAAAQPN}
+00347 {\cf21   GTEST_PRED_FORMAT5_(pred_format, v1, v2, v3, v4, v5, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQPO}{\bkmkend AAAAAAAQPO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQPP" }{}}{\fldrslt {\cs37\ul\cf2 00348}}}
+ {\cf21 #define EXPECT_PRED5(pred, v1, v2, v3, v4, v5) \\}\par
+{\bkmkstart AAAAAAAQPQ}{\bkmkend AAAAAAAQPQ}
+00349 {\cf21   GTEST_PRED5_(pred, v1, v2, v3, v4, v5, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQPR}{\bkmkend AAAAAAAQPR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQPS" }{}}{\fldrslt {\cs37\ul\cf2 00350}}}
+ {\cf21 #define ASSERT_PRED_FORMAT5(pred_format, v1, v2, v3, v4, v5) \\}\par
+{\bkmkstart AAAAAAAQPT}{\bkmkend AAAAAAAQPT}
+00351 {\cf21   GTEST_PRED_FORMAT5_(pred_format, v1, v2, v3, v4, v5, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQPU}{\bkmkend AAAAAAAQPU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAQPV" }{}}{\fldrslt {\cs37\ul\cf2 00352}}}
+ {\cf21 #define ASSERT_PRED5(pred, v1, v2, v3, v4, v5) \\}\par
+{\bkmkstart AAAAAAAQPW}{\bkmkend AAAAAAAQPW}
+00353 {\cf21   GTEST_PRED5_(pred, v1, v2, v3, v4, v5, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAQPX}{\bkmkend AAAAAAAQPX}
+00354 \par
+{\bkmkstart AAAAAAAQPY}{\bkmkend AAAAAAAQPY}
+00355 \par
+{\bkmkstart AAAAAAAQPZ}{\bkmkend AAAAAAAQPZ}
+00356 \par
+{\bkmkstart AAAAAAAQQA}{\bkmkend AAAAAAAQQA}
+00357 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAQQB}{\bkmkend AAAAAAAQQB}
+00358 \par
+{\bkmkstart AAAAAAAQQC}{\bkmkend AAAAAAAQQC}
+00359 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_}\par
+}
+}

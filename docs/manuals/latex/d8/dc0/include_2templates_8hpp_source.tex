@@ -1,0 +1,33 @@
+\hypertarget{include_2templates_8hpp_source}{}\doxysection{templates.\+hpp}
+\label{include_2templates_8hpp_source}\index{include/templates.hpp@{include/templates.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00002}00002     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> T castByNative(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00003}00003         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, const char*>::value)      \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00004}00004         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, char*>::value)            \textcolor{keywordflow}{return} (\textcolor{keywordtype}{char}*)value;}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00006}00006         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_STRING>::value)       \textcolor{keywordflow}{return} \textcolor{keywordtype}{string}(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00007}00007         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_NUMBER>::value)       \textcolor{keywordflow}{return} \_cmdline::validateNumber(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00008}00008         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_LONG>::value)         \textcolor{keywordflow}{return} \_cmdline::validateNumber(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00009}00009         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_INT>::value)          \textcolor{keywordflow}{return} \_cmdline::makeInteger(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00010}00010         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_DECIMAL>::value)      \textcolor{keywordflow}{return} \_cmdline::validateDecimal(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00011}00011         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_FLOAT>::value)        \textcolor{keywordflow}{return} \_cmdline::makeFloat(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00012}00012         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_DOUBLE>::value)       \textcolor{keywordflow}{return} \_cmdline::validateDecimal(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00013}00013         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_DATE>::value)         \textcolor{keywordflow}{return} \_cmdline::makeTm(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00014}00014         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_TIME>::value)         \textcolor{keywordflow}{return} \_cmdline::makeTm(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00015}00015         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_DATETIME>::value)     \textcolor{keywordflow}{return} \_cmdline::makeTm(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00016}00016         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_TMS>::value)          \textcolor{keywordflow}{return} \_cmdline::validateTimestamp(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00017}00017         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_LONGNUMBER>::value)   \textcolor{keywordflow}{return} \_cmdline::validateLongNumber(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00018}00018         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_LONGDECIMAL>::value)  \textcolor{keywordflow}{return} \_cmdline::validateLongDecimal(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00019}00019         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_DIR>::value)          \textcolor{keywordflow}{return} \_cmdline::validateFile(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00020}00020         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_FILE>::value)         \textcolor{keywordflow}{return} \_cmdline::validateDir(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00021}00021         \textcolor{keywordflow}{if} \textcolor{keyword}{constexpr} (is\_same<T, TYPE\_BOOL>::value) \{}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00022}00022             \textcolor{keywordflow}{if} (value == 0x0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00023}00023             \textcolor{keywordflow}{return} \_cmdline::valMakeBoolean(value);}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00024}00024         \}}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00025}00025         \textcolor{keywordflow}{throw} CmdLineInvalidTypeException(\textcolor{keyword}{typeid}(T).name());}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{include_2templates_8hpp_source_l00027}00027 }
+
+\end{DoxyCode}

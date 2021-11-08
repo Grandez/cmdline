@@ -1,0 +1,1862 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-param-util.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-param-util.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-param-util.h}
+{\bkmkstart AAAAAABGUU}
+{\bkmkend AAAAAABGUU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHDU" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAABGUV}{\bkmkend AAAAAABGUV}
+00001 {\cf20 // Copyright 2008 Google Inc.}\par
+{\bkmkstart AAAAAABGUW}{\bkmkend AAAAAABGUW}
+00002 {\cf20 // All Rights Reserved.}\par
+{\bkmkstart AAAAAABGUX}{\bkmkend AAAAAABGUX}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAABGUY}{\bkmkend AAAAAABGUY}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAABGUZ}{\bkmkend AAAAAABGUZ}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAABGVA}{\bkmkend AAAAAABGVA}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAABGVB}{\bkmkend AAAAAABGVB}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAABGVC}{\bkmkend AAAAAABGVC}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAABGVD}{\bkmkend AAAAAABGVD}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAABGVE}{\bkmkend AAAAAABGVE}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAABGVF}{\bkmkend AAAAAABGVF}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAABGVG}{\bkmkend AAAAAABGVG}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAABGVH}{\bkmkend AAAAAABGVH}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAABGVI}{\bkmkend AAAAAABGVI}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAABGVJ}{\bkmkend AAAAAABGVJ}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAABGVK}{\bkmkend AAAAAABGVK}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAABGVL}{\bkmkend AAAAAABGVL}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAABGVM}{\bkmkend AAAAAABGVM}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAABGVN}{\bkmkend AAAAAABGVN}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAABGVO}{\bkmkend AAAAAABGVO}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAABGVP}{\bkmkend AAAAAABGVP}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAABGVQ}{\bkmkend AAAAAABGVQ}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAABGVR}{\bkmkend AAAAAABGVR}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAABGVS}{\bkmkend AAAAAABGVS}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAABGVT}{\bkmkend AAAAAABGVT}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAABGVU}{\bkmkend AAAAAABGVU}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAABGVV}{\bkmkend AAAAAABGVV}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAABGVW}{\bkmkend AAAAAABGVW}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAABGVX}{\bkmkend AAAAAABGVX}
+00029 \par
+{\bkmkstart AAAAAABGVY}{\bkmkend AAAAAABGVY}
+00030 \par
+{\bkmkstart AAAAAABGVZ}{\bkmkend AAAAAABGVZ}
+00031 {\cf20 // Type and function utilities for implementing parameterized tests.}\par
+{\bkmkstart AAAAAABGWA}{\bkmkend AAAAAABGWA}
+00032 \par
+{\bkmkstart AAAAAABGWB}{\bkmkend AAAAAABGWB}
+00033 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAABGWC}{\bkmkend AAAAAABGWC}
+00034 \par
+{\bkmkstart AAAAAABGWD}{\bkmkend AAAAAABGWD}
+00035 {\cf21 #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PARAM_UTIL_H_}\par
+{\bkmkstart AAAAAABGWE}{\bkmkend AAAAAABGWE}
+00036 {\cf21 #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PARAM_UTIL_H_}\par
+{\bkmkstart AAAAAABGWF}{\bkmkend AAAAAABGWF}
+00037 \par
+{\bkmkstart AAAAAABGWG}{\bkmkend AAAAAABGWG}
+00038 {\cf21 #include <ctype.h>}\par
+{\bkmkstart AAAAAABGWH}{\bkmkend AAAAAABGWH}
+00039 \par
+{\bkmkstart AAAAAABGWI}{\bkmkend AAAAAABGWI}
+00040 {\cf21 #include <iterator>}\par
+{\bkmkstart AAAAAABGWJ}{\bkmkend AAAAAABGWJ}
+00041 {\cf21 #include <set>}\par
+{\bkmkstart AAAAAABGWK}{\bkmkend AAAAAABGWK}
+00042 {\cf21 #include <utility>}\par
+{\bkmkstart AAAAAABGWL}{\bkmkend AAAAAABGWL}
+00043 {\cf21 #include <vector>}\par
+{\bkmkstart AAAAAABGWM}{\bkmkend AAAAAABGWM}
+00044 \par
+{\bkmkstart AAAAAABGWN}{\bkmkend AAAAAABGWN}
+00045 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHDS" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-internal.h}}}
+"}\par
+{\bkmkstart AAAAAABGWO}{\bkmkend AAAAAABGWO}
+00046 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXZB" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-linked_ptr.h}}}
+"}\par
+{\bkmkstart AAAAAABGWP}{\bkmkend AAAAAABGWP}
+00047 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNN" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-port.h}}}
+"}\par
+{\bkmkstart AAAAAABGWQ}{\bkmkend AAAAAABGWQ}
+00048 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJDY" }{}}{\fldrslt {\cs37\ul\cf2 gtest/gtest-printers.h}}}
+"}\par
+{\bkmkstart AAAAAABGWR}{\bkmkend AAAAAABGWR}
+00049 \par
+{\bkmkstart AAAAAABGWS}{\bkmkend AAAAAABGWS}
+00050 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAABGWT}{\bkmkend AAAAAABGWT}
+00051 \par
+{\bkmkstart AAAAAABGWU}{\bkmkend AAAAAABGWU}
+00052 {\cf20 // Input to a parameterized test name generator, describing a test parameter.}\par
+{\bkmkstart AAAAAABGWV}{\bkmkend AAAAAABGWV}
+00053 {\cf20 // Consists of the parameter value and the integer parameter index.}\par
+{\bkmkstart AAAAAABGWW}{\bkmkend AAAAAABGWW}
+00054 {\cf17 template} <{\cf17 class} ParamType>\par
+{\bkmkstart AAAAAABGWX}{\bkmkend AAAAAABGWX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGWY" }{}}{\fldrslt {\cs37\ul\cf2 00055}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGWY" }{}}{\fldrslt {\cs37\ul\cf2 TestParamInfo}}}
+ \{\par
+{\bkmkstart AAAAAABGWZ}{\bkmkend AAAAAABGWZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXA" }{}}{\fldrslt {\cs37\ul\cf2 00056}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXA" }{}}{\fldrslt {\cs37\ul\cf2 TestParamInfo}}}
+({\cf17 const} ParamType& a_param, {\cf18 size_t} an_index) :\par
+{\bkmkstart AAAAAABGXB}{\bkmkend AAAAAABGXB}
+00057     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXC" }{}}{\fldrslt {\cs37\ul\cf2 param}}}
+(a_param),\par
+{\bkmkstart AAAAAABGXD}{\bkmkend AAAAAABGXD}
+00058     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXE" }{}}{\fldrslt {\cs37\ul\cf2 index}}}
+(an_index) \{\}\par
+{\bkmkstart AAAAAABGXF}{\bkmkend AAAAAABGXF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXC" }{}}{\fldrslt {\cs37\ul\cf2 00059}}}
+   ParamType {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXC" }{}}{\fldrslt {\cs37\ul\cf2 param}}}
+;\par
+{\bkmkstart AAAAAABGXG}{\bkmkend AAAAAABGXG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXE" }{}}{\fldrslt {\cs37\ul\cf2 00060}}}
+   {\cf18 size_t} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXE" }{}}{\fldrslt {\cs37\ul\cf2 index}}}
+;\par
+{\bkmkstart AAAAAABGXH}{\bkmkend AAAAAABGXH}
+00061 \};\par
+{\bkmkstart AAAAAABGXI}{\bkmkend AAAAAABGXI}
+00062 \par
+{\bkmkstart AAAAAABGXJ}{\bkmkend AAAAAABGXJ}
+00063 {\cf20 // A builtin parameterized test name generator which returns the result of}\par
+{\bkmkstart AAAAAABGXK}{\bkmkend AAAAAABGXK}
+00064 {\cf20 // testing::PrintToString.}\par
+{\bkmkstart AAAAAABGXL}{\bkmkend AAAAAABGXL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXM" }{}}{\fldrslt {\cs37\ul\cf2 00065}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXM" }{}}{\fldrslt {\cs37\ul\cf2 PrintToStringParamName}}}
+ \{\par
+{\bkmkstart AAAAAABGXN}{\bkmkend AAAAAABGXN}
+00066   {\cf17 template} <{\cf17 class} ParamType>\par
+{\bkmkstart AAAAAABGXO}{\bkmkend AAAAAABGXO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXP" }{}}{\fldrslt {\cs37\ul\cf2 00067}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXP" }{}}{\fldrslt {\cs37\ul\cf2 operator()}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGWY" }{}}{\fldrslt {\cs37\ul\cf2 TestParamInfo<ParamType>}}}
+& info){\cf17  const }\{\par
+{\bkmkstart AAAAAABGXQ}{\bkmkend AAAAAABGXQ}
+00068     {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQV" }{}}{\fldrslt {\cs37\ul\cf2 PrintToString}}}
+(info.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXC" }{}}{\fldrslt {\cs37\ul\cf2 param}}}
+);\par
+{\bkmkstart AAAAAABGXR}{\bkmkend AAAAAABGXR}
+00069   \}\par
+{\bkmkstart AAAAAABGXS}{\bkmkend AAAAAABGXS}
+00070 \};\par
+{\bkmkstart AAAAAABGXT}{\bkmkend AAAAAABGXT}
+00071 \par
+{\bkmkstart AAAAAABGXU}{\bkmkend AAAAAABGXU}
+00072 {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAABGXV}{\bkmkend AAAAAABGXV}
+00073 \par
+{\bkmkstart AAAAAABGXW}{\bkmkend AAAAAABGXW}
+00074 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABGXX}{\bkmkend AAAAAABGXX}
+00075 {\cf20 //}\par
+{\bkmkstart AAAAAABGXY}{\bkmkend AAAAAABGXY}
+00076 {\cf20 // Outputs a message explaining invalid registration of different}\par
+{\bkmkstart AAAAAABGXZ}{\bkmkend AAAAAABGXZ}
+00077 {\cf20 // fixture class for the same test case. This may happen when}\par
+{\bkmkstart AAAAAABGYA}{\bkmkend AAAAAABGYA}
+00078 {\cf20 // TEST_P macro is used to define two tests with the same name}\par
+{\bkmkstart AAAAAABGYB}{\bkmkend AAAAAABGYB}
+00079 {\cf20 // but in different namespaces.}\par
+{\bkmkstart AAAAAABGYC}{\bkmkend AAAAAABGYC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYD" }{}}{\fldrslt {\cs37\ul\cf2 00080}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYD" }{}}{\fldrslt {\cs37\ul\cf2 ReportInvalidTestCaseType}}}
+({\cf17 const} {\cf18 char}* test_case_name,\par
+{\bkmkstart AAAAAABGYE}{\bkmkend AAAAAABGYE}
+00081                                           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIE" }{}}{\fldrslt {\cs37\ul\cf2 CodeLocation}}}
+ code_location);\par
+{\bkmkstart AAAAAABGYF}{\bkmkend AAAAAABGYF}
+00082 \par
+{\bkmkstart AAAAAABGYG}{\bkmkend AAAAAABGYG}
+00083 {\cf17 template} <{\cf17 typename}> {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface}}}
+;\par
+{\bkmkstart AAAAAABGYI}{\bkmkend AAAAAABGYI}
+00084 {\cf17 template} <{\cf17 typename}> {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+;\par
+{\bkmkstart AAAAAABGYJ}{\bkmkend AAAAAABGYJ}
+00085 \par
+{\bkmkstart AAAAAABGYK}{\bkmkend AAAAAABGYK}
+00086 {\cf20 // Interface for iterating over elements provided by an implementation}\par
+{\bkmkstart AAAAAABGYL}{\bkmkend AAAAAABGYL}
+00087 {\cf20 // of ParamGeneratorInterface<T>.}\par
+{\bkmkstart AAAAAABGYM}{\bkmkend AAAAAABGYM}
+00088 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABGYN}{\bkmkend AAAAAABGYN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 00089}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface}}}
+ \{\par
+{\bkmkstart AAAAAABGYP}{\bkmkend AAAAAABGYP}
+00090  {\cf17 public}:\par
+{\bkmkstart AAAAAABGYQ}{\bkmkend AAAAAABGYQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYR" }{}}{\fldrslt {\cs37\ul\cf2 00091}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYR" }{}}{\fldrslt {\cs37\ul\cf2 ~ParamIteratorInterface}}}
+() \{\}\par
+{\bkmkstart AAAAAABGYS}{\bkmkend AAAAAABGYS}
+00092   {\cf20 // A pointer to the base generator instance.}\par
+{\bkmkstart AAAAAABGYT}{\bkmkend AAAAAABGYT}
+00093   {\cf20 // Used only for the purposes of iterator comparison}\par
+{\bkmkstart AAAAAABGYU}{\bkmkend AAAAAABGYU}
+00094   {\cf20 // to make sure that two iterators belong to the same generator.}\par
+{\bkmkstart AAAAAABGYV}{\bkmkend AAAAAABGYV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYW" }{}}{\fldrslt {\cs37\ul\cf2 00095}}}
+   {\cf17 virtual} {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYW" }{}}{\fldrslt {\cs37\ul\cf2 BaseGenerator}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABGYX}{\bkmkend AAAAAABGYX}
+00096   {\cf20 // Advances iterator to point to the next element}\par
+{\bkmkstart AAAAAABGYY}{\bkmkend AAAAAABGYY}
+00097   {\cf20 // provided by the generator. The caller is responsible}\par
+{\bkmkstart AAAAAABGYZ}{\bkmkend AAAAAABGYZ}
+00098   {\cf20 // for not calling Advance() on an iterator equal to}\par
+{\bkmkstart AAAAAABGZA}{\bkmkend AAAAAABGZA}
+00099   {\cf20 // BaseGenerator()->End().}\par
+{\bkmkstart AAAAAABGZB}{\bkmkend AAAAAABGZB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZC" }{}}{\fldrslt {\cs37\ul\cf2 00100}}}
+   {\cf17 virtual} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZC" }{}}{\fldrslt {\cs37\ul\cf2 Advance}}}
+() = 0;\par
+{\bkmkstart AAAAAABGZD}{\bkmkend AAAAAABGZD}
+00101   {\cf20 // Clones the iterator object. Used for implementing copy semantics}\par
+{\bkmkstart AAAAAABGZE}{\bkmkend AAAAAABGZE}
+00102   {\cf20 // of ParamIterator<T>.}\par
+{\bkmkstart AAAAAABGZF}{\bkmkend AAAAAABGZF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZG" }{}}{\fldrslt {\cs37\ul\cf2 00103}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZG" }{}}{\fldrslt {\cs37\ul\cf2 Clone}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABGZH}{\bkmkend AAAAAABGZH}
+00104   {\cf20 // Dereferences the current iterator and provides (read-only) access}\par
+{\bkmkstart AAAAAABGZI}{\bkmkend AAAAAABGZI}
+00105   {\cf20 // to the pointed value. It is the caller's responsibility not to call}\par
+{\bkmkstart AAAAAABGZJ}{\bkmkend AAAAAABGZJ}
+00106   {\cf20 // Current() on an iterator equal to BaseGenerator()->End().}\par
+{\bkmkstart AAAAAABGZK}{\bkmkend AAAAAABGZK}
+00107   {\cf20 // Used for implementing ParamGenerator<T>::operator*().}\par
+{\bkmkstart AAAAAABGZL}{\bkmkend AAAAAABGZL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZM" }{}}{\fldrslt {\cs37\ul\cf2 00108}}}
+   {\cf17 virtual} {\cf17 const} T* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZM" }{}}{\fldrslt {\cs37\ul\cf2 Current}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABGZN}{\bkmkend AAAAAABGZN}
+00109   {\cf20 // Determines whether the given iterator and other point to the same}\par
+{\bkmkstart AAAAAABGZO}{\bkmkend AAAAAABGZO}
+00110   {\cf20 // element in the sequence generated by the generator.}\par
+{\bkmkstart AAAAAABGZP}{\bkmkend AAAAAABGZP}
+00111   {\cf20 // Used for implementing ParamGenerator<T>::operator==().}\par
+{\bkmkstart AAAAAABGZQ}{\bkmkend AAAAAABGZQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZR" }{}}{\fldrslt {\cs37\ul\cf2 00112}}}
+   {\cf17 virtual} {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZR" }{}}{\fldrslt {\cs37\ul\cf2 Equals}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface}}}
+& other) {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABGZS}{\bkmkend AAAAAABGZS}
+00113 \};\par
+{\bkmkstart AAAAAABGZT}{\bkmkend AAAAAABGZT}
+00114 \par
+{\bkmkstart AAAAAABGZU}{\bkmkend AAAAAABGZU}
+00115 {\cf20 // Class iterating over elements provided by an implementation of}\par
+{\bkmkstart AAAAAABGZV}{\bkmkend AAAAAABGZV}
+00116 {\cf20 // ParamGeneratorInterface<T>. It wraps ParamIteratorInterface<T>}\par
+{\bkmkstart AAAAAABGZW}{\bkmkend AAAAAABGZW}
+00117 {\cf20 // and implements the const forward iterator concept.}\par
+{\bkmkstart AAAAAABGZX}{\bkmkend AAAAAABGZX}
+00118 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABGZY}{\bkmkend AAAAAABGZY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 00119}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+ \{\par
+{\bkmkstart AAAAAABHAA}{\bkmkend AAAAAABHAA}
+00120  {\cf17 public}:\par
+{\bkmkstart AAAAAABHAB}{\bkmkend AAAAAABHAB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAC" }{}}{\fldrslt {\cs37\ul\cf2 00121}}}
+   {\cf17 typedef} T {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAC" }{}}{\fldrslt {\cs37\ul\cf2 value_type}}}
+;\par
+{\bkmkstart AAAAAABHAD}{\bkmkend AAAAAABHAD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAE" }{}}{\fldrslt {\cs37\ul\cf2 00122}}}
+   {\cf17 typedef} {\cf17 const} T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAE" }{}}{\fldrslt {\cs37\ul\cf2 reference}}}
+;\par
+{\bkmkstart AAAAAABHAF}{\bkmkend AAAAAABHAF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAG" }{}}{\fldrslt {\cs37\ul\cf2 00123}}}
+   {\cf17 typedef} ptrdiff_t {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAG" }{}}{\fldrslt {\cs37\ul\cf2 difference_type}}}
+;\par
+{\bkmkstart AAAAAABHAH}{\bkmkend AAAAAABHAH}
+00124 \par
+{\bkmkstart AAAAAABHAI}{\bkmkend AAAAAABHAI}
+00125   {\cf20 // ParamIterator assumes ownership of the impl_ pointer.}\par
+{\bkmkstart AAAAAABHAJ}{\bkmkend AAAAAABHAJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAK" }{}}{\fldrslt {\cs37\ul\cf2 00126}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAK" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+& other) : impl_(other.impl_->Clone()) \{\}\par
+{\bkmkstart AAAAAABHAL}{\bkmkend AAAAAABHAL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAM" }{}}{\fldrslt {\cs37\ul\cf2 00127}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAM" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+& other) \{\par
+{\bkmkstart AAAAAABHAN}{\bkmkend AAAAAABHAN}
+00128     {\cf19 if} ({\cf17 this} != &other)\par
+{\bkmkstart AAAAAABHAO}{\bkmkend AAAAAABHAO}
+00129       impl_.reset(other.impl_->Clone());\par
+{\bkmkstart AAAAAABHAP}{\bkmkend AAAAAABHAP}
+00130     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABHAQ}{\bkmkend AAAAAABHAQ}
+00131   \}\par
+{\bkmkstart AAAAAABHAR}{\bkmkend AAAAAABHAR}
+00132 \par
+{\bkmkstart AAAAAABHAS}{\bkmkend AAAAAABHAS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAT" }{}}{\fldrslt {\cs37\ul\cf2 00133}}}
+   {\cf17 const} T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAT" }{}}{\fldrslt {\cs37\ul\cf2 operator*}}}
+(){\cf17  const }\{ {\cf19 return} *impl_->Current(); \}\par
+{\bkmkstart AAAAAABHAU}{\bkmkend AAAAAABHAU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAV" }{}}{\fldrslt {\cs37\ul\cf2 00134}}}
+   {\cf17 const} T* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAV" }{}}{\fldrslt {\cs37\ul\cf2 operator->}}}
+(){\cf17  const }\{ {\cf19 return} impl_->Current(); \}\par
+{\bkmkstart AAAAAABHAW}{\bkmkend AAAAAABHAW}
+00135   {\cf20 // Prefix version of operator++.}\par
+{\bkmkstart AAAAAABHAX}{\bkmkend AAAAAABHAX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAY" }{}}{\fldrslt {\cs37\ul\cf2 00136}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAY" }{}}{\fldrslt {\cs37\ul\cf2 operator++}}}
+() \{\par
+{\bkmkstart AAAAAABHAZ}{\bkmkend AAAAAABHAZ}
+00137     impl_->Advance();\par
+{\bkmkstart AAAAAABHBA}{\bkmkend AAAAAABHBA}
+00138     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABHBB}{\bkmkend AAAAAABHBB}
+00139   \}\par
+{\bkmkstart AAAAAABHBC}{\bkmkend AAAAAABHBC}
+00140   {\cf20 // Postfix version of operator++.}\par
+{\bkmkstart AAAAAABHBD}{\bkmkend AAAAAABHBD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHBE" }{}}{\fldrslt {\cs37\ul\cf2 00141}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHBE" }{}}{\fldrslt {\cs37\ul\cf2 operator++}}}
+({\cf18 int} {\cf20 /*unused*/}) \{\par
+{\bkmkstart AAAAAABHBF}{\bkmkend AAAAAABHBF}
+00142     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* clone = impl_->Clone();\par
+{\bkmkstart AAAAAABHBG}{\bkmkend AAAAAABHBG}
+00143     impl_->Advance();\par
+{\bkmkstart AAAAAABHBH}{\bkmkend AAAAAABHBH}
+00144     {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAK" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+(clone);\par
+{\bkmkstart AAAAAABHBI}{\bkmkend AAAAAABHBI}
+00145   \}\par
+{\bkmkstart AAAAAABHBJ}{\bkmkend AAAAAABHBJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHBK" }{}}{\fldrslt {\cs37\ul\cf2 00146}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHBK" }{}}{\fldrslt {\cs37\ul\cf2 operator==}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+& other){\cf17  const }\{\par
+{\bkmkstart AAAAAABHBL}{\bkmkend AAAAAABHBL}
+00147     {\cf19 return} impl_.get() == other.impl_.get() || impl_->Equals(*other.impl_);\par
+{\bkmkstart AAAAAABHBM}{\bkmkend AAAAAABHBM}
+00148   \}\par
+{\bkmkstart AAAAAABHBN}{\bkmkend AAAAAABHBN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHBO" }{}}{\fldrslt {\cs37\ul\cf2 00149}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHBO" }{}}{\fldrslt {\cs37\ul\cf2 operator!=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+& other){\cf17  const }\{\par
+{\bkmkstart AAAAAABHBP}{\bkmkend AAAAAABHBP}
+00150     {\cf19 return} !(*{\cf17 this} == other);\par
+{\bkmkstart AAAAAABHBQ}{\bkmkend AAAAAABHBQ}
+00151   \}\par
+{\bkmkstart AAAAAABHBR}{\bkmkend AAAAAABHBR}
+00152 \par
+{\bkmkstart AAAAAABHBS}{\bkmkend AAAAAABHBS}
+00153  {\cf17 private}:\par
+{\bkmkstart AAAAAABHBT}{\bkmkend AAAAAABHBT}
+00154   {\cf17 friend} {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+<T>;\par
+{\bkmkstart AAAAAABHBU}{\bkmkend AAAAAABHBU}
+00155   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHAK" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* impl) : impl_(impl) \{\}\par
+{\bkmkstart AAAAAABHBV}{\bkmkend AAAAAABHBV}
+00156   scoped_ptr<ParamIteratorInterface<T> > impl_;\par
+{\bkmkstart AAAAAABHBW}{\bkmkend AAAAAABHBW}
+00157 \};\par
+{\bkmkstart AAAAAABHBX}{\bkmkend AAAAAABHBX}
+00158 \par
+{\bkmkstart AAAAAABHBY}{\bkmkend AAAAAABHBY}
+00159 {\cf20 // ParamGeneratorInterface<T> is the binary interface to access generators}\par
+{\bkmkstart AAAAAABHBZ}{\bkmkend AAAAAABHBZ}
+00160 {\cf20 // defined in other translation units.}\par
+{\bkmkstart AAAAAABHCA}{\bkmkend AAAAAABHCA}
+00161 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABHCB}{\bkmkend AAAAAABHCB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 00162}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface}}}
+ \{\par
+{\bkmkstart AAAAAABHCC}{\bkmkend AAAAAABHCC}
+00163  {\cf17 public}:\par
+{\bkmkstart AAAAAABHCD}{\bkmkend AAAAAABHCD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCE" }{}}{\fldrslt {\cs37\ul\cf2 00164}}}
+   {\cf17 typedef} T {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCE" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+;\par
+{\bkmkstart AAAAAABHCF}{\bkmkend AAAAAABHCF}
+00165 \par
+{\bkmkstart AAAAAABHCG}{\bkmkend AAAAAABHCG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCH" }{}}{\fldrslt {\cs37\ul\cf2 00166}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCH" }{}}{\fldrslt {\cs37\ul\cf2 ~ParamGeneratorInterface}}}
+() \{\}\par
+{\bkmkstart AAAAAABHCI}{\bkmkend AAAAAABHCI}
+00167 \par
+{\bkmkstart AAAAAABHCJ}{\bkmkend AAAAAABHCJ}
+00168   {\cf20 // Generator interface definition}\par
+{\bkmkstart AAAAAABHCK}{\bkmkend AAAAAABHCK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCL" }{}}{\fldrslt {\cs37\ul\cf2 00169}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCL" }{}}{\fldrslt {\cs37\ul\cf2 Begin}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABHCM}{\bkmkend AAAAAABHCM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCN" }{}}{\fldrslt {\cs37\ul\cf2 00170}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHCN" }{}}{\fldrslt {\cs37\ul\cf2 End}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABHCO}{\bkmkend AAAAAABHCO}
+00171 \};\par
+{\bkmkstart AAAAAABHCP}{\bkmkend AAAAAABHCP}
+00172 \par
+{\bkmkstart AAAAAABHCQ}{\bkmkend AAAAAABHCQ}
+00173 {\cf20 // Wraps ParamGeneratorInterface<T> and provides general generator syntax}\par
+{\bkmkstart AAAAAABHCR}{\bkmkend AAAAAABHCR}
+00174 {\cf20 // compatible with the STL Container concept.}\par
+{\bkmkstart AAAAAABHCS}{\bkmkend AAAAAABHCS}
+00175 {\cf20 // This class implements copy initialization semantics and the contained}\par
+{\bkmkstart AAAAAABHCT}{\bkmkend AAAAAABHCT}
+00176 {\cf20 // ParamGeneratorInterface<T> instance is shared among all copies}\par
+{\bkmkstart AAAAAABHCU}{\bkmkend AAAAAABHCU}
+00177 {\cf20 // of the original object. This is possible because that instance is immutable.}\par
+{\bkmkstart AAAAAABHCV}{\bkmkend AAAAAABHCV}
+00178 {\cf17 template}<{\cf17 typename} T>\par
+{\bkmkstart AAAAAABHCW}{\bkmkend AAAAAABHCW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 00179}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+ \{\par
+{\bkmkstart AAAAAABHCX}{\bkmkend AAAAAABHCX}
+00180  {\cf17 public}:\par
+{\bkmkstart AAAAAABHCY}{\bkmkend AAAAAABHCY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABDXJ" }{}}{\fldrslt {\cs37\ul\cf2 00181}}}
+   {\cf17 typedef} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamIterator<T>}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABDXJ" }{}}{\fldrslt {\cs37\ul\cf2 iterator}}}
+;\par
+{\bkmkstart AAAAAABHCZ}{\bkmkend AAAAAABHCZ}
+00182 \par
+{\bkmkstart AAAAAABHDA}{\bkmkend AAAAAABHDA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDB" }{}}{\fldrslt {\cs37\ul\cf2 00183}}}
+   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDB" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface<T>}}}
+* impl) : impl_(impl) \{\}\par
+{\bkmkstart AAAAAABHDC}{\bkmkend AAAAAABHDC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDD" }{}}{\fldrslt {\cs37\ul\cf2 00184}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDD" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+& other) : impl_(other.impl_) \{\}\par
+{\bkmkstart AAAAAABHDE}{\bkmkend AAAAAABHDE}
+00185 \par
+{\bkmkstart AAAAAABHDF}{\bkmkend AAAAAABHDF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDG" }{}}{\fldrslt {\cs37\ul\cf2 00186}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDG" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator}}}
+& other) \{\par
+{\bkmkstart AAAAAABHDH}{\bkmkend AAAAAABHDH}
+00187     impl_ = other.impl_;\par
+{\bkmkstart AAAAAABHDI}{\bkmkend AAAAAABHDI}
+00188     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABHDJ}{\bkmkend AAAAAABHDJ}
+00189   \}\par
+{\bkmkstart AAAAAABHDK}{\bkmkend AAAAAABHDK}
+00190 \par
+{\bkmkstart AAAAAABHDL}{\bkmkend AAAAAABHDL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDM" }{}}{\fldrslt {\cs37\ul\cf2 00191}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 iterator}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDM" }{}}{\fldrslt {\cs37\ul\cf2 begin}}}
+(){\cf17  const }\{ {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABDXJ" }{}}{\fldrslt {\cs37\ul\cf2 iterator}}}
+(impl_->Begin()); \}\par
+{\bkmkstart AAAAAABHDN}{\bkmkend AAAAAABHDN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDO" }{}}{\fldrslt {\cs37\ul\cf2 00192}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 iterator}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDO" }{}}{\fldrslt {\cs37\ul\cf2 end}}}
+(){\cf17  const }\{ {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABDXJ" }{}}{\fldrslt {\cs37\ul\cf2 iterator}}}
+(impl_->End()); \}\par
+{\bkmkstart AAAAAABHDP}{\bkmkend AAAAAABHDP}
+00193 \par
+{\bkmkstart AAAAAABHDQ}{\bkmkend AAAAAABHDQ}
+00194  {\cf17 private}:\par
+{\bkmkstart AAAAAABHDR}{\bkmkend AAAAAABHDR}
+00195   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<const ParamGeneratorInterface<T>}}}
+ > impl_;\par
+{\bkmkstart AAAAAABHDS}{\bkmkend AAAAAABHDS}
+00196 \};\par
+{\bkmkstart AAAAAABHDT}{\bkmkend AAAAAABHDT}
+00197 \par
+{\bkmkstart AAAAAABHDU}{\bkmkend AAAAAABHDU}
+00198 {\cf20 // Generates values from a range of two comparable values. Can be used to}\par
+{\bkmkstart AAAAAABHDV}{\bkmkend AAAAAABHDV}
+00199 {\cf20 // generate sequences of user-defined types that implement operator+() and}\par
+{\bkmkstart AAAAAABHDW}{\bkmkend AAAAAABHDW}
+00200 {\cf20 // operator<().}\par
+{\bkmkstart AAAAAABHDX}{\bkmkend AAAAAABHDX}
+00201 {\cf20 // This class is used in the Range() function.}\par
+{\bkmkstart AAAAAABHDY}{\bkmkend AAAAAABHDY}
+00202 {\cf17 template} <{\cf17 typename} T, {\cf17 typename} IncrementT>\par
+{\bkmkstart AAAAAABHDZ}{\bkmkend AAAAAABHDZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFW" }{}}{\fldrslt {\cs37\ul\cf2 00203}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFW" }{}}{\fldrslt {\cs37\ul\cf2 RangeGenerator}}}
+ : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface}}}
+<T> \{\par
+{\bkmkstart AAAAAABHEA}{\bkmkend AAAAAABHEA}
+00204  {\cf17 public}:\par
+{\bkmkstart AAAAAABHEB}{\bkmkend AAAAAABHEB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEC" }{}}{\fldrslt {\cs37\ul\cf2 00205}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEC" }{}}{\fldrslt {\cs37\ul\cf2 RangeGenerator}}}
+(T begin, T end, IncrementT step)\par
+{\bkmkstart AAAAAABHED}{\bkmkend AAAAAABHED}
+00206       : begin_(begin), end_(end),\par
+{\bkmkstart AAAAAABHEE}{\bkmkend AAAAAABHEE}
+00207         step_(step), end_index_(CalculateEndIndex(begin, end, step)) \{\}\par
+{\bkmkstart AAAAAABHEF}{\bkmkend AAAAAABHEF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEG" }{}}{\fldrslt {\cs37\ul\cf2 00208}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEG" }{}}{\fldrslt {\cs37\ul\cf2 ~RangeGenerator}}}
+() \{\}\par
+{\bkmkstart AAAAAABHEH}{\bkmkend AAAAAABHEH}
+00209 \par
+{\bkmkstart AAAAAABHEI}{\bkmkend AAAAAABHEI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEJ" }{}}{\fldrslt {\cs37\ul\cf2 00210}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEJ" }{}}{\fldrslt {\cs37\ul\cf2 Begin}}}
+(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHEK}{\bkmkend AAAAAABHEK}
+00211     {\cf19 return} {\cf17 new} Iterator({\cf17 this}, begin_, 0, step_);\par
+{\bkmkstart AAAAAABHEL}{\bkmkend AAAAAABHEL}
+00212   \}\par
+{\bkmkstart AAAAAABHEM}{\bkmkend AAAAAABHEM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEN" }{}}{\fldrslt {\cs37\ul\cf2 00213}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEN" }{}}{\fldrslt {\cs37\ul\cf2 End}}}
+(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHEO}{\bkmkend AAAAAABHEO}
+00214     {\cf19 return} {\cf17 new} Iterator({\cf17 this}, end_, end_index_, step_);\par
+{\bkmkstart AAAAAABHEP}{\bkmkend AAAAAABHEP}
+00215   \}\par
+{\bkmkstart AAAAAABHEQ}{\bkmkend AAAAAABHEQ}
+00216 \par
+{\bkmkstart AAAAAABHER}{\bkmkend AAAAAABHER}
+00217  {\cf17 private}:\par
+{\bkmkstart AAAAAABHES}{\bkmkend AAAAAABHES}
+00218   {\cf17 class }Iterator : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface}}}
+<T> \{\par
+{\bkmkstart AAAAAABHET}{\bkmkend AAAAAABHET}
+00219    {\cf17 public}:\par
+{\bkmkstart AAAAAABHEU}{\bkmkend AAAAAABHEU}
+00220     Iterator({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface<T>}}}
+* base, T value, {\cf18 int} index,\par
+{\bkmkstart AAAAAABHEV}{\bkmkend AAAAAABHEV}
+00221              IncrementT step)\par
+{\bkmkstart AAAAAABHEW}{\bkmkend AAAAAABHEW}
+00222         : base_(base), value_(value), index_(index), step_(step) \{\}\par
+{\bkmkstart AAAAAABHEX}{\bkmkend AAAAAABHEX}
+00223     {\cf17 virtual} ~Iterator() \{\}\par
+{\bkmkstart AAAAAABHEY}{\bkmkend AAAAAABHEY}
+00224 \par
+{\bkmkstart AAAAAABHEZ}{\bkmkend AAAAAABHEZ}
+00225     {\cf17 virtual} {\cf17 const} ParamGeneratorInterface<T>* BaseGenerator(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHFA}{\bkmkend AAAAAABHFA}
+00226       {\cf19 return} base_;\par
+{\bkmkstart AAAAAABHFB}{\bkmkend AAAAAABHFB}
+00227     \}\par
+{\bkmkstart AAAAAABHFC}{\bkmkend AAAAAABHFC}
+00228     {\cf17 virtual} {\cf18 void} Advance() \{\par
+{\bkmkstart AAAAAABHFD}{\bkmkend AAAAAABHFD}
+00229       value_ = {\cf17 static_cast<}T{\cf17 >}(value_ + step_);\par
+{\bkmkstart AAAAAABHFE}{\bkmkend AAAAAABHFE}
+00230       index_++;\par
+{\bkmkstart AAAAAABHFF}{\bkmkend AAAAAABHFF}
+00231     \}\par
+{\bkmkstart AAAAAABHFG}{\bkmkend AAAAAABHFG}
+00232     {\cf17 virtual} ParamIteratorInterface<T>* Clone(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHFH}{\bkmkend AAAAAABHFH}
+00233       {\cf19 return} {\cf17 new} Iterator(*{\cf17 this});\par
+{\bkmkstart AAAAAABHFI}{\bkmkend AAAAAABHFI}
+00234     \}\par
+{\bkmkstart AAAAAABHFJ}{\bkmkend AAAAAABHFJ}
+00235     {\cf17 virtual} {\cf17 const} T* Current(){\cf17  const }\{ {\cf19 return} &value_; \}\par
+{\bkmkstart AAAAAABHFK}{\bkmkend AAAAAABHFK}
+00236     {\cf17 virtual} {\cf18 bool} Equals({\cf17 const} ParamIteratorInterface<T>& other){\cf17  const }\{\par
+{\bkmkstart AAAAAABHFL}{\bkmkend AAAAAABHFL}
+00237       {\cf20 // Having the same base generator guarantees that the other}\par
+{\bkmkstart AAAAAABHFM}{\bkmkend AAAAAABHFM}
+00238       {\cf20 // iterator is of the same type and we can downcast.}\par
+{\bkmkstart AAAAAABHFN}{\bkmkend AAAAAABHFN}
+00239       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCC" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CHECK_}}}
+(BaseGenerator() == other.BaseGenerator())\par
+{\bkmkstart AAAAAABHFO}{\bkmkend AAAAAABHFO}
+00240           << {\cf22 "The program attempted to compare iterators "}\par
+{\bkmkstart AAAAAABHFP}{\bkmkend AAAAAABHFP}
+00241           << {\cf22 "from different generators."} << std::endl;\par
+{\bkmkstart AAAAAABHFQ}{\bkmkend AAAAAABHFQ}
+00242       {\cf17 const} {\cf18 int} other_index =\par
+{\bkmkstart AAAAAABHFR}{\bkmkend AAAAAABHFR}
+00243           CheckedDowncastToActualType<const Iterator>(&other)->index_;\par
+{\bkmkstart AAAAAABHFS}{\bkmkend AAAAAABHFS}
+00244       {\cf19 return} index_ == other_index;\par
+{\bkmkstart AAAAAABHFT}{\bkmkend AAAAAABHFT}
+00245     \}\par
+{\bkmkstart AAAAAABHFU}{\bkmkend AAAAAABHFU}
+00246 \par
+{\bkmkstart AAAAAABHFV}{\bkmkend AAAAAABHFV}
+00247    {\cf17 private}:\par
+{\bkmkstart AAAAAABHFW}{\bkmkend AAAAAABHFW}
+00248     Iterator({\cf17 const} Iterator& other)\par
+{\bkmkstart AAAAAABHFX}{\bkmkend AAAAAABHFX}
+00249         : ParamIteratorInterface<T>(),\par
+{\bkmkstart AAAAAABHFY}{\bkmkend AAAAAABHFY}
+00250           base_(other.base_), value_(other.value_), index_(other.index_),\par
+{\bkmkstart AAAAAABHFZ}{\bkmkend AAAAAABHFZ}
+00251           step_(other.step_) \{\}\par
+{\bkmkstart AAAAAABHGA}{\bkmkend AAAAAABHGA}
+00252 \par
+{\bkmkstart AAAAAABHGB}{\bkmkend AAAAAABHGB}
+00253     {\cf20 // No implementation - assignment is unsupported.}\par
+{\bkmkstart AAAAAABHGC}{\bkmkend AAAAAABHGC}
+00254     {\cf18 void} operator=({\cf17 const} Iterator& other);\par
+{\bkmkstart AAAAAABHGD}{\bkmkend AAAAAABHGD}
+00255 \par
+{\bkmkstart AAAAAABHGE}{\bkmkend AAAAAABHGE}
+00256     {\cf17 const} ParamGeneratorInterface<T>* {\cf17 const} base_;\par
+{\bkmkstart AAAAAABHGF}{\bkmkend AAAAAABHGF}
+00257     T value_;\par
+{\bkmkstart AAAAAABHGG}{\bkmkend AAAAAABHGG}
+00258     {\cf18 int} index_;\par
+{\bkmkstart AAAAAABHGH}{\bkmkend AAAAAABHGH}
+00259     {\cf17 const} IncrementT step_;\par
+{\bkmkstart AAAAAABHGI}{\bkmkend AAAAAABHGI}
+00260   \};  {\cf20 // class RangeGenerator::Iterator}\par
+{\bkmkstart AAAAAABHGJ}{\bkmkend AAAAAABHGJ}
+00261 \par
+{\bkmkstart AAAAAABHGK}{\bkmkend AAAAAABHGK}
+00262   {\cf17 static} {\cf18 int} CalculateEndIndex({\cf17 const} T& begin,\par
+{\bkmkstart AAAAAABHGL}{\bkmkend AAAAAABHGL}
+00263                                {\cf17 const} T& end,\par
+{\bkmkstart AAAAAABHGM}{\bkmkend AAAAAABHGM}
+00264                                {\cf17 const} IncrementT& step) \{\par
+{\bkmkstart AAAAAABHGN}{\bkmkend AAAAAABHGN}
+00265     {\cf18 int} end_index = 0;\par
+{\bkmkstart AAAAAABHGO}{\bkmkend AAAAAABHGO}
+00266     {\cf19 for} (T i = begin; i < end; i = static_cast<T>(i + step))\par
+{\bkmkstart AAAAAABHGP}{\bkmkend AAAAAABHGP}
+00267       end_index++;\par
+{\bkmkstart AAAAAABHGQ}{\bkmkend AAAAAABHGQ}
+00268     {\cf19 return} end_index;\par
+{\bkmkstart AAAAAABHGR}{\bkmkend AAAAAABHGR}
+00269   \}\par
+{\bkmkstart AAAAAABHGS}{\bkmkend AAAAAABHGS}
+00270 \par
+{\bkmkstart AAAAAABHGT}{\bkmkend AAAAAABHGT}
+00271   {\cf20 // No implementation - assignment is unsupported.}\par
+{\bkmkstart AAAAAABHGU}{\bkmkend AAAAAABHGU}
+00272   {\cf18 void} operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHEC" }{}}{\fldrslt {\cs37\ul\cf2 RangeGenerator}}}
+& other);\par
+{\bkmkstart AAAAAABHGV}{\bkmkend AAAAAABHGV}
+00273 \par
+{\bkmkstart AAAAAABHGW}{\bkmkend AAAAAABHGW}
+00274   {\cf17 const} T begin_;\par
+{\bkmkstart AAAAAABHGX}{\bkmkend AAAAAABHGX}
+00275   {\cf17 const} T end_;\par
+{\bkmkstart AAAAAABHGY}{\bkmkend AAAAAABHGY}
+00276   {\cf17 const} IncrementT step_;\par
+{\bkmkstart AAAAAABHGZ}{\bkmkend AAAAAABHGZ}
+00277   {\cf20 // The index for the end() iterator. All the elements in the generated}\par
+{\bkmkstart AAAAAABHHA}{\bkmkend AAAAAABHHA}
+00278   {\cf20 // sequence are indexed (0-based) to aid iterator comparison.}\par
+{\bkmkstart AAAAAABHHB}{\bkmkend AAAAAABHHB}
+00279   {\cf17 const} {\cf18 int} end_index_;\par
+{\bkmkstart AAAAAABHHC}{\bkmkend AAAAAABHHC}
+00280 \};  {\cf20 // class RangeGenerator}\par
+{\bkmkstart AAAAAABHHD}{\bkmkend AAAAAABHHD}
+00281 \par
+{\bkmkstart AAAAAABHHE}{\bkmkend AAAAAABHHE}
+00282 \par
+{\bkmkstart AAAAAABHHF}{\bkmkend AAAAAABHHF}
+00283 {\cf20 // Generates values from a pair of STL-style iterators. Used in the}\par
+{\bkmkstart AAAAAABHHG}{\bkmkend AAAAAABHHG}
+00284 {\cf20 // ValuesIn() function. The elements are copied from the source range}\par
+{\bkmkstart AAAAAABHHH}{\bkmkend AAAAAABHHH}
+00285 {\cf20 // since the source can be located on the stack, and the generator}\par
+{\bkmkstart AAAAAABHHI}{\bkmkend AAAAAABHHI}
+00286 {\cf20 // is likely to persist beyond that stack frame.}\par
+{\bkmkstart AAAAAABHHJ}{\bkmkend AAAAAABHHJ}
+00287 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABHHK}{\bkmkend AAAAAABHHK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHIR" }{}}{\fldrslt {\cs37\ul\cf2 00288}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHIR" }{}}{\fldrslt {\cs37\ul\cf2 ValuesInIteratorRangeGenerator}}}
+ : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface}}}
+<T> \{\par
+{\bkmkstart AAAAAABHHL}{\bkmkend AAAAAABHHL}
+00289  {\cf17 public}:\par
+{\bkmkstart AAAAAABHHM}{\bkmkend AAAAAABHHM}
+00290   {\cf17 template} <{\cf17 typename} ForwardIterator>\par
+{\bkmkstart AAAAAABHHN}{\bkmkend AAAAAABHHN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHO" }{}}{\fldrslt {\cs37\ul\cf2 00291}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHO" }{}}{\fldrslt {\cs37\ul\cf2 ValuesInIteratorRangeGenerator}}}
+(ForwardIterator begin, ForwardIterator end)\par
+{\bkmkstart AAAAAABHHP}{\bkmkend AAAAAABHHP}
+00292       : container_(begin, end) \{\}\par
+{\bkmkstart AAAAAABHHQ}{\bkmkend AAAAAABHHQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHR" }{}}{\fldrslt {\cs37\ul\cf2 00293}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHR" }{}}{\fldrslt {\cs37\ul\cf2 ~ValuesInIteratorRangeGenerator}}}
+() \{\}\par
+{\bkmkstart AAAAAABHHS}{\bkmkend AAAAAABHHS}
+00294 \par
+{\bkmkstart AAAAAABHHT}{\bkmkend AAAAAABHHT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHU" }{}}{\fldrslt {\cs37\ul\cf2 00295}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHU" }{}}{\fldrslt {\cs37\ul\cf2 Begin}}}
+(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHHV}{\bkmkend AAAAAABHHV}
+00296     {\cf19 return} {\cf17 new} Iterator({\cf17 this}, container_.begin());\par
+{\bkmkstart AAAAAABHHW}{\bkmkend AAAAAABHHW}
+00297   \}\par
+{\bkmkstart AAAAAABHHX}{\bkmkend AAAAAABHHX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHY" }{}}{\fldrslt {\cs37\ul\cf2 00298}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface<T>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHY" }{}}{\fldrslt {\cs37\ul\cf2 End}}}
+(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHHZ}{\bkmkend AAAAAABHHZ}
+00299     {\cf19 return} {\cf17 new} Iterator({\cf17 this}, container_.end());\par
+{\bkmkstart AAAAAABHIA}{\bkmkend AAAAAABHIA}
+00300   \}\par
+{\bkmkstart AAAAAABHIB}{\bkmkend AAAAAABHIB}
+00301 \par
+{\bkmkstart AAAAAABHIC}{\bkmkend AAAAAABHIC}
+00302  {\cf17 private}:\par
+{\bkmkstart AAAAAABHID}{\bkmkend AAAAAABHID}
+00303   {\cf17 typedef} typename ::std::vector<T> ContainerType;\par
+{\bkmkstart AAAAAABHIE}{\bkmkend AAAAAABHIE}
+00304 \par
+{\bkmkstart AAAAAABHIF}{\bkmkend AAAAAABHIF}
+00305   {\cf17 class }Iterator : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYO" }{}}{\fldrslt {\cs37\ul\cf2 ParamIteratorInterface}}}
+<T> \{\par
+{\bkmkstart AAAAAABHIG}{\bkmkend AAAAAABHIG}
+00306    {\cf17 public}:\par
+{\bkmkstart AAAAAABHIH}{\bkmkend AAAAAABHIH}
+00307     Iterator({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYH" }{}}{\fldrslt {\cs37\ul\cf2 ParamGeneratorInterface<T>}}}
+* base,\par
+{\bkmkstart AAAAAABHII}{\bkmkend AAAAAABHII}
+00308              {\cf17 typename} ContainerType::const_iterator iterator)\par
+{\bkmkstart AAAAAABHIJ}{\bkmkend AAAAAABHIJ}
+00309         : base_(base), iterator_(iterator) \{\}\par
+{\bkmkstart AAAAAABHIK}{\bkmkend AAAAAABHIK}
+00310     {\cf17 virtual} ~Iterator() \{\}\par
+{\bkmkstart AAAAAABHIL}{\bkmkend AAAAAABHIL}
+00311 \par
+{\bkmkstart AAAAAABHIM}{\bkmkend AAAAAABHIM}
+00312     {\cf17 virtual} {\cf17 const} ParamGeneratorInterface<T>* BaseGenerator(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHIN}{\bkmkend AAAAAABHIN}
+00313       {\cf19 return} base_;\par
+{\bkmkstart AAAAAABHIO}{\bkmkend AAAAAABHIO}
+00314     \}\par
+{\bkmkstart AAAAAABHIP}{\bkmkend AAAAAABHIP}
+00315     {\cf17 virtual} {\cf18 void} Advance() \{\par
+{\bkmkstart AAAAAABHIQ}{\bkmkend AAAAAABHIQ}
+00316       ++iterator_;\par
+{\bkmkstart AAAAAABHIR}{\bkmkend AAAAAABHIR}
+00317       value_.reset();\par
+{\bkmkstart AAAAAABHIS}{\bkmkend AAAAAABHIS}
+00318     \}\par
+{\bkmkstart AAAAAABHIT}{\bkmkend AAAAAABHIT}
+00319     {\cf17 virtual} ParamIteratorInterface<T>* Clone(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHIU}{\bkmkend AAAAAABHIU}
+00320       {\cf19 return} {\cf17 new} Iterator(*{\cf17 this});\par
+{\bkmkstart AAAAAABHIV}{\bkmkend AAAAAABHIV}
+00321     \}\par
+{\bkmkstart AAAAAABHIW}{\bkmkend AAAAAABHIW}
+00322     {\cf20 // We need to use cached value referenced by iterator_ because *iterator_}\par
+{\bkmkstart AAAAAABHIX}{\bkmkend AAAAAABHIX}
+00323     {\cf20 // can return a temporary object (and of type other then T), so just}\par
+{\bkmkstart AAAAAABHIY}{\bkmkend AAAAAABHIY}
+00324     {\cf20 // having "return &*iterator_;" doesn't work.}\par
+{\bkmkstart AAAAAABHIZ}{\bkmkend AAAAAABHIZ}
+00325     {\cf20 // value_ is updated here and not in Advance() because Advance()}\par
+{\bkmkstart AAAAAABHJA}{\bkmkend AAAAAABHJA}
+00326     {\cf20 // can advance iterator_ beyond the end of the range, and we cannot}\par
+{\bkmkstart AAAAAABHJB}{\bkmkend AAAAAABHJB}
+00327     {\cf20 // detect that fact. The client code, on the other hand, is}\par
+{\bkmkstart AAAAAABHJC}{\bkmkend AAAAAABHJC}
+00328     {\cf20 // responsible for not calling Current() on an out-of-range iterator.}\par
+{\bkmkstart AAAAAABHJD}{\bkmkend AAAAAABHJD}
+00329     {\cf17 virtual} {\cf17 const} T* Current(){\cf17  const }\{\par
+{\bkmkstart AAAAAABHJE}{\bkmkend AAAAAABHJE}
+00330       {\cf19 if} (value_.get() == NULL)\par
+{\bkmkstart AAAAAABHJF}{\bkmkend AAAAAABHJF}
+00331         value_.reset({\cf17 new} T(*iterator_));\par
+{\bkmkstart AAAAAABHJG}{\bkmkend AAAAAABHJG}
+00332       {\cf19 return} value_.get();\par
+{\bkmkstart AAAAAABHJH}{\bkmkend AAAAAABHJH}
+00333     \}\par
+{\bkmkstart AAAAAABHJI}{\bkmkend AAAAAABHJI}
+00334     {\cf17 virtual} {\cf18 bool} Equals({\cf17 const} ParamIteratorInterface<T>& other){\cf17  const }\{\par
+{\bkmkstart AAAAAABHJJ}{\bkmkend AAAAAABHJJ}
+00335       {\cf20 // Having the same base generator guarantees that the other}\par
+{\bkmkstart AAAAAABHJK}{\bkmkend AAAAAABHJK}
+00336       {\cf20 // iterator is of the same type and we can downcast.}\par
+{\bkmkstart AAAAAABHJL}{\bkmkend AAAAAABHJL}
+00337       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCC" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CHECK_}}}
+(BaseGenerator() == other.BaseGenerator())\par
+{\bkmkstart AAAAAABHJM}{\bkmkend AAAAAABHJM}
+00338           << {\cf22 "The program attempted to compare iterators "}\par
+{\bkmkstart AAAAAABHJN}{\bkmkend AAAAAABHJN}
+00339           << {\cf22 "from different generators."} << std::endl;\par
+{\bkmkstart AAAAAABHJO}{\bkmkend AAAAAABHJO}
+00340       {\cf19 return} iterator_ ==\par
+{\bkmkstart AAAAAABHJP}{\bkmkend AAAAAABHJP}
+00341           CheckedDowncastToActualType<const Iterator>(&other)->iterator_;\par
+{\bkmkstart AAAAAABHJQ}{\bkmkend AAAAAABHJQ}
+00342     \}\par
+{\bkmkstart AAAAAABHJR}{\bkmkend AAAAAABHJR}
+00343 \par
+{\bkmkstart AAAAAABHJS}{\bkmkend AAAAAABHJS}
+00344    {\cf17 private}:\par
+{\bkmkstart AAAAAABHJT}{\bkmkend AAAAAABHJT}
+00345     Iterator({\cf17 const} Iterator& other)\par
+{\bkmkstart AAAAAABHJU}{\bkmkend AAAAAABHJU}
+00346           {\cf20 // The explicit constructor call suppresses a false warning}\par
+{\bkmkstart AAAAAABHJV}{\bkmkend AAAAAABHJV}
+00347           {\cf20 // emitted by gcc when supplied with the -Wextra option.}\par
+{\bkmkstart AAAAAABHJW}{\bkmkend AAAAAABHJW}
+00348         : ParamIteratorInterface<T>(),\par
+{\bkmkstart AAAAAABHJX}{\bkmkend AAAAAABHJX}
+00349           base_(other.base_),\par
+{\bkmkstart AAAAAABHJY}{\bkmkend AAAAAABHJY}
+00350           iterator_(other.iterator_) \{\}\par
+{\bkmkstart AAAAAABHJZ}{\bkmkend AAAAAABHJZ}
+00351 \par
+{\bkmkstart AAAAAABHKA}{\bkmkend AAAAAABHKA}
+00352     {\cf17 const} ParamGeneratorInterface<T>* {\cf17 const} base_;\par
+{\bkmkstart AAAAAABHKB}{\bkmkend AAAAAABHKB}
+00353     {\cf17 typename} ContainerType::const_iterator iterator_;\par
+{\bkmkstart AAAAAABHKC}{\bkmkend AAAAAABHKC}
+00354     {\cf20 // A cached value of *iterator_. We keep it here to allow access by}\par
+{\bkmkstart AAAAAABHKD}{\bkmkend AAAAAABHKD}
+00355     {\cf20 // pointer in the wrapping iterator's operator->().}\par
+{\bkmkstart AAAAAABHKE}{\bkmkend AAAAAABHKE}
+00356     {\cf20 // value_ needs to be mutable to be accessed in Current().}\par
+{\bkmkstart AAAAAABHKF}{\bkmkend AAAAAABHKF}
+00357     {\cf20 // Use of scoped_ptr helps manage cached value's lifetime,}\par
+{\bkmkstart AAAAAABHKG}{\bkmkend AAAAAABHKG}
+00358     {\cf20 // which is bound by the lifespan of the iterator itself.}\par
+{\bkmkstart AAAAAABHKH}{\bkmkend AAAAAABHKH}
+00359     {\cf17 mutable} scoped_ptr<const T> value_;\par
+{\bkmkstart AAAAAABHKI}{\bkmkend AAAAAABHKI}
+00360   \};  {\cf20 // class ValuesInIteratorRangeGenerator::Iterator}\par
+{\bkmkstart AAAAAABHKJ}{\bkmkend AAAAAABHKJ}
+00361 \par
+{\bkmkstart AAAAAABHKK}{\bkmkend AAAAAABHKK}
+00362   {\cf20 // No implementation - assignment is unsupported.}\par
+{\bkmkstart AAAAAABHKL}{\bkmkend AAAAAABHKL}
+00363   {\cf18 void} operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHHO" }{}}{\fldrslt {\cs37\ul\cf2 ValuesInIteratorRangeGenerator}}}
+& other);\par
+{\bkmkstart AAAAAABHKM}{\bkmkend AAAAAABHKM}
+00364 \par
+{\bkmkstart AAAAAABHKN}{\bkmkend AAAAAABHKN}
+00365   {\cf17 const} ContainerType container_;\par
+{\bkmkstart AAAAAABHKO}{\bkmkend AAAAAABHKO}
+00366 \};  {\cf20 // class ValuesInIteratorRangeGenerator}\par
+{\bkmkstart AAAAAABHKP}{\bkmkend AAAAAABHKP}
+00367 \par
+{\bkmkstart AAAAAABHKQ}{\bkmkend AAAAAABHKQ}
+00368 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHKR}{\bkmkend AAAAAABHKR}
+00369 {\cf20 //}\par
+{\bkmkstart AAAAAABHKS}{\bkmkend AAAAAABHKS}
+00370 {\cf20 // Default parameterized test name generator, returns a string containing the}\par
+{\bkmkstart AAAAAABHKT}{\bkmkend AAAAAABHKT}
+00371 {\cf20 // integer test parameter index.}\par
+{\bkmkstart AAAAAABHKU}{\bkmkend AAAAAABHKU}
+00372 {\cf17 template} <{\cf17 class} ParamType>\par
+{\bkmkstart AAAAAABHKV}{\bkmkend AAAAAABHKV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHKW" }{}}{\fldrslt {\cs37\ul\cf2 00373}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHKW" }{}}{\fldrslt {\cs37\ul\cf2 DefaultParamName}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGWY" }{}}{\fldrslt {\cs37\ul\cf2 TestParamInfo<ParamType>}}}
+& info) \{\par
+{\bkmkstart AAAAAABHKX}{\bkmkend AAAAAABHKX}
+00374   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+ name_stream;\par
+{\bkmkstart AAAAAABHKY}{\bkmkend AAAAAABHKY}
+00375   name_stream << info.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGXE" }{}}{\fldrslt {\cs37\ul\cf2 index}}}
+;\par
+{\bkmkstart AAAAAABHKZ}{\bkmkend AAAAAABHKZ}
+00376   {\cf19 return} name_stream.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPP" }{}}{\fldrslt {\cs37\ul\cf2 GetString}}}
+();\par
+{\bkmkstart AAAAAABHLA}{\bkmkend AAAAAABHLA}
+00377 \}\par
+{\bkmkstart AAAAAABHLB}{\bkmkend AAAAAABHLB}
+00378 \par
+{\bkmkstart AAAAAABHLC}{\bkmkend AAAAAABHLC}
+00379 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHLD}{\bkmkend AAAAAABHLD}
+00380 {\cf20 //}\par
+{\bkmkstart AAAAAABHLE}{\bkmkend AAAAAABHLE}
+00381 {\cf20 // Parameterized test name overload helpers, which help the}\par
+{\bkmkstart AAAAAABHLF}{\bkmkend AAAAAABHLF}
+00382 {\cf20 // INSTANTIATE_TEST_CASE_P macro choose between the default parameterized}\par
+{\bkmkstart AAAAAABHLG}{\bkmkend AAAAAABHLG}
+00383 {\cf20 // test name generator and user param name generator.}\par
+{\bkmkstart AAAAAABHLH}{\bkmkend AAAAAABHLH}
+00384 {\cf17 template} <{\cf17 class} ParamType, {\cf17 class} ParamNameGenFunctor>\par
+{\bkmkstart AAAAAABHLI}{\bkmkend AAAAAABHLI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLJ" }{}}{\fldrslt {\cs37\ul\cf2 00385}}}
+ ParamNameGenFunctor {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLJ" }{}}{\fldrslt {\cs37\ul\cf2 GetParamNameGen}}}
+(ParamNameGenFunctor func) \{\par
+{\bkmkstart AAAAAABHLK}{\bkmkend AAAAAABHLK}
+00386   {\cf19 return} func;\par
+{\bkmkstart AAAAAABHLL}{\bkmkend AAAAAABHLL}
+00387 \}\par
+{\bkmkstart AAAAAABHLM}{\bkmkend AAAAAABHLM}
+00388 \par
+{\bkmkstart AAAAAABHLN}{\bkmkend AAAAAABHLN}
+00389 {\cf17 template} <{\cf17 class} ParamType>\par
+{\bkmkstart AAAAAABHLO}{\bkmkend AAAAAABHLO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLP" }{}}{\fldrslt {\cs37\ul\cf2 00390}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLP" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGenFunc}}}
+ \{\par
+{\bkmkstart AAAAAABHLQ}{\bkmkend AAAAAABHLQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLR" }{}}{\fldrslt {\cs37\ul\cf2 00391}}}
+   {\cf17 typedef} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLR" }{}}{\fldrslt {\cs37\ul\cf2 Type}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGWY" }{}}{\fldrslt {\cs37\ul\cf2 TestParamInfo<ParamType>}}}
+&);\par
+{\bkmkstart AAAAAABHLS}{\bkmkend AAAAAABHLS}
+00392 \};\par
+{\bkmkstart AAAAAABHLT}{\bkmkend AAAAAABHLT}
+00393 \par
+{\bkmkstart AAAAAABHLU}{\bkmkend AAAAAABHLU}
+00394 {\cf17 template} <{\cf17 class} ParamType>\par
+{\bkmkstart AAAAAABHLV}{\bkmkend AAAAAABHLV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLW" }{}}{\fldrslt {\cs37\ul\cf2 00395}}}
+ {\cf17 typename} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLP" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGenFunc<ParamType>::Type}}}
+ *{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLJ" }{}}{\fldrslt {\cs37\ul\cf2 GetParamNameGen}}}
+() \{\par
+{\bkmkstart AAAAAABHLX}{\bkmkend AAAAAABHLX}
+00396   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHKW" }{}}{\fldrslt {\cs37\ul\cf2 DefaultParamName}}}
+;\par
+{\bkmkstart AAAAAABHLY}{\bkmkend AAAAAABHLY}
+00397 \}\par
+{\bkmkstart AAAAAABHLZ}{\bkmkend AAAAAABHLZ}
+00398 \par
+{\bkmkstart AAAAAABHMA}{\bkmkend AAAAAABHMA}
+00399 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHMB}{\bkmkend AAAAAABHMB}
+00400 {\cf20 //}\par
+{\bkmkstart AAAAAABHMC}{\bkmkend AAAAAABHMC}
+00401 {\cf20 // Stores a parameter value and later creates tests parameterized with that}\par
+{\bkmkstart AAAAAABHMD}{\bkmkend AAAAAABHMD}
+00402 {\cf20 // value.}\par
+{\bkmkstart AAAAAABHME}{\bkmkend AAAAAABHME}
+00403 {\cf17 template} <{\cf17 class} TestClass>\par
+{\bkmkstart AAAAAABHMF}{\bkmkend AAAAAABHMF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCV" }{}}{\fldrslt {\cs37\ul\cf2 00404}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCV" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestFactory}}}
+ : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIK" }{}}{\fldrslt {\cs37\ul\cf2 TestFactoryBase}}}
+ \{\par
+{\bkmkstart AAAAAABHMG}{\bkmkend AAAAAABHMG}
+00405  {\cf17 public}:\par
+{\bkmkstart AAAAAABHMH}{\bkmkend AAAAAABHMH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMI" }{}}{\fldrslt {\cs37\ul\cf2 00406}}}
+   {\cf17 typedef} {\cf17 typename} TestClass::ParamType {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMI" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+;\par
+{\bkmkstart AAAAAABHMJ}{\bkmkend AAAAAABHMJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMK" }{}}{\fldrslt {\cs37\ul\cf2 00407}}}
+   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMK" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestFactory}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMI" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+ parameter) :\par
+{\bkmkstart AAAAAABHML}{\bkmkend AAAAAABHML}
+00408       parameter_(parameter) \{\}\par
+{\bkmkstart AAAAAABHMM}{\bkmkend AAAAAABHMM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMN" }{}}{\fldrslt {\cs37\ul\cf2 00409}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHCP" }{}}{\fldrslt {\cs37\ul\cf2 Test}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMN" }{}}{\fldrslt {\cs37\ul\cf2 CreateTest}}}
+() \{\par
+{\bkmkstart AAAAAABHMO}{\bkmkend AAAAAABHMO}
+00410     TestClass::SetParam(&parameter_);\par
+{\bkmkstart AAAAAABHMP}{\bkmkend AAAAAABHMP}
+00411     {\cf19 return} {\cf17 new} TestClass();\par
+{\bkmkstart AAAAAABHMQ}{\bkmkend AAAAAABHMQ}
+00412   \}\par
+{\bkmkstart AAAAAABHMR}{\bkmkend AAAAAABHMR}
+00413 \par
+{\bkmkstart AAAAAABHMS}{\bkmkend AAAAAABHMS}
+00414  {\cf17 private}:\par
+{\bkmkstart AAAAAABHMT}{\bkmkend AAAAAABHMT}
+00415   {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHMI" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+ parameter_;\par
+{\bkmkstart AAAAAABHMU}{\bkmkend AAAAAABHMU}
+00416 \par
+{\bkmkstart AAAAAABHMV}{\bkmkend AAAAAABHMV}
+00417   GTEST_DISALLOW_COPY_AND_ASSIGN_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCV" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestFactory}}}
+);\par
+{\bkmkstart AAAAAABHMW}{\bkmkend AAAAAABHMW}
+00418 \};\par
+{\bkmkstart AAAAAABHMX}{\bkmkend AAAAAABHMX}
+00419 \par
+{\bkmkstart AAAAAABHMY}{\bkmkend AAAAAABHMY}
+00420 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHMZ}{\bkmkend AAAAAABHMZ}
+00421 {\cf20 //}\par
+{\bkmkstart AAAAAABHNA}{\bkmkend AAAAAABHNA}
+00422 {\cf20 // TestMetaFactoryBase is a base class for meta-factories that create}\par
+{\bkmkstart AAAAAABHNB}{\bkmkend AAAAAABHNB}
+00423 {\cf20 // test factories for passing into MakeAndRegisterTestInfo function.}\par
+{\bkmkstart AAAAAABHNC}{\bkmkend AAAAAABHNC}
+00424 {\cf17 template} <{\cf17 class} ParamType>\par
+{\bkmkstart AAAAAABHND}{\bkmkend AAAAAABHND}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNE" }{}}{\fldrslt {\cs37\ul\cf2 00425}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNE" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactoryBase}}}
+ \{\par
+{\bkmkstart AAAAAABHNF}{\bkmkend AAAAAABHNF}
+00426  {\cf17 public}:\par
+{\bkmkstart AAAAAABHNG}{\bkmkend AAAAAABHNG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNH" }{}}{\fldrslt {\cs37\ul\cf2 00427}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNH" }{}}{\fldrslt {\cs37\ul\cf2 ~TestMetaFactoryBase}}}
+() \{\}\par
+{\bkmkstart AAAAAABHNI}{\bkmkend AAAAAABHNI}
+00428 \par
+{\bkmkstart AAAAAABHNJ}{\bkmkend AAAAAABHNJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNK" }{}}{\fldrslt {\cs37\ul\cf2 00429}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIK" }{}}{\fldrslt {\cs37\ul\cf2 TestFactoryBase}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNK" }{}}{\fldrslt {\cs37\ul\cf2 CreateTestFactory}}}
+(ParamType parameter) = 0;\par
+{\bkmkstart AAAAAABHNL}{\bkmkend AAAAAABHNL}
+00430 \};\par
+{\bkmkstart AAAAAABHNM}{\bkmkend AAAAAABHNM}
+00431 \par
+{\bkmkstart AAAAAABHNN}{\bkmkend AAAAAABHNN}
+00432 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHNO}{\bkmkend AAAAAABHNO}
+00433 {\cf20 //}\par
+{\bkmkstart AAAAAABHNP}{\bkmkend AAAAAABHNP}
+00434 {\cf20 // TestMetaFactory creates test factories for passing into}\par
+{\bkmkstart AAAAAABHNQ}{\bkmkend AAAAAABHNQ}
+00435 {\cf20 // MakeAndRegisterTestInfo function. Since MakeAndRegisterTestInfo receives}\par
+{\bkmkstart AAAAAABHNR}{\bkmkend AAAAAABHNR}
+00436 {\cf20 // ownership of test factory pointer, same factory object cannot be passed}\par
+{\bkmkstart AAAAAABHNS}{\bkmkend AAAAAABHNS}
+00437 {\cf20 // into that method twice. But ParameterizedTestCaseInfo is going to call}\par
+{\bkmkstart AAAAAABHNT}{\bkmkend AAAAAABHNT}
+00438 {\cf20 // it for each Test/Parameter value combination. Thus it needs meta factory}\par
+{\bkmkstart AAAAAABHNU}{\bkmkend AAAAAABHNU}
+00439 {\cf20 // creator class.}\par
+{\bkmkstart AAAAAABHNV}{\bkmkend AAAAAABHNV}
+00440 {\cf17 template} <{\cf17 class} TestCase>\par
+{\bkmkstart AAAAAABHNW}{\bkmkend AAAAAABHNW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNX" }{}}{\fldrslt {\cs37\ul\cf2 00441}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNX" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactory}}}
+\par
+{\bkmkstart AAAAAABHNY}{\bkmkend AAAAAABHNY}
+00442     : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNE" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactoryBase}}}
+<typename TestCase::ParamType> \{\par
+{\bkmkstart AAAAAABHNZ}{\bkmkend AAAAAABHNZ}
+00443  {\cf17 public}:\par
+{\bkmkstart AAAAAABHOA}{\bkmkend AAAAAABHOA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOB" }{}}{\fldrslt {\cs37\ul\cf2 00444}}}
+   {\cf17 typedef} {\cf17 typename} TestCase::ParamType {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOB" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+;\par
+{\bkmkstart AAAAAABHOC}{\bkmkend AAAAAABHOC}
+00445 \par
+{\bkmkstart AAAAAABHOD}{\bkmkend AAAAAABHOD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOE" }{}}{\fldrslt {\cs37\ul\cf2 00446}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOE" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactory}}}
+() \{\}\par
+{\bkmkstart AAAAAABHOF}{\bkmkend AAAAAABHOF}
+00447 \par
+{\bkmkstart AAAAAABHOG}{\bkmkend AAAAAABHOG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOH" }{}}{\fldrslt {\cs37\ul\cf2 00448}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIK" }{}}{\fldrslt {\cs37\ul\cf2 TestFactoryBase}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOH" }{}}{\fldrslt {\cs37\ul\cf2 CreateTestFactory}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHOB" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+ parameter) \{\par
+{\bkmkstart AAAAAABHOI}{\bkmkend AAAAAABHOI}
+00449     {\cf19 return} {\cf17 new} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCV" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestFactory<TestCase>}}}
+(parameter);\par
+{\bkmkstart AAAAAABHOJ}{\bkmkend AAAAAABHOJ}
+00450   \}\par
+{\bkmkstart AAAAAABHOK}{\bkmkend AAAAAABHOK}
+00451 \par
+{\bkmkstart AAAAAABHOL}{\bkmkend AAAAAABHOL}
+00452  {\cf17 private}:\par
+{\bkmkstart AAAAAABHOM}{\bkmkend AAAAAABHOM}
+00453   GTEST_DISALLOW_COPY_AND_ASSIGN_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNX" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactory}}}
+);\par
+{\bkmkstart AAAAAABHON}{\bkmkend AAAAAABHON}
+00454 \};\par
+{\bkmkstart AAAAAABHOO}{\bkmkend AAAAAABHOO}
+00455 \par
+{\bkmkstart AAAAAABHOP}{\bkmkend AAAAAABHOP}
+00456 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHOQ}{\bkmkend AAAAAABHOQ}
+00457 {\cf20 //}\par
+{\bkmkstart AAAAAABHOR}{\bkmkend AAAAAABHOR}
+00458 {\cf20 // ParameterizedTestCaseInfoBase is a generic interface}\par
+{\bkmkstart AAAAAABHOS}{\bkmkend AAAAAABHOS}
+00459 {\cf20 // to ParameterizedTestCaseInfo classes. ParameterizedTestCaseInfoBase}\par
+{\bkmkstart AAAAAABHOT}{\bkmkend AAAAAABHOT}
+00460 {\cf20 // accumulates test information provided by TEST_P macro invocations}\par
+{\bkmkstart AAAAAABHOU}{\bkmkend AAAAAABHOU}
+00461 {\cf20 // and generators provided by INSTANTIATE_TEST_CASE_P macro invocations}\par
+{\bkmkstart AAAAAABHOV}{\bkmkend AAAAAABHOV}
+00462 {\cf20 // and uses that information to register all resulting test instances}\par
+{\bkmkstart AAAAAABHOW}{\bkmkend AAAAAABHOW}
+00463 {\cf20 // in RegisterTests method. The ParameterizeTestCaseRegistry class holds}\par
+{\bkmkstart AAAAAABHOX}{\bkmkend AAAAAABHOX}
+00464 {\cf20 // a collection of pointers to the ParameterizedTestCaseInfo objects}\par
+{\bkmkstart AAAAAABHOY}{\bkmkend AAAAAABHOY}
+00465 {\cf20 // and calls RegisterTests() on each of them when asked.}\par
+{\bkmkstart AAAAAABHOZ}{\bkmkend AAAAAABHOZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPA" }{}}{\fldrslt {\cs37\ul\cf2 00466}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPA" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfoBase}}}
+ \{\par
+{\bkmkstart AAAAAABHPB}{\bkmkend AAAAAABHPB}
+00467  {\cf17 public}:\par
+{\bkmkstart AAAAAABHPC}{\bkmkend AAAAAABHPC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPD" }{}}{\fldrslt {\cs37\ul\cf2 00468}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPD" }{}}{\fldrslt {\cs37\ul\cf2 ~ParameterizedTestCaseInfoBase}}}
+() \{\}\par
+{\bkmkstart AAAAAABHPE}{\bkmkend AAAAAABHPE}
+00469 \par
+{\bkmkstart AAAAAABHPF}{\bkmkend AAAAAABHPF}
+00470   {\cf20 // Base part of test case name for display purposes.}\par
+{\bkmkstart AAAAAABHPG}{\bkmkend AAAAAABHPG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPH" }{}}{\fldrslt {\cs37\ul\cf2 00471}}}
+   {\cf17 virtual} {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPH" }{}}{\fldrslt {\cs37\ul\cf2 GetTestCaseName}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABHPI}{\bkmkend AAAAAABHPI}
+00472   {\cf20 // Test case id to verify identity.}\par
+{\bkmkstart AAAAAABHPJ}{\bkmkend AAAAAABHPJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPK" }{}}{\fldrslt {\cs37\ul\cf2 00473}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIG" }{}}{\fldrslt {\cs37\ul\cf2 TypeId}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPK" }{}}{\fldrslt {\cs37\ul\cf2 GetTestCaseTypeId}}}
+() {\cf17 const} = 0;\par
+{\bkmkstart AAAAAABHPL}{\bkmkend AAAAAABHPL}
+00474   {\cf20 // UnitTest class invokes this method to register tests in this}\par
+{\bkmkstart AAAAAABHPM}{\bkmkend AAAAAABHPM}
+00475   {\cf20 // test case right before running them in RUN_ALL_TESTS macro.}\par
+{\bkmkstart AAAAAABHPN}{\bkmkend AAAAAABHPN}
+00476   {\cf20 // This method should not be called more then once on any single}\par
+{\bkmkstart AAAAAABHPO}{\bkmkend AAAAAABHPO}
+00477   {\cf20 // instance of a ParameterizedTestCaseInfoBase derived class.}\par
+{\bkmkstart AAAAAABHPP}{\bkmkend AAAAAABHPP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPQ" }{}}{\fldrslt {\cs37\ul\cf2 00478}}}
+   {\cf17 virtual} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPQ" }{}}{\fldrslt {\cs37\ul\cf2 RegisterTests}}}
+() = 0;\par
+{\bkmkstart AAAAAABHPR}{\bkmkend AAAAAABHPR}
+00479 \par
+{\bkmkstart AAAAAABHPS}{\bkmkend AAAAAABHPS}
+00480  {\cf17 protected}:\par
+{\bkmkstart AAAAAABHPT}{\bkmkend AAAAAABHPT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPU" }{}}{\fldrslt {\cs37\ul\cf2 00481}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPU" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfoBase}}}
+() \{\}\par
+{\bkmkstart AAAAAABHPV}{\bkmkend AAAAAABHPV}
+00482 \par
+{\bkmkstart AAAAAABHPW}{\bkmkend AAAAAABHPW}
+00483  {\cf17 private}:\par
+{\bkmkstart AAAAAABHPX}{\bkmkend AAAAAABHPX}
+00484   GTEST_DISALLOW_COPY_AND_ASSIGN_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPA" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfoBase}}}
+);\par
+{\bkmkstart AAAAAABHPY}{\bkmkend AAAAAABHPY}
+00485 \};\par
+{\bkmkstart AAAAAABHPZ}{\bkmkend AAAAAABHPZ}
+00486 \par
+{\bkmkstart AAAAAABHQA}{\bkmkend AAAAAABHQA}
+00487 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHQB}{\bkmkend AAAAAABHQB}
+00488 {\cf20 //}\par
+{\bkmkstart AAAAAABHQC}{\bkmkend AAAAAABHQC}
+00489 {\cf20 // ParameterizedTestCaseInfo accumulates tests obtained from TEST_P}\par
+{\bkmkstart AAAAAABHQD}{\bkmkend AAAAAABHQD}
+00490 {\cf20 // macro invocations for a particular test case and generators}\par
+{\bkmkstart AAAAAABHQE}{\bkmkend AAAAAABHQE}
+00491 {\cf20 // obtained from INSTANTIATE_TEST_CASE_P macro invocations for that}\par
+{\bkmkstart AAAAAABHQF}{\bkmkend AAAAAABHQF}
+00492 {\cf20 // test case. It registers tests with all values generated by all}\par
+{\bkmkstart AAAAAABHQG}{\bkmkend AAAAAABHQG}
+00493 {\cf20 // generators when asked.}\par
+{\bkmkstart AAAAAABHQH}{\bkmkend AAAAAABHQH}
+00494 {\cf17 template} <{\cf17 class} TestCase>\par
+{\bkmkstart AAAAAABHQI}{\bkmkend AAAAAABHQI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQJ" }{}}{\fldrslt {\cs37\ul\cf2 00495}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQJ" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo}}}
+ : {\cf17 public} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHPA" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfoBase}}}
+ \{\par
+{\bkmkstart AAAAAABHQK}{\bkmkend AAAAAABHQK}
+00496  {\cf17 public}:\par
+{\bkmkstart AAAAAABHQL}{\bkmkend AAAAAABHQL}
+00497   {\cf20 // ParamType and GeneratorCreationFunc are private types but are required}\par
+{\bkmkstart AAAAAABHQM}{\bkmkend AAAAAABHQM}
+00498   {\cf20 // for declarations of public methods AddTestPattern() and}\par
+{\bkmkstart AAAAAABHQN}{\bkmkend AAAAAABHQN}
+00499   {\cf20 // AddTestCaseInstantiation().}\par
+{\bkmkstart AAAAAABHQO}{\bkmkend AAAAAABHQO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQP" }{}}{\fldrslt {\cs37\ul\cf2 00500}}}
+   {\cf17 typedef} {\cf17 typename} TestCase::ParamType {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQP" }{}}{\fldrslt {\cs37\ul\cf2 ParamType}}}
+;\par
+{\bkmkstart AAAAAABHQQ}{\bkmkend AAAAAABHQQ}
+00501   {\cf20 // A function that returns an instance of appropriate generator type.}\par
+{\bkmkstart AAAAAABHQR}{\bkmkend AAAAAABHQR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQS" }{}}{\fldrslt {\cs37\ul\cf2 00502}}}
+   {\cf17 typedef} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator<ParamType>}}}
+(GeneratorCreationFunc)();\par
+{\bkmkstart AAAAAABHQT}{\bkmkend AAAAAABHQT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQU" }{}}{\fldrslt {\cs37\ul\cf2 00503}}}
+   {\cf17 typedef} {\cf17 typename} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHLP" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGenFunc<ParamType>::Type}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQU" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGeneratorFunc}}}
+;\par
+{\bkmkstart AAAAAABHQV}{\bkmkend AAAAAABHQV}
+00504 \par
+{\bkmkstart AAAAAABHQW}{\bkmkend AAAAAABHQW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQX" }{}}{\fldrslt {\cs37\ul\cf2 00505}}}
+   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQX" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo}}}
+(\par
+{\bkmkstart AAAAAABHQY}{\bkmkend AAAAAABHQY}
+00506       {\cf17 const} {\cf18 char}* name, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIE" }{}}{\fldrslt {\cs37\ul\cf2 CodeLocation}}}
+ code_location)\par
+{\bkmkstart AAAAAABHQZ}{\bkmkend AAAAAABHQZ}
+00507       : test_case_name_(name), code_location_(code_location) \{\}\par
+{\bkmkstart AAAAAABHRA}{\bkmkend AAAAAABHRA}
+00508 \par
+{\bkmkstart AAAAAABHRB}{\bkmkend AAAAAABHRB}
+00509   {\cf20 // Test case base name for display purposes.}\par
+{\bkmkstart AAAAAABHRC}{\bkmkend AAAAAABHRC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRD" }{}}{\fldrslt {\cs37\ul\cf2 00510}}}
+   {\cf17 virtual} {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRD" }{}}{\fldrslt {\cs37\ul\cf2 GetTestCaseName}}}
+(){\cf17  const }\{ {\cf19 return} test_case_name_; \}\par
+{\bkmkstart AAAAAABHRE}{\bkmkend AAAAAABHRE}
+00511   {\cf20 // Test case id to verify identity.}\par
+{\bkmkstart AAAAAABHRF}{\bkmkend AAAAAABHRF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRG" }{}}{\fldrslt {\cs37\ul\cf2 00512}}}
+   {\cf17 virtual} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIG" }{}}{\fldrslt {\cs37\ul\cf2 TypeId}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRG" }{}}{\fldrslt {\cs37\ul\cf2 GetTestCaseTypeId}}}
+(){\cf17  const }\{ {\cf19 return} GetTypeId<TestCase>(); \}\par
+{\bkmkstart AAAAAABHRH}{\bkmkend AAAAAABHRH}
+00513   {\cf20 // TEST_P macro uses AddTestPattern() to record information}\par
+{\bkmkstart AAAAAABHRI}{\bkmkend AAAAAABHRI}
+00514   {\cf20 // about a single test in a LocalTestInfo structure.}\par
+{\bkmkstart AAAAAABHRJ}{\bkmkend AAAAAABHRJ}
+00515   {\cf20 // test_case_name is the base name of the test case (without invocation}\par
+{\bkmkstart AAAAAABHRK}{\bkmkend AAAAAABHRK}
+00516   {\cf20 // prefix). test_base_name is the name of an individual test without}\par
+{\bkmkstart AAAAAABHRL}{\bkmkend AAAAAABHRL}
+00517   {\cf20 // parameter index. For the test SequenceA/FooTest.DoBar/1 FooTest is}\par
+{\bkmkstart AAAAAABHRM}{\bkmkend AAAAAABHRM}
+00518   {\cf20 // test case base name and DoBar is test base name.}\par
+{\bkmkstart AAAAAABHRN}{\bkmkend AAAAAABHRN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRO" }{}}{\fldrslt {\cs37\ul\cf2 00519}}}
+   {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRO" }{}}{\fldrslt {\cs37\ul\cf2 AddTestPattern}}}
+({\cf17 const} {\cf18 char}* test_case_name,\par
+{\bkmkstart AAAAAABHRP}{\bkmkend AAAAAABHRP}
+00520                       {\cf17 const} {\cf18 char}* test_base_name,\par
+{\bkmkstart AAAAAABHRQ}{\bkmkend AAAAAABHRQ}
+00521                       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNE" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactoryBase<ParamType>}}}
+* meta_factory) \{\par
+{\bkmkstart AAAAAABHRR}{\bkmkend AAAAAABHRR}
+00522     tests_.push_back({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<TestInfo>}}}
+({\cf17 new} TestInfo(test_case_name,\par
+{\bkmkstart AAAAAABHRS}{\bkmkend AAAAAABHRS}
+00523                                                        test_base_name,\par
+{\bkmkstart AAAAAABHRT}{\bkmkend AAAAAABHRT}
+00524                                                        meta_factory)));\par
+{\bkmkstart AAAAAABHRU}{\bkmkend AAAAAABHRU}
+00525   \}\par
+{\bkmkstart AAAAAABHRV}{\bkmkend AAAAAABHRV}
+00526   {\cf20 // INSTANTIATE_TEST_CASE_P macro uses AddGenerator() to record information}\par
+{\bkmkstart AAAAAABHRW}{\bkmkend AAAAAABHRW}
+00527   {\cf20 // about a generator.}\par
+{\bkmkstart AAAAAABHRX}{\bkmkend AAAAAABHRX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRY" }{}}{\fldrslt {\cs37\ul\cf2 00528}}}
+   {\cf18 int} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRY" }{}}{\fldrslt {\cs37\ul\cf2 AddTestCaseInstantiation}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& instantiation_name,\par
+{\bkmkstart AAAAAABHRZ}{\bkmkend AAAAAABHRZ}
+00529                                GeneratorCreationFunc* func,\par
+{\bkmkstart AAAAAABHSA}{\bkmkend AAAAAABHSA}
+00530                                {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQU" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGeneratorFunc}}}
+* name_func,\par
+{\bkmkstart AAAAAABHSB}{\bkmkend AAAAAABHSB}
+00531                                {\cf17 const} {\cf18 char}* file, {\cf18 int} line) \{\par
+{\bkmkstart AAAAAABHSC}{\bkmkend AAAAAABHSC}
+00532     instantiations_.push_back(\par
+{\bkmkstart AAAAAABHSD}{\bkmkend AAAAAABHSD}
+00533         InstantiationInfo(instantiation_name, func, name_func, file, line));\par
+{\bkmkstart AAAAAABHSE}{\bkmkend AAAAAABHSE}
+00534     {\cf19 return} 0;  {\cf20 // Return value used only to run this method in namespace scope.}\par
+{\bkmkstart AAAAAABHSF}{\bkmkend AAAAAABHSF}
+00535   \}\par
+{\bkmkstart AAAAAABHSG}{\bkmkend AAAAAABHSG}
+00536   {\cf20 // UnitTest class invokes this method to register tests in this test case}\par
+{\bkmkstart AAAAAABHSH}{\bkmkend AAAAAABHSH}
+00537   {\cf20 // test cases right before running tests in RUN_ALL_TESTS macro.}\par
+{\bkmkstart AAAAAABHSI}{\bkmkend AAAAAABHSI}
+00538   {\cf20 // This method should not be called more then once on any single}\par
+{\bkmkstart AAAAAABHSJ}{\bkmkend AAAAAABHSJ}
+00539   {\cf20 // instance of a ParameterizedTestCaseInfoBase derived class.}\par
+{\bkmkstart AAAAAABHSK}{\bkmkend AAAAAABHSK}
+00540   {\cf20 // UnitTest has a guard to prevent from calling this method more then once.}\par
+{\bkmkstart AAAAAABHSL}{\bkmkend AAAAAABHSL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHSM" }{}}{\fldrslt {\cs37\ul\cf2 00541}}}
+   {\cf17 virtual} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHSM" }{}}{\fldrslt {\cs37\ul\cf2 RegisterTests}}}
+() \{\par
+{\bkmkstart AAAAAABHSN}{\bkmkend AAAAAABHSN}
+00542     {\cf19 for} ({\cf17 typename} TestInfoContainer::iterator test_it = tests_.begin();\par
+{\bkmkstart AAAAAABHSO}{\bkmkend AAAAAABHSO}
+00543          test_it != tests_.end(); ++test_it) \{\par
+{\bkmkstart AAAAAABHSP}{\bkmkend AAAAAABHSP}
+00544       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<TestInfo>}}}
+ test_info = *test_it;\par
+{\bkmkstart AAAAAABHSQ}{\bkmkend AAAAAABHSQ}
+00545       {\cf19 for} ({\cf17 typename} InstantiationContainer::iterator gen_it =\par
+{\bkmkstart AAAAAABHSR}{\bkmkend AAAAAABHSR}
+00546                instantiations_.begin(); gen_it != instantiations_.end();\par
+{\bkmkstart AAAAAABHSS}{\bkmkend AAAAAABHSS}
+00547                ++gen_it) \{\par
+{\bkmkstart AAAAAABHST}{\bkmkend AAAAAABHST}
+00548         {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& instantiation_name = gen_it->name;\par
+{\bkmkstart AAAAAABHSU}{\bkmkend AAAAAABHSU}
+00549         {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHFT" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator<ParamType>}}}
+ generator((*gen_it->generator)());\par
+{\bkmkstart AAAAAABHSV}{\bkmkend AAAAAABHSV}
+00550         {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQU" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGeneratorFunc}}}
+* name_func = gen_it->name_func;\par
+{\bkmkstart AAAAAABHSW}{\bkmkend AAAAAABHSW}
+00551         {\cf17 const} {\cf18 char}* file = gen_it->file;\par
+{\bkmkstart AAAAAABHSX}{\bkmkend AAAAAABHSX}
+00552         {\cf18 int} line = gen_it->line;\par
+{\bkmkstart AAAAAABHSY}{\bkmkend AAAAAABHSY}
+00553 \par
+{\bkmkstart AAAAAABHSZ}{\bkmkend AAAAAABHSZ}
+00554         {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ test_case_name;\par
+{\bkmkstart AAAAAABHTA}{\bkmkend AAAAAABHTA}
+00555         {\cf19 if} ( !instantiation_name.empty() )\par
+{\bkmkstart AAAAAABHTB}{\bkmkend AAAAAABHTB}
+00556           test_case_name = instantiation_name + {\cf22 "/"};\par
+{\bkmkstart AAAAAABHTC}{\bkmkend AAAAAABHTC}
+00557         test_case_name += test_info->test_case_base_name;\par
+{\bkmkstart AAAAAABHTD}{\bkmkend AAAAAABHTD}
+00558 \par
+{\bkmkstart AAAAAABHTE}{\bkmkend AAAAAABHTE}
+00559         {\cf18 size_t} i = 0;\par
+{\bkmkstart AAAAAABHTF}{\bkmkend AAAAAABHTF}
+00560         std::set<std::string> test_param_names;\par
+{\bkmkstart AAAAAABHTG}{\bkmkend AAAAAABHTG}
+00561         {\cf19 for} ({\cf17 typename} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGZZ" }{}}{\fldrslt {\cs37\ul\cf2 ParamGenerator<ParamType>::iterator}}}
+ param_it =\par
+{\bkmkstart AAAAAABHTH}{\bkmkend AAAAAABHTH}
+00562                  generator.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDM" }{}}{\fldrslt {\cs37\ul\cf2 begin}}}
+();\par
+{\bkmkstart AAAAAABHTI}{\bkmkend AAAAAABHTI}
+00563              param_it != generator.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHDO" }{}}{\fldrslt {\cs37\ul\cf2 end}}}
+(); ++param_it, ++i) \{\par
+{\bkmkstart AAAAAABHTJ}{\bkmkend AAAAAABHTJ}
+00564           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+ test_name_stream;\par
+{\bkmkstart AAAAAABHTK}{\bkmkend AAAAAABHTK}
+00565 \par
+{\bkmkstart AAAAAABHTL}{\bkmkend AAAAAABHTL}
+00566           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ param_name = name_func(\par
+{\bkmkstart AAAAAABHTM}{\bkmkend AAAAAABHTM}
+00567               {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGWY" }{}}{\fldrslt {\cs37\ul\cf2 TestParamInfo<ParamType>}}}
+(*param_it, i));\par
+{\bkmkstart AAAAAABHTN}{\bkmkend AAAAAABHTN}
+00568 \par
+{\bkmkstart AAAAAABHTO}{\bkmkend AAAAAABHTO}
+00569           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCC" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CHECK_}}}
+(IsValidParamName(param_name))\par
+{\bkmkstart AAAAAABHTP}{\bkmkend AAAAAABHTP}
+00570               << {\cf22 "Parameterized test name '"} << param_name\par
+{\bkmkstart AAAAAABHTQ}{\bkmkend AAAAAABHTQ}
+00571               << {\cf22 "' is invalid, in "} << file\par
+{\bkmkstart AAAAAABHTR}{\bkmkend AAAAAABHTR}
+00572               << {\cf22 " line "} << line << std::endl;\par
+{\bkmkstart AAAAAABHTS}{\bkmkend AAAAAABHTS}
+00573 \par
+{\bkmkstart AAAAAABHTT}{\bkmkend AAAAAABHTT}
+00574           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPCC" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CHECK_}}}
+(test_param_names.count(param_name) == 0)\par
+{\bkmkstart AAAAAABHTU}{\bkmkend AAAAAABHTU}
+00575               << {\cf22 "Duplicate parameterized test name '"} << param_name\par
+{\bkmkstart AAAAAABHTV}{\bkmkend AAAAAABHTV}
+00576               << {\cf22 "', in "} << file << {\cf22 " line "} << line << std::endl;\par
+{\bkmkstart AAAAAABHTW}{\bkmkend AAAAAABHTW}
+00577 \par
+{\bkmkstart AAAAAABHTX}{\bkmkend AAAAAABHTX}
+00578           test_param_names.insert(param_name);\par
+{\bkmkstart AAAAAABHTY}{\bkmkend AAAAAABHTY}
+00579 \par
+{\bkmkstart AAAAAABHTZ}{\bkmkend AAAAAABHTZ}
+00580           test_name_stream << test_info->test_base_name << {\cf22 "/"} << param_name;\par
+{\bkmkstart AAAAAABHUA}{\bkmkend AAAAAABHUA}
+00581           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANHY" }{}}{\fldrslt {\cs37\ul\cf2 MakeAndRegisterTestInfo}}}
+(\par
+{\bkmkstart AAAAAABHUB}{\bkmkend AAAAAABHUB}
+00582               test_case_name.c_str(),\par
+{\bkmkstart AAAAAABHUC}{\bkmkend AAAAAABHUC}
+00583               test_name_stream.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPP" }{}}{\fldrslt {\cs37\ul\cf2 GetString}}}
+().c_str(),\par
+{\bkmkstart AAAAAABHUD}{\bkmkend AAAAAABHUD}
+00584               NULL,  {\cf20 // No type parameter.}\par
+{\bkmkstart AAAAAABHUE}{\bkmkend AAAAAABHUE}
+00585               {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQV" }{}}{\fldrslt {\cs37\ul\cf2 PrintToString}}}
+(*param_it).c_str(),\par
+{\bkmkstart AAAAAABHUF}{\bkmkend AAAAAABHUF}
+00586               code_location_,\par
+{\bkmkstart AAAAAABHUG}{\bkmkend AAAAAABHUG}
+00587               {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHRG" }{}}{\fldrslt {\cs37\ul\cf2 GetTestCaseTypeId}}}
+(),\par
+{\bkmkstart AAAAAABHUH}{\bkmkend AAAAAABHUH}
+00588               TestCase::SetUpTestCase,\par
+{\bkmkstart AAAAAABHUI}{\bkmkend AAAAAABHUI}
+00589               TestCase::TearDownTestCase,\par
+{\bkmkstart AAAAAABHUJ}{\bkmkend AAAAAABHUJ}
+00590               test_info->test_meta_factory->CreateTestFactory(*param_it));\par
+{\bkmkstart AAAAAABHUK}{\bkmkend AAAAAABHUK}
+00591         \}  {\cf20 // for param_it}\par
+{\bkmkstart AAAAAABHUL}{\bkmkend AAAAAABHUL}
+00592       \}  {\cf20 // for gen_it}\par
+{\bkmkstart AAAAAABHUM}{\bkmkend AAAAAABHUM}
+00593     \}  {\cf20 // for test_it}\par
+{\bkmkstart AAAAAABHUN}{\bkmkend AAAAAABHUN}
+00594   \}  {\cf20 // RegisterTests}\par
+{\bkmkstart AAAAAABHUO}{\bkmkend AAAAAABHUO}
+00595 \par
+{\bkmkstart AAAAAABHUP}{\bkmkend AAAAAABHUP}
+00596  {\cf17 private}:\par
+{\bkmkstart AAAAAABHUQ}{\bkmkend AAAAAABHUQ}
+00597   {\cf20 // LocalTestInfo structure keeps information about a single test registered}\par
+{\bkmkstart AAAAAABHUR}{\bkmkend AAAAAABHUR}
+00598   {\cf20 // with TEST_P macro.}\par
+{\bkmkstart AAAAAABHUS}{\bkmkend AAAAAABHUS}
+00599   {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAMSH" }{}}{\fldrslt {\cs37\ul\cf2 TestInfo}}}
+ \{\par
+{\bkmkstart AAAAAABHUT}{\bkmkend AAAAAABHUT}
+00600     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAMSH" }{}}{\fldrslt {\cs37\ul\cf2 TestInfo}}}
+({\cf17 const} {\cf18 char}* a_test_case_base_name,\par
+{\bkmkstart AAAAAABHUU}{\bkmkend AAAAAABHUU}
+00601              {\cf17 const} {\cf18 char}* a_test_base_name,\par
+{\bkmkstart AAAAAABHUV}{\bkmkend AAAAAABHUV}
+00602              {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHNE" }{}}{\fldrslt {\cs37\ul\cf2 TestMetaFactoryBase<ParamType>}}}
+* a_test_meta_factory) :\par
+{\bkmkstart AAAAAABHUW}{\bkmkend AAAAAABHUW}
+00603         test_case_base_name(a_test_case_base_name),\par
+{\bkmkstart AAAAAABHUX}{\bkmkend AAAAAABHUX}
+00604         test_base_name(a_test_base_name),\par
+{\bkmkstart AAAAAABHUY}{\bkmkend AAAAAABHUY}
+00605         test_meta_factory(a_test_meta_factory) \{\}\par
+{\bkmkstart AAAAAABHUZ}{\bkmkend AAAAAABHUZ}
+00606 \par
+{\bkmkstart AAAAAABHVA}{\bkmkend AAAAAABHVA}
+00607     {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ test_case_base_name;\par
+{\bkmkstart AAAAAABHVB}{\bkmkend AAAAAABHVB}
+00608     {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ test_base_name;\par
+{\bkmkstart AAAAAABHVC}{\bkmkend AAAAAABHVC}
+00609     {\cf17 const} scoped_ptr<TestMetaFactoryBase<ParamType> > test_meta_factory;\par
+{\bkmkstart AAAAAABHVD}{\bkmkend AAAAAABHVD}
+00610   \};\par
+{\bkmkstart AAAAAABHVE}{\bkmkend AAAAAABHVE}
+00611   typedef ::std::vector<linked_ptr<TestInfo> > TestInfoContainer;\par
+{\bkmkstart AAAAAABHVF}{\bkmkend AAAAAABHVF}
+00612   {\cf20 // Records data received from INSTANTIATE_TEST_CASE_P macros:}\par
+{\bkmkstart AAAAAABHVG}{\bkmkend AAAAAABHVG}
+00613   {\cf20 //  <Instantiation name, Sequence generator creation function,}\par
+{\bkmkstart AAAAAABHVH}{\bkmkend AAAAAABHVH}
+00614   {\cf20 //     Name generator function, Source file, Source line>}\par
+{\bkmkstart AAAAAABHVI}{\bkmkend AAAAAABHVI}
+00615   {\cf17 struct }InstantiationInfo \{\par
+{\bkmkstart AAAAAABHVJ}{\bkmkend AAAAAABHVJ}
+00616       InstantiationInfo({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ &name_in,\par
+{\bkmkstart AAAAAABHVK}{\bkmkend AAAAAABHVK}
+00617                         GeneratorCreationFunc* generator_in,\par
+{\bkmkstart AAAAAABHVL}{\bkmkend AAAAAABHVL}
+00618                         {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQU" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGeneratorFunc}}}
+* name_func_in,\par
+{\bkmkstart AAAAAABHVM}{\bkmkend AAAAAABHVM}
+00619                         {\cf17 const} {\cf18 char}* file_in,\par
+{\bkmkstart AAAAAABHVN}{\bkmkend AAAAAABHVN}
+00620                         {\cf18 int} line_in)\par
+{\bkmkstart AAAAAABHVO}{\bkmkend AAAAAABHVO}
+00621           : name(name_in),\par
+{\bkmkstart AAAAAABHVP}{\bkmkend AAAAAABHVP}
+00622             generator(generator_in),\par
+{\bkmkstart AAAAAABHVQ}{\bkmkend AAAAAABHVQ}
+00623             name_func(name_func_in),\par
+{\bkmkstart AAAAAABHVR}{\bkmkend AAAAAABHVR}
+00624             file(file_in),\par
+{\bkmkstart AAAAAABHVS}{\bkmkend AAAAAABHVS}
+00625             line(line_in) \{\}\par
+{\bkmkstart AAAAAABHVT}{\bkmkend AAAAAABHVT}
+00626 \par
+{\bkmkstart AAAAAABHVU}{\bkmkend AAAAAABHVU}
+00627       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ name;\par
+{\bkmkstart AAAAAABHVV}{\bkmkend AAAAAABHVV}
+00628       GeneratorCreationFunc* generator;\par
+{\bkmkstart AAAAAABHVW}{\bkmkend AAAAAABHVW}
+00629       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQU" }{}}{\fldrslt {\cs37\ul\cf2 ParamNameGeneratorFunc}}}
+* name_func;\par
+{\bkmkstart AAAAAABHVX}{\bkmkend AAAAAABHVX}
+00630       {\cf17 const} {\cf18 char}* file;\par
+{\bkmkstart AAAAAABHVY}{\bkmkend AAAAAABHVY}
+00631       {\cf18 int} line;\par
+{\bkmkstart AAAAAABHVZ}{\bkmkend AAAAAABHVZ}
+00632   \};\par
+{\bkmkstart AAAAAABHWA}{\bkmkend AAAAAABHWA}
+00633   typedef ::std::vector<InstantiationInfo> InstantiationContainer;\par
+{\bkmkstart AAAAAABHWB}{\bkmkend AAAAAABHWB}
+00634 \par
+{\bkmkstart AAAAAABHWC}{\bkmkend AAAAAABHWC}
+00635   {\cf17 static} {\cf18 bool} IsValidParamName({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& name) \{\par
+{\bkmkstart AAAAAABHWD}{\bkmkend AAAAAABHWD}
+00636     {\cf20 // Check for empty string}\par
+{\bkmkstart AAAAAABHWE}{\bkmkend AAAAAABHWE}
+00637     {\cf19 if} (name.empty())\par
+{\bkmkstart AAAAAABHWF}{\bkmkend AAAAAABHWF}
+00638       {\cf19 return} {\cf17 false};\par
+{\bkmkstart AAAAAABHWG}{\bkmkend AAAAAABHWG}
+00639 \par
+{\bkmkstart AAAAAABHWH}{\bkmkend AAAAAABHWH}
+00640     {\cf20 // Check for invalid characters}\par
+{\bkmkstart AAAAAABHWI}{\bkmkend AAAAAABHWI}
+00641     {\cf19 for} (std::string::size_type index = 0; index < name.size(); ++index) \{\par
+{\bkmkstart AAAAAABHWJ}{\bkmkend AAAAAABHWJ}
+00642       {\cf19 if} (!isalnum(name[index]) && name[index] != {\cf23 '_'})\par
+{\bkmkstart AAAAAABHWK}{\bkmkend AAAAAABHWK}
+00643         {\cf19 return} {\cf17 false};\par
+{\bkmkstart AAAAAABHWL}{\bkmkend AAAAAABHWL}
+00644     \}\par
+{\bkmkstart AAAAAABHWM}{\bkmkend AAAAAABHWM}
+00645 \par
+{\bkmkstart AAAAAABHWN}{\bkmkend AAAAAABHWN}
+00646     {\cf19 return} {\cf17 true};\par
+{\bkmkstart AAAAAABHWO}{\bkmkend AAAAAABHWO}
+00647   \}\par
+{\bkmkstart AAAAAABHWP}{\bkmkend AAAAAABHWP}
+00648 \par
+{\bkmkstart AAAAAABHWQ}{\bkmkend AAAAAABHWQ}
+00649   {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ test_case_name_;\par
+{\bkmkstart AAAAAABHWR}{\bkmkend AAAAAABHWR}
+00650   CodeLocation code_location_;\par
+{\bkmkstart AAAAAABHWS}{\bkmkend AAAAAABHWS}
+00651   TestInfoContainer tests_;\par
+{\bkmkstart AAAAAABHWT}{\bkmkend AAAAAABHWT}
+00652   InstantiationContainer instantiations_;\par
+{\bkmkstart AAAAAABHWU}{\bkmkend AAAAAABHWU}
+00653 \par
+{\bkmkstart AAAAAABHWV}{\bkmkend AAAAAABHWV}
+00654   GTEST_DISALLOW_COPY_AND_ASSIGN_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQX" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo}}}
+);\par
+{\bkmkstart AAAAAABHWW}{\bkmkend AAAAAABHWW}
+00655 \};  {\cf20 // class ParameterizedTestCaseInfo}\par
+{\bkmkstart AAAAAABHWX}{\bkmkend AAAAAABHWX}
+00656 \par
+{\bkmkstart AAAAAABHWY}{\bkmkend AAAAAABHWY}
+00657 {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN USER CODE.}\par
+{\bkmkstart AAAAAABHWZ}{\bkmkend AAAAAABHWZ}
+00658 {\cf20 //}\par
+{\bkmkstart AAAAAABHXA}{\bkmkend AAAAAABHXA}
+00659 {\cf20 // ParameterizedTestCaseRegistry contains a map of ParameterizedTestCaseInfoBase}\par
+{\bkmkstart AAAAAABHXB}{\bkmkend AAAAAABHXB}
+00660 {\cf20 // classes accessed by test case names. TEST_P and INSTANTIATE_TEST_CASE_P}\par
+{\bkmkstart AAAAAABHXC}{\bkmkend AAAAAABHXC}
+00661 {\cf20 // macros use it to locate their corresponding ParameterizedTestCaseInfo}\par
+{\bkmkstart AAAAAABHXD}{\bkmkend AAAAAABHXD}
+00662 {\cf20 // descriptors.}\par
+{\bkmkstart AAAAAABHXE}{\bkmkend AAAAAABHXE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXF" }{}}{\fldrslt {\cs37\ul\cf2 00663}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXF" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseRegistry}}}
+ \{\par
+{\bkmkstart AAAAAABHXG}{\bkmkend AAAAAABHXG}
+00664  {\cf17 public}:\par
+{\bkmkstart AAAAAABHXH}{\bkmkend AAAAAABHXH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXI" }{}}{\fldrslt {\cs37\ul\cf2 00665}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXI" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseRegistry}}}
+() \{\}\par
+{\bkmkstart AAAAAABHXJ}{\bkmkend AAAAAABHXJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXK" }{}}{\fldrslt {\cs37\ul\cf2 00666}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXK" }{}}{\fldrslt {\cs37\ul\cf2 ~ParameterizedTestCaseRegistry}}}
+() \{\par
+{\bkmkstart AAAAAABHXL}{\bkmkend AAAAAABHXL}
+00667     {\cf19 for} (TestCaseInfoContainer::iterator it = test_case_infos_.begin();\par
+{\bkmkstart AAAAAABHXM}{\bkmkend AAAAAABHXM}
+00668          it != test_case_infos_.end(); ++it) \{\par
+{\bkmkstart AAAAAABHXN}{\bkmkend AAAAAABHXN}
+00669       {\cf17 delete} *it;\par
+{\bkmkstart AAAAAABHXO}{\bkmkend AAAAAABHXO}
+00670     \}\par
+{\bkmkstart AAAAAABHXP}{\bkmkend AAAAAABHXP}
+00671   \}\par
+{\bkmkstart AAAAAABHXQ}{\bkmkend AAAAAABHXQ}
+00672 \par
+{\bkmkstart AAAAAABHXR}{\bkmkend AAAAAABHXR}
+00673   {\cf20 // Looks up or creates and returns a structure containing information about}\par
+{\bkmkstart AAAAAABHXS}{\bkmkend AAAAAABHXS}
+00674   {\cf20 // tests and instantiations of a particular test case.}\par
+{\bkmkstart AAAAAABHXT}{\bkmkend AAAAAABHXT}
+00675   {\cf17 template} <{\cf17 class} TestCase>\par
+{\bkmkstart AAAAAABHXU}{\bkmkend AAAAAABHXU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXV" }{}}{\fldrslt {\cs37\ul\cf2 00676}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQJ" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo<TestCase>}}}
+* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXV" }{}}{\fldrslt {\cs37\ul\cf2 GetTestCasePatternHolder}}}
+(\par
+{\bkmkstart AAAAAABHXW}{\bkmkend AAAAAABHXW}
+00677       {\cf17 const} {\cf18 char}* test_case_name,\par
+{\bkmkstart AAAAAABHXX}{\bkmkend AAAAAABHXX}
+00678       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIE" }{}}{\fldrslt {\cs37\ul\cf2 CodeLocation}}}
+ code_location) \{\par
+{\bkmkstart AAAAAABHXY}{\bkmkend AAAAAABHXY}
+00679     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQJ" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo<TestCase>}}}
+* typed_test_info = NULL;\par
+{\bkmkstart AAAAAABHXZ}{\bkmkend AAAAAABHXZ}
+00680     {\cf19 for} (TestCaseInfoContainer::iterator it = test_case_infos_.begin();\par
+{\bkmkstart AAAAAABHYA}{\bkmkend AAAAAABHYA}
+00681          it != test_case_infos_.end(); ++it) \{\par
+{\bkmkstart AAAAAABHYB}{\bkmkend AAAAAABHYB}
+00682       {\cf19 if} ((*it)->GetTestCaseName() == test_case_name) \{\par
+{\bkmkstart AAAAAABHYC}{\bkmkend AAAAAABHYC}
+00683         {\cf19 if} ((*it)->GetTestCaseTypeId() != GetTypeId<TestCase>()) \{\par
+{\bkmkstart AAAAAABHYD}{\bkmkend AAAAAABHYD}
+00684           {\cf20 // Complain about incorrect usage of Google Test facilities}\par
+{\bkmkstart AAAAAABHYE}{\bkmkend AAAAAABHYE}
+00685           {\cf20 // and terminate the program since we cannot guaranty correct}\par
+{\bkmkstart AAAAAABHYF}{\bkmkend AAAAAABHYF}
+00686           {\cf20 // test case setup and tear-down in this case.}\par
+{\bkmkstart AAAAAABHYG}{\bkmkend AAAAAABHYG}
+00687           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABGYD" }{}}{\fldrslt {\cs37\ul\cf2 ReportInvalidTestCaseType}}}
+(test_case_name, code_location);\par
+{\bkmkstart AAAAAABHYH}{\bkmkend AAAAAABHYH}
+00688           {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAUUW" }{}}{\fldrslt {\cs37\ul\cf2 posix::Abort}}}
+();\par
+{\bkmkstart AAAAAABHYI}{\bkmkend AAAAAABHYI}
+00689         \} {\cf19 else} \{\par
+{\bkmkstart AAAAAABHYJ}{\bkmkend AAAAAABHYJ}
+00690           {\cf20 // At this point we are sure that the object we found is of the same}\par
+{\bkmkstart AAAAAABHYK}{\bkmkend AAAAAABHYK}
+00691           {\cf20 // type we are looking for, so we downcast it to that type}\par
+{\bkmkstart AAAAAABHYL}{\bkmkend AAAAAABHYL}
+00692           {\cf20 // without further checks.}\par
+{\bkmkstart AAAAAABHYM}{\bkmkend AAAAAABHYM}
+00693           typed_test_info = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAATEN" }{}}{\fldrslt {\cs37\ul\cf2 CheckedDowncastToActualType}}}
+<\par
+{\bkmkstart AAAAAABHYN}{\bkmkend AAAAAABHYN}
+00694               {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQJ" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo<TestCase>}}}
+ >(*it);\par
+{\bkmkstart AAAAAABHYO}{\bkmkend AAAAAABHYO}
+00695         \}\par
+{\bkmkstart AAAAAABHYP}{\bkmkend AAAAAABHYP}
+00696         {\cf19 break};\par
+{\bkmkstart AAAAAABHYQ}{\bkmkend AAAAAABHYQ}
+00697       \}\par
+{\bkmkstart AAAAAABHYR}{\bkmkend AAAAAABHYR}
+00698     \}\par
+{\bkmkstart AAAAAABHYS}{\bkmkend AAAAAABHYS}
+00699     {\cf19 if} (typed_test_info == NULL) \{\par
+{\bkmkstart AAAAAABHYT}{\bkmkend AAAAAABHYT}
+00700       typed_test_info = {\cf17 new} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHQJ" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseInfo<TestCase>}}}
+(\par
+{\bkmkstart AAAAAABHYU}{\bkmkend AAAAAABHYU}
+00701           test_case_name, code_location);\par
+{\bkmkstart AAAAAABHYV}{\bkmkend AAAAAABHYV}
+00702       test_case_infos_.push_back(typed_test_info);\par
+{\bkmkstart AAAAAABHYW}{\bkmkend AAAAAABHYW}
+00703     \}\par
+{\bkmkstart AAAAAABHYX}{\bkmkend AAAAAABHYX}
+00704     {\cf19 return} typed_test_info;\par
+{\bkmkstart AAAAAABHYY}{\bkmkend AAAAAABHYY}
+00705   \}\par
+{\bkmkstart AAAAAABHYZ}{\bkmkend AAAAAABHYZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHZA" }{}}{\fldrslt {\cs37\ul\cf2 00706}}}
+   {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHZA" }{}}{\fldrslt {\cs37\ul\cf2 RegisterTests}}}
+() \{\par
+{\bkmkstart AAAAAABHZB}{\bkmkend AAAAAABHZB}
+00707     {\cf19 for} (TestCaseInfoContainer::iterator it = test_case_infos_.begin();\par
+{\bkmkstart AAAAAABHZC}{\bkmkend AAAAAABHZC}
+00708          it != test_case_infos_.end(); ++it) \{\par
+{\bkmkstart AAAAAABHZD}{\bkmkend AAAAAABHZD}
+00709       (*it)->RegisterTests();\par
+{\bkmkstart AAAAAABHZE}{\bkmkend AAAAAABHZE}
+00710     \}\par
+{\bkmkstart AAAAAABHZF}{\bkmkend AAAAAABHZF}
+00711   \}\par
+{\bkmkstart AAAAAABHZG}{\bkmkend AAAAAABHZG}
+00712 \par
+{\bkmkstart AAAAAABHZH}{\bkmkend AAAAAABHZH}
+00713  {\cf17 private}:\par
+{\bkmkstart AAAAAABHZI}{\bkmkend AAAAAABHZI}
+00714   typedef ::std::vector<ParameterizedTestCaseInfoBase*> TestCaseInfoContainer;\par
+{\bkmkstart AAAAAABHZJ}{\bkmkend AAAAAABHZJ}
+00715 \par
+{\bkmkstart AAAAAABHZK}{\bkmkend AAAAAABHZK}
+00716   TestCaseInfoContainer test_case_infos_;\par
+{\bkmkstart AAAAAABHZL}{\bkmkend AAAAAABHZL}
+00717 \par
+{\bkmkstart AAAAAABHZM}{\bkmkend AAAAAABHZM}
+00718   GTEST_DISALLOW_COPY_AND_ASSIGN_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABHXF" }{}}{\fldrslt {\cs37\ul\cf2 ParameterizedTestCaseRegistry}}}
+);\par
+{\bkmkstart AAAAAABHZN}{\bkmkend AAAAAABHZN}
+00719 \};\par
+{\bkmkstart AAAAAABHZO}{\bkmkend AAAAAABHZO}
+00720 \par
+{\bkmkstart AAAAAABHZP}{\bkmkend AAAAAABHZP}
+00721 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAABHZQ}{\bkmkend AAAAAABHZQ}
+00722 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAABHZR}{\bkmkend AAAAAABHZR}
+00723 \par
+{\bkmkstart AAAAAABHZS}{\bkmkend AAAAAABHZS}
+00724 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PARAM_UTIL_H_}\par
+}
+}

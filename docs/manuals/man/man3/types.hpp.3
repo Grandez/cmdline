@@ -1,4 +1,4 @@
-.TH "libcmdline/include/types.hpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/include/types.hpp" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,31 +17,32 @@ libcmdline/include/types.hpp
 .ti -1c
 .RI "namespace \fBcmdline\fP"
 .br
+.RI "Public namespace to avoid naming mangling\&. "
 .in -1c
-.SS "defines"
+.SS "Macros"
 
 .in +1c
 .ti -1c
 .RI "#define \fB__CMDLINE_TYPESCPP__\fP"
 .br
 .in -1c
-.SS "Enumeraciones"
+.SS "Enumerations"
 
 .in +1c
 .ti -1c
-.RI "enum class \fBcmdline::Type\fP { \fBcmdline::Type::STRING\fP =0, \fBcmdline::Type::CHAR\fP, \fBcmdline::Type::BOOL\fP, \fBcmdline::Type::NUMBER\fP, \fBcmdline::Type::DECIMAL\fP, \fBcmdline::Type::LONGNUMBER\fP, \fBcmdline::Type::LONGDECIMAL\fP, \fBcmdline::Type::DATE\fP, \fBcmdline::Type::TIME\fP, \fBcmdline::Type::DATETIME\fP, \fBcmdline::Type::TMS\fP, \fBcmdline::Type::DIR\fP, \fBcmdline::Type::DIR_EXISTS\fP, \fBcmdline::Type::FILE\fP, \fBcmdline::Type::FILE_EXISTS\fP, \fBcmdline::Type::FLAG\fP, \fBcmdline::Type::STRING\fP =0, \fBcmdline::Type::CHAR\fP, \fBcmdline::Type::BOOL\fP, \fBcmdline::Type::NUMBER\fP, \fBcmdline::Type::DECIMAL\fP, \fBcmdline::Type::LONGNUMBER\fP, \fBcmdline::Type::LONGDECIMAL\fP, \fBcmdline::Type::DATE\fP, \fBcmdline::Type::TIME\fP, \fBcmdline::Type::DATETIME\fP, \fBcmdline::Type::TMS\fP, \fBcmdline::Type::DIR\fP, \fBcmdline::Type::DIR_EXISTS\fP, \fBcmdline::Type::FILE\fP, \fBcmdline::Type::FILE_EXISTS\fP, \fBcmdline::Type::FLAG\fP }"
+.RI "enum class \fBcmdline::Type\fP { \fBcmdline::Type::STRING\fP, \fBcmdline::Type::CHAR\fP, \fBcmdline::Type::BOOL\fP, \fBcmdline::Type::NUMBER\fP, \fBcmdline::Type::DECIMAL\fP, \fBcmdline::Type::LONGNUMBER\fP, \fBcmdline::Type::LONGDECIMAL\fP, \fBcmdline::Type::DATE\fP, \fBcmdline::Type::TIME\fP, \fBcmdline::Type::DATETIME\fP, \fBcmdline::Type::TMS\fP, \fBcmdline::Type::DIR\fP, \fBcmdline::Type::DIR_EXISTS\fP, \fBcmdline::Type::FILE\fP, \fBcmdline::Type::FILE_EXISTS\fP, \fBcmdline::Type::FLAG\fP, \fBcmdline::Type::STRING\fP, \fBcmdline::Type::CHAR\fP, \fBcmdline::Type::BOOL\fP, \fBcmdline::Type::NUMBER\fP, \fBcmdline::Type::DECIMAL\fP, \fBcmdline::Type::LONGNUMBER\fP, \fBcmdline::Type::LONGDECIMAL\fP, \fBcmdline::Type::DATE\fP, \fBcmdline::Type::TIME\fP, \fBcmdline::Type::DATETIME\fP, \fBcmdline::Type::TMS\fP, \fBcmdline::Type::DIR\fP, \fBcmdline::Type::DIR_EXISTS\fP, \fBcmdline::Type::FILE\fP, \fBcmdline::Type::FILE_EXISTS\fP, \fBcmdline::Type::FLAG\fP }"
 .br
 .RI "Define el tipo de dato esperado del parametro\&. "
 .ti -1c
 .RI "enum class \fBcmdline::Source\fP { \fBcmdline::DEFAULT\fP, \fBcmdline::ENV\fP, \fBcmdline::CMDLINE\fP, \fBcmdline::CODE\fP, \fBcmdline::AUTO\fP, \fBcmdline::DEFAULT\fP, \fBcmdline::ENV\fP, \fBcmdline::CMDLINE\fP, \fBcmdline::CODE\fP, \fBcmdline::AUTO\fP }"
 .br
 .in -1c
-.SH "Documentación de los 'defines'"
+.SH "Macro Definition Documentation"
 .PP 
 .SS "#define __CMDLINE_TYPESCPP__"
 
 .PP
-Definición en la línea \fB6\fP del archivo \fBtypes\&.hpp\fP\&.
-.SH "Autor"
+Definition at line \fB6\fP of file \fBtypes\&.hpp\fP\&.
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

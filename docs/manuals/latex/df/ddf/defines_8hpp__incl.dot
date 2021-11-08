@@ -1,0 +1,35 @@
+digraph "libcmdline/include/defines.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="libcmdline/include\l/defines.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="argument.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d04/argument_8hpp.html",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="set",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="cmdline.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dff/libcmdline_2include_2cmdline_8hpp.html",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="types.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d2a/libcmdline_2include_2types_8hpp.html",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="filesystem",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="unordered_map",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="validations.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d6e/validations_8hpp.html",tooltip=" "];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="locale",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="cmdline_exceptions.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d05/libcmdline_2include_2cmdline__exceptions_8hpp.html",tooltip=" "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="stdexcept",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="cstdarg",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+}

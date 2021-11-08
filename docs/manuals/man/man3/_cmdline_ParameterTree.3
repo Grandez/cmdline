@@ -1,4 +1,4 @@
-.TH "ParameterTree" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "ParameterTree" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,9 +20,6 @@ ParameterTree
 .br
 .ti -1c
 .RI "\fBParameterTree\fP & \fBaddBranch\fP (\fBParameterTree\fP *tree)"
-.br
-.ti -1c
-.RI "std::string \fBgetName\fP (const std::string parm, int pos=1)"
 .br
 .ti -1c
 .RI "char * \fBgetWord\fP ()"
@@ -62,67 +59,6 @@ ParameterTree
 .RI "\fBParameterTree\fP * \fBparent\fP = nullptr"
 .br
 .in -1c
-.SH "Descripción detallada"
-.PP 
-Definición en la línea \fB7\fP del archivo \fBparameter_tree\&.hpp\fP\&.
-.SH "Documentación del constructor y destructor"
-.PP 
-.SS "\fBParameterTree\fP (const char * parm, \fBParameterTree\fP * parent = \fCnullptr\fP)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB15\fP del archivo \fBparameter_tree\&.hpp\fP\&.
-.SH "Documentación de las funciones miembro"
-.PP 
-.SS "\fBParameterTree\fP & addBranch (\fBParameterTree\fP * tree)"
-
-.PP
-Definición en la línea \fB12\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "\fBParameterTree\fP & addChild (\fBParameterTree\fP * child)"
-
-.PP
-Definición en la línea \fB7\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "\fBParameterTree\fP * getChild (char letter)"
-
-.PP
-Definición en la línea \fB67\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "\fBParameterTree\fP * getNext ()"
-
-.PP
-Definición en la línea \fB59\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "char * getReversedWord ()"
-
-.PP
-Definición en la línea \fB37\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "char * getWord ()"
-
-.PP
-Definición en la línea \fB17\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "bool hasChild (char letter)"
-
-.PP
-Definición en la línea \fB63\fP del archivo \fBparameter_tree\&.cpp\fP\&.
-.SS "size_t numChildren ()\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB25\fP del archivo \fBparameter_tree\&.hpp\fP\&.
-.SS "\fBParameterTree\fP * setParent (\fBParameterTree\fP * parent)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB22\fP del archivo \fBparameter_tree\&.hpp\fP\&.
-.SH "Documentación de los datos miembro"
-.PP 
-.SS "int branchs = 0"
-
-.PP
-Definición en la línea \fB10\fP del archivo \fBparameter_tree\&.hpp\fP\&.
-.SS "char letter"
-
-.PP
-Definición en la línea \fB9\fP del archivo \fBparameter_tree\&.hpp\fP\&.
-.SS "\fBParameterTree\fP* parent = nullptr"
-
-.PP
-Definición en la línea \fB11\fP del archivo \fBparameter_tree\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

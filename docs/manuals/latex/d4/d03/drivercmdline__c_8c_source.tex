@@ -1,5 +1,5 @@
 \hypertarget{drivercmdline__c_8c_source}{}\doxysection{drivercmdline\+\_\+c.\+c}
-\label{drivercmdline__c_8c_source}\index{drivercmdline\_c.c@{drivercmdline\_c.c}}
+\label{drivercmdline__c_8c_source}\index{drivercmdline\_c/drivercmdline\_c.c@{drivercmdline\_c/drivercmdline\_c.c}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00001}00001 \textcolor{preprocessor}{\#include <stdio.h>}}
@@ -7,14 +7,14 @@
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00003}00003 }
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00004}00004 \textcolor{preprocessor}{\#include "{}cmdline.h"{}}}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00006}00006 \textcolor{keywordtype}{void} showDefinitions(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print);}
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00007}00007 \textcolor{keywordtype}{void} showFlags(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00006}00006 \textcolor{keywordtype}{void} showDefinitions(\mbox{\hyperlink{class_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00007}00007 \textcolor{keywordtype}{void} showFlags(\mbox{\hyperlink{class_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print);}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00008}00008 }
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00009}00009 \mbox{\hyperlink{struct_parm_def}{ParmDef}} parms[] = \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00009}00009 \mbox{\hyperlink{struct___parm_def}{ParmDef}} parms[] = \{}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00010}00010     \{\textcolor{stringliteral}{"{}output"{}}, FLAG, \textcolor{stringliteral}{"{}1"{}}, FALSE\}}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00011}00011     ,0x0}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00012}00012 \};}
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00013}00013 \mbox{\hyperlink{struct_cmd_line}{CmdLine}}* \mbox{\hyperlink{namespacecmdline}{cmdline}} = NULL;}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00013}00013 \mbox{\hyperlink{class_cmd_line}{CmdLine}}* \mbox{\hyperlink{namespacecmdline}{cmdline}} = NULL;}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00014}00014 }
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00015}00015 \textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv) \{}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00016}00016     printf(\textcolor{stringliteral}{"{}Hello World!\(\backslash\)n"{}});}
@@ -44,10 +44,10 @@
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00040}00040 \textcolor{comment}{*/}}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00041}00041     cmdline\_delete(\mbox{\hyperlink{namespacecmdline}{cmdline}});}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00042}00042 \}}
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00043}00043 \textcolor{keywordtype}{void} showDefinitions(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00043}00043 \textcolor{keywordtype}{void} showDefinitions(\mbox{\hyperlink{class_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print) \{}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00044}00044     printf(\textcolor{stringliteral}{"{}Checking definitions\(\backslash\)t"{}});}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00045}00045     \textcolor{keywordflow}{if} (ptr == NULL) ptr = \mbox{\hyperlink{namespacecmdline}{cmdline}} ;}
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00046}00046     \mbox{\hyperlink{struct_parameter}{Parameter}}** defs = ptr-\/>getDefinitions();}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00046}00046     \mbox{\hyperlink{struct___parameter}{Parameter}}** defs = ptr-\/>getDefinitions();}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00047}00047     \textcolor{keywordtype}{int} i = 0;}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00048}00048     \textcolor{keywordflow}{while} (defs[i]) \{}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00049}00049         \textcolor{keywordflow}{if} (print) printf(\textcolor{stringliteral}{"{}\%s"{}}, defs[i]-\/>name);}
@@ -60,10 +60,10 @@
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00056}00056         exit(1);}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00057}00057     \}}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00058}00058 \}}
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00059}00059 \textcolor{keywordtype}{void} showFlags(\mbox{\hyperlink{struct_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print) \{}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00059}00059 \textcolor{keywordtype}{void} showFlags(\mbox{\hyperlink{class_cmd_line}{CmdLine}}* ptr, \textcolor{keywordtype}{int} expected, \textcolor{keywordtype}{char} print) \{}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00060}00060     printf(\textcolor{stringliteral}{"{}Checking Flags\(\backslash\)t"{}});}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00061}00061     \textcolor{keywordflow}{if} (ptr == NULL) ptr = \mbox{\hyperlink{namespacecmdline}{cmdline}} ;}
-\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00062}00062     \mbox{\hyperlink{struct_flag}{Flag}}** flags = ptr-\/>getCurrentFlags(FALSE);}
+\DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00062}00062     \mbox{\hyperlink{struct___flag}{Flag}}** flags = ptr-\/>getCurrentFlags(FALSE);}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00063}00063     \textcolor{keywordtype}{int} i = 0;}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00064}00064     \textcolor{keywordflow}{while} (flags[i]) \{}
 \DoxyCodeLine{\Hypertarget{drivercmdline__c_8c_source_l00065}00065         \textcolor{keywordflow}{if} (print) printf(\textcolor{stringliteral}{"{}\%s"{}}, flags[i]-\/>name);}

@@ -1,40 +1,50 @@
-\hypertarget{commandline_8cpp}{}\doxysection{Referencia del Archivo libcmdline/src/commandline.cpp}
+\hypertarget{commandline_8cpp}{}\doxysection{libcmdline/src/commandline.cpp File Reference}
 \label{commandline_8cpp}\index{libcmdline/src/commandline.cpp@{libcmdline/src/commandline.cpp}}
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}commandline.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}argument.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}tools.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}validations.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cmdline\+\_\+exceptions.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}defines.\+hpp\char`\"{}}\newline
-Dependencia gráfica adjunta para commandline.\+cpp\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{db/dab/commandline_8cpp__incl}
-\end{center}
-\end{figure}
+{\ttfamily \#include \char`\"{}commandline\+\_\+aux.\+hpp\char`\"{}}\newline
+Include dependency graph for commandline.\+cpp\+:
+% FIG 0
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace__cmdline}{\+\_\+cmdline}}
-\end{DoxyCompactItemize}
-\doxysubsection*{defines}
+\begin{DoxyCompactList}\small\item\em Private namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{commandline_8cpp_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace__cmdline_aed485293dce09b7dd6ff109273b288bc}{\+\_\+cmdline\+::launch\+Help\+If\+Active}} (Command\+Line $\ast$ptr)
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
+\item 
+constexpr auto \mbox{\hyperlink{namespace__cmdline_a50c59785d8ba8f60227c17161e4df02a}{\+\_\+cmdline\+::\+OPTION\+\_\+\+OR\+\_\+\+DEFINITION}} = \textquotesingle{}/\textquotesingle{}
+\item 
+constexpr auto \mbox{\hyperlink{namespace__cmdline_a3a73267351702bd2e2d6bbef18c716a5}{\+\_\+cmdline\+::\+FLAG\+\_\+\+ACTIVE}} = \textquotesingle{}+\textquotesingle{}
+\item 
+constexpr auto \mbox{\hyperlink{namespace__cmdline_a64ee9f32d3eca39f82b3991bd7f8e622}{\+\_\+cmdline\+::\+FLAG\+\_\+\+INACTIVE}} = \textquotesingle{}-\/\textquotesingle{}
 \item 
 Parameter\+Tree $\ast$ \mbox{\hyperlink{namespace__cmdline_ad390392958a00da14168d6204e74f6a5}{\+\_\+cmdline\+::root\+Options}} \mbox{[}128\mbox{]}
 \item 
 Parameter\+Tree $\ast$ \mbox{\hyperlink{namespace__cmdline_a895dee29a8e3d7fdd55aa1f7b89d696c}{\+\_\+cmdline\+::root\+Flags}} \mbox{[}128\mbox{]}
+\item 
+char $\ast$ \mbox{\hyperlink{namespace__cmdline_ad7a92371c2502cbf9bcccc86b986c5ab}{\+\_\+cmdline\+::program\+Name}} = nullptr
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\doxysubsection{Macro Definition Documentation}
 \mbox{\Hypertarget{commandline_8cpp_af08ec37a8c99d747fb60fa15bc28678b}\label{commandline_8cpp_af08ec37a8c99d747fb60fa15bc28678b}} 
 \index{commandline.cpp@{commandline.cpp}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
 \index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!commandline.cpp@{commandline.cpp}}
@@ -43,5 +53,5 @@ Parameter\+Tree $\ast$ \mbox{\hyperlink{namespace__cmdline_a895dee29a8e3d7fdd55a
 
 
 
-Definición en la línea \mbox{\hyperlink{commandline_8cpp_source_l00001}{1}} del archivo \mbox{\hyperlink{commandline_8cpp_source}{commandline.\+cpp}}.
+Definition at line \mbox{\hyperlink{commandline_8cpp_source_l00001}{1}} of file \mbox{\hyperlink{commandline_8cpp_source}{commandline.\+cpp}}.
 

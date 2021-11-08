@@ -24,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../prompt2.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Command Line Processor<span id="projectnumber">&#160;0.2.3</span>
    </div>
@@ -164,7 +165,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (strlen(value) != pos) <span class="keywordflow">throw</span> exception(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DECIMAL);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DECIMAL);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
@@ -177,13 +178,13 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">if</span> (strlen(value) != pos) <span class="keywordflow">throw</span> exception(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// Public functions</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span>        validateEntry     (<span class="keyword">const</span> <span class="keywordtype">char</span>* parm, <span class="keyword">const</span> <span class="keywordtype">char</span>* prev) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (strlen(parm) == 1) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/dfd/classcmdline_1_1_cmd_line_exception.html">CmdLineException</a>(ERR_INV_OPTION, parm);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (strlen(parm) == 1) <span class="keywordflow">throw</span> CmdLineException(ERR_INV_OPTION, parm);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">//if (prev != nullptr) throw CmdLineException(&quot;Missing value&quot;, prev);</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">long</span>        validateNumber    (<span class="keyword">const</span> <span class="keywordtype">char</span>* value) {</div>
@@ -194,7 +195,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">if</span> (strlen(value) != pos) <span class="keywordflow">throw</span> exception(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_NUMBER);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NUMBER);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
@@ -206,7 +207,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (strlen(value) != pos) <span class="keywordflow">throw</span> exception(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_LONGNUMBER);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGNUMBER);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
@@ -231,7 +232,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DECIMAL);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DECIMAL);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            }</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
@@ -257,7 +258,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            }</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            }</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        }</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
@@ -265,11 +266,11 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordtype">char</span> strTime[9];</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        regex pat{ <span class="stringliteral">&quot;^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$&quot;</span> };</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordtype">bool</span> match = regex_search(value, pat);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">if</span> (!match) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_TIME);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">if</span> (!match) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TIME);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        vector&lt;int&gt; res = tokenizeNumber(value, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (res[0] &lt; 0 || res[0] &gt; 23) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (res[0] &lt; 0 || res[0] &gt; 23) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; 3; i++) </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">if</span> (res[i] &lt; 0 || res[i] &gt; 59) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">if</span> (res[i] &lt; 0 || res[i] &gt; 59) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        sprintf(strTime, <span class="stringliteral">&quot;%02d:%02d:%02d&quot;</span>, res[0], res[1], res[2]);</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">return</span> makeDateTime(0x0, strTime);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
@@ -277,10 +278,10 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordtype">int</span> days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordtype">int</span> day;</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">if</span> (dt[0] &lt; 1 || dt[0] &gt; 31) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">if</span> (dt[1] &lt; 1 || dt[1] &gt; 12) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">if</span> (dt[0] &lt; 1 || dt[0] &gt; 31) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">if</span> (dt[1] &lt; 1 || dt[1] &gt; 12) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] - 1];</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">if</span> (dt[0] &gt; day) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">if</span> (dt[0] &gt; day) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keyword">struct </span>tm*  validateDate      (<span class="keyword">const</span> <span class="keywordtype">char</span>* value, <span class="keywordtype">int</span> fmt) {</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordtype">char</span> strDate[11];</div>
@@ -299,7 +300,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                <span class="keywordflow">default</span>:                  pat = pat2;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        }</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordtype">bool</span> match = regex_search(value, pat);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">if</span> (!match) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DATE);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">if</span> (!match) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DATE);</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        vector&lt;int&gt; res = tokenizeNumber(value, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;[/-]&quot;</span>);</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">switch</span> (d) {</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>               <span class="keywordflow">case</span> time_base::dmy: dt = { res[0], res[1], res[2] }; <span class="keywordflow">break</span>;</div>
@@ -320,7 +321,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        vector&lt;int&gt; res;</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="comment">// Revisited. More clean by pieces</span></div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        vector&lt;string&gt; pieces = tokenize(value, <span class="stringliteral">&quot;[ \t]+&quot;</span>);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">if</span> (pieces.size() != 2) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DATETIME);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">if</span> (pieces.size() != 2) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DATETIME);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">try</span> {</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            tmDate = validateDate(pieces[0].c_str(), time_base::ymd);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            tmTime = validateTime(pieces[1].c_str());</div>
@@ -328,7 +329,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            sprintf(szTime, <span class="stringliteral">&quot;%02d:%02d:%02d&quot;</span>, tmTime-&gt;tm_hour, tmTime-&gt;tm_min, tmTime-&gt;tm_sec);</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        }</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">catch</span>(exception ex) {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">return</span> makeDateTime(szDate,szTime);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
@@ -338,7 +339,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keyword">struct </span>tm *tmDate, *tmTime;</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        vector&lt;string&gt; pieces = tokenize(value, <span class="stringliteral">&quot;-|[ \t]+&quot;</span>);</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordtype">int</span> npieces = (int) pieces.size();</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">if</span> (npieces != 2 &amp;&amp; npieces != 4) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_TMS);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">if</span> (npieces != 2 &amp;&amp; npieces != 4) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordflow">try</span> {</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <span class="keywordtype">int</span> iTime = (npieces == 2) ? 1 : 3;</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            <span class="keywordflow">if</span> (npieces == 2) tmDate = validateDate(pieces[0].c_str(), time_base::ymd);</div>
@@ -348,12 +349,12 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                tmDate = validateDate(strdt, time_base::ymd);</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            }</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            vector&lt;string&gt; tt = tokenize(pieces[iTime].c_str(), <span class="stringliteral">&quot;\\.&quot;</span>);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">if</span> (tt.size() != 2) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_TMS);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">if</span> (tt.size() != 2) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            tmTime = validateTime(tt[0].c_str());</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            validateNumber(tt[1].c_str());</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        }</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_INVALID, value);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_INVALID, value);</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        }</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">return</span> (<span class="keywordtype">char</span> *) value;</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    }</div>
@@ -367,7 +368,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">if</span> (strcmp(value, <span class="stringliteral">&quot;.&quot;</span>) == 0) <span class="keywordflow">return</span> filesystem::path(old);</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">if</span> (strcmp(value, old) == 0) <span class="keywordflow">return</span> filesystem::path(old);</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        rc = _chdir(value);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">if</span> (rc) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DIR );</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">if</span> (rc) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR );</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        ptr = getcwd(tmp, 256);</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        rc = chdir(old);</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">        #ifdef _WIN32 </span><span class="comment">// Windows is case insensitive</span></div>
@@ -376,17 +377,17 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            rc2 = strcmp(old, tmp);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">        #endif</span></div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">if</span> (rc2 == 0) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DIR);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">if</span> (rc2 == 0) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR);</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> filesystem::path(value);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    filesystem::path        validateDirExist(<span class="keyword">const</span> <span class="keywordtype">char</span>* value) {</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keyword">struct </span>stat info;</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        validateDir(value);</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordtype">int</span> rc = stat(value, &amp;info);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">if</span> (stat(value, &amp;info) != 0) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_NO_DIR);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">if</span> (stat(value, &amp;info) != 0) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NO_DIR);</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> mask = info.st_mode &amp; S_IFDIR;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        mask ^= 16384; <span class="comment">// 100 0000 0000 0000</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">if</span> (mask == 0)          <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_DIR_NOTFND);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="comment">//mask ^= 16384; // 100 0000 0000 0000</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">if</span> (mask == 0)          <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR_NOTFND);</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="comment">//if ((info.st_mode &amp; S_IFDIR) == 0)               throw CmdLineValueException(value, &quot;is not a directory&quot;);</span></div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">return</span> filesystem::path(value);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    }</div>
@@ -395,14 +396,14 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">return</span> filesystem::path(value);</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        }</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">catch</span> (exception ex) {</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_FILE);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE);</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        }</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    }</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    filesystem::path        validateFileExist (<span class="keyword">const</span> <span class="keywordtype">char</span>* value) {</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keyword">struct </span>stat info;</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        filesystem::path p = validateFile(value);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordflow">if</span> (stat(value, &amp;info) != 0) <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_FILE_NOTFND);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="keywordflow">if</span> (info.st_mode &amp; S_IFDIR)  <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">CmdLineValueException</a>(TXT_VAL_EXPECTED, value, TXT_FILE_DIR);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordflow">if</span> (stat(value, &amp;info) != 0) <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE_NOTFND);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="keywordflow">if</span> (info.st_mode &amp; S_IFDIR)  <span class="keywordflow">throw</span> CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE_DIR);</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span> p;</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordtype">void</span>        validateValue     (<span class="keyword">const</span> <span class="keywordtype">char</span>* value, Type type) {</div>
@@ -442,7 +443,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordtype">void</span> checkValue(<span class="keyword">auto</span> value) {</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="keywordflow">if</span> (value &lt; numeric_limits&lt;T&gt;::min() || value &gt; numeric_limits&lt;T&gt;::max()) {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../db/d21/classcmdline_1_1_cmd_line_invalid_type_exception.html">CmdLineInvalidTypeException</a>(<span class="keyword">typeid</span>(T).name());</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">throw</span> CmdLineInvalidTypeException(<span class="keyword">typeid</span>(T).name());</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        }</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    }</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keywordtype">int</span>  makeInteger(<span class="keyword">const</span> <span class="keywordtype">char</span> *value) {</div>
@@ -492,9 +493,6 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    }</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>}</div>
-<div class="ttc" id="aclasscmdline_1_1_cmd_line_exception_html"><div class="ttname"><a href="../../d3/dfd/classcmdline_1_1_cmd_line_exception.html">cmdline::CmdLineException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/cmdline__exceptions_8hpp_source.html#l00027">cmdline_exceptions.hpp:27</a></div></div>
-<div class="ttc" id="aclasscmdline_1_1_cmd_line_invalid_type_exception_html"><div class="ttname"><a href="../../db/d21/classcmdline_1_1_cmd_line_invalid_type_exception.html">cmdline::CmdLineInvalidTypeException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/cmdline__exceptions_8hpp_source.html#l00021">cmdline_exceptions.hpp:21</a></div></div>
-<div class="ttc" id="aclasscmdline_1_1_cmd_line_value_exception_html"><div class="ttname"><a href="../../d8/d74/classcmdline_1_1_cmd_line_value_exception.html">cmdline::CmdLineValueException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/cmdline__exceptions_8hpp_source.html#l00042">cmdline_exceptions.hpp:42</a></div></div>
 <div class="ttc" id="anamespace__cmdline_html"><div class="ttname"><a href="../../d4/d6e/namespace__cmdline.html">_cmdline</a></div><div class="ttdoc">Private namespace.</div></div>
 <div class="ttc" id="anamespacecmdline_html"><div class="ttname"><a href="../../d4/d41/namespacecmdline.html">cmdline</a></div><div class="ttdoc">Public namespace to avoid naming mangling.</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -502,7 +500,7 @@ $(document).ready(function(){initNavTree('da/dc8/validations_8cpp_source.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_fedd67a8c96aee38c54230a4e25bd216.html">libcmdline</a></li><li class="navelem"><a class="el" href="../../dir_22c122fc2e7f79841a107d96b40066fd.html">src</a></li><li class="navelem"><b>validations.cpp</b></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>validations.cpp</b></li>
     <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>

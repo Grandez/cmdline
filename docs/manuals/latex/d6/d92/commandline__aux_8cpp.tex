@@ -1,0 +1,86 @@
+\hypertarget{commandline__aux_8cpp}{}\doxysection{libcmdline/src/commandline\+\_\+aux.cpp File Reference}
+\label{commandline__aux_8cpp}\index{libcmdline/src/commandline\_aux.cpp@{libcmdline/src/commandline\_aux.cpp}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commandline\+\_\+aux.\+hpp\char`\"{}}\newline
+Include dependency graph for commandline\+\_\+aux.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{commandline__aux_8cpp_ac74430e7536c342d09c09f053f6183a2}{is\+Parameter}} (char c)
+\item 
+char \mbox{\hyperlink{commandline__aux_8cpp_aa21c6b33f6cc945083b708fb3f5f945e}{get\+First\+Character}} (const char $\ast$arg)
+\item 
+bool \mbox{\hyperlink{commandline__aux_8cpp_a3d5c1b1a4164b71bec5c2d9812149198}{is\+Config\+File}} (int argc, const char $\ast$$\ast$argv, int idx\+Argument, bool sensitive)
+\item 
+void \mbox{\hyperlink{commandline__aux_8cpp_ad78601eac92655b8d92903624628e9bd}{copy\+Parameter\+In\+Upper\+Case}} (const char $\ast$arg, bool sensitive, char $\ast$name)
+\item 
+char $\ast$ \mbox{\hyperlink{commandline__aux_8cpp_ab49241801149f606405b5a93e5c44e22}{config\+File\+In\+Command\+Line}} (int argc, const char $\ast$$\ast$argv)
+\item 
+char $\ast$ \mbox{\hyperlink{commandline__aux_8cpp_a0e68ce49e7174217e97a3d0591304763}{check\+Keyword\+Help}} (const char $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{commandline__aux_8cpp_a0e68ce49e7174217e97a3d0591304763}\label{commandline__aux_8cpp_a0e68ce49e7174217e97a3d0591304763}} 
+\index{commandline\_aux.cpp@{commandline\_aux.cpp}!checkKeywordHelp@{checkKeywordHelp}}
+\index{checkKeywordHelp@{checkKeywordHelp}!commandline\_aux.cpp@{commandline\_aux.cpp}}
+\doxysubsubsection{\texorpdfstring{checkKeywordHelp()}{checkKeywordHelp()}}
+{\footnotesize\ttfamily char $\ast$ check\+Keyword\+Help (\begin{DoxyParamCaption}\item[{const char $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline__aux_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{commandline__aux_8cpp_source}{commandline\+\_\+aux.\+cpp}}.
+
+\mbox{\Hypertarget{commandline__aux_8cpp_ab49241801149f606405b5a93e5c44e22}\label{commandline__aux_8cpp_ab49241801149f606405b5a93e5c44e22}} 
+\index{commandline\_aux.cpp@{commandline\_aux.cpp}!configFileInCommandLine@{configFileInCommandLine}}
+\index{configFileInCommandLine@{configFileInCommandLine}!commandline\_aux.cpp@{commandline\_aux.cpp}}
+\doxysubsubsection{\texorpdfstring{configFileInCommandLine()}{configFileInCommandLine()}}
+{\footnotesize\ttfamily char $\ast$ config\+File\+In\+Command\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline__aux_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{commandline__aux_8cpp_source}{commandline\+\_\+aux.\+cpp}}.
+
+\mbox{\Hypertarget{commandline__aux_8cpp_ad78601eac92655b8d92903624628e9bd}\label{commandline__aux_8cpp_ad78601eac92655b8d92903624628e9bd}} 
+\index{commandline\_aux.cpp@{commandline\_aux.cpp}!copyParameterInUpperCase@{copyParameterInUpperCase}}
+\index{copyParameterInUpperCase@{copyParameterInUpperCase}!commandline\_aux.cpp@{commandline\_aux.cpp}}
+\doxysubsubsection{\texorpdfstring{copyParameterInUpperCase()}{copyParameterInUpperCase()}}
+{\footnotesize\ttfamily void copy\+Parameter\+In\+Upper\+Case (\begin{DoxyParamCaption}\item[{const char $\ast$}]{arg,  }\item[{bool}]{sensitive,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline__aux_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{commandline__aux_8cpp_source}{commandline\+\_\+aux.\+cpp}}.
+
+\mbox{\Hypertarget{commandline__aux_8cpp_aa21c6b33f6cc945083b708fb3f5f945e}\label{commandline__aux_8cpp_aa21c6b33f6cc945083b708fb3f5f945e}} 
+\index{commandline\_aux.cpp@{commandline\_aux.cpp}!getFirstCharacter@{getFirstCharacter}}
+\index{getFirstCharacter@{getFirstCharacter}!commandline\_aux.cpp@{commandline\_aux.cpp}}
+\doxysubsubsection{\texorpdfstring{getFirstCharacter()}{getFirstCharacter()}}
+{\footnotesize\ttfamily char get\+First\+Character (\begin{DoxyParamCaption}\item[{const char $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline__aux_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{commandline__aux_8cpp_source}{commandline\+\_\+aux.\+cpp}}.
+
+\mbox{\Hypertarget{commandline__aux_8cpp_a3d5c1b1a4164b71bec5c2d9812149198}\label{commandline__aux_8cpp_a3d5c1b1a4164b71bec5c2d9812149198}} 
+\index{commandline\_aux.cpp@{commandline\_aux.cpp}!isConfigFile@{isConfigFile}}
+\index{isConfigFile@{isConfigFile}!commandline\_aux.cpp@{commandline\_aux.cpp}}
+\doxysubsubsection{\texorpdfstring{isConfigFile()}{isConfigFile()}}
+{\footnotesize\ttfamily bool is\+Config\+File (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv,  }\item[{int}]{idx\+Argument,  }\item[{bool}]{sensitive }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline__aux_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{commandline__aux_8cpp_source}{commandline\+\_\+aux.\+cpp}}.
+
+\mbox{\Hypertarget{commandline__aux_8cpp_ac74430e7536c342d09c09f053f6183a2}\label{commandline__aux_8cpp_ac74430e7536c342d09c09f053f6183a2}} 
+\index{commandline\_aux.cpp@{commandline\_aux.cpp}!isParameter@{isParameter}}
+\index{isParameter@{isParameter}!commandline\_aux.cpp@{commandline\_aux.cpp}}
+\doxysubsubsection{\texorpdfstring{isParameter()}{isParameter()}}
+{\footnotesize\ttfamily bool is\+Parameter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{commandline__aux_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{commandline__aux_8cpp_source}{commandline\+\_\+aux.\+cpp}}.
+

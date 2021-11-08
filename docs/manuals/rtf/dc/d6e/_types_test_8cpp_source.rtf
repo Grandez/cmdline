@@ -1,0 +1,701 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+TypesTest.cpp\par \pard\plain 
+{\tc\tcl2 \v testcmdline/TypesTest.cpp}
+{\xe \v testcmdline/TypesTest.cpp}
+{\bkmkstart AAAAAABQWG}
+{\bkmkend AAAAAABQWG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWH" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAABQWI}{\bkmkend AAAAAABQWI}
+00001 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPHM" }{}}{\fldrslt {\cs37\ul\cf2 pch.h}}}
+"}\par
+{\bkmkstart AAAAAABQWJ}{\bkmkend AAAAAABQWJ}
+00002 \par
+{\bkmkstart AAAAAABQWK}{\bkmkend AAAAAABQWK}
+00003 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPHP" }{}}{\fldrslt {\cs37\ul\cf2 $tool.hpp}}}
+"}\par
+{\bkmkstart AAAAAABQWL}{\bkmkend AAAAAABQWL}
+00004 \par
+{\bkmkstart AAAAAABQWM}{\bkmkend AAAAAABQWM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 00005}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKE" }{}}{\fldrslt {\cs37\ul\cf2 STRING}}}
+) \{\par
+{\bkmkstart AAAAAABQWO}{\bkmkend AAAAAABQWO}
+00006     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQWP}{\bkmkend AAAAAABQWP}
+00007     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQWQ}{\bkmkend AAAAAABQWQ}
+00008 \par
+{\bkmkstart AAAAAABQWR}{\bkmkend AAAAAABQWR}
+00009     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKE" }{}}{\fldrslt {\cs37\ul\cf2 Type::STRING}}}
+) \};\par
+{\bkmkstart AAAAAABQWS}{\bkmkend AAAAAABQWS}
+00010     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQWT}{\bkmkend AAAAAABQWT}
+00011     {\cf18 string} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRQ" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_STRING}}}
+>(opt);\par
+{\bkmkstart AAAAAABQWU}{\bkmkend AAAAAABQWU}
+00012     CmdLine::freeInstance();\par
+{\bkmkstart AAAAAABQWV}{\bkmkend AAAAAABQWV}
+00013     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, {\cf22 "123"});\par
+{\bkmkstart AAAAAABQWW}{\bkmkend AAAAAABQWW}
+00014 \}\par
+{\bkmkstart AAAAAABQWX}{\bkmkend AAAAAABQWX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWY" }{}}{\fldrslt {\cs37\ul\cf2 00015}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\cf18 string}) \{\par
+{\bkmkstart AAAAAABQWZ}{\bkmkend AAAAAABQWZ}
+00016     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQXA}{\bkmkend AAAAAABQXA}
+00017     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQXB}{\bkmkend AAAAAABQXB}
+00018 \par
+{\bkmkstart AAAAAABQXC}{\bkmkend AAAAAABQXC}
+00019     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKE" }{}}{\fldrslt {\cs37\ul\cf2 Type::STRING}}}
+) \};\par
+{\bkmkstart AAAAAABQXD}{\bkmkend AAAAAABQXD}
+00020     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQXE}{\bkmkend AAAAAABQXE}
+00021     {\cf18 string} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\cf18 string}>(opt);\par
+{\bkmkstart AAAAAABQXF}{\bkmkend AAAAAABQXF}
+00022     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, {\cf22 "123"});\par
+{\bkmkstart AAAAAABQXG}{\bkmkend AAAAAABQXG}
+00023 \}\par
+{\bkmkstart AAAAAABQXH}{\bkmkend AAAAAABQXH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQXI" }{}}{\fldrslt {\cs37\ul\cf2 00024}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\cf18 char}) \{\par
+{\bkmkstart AAAAAABQXJ}{\bkmkend AAAAAABQXJ}
+00025     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQXK}{\bkmkend AAAAAABQXK}
+00026     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQXL}{\bkmkend AAAAAABQXL}
+00027 \par
+{\bkmkstart AAAAAABQXM}{\bkmkend AAAAAABQXM}
+00028     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKE" }{}}{\fldrslt {\cs37\ul\cf2 Type::STRING}}}
+) \};\par
+{\bkmkstart AAAAAABQXN}{\bkmkend AAAAAABQXN}
+00029     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQXO}{\bkmkend AAAAAABQXO}
+00030     {\cf18 char} * res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\cf18 char} *>(opt);\par
+{\bkmkstart AAAAAABQXP}{\bkmkend AAAAAABQXP}
+00031     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(strcmp(res, {\cf22 "123"}), 0);\par
+{\bkmkstart AAAAAABQXQ}{\bkmkend AAAAAABQXQ}
+00032 \}\par
+{\bkmkstart AAAAAABQXR}{\bkmkend AAAAAABQXR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQXS" }{}}{\fldrslt {\cs37\ul\cf2 00033}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKZ" }{}}{\fldrslt {\cs37\ul\cf2 NUMBER}}}
+) \{\par
+{\bkmkstart AAAAAABQXT}{\bkmkend AAAAAABQXT}
+00034     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQXU}{\bkmkend AAAAAABQXU}
+00035     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQXV}{\bkmkend AAAAAABQXV}
+00036 \par
+{\bkmkstart AAAAAABQXW}{\bkmkend AAAAAABQXW}
+00037     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKZ" }{}}{\fldrslt {\cs37\ul\cf2 Type::NUMBER}}}
+)\};\par
+{\bkmkstart AAAAAABQXX}{\bkmkend AAAAAABQXX}
+00038     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQXY}{\bkmkend AAAAAABQXY}
+00039     {\cf18 long} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRV" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_NUMBER}}}
+>(opt);\par
+{\bkmkstart AAAAAABQXZ}{\bkmkend AAAAAABQXZ}
+00040     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, 123);\par
+{\bkmkstart AAAAAABQYA}{\bkmkend AAAAAABQYA}
+00041 \}\par
+{\bkmkstart AAAAAABQYB}{\bkmkend AAAAAABQYB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQYC" }{}}{\fldrslt {\cs37\ul\cf2 00042}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, LONG) \{\par
+{\bkmkstart AAAAAABQYD}{\bkmkend AAAAAABQYD}
+00043     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQYE}{\bkmkend AAAAAABQYE}
+00044     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQYF}{\bkmkend AAAAAABQYF}
+00045 \par
+{\bkmkstart AAAAAABQYG}{\bkmkend AAAAAABQYG}
+00046     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKZ" }{}}{\fldrslt {\cs37\ul\cf2 Type::NUMBER}}}
+) \};\par
+{\bkmkstart AAAAAABQYH}{\bkmkend AAAAAABQYH}
+00047     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQYI}{\bkmkend AAAAAABQYI}
+00048     {\cf18 long} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRX" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_LONG}}}
+>(opt);\par
+{\bkmkstart AAAAAABQYJ}{\bkmkend AAAAAABQYJ}
+00049     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, 123);\par
+{\bkmkstart AAAAAABQYK}{\bkmkend AAAAAABQYK}
+00050 \}\par
+{\bkmkstart AAAAAABQYL}{\bkmkend AAAAAABQYL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQYM" }{}}{\fldrslt {\cs37\ul\cf2 00051}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, INT) \{\par
+{\bkmkstart AAAAAABQYN}{\bkmkend AAAAAABQYN}
+00052     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQYO}{\bkmkend AAAAAABQYO}
+00053     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQYP}{\bkmkend AAAAAABQYP}
+00054 \par
+{\bkmkstart AAAAAABQYQ}{\bkmkend AAAAAABQYQ}
+00055     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKZ" }{}}{\fldrslt {\cs37\ul\cf2 Type::NUMBER}}}
+) \};\par
+{\bkmkstart AAAAAABQYR}{\bkmkend AAAAAABQYR}
+00056     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQYS}{\bkmkend AAAAAABQYS}
+00057     {\cf18 int} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRZ" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_INT}}}
+>(opt);\par
+{\bkmkstart AAAAAABQYT}{\bkmkend AAAAAABQYT}
+00058     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, 123);\par
+{\bkmkstart AAAAAABQYU}{\bkmkend AAAAAABQYU}
+00059 \}\par
+{\bkmkstart AAAAAABQYV}{\bkmkend AAAAAABQYV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQYW" }{}}{\fldrslt {\cs37\ul\cf2 00060}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\cf18 long}) \{\par
+{\bkmkstart AAAAAABQYX}{\bkmkend AAAAAABQYX}
+00061     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQYY}{\bkmkend AAAAAABQYY}
+00062     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQYZ}{\bkmkend AAAAAABQYZ}
+00063 \par
+{\bkmkstart AAAAAABQZA}{\bkmkend AAAAAABQZA}
+00064     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKZ" }{}}{\fldrslt {\cs37\ul\cf2 Type::NUMBER}}}
+) \};\par
+{\bkmkstart AAAAAABQZB}{\bkmkend AAAAAABQZB}
+00065     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQZC}{\bkmkend AAAAAABQZC}
+00066     {\cf18 long} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\cf18 long}>(opt);\par
+{\bkmkstart AAAAAABQZD}{\bkmkend AAAAAABQZD}
+00067     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, 123);\par
+{\bkmkstart AAAAAABQZE}{\bkmkend AAAAAABQZE}
+00068 \}\par
+{\bkmkstart AAAAAABQZF}{\bkmkend AAAAAABQZF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQZG" }{}}{\fldrslt {\cs37\ul\cf2 00069}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\cf18 int}) \{\par
+{\bkmkstart AAAAAABQZH}{\bkmkend AAAAAABQZH}
+00070     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQZI}{\bkmkend AAAAAABQZI}
+00071     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQZJ}{\bkmkend AAAAAABQZJ}
+00072 \par
+{\bkmkstart AAAAAABQZK}{\bkmkend AAAAAABQZK}
+00073     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKZ" }{}}{\fldrslt {\cs37\ul\cf2 Type::NUMBER}}}
+) \};\par
+{\bkmkstart AAAAAABQZL}{\bkmkend AAAAAABQZL}
+00074     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQZM}{\bkmkend AAAAAABQZM}
+00075     {\cf18 int} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\cf18 long}>(opt);\par
+{\bkmkstart AAAAAABQZN}{\bkmkend AAAAAABQZN}
+00076     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res, 123);\par
+{\bkmkstart AAAAAABQZO}{\bkmkend AAAAAABQZO}
+00077 \}\par
+{\bkmkstart AAAAAABQZP}{\bkmkend AAAAAABQZP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQZQ" }{}}{\fldrslt {\cs37\ul\cf2 00078}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKY" }{}}{\fldrslt {\cs37\ul\cf2 DECIMAL}}}
+) \{\par
+{\bkmkstart AAAAAABQZR}{\bkmkend AAAAAABQZR}
+00079     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABQZS}{\bkmkend AAAAAABQZS}
+00080     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABQZT}{\bkmkend AAAAAABQZT}
+00081 \par
+{\bkmkstart AAAAAABQZU}{\bkmkend AAAAAABQZU}
+00082     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(opt, ({\cf17 const} {\cf18 char}*){\cf22 "123.456"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKY" }{}}{\fldrslt {\cs37\ul\cf2 Type::DECIMAL}}}
+) \};\par
+{\bkmkstart AAAAAABQZV}{\bkmkend AAAAAABQZV}
+00083     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABQZW}{\bkmkend AAAAAABQZW}
+00084     {\cf18 double} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABSB" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_DECIMAL}}}
+>({\cf22 "opt"});\par
+{\bkmkstart AAAAAABQZX}{\bkmkend AAAAAABQZX}
+00085     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPOE" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_DOUBLE_EQ}}}
+(res, 123.456f);\par
+{\bkmkstart AAAAAABQZY}{\bkmkend AAAAAABQZY}
+00086 \}\par
+{\bkmkstart AAAAAABQZZ}{\bkmkend AAAAAABQZZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRAA" }{}}{\fldrslt {\cs37\ul\cf2 00087}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, FLOAT) \{\par
+{\bkmkstart AAAAAABRAB}{\bkmkend AAAAAABRAB}
+00088     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABRAC}{\bkmkend AAAAAABRAC}
+00089     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABRAD}{\bkmkend AAAAAABRAD}
+00090 \par
+{\bkmkstart AAAAAABRAE}{\bkmkend AAAAAABRAE}
+00091     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "123.456"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKY" }{}}{\fldrslt {\cs37\ul\cf2 Type::DECIMAL}}}
+) \};\par
+{\bkmkstart AAAAAABRAF}{\bkmkend AAAAAABRAF}
+00092     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABRAG}{\bkmkend AAAAAABRAG}
+00093     {\cf18 float} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABSD" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_FLOAT}}}
+>(({\cf17 const} {\cf18 char}*){\cf22 "opt"});\par
+{\bkmkstart AAAAAABRAH}{\bkmkend AAAAAABRAH}
+00094     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPNZ" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_FLOAT_EQ}}}
+(res, 123.456f);\par
+{\bkmkstart AAAAAABRAI}{\bkmkend AAAAAABRAI}
+00095 \}\par
+{\bkmkstart AAAAAABRAJ}{\bkmkend AAAAAABRAJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRAK" }{}}{\fldrslt {\cs37\ul\cf2 00096}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\cf18 float}) \{\par
+{\bkmkstart AAAAAABRAL}{\bkmkend AAAAAABRAL}
+00097     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABRAM}{\bkmkend AAAAAABRAM}
+00098     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABRAN}{\bkmkend AAAAAABRAN}
+00099 \par
+{\bkmkstart AAAAAABRAO}{\bkmkend AAAAAABRAO}
+00100     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "123.456"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABKY" }{}}{\fldrslt {\cs37\ul\cf2 Type::DECIMAL}}}
+) \};\par
+{\bkmkstart AAAAAABRAP}{\bkmkend AAAAAABRAP}
+00101     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABRAQ}{\bkmkend AAAAAABRAQ}
+00102     {\cf18 float} res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\cf18 float}>(({\cf17 const} {\cf18 char}*){\cf22 "opt"});\par
+{\bkmkstart AAAAAABRAR}{\bkmkend AAAAAABRAR}
+00103     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPNZ" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_FLOAT_EQ}}}
+(res, 123.456f);\par
+{\bkmkstart AAAAAABRAS}{\bkmkend AAAAAABRAS}
+00104 \}\par
+{\bkmkstart AAAAAABRAT}{\bkmkend AAAAAABRAT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRAU" }{}}{\fldrslt {\cs37\ul\cf2 00105}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLD" }{}}{\fldrslt {\cs37\ul\cf2 DATE}}}
+) \{\par
+{\bkmkstart AAAAAABRAV}{\bkmkend AAAAAABRAV}
+00106     std::locale::global(std::locale({\cf22 "es_ES.utf8"}));\par
+{\bkmkstart AAAAAABRAW}{\bkmkend AAAAAABRAW}
+00107     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABRAX}{\bkmkend AAAAAABRAX}
+00108     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABRAY}{\bkmkend AAAAAABRAY}
+00109 \par
+{\bkmkstart AAAAAABRAZ}{\bkmkend AAAAAABRAZ}
+00110     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "01/02/2021"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLD" }{}}{\fldrslt {\cs37\ul\cf2 Type::DATE}}}
+) \};\par
+{\bkmkstart AAAAAABRBA}{\bkmkend AAAAAABRBA}
+00111     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABRBB}{\bkmkend AAAAAABRBB}
+00112     {\cf17 struct }tm res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABSL" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_DATE}}}
+>(({\cf17 const} {\cf18 char}*){\cf22 "opt"});\par
+{\bkmkstart AAAAAABRBC}{\bkmkend AAAAAABRBC}
+00113     std::locale::global(std::locale());\par
+{\bkmkstart AAAAAABRBD}{\bkmkend AAAAAABRBD}
+00114     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res.tm_mday, 1);\par
+{\bkmkstart AAAAAABRBE}{\bkmkend AAAAAABRBE}
+00115 \}\par
+{\bkmkstart AAAAAABRBF}{\bkmkend AAAAAABRBF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRBG" }{}}{\fldrslt {\cs37\ul\cf2 00116}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLE" }{}}{\fldrslt {\cs37\ul\cf2 TIME}}}
+) \{\par
+{\bkmkstart AAAAAABRBH}{\bkmkend AAAAAABRBH}
+00117     std::locale::global(std::locale({\cf22 "es_ES.utf8"}));\par
+{\bkmkstart AAAAAABRBI}{\bkmkend AAAAAABRBI}
+00118     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABRBJ}{\bkmkend AAAAAABRBJ}
+00119     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABRBK}{\bkmkend AAAAAABRBK}
+00120 \par
+{\bkmkstart AAAAAABRBL}{\bkmkend AAAAAABRBL}
+00121     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "01:02:03"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLE" }{}}{\fldrslt {\cs37\ul\cf2 Type::TIME}}}
+) \};\par
+{\bkmkstart AAAAAABRBM}{\bkmkend AAAAAABRBM}
+00122     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABRBN}{\bkmkend AAAAAABRBN}
+00123     {\cf17 struct }tm res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABSN" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_TIME}}}
+>(({\cf17 const} {\cf18 char}*){\cf22 "opt"});\par
+{\bkmkstart AAAAAABRBO}{\bkmkend AAAAAABRBO}
+00124     std::locale::global(std::locale());\par
+{\bkmkstart AAAAAABRBP}{\bkmkend AAAAAABRBP}
+00125     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res.tm_min, 2);\par
+{\bkmkstart AAAAAABRBQ}{\bkmkend AAAAAABRBQ}
+00126 \}\par
+{\bkmkstart AAAAAABRBR}{\bkmkend AAAAAABRBR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRBS" }{}}{\fldrslt {\cs37\ul\cf2 00127}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLF" }{}}{\fldrslt {\cs37\ul\cf2 DATETIME}}}
+) \{\par
+{\bkmkstart AAAAAABRBT}{\bkmkend AAAAAABRBT}
+00128     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABRBU}{\bkmkend AAAAAABRBU}
+00129     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABRBV}{\bkmkend AAAAAABRBV}
+00130 \par
+{\bkmkstart AAAAAABRBW}{\bkmkend AAAAAABRBW}
+00131     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "2021-10-11 01:02:03"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLF" }{}}{\fldrslt {\cs37\ul\cf2 Type::DATETIME}}}
+) \};\par
+{\bkmkstart AAAAAABRBX}{\bkmkend AAAAAABRBX}
+00132     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAFS" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABRBY}{\bkmkend AAAAAABRBY}
+00133     {\cf17 struct }tm res = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABSP" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_DATETIME}}}
+>(({\cf17 const} {\cf18 char}*){\cf22 "opt"});\par
+{\bkmkstart AAAAAABRBZ}{\bkmkend AAAAAABRBZ}
+00134     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res.tm_min, 2);\par
+{\bkmkstart AAAAAABRCA}{\bkmkend AAAAAABRCA}
+00135     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPIY" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_EQ}}}
+(res.tm_mon, 9);\par
+{\bkmkstart AAAAAABRCB}{\bkmkend AAAAAABRCB}
+00136 \}\par
+{\bkmkstart AAAAAABRCC}{\bkmkend AAAAAABRCC}
+00137 \par
+{\bkmkstart AAAAAABRCD}{\bkmkend AAAAAABRCD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRCE" }{}}{\fldrslt {\cs37\ul\cf2 00138}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABQWN" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Types, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLG" }{}}{\fldrslt {\cs37\ul\cf2 TMS}}}
+) \{\par
+{\bkmkstart AAAAAABRCF}{\bkmkend AAAAAABRCF}
+00139     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIP" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+();\par
+{\bkmkstart AAAAAABRCG}{\bkmkend AAAAAABRCG}
+00140     {\cf17 const} {\cf18 char}* opt = {\cf22 "opt"};\par
+{\bkmkstart AAAAAABRCH}{\bkmkend AAAAAABRCH}
+00141 \par
+{\bkmkstart AAAAAABRCI}{\bkmkend AAAAAABRCI}
+00142     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAKL" }{}}{\fldrslt {\cs37\ul\cf2 Parameters}}}
+  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+ = \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAJU" }{}}{\fldrslt {\cs37\ul\cf2 ParmOption}}}
+(({\cf17 const} {\cf18 char}*){\cf22 "opt"}, ({\cf17 const} {\cf18 char}*){\cf22 "2021-10-11 01:02:03.456"}, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABLG" }{}}{\fldrslt {\cs37\ul\cf2 Type::TMS}}}
+) \};\par
+{\bkmkstart AAAAAABRCJ}{\bkmkend AAAAAABRCJ}
+00143     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAADX" }{}}{\fldrslt {\cs37\ul\cf2 CmdLine}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+ = CmdLine::getInstance({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPID" }{}}{\fldrslt {\cs37\ul\cf2 argc}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPKZ" }{}}{\fldrslt {\cs37\ul\cf2 tool}}}
+.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPIA" }{}}{\fldrslt {\cs37\ul\cf2 argv}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAO" }{}}{\fldrslt {\cs37\ul\cf2 parms}}}
+);\par
+{\bkmkstart AAAAAABRCK}{\bkmkend AAAAAABRCK}
+00144     {\cf18 char} *tms = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+.getOptionAs<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABSR" }{}}{\fldrslt {\cs37\ul\cf2 TYPE_TMS}}}
+>(({\cf17 const} {\cf18 char}*){\cf22 "opt"});\par
+{\bkmkstart AAAAAABRCL}{\bkmkend AAAAAABRCL}
+00145     CmdLine::freeInstance();\par
+{\bkmkstart AAAAAABRCM}{\bkmkend AAAAAABRCM}
+00146     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPJP" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_GT}}}
+(({\cf18 int}) strlen(tms), 20);\par
+{\bkmkstart AAAAAABRCN}{\bkmkend AAAAAABRCN}
+00147 \}\par
+}
+}

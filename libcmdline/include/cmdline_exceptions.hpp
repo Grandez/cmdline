@@ -1,13 +1,4 @@
 #pragma once
-/**
- * Base class for cmdline exceptions
- *
- * As library process argument from command line it inherits from invalid_argument
- *
- * @param msg Text to show
- *
- */
-
 #include <stdexcept>
 #include <unordered_map>
 #include <cstdarg>
@@ -32,6 +23,7 @@ namespace cmdline {
 //		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
 
 		CmdLineException(const char* fmt, ...); 
+ // CmdLineException(const char* fmt, char *more);
 		CmdLineException(char* txt);
 	};
 

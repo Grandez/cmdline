@@ -1,4 +1,4 @@
-.TH "packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-internal.h" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-internal.h" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -35,7 +35,7 @@ packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/buil
 \fC#include 'gtest/internal/gtest\-type\-util\&.h'\fP
 .br
 
-.SS "Clases"
+.SS "Classes"
 
 .in +1c
 .ti -1c
@@ -136,7 +136,7 @@ packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/buil
 .RI "namespace \fBtesting::internal::edit_distance\fP"
 .br
 .in -1c
-.SS "defines"
+.SS "Macros"
 
 .in +1c
 .ti -1c
@@ -200,7 +200,7 @@ packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/buil
 .RI "#define \fBGTEST_TEST_\fP(test_case_name,  test_name,  parent_class,  parent_id)"
 .br
 .in -1c
-.SS "typedefs"
+.SS "Typedefs"
 
 .in +1c
 .ti -1c
@@ -225,14 +225,14 @@ packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/buil
 .RI "typedef char \fBtesting::internal::IsNotContainer\fP"
 .br
 .in -1c
-.SS "Enumeraciones"
+.SS "Enumerations"
 
 .in +1c
 .ti -1c
 .RI "enum \fBtesting::internal::edit_distance::EditType\fP { \fBtesting::internal::edit_distance::kMatch\fP, \fBtesting::internal::edit_distance::kAdd\fP, \fBtesting::internal::edit_distance::kRemove\fP, \fBtesting::internal::edit_distance::kReplace\fP }"
 .br
 .in -1c
-.SS "Funciones"
+.SS "Functions"
 
 .in +1c
 .ti -1c
@@ -321,67 +321,67 @@ packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/buil
 .RI "\fBGTEST_API_\fP const char \fBtesting::internal::kStackTraceMarker\fP []"
 .br
 .in -1c
-.SH "Documentación de los 'defines'"
+.SH "Macro Definition Documentation"
 .PP 
 .SS "#define GTEST_CONCAT_TOKEN_(foo, bar)   \fBGTEST_CONCAT_TOKEN_IMPL_\fP(foo, bar)"
 
 .PP
-Definición en la línea \fB76\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB76\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_CONCAT_TOKEN_IMPL_(foo, bar)   foo ## bar"
 
 .PP
-Definición en la línea \fB77\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB77\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_FATAL_FAILURE_(message)     return \fBGTEST_MESSAGE_\fP(message, ::testing::TestPartResult::kFatalFailure)"
 
 .PP
-Definición en la línea \fB1202\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1202\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_IS_NULL_LITERAL_(x)       (sizeof(::\fBtesting::internal::IsNullLiteralHelper\fP(x)) == 1)"
 
 .PP
-Definición en la línea \fB134\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB134\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_MESSAGE_(message, result_type)     \fBGTEST_MESSAGE_AT_\fP(__FILE__, __LINE__, message, result_type)"
 
 .PP
-Definición en la línea \fB1199\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1199\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_MESSAGE_AT_(file, line, message, result_type)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
   ::testing::internal::AssertHelper(result_type, file, line, message) \
     = ::testing::Message()
 .fi
 .PP
-Definición en la línea \fB1195\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1195\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_NONFATAL_FAILURE_(message)     \fBGTEST_MESSAGE_\fP(message, ::testing::TestPartResult::kNonFatalFailure)"
 
 .PP
-Definición en la línea \fB1205\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1205\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_REMOVE_CONST_(T)       typename ::\fBtesting::internal::RemoveConst\fP<T>::type"
 
 .PP
-Definición en la línea \fB855\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB855\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_REMOVE_REFERENCE_(T)       typename ::\fBtesting::internal::RemoveReference\fP<T>::type"
 
 .PP
-Definición en la línea \fB824\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB824\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_REMOVE_REFERENCE_AND_CONST_(T)       \fBGTEST_REMOVE_CONST_\fP(\fBGTEST_REMOVE_REFERENCE_\fP(T))"
 
 .PP
-Definición en la línea \fB859\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB859\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_STRINGIFY_(name)   #name"
 
 .PP
-Definición en la línea \fB80\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB80\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_SUCCESS_(message)     \fBGTEST_MESSAGE_\fP(message, ::testing::TestPartResult::kSuccess)"
 
 .PP
-Definición en la línea \fB1208\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1208\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement)     if (::\fBtesting::internal::AlwaysTrue\fP()) { statement; }"
 
 .PP
-Definición en la línea \fB1214\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1214\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_(test_case_name, test_name, parent_class, parent_id)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
 class GTEST_TEST_CLASS_NAME_(test_case_name, test_name) : public parent_class {\
@@ -407,9 +407,9 @@ class GTEST_TEST_CLASS_NAME_(test_case_name, test_name) : public parent_class {\
 void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
 .fi
 .PP
-Definición en la línea \fB1307\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1307\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_ANY_THROW_(statement, fail)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
@@ -430,9 +430,9 @@ Definición en la línea \fB1307\fP del archivo \fBgtest\-internal\&.h\fP\&.
            "  Actual: it doesn't\&.")
 .fi
 .PP
-Definición en la línea \fB1257\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1257\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_BOOLEAN_(expression, text, actual, expected, fail)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
@@ -444,13 +444,13 @@ Definición en la línea \fB1257\fP del archivo \fBgtest\-internal\&.h\fP\&.
         gtest_ar_, text, #actual, #expected)\&.c_str())
 .fi
 .PP
-Definición en la línea \fB1279\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1279\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_CLASS_NAME_(test_case_name, test_name)     test_case_name##_##test_name##_Test"
 
 .PP
-Definición en la línea \fB1303\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1303\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_NO_FATAL_FAILURE_(statement, fail)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
@@ -467,9 +467,9 @@ Definición en la línea \fB1303\fP del archivo \fBgtest\-internal\&.h\fP\&.
            "  Actual: it does\&.")
 .fi
 .PP
-Definición en la línea \fB1288\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1288\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_NO_THROW_(statement, fail)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
@@ -486,9 +486,9 @@ Definición en la línea \fB1288\fP del archivo \fBgtest\-internal\&.h\fP\&.
            "  Actual: it throws\&.")
 .fi
 .PP
-Definición en la línea \fB1243\fP del archivo \fBgtest\-internal\&.h\fP\&.
+Definition at line \fB1243\fP of file \fBgtest\-internal\&.h\fP\&.
 .SS "#define GTEST_TEST_THROW_(statement, expected_exception, fail)"
-\fBValor:\fP
+\fBValue:\fP
 .PP
 .nf
   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
@@ -517,7 +517,7 @@ Definición en la línea \fB1243\fP del archivo \fBgtest\-internal\&.h\fP\&.
       fail(gtest_msg\&.value)
 .fi
 .PP
-Definición en la línea \fB1217\fP del archivo \fBgtest\-internal\&.h\fP\&.
-.SH "Autor"
+Definition at line \fB1217\fP of file \fBgtest\-internal\&.h\fP\&.
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

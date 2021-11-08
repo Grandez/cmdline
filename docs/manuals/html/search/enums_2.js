@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['Type',['../d4/d41/namespacecmdline.html#a80cbaf62b10e04cd077a7165ad010b15',1,'cmdline::Type()'],['../df/d4e/group___types.html#ga80cbaf62b10e04cd077a7165ad010b15',1,'cmdline::Type()']]]
+  ['edittype_0',['EditType',['../de/dce/namespacetesting_1_1internal_1_1edit__distance.html#ad46aa6da12aec1a3f166310478b53a08',1,'testing::internal::edit_distance']]]
 ];

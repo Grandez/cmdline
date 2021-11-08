@@ -24,20 +24,27 @@ enum class \mbox{\hyperlink{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}{Ty
 , \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a8f20045e0839c2e258547ee09fc961a0}{FILE\+\_\+\+EXISTS}}
 , {\bfseries FLAG}
  \}
-\begin{DoxyCompactList}\small\item\em Define el tipo de dato esperado del parametro. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Define the expected type of the string passed as parameter. \end{DoxyCompactList}\item 
 enum class \mbox{\hyperlink{group___types_ga176e1eca2d1e3d1c6a064340bc6a351e}{Source}} \{ \newline
 \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea5b39c8b553c821e7cddc6da64b5bd2ee}{DEFAULT}}
 , \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d}{ENV}}
-, {\bfseries CMDLINE}
-, \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9}{CODE}}
+, \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430}{CMDLINE}}
+, \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719}{FILE}}
 , \newline
-\mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9}{AUTO}}
+\mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9}{CODE}}
+, \mbox{\hyperlink{group___types_gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9}{AUTO}}
  \}
 \begin{DoxyCompactList}\small\item\em Indicates the origin of thelast value of parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
-Conjunto de tipos para simplificar la codificacion 
+Conjunto de tipos para simplificar la codificacion
+
+Se usan en la declaracion de los parametros que soporta la aplicacion
+\begin{DoxyEnumerate}
+\item {\bfseries{Type}} Indica el tipo de dato que se espera
+\item {\bfseries{Source}} Indica la fuente del ultimo valor aplicado 
+\end{DoxyEnumerate}
 
 \doxysubsection{Documentación de las enumeraciones}
 \mbox{\Hypertarget{group___types_ga176e1eca2d1e3d1c6a064340bc6a351e}\label{group___types_ga176e1eca2d1e3d1c6a064340bc6a351e}} 
@@ -59,6 +66,14 @@ DEFAULT&Default value \\
 ENV&Value has been set in the environment \\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMDLINE@{CMDLINE}!Tipos definidos para C++@{Tipos definidos para C++}}\index{Tipos definidos para C++@{Tipos definidos para C++}!CMDLINE@{CMDLINE}}}\mbox{\Hypertarget{group___types_gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430}\label{group___types_gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430}} 
+CMDLINE&Value has been set thru command line \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE@{FILE}!Tipos definidos para C++@{Tipos definidos para C++}}\index{Tipos definidos para C++@{Tipos definidos para C++}!FILE@{FILE}}}\mbox{\Hypertarget{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719}\label{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719}} 
+FILE&Value has been set thru a config file \\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CODE@{CODE}!Tipos definidos para C++@{Tipos definidos para C++}}\index{Tipos definidos para C++@{Tipos definidos para C++}!CODE@{CODE}}}\mbox{\Hypertarget{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9}\label{group___types_gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9}} 
 CODE&Value has been update programatically \\
 \hline
@@ -68,10 +83,6 @@ AUTO&{\bfseries{Reserved}} Hide parameter from queries \\
 \hline
 
 \end{DoxyEnumFields}
-
-
-Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00019}{19}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
-
 \mbox{\Hypertarget{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}\label{group___types_ga1d1cfd8ffb84e947f82999c682b666a7}} 
 \index{Tipos definidos para C++@{Tipos definidos para C++}!Type@{Type}}
 \index{Type@{Type}!Tipos definidos para C++@{Tipos definidos para C++}}
@@ -80,9 +91,7 @@ Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00019}{19}} del arc
 
 
 
-Define el tipo de dato esperado del parametro. 
-
-Define the expected type of the string passed as parameter.
+Define the expected type of the string passed as parameter. 
 
 It will be used to check the validity of the input \begin{DoxyEnumFields}{Valores de enumeraciones}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!Tipos definidos para C++@{Tipos definidos para C++}}\index{Tipos definidos para C++@{Tipos definidos para C++}!STRING@{STRING}}}\mbox{\Hypertarget{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a63b588d5559f64f89a416e656880b949}\label{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a63b588d5559f64f89a416e656880b949}} 
@@ -148,7 +157,3 @@ FILE\+\_\+\+EXISTS&An existing file before execution \\
 \hline
 
 \end{DoxyEnumFields}
-
-
-Definición en la línea \mbox{\hyperlink{types_8hpp_source_l00013}{13}} del archivo \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
-

@@ -25,6 +25,7 @@
     <ClInclude Include="include\cmdline_errno.h" />
     <ClInclude Include="include\cmdline_exceptions.hpp" />
     <ClInclude Include="include\commandline.hpp" />
+    <ClInclude Include="include\commandline_aux.hpp" />
     <ClInclude Include="include\config.h" />
     <ClInclude Include="include\defines.hpp" />
     <ClInclude Include="include\garbage.hpp" />
@@ -44,6 +45,7 @@
     <ClCompile Include="src\cmdline_exceptions.cpp" />
     <ClCompile Include="src\cmdline_flavors.cpp" />
     <ClCompile Include="src\commandline.cpp" />
+    <ClCompile Include="src\commandline_aux.cpp" />
     <ClCompile Include="src\config_ini.cpp" />
     <ClCompile Include="src\config_json.cpp" />
     <ClCompile Include="src\config_xml.cpp" />

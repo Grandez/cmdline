@@ -1,0 +1,704 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-death-test-internal.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-death-test-internal.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-death-test-internal.h}
+{\bkmkstart AAAAAAAVBO}
+{\bkmkend AAAAAAAVBO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZN" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAVBP}{\bkmkend AAAAAAAVBP}
+00001 {\cf20 // Copyright 2005, Google Inc.}\par
+{\bkmkstart AAAAAAAVBQ}{\bkmkend AAAAAAAVBQ}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAVBR}{\bkmkend AAAAAAAVBR}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAVBS}{\bkmkend AAAAAAAVBS}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAAVBT}{\bkmkend AAAAAAAVBT}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAAVBU}{\bkmkend AAAAAAAVBU}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAAVBV}{\bkmkend AAAAAAAVBV}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAAVBW}{\bkmkend AAAAAAAVBW}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAAVBX}{\bkmkend AAAAAAAVBX}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAAVBY}{\bkmkend AAAAAAAVBY}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAAVBZ}{\bkmkend AAAAAAAVBZ}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAAVCA}{\bkmkend AAAAAAAVCA}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAAVCB}{\bkmkend AAAAAAAVCB}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAAVCC}{\bkmkend AAAAAAAVCC}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAAVCD}{\bkmkend AAAAAAAVCD}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAAVCE}{\bkmkend AAAAAAAVCE}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAAVCF}{\bkmkend AAAAAAAVCF}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAAVCG}{\bkmkend AAAAAAAVCG}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAAVCH}{\bkmkend AAAAAAAVCH}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAVCI}{\bkmkend AAAAAAAVCI}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAAVCJ}{\bkmkend AAAAAAAVCJ}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAAVCK}{\bkmkend AAAAAAAVCK}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAAVCL}{\bkmkend AAAAAAAVCL}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAVCM}{\bkmkend AAAAAAAVCM}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAAVCN}{\bkmkend AAAAAAAVCN}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAAVCO}{\bkmkend AAAAAAAVCO}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAAVCP}{\bkmkend AAAAAAAVCP}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAAVCQ}{\bkmkend AAAAAAAVCQ}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAAVCR}{\bkmkend AAAAAAAVCR}
+00029 {\cf20 //}\par
+{\bkmkstart AAAAAAAVCS}{\bkmkend AAAAAAAVCS}
+00030 {\cf20 // The Google C++ Testing and Mocking Framework (Google Test)}\par
+{\bkmkstart AAAAAAAVCT}{\bkmkend AAAAAAAVCT}
+00031 {\cf20 //}\par
+{\bkmkstart AAAAAAAVCU}{\bkmkend AAAAAAAVCU}
+00032 {\cf20 // This header file defines internal utilities needed for implementing}\par
+{\bkmkstart AAAAAAAVCV}{\bkmkend AAAAAAAVCV}
+00033 {\cf20 // death tests.  They are subject to change without notice.}\par
+{\bkmkstart AAAAAAAVCW}{\bkmkend AAAAAAAVCW}
+00034 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAVCX}{\bkmkend AAAAAAAVCX}
+00035 \par
+{\bkmkstart AAAAAAAVCY}{\bkmkend AAAAAAAVCY}
+00036 {\cf21 #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_DEATH_TEST_INTERNAL_H_}\par
+{\bkmkstart AAAAAAAVCZ}{\bkmkend AAAAAAAVCZ}
+00037 {\cf21 #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_DEATH_TEST_INTERNAL_H_}\par
+{\bkmkstart AAAAAAAVDA}{\bkmkend AAAAAAAVDA}
+00038 \par
+{\bkmkstart AAAAAAAVDB}{\bkmkend AAAAAAAVDB}
+00039 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAHDS" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-internal.h}}}
+"}\par
+{\bkmkstart AAAAAAAVDC}{\bkmkend AAAAAAAVDC}
+00040 \par
+{\bkmkstart AAAAAAAVDD}{\bkmkend AAAAAAAVDD}
+00041 {\cf21 #include <stdio.h>}\par
+{\bkmkstart AAAAAAAVDE}{\bkmkend AAAAAAAVDE}
+00042 \par
+{\bkmkstart AAAAAAAVDF}{\bkmkend AAAAAAAVDF}
+00043 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAVDG}{\bkmkend AAAAAAAVDG}
+00044 {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAAAVDH}{\bkmkend AAAAAAAVDH}
+00045 \par
+{\bkmkstart AAAAAAAVDI}{\bkmkend AAAAAAAVDI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDJ" }{}}{\fldrslt {\cs37\ul\cf2 00046}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_string_}}}
+(internal_run_death_test);\par
+{\bkmkstart AAAAAAAVDK}{\bkmkend AAAAAAAVDK}
+00047 \par
+{\bkmkstart AAAAAAAVDL}{\bkmkend AAAAAAAVDL}
+00048 {\cf20 // Names of the flags (needed for parsing Google Test flags).}\par
+{\bkmkstart AAAAAAAVDM}{\bkmkend AAAAAAAVDM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDN" }{}}{\fldrslt {\cs37\ul\cf2 00049}}}
+ {\cf17 const} {\cf18 char} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDN" }{}}{\fldrslt {\cs37\ul\cf2 kDeathTestStyleFlag}}}
+[] = {\cf22 "death_test_style"};\par
+{\bkmkstart AAAAAAAVDO}{\bkmkend AAAAAAAVDO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDP" }{}}{\fldrslt {\cs37\ul\cf2 00050}}}
+ {\cf17 const} {\cf18 char} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDP" }{}}{\fldrslt {\cs37\ul\cf2 kDeathTestUseFork}}}
+[] = {\cf22 "death_test_use_fork"};\par
+{\bkmkstart AAAAAAAVDQ}{\bkmkend AAAAAAAVDQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDR" }{}}{\fldrslt {\cs37\ul\cf2 00051}}}
+ {\cf17 const} {\cf18 char} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVDR" }{}}{\fldrslt {\cs37\ul\cf2 kInternalRunDeathTestFlag}}}
+[] = {\cf22 "internal_run_death_test"};\par
+{\bkmkstart AAAAAAAVDS}{\bkmkend AAAAAAAVDS}
+00052 \par
+{\bkmkstart AAAAAAAVDT}{\bkmkend AAAAAAAVDT}
+00053 {\cf21 #if GTEST_HAS_DEATH_TEST}\par
+{\bkmkstart AAAAAAAVDU}{\bkmkend AAAAAAAVDU}
+00054 \par
+{\bkmkstart AAAAAAAVDV}{\bkmkend AAAAAAAVDV}
+00055 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_PUSH_}}}
+(4251 \\\par
+{\bkmkstart AAAAAAAVDW}{\bkmkend AAAAAAAVDW}
+00056 {\cf20 /* class A needs to have dll-interface to be used by clients of class B */})\par
+{\bkmkstart AAAAAAAVDX}{\bkmkend AAAAAAAVDX}
+00057 \par
+{\bkmkstart AAAAAAAVDY}{\bkmkend AAAAAAAVDY}
+00058 {\cf20 // DeathTest is a class that hides much of the complexity of the}\par
+{\bkmkstart AAAAAAAVDZ}{\bkmkend AAAAAAAVDZ}
+00059 {\cf20 // GTEST_DEATH_TEST_ macro.  It is abstract; its static Create method}\par
+{\bkmkstart AAAAAAAVEA}{\bkmkend AAAAAAAVEA}
+00060 {\cf20 // returns a concrete class that depends on the prevailing death test}\par
+{\bkmkstart AAAAAAAVEB}{\bkmkend AAAAAAAVEB}
+00061 {\cf20 // style, as defined by the --gtest_death_test_style and/or}\par
+{\bkmkstart AAAAAAAVEC}{\bkmkend AAAAAAAVEC}
+00062 {\cf20 // --gtest_internal_run_death_test flags.}\par
+{\bkmkstart AAAAAAAVED}{\bkmkend AAAAAAAVED}
+00063 \par
+{\bkmkstart AAAAAAAVEE}{\bkmkend AAAAAAAVEE}
+00064 {\cf20 // In describing the results of death tests, these terms are used with}\par
+{\bkmkstart AAAAAAAVEF}{\bkmkend AAAAAAAVEF}
+00065 {\cf20 // the corresponding definitions:}\par
+{\bkmkstart AAAAAAAVEG}{\bkmkend AAAAAAAVEG}
+00066 {\cf20 //}\par
+{\bkmkstart AAAAAAAVEH}{\bkmkend AAAAAAAVEH}
+00067 {\cf20 // exit status:  The integer exit information in the format specified}\par
+{\bkmkstart AAAAAAAVEI}{\bkmkend AAAAAAAVEI}
+00068 {\cf20 //               by wait(2)}\par
+{\bkmkstart AAAAAAAVEJ}{\bkmkend AAAAAAAVEJ}
+00069 {\cf20 // exit code:    The integer code passed to exit(3), _exit(2), or}\par
+{\bkmkstart AAAAAAAVEK}{\bkmkend AAAAAAAVEK}
+00070 {\cf20 //               returned from main()}\par
+{\bkmkstart AAAAAAAVEL}{\bkmkend AAAAAAAVEL}
+00071 class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ DeathTest \{\par
+{\bkmkstart AAAAAAAVEM}{\bkmkend AAAAAAAVEM}
+00072  {\cf17 public}:\par
+{\bkmkstart AAAAAAAVEN}{\bkmkend AAAAAAAVEN}
+00073   {\cf20 // Create returns false if there was an error determining the}\par
+{\bkmkstart AAAAAAAVEO}{\bkmkend AAAAAAAVEO}
+00074   {\cf20 // appropriate action to take for the current death test; for example,}\par
+{\bkmkstart AAAAAAAVEP}{\bkmkend AAAAAAAVEP}
+00075   {\cf20 // if the gtest_death_test_style flag is set to an invalid value.}\par
+{\bkmkstart AAAAAAAVEQ}{\bkmkend AAAAAAAVEQ}
+00076   {\cf20 // The LastMessage method will return a more detailed message in that}\par
+{\bkmkstart AAAAAAAVER}{\bkmkend AAAAAAAVER}
+00077   {\cf20 // case.  Otherwise, the DeathTest pointer pointed to by the "test"}\par
+{\bkmkstart AAAAAAAVES}{\bkmkend AAAAAAAVES}
+00078   {\cf20 // argument is set.  If the death test should be skipped, the pointer}\par
+{\bkmkstart AAAAAAAVET}{\bkmkend AAAAAAAVET}
+00079   {\cf20 // is set to NULL; otherwise, it is set to the address of a new concrete}\par
+{\bkmkstart AAAAAAAVEU}{\bkmkend AAAAAAAVEU}
+00080   {\cf20 // DeathTest object that controls the execution of the current test.}\par
+{\bkmkstart AAAAAAAVEV}{\bkmkend AAAAAAAVEV}
+00081   {\cf17 static} {\cf18 bool} Create({\cf17 const} {\cf18 char}* statement, {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASSD" }{}}{\fldrslt {\cs37\ul\cf2 RE}}}
+* regex,\par
+{\bkmkstart AAAAAAAVEW}{\bkmkend AAAAAAAVEW}
+00082                      {\cf17 const} {\cf18 char}* file, {\cf18 int} line, DeathTest** test);\par
+{\bkmkstart AAAAAAAVEX}{\bkmkend AAAAAAAVEX}
+00083   DeathTest();\par
+{\bkmkstart AAAAAAAVEY}{\bkmkend AAAAAAAVEY}
+00084   {\cf17 virtual} ~DeathTest() \{ \}\par
+{\bkmkstart AAAAAAAVEZ}{\bkmkend AAAAAAAVEZ}
+00085 \par
+{\bkmkstart AAAAAAAVFA}{\bkmkend AAAAAAAVFA}
+00086   {\cf20 // A helper class that aborts a death test when it's deleted.}\par
+{\bkmkstart AAAAAAAVFB}{\bkmkend AAAAAAAVFB}
+00087   {\cf17 class }ReturnSentinel \{\par
+{\bkmkstart AAAAAAAVFC}{\bkmkend AAAAAAAVFC}
+00088    {\cf17 public}:\par
+{\bkmkstart AAAAAAAVFD}{\bkmkend AAAAAAAVFD}
+00089     {\cf17 explicit} ReturnSentinel(DeathTest* test) : test_(test) \{ \}\par
+{\bkmkstart AAAAAAAVFE}{\bkmkend AAAAAAAVFE}
+00090     ~ReturnSentinel() \{ test_->Abort(TEST_ENCOUNTERED_RETURN_STATEMENT); \}\par
+{\bkmkstart AAAAAAAVFF}{\bkmkend AAAAAAAVFF}
+00091    {\cf17 private}:\par
+{\bkmkstart AAAAAAAVFG}{\bkmkend AAAAAAAVFG}
+00092     DeathTest* {\cf17 const} test_;\par
+{\bkmkstart AAAAAAAVFH}{\bkmkend AAAAAAAVFH}
+00093     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALDK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISALLOW_COPY_AND_ASSIGN_}}}
+(ReturnSentinel);\par
+{\bkmkstart AAAAAAAVFI}{\bkmkend AAAAAAAVFI}
+00094   \} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPTH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ATTRIBUTE_UNUSED_}}}
+;\par
+{\bkmkstart AAAAAAAVFJ}{\bkmkend AAAAAAAVFJ}
+00095 \par
+{\bkmkstart AAAAAAAVFK}{\bkmkend AAAAAAAVFK}
+00096   {\cf20 // An enumeration of possible roles that may be taken when a death}\par
+{\bkmkstart AAAAAAAVFL}{\bkmkend AAAAAAAVFL}
+00097   {\cf20 // test is encountered.  EXECUTE means that the death test logic should}\par
+{\bkmkstart AAAAAAAVFM}{\bkmkend AAAAAAAVFM}
+00098   {\cf20 // be executed immediately.  OVERSEE means that the program should prepare}\par
+{\bkmkstart AAAAAAAVFN}{\bkmkend AAAAAAAVFN}
+00099   {\cf20 // the appropriate environment for a child process to execute the death}\par
+{\bkmkstart AAAAAAAVFO}{\bkmkend AAAAAAAVFO}
+00100   {\cf20 // test, then wait for it to complete.}\par
+{\bkmkstart AAAAAAAVFP}{\bkmkend AAAAAAAVFP}
+00101   {\cf17 enum} TestRole \{ OVERSEE_TEST, EXECUTE_TEST \};\par
+{\bkmkstart AAAAAAAVFQ}{\bkmkend AAAAAAAVFQ}
+00102 \par
+{\bkmkstart AAAAAAAVFR}{\bkmkend AAAAAAAVFR}
+00103   {\cf20 // An enumeration of the three reasons that a test might be aborted.}\par
+{\bkmkstart AAAAAAAVFS}{\bkmkend AAAAAAAVFS}
+00104   {\cf17 enum} AbortReason \{\par
+{\bkmkstart AAAAAAAVFT}{\bkmkend AAAAAAAVFT}
+00105     TEST_ENCOUNTERED_RETURN_STATEMENT,\par
+{\bkmkstart AAAAAAAVFU}{\bkmkend AAAAAAAVFU}
+00106     TEST_THREW_EXCEPTION,\par
+{\bkmkstart AAAAAAAVFV}{\bkmkend AAAAAAAVFV}
+00107     TEST_DID_NOT_DIE\par
+{\bkmkstart AAAAAAAVFW}{\bkmkend AAAAAAAVFW}
+00108   \};\par
+{\bkmkstart AAAAAAAVFX}{\bkmkend AAAAAAAVFX}
+00109 \par
+{\bkmkstart AAAAAAAVFY}{\bkmkend AAAAAAAVFY}
+00110   {\cf20 // Assumes one of the above roles.}\par
+{\bkmkstart AAAAAAAVFZ}{\bkmkend AAAAAAAVFZ}
+00111   {\cf17 virtual} TestRole AssumeRole() = 0;\par
+{\bkmkstart AAAAAAAVGA}{\bkmkend AAAAAAAVGA}
+00112 \par
+{\bkmkstart AAAAAAAVGB}{\bkmkend AAAAAAAVGB}
+00113   {\cf20 // Waits for the death test to finish and returns its status.}\par
+{\bkmkstart AAAAAAAVGC}{\bkmkend AAAAAAAVGC}
+00114   {\cf17 virtual} {\cf18 int} Wait() = 0;\par
+{\bkmkstart AAAAAAAVGD}{\bkmkend AAAAAAAVGD}
+00115 \par
+{\bkmkstart AAAAAAAVGE}{\bkmkend AAAAAAAVGE}
+00116   {\cf20 // Returns true if the death test passed; that is, the test process}\par
+{\bkmkstart AAAAAAAVGF}{\bkmkend AAAAAAAVGF}
+00117   {\cf20 // exited during the test, its exit status matches a user-supplied}\par
+{\bkmkstart AAAAAAAVGG}{\bkmkend AAAAAAAVGG}
+00118   {\cf20 // predicate, and its stderr output matches a user-supplied regular}\par
+{\bkmkstart AAAAAAAVGH}{\bkmkend AAAAAAAVGH}
+00119   {\cf20 // expression.}\par
+{\bkmkstart AAAAAAAVGI}{\bkmkend AAAAAAAVGI}
+00120   {\cf20 // The user-supplied predicate may be a macro expression rather}\par
+{\bkmkstart AAAAAAAVGJ}{\bkmkend AAAAAAAVGJ}
+00121   {\cf20 // than a function pointer or functor, or else Wait and Passed could}\par
+{\bkmkstart AAAAAAAVGK}{\bkmkend AAAAAAAVGK}
+00122   {\cf20 // be combined.}\par
+{\bkmkstart AAAAAAAVGL}{\bkmkend AAAAAAAVGL}
+00123   {\cf17 virtual} {\cf18 bool} Passed({\cf18 bool} exit_status_ok) = 0;\par
+{\bkmkstart AAAAAAAVGM}{\bkmkend AAAAAAAVGM}
+00124 \par
+{\bkmkstart AAAAAAAVGN}{\bkmkend AAAAAAAVGN}
+00125   {\cf20 // Signals that the death test did not die as expected.}\par
+{\bkmkstart AAAAAAAVGO}{\bkmkend AAAAAAAVGO}
+00126   {\cf17 virtual} {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAUUW" }{}}{\fldrslt {\cs37\ul\cf2 Abort}}}
+(AbortReason reason) = 0;\par
+{\bkmkstart AAAAAAAVGP}{\bkmkend AAAAAAAVGP}
+00127 \par
+{\bkmkstart AAAAAAAVGQ}{\bkmkend AAAAAAAVGQ}
+00128   {\cf20 // Returns a human-readable outcome message regarding the outcome of}\par
+{\bkmkstart AAAAAAAVGR}{\bkmkend AAAAAAAVGR}
+00129   {\cf20 // the last death test.}\par
+{\bkmkstart AAAAAAAVGS}{\bkmkend AAAAAAAVGS}
+00130   {\cf17 static} {\cf17 const} {\cf18 char}* LastMessage();\par
+{\bkmkstart AAAAAAAVGT}{\bkmkend AAAAAAAVGT}
+00131 \par
+{\bkmkstart AAAAAAAVGU}{\bkmkend AAAAAAAVGU}
+00132   {\cf17 static} {\cf18 void} set_last_death_test_message({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& message);\par
+{\bkmkstart AAAAAAAVGV}{\bkmkend AAAAAAAVGV}
+00133 \par
+{\bkmkstart AAAAAAAVGW}{\bkmkend AAAAAAAVGW}
+00134  {\cf17 private}:\par
+{\bkmkstart AAAAAAAVGX}{\bkmkend AAAAAAAVGX}
+00135   {\cf20 // A string containing a description of the outcome of the last death test.}\par
+{\bkmkstart AAAAAAAVGY}{\bkmkend AAAAAAAVGY}
+00136   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ last_death_test_message_;\par
+{\bkmkstart AAAAAAAVGZ}{\bkmkend AAAAAAAVGZ}
+00137 \par
+{\bkmkstart AAAAAAAVHA}{\bkmkend AAAAAAAVHA}
+00138   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALDK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISALLOW_COPY_AND_ASSIGN_}}}
+(DeathTest);\par
+{\bkmkstart AAAAAAAVHB}{\bkmkend AAAAAAAVHB}
+00139 \};\par
+{\bkmkstart AAAAAAAVHC}{\bkmkend AAAAAAAVHC}
+00140 \par
+{\bkmkstart AAAAAAAVHD}{\bkmkend AAAAAAAVHD}
+00141 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_POP_}}}
+()  {\cf20 //  4251}\par
+{\bkmkstart AAAAAAAVHE}{\bkmkend AAAAAAAVHE}
+00142 \par
+{\bkmkstart AAAAAAAVHF}{\bkmkend AAAAAAAVHF}
+00143 {\cf20 // Factory interface for death tests.  May be mocked out for testing.}\par
+{\bkmkstart AAAAAAAVHG}{\bkmkend AAAAAAAVHG}
+00144 class DeathTestFactory \{\par
+{\bkmkstart AAAAAAAVHH}{\bkmkend AAAAAAAVHH}
+00145  {\cf17 public}:\par
+{\bkmkstart AAAAAAAVHI}{\bkmkend AAAAAAAVHI}
+00146   {\cf17 virtual} ~DeathTestFactory() \{ \}\par
+{\bkmkstart AAAAAAAVHJ}{\bkmkend AAAAAAAVHJ}
+00147   {\cf17 virtual} {\cf18 bool} Create({\cf17 const} {\cf18 char}* statement, {\cf17 const} RE* regex,\par
+{\bkmkstart AAAAAAAVHK}{\bkmkend AAAAAAAVHK}
+00148                       {\cf17 const} {\cf18 char}* file, {\cf18 int} line, DeathTest** test) = 0;\par
+{\bkmkstart AAAAAAAVHL}{\bkmkend AAAAAAAVHL}
+00149 \};\par
+{\bkmkstart AAAAAAAVHM}{\bkmkend AAAAAAAVHM}
+00150 \par
+{\bkmkstart AAAAAAAVHN}{\bkmkend AAAAAAAVHN}
+00151 {\cf20 // A concrete DeathTestFactory implementation for normal use.}\par
+{\bkmkstart AAAAAAAVHO}{\bkmkend AAAAAAAVHO}
+00152 {\cf17 class }DefaultDeathTestFactory : {\cf17 public} DeathTestFactory \{\par
+{\bkmkstart AAAAAAAVHP}{\bkmkend AAAAAAAVHP}
+00153  {\cf17 public}:\par
+{\bkmkstart AAAAAAAVHQ}{\bkmkend AAAAAAAVHQ}
+00154   {\cf17 virtual} {\cf18 bool} Create({\cf17 const} {\cf18 char}* statement, {\cf17 const} RE* regex,\par
+{\bkmkstart AAAAAAAVHR}{\bkmkend AAAAAAAVHR}
+00155                       {\cf17 const} {\cf18 char}* file, {\cf18 int} line, DeathTest** test);\par
+{\bkmkstart AAAAAAAVHS}{\bkmkend AAAAAAAVHS}
+00156 \};\par
+{\bkmkstart AAAAAAAVHT}{\bkmkend AAAAAAAVHT}
+00157 \par
+{\bkmkstart AAAAAAAVHU}{\bkmkend AAAAAAAVHU}
+00158 {\cf20 // Returns true if exit_status describes a process that was terminated}\par
+{\bkmkstart AAAAAAAVHV}{\bkmkend AAAAAAAVHV}
+00159 {\cf20 // by a signal, or exited normally with a nonzero exit code.}\par
+{\bkmkstart AAAAAAAVHW}{\bkmkend AAAAAAAVHW}
+00160 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 bool} ExitedUnsuccessfully({\cf18 int} exit_status);\par
+{\bkmkstart AAAAAAAVHX}{\bkmkend AAAAAAAVHX}
+00161 \par
+{\bkmkstart AAAAAAAVHY}{\bkmkend AAAAAAAVHY}
+00162 {\cf20 // Traps C++ exceptions escaping statement and reports them as test}\par
+{\bkmkstart AAAAAAAVHZ}{\bkmkend AAAAAAAVHZ}
+00163 {\cf20 // failures. Note that trapping SEH exceptions is not implemented here.}\par
+{\bkmkstart AAAAAAAVIA}{\bkmkend AAAAAAAVIA}
+00164 {\cf21 # if GTEST_HAS_EXCEPTIONS}\par
+{\bkmkstart AAAAAAAVIB}{\bkmkend AAAAAAAVIB}
+00165 {\cf21 #  define GTEST_EXECUTE_DEATH_TEST_STATEMENT_(statement, death_test) \\}\par
+{\bkmkstart AAAAAAAVIC}{\bkmkend AAAAAAAVIC}
+00166 {\cf21   try \{ \\}\par
+{\bkmkstart AAAAAAAVID}{\bkmkend AAAAAAAVID}
+00167 {\cf21     GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\}\par
+{\bkmkstart AAAAAAAVIE}{\bkmkend AAAAAAAVIE}
+00168 {\cf21   \} catch (const ::std::exception& gtest_exception) \{ \\}\par
+{\bkmkstart AAAAAAAVIF}{\bkmkend AAAAAAAVIF}
+00169 {\cf21     fprintf(\\}\par
+{\bkmkstart AAAAAAAVIG}{\bkmkend AAAAAAAVIG}
+00170 {\cf21         stderr, \\}\par
+{\bkmkstart AAAAAAAVIH}{\bkmkend AAAAAAAVIH}
+00171 {\cf21         "\\n%s: Caught std::exception-derived exception escaping the "} \\\par
+{\bkmkstart AAAAAAAVII}{\bkmkend AAAAAAAVII}
+00172         "death test statement. Exception message: %s\\n", \\\par
+{\bkmkstart AAAAAAAVIJ}{\bkmkend AAAAAAAVIJ}
+00173         ::testing::internal::FormatFileLocation(__FILE__, __LINE__).c_str(), \\\par
+{\bkmkstart AAAAAAAVIK}{\bkmkend AAAAAAAVIK}
+00174         gtest_exception.what()); \\\par
+{\bkmkstart AAAAAAAVIL}{\bkmkend AAAAAAAVIL}
+00175     fflush(stderr); \\\par
+{\bkmkstart AAAAAAAVIM}{\bkmkend AAAAAAAVIM}
+00176     death_test->Abort(::testing::internal::DeathTest::TEST_THREW_EXCEPTION); \\\par
+{\bkmkstart AAAAAAAVIN}{\bkmkend AAAAAAAVIN}
+00177   \} catch (...) \{ \\\par
+{\bkmkstart AAAAAAAVIO}{\bkmkend AAAAAAAVIO}
+00178     death_test->Abort(::testing::internal::DeathTest::TEST_THREW_EXCEPTION); \\\par
+{\bkmkstart AAAAAAAVIP}{\bkmkend AAAAAAAVIP}
+00179   \}\par
+{\bkmkstart AAAAAAAVIQ}{\bkmkend AAAAAAAVIQ}
+00180 \par
+{\bkmkstart AAAAAAAVIR}{\bkmkend AAAAAAAVIR}
+00181 {\cf21 # else}\par
+{\bkmkstart AAAAAAAVIS}{\bkmkend AAAAAAAVIS}
+00182 {\cf21 #  define GTEST_EXECUTE_DEATH_TEST_STATEMENT_(statement, death_test) \\}\par
+{\bkmkstart AAAAAAAVIT}{\bkmkend AAAAAAAVIT}
+00183 {\cf21   GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement)}\par
+{\bkmkstart AAAAAAAVIU}{\bkmkend AAAAAAAVIU}
+00184 \par
+{\bkmkstart AAAAAAAVIV}{\bkmkend AAAAAAAVIV}
+00185 {\cf21 # endif}\par
+{\bkmkstart AAAAAAAVIW}{\bkmkend AAAAAAAVIW}
+00186 \par
+{\bkmkstart AAAAAAAVIX}{\bkmkend AAAAAAAVIX}
+00187 {\cf20 // This macro is for implementing ASSERT_DEATH*, EXPECT_DEATH*,}\par
+{\bkmkstart AAAAAAAVIY}{\bkmkend AAAAAAAVIY}
+00188 {\cf20 // ASSERT_EXIT*, and EXPECT_EXIT*.}\par
+{\bkmkstart AAAAAAAVIZ}{\bkmkend AAAAAAAVIZ}
+00189 {\cf21 # define GTEST_DEATH_TEST_(statement, predicate, regex, fail) \\}\par
+{\bkmkstart AAAAAAAVJA}{\bkmkend AAAAAAAVJA}
+00190 {\cf21   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\}\par
+{\bkmkstart AAAAAAAVJB}{\bkmkend AAAAAAAVJB}
+00191 {\cf21   if (::testing::internal::AlwaysTrue()) \{ \\}\par
+{\bkmkstart AAAAAAAVJC}{\bkmkend AAAAAAAVJC}
+00192 {\cf21     const ::testing::internal::RE& gtest_regex = (regex); \\}\par
+{\bkmkstart AAAAAAAVJD}{\bkmkend AAAAAAAVJD}
+00193 {\cf21     ::testing::internal::DeathTest* gtest_dt; \\}\par
+{\bkmkstart AAAAAAAVJE}{\bkmkend AAAAAAAVJE}
+00194 {\cf21     if (!::testing::internal::DeathTest::Create(#statement, &gtest_regex, \\}\par
+{\bkmkstart AAAAAAAVJF}{\bkmkend AAAAAAAVJF}
+00195 {\cf21         __FILE__, __LINE__, &gtest_dt)) \{ \\}\par
+{\bkmkstart AAAAAAAVJG}{\bkmkend AAAAAAAVJG}
+00196 {\cf21       goto GTEST_CONCAT_TOKEN_(gtest_label_, __LINE__); \\}\par
+{\bkmkstart AAAAAAAVJH}{\bkmkend AAAAAAAVJH}
+00197 {\cf21     \} \\}\par
+{\bkmkstart AAAAAAAVJI}{\bkmkend AAAAAAAVJI}
+00198 {\cf21     if (gtest_dt != NULL) \{ \\}\par
+{\bkmkstart AAAAAAAVJJ}{\bkmkend AAAAAAAVJJ}
+00199 {\cf21       ::testing::internal::scoped_ptr< ::testing::internal::DeathTest> \\}\par
+{\bkmkstart AAAAAAAVJK}{\bkmkend AAAAAAAVJK}
+00200 {\cf21           gtest_dt_ptr(gtest_dt); \\}\par
+{\bkmkstart AAAAAAAVJL}{\bkmkend AAAAAAAVJL}
+00201 {\cf21       switch (gtest_dt->AssumeRole()) \{ \\}\par
+{\bkmkstart AAAAAAAVJM}{\bkmkend AAAAAAAVJM}
+00202 {\cf21         case ::testing::internal::DeathTest::OVERSEE_TEST: \\}\par
+{\bkmkstart AAAAAAAVJN}{\bkmkend AAAAAAAVJN}
+00203 {\cf21           if (!gtest_dt->Passed(predicate(gtest_dt->Wait()))) \{ \\}\par
+{\bkmkstart AAAAAAAVJO}{\bkmkend AAAAAAAVJO}
+00204 {\cf21             goto GTEST_CONCAT_TOKEN_(gtest_label_, __LINE__); \\}\par
+{\bkmkstart AAAAAAAVJP}{\bkmkend AAAAAAAVJP}
+00205 {\cf21           \} \\}\par
+{\bkmkstart AAAAAAAVJQ}{\bkmkend AAAAAAAVJQ}
+00206 {\cf21           break; \\}\par
+{\bkmkstart AAAAAAAVJR}{\bkmkend AAAAAAAVJR}
+00207 {\cf21         case ::testing::internal::DeathTest::EXECUTE_TEST: \{ \\}\par
+{\bkmkstart AAAAAAAVJS}{\bkmkend AAAAAAAVJS}
+00208 {\cf21           ::testing::internal::DeathTest::ReturnSentinel \\}\par
+{\bkmkstart AAAAAAAVJT}{\bkmkend AAAAAAAVJT}
+00209 {\cf21               gtest_sentinel(gtest_dt); \\}\par
+{\bkmkstart AAAAAAAVJU}{\bkmkend AAAAAAAVJU}
+00210 {\cf21           GTEST_EXECUTE_DEATH_TEST_STATEMENT_(statement, gtest_dt); \\}\par
+{\bkmkstart AAAAAAAVJV}{\bkmkend AAAAAAAVJV}
+00211 {\cf21           gtest_dt->Abort(::testing::internal::DeathTest::TEST_DID_NOT_DIE); \\}\par
+{\bkmkstart AAAAAAAVJW}{\bkmkend AAAAAAAVJW}
+00212 {\cf21           break; \\}\par
+{\bkmkstart AAAAAAAVJX}{\bkmkend AAAAAAAVJX}
+00213 {\cf21         \} \\}\par
+{\bkmkstart AAAAAAAVJY}{\bkmkend AAAAAAAVJY}
+00214 {\cf21         default: \\}\par
+{\bkmkstart AAAAAAAVJZ}{\bkmkend AAAAAAAVJZ}
+00215 {\cf21           break; \\}\par
+{\bkmkstart AAAAAAAVKA}{\bkmkend AAAAAAAVKA}
+00216 {\cf21       \} \\}\par
+{\bkmkstart AAAAAAAVKB}{\bkmkend AAAAAAAVKB}
+00217 {\cf21     \} \\}\par
+{\bkmkstart AAAAAAAVKC}{\bkmkend AAAAAAAVKC}
+00218 {\cf21   \} else \\}\par
+{\bkmkstart AAAAAAAVKD}{\bkmkend AAAAAAAVKD}
+00219 {\cf21     GTEST_CONCAT_TOKEN_(gtest_label_, __LINE__): \\}\par
+{\bkmkstart AAAAAAAVKE}{\bkmkend AAAAAAAVKE}
+00220 {\cf21       fail(::testing::internal::DeathTest::LastMessage())}\par
+{\bkmkstart AAAAAAAVKF}{\bkmkend AAAAAAAVKF}
+00221 {\cf20 // The symbol "fail" here expands to something into which a message}\par
+{\bkmkstart AAAAAAAVKG}{\bkmkend AAAAAAAVKG}
+00222 {\cf20 // can be streamed.}\par
+{\bkmkstart AAAAAAAVKH}{\bkmkend AAAAAAAVKH}
+00223 \par
+{\bkmkstart AAAAAAAVKI}{\bkmkend AAAAAAAVKI}
+00224 {\cf20 // This macro is for implementing ASSERT/EXPECT_DEBUG_DEATH when compiled in}\par
+{\bkmkstart AAAAAAAVKJ}{\bkmkend AAAAAAAVKJ}
+00225 {\cf20 // NDEBUG mode. In this case we need the statements to be executed and the macro}\par
+{\bkmkstart AAAAAAAVKK}{\bkmkend AAAAAAAVKK}
+00226 {\cf20 // must accept a streamed message even though the message is never printed.}\par
+{\bkmkstart AAAAAAAVKL}{\bkmkend AAAAAAAVKL}
+00227 {\cf20 // The regex object is not evaluated, but it is used to prevent "unused"}\par
+{\bkmkstart AAAAAAAVKM}{\bkmkend AAAAAAAVKM}
+00228 {\cf20 // warnings and to avoid an expression that doesn't compile in debug mode.}\par
+{\bkmkstart AAAAAAAVKN}{\bkmkend AAAAAAAVKN}
+00229 {\cf21 #define GTEST_EXECUTE_STATEMENT_(statement, regex)             \\}\par
+{\bkmkstart AAAAAAAVKO}{\bkmkend AAAAAAAVKO}
+00230 {\cf21   GTEST_AMBIGUOUS_ELSE_BLOCKER_                                \\}\par
+{\bkmkstart AAAAAAAVKP}{\bkmkend AAAAAAAVKP}
+00231 {\cf21   if (::testing::internal::AlwaysTrue()) \{                     \\}\par
+{\bkmkstart AAAAAAAVKQ}{\bkmkend AAAAAAAVKQ}
+00232 {\cf21     GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\}\par
+{\bkmkstart AAAAAAAVKR}{\bkmkend AAAAAAAVKR}
+00233 {\cf21   \} else if (!::testing::internal::AlwaysTrue()) \{             \\}\par
+{\bkmkstart AAAAAAAVKS}{\bkmkend AAAAAAAVKS}
+00234 {\cf21     const ::testing::internal::RE& gtest_regex = (regex);      \\}\par
+{\bkmkstart AAAAAAAVKT}{\bkmkend AAAAAAAVKT}
+00235 {\cf21     static_cast<void>(gtest_regex);                            \\}\par
+{\bkmkstart AAAAAAAVKU}{\bkmkend AAAAAAAVKU}
+00236 {\cf21   \} else                                                       \\}\par
+{\bkmkstart AAAAAAAVKV}{\bkmkend AAAAAAAVKV}
+00237 {\cf21     ::testing::Message()}\par
+{\bkmkstart AAAAAAAVKW}{\bkmkend AAAAAAAVKW}
+00238 \par
+{\bkmkstart AAAAAAAVKX}{\bkmkend AAAAAAAVKX}
+00239 {\cf20 // A class representing the parsed contents of the}\par
+{\bkmkstart AAAAAAAVKY}{\bkmkend AAAAAAAVKY}
+00240 {\cf20 // --gtest_internal_run_death_test flag, as it existed when}\par
+{\bkmkstart AAAAAAAVKZ}{\bkmkend AAAAAAAVKZ}
+00241 {\cf20 // RUN_ALL_TESTS was called.}\par
+{\bkmkstart AAAAAAAVLA}{\bkmkend AAAAAAAVLA}
+00242 {\cf17 class }InternalRunDeathTestFlag \{\par
+{\bkmkstart AAAAAAAVLB}{\bkmkend AAAAAAAVLB}
+00243  {\cf17 public}:\par
+{\bkmkstart AAAAAAAVLC}{\bkmkend AAAAAAAVLC}
+00244   InternalRunDeathTestFlag({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& a_file,\par
+{\bkmkstart AAAAAAAVLD}{\bkmkend AAAAAAAVLD}
+00245                            {\cf18 int} a_line,\par
+{\bkmkstart AAAAAAAVLE}{\bkmkend AAAAAAAVLE}
+00246                            {\cf18 int} an_index,\par
+{\bkmkstart AAAAAAAVLF}{\bkmkend AAAAAAAVLF}
+00247                            {\cf18 int} a_write_fd)\par
+{\bkmkstart AAAAAAAVLG}{\bkmkend AAAAAAAVLG}
+00248       : file_(a_file), line_(a_line), index_(an_index),\par
+{\bkmkstart AAAAAAAVLH}{\bkmkend AAAAAAAVLH}
+00249         write_fd_(a_write_fd) \{\}\par
+{\bkmkstart AAAAAAAVLI}{\bkmkend AAAAAAAVLI}
+00250 \par
+{\bkmkstart AAAAAAAVLJ}{\bkmkend AAAAAAAVLJ}
+00251   ~InternalRunDeathTestFlag() \{\par
+{\bkmkstart AAAAAAAVLK}{\bkmkend AAAAAAAVLK}
+00252     {\cf19 if} (write_fd_ >= 0)\par
+{\bkmkstart AAAAAAAVLL}{\bkmkend AAAAAAAVLL}
+00253       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAUTV" }{}}{\fldrslt {\cs37\ul\cf2 posix::Close}}}
+(write_fd_);\par
+{\bkmkstart AAAAAAAVLM}{\bkmkend AAAAAAAVLM}
+00254   \}\par
+{\bkmkstart AAAAAAAVLN}{\bkmkend AAAAAAAVLN}
+00255 \par
+{\bkmkstart AAAAAAAVLO}{\bkmkend AAAAAAAVLO}
+00256   {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+& file(){\cf17  const }\{ {\cf19 return} file_; \}\par
+{\bkmkstart AAAAAAAVLP}{\bkmkend AAAAAAAVLP}
+00257   {\cf18 int} line(){\cf17  const }\{ {\cf19 return} line_; \}\par
+{\bkmkstart AAAAAAAVLQ}{\bkmkend AAAAAAAVLQ}
+00258   {\cf18 int} index(){\cf17  const }\{ {\cf19 return} index_; \}\par
+{\bkmkstart AAAAAAAVLR}{\bkmkend AAAAAAAVLR}
+00259   {\cf18 int} write_fd(){\cf17  const }\{ {\cf19 return} write_fd_; \}\par
+{\bkmkstart AAAAAAAVLS}{\bkmkend AAAAAAAVLS}
+00260 \par
+{\bkmkstart AAAAAAAVLT}{\bkmkend AAAAAAAVLT}
+00261  {\cf17 private}:\par
+{\bkmkstart AAAAAAAVLU}{\bkmkend AAAAAAAVLU}
+00262   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ file_;\par
+{\bkmkstart AAAAAAAVLV}{\bkmkend AAAAAAAVLV}
+00263   {\cf18 int} line_;\par
+{\bkmkstart AAAAAAAVLW}{\bkmkend AAAAAAAVLW}
+00264   {\cf18 int} index_;\par
+{\bkmkstart AAAAAAAVLX}{\bkmkend AAAAAAAVLX}
+00265   {\cf18 int} write_fd_;\par
+{\bkmkstart AAAAAAAVLY}{\bkmkend AAAAAAAVLY}
+00266 \par
+{\bkmkstart AAAAAAAVLZ}{\bkmkend AAAAAAAVLZ}
+00267   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAALDK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISALLOW_COPY_AND_ASSIGN_}}}
+(InternalRunDeathTestFlag);\par
+{\bkmkstart AAAAAAAVMA}{\bkmkend AAAAAAAVMA}
+00268 \};\par
+{\bkmkstart AAAAAAAVMB}{\bkmkend AAAAAAAVMB}
+00269 \par
+{\bkmkstart AAAAAAAVMC}{\bkmkend AAAAAAAVMC}
+00270 {\cf20 // Returns a newly created InternalRunDeathTestFlag object with fields}\par
+{\bkmkstart AAAAAAAVMD}{\bkmkend AAAAAAAVMD}
+00271 {\cf20 // initialized from the GTEST_FLAG(internal_run_death_test) flag if}\par
+{\bkmkstart AAAAAAAVME}{\bkmkend AAAAAAAVME}
+00272 {\cf20 // the flag is specified; otherwise returns NULL.}\par
+{\bkmkstart AAAAAAAVMF}{\bkmkend AAAAAAAVMF}
+00273 InternalRunDeathTestFlag* ParseInternalRunDeathTestFlag();\par
+{\bkmkstart AAAAAAAVMG}{\bkmkend AAAAAAAVMG}
+00274 \par
+{\bkmkstart AAAAAAAVMH}{\bkmkend AAAAAAAVMH}
+00275 {\cf21 #endif  }{\cf20 // GTEST_HAS_DEATH_TEST}\par
+{\bkmkstart AAAAAAAVMI}{\bkmkend AAAAAAAVMI}
+00276 \par
+{\bkmkstart AAAAAAAVMJ}{\bkmkend AAAAAAAVMJ}
+00277 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAAAVMK}{\bkmkend AAAAAAAVMK}
+00278 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAVML}{\bkmkend AAAAAAAVML}
+00279 \par
+{\bkmkstart AAAAAAAVMM}{\bkmkend AAAAAAAVMM}
+00280 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_INTERNAL_GTEST_DEATH_TEST_INTERNAL_H_}\par
+}
+}

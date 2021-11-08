@@ -1,0 +1,74 @@
+\hypertarget{templates_8cpp_source}{}\doxysection{templates.\+cpp}
+\label{templates_8cpp_source}\index{templates.cpp@{templates.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <any>}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}cmdline.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00006}00006 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00008}00008 \textcolor{comment}{/*      }}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00009}00009 \textcolor{comment}{template <typename T> const T         getOptionAs(const char* name) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00010}00010 \textcolor{comment}{            const char* value = getOption(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00011}00011 \textcolor{comment}{            return castByNative<T>(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00012}00012 \textcolor{comment}{        }}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00013}00013 \textcolor{comment}{    bool            CmdLine::isOptionMultiple(string name) \{ return \_commandLine-\/>isOptionMultiple(name.c\_str()); \};}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00014}00014 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00015}00015 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00016}00016 \textcolor{comment}{namespace cmdline \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00017}00017 \textcolor{comment}{template<> string CmdLine::getOptionAs<string>(const char* name) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00018}00018 \textcolor{comment}{    const char* value = getOption(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00019}00019 \textcolor{comment}{        return string(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00020}00020 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00021}00021 \textcolor{comment}{template<> const char* CmdLine::getOptionAs<const char*>(const char* name) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00022}00022 \textcolor{comment}{        return getOption(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00023}00023 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00024}00024 \textcolor{comment}{template<> int CmdLine::getOptionAs<int>(const char* name) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00025}00025 \textcolor{comment}{    const char* value = getOption(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00026}00026 \textcolor{comment}{    return \_cmdline::validateNumber(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00027}00027 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00028}00028 \textcolor{comment}{template<> long CmdLine::getOptionAs<long>(const char* name) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00029}00029 \textcolor{comment}{    const char* value = getOption(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00030}00030 \textcolor{comment}{    return \_cmdline::validateNumber(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00031}00031 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00032}00032 \textcolor{comment}{template<> any CmdLine::getOptionAs<>(const char* name) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00033}00033 \textcolor{comment}{    const char* value = getOption(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00034}00034 \textcolor{comment}{    // gettype}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00035}00035 \textcolor{comment}{    Type type  = getType(name);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00036}00036 \textcolor{comment}{    switch (type) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00037}00037 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00038}00038 \textcolor{comment}{    throw CmdLineInvalidTypeException("{}Unknow"{}); // typeid(T).name());}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00039}00039 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00040}00040 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00041}00041 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00042}00042 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00043}00043 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00044}00044 \textcolor{comment}{template <typename T> T castByNative(const char* value) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00045}00045 \textcolor{comment}{        if constexpr (is\_same<T, const char*>::value)      return value;}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00046}00046 \textcolor{comment}{        if constexpr (is\_same<T, char*>::value)            return (char*)value;}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00047}00047 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00048}00048 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_STRING>::value)       return string(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00049}00049 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_LONG>::value)         return \_cmdline::validateNumber(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00050}00050 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_INT>::value)          return \_cmdline::makeInteger(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00051}00051 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_DECIMAL>::value)      return \_cmdline::validateDecimal(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00052}00052 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_FLOAT>::value)        return \_cmdline::makeFloat(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00053}00053 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_DOUBLE>::value)       return \_cmdline::validateDecimal(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00054}00054 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_DATE>::value)         return \_cmdline::makeTm(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00055}00055 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_TIME>::value)         return \_cmdline::makeTm(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00056}00056 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_DATETIME>::value)     return \_cmdline::makeTm(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00057}00057 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_TMS>::value)          return \_cmdline::validateTimestamp(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00058}00058 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_LONGNUMBER>::value)   return \_cmdline::validateLongNumber(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00059}00059 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_LONGDECIMAL>::value)  return \_cmdline::validateLongDecimal(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00060}00060 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_DIR>::value)          return \_cmdline::validateFile(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00061}00061 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_FILE>::value)         return \_cmdline::validateDir(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00062}00062 \textcolor{comment}{        if constexpr (is\_same<T, TYPE\_BOOL>::value) \{}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00063}00063 \textcolor{comment}{            if (value == 0x0) return false;}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00064}00064 \textcolor{comment}{            return \_cmdline::valMakeBoolean(value);}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00065}00065 \textcolor{comment}{        \}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00066}00066 \textcolor{comment}{        throw CmdLineInvalidTypeException(typeid(T).name());}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00067}00067 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{templates_8cpp_source_l00068}00068 \textcolor{comment}{    */}}
+
+\end{DoxyCode}

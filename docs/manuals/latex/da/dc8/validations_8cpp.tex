@@ -1,4 +1,4 @@
-\hypertarget{validations_8cpp}{}\doxysection{Referencia del Archivo libcmdline/src/validations.cpp}
+\hypertarget{validations_8cpp}{}\doxysection{libcmdline/src/validations.cpp File Reference}
 \label{validations_8cpp}\index{libcmdline/src/validations.cpp@{libcmdline/src/validations.cpp}}
 {\ttfamily \#include $<$ctime$>$}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
@@ -14,19 +14,14 @@
 {\ttfamily \#include \char`\"{}cmdline\+\_\+exceptions.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}validations.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}msg\+\_\+locale.\+hpp\char`\"{}}\newline
-Dependencia gráfica adjunta para validations.\+cpp\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{da/dde/validations_8cpp__incl}
-\end{center}
-\end{figure}
+Include dependency graph for validations.\+cpp\+:
+% FIG 0
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace__cmdline}{\+\_\+cmdline}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Funciones}
+\begin{DoxyCompactList}\small\item\em Private namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 struct tm $\ast$ \mbox{\hyperlink{namespace__cmdline_ade1b540e78711606ef25480c5ff903fc}{\+\_\+cmdline\+::make\+Date\+Time}} (char $\ast$sdate, char $\ast$stime)
@@ -65,9 +60,9 @@ filesystem\+::path \mbox{\hyperlink{namespace__cmdline_abeab6d0edcdf554fa8652c8a
 \item 
 filesystem\+::path \mbox{\hyperlink{namespace__cmdline_a66551a355b1355d0cbf634354faf5c56}{\+\_\+cmdline\+::validate\+File\+Exist}} (const char $\ast$value)
 \item 
-void \mbox{\hyperlink{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}{\+\_\+cmdline\+::validate\+Value}} (const char $\ast$value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{cmdline\+::\+Type}} type)
+void \mbox{\hyperlink{namespace__cmdline_afebb559c0eb8407b4c6a00c0efe4bebd}{\+\_\+cmdline\+::validate\+Value}} (const char $\ast$value, \mbox{\hyperlink{group___types_ga80cbaf62b10e04cd077a7165ad010b15}{cmdline\+::\+Type}} type)
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace__cmdline_a6f2a7393534fb21104f12a850152be0a}{\+\_\+cmdline\+::get\+Value}} (const char $\ast$value, \mbox{\hyperlink{namespacecmdline_a80cbaf62b10e04cd077a7165ad010b15}{Type}} type)
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace__cmdline_a6f2a7393534fb21104f12a850152be0a}{\+\_\+cmdline\+::get\+Value}} (const char $\ast$value, \mbox{\hyperlink{group___types_ga80cbaf62b10e04cd077a7165ad010b15}{Type}} type)
 \item 
 {\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace__cmdline_a7149c0f6113ecda584bcd9402b70c108}{\+\_\+cmdline\+::check\+Value}} (auto value)
 \item 

@@ -1,4 +1,4 @@
-.TH "testing::TestCase" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "testing::TestCase" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ testing::TestCase
 .PP
 .PP
 \fC#include <gtest\&.h>\fP
-.SS "Métodos públicos"
+.SS "Public Member Functions"
 
 .in +1c
 .ti -1c
@@ -63,7 +63,7 @@ testing::TestCase
 .RI "const \fBTestResult\fP & \fBad_hoc_test_result\fP () const"
 .br
 .in -1c
-.SS "Amigas"
+.SS "Friends"
 
 .in +1c
 .ti -1c
@@ -73,31 +73,31 @@ testing::TestCase
 .RI "class \fBinternal::UnitTestImpl\fP"
 .br
 .in -1c
-.SH "Descripción detallada"
+.SH "Detailed Description"
 .PP 
-Definición en la línea \fB819\fP del archivo \fBgtest\&.h\fP\&.
-.SH "Documentación del constructor y destructor"
+Definition at line \fB819\fP of file \fBgtest\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
 .PP 
 .SS "testing::TestCase::TestCase (const char * name, const char * a_type_param, \fBTest::SetUpTestCaseFunc\fP set_up_tc, \fBTest::TearDownTestCaseFunc\fP tear_down_tc)"
 
 .SS "virtual testing::TestCase::~TestCase ()\fC [virtual]\fP"
 
-.SH "Documentación de las funciones miembro"
+.SH "Member Function Documentation"
 .PP 
 .SS "const \fBTestResult\fP & testing::TestCase::ad_hoc_test_result () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB890\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB890\fP of file \fBgtest\&.h\fP\&.
 .SS "int testing::TestCase::disabled_test_count () const"
 
 .SS "\fBTimeInMillis\fP testing::TestCase::elapsed_time () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB882\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB882\fP of file \fBgtest\&.h\fP\&.
 .SS "bool testing::TestCase::Failed () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB879\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB879\fP of file \fBgtest\&.h\fP\&.
 .SS "int testing::TestCase::failed_test_count () const"
 
 .SS "const \fBTestInfo\fP * testing::TestCase::GetTestInfo (int i) const"
@@ -105,11 +105,11 @@ Definición en la línea \fB879\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const char * testing::TestCase::name () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB841\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB841\fP of file \fBgtest\&.h\fP\&.
 .SS "bool testing::TestCase::Passed () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB876\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB876\fP of file \fBgtest\&.h\fP\&.
 .SS "int testing::TestCase::reportable_disabled_test_count () const"
 
 .SS "int testing::TestCase::reportable_test_count () const"
@@ -117,7 +117,7 @@ Definición en la línea \fB876\fP del archivo \fBgtest\&.h\fP\&.
 .SS "bool testing::TestCase::should_run () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB852\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB852\fP of file \fBgtest\&.h\fP\&.
 .SS "int testing::TestCase::successful_test_count () const"
 
 .SS "int testing::TestCase::test_to_run_count () const"
@@ -127,18 +127,18 @@ Definición en la línea \fB852\fP del archivo \fBgtest\&.h\fP\&.
 .SS "const char * testing::TestCase::type_param () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB845\fP del archivo \fBgtest\&.h\fP\&.
-.SH "Documentación de las funciones relacionadas y clases amigas"
+Definition at line \fB845\fP of file \fBgtest\&.h\fP\&.
+.SH "Friends And Related Function Documentation"
 .PP 
 .SS "friend class internal::UnitTestImpl\fC [friend]\fP"
 
 .PP
-Definición en la línea \fB894\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB894\fP of file \fBgtest\&.h\fP\&.
 .SS "friend class \fBTest\fP\fC [friend]\fP"
 
 .PP
-Definición en la línea \fB893\fP del archivo \fBgtest\&.h\fP\&.
+Definition at line \fB893\fP of file \fBgtest\&.h\fP\&.
 
-.SH "Autor"
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

@@ -15,26 +15,26 @@
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00011}00011 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecmdline}{cmdline}};}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00012}00012 }
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00013}00013 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace__cmdline}{\_cmdline}} \{}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00014}\mbox{\hyperlink{class__cmdline_1_1_command_line}{00014}}     \textcolor{keyword}{class }\mbox{\hyperlink{class__cmdline_1_1_command_line}{CommandLine}} \{}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00014}00014     \textcolor{keyword}{class }CommandLine \{}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00015}00015     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00016}00016         \mbox{\hyperlink{class__cmdline_1_1_command_line}{CommandLine}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv, Parameters parms, \textcolor{keywordtype}{bool} sensitive, \textcolor{keywordtype}{bool} strict);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00017}00017         \mbox{\hyperlink{class__cmdline_1_1_command_line}{\string~CommandLine}}();}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00016}00016         CommandLine(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, Parameters parms, \textcolor{keywordtype}{bool} sensitive, \textcolor{keywordtype}{bool} strict);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00017}00017         \string~CommandLine();}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00018}00018 }
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00019}00019         vector<const char*> getArgs();}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00020}00020         \textcolor{comment}{// Flags}}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00021}00021         \textcolor{keywordtype}{bool}  hasFlag(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* flag);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00022}00022         Flags getDefaultFlags(\textcolor{keywordtype}{bool} all);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00023}00023         Flags getCurrentFlags(\textcolor{keywordtype}{bool} all);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00025}00025         \textcolor{comment}{// Options}}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00026}00026         \textcolor{keywordtype}{int}                 getOptionNumValues(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00027}00027         \textcolor{keywordtype}{bool}                hasOption(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00028}00028         \textcolor{keywordtype}{bool}                isOptionMultiple(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00029}00029         Options             getDefaultOptions();}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00020}00020         Type getType(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00021}00021         \textcolor{comment}{// Flags}}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00022}00022         \textcolor{keywordtype}{bool}  hasFlag(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* flag);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00023}00023         Flags getDefaultFlags(\textcolor{keywordtype}{bool} all);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00024}00024         Flags getCurrentFlags(\textcolor{keywordtype}{bool} all);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00026}00026         \textcolor{comment}{// Options}}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00027}00027         \textcolor{keywordtype}{int}                 getOptionNumValues(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00028}00028         \textcolor{keywordtype}{bool}                hasOption(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00029}00029         \textcolor{keywordtype}{bool}                isOptionMultiple(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00030}00030         Options             getCurrentOptions();}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00031}00031         \textcolor{keyword}{const} \textcolor{keywordtype}{char}*         getOption(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00032}00032         vector<const char*> getOptionValues(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00033}00033         unordered\_map<string, string>   getDefaultOptions();}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00034}00034         \textcolor{comment}{// Definitions}}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00035}00035         \textcolor{keywordtype}{bool}                 hasDefinition(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* def);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00036}00036         \textcolor{keywordtype}{bool}                 isDefinitionMultiple(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
@@ -48,33 +48,40 @@
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00044}00044         vector<const char*> inputs;}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00045}00045         \textcolor{keywordtype}{bool}   sensitive = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00046}00046         \textcolor{keywordtype}{bool}   strict = \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00047}00047         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}  options;}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00048}00048         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}  flags;}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00049}00049         \mbox{\hyperlink{class__cmdline_1_1_group}{Group}}  defines;}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00050}00050         \textcolor{keywordtype}{void}  parse(\textcolor{keyword}{const} \textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00047}00047         Group  options;}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00048}00048         Group  flags;}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00049}00049         Group  defines;}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00050}00050         \textcolor{keywordtype}{void}  parseCommandLine(\textcolor{keyword}{const} \textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00051}00051         \textcolor{keywordtype}{char}* addValueToOption(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* option, \textcolor{keywordtype}{char}* prev);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00052}00052         \textcolor{keywordtype}{char}* checkOption(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* option);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00053}00053         \textcolor{keywordtype}{char}* checkFlag(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* flag);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00054}00054         \textcolor{keywordtype}{char}* checkParameter(\mbox{\hyperlink{class__cmdline_1_1_parameter_tree}{ParameterTree}}* root[], \textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00055}00055         \textcolor{keywordtype}{void}  checkAlreadySet(\mbox{\hyperlink{class__cmdline_1_1_group}{Group}}* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00054}00054         \textcolor{keywordtype}{char}* checkParameter(ParameterTree* root[], \textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00055}00055         \textcolor{keywordtype}{void}  checkAlreadySet(Group* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00056}00056 }
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00057}00057         \textcolor{keywordtype}{char}* updateFlag(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* flag, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prev, \textcolor{keywordtype}{bool} value);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00058}00058         \textcolor{keywordtype}{void}  updateFlagItem(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* flag, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prev, \textcolor{keywordtype}{bool} value);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00059}00059         \textcolor{keywordtype}{char}* updateOption(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* option, \textcolor{keywordtype}{char}* value);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00060}00060         \textcolor{keywordtype}{char}* updateDefinition(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* def);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00061}00061         \textcolor{keywordtype}{void}  updateFromEnv();}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00062}00062         \textcolor{keywordtype}{void}  udpateArgsFromEnv(\mbox{\hyperlink{class__cmdline_1_1_group}{Group}}\& parms, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prfx);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00061}00061         \textcolor{keywordtype}{void}  updateValuesFromEnvironment();}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00062}00062         \textcolor{keywordtype}{void}  udpateArgsFromEnv(Group\& parms, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prfx);}
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00063}00063 }
 \DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00064}00064         Flags       getFlags(\textcolor{keywordtype}{bool} active, \textcolor{keywordtype}{bool} set);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00065}00065         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}\&   find(\mbox{\hyperlink{class__cmdline_1_1_group}{Group}}* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00066}00066         \mbox{\hyperlink{class__cmdline_1_1_argument}{Argument}}*   findPointer(\mbox{\hyperlink{class__cmdline_1_1_group}{Group}}* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00067}00067         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* getValue(\mbox{\hyperlink{class__cmdline_1_1_group}{Group}}* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00068}00068         Options     getOptionsValue(\textcolor{keywordtype}{bool} def);}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00069}00069         \textcolor{keywordtype}{void}        preInit(Parameters parms, \textcolor{keywordtype}{bool} init = \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00070}00070         \textcolor{keywordtype}{void}        postInit();}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00071}00071         \textcolor{keywordtype}{void}        loadHelp();}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00072}00072         }
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00073}00073     \};}
-\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00074}00074 \}}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00065}00065         Argument\&   find(Group* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00066}00066         Argument*   findPointer(Group* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00067}00067         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* getValue(Group* group, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00068}00068         unordered\_map<string,string>     getOptionsValue(\textcolor{keywordtype}{bool} def);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00069}00069         \textcolor{keywordtype}{void}       loadParameters(Parameters parms);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00070}00070         \textcolor{keywordtype}{void}        loadHelpFlags();}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00071}00071         }
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00072}00072        \textcolor{keywordtype}{char}* configFileInCommandLine(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char} **argv);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00073}00073        \textcolor{keywordtype}{void}  processConfigFile(\textcolor{keywordtype}{char} *fname);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00074}00074        \textcolor{keywordtype}{char}* processOptionOrDefinition(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *argv, \textcolor{keywordtype}{char} *prevToken);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00075}00075        \textcolor{keywordtype}{char}* processDefinition(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *argv);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00076}00076        \textcolor{keywordtype}{char}* activeFlag(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *flag, \textcolor{keywordtype}{char} *prev);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00077}00077        \textcolor{keywordtype}{char}* inactiveFlag(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *flag, \textcolor{keywordtype}{char} *prev);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00078}00078        \textcolor{keywordtype}{void}  addToInputs(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *arg);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00079}00079        \textcolor{keywordtype}{bool}  updateFlagHelp(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *arg, \textcolor{keywordtype}{char} *prev);}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00080}00080     \};}
+\DoxyCodeLine{\Hypertarget{commandline_8hpp_source_l00081}00081 \}}
 
 \end{DoxyCode}

@@ -24,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../prompt2.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Command Line Processor<span id="projectnumber">&#160;0.2.3</span>
    </div>
@@ -105,32 +106,30 @@ $(document).ready(function(){initNavTree('d5/d60/cmdline__flavors_8cpp_source.ht
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    CmdLineI::~CmdLineI() {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        _cleanClass();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    CmdLineI::CmdLineI(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) : <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">CmdLine</a>(argc, argv, parms, true) {}</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    CmdLineI::CmdLineI(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, cmdline::Parameters parms, <span class="keywordtype">bool</span> strict) : <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">CmdLine</a>(argc, argv, parms, true, strict) {}</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">CmdLine</a> CmdLineI::getInstance(<span class="keywordtype">int</span> argc,  <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    CmdLineI::CmdLineI(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, true) {}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    CmdLineI::CmdLineI(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms, <span class="keywordtype">bool</span> strict) : CmdLine(argc, argv, parms, true, strict) {}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    CmdLine* CmdLineI::getInstance(<span class="keywordtype">int</span> argc,  <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> CmdLine::pGetInstance(argc, argv, parms, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    CmdLineS::CmdLineS(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) : <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">CmdLine</a>(argc, argv, parms, false, true) {}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    CmdLineIS::CmdLineIS(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) : <a class="code hl_class" href="../../dd/dc5/classcmdline_1_1_cmd_line_i.html">CmdLineI</a>(argc, argv, parms, true) {}</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">CmdLine</a> CmdLineS::getInstance(<span class="keywordtype">int</span> argc,  <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    CmdLineS::CmdLineS(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, false, true) {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    CmdLineIS::CmdLineIS(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) : CmdLineI(argc, argv, parms, true) {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    CmdLine* CmdLineS::getInstance(<span class="keywordtype">int</span> argc,  <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> CmdLine::pGetInstance(argc, argv, parms, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="../../dd/d07/classcmdline_1_1_cmd_line.html">CmdLine</a> CmdLineIS::getInstance(<span class="keywordtype">int</span> argc,  <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    CmdLine* CmdLineIS::getInstance(<span class="keywordtype">int</span> argc,  <span class="keyword">const</span> <span class="keywordtype">char</span>** argv, cmdline::Parameters parms) {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> CmdLine::pGetInstance(argc, argv, parms, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    CmdLineIS::~CmdLineIS() {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        _cleanClass();</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aclasscmdline_1_1_cmd_line_html"><div class="ttname"><a href="../../dd/d07/classcmdline_1_1_cmd_line.html">cmdline::CmdLine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dea/cmdline_8hpp_source.html#l00079">cmdline.hpp:79</a></div></div>
-<div class="ttc" id="aclasscmdline_1_1_cmd_line_i_html"><div class="ttname"><a href="../../dd/dc5/classcmdline_1_1_cmd_line_i.html">cmdline::CmdLineI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dea/cmdline_8hpp_source.html#l00153">cmdline.hpp:153</a></div></div>
 <div class="ttc" id="anamespacecmdline_html"><div class="ttname"><a href="../../d4/d41/namespacecmdline.html">cmdline</a></div><div class="ttdoc">Public namespace to avoid naming mangling.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_fedd67a8c96aee38c54230a4e25bd216.html">libcmdline</a></li><li class="navelem"><a class="el" href="../../dir_22c122fc2e7f79841a107d96b40066fd.html">src</a></li><li class="navelem"><b>cmdline_flavors.cpp</b></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>cmdline_flavors.cpp</b></li>
     <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>

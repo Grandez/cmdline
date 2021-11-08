@@ -3,6 +3,8 @@ var group___types =
     [ "cmdline::Source", "df/d4e/group___types.html#ga176e1eca2d1e3d1c6a064340bc6a351e", [
       [ "cmdline::Source::DEFAULT", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea5b39c8b553c821e7cddc6da64b5bd2ee", null ],
       [ "cmdline::Source::ENV", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d", null ],
+      [ "cmdline::Source::CMDLINE", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430", null ],
+      [ "cmdline::Source::FILE", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719", null ],
       [ "cmdline::Source::CODE", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9", null ],
       [ "cmdline::Source::AUTO", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9", null ]
     ] ],

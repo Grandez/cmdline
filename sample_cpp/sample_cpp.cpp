@@ -1,6 +1,6 @@
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
-#include <crtdbg.h>
+//#include <crtdbg.h>
 // #include <vld.h>
 
 #include <iostream>
@@ -14,17 +14,26 @@ void showHelpSimple(HelpRequested* help) {
     string options("[/input list] [/output dir] [/ext pattern_list] [/pattern pattern_list]");
     cout << "A sample program about use parameters" << endl;
     cout << "Use: " << help->name << " " << flags << " " << options << endl;
-    delete help;
 }
 void showHelpDetail(HelpRequested* help) {
-    string flags("[?verbose] [?summary] [?overwrite]");
-    string options("[/input list] [/output dir] [/ext pattern_list] [/pattern pattern_list]");
-    cout << "A sample program about use parameters" << endl;
-    cout << "Use: " << help->name << " " << flags << " " << options << endl;
-    cout << "\tverbose:" << "\t show progress information. Default: " << help->flags.at("verbose") << endl;
-    cout << "\tsummary:" << "\t Print summary info after process. Default: " << help->flags.at("summary") << endl;
-    cout << "\toverwrite:" << "\t Overwrite existing file?. Default: " << help->flags.at("overwrite") << endl;
-    delete help;
+    showHelpSimple(help);
+    cout << "\tverbose:"   << "\t show progress information. Default: " 
+                           << std::boolalpha << help->flags.at("verbose") << endl;
+    cout << "\tsummary:"   << "\t Print summary info after process. Default: " 
+                           << std::boolalpha << help->flags.at("summary") << endl;
+    cout << "\toverwrite:" << "\t Overwrite existing file?. Default: " 
+                           << std::boolalpha << help->flags.at("overwrite") << endl;
+    cout << "\tinput:"     << "\tInput directories. Default: " 
+                           << help->options.at("input") << endl;
+    cout << "\toutput:"    << "\tOutput directory. Default: " 
+                           << help->options.at("output") << endl;
+    cout << "\tpattern:"   << "\tPattern for file names. Default: (All) " 
+                           << help->options.at("pattern") << endl;
+    cout << "\text:"       << "\tPattern for extensions. Default: (All) " 
+                           << help->options.at("ext") << endl;
+
+
+//    delete help;
 
 }
 void showHelp(HelpRequested *help) {
@@ -37,19 +46,19 @@ Parameters  parms = {
    ,ParmFlag("overwrite")       // Not overwrite files
    ,ParmOption("input", Type::DIR_EXISTS,true)       // Input directories
    ,ParmOption("output", Type::DIR, false)       // Output directory
-   ,ParmOption("ext", Type::STRING, true)              // Extension
-   ,ParmOption("pattern", Type::STRING, true)              // regexp for name
+   ,ParmOption("ext",     "*", Type::STRING, true)              // Extension
+   ,ParmOption("pattern", "*", Type::STRING, true)              // regexp for name
 };
 
 int main(int argc, char *argv[]) {
-    _CrtMemState s1, s2, s3;
-    _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
-    _crtBreakAlloc = 246;
+  //  _CrtMemState s1, s2, s3;
+  //  _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
+  //  _crtBreakAlloc = 246;
     {
     CmdLine *cmdline = nullptr;
     try {
         
-_CrtMemCheckpoint( &s1 );
+//_CrtMemCheckpoint( &s1 );
 
        cmdline = CmdLine::getInstance(argc, argv,parms);
     }
@@ -58,12 +67,13 @@ _CrtMemCheckpoint( &s1 );
         delete cmdline;
     } 
     catch (CmdLineException *ex) {
-        cout << "error\n";
+        cerr << ex->what() << endl;
+        exit(1);
     }
     }
-_CrtMemCheckpoint( &s2 );
-if ( _CrtMemDifference( &s3, &s1, &s2) )
-   _CrtMemDumpStatistics( &s3 );
+//_CrtMemCheckpoint( &s2 );
+//if ( _CrtMemDifference( &s3, &s1, &s2) )
+//   _CrtMemDumpStatistics( &s3 );
     cout << "Esto seria el final\n";
 }
 

@@ -1,4 +1,4 @@
-.TH "libcmdline/src/commandline.cpp" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/src/commandline.cpp" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,6 +9,8 @@ libcmdline/src/commandline.cpp
 \fC#include <iostream>\fP
 .br
 \fC#include <vector>\fP
+.br
+\fC#include 'config\&.h'\fP
 .br
 \fC#include 'commandline\&.hpp'\fP
 .br
@@ -22,6 +24,8 @@ libcmdline/src/commandline.cpp
 .br
 \fC#include 'defines\&.hpp'\fP
 .br
+\fC#include 'commandline_aux\&.hpp'\fP
+.br
 
 .SS "Namespaces"
 
@@ -29,30 +33,50 @@ libcmdline/src/commandline.cpp
 .ti -1c
 .RI "namespace \fB_cmdline\fP"
 .br
+.RI "Private namespace\&. "
 .in -1c
-.SS "defines"
+.SS "Macros"
 
 .in +1c
 .ti -1c
 .RI "#define \fB_CRT_SECURE_NO_WARNINGS\fP"
 .br
 .in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_cmdline::launchHelpIfActive\fP (CommandLine *ptr)"
+.br
+.in -1c
 .SS "Variables"
 
 .in +1c
+.ti -1c
+.RI "constexpr auto \fB_cmdline::OPTION_OR_DEFINITION\fP = '/'"
+.br
+.ti -1c
+.RI "constexpr auto \fB_cmdline::FLAG_ACTIVE\fP = '+'"
+.br
+.ti -1c
+.RI "constexpr auto \fB_cmdline::FLAG_INACTIVE\fP = '\-'"
+.br
 .ti -1c
 .RI "ParameterTree * \fB_cmdline::rootOptions\fP [128]"
 .br
 .ti -1c
 .RI "ParameterTree * \fB_cmdline::rootFlags\fP [128]"
 .br
+.ti -1c
+.RI "char * \fB_cmdline::programName\fP = nullptr"
+.br
 .in -1c
-.SH "Documentación de los 'defines'"
+.SH "Macro Definition Documentation"
 .PP 
 .SS "#define _CRT_SECURE_NO_WARNINGS"
 
 .PP
-Definición en la línea \fB1\fP del archivo \fBcommandline\&.cpp\fP\&.
-.SH "Autor"
+Definition at line \fB1\fP of file \fBcommandline\&.cpp\fP\&.
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

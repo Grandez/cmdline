@@ -10,13 +10,19 @@
 #include "cmdline_exceptions.hpp"
 #include "defines.hpp"
 
+#include "commandline_aux.hpp"
+
 using namespace std;
 
 namespace _cmdline {
+constexpr auto OPTION_OR_DEFINITION = '/';
+constexpr auto  FLAG_ACTIVE         =  '+';
+constexpr auto  FLAG_INACTIVE       =  '-';
+
 	ParameterTree* rootOptions[128];
 	ParameterTree* rootFlags[128];
     char *programName = nullptr;
-	void checkHelp(CommandLine *ptr) {
+	void launchHelpIfActive(CommandLine *ptr) {
 		int help = 0;
 		HelpRequested *ex = nullptr;
 		if (ptr->hasFlag("HELP")) help |= 2;
@@ -24,31 +30,23 @@ namespace _cmdline {
 		if (help) {
 			Flags flags = ptr->getDefaultFlags(false);
 			std::unordered_map<string, string> options = ptr->getDefaultOptions();
-			delete ptr;
+//			delete ptr;
 		    if (help >= 2) throw new HelpDetailedRequested(strdup(programName), flags, options);
 			throw new HelpSimpleRequested(strdup(programName), flags, options);
 		}
 	}
-    void findConfig(int argc, const char **argv) {
-		char c;
-		for (int i = 1; i < argc; i++) {
-			if (strcmp(argv[i], CMDLINE_CONFIG) == 0) {
-				if ((i+1) == argc)  cout << "error"; // Error
-				c = argv[i+1][0];
-				if (c == '/' || c == '-' || c == '+') cout << "error"; // error
-				// process config
-			}
-		}
-	}
-	CommandLine::CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
+	                    CommandLine::CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
 		std::cout << "Crea CommandLine\n";
 		this->sensitive = sensitive;
 		this->strict = strict;
-		preInit(parms);
-		postInit();
-		parse(argc, argv);
+		memset(&rootOptions, 0x0, sizeof(rootOptions));
+		memset(&rootFlags, 0x0, sizeof(rootFlags));
+        loadParameters(parms);
+		updateValuesFromEnvironment();
+		loadHelpFlags();
+		parseCommandLine(argc, argv);
 	}
-	CommandLine::~CommandLine() {
+	                    CommandLine::~CommandLine() {
 		std::cout << "Delete CommandLine\n";
 		for (int i = 0; i < 128; i++) {
 			
@@ -66,21 +64,21 @@ namespace _cmdline {
 	vector<const char*> CommandLine::getArgs() {
 		return inputs;
 	}
-	bool CommandLine::hasFlag(const char* name) {
+	bool   CommandLine::hasFlag(const char* name) {
 		Argument& opt = find(&flags, name);
 		return makeBoolean(opt.getValue());
 	}
-	Flags  CommandLine::getDefaultFlags(bool all) { // Valores por defecto
-		return getFlags(all, false);
+	Flags  CommandLine::getDefaultFlags(bool allValues) { // Valores por defecto
+		return getFlags(allValues, true);
 	}
-	Flags CommandLine::getCurrentFlags(bool all) {
-		return getFlags(all, true);
+	Flags  CommandLine::getCurrentFlags(bool allValues) {
+		return getFlags(allValues, false);
 	}
-	bool CommandLine::hasOption(const char* name) {
+	bool   CommandLine::hasOption(const char* name) {
 		Argument& opt = find(&options, name);
 		return (strlen(opt.getValue()) == 0 ? false : true);
 	}
-	bool CommandLine::isOptionMultiple(const char* name) {
+	bool   CommandLine::isOptionMultiple(const char* name) {
 		Argument& opt = find(&options, name);
 		return (opt.values.size() > 1);
 	}
@@ -102,11 +100,11 @@ namespace _cmdline {
 //		return getOptionsValues(false);
 		return Options();
 	}
-	bool            CommandLine::hasDefinition(const char* name) {
+	bool    CommandLine::hasDefinition(const char* name) {
 		Argument* opt = findPointer(&defines, name);
 		return (opt == nullptr) ? false : true;
 	}
-	bool            CommandLine::isDefinitionMultiple(const char* name) {
+	bool    CommandLine::isDefinitionMultiple(const char* name) {
 		Argument& opt = find(&defines, name);
 		return (opt.values.size() < 2 ? false : true);
 	}
@@ -114,11 +112,11 @@ namespace _cmdline {
 		Argument& opt = find(&defines, name);
 		return opt.getValues();
 	}
-	int         CommandLine::getDefinitionNumValues(const char* name) {
+	int      CommandLine::getDefinitionNumValues(const char* name) {
 		Argument& opt = find(&defines, name);
 		return (int) opt.values.size();
 	}
-	Options    CommandLine::getDefinitions() {
+	Options  CommandLine::getDefinitions() {
 		Options opts;
 		for (auto it = defines.begin(); it != defines.end(); it++){
 			opts.emplace(it->second.name, it->second.getStringValues());
@@ -144,62 +142,123 @@ namespace _cmdline {
 	// /////////////////////////////////////////////////////////////
 	// PRIVATES
 	// /////////////////////////////////////////////////////////////
-	void CommandLine::parse(int argc, const char** argv) {
-		findConfig(argc, argv);
+	void  CommandLine::parseCommandLine(int argc, const char** argv) {
+		 programName = strdup(argv[0]);
+		 char *configFile = configFileInCommandLine(argc, argv);
+		 if (configFile) processConfigFile(configFile);
 
-		programName = strdup(argv[0]);
-		char c;
-		char szOpt[64] = "";
-		std::string in;
-		char* prev = nullptr;
-		for (int i = 1; i < argc; i++) {
-			c = argv[i][0];
+		 char firstLetter;
+		 char parmName[64] = "";
+		 char* prevToken = nullptr;
 
-			if (c == '/' || c == '+' || c == '-') {
-				strcpy(szOpt, argv[i]);
-				if (sensitive) {
-					for (size_t j = 0; j < strlen(szOpt); j++) szOpt[j] = toupper(szOpt[j]);
-				}
-			}
-			switch (argv[i][0]) {
-			case '/':
-				prev = updateOption(szOpt, prev);
-				if (strict) checkAlreadySet(&options, prev);
-				break;
-			case '+': if (prev != nullptr) throw CmdLineException(ERR_ARG_MISSING, prev);
-				prev = updateFlag(szOpt, argv[i], true);   break;
-			case '-': in = string(szOpt);
-				if (in == std::string("-h") || in == std::string("--help")) {
-					updateFlag((char*)"+help", prev, true);
-				} else if (in == std::string("-H") || in == std::string("--HELP")) {
-					updateFlag((char*)"+HELP", prev, true);
-				} else {
-					updateFlag(argv[i], prev, false);
-				}
-				break;
-			default:
-				if (prev == NULL) inputs.push_back(argv[i]);
-				if (prev != NULL) prev = addValueToOption(argv[i], prev);
-			}
-		}
-		checkHelp(this);
+		 for (int idxArgument = 1; idxArgument < argc; idxArgument++) {
+		      firstLetter = getFirstCharacter(argv[idxArgument]);
+			  if (isParameter(firstLetter)) {
+				  copyParameterInUpperCase(argv[idxArgument], sensitive, parmName);
+			   }
+			   switch (firstLetter) {
+			           case OPTION_OR_DEFINITION: 
+                            if (isConfigFile(argc, argv, idxArgument, sensitive)) {
+                                idxArgument++;
+                                break;
+                            }
+                            prevToken = processOptionOrDefinition(argv[idxArgument], prevToken); 
+                            break;
+			           case FLAG_ACTIVE:           
+                            activeFlag   (argv[idxArgument], prevToken); 
+                            prevToken = nullptr;
+                            break;
+			           case FLAG_INACTIVE:   
+				            if (!updateFlagHelp(argv[idxArgument], prevToken)) {
+				                inactiveFlag (argv[idxArgument], prevToken); 
+                            }
+                            prevToken = nullptr;
+				            break;
+			          default:                 
+				           if (prevToken == nullptr) 
+                               addToInputs(argv[idxArgument]);
+				           if (prevToken != nullptr) {
+                               addValueToOption(argv[idxArgument], prevToken);
+                               prevToken = nullptr;
+                           }
+			   }
+		 }
+		launchHelpIfActive(this);
 	}
+    char* CommandLine::processOptionOrDefinition(const char *argv, char *prevToken) {
+   	     char *optionName;
+   	     size_t pos = std::string(argv).find("=");
+   	     if (pos != std::string::npos) return processDefinition(argv);
+   	     validateEntry(argv, prevToken);
+   	     optionName = checkOption(&(argv[1]));
+   	     if (strict) checkAlreadySet(&options, prevToken);
+   	     return optionName;
+   }
+    char* CommandLine::processDefinition(const char *argv) {
+   	     const char* ptr = &(argv[1]);
+   	     vector<string> toks = tokenize(ptr, "=");
+   	     if (toks.size() != 2)      throw cmdline::CmdLineParameterException(INV_DEFINITION, argv);
+   	     if (toks[0].length() == 0) throw cmdline::CmdLineParameterException(INV_DEFINITION, argv);
+   	     Argument* def = defines.find(toks[0]);
+   	     if (def == nullptr) def = new Define(toks[0].c_str());
+   	     def->addValues(splitArgument(toks[1].c_str()));
+   	     defines.add(def);
+   	     return nullptr;
+   }
+    char* CommandLine::activeFlag(const char *flag, char *prev) {
+         std::vector<std::string> flags = splitArgument(flag);
+         for (std::string f : flags) updateFlagItem((char*)f.c_str(), prev, true);
+         return nullptr;
+   }
+    char* CommandLine::inactiveFlag(const char *flag, char *prev) {
+   	     std::vector<std::string> flags = splitArgument(flag);
+   	     for (std::string f : flags) updateFlagItem((char*)f.c_str(), prev, false);
+   	     return nullptr;
+   }
+    void  CommandLine::updateFlagItem(const char* flag, const char* prev, bool value) {
+          std::string name;
+          validateEntry(flag, prev);
+          try {
+             Argument* opt = flags.find(checkFlag(&(flag[1])));
+             opt->setValue(value);
+          }
+          catch (exception ex) {
+             char newFlag[3] = "+ ";
+             if (strlen(flag) == 2) throw;
+             for (size_t i = 1; i < strlen(flag); i++) {
+                  newFlag[1] = flag[i];
+                  updateFlagItem(newFlag, prev, value);
+             }
+          }
+	}
+    void  CommandLine::addToInputs(const char *arg) {
+	        inputs.push_back(strdup(arg));
+    }
+    char* CommandLine::addValueToOption(const char* value, char* option) {
+         if (strlen(option) == 1) throw CmdLineException(ERR_INV_OPTION, option);
+         Argument* opt = options.find(option); // Exists!!!!
+         validateValue(value, opt->type);
+         if (opt->multiple)  (*opt).addValue(value);
+         if (!opt->multiple) (*opt).setValue(value);
+         return nullptr;
+   }
+
 	char* CommandLine::updateOption(const char* option, char* prev) {
-		size_t pos = std::string(option).find("=");
-		if (pos != std::string::npos) return updateDefinition(option);
-		validateEntry(option, prev);
-		return (checkOption(&(option[1])));
+          size_t pos = std::string(option).find("=");
+		  if (pos != std::string::npos) return updateDefinition(option);
+		  validateEntry(option, prev);
+		  return (checkOption(&(option[1])));
 	}
 	char* CommandLine::updateDefinition(const char* value) {
-		const char* ptr = &(value[1]);
-		vector<string> toks = tokenize(ptr, "=");
-		if (toks.size() != 2)      throw CmdLineParameterException(INV_DEFINITION, value);
-		if (toks[0].length() == 0) throw CmdLineParameterException(INV_DEFINITION, value);
-		Argument* def = defines.find(toks[0]);
-		if (def == nullptr) def = new Define(toks[0].c_str());
-		def->addValues(splitArgument(toks[1].c_str()));
-		defines.add(def);
-		return nullptr;
+	      const char* ptr = &(value[1]);
+		  vector<string> toks = tokenize(ptr, "=");
+		  if (toks.size() != 2)      throw CmdLineParameterException(INV_DEFINITION, value);
+		  if (toks[0].length() == 0) throw CmdLineParameterException(INV_DEFINITION, value);
+		  Argument* def = defines.find(toks[0]);
+		  if (def == nullptr) def = new Define(toks[0].c_str());
+		  def->addValues(splitArgument(toks[1].c_str()));
+		  defines.add(def);
+		  return nullptr;
 	}
 	char* CommandLine::updateFlag(const char* flag, const char* prev, bool value) {
 		std::vector<std::string> flags = splitArgument(flag);
@@ -207,77 +266,37 @@ namespace _cmdline {
 			updateFlagItem((char*)f.c_str(), prev, value);
 		return nullptr;
 	}
-	void  CommandLine::updateFlagItem(const char* flag, const char* prev, bool value) {
-		std::string name;
-		validateEntry(flag, prev);
-		try {
-			Argument* opt = flags.find(checkFlag(&(flag[1])));
-			opt->setValue(value);
-		}
-		catch (exception ex) {
-			char newFlag[3] = "+ ";
-			if (strlen(flag) == 2) throw;
-			for (size_t i = 1; i < strlen(flag); i++) {
-				newFlag[1] = flag[i];
-				updateFlagItem(newFlag, prev, value);
-			}
-		}
-	}
-	char* CommandLine::addValueToOption(const char* value, char* option) {
-		if (strlen(option) == 1) throw CmdLineException(ERR_INV_OPTION, option);
-		Argument* opt = options.find(option); // Exists!!!!
-		validateValue(value, opt->type);
-		if (opt->multiple) (*opt).addValue(value);
-		if (!opt->multiple) (*opt).setValue(value);
-		return nullptr;
-	}
 
-	Flags CommandLine::getFlags(bool active, bool def) {
-		Flags act;
-		bool value;
-		for (auto it : flags) {
-			value = makeBoolean((def) ? it.second.defValue : it.second.getValue());
-			if (it.second.source != Source::AUTO && (active || value)) act.emplace(it.second.name, value);
-		}
-		return act;
+	Flags CommandLine::getFlags(bool active, bool defaultValues) {
+          Flags act;
+          bool value;
+          for (auto it : flags) {
+          	value = makeBoolean((defaultValues) ? it.second.defValue : it.second.getValue());
+          	if (it.second.source != Source::AUTO && (active || value)) act.emplace(it.second.name, value);
+          }
+          return act;
 	}
 
 	Argument& CommandLine::find(Group* group, const char* what) {
-		char* ptr = (char*)what;
-		if (sensitive) ptr = makeUpper(what);
-		Argument* arg = group->find(ptr);
-		if (arg == nullptr) throw CmdLineNotFoundException(ERR_NOT_FND, what);
-		return *arg;
+         char* ptr = (char*)what;
+         if (sensitive) ptr = makeUpper(what);
+         Argument* arg = group->find(ptr);
+         if (arg == nullptr) throw CmdLineNotFoundException(ERR_NOT_FND, what);
+         return *arg;
 	}
 	Argument* CommandLine::findPointer(Group* group, const char* what) {
-		char* ptr = (char*)what;
-		if (sensitive) ptr = makeUpper(what);
-		return group->find(ptr);
+         char* ptr = (char*)what;
+         if (sensitive) ptr = makeUpper(what);
+         return group->find(ptr);
 	}
 
 	const char* CommandLine::getValue(Group* grp, const char* name) {
-		Argument& opt = find(grp, name);
-		return opt.getValue();
+        Argument& opt = find(grp, name);
+        return opt.getValue();
 	}
-/*
-	Options CommandLine::getOptionsValue(bool def) {
-		Options act;
-		for (auto it : options) {
-			string str((def ? it.second.defValue : it.second.getValue()));
-			vector<string> v;
-			v.push_back(def ? it.second.defValue : it.second.getValue());
-			if (it.second.source != Source::AUTO) act.emplace(it.second.name, v);
-		}
-		return act;
-	}
-*/
-	void  CommandLine::preInit(Parameters parms, bool init) {
+	void  CommandLine::loadParameters(Parameters parms) {
 		ParameterTree** root;
 
-		if (init) {
-			memset(&rootOptions, 0x0, sizeof(rootOptions));
-			memset(&rootFlags, 0x0, sizeof(rootFlags));
-		}
 		for (Parm p : parms) {
 			Argument option(&p);
 			if (sensitive) option.makeUpper();
@@ -288,15 +307,11 @@ namespace _cmdline {
 			add2tree(root, option.name.c_str());
 		}
 	}
-	void  CommandLine::postInit() {
-		updateFromEnv();
-		loadHelp();
-	}
-	void  CommandLine::loadHelp() {
-		Parameters flagHelp = { Parm("help", false) ,Parm("HELP", false) };
+	void  CommandLine::loadHelpFlags() {
+		Parameters flagsHelp = { Parm("help", false) ,Parm("HELP", false) };
 		Argument* arg = flags.find("help");
 		if (arg != nullptr) return;
-		preInit(flagHelp, false);
+		loadParameters(flagsHelp);
 		if (!sensitive) {
 			arg = flags.find("help");
 			arg->source = Source::AUTO;
@@ -304,7 +319,7 @@ namespace _cmdline {
 		arg = flags.find("HELP");
 		arg->source = Source::AUTO;
 	}
-	void  CommandLine::updateFromEnv() {
+	void  CommandLine::updateValuesFromEnvironment() {
 		char key[255];
 		char* p = (char*)"";
 		Argument* arg = options.find(ENV_PREFFIX);
@@ -325,10 +340,9 @@ namespace _cmdline {
 			if (value != nullptr) it->second.setFromEnv(value);
 		}
 	}
-	void    CommandLine::checkAlreadySet(Group* group, const char* what) {
+	void  CommandLine::checkAlreadySet(Group* group, const char* what) {
 		Argument* arg = findPointer(group, what);
-		if (arg != nullptr) {
-			if (arg->values.size() && !arg->multiple)
+		if (arg != nullptr && (arg->values.size() && !arg->multiple)) {
 				throw CmdLineDuplicateArgumentException(ERR_ARG_DUP, what);
 		}
 	}
@@ -352,12 +366,12 @@ namespace _cmdline {
 			case 1: str = parm;
 		    		str.append(prev->getNext()->getWord());
 					return (makeChar(str));
-			default: throw CmdLineParameterException(ERR_ARG_ERR, parm);
+			default: throw new CmdLineParameterException(ERR_ARG_ERR, parm);
 		}
 			}
-			if (prev == nullptr) throw CmdLineException(TXT_ARG_NFND, parm);  // primero
+			if (prev == nullptr) throw new CmdLineException(TXT_ARG_NFND, parm);  // primero
 			if (idx < strlen(parm) && prev->branchs == 0) { // overtype
-				throw CmdLineException(TXT_ARG_NFND1, parm, prev->getReversedWord());
+				throw new CmdLineException(TXT_ARG_NFND1, parm, prev->getReversedWord());
 			}
 			// Ha salido por base = nullptr
 
@@ -377,7 +391,14 @@ namespace _cmdline {
 			return (makeChar(ss));
 		}
 
-
+    void  CommandLine::processConfigFile (char *fname) {
+    }
+    bool  CommandLine::updateFlagHelp    (const char *arg, char *prev) {
+         char *flag = checkKeywordHelp(arg);
+         if (flag == nullptr) return false;
+         updateFlag(flag, prev, true);
+         return true;
+    }
 }
 /*
 #include <iostream> // temp
@@ -563,9 +584,4 @@ namespace _cmdline {
 		return opt.getValue();
 	}
 }
-
-#ifdef _SECURE_DEF_
-  #undef _SECURE_DEF_
-  #undef _CRT_SECURE_NO_WARNINGS_endif
-#endif
 */

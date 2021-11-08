@@ -1,0 +1,686 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-linked_ptr.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-linked_ptr.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-linked_ptr.h}
+{\bkmkstart AAAAAAAXZA}
+{\bkmkend AAAAAAAXZA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXZB" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAXZC}{\bkmkend AAAAAAAXZC}
+00001 {\cf20 // Copyright 2003 Google Inc.}\par
+{\bkmkstart AAAAAAAXZD}{\bkmkend AAAAAAAXZD}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAXZE}{\bkmkend AAAAAAAXZE}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAXZF}{\bkmkend AAAAAAAXZF}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAAXZG}{\bkmkend AAAAAAAXZG}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAAXZH}{\bkmkend AAAAAAAXZH}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAAXZI}{\bkmkend AAAAAAAXZI}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAAXZJ}{\bkmkend AAAAAAAXZJ}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAAXZK}{\bkmkend AAAAAAAXZK}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAAXZL}{\bkmkend AAAAAAAXZL}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAAXZM}{\bkmkend AAAAAAAXZM}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAAXZN}{\bkmkend AAAAAAAXZN}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAAXZO}{\bkmkend AAAAAAAXZO}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAAXZP}{\bkmkend AAAAAAAXZP}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAAXZQ}{\bkmkend AAAAAAAXZQ}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAAXZR}{\bkmkend AAAAAAAXZR}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAAXZS}{\bkmkend AAAAAAAXZS}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAAXZT}{\bkmkend AAAAAAAXZT}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAAXZU}{\bkmkend AAAAAAAXZU}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAXZV}{\bkmkend AAAAAAAXZV}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAAXZW}{\bkmkend AAAAAAAXZW}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAAXZX}{\bkmkend AAAAAAAXZX}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAAXZY}{\bkmkend AAAAAAAXZY}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAXZZ}{\bkmkend AAAAAAAXZZ}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAAYAA}{\bkmkend AAAAAAAYAA}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAAYAB}{\bkmkend AAAAAAAYAB}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAAYAC}{\bkmkend AAAAAAAYAC}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAAYAD}{\bkmkend AAAAAAAYAD}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAAYAE}{\bkmkend AAAAAAAYAE}
+00029 {\cf20 //}\par
+{\bkmkstart AAAAAAAYAF}{\bkmkend AAAAAAAYAF}
+00030 {\cf20 // A "smart" pointer type with reference tracking.  Every pointer to a}\par
+{\bkmkstart AAAAAAAYAG}{\bkmkend AAAAAAAYAG}
+00031 {\cf20 // particular object is kept on a circular linked list.  When the last pointer}\par
+{\bkmkstart AAAAAAAYAH}{\bkmkend AAAAAAAYAH}
+00032 {\cf20 // to an object is destroyed or reassigned, the object is deleted.}\par
+{\bkmkstart AAAAAAAYAI}{\bkmkend AAAAAAAYAI}
+00033 {\cf20 //}\par
+{\bkmkstart AAAAAAAYAJ}{\bkmkend AAAAAAAYAJ}
+00034 {\cf20 // Used properly, this deletes the object when the last reference goes away.}\par
+{\bkmkstart AAAAAAAYAK}{\bkmkend AAAAAAAYAK}
+00035 {\cf20 // There are several caveats:}\par
+{\bkmkstart AAAAAAAYAL}{\bkmkend AAAAAAAYAL}
+00036 {\cf20 // - Like all reference counting schemes, cycles lead to leaks.}\par
+{\bkmkstart AAAAAAAYAM}{\bkmkend AAAAAAAYAM}
+00037 {\cf20 // - Each smart pointer is actually two pointers (8 bytes instead of 4).}\par
+{\bkmkstart AAAAAAAYAN}{\bkmkend AAAAAAAYAN}
+00038 {\cf20 // - Every time a pointer is assigned, the entire list of pointers to that}\par
+{\bkmkstart AAAAAAAYAO}{\bkmkend AAAAAAAYAO}
+00039 {\cf20 //   object is traversed.  This class is therefore NOT SUITABLE when there}\par
+{\bkmkstart AAAAAAAYAP}{\bkmkend AAAAAAAYAP}
+00040 {\cf20 //   will often be more than two or three pointers to a particular object.}\par
+{\bkmkstart AAAAAAAYAQ}{\bkmkend AAAAAAAYAQ}
+00041 {\cf20 // - References are only tracked as long as linked_ptr<> objects are copied.}\par
+{\bkmkstart AAAAAAAYAR}{\bkmkend AAAAAAAYAR}
+00042 {\cf20 //   If a linked_ptr<> is converted to a raw pointer and back, BAD THINGS}\par
+{\bkmkstart AAAAAAAYAS}{\bkmkend AAAAAAAYAS}
+00043 {\cf20 //   will happen (double deletion).}\par
+{\bkmkstart AAAAAAAYAT}{\bkmkend AAAAAAAYAT}
+00044 {\cf20 //}\par
+{\bkmkstart AAAAAAAYAU}{\bkmkend AAAAAAAYAU}
+00045 {\cf20 // A good use of this class is storing object references in STL containers.}\par
+{\bkmkstart AAAAAAAYAV}{\bkmkend AAAAAAAYAV}
+00046 {\cf20 // You can safely put linked_ptr<> in a vector<>.}\par
+{\bkmkstart AAAAAAAYAW}{\bkmkend AAAAAAAYAW}
+00047 {\cf20 // Other uses may not be as good.}\par
+{\bkmkstart AAAAAAAYAX}{\bkmkend AAAAAAAYAX}
+00048 {\cf20 //}\par
+{\bkmkstart AAAAAAAYAY}{\bkmkend AAAAAAAYAY}
+00049 {\cf20 // Note: If you use an incomplete type with linked_ptr<>, the class}\par
+{\bkmkstart AAAAAAAYAZ}{\bkmkend AAAAAAAYAZ}
+00050 {\cf20 // *containing* linked_ptr<> must have a constructor and destructor (even}\par
+{\bkmkstart AAAAAAAYBA}{\bkmkend AAAAAAAYBA}
+00051 {\cf20 // if they do nothing!).}\par
+{\bkmkstart AAAAAAAYBB}{\bkmkend AAAAAAAYBB}
+00052 {\cf20 //}\par
+{\bkmkstart AAAAAAAYBC}{\bkmkend AAAAAAAYBC}
+00053 {\cf20 // Bill Gibbons suggested we use something like this.}\par
+{\bkmkstart AAAAAAAYBD}{\bkmkend AAAAAAAYBD}
+00054 {\cf20 //}\par
+{\bkmkstart AAAAAAAYBE}{\bkmkend AAAAAAAYBE}
+00055 {\cf20 // Thread Safety:}\par
+{\bkmkstart AAAAAAAYBF}{\bkmkend AAAAAAAYBF}
+00056 {\cf20 //   Unlike other linked_ptr implementations, in this implementation}\par
+{\bkmkstart AAAAAAAYBG}{\bkmkend AAAAAAAYBG}
+00057 {\cf20 //   a linked_ptr object is thread-safe in the sense that:}\par
+{\bkmkstart AAAAAAAYBH}{\bkmkend AAAAAAAYBH}
+00058 {\cf20 //     - it's safe to copy linked_ptr objects concurrently,}\par
+{\bkmkstart AAAAAAAYBI}{\bkmkend AAAAAAAYBI}
+00059 {\cf20 //     - it's safe to copy *from* a linked_ptr and read its underlying}\par
+{\bkmkstart AAAAAAAYBJ}{\bkmkend AAAAAAAYBJ}
+00060 {\cf20 //       raw pointer (e.g. via get()) concurrently, and}\par
+{\bkmkstart AAAAAAAYBK}{\bkmkend AAAAAAAYBK}
+00061 {\cf20 //     - it's safe to write to two linked_ptrs that point to the same}\par
+{\bkmkstart AAAAAAAYBL}{\bkmkend AAAAAAAYBL}
+00062 {\cf20 //       shared object concurrently.}\par
+{\bkmkstart AAAAAAAYBM}{\bkmkend AAAAAAAYBM}
+00063 {\cf20 // FIXME: rename this to safe_linked_ptr to avoid}\par
+{\bkmkstart AAAAAAAYBN}{\bkmkend AAAAAAAYBN}
+00064 {\cf20 // confusion with normal linked_ptr.}\par
+{\bkmkstart AAAAAAAYBO}{\bkmkend AAAAAAAYBO}
+00065 \par
+{\bkmkstart AAAAAAAYBP}{\bkmkend AAAAAAAYBP}
+00066 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAYBQ}{\bkmkend AAAAAAAYBQ}
+00067 \par
+{\bkmkstart AAAAAAAYBR}{\bkmkend AAAAAAAYBR}
+00068 {\cf21 #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_LINKED_PTR_H_}\par
+{\bkmkstart AAAAAAAYBS}{\bkmkend AAAAAAAYBS}
+00069 {\cf21 #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_LINKED_PTR_H_}\par
+{\bkmkstart AAAAAAAYBT}{\bkmkend AAAAAAAYBT}
+00070 \par
+{\bkmkstart AAAAAAAYBU}{\bkmkend AAAAAAAYBU}
+00071 {\cf21 #include <stdlib.h>}\par
+{\bkmkstart AAAAAAAYBV}{\bkmkend AAAAAAAYBV}
+00072 {\cf21 #include <assert.h>}\par
+{\bkmkstart AAAAAAAYBW}{\bkmkend AAAAAAAYBW}
+00073 \par
+{\bkmkstart AAAAAAAYBX}{\bkmkend AAAAAAAYBX}
+00074 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNN" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-port.h}}}
+"}\par
+{\bkmkstart AAAAAAAYBY}{\bkmkend AAAAAAAYBY}
+00075 \par
+{\bkmkstart AAAAAAAYBZ}{\bkmkend AAAAAAAYBZ}
+00076 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAYCA}{\bkmkend AAAAAAAYCA}
+00077 {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAAAYCB}{\bkmkend AAAAAAAYCB}
+00078 \par
+{\bkmkstart AAAAAAAYCC}{\bkmkend AAAAAAAYCC}
+00079 {\cf20 // Protects copying of all linked_ptr objects.}\par
+{\bkmkstart AAAAAAAYCD}{\bkmkend AAAAAAAYCD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCE" }{}}{\fldrslt {\cs37\ul\cf2 00080}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCE" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_STATIC_MUTEX_}}}
+(g_linked_ptr_mutex);\par
+{\bkmkstart AAAAAAAYCF}{\bkmkend AAAAAAAYCF}
+00081 \par
+{\bkmkstart AAAAAAAYCG}{\bkmkend AAAAAAAYCG}
+00082 {\cf20 // This is used internally by all instances of linked_ptr<>.  It needs to be}\par
+{\bkmkstart AAAAAAAYCH}{\bkmkend AAAAAAAYCH}
+00083 {\cf20 // a non-template class because different types of linked_ptr<> can refer to}\par
+{\bkmkstart AAAAAAAYCI}{\bkmkend AAAAAAAYCI}
+00084 {\cf20 // the same object (linked_ptr<Superclass>(obj) vs linked_ptr<Subclass>(obj)).}\par
+{\bkmkstart AAAAAAAYCJ}{\bkmkend AAAAAAAYCJ}
+00085 {\cf20 // So, it needs to be possible for different types of linked_ptr to participate}\par
+{\bkmkstart AAAAAAAYCK}{\bkmkend AAAAAAAYCK}
+00086 {\cf20 // in the same circular linked list, so we need a single class type here.}\par
+{\bkmkstart AAAAAAAYCL}{\bkmkend AAAAAAAYCL}
+00087 {\cf20 //}\par
+{\bkmkstart AAAAAAAYCM}{\bkmkend AAAAAAAYCM}
+00088 {\cf20 // DO NOT USE THIS CLASS DIRECTLY YOURSELF.  Use linked_ptr<T>.}\par
+{\bkmkstart AAAAAAAYCN}{\bkmkend AAAAAAAYCN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 00089}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr_internal}}}
+ \{\par
+{\bkmkstart AAAAAAAYCP}{\bkmkend AAAAAAAYCP}
+00090  {\cf17 public}:\par
+{\bkmkstart AAAAAAAYCQ}{\bkmkend AAAAAAAYCQ}
+00091   {\cf20 // Create a new circle that includes only this instance.}\par
+{\bkmkstart AAAAAAAYCR}{\bkmkend AAAAAAAYCR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCS" }{}}{\fldrslt {\cs37\ul\cf2 00092}}}
+   {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCS" }{}}{\fldrslt {\cs37\ul\cf2 join_new}}}
+() \{\par
+{\bkmkstart AAAAAAAYCT}{\bkmkend AAAAAAAYCT}
+00093     next_ = {\cf17 this};\par
+{\bkmkstart AAAAAAAYCU}{\bkmkend AAAAAAAYCU}
+00094   \}\par
+{\bkmkstart AAAAAAAYCV}{\bkmkend AAAAAAAYCV}
+00095 \par
+{\bkmkstart AAAAAAAYCW}{\bkmkend AAAAAAAYCW}
+00096   {\cf20 // Many linked_ptr operations may change p.link_ for some linked_ptr}\par
+{\bkmkstart AAAAAAAYCX}{\bkmkend AAAAAAAYCX}
+00097   {\cf20 // variable p in the same circle as this object.  Therefore we need}\par
+{\bkmkstart AAAAAAAYCY}{\bkmkend AAAAAAAYCY}
+00098   {\cf20 // to prevent two such operations from occurring concurrently.}\par
+{\bkmkstart AAAAAAAYCZ}{\bkmkend AAAAAAAYCZ}
+00099   {\cf20 //}\par
+{\bkmkstart AAAAAAAYDA}{\bkmkend AAAAAAAYDA}
+00100   {\cf20 // Note that different types of linked_ptr objects can coexist in a}\par
+{\bkmkstart AAAAAAAYDB}{\bkmkend AAAAAAAYDB}
+00101   {\cf20 // circle (e.g. linked_ptr<Base>, linked_ptr<Derived1>, and}\par
+{\bkmkstart AAAAAAAYDC}{\bkmkend AAAAAAAYDC}
+00102   {\cf20 // linked_ptr<Derived2>).  Therefore we must use a single mutex to}\par
+{\bkmkstart AAAAAAAYDD}{\bkmkend AAAAAAAYDD}
+00103   {\cf20 // protect all linked_ptr objects.  This can create serious}\par
+{\bkmkstart AAAAAAAYDE}{\bkmkend AAAAAAAYDE}
+00104   {\cf20 // contention in production code, but is acceptable in a testing}\par
+{\bkmkstart AAAAAAAYDF}{\bkmkend AAAAAAAYDF}
+00105   {\cf20 // framework.}\par
+{\bkmkstart AAAAAAAYDG}{\bkmkend AAAAAAAYDG}
+00106 \par
+{\bkmkstart AAAAAAAYDH}{\bkmkend AAAAAAAYDH}
+00107   {\cf20 // Join an existing circle.}\par
+{\bkmkstart AAAAAAAYDI}{\bkmkend AAAAAAAYDI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYDJ" }{}}{\fldrslt {\cs37\ul\cf2 00108}}}
+   {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYDJ" }{}}{\fldrslt {\cs37\ul\cf2 join}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr_internal}}}
+ {\cf17 const}* ptr)\par
+{\bkmkstart AAAAAAAYDK}{\bkmkend AAAAAAAYDK}
+00109       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAOCZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_LOCK_EXCLUDED_}}}
+(g_linked_ptr_mutex) \{\par
+{\bkmkstart AAAAAAAYDL}{\bkmkend AAAAAAAYDL}
+00110     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAUIV" }{}}{\fldrslt {\cs37\ul\cf2 MutexLock}}}
+ lock(&g_linked_ptr_mutex);\par
+{\bkmkstart AAAAAAAYDM}{\bkmkend AAAAAAAYDM}
+00111 \par
+{\bkmkstart AAAAAAAYDN}{\bkmkend AAAAAAAYDN}
+00112     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr_internal}}}
+ {\cf17 const}* p = ptr;\par
+{\bkmkstart AAAAAAAYDO}{\bkmkend AAAAAAAYDO}
+00113     {\cf19 while} (p->next_ != ptr) \{\par
+{\bkmkstart AAAAAAAYDP}{\bkmkend AAAAAAAYDP}
+00114       assert(p->next_ != {\cf17 this} &&\par
+{\bkmkstart AAAAAAAYDQ}{\bkmkend AAAAAAAYDQ}
+00115              {\cf22 "Trying to join() a linked ring we are already in. "}\par
+{\bkmkstart AAAAAAAYDR}{\bkmkend AAAAAAAYDR}
+00116              {\cf22 "Is GMock thread safety enabled?"});\par
+{\bkmkstart AAAAAAAYDS}{\bkmkend AAAAAAAYDS}
+00117       p = p->next_;\par
+{\bkmkstart AAAAAAAYDT}{\bkmkend AAAAAAAYDT}
+00118     \}\par
+{\bkmkstart AAAAAAAYDU}{\bkmkend AAAAAAAYDU}
+00119     p->next_ = {\cf17 this};\par
+{\bkmkstart AAAAAAAYDV}{\bkmkend AAAAAAAYDV}
+00120     next_ = ptr;\par
+{\bkmkstart AAAAAAAYDW}{\bkmkend AAAAAAAYDW}
+00121   \}\par
+{\bkmkstart AAAAAAAYDX}{\bkmkend AAAAAAAYDX}
+00122 \par
+{\bkmkstart AAAAAAAYDY}{\bkmkend AAAAAAAYDY}
+00123   {\cf20 // Leave whatever circle we're part of.  Returns true if we were the}\par
+{\bkmkstart AAAAAAAYDZ}{\bkmkend AAAAAAAYDZ}
+00124   {\cf20 // last member of the circle.  Once this is done, you can join() another.}\par
+{\bkmkstart AAAAAAAYEA}{\bkmkend AAAAAAAYEA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEB" }{}}{\fldrslt {\cs37\ul\cf2 00125}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEB" }{}}{\fldrslt {\cs37\ul\cf2 depart}}}
+()\par
+{\bkmkstart AAAAAAAYEC}{\bkmkend AAAAAAAYEC}
+00126       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAOCZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_LOCK_EXCLUDED_}}}
+(g_linked_ptr_mutex) \{\par
+{\bkmkstart AAAAAAAYED}{\bkmkend AAAAAAAYED}
+00127     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAUIV" }{}}{\fldrslt {\cs37\ul\cf2 MutexLock}}}
+ lock(&g_linked_ptr_mutex);\par
+{\bkmkstart AAAAAAAYEE}{\bkmkend AAAAAAAYEE}
+00128 \par
+{\bkmkstart AAAAAAAYEF}{\bkmkend AAAAAAAYEF}
+00129     {\cf19 if} (next_ == {\cf17 this}) {\cf19 return} {\cf17 true};\par
+{\bkmkstart AAAAAAAYEG}{\bkmkend AAAAAAAYEG}
+00130     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr_internal}}}
+ {\cf17 const}* p = next_;\par
+{\bkmkstart AAAAAAAYEH}{\bkmkend AAAAAAAYEH}
+00131     {\cf19 while} (p->next_ != {\cf17 this}) \{\par
+{\bkmkstart AAAAAAAYEI}{\bkmkend AAAAAAAYEI}
+00132       assert(p->next_ != next_ &&\par
+{\bkmkstart AAAAAAAYEJ}{\bkmkend AAAAAAAYEJ}
+00133              {\cf22 "Trying to depart() a linked ring we are not in. "}\par
+{\bkmkstart AAAAAAAYEK}{\bkmkend AAAAAAAYEK}
+00134              {\cf22 "Is GMock thread safety enabled?"});\par
+{\bkmkstart AAAAAAAYEL}{\bkmkend AAAAAAAYEL}
+00135       p = p->next_;\par
+{\bkmkstart AAAAAAAYEM}{\bkmkend AAAAAAAYEM}
+00136     \}\par
+{\bkmkstart AAAAAAAYEN}{\bkmkend AAAAAAAYEN}
+00137     p->next_ = next_;\par
+{\bkmkstart AAAAAAAYEO}{\bkmkend AAAAAAAYEO}
+00138     {\cf19 return} {\cf17 false};\par
+{\bkmkstart AAAAAAAYEP}{\bkmkend AAAAAAAYEP}
+00139   \}\par
+{\bkmkstart AAAAAAAYEQ}{\bkmkend AAAAAAAYEQ}
+00140 \par
+{\bkmkstart AAAAAAAYER}{\bkmkend AAAAAAAYER}
+00141  {\cf17 private}:\par
+{\bkmkstart AAAAAAAYES}{\bkmkend AAAAAAAYES}
+00142   {\cf17 mutable} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr_internal}}}
+ {\cf17 const}* next_;\par
+{\bkmkstart AAAAAAAYET}{\bkmkend AAAAAAAYET}
+00143 \};\par
+{\bkmkstart AAAAAAAYEU}{\bkmkend AAAAAAAYEU}
+00144 \par
+{\bkmkstart AAAAAAAYEV}{\bkmkend AAAAAAAYEV}
+00145 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAYEW}{\bkmkend AAAAAAAYEW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 00146}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+ \{\par
+{\bkmkstart AAAAAAAYEY}{\bkmkend AAAAAAAYEY}
+00147  {\cf17 public}:\par
+{\bkmkstart AAAAAAAYEZ}{\bkmkend AAAAAAAYEZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFA" }{}}{\fldrslt {\cs37\ul\cf2 00148}}}
+   {\cf17 typedef} T {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFA" }{}}{\fldrslt {\cs37\ul\cf2 element_type}}}
+;\par
+{\bkmkstart AAAAAAAYFB}{\bkmkend AAAAAAAYFB}
+00149 \par
+{\bkmkstart AAAAAAAYFC}{\bkmkend AAAAAAAYFC}
+00150   {\cf20 // Take over ownership of a raw pointer.  This should happen as soon as}\par
+{\bkmkstart AAAAAAAYFD}{\bkmkend AAAAAAAYFD}
+00151   {\cf20 // possible after the object is created.}\par
+{\bkmkstart AAAAAAAYFE}{\bkmkend AAAAAAAYFE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFF" }{}}{\fldrslt {\cs37\ul\cf2 00152}}}
+   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFF" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+(T* ptr = NULL) \{ capture(ptr); \}\par
+{\bkmkstart AAAAAAAYFG}{\bkmkend AAAAAAAYFG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFH" }{}}{\fldrslt {\cs37\ul\cf2 00153}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFH" }{}}{\fldrslt {\cs37\ul\cf2 ~linked_ptr}}}
+() \{ depart(); \}\par
+{\bkmkstart AAAAAAAYFI}{\bkmkend AAAAAAAYFI}
+00154 \par
+{\bkmkstart AAAAAAAYFJ}{\bkmkend AAAAAAAYFJ}
+00155   {\cf20 // Copy an existing linked_ptr<>, adding ourselves to the list of references.}\par
+{\bkmkstart AAAAAAAYFK}{\bkmkend AAAAAAAYFK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFL" }{}}{\fldrslt {\cs37\ul\cf2 00156}}}
+   {\cf17 template} <{\cf17 typename} U> {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFL" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<U>}}}
+ {\cf17 const}& ptr) \{ copy(&ptr); \}\par
+{\bkmkstart AAAAAAAYFM}{\bkmkend AAAAAAAYFM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFN" }{}}{\fldrslt {\cs37\ul\cf2 00157}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFN" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+ {\cf17 const}& ptr) \{  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAAAYFO}{\bkmkend AAAAAAAYFO}
+00158     assert(&ptr != {\cf17 this});\par
+{\bkmkstart AAAAAAAYFP}{\bkmkend AAAAAAAYFP}
+00159     copy(&ptr);\par
+{\bkmkstart AAAAAAAYFQ}{\bkmkend AAAAAAAYFQ}
+00160   \}\par
+{\bkmkstart AAAAAAAYFR}{\bkmkend AAAAAAAYFR}
+00161 \par
+{\bkmkstart AAAAAAAYFS}{\bkmkend AAAAAAAYFS}
+00162   {\cf20 // Assignment releases the old value and acquires the new.}\par
+{\bkmkstart AAAAAAAYFT}{\bkmkend AAAAAAAYFT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFU" }{}}{\fldrslt {\cs37\ul\cf2 00163}}}
+   {\cf17 template} <{\cf17 typename} U> {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYFU" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<U>}}}
+ {\cf17 const}& ptr) \{\par
+{\bkmkstart AAAAAAAYFV}{\bkmkend AAAAAAAYFV}
+00164     depart();\par
+{\bkmkstart AAAAAAAYFW}{\bkmkend AAAAAAAYFW}
+00165     copy(&ptr);\par
+{\bkmkstart AAAAAAAYFX}{\bkmkend AAAAAAAYFX}
+00166     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAAAYFY}{\bkmkend AAAAAAAYFY}
+00167   \}\par
+{\bkmkstart AAAAAAAYFZ}{\bkmkend AAAAAAAYFZ}
+00168 \par
+{\bkmkstart AAAAAAAYGA}{\bkmkend AAAAAAAYGA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGB" }{}}{\fldrslt {\cs37\ul\cf2 00169}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGB" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+ {\cf17 const}& ptr) \{\par
+{\bkmkstart AAAAAAAYGC}{\bkmkend AAAAAAAYGC}
+00170     {\cf19 if} (&ptr != {\cf17 this}) \{\par
+{\bkmkstart AAAAAAAYGD}{\bkmkend AAAAAAAYGD}
+00171       depart();\par
+{\bkmkstart AAAAAAAYGE}{\bkmkend AAAAAAAYGE}
+00172       copy(&ptr);\par
+{\bkmkstart AAAAAAAYGF}{\bkmkend AAAAAAAYGF}
+00173     \}\par
+{\bkmkstart AAAAAAAYGG}{\bkmkend AAAAAAAYGG}
+00174     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAAAYGH}{\bkmkend AAAAAAAYGH}
+00175   \}\par
+{\bkmkstart AAAAAAAYGI}{\bkmkend AAAAAAAYGI}
+00176 \par
+{\bkmkstart AAAAAAAYGJ}{\bkmkend AAAAAAAYGJ}
+00177   {\cf20 // Smart pointer members.}\par
+{\bkmkstart AAAAAAAYGK}{\bkmkend AAAAAAAYGK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGL" }{}}{\fldrslt {\cs37\ul\cf2 00178}}}
+   {\cf18 void} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGL" }{}}{\fldrslt {\cs37\ul\cf2 reset}}}
+(T* ptr = NULL) \{\par
+{\bkmkstart AAAAAAAYGM}{\bkmkend AAAAAAAYGM}
+00179     depart();\par
+{\bkmkstart AAAAAAAYGN}{\bkmkend AAAAAAAYGN}
+00180     capture(ptr);\par
+{\bkmkstart AAAAAAAYGO}{\bkmkend AAAAAAAYGO}
+00181   \}\par
+{\bkmkstart AAAAAAAYGP}{\bkmkend AAAAAAAYGP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGQ" }{}}{\fldrslt {\cs37\ul\cf2 00182}}}
+   T* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGQ" }{}}{\fldrslt {\cs37\ul\cf2 get}}}
+(){\cf17  const }\{ {\cf19 return} value_; \}\par
+{\bkmkstart AAAAAAAYGR}{\bkmkend AAAAAAAYGR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGS" }{}}{\fldrslt {\cs37\ul\cf2 00183}}}
+   T* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGS" }{}}{\fldrslt {\cs37\ul\cf2 operator->}}}
+(){\cf17  const }\{ {\cf19 return} value_; \}\par
+{\bkmkstart AAAAAAAYGT}{\bkmkend AAAAAAAYGT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGU" }{}}{\fldrslt {\cs37\ul\cf2 00184}}}
+   T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGU" }{}}{\fldrslt {\cs37\ul\cf2 operator*}}}
+(){\cf17  const }\{ {\cf19 return} *value_; \}\par
+{\bkmkstart AAAAAAAYGV}{\bkmkend AAAAAAAYGV}
+00185 \par
+{\bkmkstart AAAAAAAYGW}{\bkmkend AAAAAAAYGW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGX" }{}}{\fldrslt {\cs37\ul\cf2 00186}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGX" }{}}{\fldrslt {\cs37\ul\cf2 operator==}}}
+(T* p){\cf17  const }\{ {\cf19 return} value_ == p; \}\par
+{\bkmkstart AAAAAAAYGY}{\bkmkend AAAAAAAYGY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGZ" }{}}{\fldrslt {\cs37\ul\cf2 00187}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGZ" }{}}{\fldrslt {\cs37\ul\cf2 operator!=}}}
+(T* p){\cf17  const }\{ {\cf19 return} value_ != p; \}\par
+{\bkmkstart AAAAAAAYHA}{\bkmkend AAAAAAAYHA}
+00188   {\cf17 template} <{\cf17 typename} U>\par
+{\bkmkstart AAAAAAAYHB}{\bkmkend AAAAAAAYHB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYHC" }{}}{\fldrslt {\cs37\ul\cf2 00189}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYHC" }{}}{\fldrslt {\cs37\ul\cf2 operator==}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<U>}}}
+ {\cf17 const}& ptr){\cf17  const }\{\par
+{\bkmkstart AAAAAAAYHD}{\bkmkend AAAAAAAYHD}
+00190     {\cf19 return} value_ == ptr.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGQ" }{}}{\fldrslt {\cs37\ul\cf2 get}}}
+();\par
+{\bkmkstart AAAAAAAYHE}{\bkmkend AAAAAAAYHE}
+00191   \}\par
+{\bkmkstart AAAAAAAYHF}{\bkmkend AAAAAAAYHF}
+00192   {\cf17 template} <{\cf17 typename} U>\par
+{\bkmkstart AAAAAAAYHG}{\bkmkend AAAAAAAYHG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYHH" }{}}{\fldrslt {\cs37\ul\cf2 00193}}}
+   {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYHH" }{}}{\fldrslt {\cs37\ul\cf2 operator!=}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<U>}}}
+ {\cf17 const}& ptr){\cf17  const }\{\par
+{\bkmkstart AAAAAAAYHI}{\bkmkend AAAAAAAYHI}
+00194     {\cf19 return} value_ != ptr.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGQ" }{}}{\fldrslt {\cs37\ul\cf2 get}}}
+();\par
+{\bkmkstart AAAAAAAYHJ}{\bkmkend AAAAAAAYHJ}
+00195   \}\par
+{\bkmkstart AAAAAAAYHK}{\bkmkend AAAAAAAYHK}
+00196 \par
+{\bkmkstart AAAAAAAYHL}{\bkmkend AAAAAAAYHL}
+00197  {\cf17 private}:\par
+{\bkmkstart AAAAAAAYHM}{\bkmkend AAAAAAAYHM}
+00198   {\cf17 template} <{\cf17 typename} U>\par
+{\bkmkstart AAAAAAAYHN}{\bkmkend AAAAAAAYHN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYHO" }{}}{\fldrslt {\cs37\ul\cf2 00199}}}
+   {\cf17 friend} {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr}}}
+;\par
+{\bkmkstart AAAAAAAYHP}{\bkmkend AAAAAAAYHP}
+00200 \par
+{\bkmkstart AAAAAAAYHQ}{\bkmkend AAAAAAAYHQ}
+00201   T* value_;\par
+{\bkmkstart AAAAAAAYHR}{\bkmkend AAAAAAAYHR}
+00202   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCO" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr_internal}}}
+ link_;\par
+{\bkmkstart AAAAAAAYHS}{\bkmkend AAAAAAAYHS}
+00203 \par
+{\bkmkstart AAAAAAAYHT}{\bkmkend AAAAAAAYHT}
+00204   {\cf18 void} depart() \{\par
+{\bkmkstart AAAAAAAYHU}{\bkmkend AAAAAAAYHU}
+00205     {\cf19 if} (link_.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEB" }{}}{\fldrslt {\cs37\ul\cf2 depart}}}
+()) {\cf17 delete} value_;\par
+{\bkmkstart AAAAAAAYHV}{\bkmkend AAAAAAAYHV}
+00206   \}\par
+{\bkmkstart AAAAAAAYHW}{\bkmkend AAAAAAAYHW}
+00207 \par
+{\bkmkstart AAAAAAAYHX}{\bkmkend AAAAAAAYHX}
+00208   {\cf18 void} capture(T* ptr) \{\par
+{\bkmkstart AAAAAAAYHY}{\bkmkend AAAAAAAYHY}
+00209     value_ = ptr;\par
+{\bkmkstart AAAAAAAYHZ}{\bkmkend AAAAAAAYHZ}
+00210     link_.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCS" }{}}{\fldrslt {\cs37\ul\cf2 join_new}}}
+();\par
+{\bkmkstart AAAAAAAYIA}{\bkmkend AAAAAAAYIA}
+00211   \}\par
+{\bkmkstart AAAAAAAYIB}{\bkmkend AAAAAAAYIB}
+00212 \par
+{\bkmkstart AAAAAAAYIC}{\bkmkend AAAAAAAYIC}
+00213   {\cf17 template} <{\cf17 typename} U> {\cf18 void} copy(linked_ptr<U> {\cf17 const}* ptr) \{\par
+{\bkmkstart AAAAAAAYID}{\bkmkend AAAAAAAYID}
+00214     value_ = ptr->get();\par
+{\bkmkstart AAAAAAAYIE}{\bkmkend AAAAAAAYIE}
+00215     {\cf19 if} (value_)\par
+{\bkmkstart AAAAAAAYIF}{\bkmkend AAAAAAAYIF}
+00216       link_.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYDJ" }{}}{\fldrslt {\cs37\ul\cf2 join}}}
+(&ptr->link_);\par
+{\bkmkstart AAAAAAAYIG}{\bkmkend AAAAAAAYIG}
+00217     {\cf19 else}\par
+{\bkmkstart AAAAAAAYIH}{\bkmkend AAAAAAAYIH}
+00218       link_.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYCS" }{}}{\fldrslt {\cs37\ul\cf2 join_new}}}
+();\par
+{\bkmkstart AAAAAAAYII}{\bkmkend AAAAAAAYII}
+00219   \}\par
+{\bkmkstart AAAAAAAYIJ}{\bkmkend AAAAAAAYIJ}
+00220 \};\par
+{\bkmkstart AAAAAAAYIK}{\bkmkend AAAAAAAYIK}
+00221 \par
+{\bkmkstart AAAAAAAYIL}{\bkmkend AAAAAAAYIL}
+00222 {\cf17 template}<{\cf17 typename} T> {\cf17 inline}\par
+{\bkmkstart AAAAAAAYIM}{\bkmkend AAAAAAAYIM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYIN" }{}}{\fldrslt {\cs37\ul\cf2 00223}}}
+ {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYIN" }{}}{\fldrslt {\cs37\ul\cf2 operator==}}}
+(T* ptr, {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<T>}}}
+& x) \{\par
+{\bkmkstart AAAAAAAYIO}{\bkmkend AAAAAAAYIO}
+00224   {\cf19 return} ptr == x.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGQ" }{}}{\fldrslt {\cs37\ul\cf2 get}}}
+();\par
+{\bkmkstart AAAAAAAYIP}{\bkmkend AAAAAAAYIP}
+00225 \}\par
+{\bkmkstart AAAAAAAYIQ}{\bkmkend AAAAAAAYIQ}
+00226 \par
+{\bkmkstart AAAAAAAYIR}{\bkmkend AAAAAAAYIR}
+00227 {\cf17 template}<{\cf17 typename} T> {\cf17 inline}\par
+{\bkmkstart AAAAAAAYIS}{\bkmkend AAAAAAAYIS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYIT" }{}}{\fldrslt {\cs37\ul\cf2 00228}}}
+ {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYIT" }{}}{\fldrslt {\cs37\ul\cf2 operator!=}}}
+(T* ptr, {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<T>}}}
+& x) \{\par
+{\bkmkstart AAAAAAAYIU}{\bkmkend AAAAAAAYIU}
+00229   {\cf19 return} ptr != x.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYGQ" }{}}{\fldrslt {\cs37\ul\cf2 get}}}
+();\par
+{\bkmkstart AAAAAAAYIV}{\bkmkend AAAAAAAYIV}
+00230 \}\par
+{\bkmkstart AAAAAAAYIW}{\bkmkend AAAAAAAYIW}
+00231 \par
+{\bkmkstart AAAAAAAYIX}{\bkmkend AAAAAAAYIX}
+00232 {\cf20 // A function to convert T* into linked_ptr<T>}\par
+{\bkmkstart AAAAAAAYIY}{\bkmkend AAAAAAAYIY}
+00233 {\cf20 // Doing e.g. make_linked_ptr(new FooBarBaz<type>(arg)) is a shorter notation}\par
+{\bkmkstart AAAAAAAYIZ}{\bkmkend AAAAAAAYIZ}
+00234 {\cf20 // for linked_ptr<FooBarBaz<type> >(new FooBarBaz<type>(arg))}\par
+{\bkmkstart AAAAAAAYJA}{\bkmkend AAAAAAAYJA}
+00235 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAYJB}{\bkmkend AAAAAAAYJB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYJC" }{}}{\fldrslt {\cs37\ul\cf2 00236}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<T>}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYJC" }{}}{\fldrslt {\cs37\ul\cf2 make_linked_ptr}}}
+(T* ptr) \{\par
+{\bkmkstart AAAAAAAYJD}{\bkmkend AAAAAAAYJD}
+00237   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAYEX" }{}}{\fldrslt {\cs37\ul\cf2 linked_ptr<T>}}}
+(ptr);\par
+{\bkmkstart AAAAAAAYJE}{\bkmkend AAAAAAAYJE}
+00238 \}\par
+{\bkmkstart AAAAAAAYJF}{\bkmkend AAAAAAAYJF}
+00239 \par
+{\bkmkstart AAAAAAAYJG}{\bkmkend AAAAAAAYJG}
+00240 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAAAYJH}{\bkmkend AAAAAAAYJH}
+00241 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAYJI}{\bkmkend AAAAAAAYJI}
+00242 \par
+{\bkmkstart AAAAAAAYJJ}{\bkmkend AAAAAAAYJJ}
+00243 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_INTERNAL_GTEST_LINKED_PTR_H_}\par
+}
+}

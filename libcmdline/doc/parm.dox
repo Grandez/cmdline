@@ -1,0 +1,37 @@
+/** \class Parm                       
+  *  \brief Generic Class to define defined flags and options                                                  
+  *  
+  * A parm has 4 properties:
+  *
+  * - **name**: Name of parameter                                                                   
+  * - **value**: Default value for the parameter                                                    
+  * - **type**: Type of parameter according \ref cmdline::Type 
+  * - **multiple**: Parameter supports multiple values?                                             
+  *                                                                    
+  * \sa {                                
+  * Parm(const char* name) : Default for Flag                                                          
+  * Parm(const char* name, const char* value): Default for option                                      
+  * Parm(const char* name, bool value) : Define Flag with false or true
+  * }
+  *  
+  */
+
+/** \class ParmFlag                       
+  *  \brief Wrapper of \ref Parm to define Flags  
+  *  
+  * A parm has 4 properties:
+  *
+  * - **name**: Name of parameter                                                                   
+  * - **value**: active o disabled (default)
+  *  
+  */
+  
+  /*
+  * \fn const char *Fn_Test::member(char c,int n) 
+ *  \brief A member function.
+ *  \param c a character.
+ *  \param n an integer.
+ *  \exception std::out_of_range parameter is out of range.
+ *  \return a character pointer.
+ */
+                                                                   

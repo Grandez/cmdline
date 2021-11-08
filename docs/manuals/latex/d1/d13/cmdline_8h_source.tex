@@ -18,17 +18,17 @@
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00014}00014     \textcolor{keyword}{const} \textcolor{keywordtype}{char}*  (*getDefine)          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00015}00015     \textcolor{keyword}{const} \textcolor{keywordtype}{char}** (*getOptionValues)    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00016}00016     \textcolor{keyword}{const} \textcolor{keywordtype}{char}** (*getDefineValues)    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00017}00017     \mbox{\hyperlink{struct_flag}{Flag}}**       (*getDefaultFlags)    (logical active);}
-\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00018}00018     \mbox{\hyperlink{struct_flag}{Flag}}**       (*getCurrentFlags)    (logical active);}
-\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00019}00019     \mbox{\hyperlink{struct_parameter}{Parameter}}**  (*getDefaultOptions)();}
-\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00020}00020     \mbox{\hyperlink{struct_parameter}{Parameter}}**  (*getCurrentOptions)();}
-\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00021}00021     \mbox{\hyperlink{struct_parameter}{Parameter}}**  (*getDefinitions)   ();}
+\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00017}00017     Flag**       (*getDefaultFlags)    (logical active);}
+\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00018}00018     Flag**       (*getCurrentFlags)    (logical active);}
+\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00019}00019     Parameter**  (*getDefaultOptions)();}
+\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00020}00020     Parameter**  (*getCurrentOptions)();}
+\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00021}00021     Parameter**  (*getDefinitions)   ();}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00022}00022 }
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00023}00023 \} \mbox{\hyperlink{struct_cmd_line}{CmdLine}};}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00025}00025 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00026}00026 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00027}00027     \mbox{\hyperlink{struct_cmd_line}{CmdLine}} *cmdline\_create(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv, \mbox{\hyperlink{struct_parm_def}{ParmDef}} parms[]);}
+\DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00027}00027     \mbox{\hyperlink{struct_cmd_line}{CmdLine}} *cmdline\_create(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char} **argv, ParmDef parms[]);}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00028}00028 }
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00029}00029     \textcolor{keywordtype}{void} cmdline\_delete(\mbox{\hyperlink{struct_cmd_line}{CmdLine}} *\mbox{\hyperlink{namespacecmdline}{cmdline}});}
 \DoxyCodeLine{\Hypertarget{cmdline_8h_source_l00030}00030 }

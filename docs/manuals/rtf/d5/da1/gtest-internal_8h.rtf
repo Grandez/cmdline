@@ -1,0 +1,939 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-internal.h File Reference\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-internal.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-internal.h}
+{\bkmkstart AAAAAAAHDS}
+{\bkmkend AAAAAAAHDS}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "gtest/internal/gtest-port.h"}\par
+{\f2 #include <ctype.h>}\par
+{\f2 #include <float.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include <iomanip>}\par
+{\f2 #include <limits>}\par
+{\f2 #include <map>}\par
+{\f2 #include <set>}\par
+{\f2 #include <string>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "gtest/gtest-message.h"}\par
+{\f2 #include "gtest/internal/gtest-filepath.h"}\par
+{\f2 #include "gtest/internal/gtest-string.h"}\par
+{\f2 #include "gtest/internal/gtest-type-util.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for gtest-internal.h:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "d4/d8d/gtest-internal_8h__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "df/dfc/gtest-internal_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAOXD" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::FloatingPoint< RawType >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWMO" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::TypeIdHelper< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIK" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::TestFactoryBase}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWOT" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::TestFactoryImpl< TestClass >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIE" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::CodeLocation}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAX" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ConstCharPtr}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXBM" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::Random}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXCP" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::CompileAssertTypesEqual< T, T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXCY" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveReference< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXJ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveReference< T & >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDP" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveConst< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXK" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveConst< const T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDZ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveConst< const T[N]>}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZV" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ImplicitlyConvertible< From, To >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXHB" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsAProtocolMessage< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXJM" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsHashTable< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXKF" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::VoidT< T >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXKM" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::HasValueType< T, typename >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXKP" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::HasValueType< T, VoidT< typename T::value_type > >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXLA" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsRecursiveContainerImpl< C, false, HV >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXLI" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsRecursiveContainerImpl< C, true, false >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXLM" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsRecursiveContainerImpl< C, true, true >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZL" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsRecursiveContainer< C >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXL" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::EnableIf< true >}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXPS" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RelationToSourceReference}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXPU" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RelationToSourceCopy}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXQG" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::NativeArray< Element >}}}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVYC" }{}}{\fldrslt {\cs37\ul\cf2 proto2}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVJ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBJ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance}}}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_}}}
+(foo,  bar)\~ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_IMPL_}}}
+(foo, bar)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_IMPL_}}}
+(foo,  bar)\~ foo ## bar\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_STRINGIFY_}}}
+(name)\~ #name\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_IS_NULL_LITERAL_}}}
+(x)\~     (sizeof(::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVZS" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsNullLiteralHelper}}}
+(x)) == 1)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_REFERENCE_}}}
+(T)\~     typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXCY" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveReference}}}
+<T>::type\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXER" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_CONST_}}}
+(T)\~     typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDP" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveConst}}}
+<T>::type\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXEW" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_REFERENCE_AND_CONST_}}}
+(T)\~     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXER" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_CONST_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_REFERENCE_}}}
+(T))\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTI" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_AT_}}}
+(file,  line,  message,  result_type)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message,  result_type)\~   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTI" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_AT_}}}
+(__FILE__, __LINE__, message, result_type)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_FATAL_FAILURE_}}}
+(message)\~   return {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message, ::testing::TestPartResult::kFatalFailure)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTV" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_NONFATAL_FAILURE_}}}
+(message)\~   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message, ::testing::TestPartResult::kNonFatalFailure)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_SUCCESS_}}}
+(message)\~   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message, ::testing::TestPartResult::kSuccess)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXUG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_}}}
+(statement)\~   if (::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysTrue}}}
+()) \{ statement; \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXUK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_THROW_}}}
+(statement,  expected_exception,  fail)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXVL" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_NO_THROW_}}}
+(statement,  fail)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXWA" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_ANY_THROW_}}}
+(statement,  fail)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXWX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_BOOLEAN_}}}
+(expression,  text,  actual,  expected,  fail)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_NO_FATAL_FAILURE_}}}
+(statement,  fail)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_CLASS_NAME_}}}
+(test_case_name,  test_name)\~   test_case_name##_##test_name##_Test\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXYC" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_}}}
+(test_case_name,  test_name,  parent_class,  parent_id)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedefs\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef FloatingPoint< float > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWMA" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::Float}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef FloatingPoint< double > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWMC" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::Double}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef const void * {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIG" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::TypeId}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef void(* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAMSN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::SetUpTestCaseFunc}}}
+) ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef void(* {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAMSQ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::TearDownTestCaseFunc}}}
+) ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef int {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJZJ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsContainer}}}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef char {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXJB" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsNotContainer}}}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumerations\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBQ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::EditType}}}
+ \{ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBR" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::kMatch}}}
+
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBS" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::kAdd}}}
+
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBT" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::kRemove}}}
+
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBU" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::kReplace}}}
+
+ \}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T > ::std::string {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAJQV" }{}}{\fldrslt {\cs37\ul\cf2 testing::PrintToString}}}
+ (const T &value)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVZS" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsNullLiteralHelper}}}
+ (Secret *p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char(& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVZU" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsNullLiteralHelper}}}
+ (...))[2]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::string {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWAL" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AppendUserMessage}}}
+ (const std::string &gtest_msg, const Message &user_msg)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::vector< EditType > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWBW" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::CalculateOptimalEdits}}}
+ (const std::vector< size_t > &left, const std::vector< size_t > &right)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::vector< EditType > {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWCB" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::CalculateOptimalEdits}}}
+ (const std::vector< std::string > &left, const std::vector< std::string > &right)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::string {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWCH" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::edit_distance::CreateUnifiedDiff}}}
+ (const std::vector< std::string > &left, const std::vector< std::string > &right, size_t context=2)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::string {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWCS" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::DiffStrings}}}
+ (const std::string &left, const std::string &right, size_t *total_line_count)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ AssertionResult {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAOME" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::EqFailure}}}
+ (const char *expected_expression, const char *actual_expression, const std::string &expected_value, const std::string &actual_value, bool ignoring_case)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::string {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWDT" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::GetBoolAssertionFailureMessage}}}
+ (const AssertionResult &assertion_result, const char *expression_text, const char *actual_predicate_value, const char *expected_predicate_value)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T > TypeId {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWNF" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::GetTypeId}}}
+ ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ TypeId {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWNT" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::GetTestTypeId}}}
+ ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ TestInfo * {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANHY" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::MakeAndRegisterTestInfo}}}
+ (const char *test_case_name, const char *name, const char *type_param, const char *value_param, CodeLocation code_location, TypeId fixture_class_id, SetUpTestCaseFunc set_up_tc, TearDownTestCaseFunc tear_down_tc, TestFactoryBase *factory)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWRI" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::SkipPrefix}}}
+ (const char *prefix, const char **pstr)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ std::string {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAF" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::GetCurrentOsStackTraceExceptTop}}}
+ (UnitTest *unit_test, int skip_count)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysTrue}}}
+ ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAR" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysFalse}}}
+ ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<class C > IsContainer {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXIO" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsContainerTest}}}
+ (int, typename C::iterator *=NULL, typename C::const_iterator *=NULL)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<class C > IsNotContainer {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXJE" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsContainerTest}}}
+ (long)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T , typename U > bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXMX" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ArrayEq}}}
+ (const T *lhs, size_t size, const U *rhs)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T , typename U > bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXNC" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ArrayEq}}}
+ (const T &lhs, const U &rhs)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T , typename U , size_t N> bool {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXNH" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ArrayEq}}}
+ (const T(&lhs)[N], const U(&rhs)[N])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename Iter , typename Element > Iter {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXOB" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ArrayAwareFind}}}
+ (Iter begin, Iter end, const Element &elem)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T , typename U > void {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXOP" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::CopyArray}}}
+ (const T *from, size_t size, U *to)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T , typename U > void {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXOU" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::CopyArray}}}
+ (const T &from, U *to)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T , typename U , size_t N> void {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXOZ" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::CopyArray}}}
+ (const T(&from)[N], U(*to)[N])\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ const char {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVZB" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::kStackTraceMarker}}}
+ []\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GTEST_CONCAT_TOKEN_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_CONCAT_TOKEN_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_CONCAT_TOKEN_( foo,  bar)\~ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_IMPL_}}}
+(foo, bar)}}
+\par
+{\bkmkstart AAAAAAAVXS}
+{\bkmkend AAAAAAAVXS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXM" }{}}{\fldrslt {\cs37\ul\cf2 76}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_CONCAT_TOKEN_IMPL_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_CONCAT_TOKEN_IMPL_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_CONCAT_TOKEN_IMPL_( foo,  bar)\~ foo ## bar}}
+\par
+{\bkmkstart AAAAAAAVXU}
+{\bkmkend AAAAAAAVXU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXN" }{}}{\fldrslt {\cs37\ul\cf2 77}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_FATAL_FAILURE_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_FATAL_FAILURE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_FATAL_FAILURE_( message)\~   return {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message, ::testing::TestPartResult::kFatalFailure)}}
+\par
+{\bkmkstart AAAAAAAXTR}
+{\bkmkend AAAAAAAXTR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXO" }{}}{\fldrslt {\cs37\ul\cf2 1202}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_IS_NULL_LITERAL_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_IS_NULL_LITERAL_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_IS_NULL_LITERAL_( x)\~     (sizeof(::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVZS" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::IsNullLiteralHelper}}}
+(x)) == 1)}}
+\par
+{\bkmkstart AAAAAAAWAF}
+{\bkmkend AAAAAAAWAF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXP" }{}}{\fldrslt {\cs37\ul\cf2 134}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_MESSAGE_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_MESSAGE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_MESSAGE_( message,  result_type)\~   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTI" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_AT_}}}
+(__FILE__, __LINE__, message, result_type)}}
+\par
+{\bkmkstart AAAAAAAXTN}
+{\bkmkend AAAAAAAXTN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXQ" }{}}{\fldrslt {\cs37\ul\cf2 1199}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_MESSAGE_AT_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_MESSAGE_AT_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_MESSAGE_AT_( file,  line,  message,  result_type)}}
+\par
+{\bkmkstart AAAAAAAXTI}
+{\bkmkend AAAAAAAXTI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAOIO" }{}}{\fldrslt {\cs37\ul\cf2 ::testing::internal::AssertHelper}}}
+(result_type, file, line, message) \\\par
+    = {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 ::testing::Message}}}
+()\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXR" }{}}{\fldrslt {\cs37\ul\cf2 1195}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_NONFATAL_FAILURE_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_NONFATAL_FAILURE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_NONFATAL_FAILURE_( message)\~   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message, ::testing::TestPartResult::kNonFatalFailure)}}
+\par
+{\bkmkstart AAAAAAAXTV}
+{\bkmkend AAAAAAAXTV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXS" }{}}{\fldrslt {\cs37\ul\cf2 1205}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_REMOVE_CONST_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_REMOVE_CONST_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_REMOVE_CONST_( T)\~     typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDP" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveConst}}}
+<T>::type}}
+\par
+{\bkmkstart AAAAAAAXER}
+{\bkmkend AAAAAAAXER}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXT" }{}}{\fldrslt {\cs37\ul\cf2 855}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_REMOVE_REFERENCE_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_REMOVE_REFERENCE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_REMOVE_REFERENCE_( T)\~     typename ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXCY" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::RemoveReference}}}
+<T>::type}}
+\par
+{\bkmkstart AAAAAAAXDG}
+{\bkmkend AAAAAAAXDG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXU" }{}}{\fldrslt {\cs37\ul\cf2 824}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_REMOVE_REFERENCE_AND_CONST_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_REMOVE_REFERENCE_AND_CONST_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_REMOVE_REFERENCE_AND_CONST_( T)\~     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXER" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_CONST_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXDG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_REMOVE_REFERENCE_}}}
+(T))}}
+\par
+{\bkmkstart AAAAAAAXEW}
+{\bkmkend AAAAAAAXEW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXV" }{}}{\fldrslt {\cs37\ul\cf2 859}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_STRINGIFY_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_STRINGIFY_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_STRINGIFY_( name)\~ #name}}
+\par
+{\bkmkstart AAAAAAAVXY}
+{\bkmkend AAAAAAAVXY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXW" }{}}{\fldrslt {\cs37\ul\cf2 80}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_SUCCESS_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_SUCCESS_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_SUCCESS_( message)\~   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXTN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_MESSAGE_}}}
+(message, ::testing::TestPartResult::kSuccess)}}
+\par
+{\bkmkstart AAAAAAAXTZ}
+{\bkmkend AAAAAAAXTZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXX" }{}}{\fldrslt {\cs37\ul\cf2 1208}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_( statement)\~   if (::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysTrue}}}
+()) \{ statement; \}}}
+\par
+{\bkmkstart AAAAAAAXUG}
+{\bkmkend AAAAAAAXUG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXY" }{}}{\fldrslt {\cs37\ul\cf2 1214}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_( test_case_name,  test_name,  parent_class,  parent_id)}}
+\par
+{\bkmkstart AAAAAAAXYC}
+{\bkmkend AAAAAAAXYC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_CLASS_NAME_}}}
+(test_case_name, test_name) : {\cf17 public} parent_class \{\\\par
+ public:\\\par
+  GTEST_TEST_CLASS_NAME_(test_case_name, test_name)() \{\}\\\par
+ private:\\\par
+  virtual {\cf18 void} TestBody();\\\par
+  static ::testing::TestInfo* {\cf17 const} test_info_ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ATTRIBUTE_UNUSED_}}}
+;\\\par
+  GTEST_DISALLOW_COPY_AND_ASSIGN_(\\\par
+      {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_CLASS_NAME_}}}
+(test_case_name, test_name));\\\par
+\};\\\par
+\\\par
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAMSH" }{}}{\fldrslt {\cs37\ul\cf2 ::testing::TestInfo}}}
+* {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_CLASS_NAME_}}}
+(test_case_name, test_name)\\\par
+  ::test_info_ ={\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANHY" }{}}{\fldrslt {\cs37\ul\cf2 \\}}}
+\par
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANHY" }{}}{\fldrslt {\cs37\ul\cf2     ::testing::internal::MakeAndRegisterTestInfo}}}
+(\\\par
+        #test_case_name, #test_name, NULL, NULL, \\\par
+        ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAANIE" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::CodeLocation}}}
+(__FILE__, __LINE__), \\\par
+        (parent_id), \\\par
+        parent_class::SetUpTestCase, \\\par
+        parent_class::TearDownTestCase, \\\par
+        new ::testing::internal::TestFactoryImpl<\\\par
+            {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_CLASS_NAME_}}}
+(test_case_name, test_name)>);\\\par
+void {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXXX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TEST_CLASS_NAME_}}}
+(test_case_name, test_name)::TestBody()\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRXZ" }{}}{\fldrslt {\cs37\ul\cf2 1307}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_ANY_THROW_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_ANY_THROW_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_ANY_THROW_( statement,  fail)}}
+\par
+{\bkmkstart AAAAAAAXWA}
+{\bkmkend AAAAAAAXWA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\\par
+  if (::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysTrue}}}
+()) \{ \\\par
+    bool gtest_caught_any = {\cf17 false}; \\\par
+    try \{ \\\par
+      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\\par
+    \} \\\par
+    catch (...) \{ \\\par
+      gtest_caught_any = {\cf17 true}; \\\par
+    \} \\\par
+    if (!gtest_caught_any) \{ \\\par
+      goto {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_}}}
+(gtest_label_testanythrow_, __LINE__); \\\par
+    \} \\\par
+  \} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 else \\}}}
+\par
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2     GTEST_CONCAT_TOKEN_}}}
+(gtest_label_testanythrow_, __LINE__): \\\par
+      fail({\cf22 "Expected: "} #statement {\cf22 " throws an exception.\\n"} \\\par
+           {\cf22 "  Actual: it doesn't."})\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYA" }{}}{\fldrslt {\cs37\ul\cf2 1257}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_BOOLEAN_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_BOOLEAN_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_BOOLEAN_( expression,  text,  actual,  expected,  fail)}}
+\par
+{\bkmkstart AAAAAAAXWX}
+{\bkmkend AAAAAAAXWX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\\par
+  if (const ::testing::AssertionResult gtest_ar_ = \\\par
+      ::testing::AssertionResult(expression)) \\\par
+    ; \\\par
+  else \\\par
+    fail(::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAWDT" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::GetBoolAssertionFailureMessage}}}
+(\\\par
+        gtest_ar_, text, #actual, #expected).c_str())\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYB" }{}}{\fldrslt {\cs37\ul\cf2 1279}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_CLASS_NAME_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_CLASS_NAME_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_CLASS_NAME_( test_case_name,  test_name)\~   test_case_name##_##test_name##_Test}}
+\par
+{\bkmkstart AAAAAAAXXX}
+{\bkmkend AAAAAAAXXX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYC" }{}}{\fldrslt {\cs37\ul\cf2 1303}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_NO_FATAL_FAILURE_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_NO_FATAL_FAILURE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_NO_FATAL_FAILURE_( statement,  fail)}}
+\par
+{\bkmkstart AAAAAAAXXH}
+{\bkmkend AAAAAAAXXH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\\par
+  if (::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysTrue}}}
+()) \{ \\\par
+    ::testing::internal::HasNewFatalFailureHelper gtest_fatal_failure_checker; \\\par
+    GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\\par
+    if (gtest_fatal_failure_checker.has_new_fatal_failure()) \{ \\\par
+      goto {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_}}}
+(gtest_label_testnofatal_, __LINE__); \\\par
+    \} \\\par
+  \} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 else \\}}}
+\par
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2     GTEST_CONCAT_TOKEN_}}}
+(gtest_label_testnofatal_, __LINE__): \\\par
+      fail({\cf22 "Expected: "} #statement {\cf22 " doesn't generate new fatal "} \\\par
+           {\cf22 "failures in the current thread.\\n"} \\\par
+           {\cf22 "  Actual: it does."})\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYD" }{}}{\fldrslt {\cs37\ul\cf2 1288}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_NO_THROW_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_NO_THROW_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_NO_THROW_( statement,  fail)}}
+\par
+{\bkmkstart AAAAAAAXVL}
+{\bkmkend AAAAAAAXVL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\\par
+  if (::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAN" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::AlwaysTrue}}}
+()) \{ \\\par
+    try \{ \\\par
+      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\\par
+    \} \\\par
+    catch (...) \{ \\\par
+      goto {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_CONCAT_TOKEN_}}}
+(gtest_label_testnothrow_, __LINE__); \\\par
+    \} \\\par
+  \} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2 else \\}}}
+\par
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVXS" }{}}{\fldrslt {\cs37\ul\cf2     GTEST_CONCAT_TOKEN_}}}
+(gtest_label_testnothrow_, __LINE__): \\\par
+      fail({\cf22 "Expected: "} #statement {\cf22 " doesn't throw an exception.\\n"} \\\par
+           {\cf22 "  Actual: it throws."})\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYE" }{}}{\fldrslt {\cs37\ul\cf2 1243}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+{\xe \v GTEST_TEST_THROW_\:gtest-internal.h}
+{\xe \v gtest-internal.h\:GTEST_TEST_THROW_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GTEST_TEST_THROW_( statement,  expected_exception,  fail)}}
+\par
+{\bkmkstart AAAAAAAXUK}
+{\bkmkend AAAAAAAXUK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\\par
+  if (::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAXAX" }{}}{\fldrslt {\cs37\ul\cf2 testing::internal::ConstCharPtr}}}
+ gtest_msg = {\cf22 ""}) \{ \\\par
+    bool gtest_caught_expected = {\cf17 false}; \\\par
+    try \{ \\\par
+      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\\par
+    \} \\\par
+    catch (expected_exception {\cf17 const}&) \{ \\\par
+      gtest_caught_expected = {\cf17 true}; \\\par
+    \} \\\par
+    catch (...) \{ \\\par
+      gtest_msg.value = \\\par
+          {\cf22 "Expected: "} #statement {\cf22 " throws an exception of type "} \\\par
+{\cf21           #expected_exception ".\\n  Actual: it throws a different type."}; \\\par
+      goto GTEST_CONCAT_TOKEN_(gtest_label_testthrow_, __LINE__); \\\par
+    \} \\\par
+    if (!gtest_caught_expected) \{ \\\par
+      gtest_msg.value = \\\par
+          "Expected: " #statement " throws an exception of type " \\\par
+          #expected_exception ".\\n  Actual: it throws nothing."; \\\par
+      goto GTEST_CONCAT_TOKEN_(gtest_label_testthrow_, __LINE__); \\\par
+    \} \\\par
+  \} else \\\par
+    GTEST_CONCAT_TOKEN_(gtest_label_testthrow_, __LINE__): \\\par
+      fail(gtest_msg.value)\par
+}
+{
+Definition at line {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRYF" }{}}{\fldrslt {\cs37\ul\cf2 1217}}}
+ of file {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAVUT" }{}}{\fldrslt {\cs37\ul\cf2 gtest-internal.h}}}
+.}\par
+}
+}

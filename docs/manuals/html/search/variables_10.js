@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['tool_0',['tool',['../d1/dec/_0btool_8hpp.html#a95ceb07ef37166fe2eb4a49196ec22d2',1,'$tool.hpp']]],
-  ['type_1',['type',['../d9/dff/classcmdline_1_1_parm.html#a5d33b5c097c8dc80998d7a33f022795a',1,'cmdline::Parm::type()'],['../d9/d97/struct___parm_def.html#af46134d54a0f5f3877a09f12206af24c',1,'_ParmDef::type()'],['../d8/de6/class__cmdline_1_1_argument.html#a9a4e30d637f497d942f3222ca06ee617',1,'_cmdline::Argument::type()']]]
+  ['singleton_5f_0',['singleton_',['../d4/d41/namespacecmdline.html#aff88b407f66f95d268ee8b3f56e16820',1,'cmdline']]],
+  ['size_1',['size',['../d2/df3/struct___parameter.html#ad4fe84b18f018a9203f66ad3f5111369',1,'_Parameter']]],
+  ['source_2',['source',['../d8/de6/class__cmdline_1_1_argument.html#a30e3e62e1e9c0a652107aa27f1415d3a',1,'_cmdline::Argument']]],
+  ['string_3',['string',['../d0/da7/namespacetesting_1_1internal.html#a5ca8a348395a6145775c1a2334e21889',1,'testing::internal']]]
 ];

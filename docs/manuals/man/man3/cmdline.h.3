@@ -1,4 +1,4 @@
-.TH "libcmdline/include/cmdline.h" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "libcmdline/include/cmdline.h" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,44 +9,44 @@ libcmdline/include/cmdline.h
 \fC#include 'types\&.h'\fP
 .br
 
-.SS "Clases"
+.SS "Classes"
 
 .in +1c
 .ti -1c
 .RI "struct \fBstruct_cmdline\fP"
 .br
 .in -1c
-.SS "typedefs"
+.SS "Typedefs"
 
 .in +1c
 .ti -1c
 .RI "typedef struct \fBstruct_cmdline\fP \fBCmdLine\fP"
 .br
 .in -1c
-.SS "Funciones"
+.SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBCmdLine\fP * \fBcmdline_create\fP (int argc, char **argv, \fBParmDef\fP \fBparms\fP[])"
+.RI "\fBCmdLine\fP * \fBcmdline_create\fP (int argc, const char **argv, \fBParmDef\fP \fBparms\fP[])"
 .br
 .ti -1c
 .RI "void \fBcmdline_delete\fP (\fBCmdLine\fP *\fBcmdline\fP)"
 .br
 .in -1c
-.SH "Documentación de los 'typedefs'"
+.SH "Typedef Documentation"
 .PP 
 .SS "typedef struct \fBstruct_cmdline\fP \fBCmdLine\fP"
 
-.SH "Documentación de las funciones"
+.SH "Function Documentation"
 .PP 
-.SS "\fBCmdLine\fP * cmdline_create (int argc, char ** argv, \fBParmDef\fP parms[])"
+.SS "\fBCmdLine\fP * cmdline_create (int argc, const char ** argv, \fBParmDef\fP parms[])"
 
 .PP
-Definición en la línea \fB247\fP del archivo \fBinterface\&.cpp\fP\&.
+Definition at line \fB254\fP of file \fBinterface\&.cpp\fP\&.
 .SS "void cmdline_delete (\fBCmdLine\fP * cmdline)"
 
 .PP
-Definición en la línea \fB277\fP del archivo \fBinterface\&.cpp\fP\&.
-.SH "Autor"
+Definition at line \fB284\fP of file \fBinterface\&.cpp\fP\&.
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

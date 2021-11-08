@@ -1,4 +1,4 @@
-.TH "Types" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "Types" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,15 +12,23 @@ Types \- Tipos definidos para C++
 .ti -1c
 .RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
 .br
-.RI "Define el tipo de dato esperado del parametro\&. "
+.RI "Define the expected type of the string passed as parameter\&. "
 .ti -1c
-.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP }"
+.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBFILE\fP, \fBCODE\fP, \fBAUTO\fP }"
 .br
 .RI "Indicates the origin of thelast value of parameter\&. "
 .in -1c
 .SH "Descripción detallada"
 .PP 
-Conjunto de tipos para simplificar la codificacion 
+Conjunto de tipos para simplificar la codificacion
+.PP
+Se usan en la declaracion de los parametros que soporta la aplicacion
+.IP "1." 4
+\fBType\fP Indica el tipo de dato que se espera
+.IP "2." 4
+\fBSource\fP Indica la fuente del ultimo valor aplicado 
+.PP
+
 .SH "Documentación de las enumeraciones"
 .PP 
 .SS "enum class \fBSource\fP\fC [strong]\fP"
@@ -37,19 +45,21 @@ Default value
 \fB\fIENV \fP\fP
 Value has been set in the environment 
 .TP
+\fB\fICMDLINE \fP\fP
+Value has been set thru command line 
+.TP
+\fB\fIFILE \fP\fP
+Value has been set thru a config file 
+.TP
 \fB\fICODE \fP\fP
 Value has been update programatically 
 .TP
 \fB\fIAUTO \fP\fP
 \fBReserved\fP Hide parameter from queries 
-.PP
-Definición en la línea \fB19\fP del archivo \fBtypes\&.hpp\fP\&.
 .SS "enum class \fBType\fP\fC [strong]\fP"
 
 .PP
-Define el tipo de dato esperado del parametro\&. Define the expected type of the string passed as parameter\&.
-.PP
-It will be used to check the validity of the input 
+Define the expected type of the string passed as parameter\&. It will be used to check the validity of the input 
 .PP
 \fBValores de enumeraciones\fP
 .in +1c
@@ -102,8 +112,6 @@ A possibly correct file name
 .TP
 \fB\fIFILE_EXISTS \fP\fP
 An existing file before execution 
-.PP
-Definición en la línea \fB13\fP del archivo \fBtypes\&.hpp\fP\&.
 .SH "Autor"
 .PP 
 Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

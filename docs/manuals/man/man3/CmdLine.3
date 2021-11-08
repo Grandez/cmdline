@@ -1,4 +1,4 @@
-.TH "cmdline" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "cmdline" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,10 +44,10 @@ cmdline \- Public namespace to avoid naming mangling\&.
 .RI "class \fBHelpDetailedRequested\fP"
 .br
 .ti -1c
-.RI "class \fBHelpException\fP"
+.RI "class \fBHelpRequested\fP"
 .br
 .ti -1c
-.RI "class \fBHelpRequested\fP"
+.RI "class \fBHelpSimpleRequested\fP"
 .br
 .ti -1c
 .RI "class \fBParm\fP"
@@ -126,9 +126,9 @@ cmdline \- Public namespace to avoid naming mangling\&.
 .ti -1c
 .RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
 .br
-.RI "Define el tipo de dato esperado del parametro\&. "
+.RI "Define the expected type of the string passed as parameter\&. "
 .ti -1c
-.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBCODE\fP, \fBAUTO\fP }"
+.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBFILE\fP, \fBCODE\fP, \fBAUTO\fP }"
 .br
 .RI "Indicates the origin of thelast value of parameter\&. "
 .in -1c
@@ -139,6 +139,9 @@ cmdline \- Public namespace to avoid naming mangling\&.
 .RI "template<typename T > const vector< T > \fBgetOptionValuesAs\fP (const char *name)"
 .br
 .ti -1c
+.RI "static std::string \fBmountMessage\fP (const char *fmt, va_list list)"
+.br
+.ti -1c
 .RI "void \fB_cleanClass\fP ()"
 .br
 .in -1c
@@ -147,6 +150,9 @@ cmdline \- Public namespace to avoid naming mangling\&.
 .in +1c
 .ti -1c
 .RI "\fBCmdLine\fP * \fBsingleton_\fP = nullptr"
+.br
+.ti -1c
+.RI "static bool \fBinstance\fP = false"
 .br
 .ti -1c
 .RI "\fB_cmdline::CommandLine\fP * \fB_commandLine\fP"
@@ -164,127 +170,6 @@ cmdline \- Public namespace to avoid naming mangling\&.
 .SH "Descripción detallada"
 .PP 
 Public namespace to avoid naming mangling\&. 
-
-Base class for cmdline exceptions
-.PP
-As library process argument from command line it inherits from invalid_argument
-.PP
-\fBParámetros\fP
-.RS 4
-\fImsg\fP Text to show 
-.RE
-.PP
-
-.SH "Documentación de los 'typedefs'"
-.PP 
-.SS "using Flags =  std::unordered_map<std::string, bool>"
-
-.PP
-Definición en la línea \fB38\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using Options =  std::unordered_map<std::string, vector<std::string> >"
-
-.PP
-Definición en la línea \fB39\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "typedef std::vector<\fBParm\fP> Parameters"
-
-.PP
-Definición en la línea \fB77\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "using TYPE_BOOL =  bool"
-
-.PP
-Definición en la línea \fB22\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_DATE =  std::tm"
-
-.PP
-Definición en la línea \fB31\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_DATETIME =  std::tm"
-
-.PP
-Definición en la línea \fB33\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_DECIMAL =  float"
-
-.PP
-Definición en la línea \fB26\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_DIR =  filesystem::path"
-
-.PP
-Definición en la línea \fB35\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_DOUBLE =  double"
-
-.PP
-Definición en la línea \fB28\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_FILE =  filesystem::path"
-
-.PP
-Definición en la línea \fB36\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_FLOAT =  float"
-
-.PP
-Definición en la línea \fB27\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_INT =  int"
-
-.PP
-Definición en la línea \fB25\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_LONG =  long"
-
-.PP
-Definición en la línea \fB24\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_LONGDECIMAL =  float"
-
-.PP
-Definición en la línea \fB30\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_LONGNUMBER =  long long"
-
-.PP
-Definición en la línea \fB29\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_NUMBER =  long"
-
-.PP
-Definición en la línea \fB23\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_STRING =  std::string"
-
-.PP
-Definición en la línea \fB21\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_TIME =  std::tm"
-
-.PP
-Definición en la línea \fB32\fP del archivo \fBtypes\&.hpp\fP\&.
-.SS "using TYPE_TMS =  char*"
-
-.PP
-Definición en la línea \fB34\fP del archivo \fBtypes\&.hpp\fP\&.
-.SH "Documentación de las funciones"
-.PP 
-.SS "void cmdline::_cleanClass ()"
-
-.PP
-Definición en la línea \fB14\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
-.SS "const vector< T > cmdline::getOptionValuesAs (const char * name)"
-
-.PP
-Definición en la línea \fB63\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SH "Documentación de las variables"
-.PP 
-.SS "char** _argv = nullptr"
-
-.PP
-Definición en la línea \fB10\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
-.SS "\fB_cmdline::CommandLine\fP* _commandLine"
-
-.PP
-Definición en la línea \fB15\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "int _nargc"
-
-.PP
-Definición en la línea \fB11\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
-.SS "Parameters _parms"
-
-.PP
-Definición en la línea \fB12\fP del archivo \fBcmdline_flavors\&.cpp\fP\&.
-.SS "\fBCmdLine\fP* singleton_ = nullptr"
-
-.PP
-Definición en la línea \fB12\fP del archivo \fBcmdline\&.cpp\fP\&.
 .SH "Autor"
 .PP 
 Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

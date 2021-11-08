@@ -1,4 +1,4 @@
-.TH "testing::internal::ParamIterator< T >" 3 "Viernes, 5 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "testing::internal::ParamIterator< T >" 3 "Mon Nov 8 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ testing::internal::ParamIterator< T >
 .PP
 .PP
 \fC#include <gtest\-param\-util\&.h>\fP
-.SS "Tipos públicos"
+.SS "Public Types"
 
 .in +1c
 .ti -1c
@@ -21,7 +21,7 @@ testing::internal::ParamIterator< T >
 .RI "typedef ptrdiff_t \fBdifference_type\fP"
 .br
 .in -1c
-.SS "Métodos públicos"
+.SS "Public Member Functions"
 
 .in +1c
 .ti -1c
@@ -49,78 +49,78 @@ testing::internal::ParamIterator< T >
 .RI "bool \fBoperator!=\fP (const \fBParamIterator\fP &other) const"
 .br
 .in -1c
-.SS "Amigas"
+.SS "Friends"
 
 .in +1c
 .ti -1c
 .RI "class \fBParamGenerator< T >\fP"
 .br
 .in -1c
-.SH "Descripción detallada"
+.SH "Detailed Description"
 .PP 
 
 .SS "template<typename T>
 .br
 class testing::internal::ParamIterator< T >"
 .PP
-Definición en la línea \fB119\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación de los 'Typedef' miembros de la clase"
+Definition at line \fB119\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Typedef Documentation"
 .PP 
 .SS "template<typename T > typedef ptrdiff_t \fBtesting::internal::ParamIterator\fP< T >::\fBdifference_type\fP"
 
 .PP
-Definición en la línea \fB123\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB123\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > typedef const T& \fBtesting::internal::ParamIterator\fP< T >::\fBreference\fP"
 
 .PP
-Definición en la línea \fB122\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB122\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > typedef T \fBtesting::internal::ParamIterator\fP< T >::\fBvalue_type\fP"
 
 .PP
-Definición en la línea \fB121\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación del constructor y destructor"
+Definition at line \fB121\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
 .PP 
 .SS "template<typename T > \fBtesting::internal::ParamIterator\fP< T >::\fBParamIterator\fP (const \fBParamIterator\fP< T > & other)\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB126\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación de las funciones miembro"
+Definition at line \fB126\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Member Function Documentation"
 .PP 
 .SS "template<typename T > bool \fBtesting::internal::ParamIterator\fP< T >::operator!= (const \fBParamIterator\fP< T > & other) const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB149\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB149\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > const T & \fBtesting::internal::ParamIterator\fP< T >::operator* () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB133\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB133\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > \fBParamIterator\fP & \fBtesting::internal::ParamIterator\fP< T >::operator++ ()\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB136\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB136\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > \fBParamIterator\fP \fBtesting::internal::ParamIterator\fP< T >::operator++ (int)\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB141\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB141\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > const T * \fBtesting::internal::ParamIterator\fP< T >::operator\-> () const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB134\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB134\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > \fBParamIterator\fP & \fBtesting::internal::ParamIterator\fP< T >::operator= (const \fBParamIterator\fP< T > & other)\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB127\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB127\fP of file \fBgtest\-param\-util\&.h\fP\&.
 .SS "template<typename T > bool \fBtesting::internal::ParamIterator\fP< T >::operator== (const \fBParamIterator\fP< T > & other) const\fC [inline]\fP"
 
 .PP
-Definición en la línea \fB146\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
-.SH "Documentación de las funciones relacionadas y clases amigas"
+Definition at line \fB146\fP of file \fBgtest\-param\-util\&.h\fP\&.
+.SH "Friends And Related Function Documentation"
 .PP 
 .SS "template<typename T > friend class \fBParamGenerator\fP< T >\fC [friend]\fP"
 
 .PP
-Definición en la línea \fB149\fP del archivo \fBgtest\-param\-util\&.h\fP\&.
+Definition at line \fB149\fP of file \fBgtest\-param\-util\&.h\fP\&.
 
-.SH "Autor"
+.SH "Author"
 .PP 
-Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.
+Generated automatically by Doxygen for Command Line Processor from the source code\&.

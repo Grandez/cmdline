@@ -13,21 +13,6 @@
 #endif
 
 namespace cmdline {
-	/**
-	 * Generic Class to define defined flags and options
-	 *
-	 * A parm has 4 properties:
-	 * \property name Name of parameter
-	 * \property value Default value for the parameter
-	 * \property type Type of parameter according Type enum
-	 * \property multiple Parameter supports multiple values?
-	 * 
-	 * Parm(const char* name) : Default for Flag
-	 * Parm(const char* name, const char* value): Default for option
-	 * Parm(const char* name, bool value) : Define Flag with false or true
-     * Parm(const char* name, const char* value, Type type, bool multiple = false) : Detailed definition
-	 *
-	 */
 	class Parm {
 	public:
 		const char* name;              // Name of parameter

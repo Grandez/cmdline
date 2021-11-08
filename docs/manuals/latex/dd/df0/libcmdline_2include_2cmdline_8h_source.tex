@@ -1,36 +1,36 @@
 \hypertarget{libcmdline_2include_2cmdline_8h_source}{}\doxysection{cmdline.\+h}
 \label{libcmdline_2include_2cmdline_8h_source}\index{libcmdline/include/cmdline.h@{libcmdline/include/cmdline.h}}
-\mbox{\hyperlink{libcmdline_2include_2cmdline_8h}{Ir a la documentación de este archivo.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{libcmdline_2include_2types_8h}{types.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}types.h"{}}}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00003}00003 }
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00004}00004 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structstruct__cmdline}{struct\_cmdline}} \{}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00005}00005     \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}      (*\mbox{\hyperlink{structstruct__cmdline_a9f15e6c122f3450dcc6446d5671180d9}{hasFlag}})            (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00006}00006     \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}      (*\mbox{\hyperlink{structstruct__cmdline_a5953c7b6b6db774a2e742d78a693c942}{hasOption}})          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00007}00007     \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}      (*\mbox{\hyperlink{structstruct__cmdline_a33a88f14ea764697056a9a376b78a9c6}{hasDefine}})          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00008}00008     \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}      (*\mbox{\hyperlink{structstruct__cmdline_ae09ddfe961fa6383b171b307e3efccf6}{isOptionMultiple}})   (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00009}00009     \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}      (*\mbox{\hyperlink{structstruct__cmdline_aa590185dd08acdd662d1f6dcf9313586}{isDefineMultiple}})   (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00010}00010     \mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}}      (*\mbox{\hyperlink{structstruct__cmdline_a07ac85ed24a5d39423d94775df39d23c}{getFlag}})            (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00011}00011     int          (*\mbox{\hyperlink{structstruct__cmdline_a5e7a0fd5d4d72c10297d937774cdcdc8}{getOptionNumValues}}) (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00012}00012     int          (*\mbox{\hyperlink{structstruct__cmdline_a935dd527669955ce54508a3192066288}{getDefineNumValues}}) (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00005}00005     logical      (*hasFlag)            (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00006}00006     logical      (*hasOption)          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00007}00007     logical      (*hasDefine)          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00008}00008     logical      (*isOptionMultiple)   (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00009}00009     logical      (*isDefineMultiple)   (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00010}00010     logical      (*getFlag)            (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00011}00011     int          (*getOptionNumValues) (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00012}00012     int          (*getDefineNumValues) (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00013}00013     \textcolor{keyword}{const} \textcolor{keywordtype}{char}*  (*getOption)          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00014}00014     \textcolor{keyword}{const} \textcolor{keywordtype}{char}*  (*getDefine)          (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00015}00015     \textcolor{keyword}{const} \textcolor{keywordtype}{char}** (*getOptionValues)    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00016}00016     \textcolor{keyword}{const} \textcolor{keywordtype}{char}** (*getDefineValues)    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00017}00017     \mbox{\hyperlink{struct___flag}{Flag}}**       (*getDefaultFlags)    (\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} active);}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00018}00018     \mbox{\hyperlink{struct___flag}{Flag}}**       (*getCurrentFlags)    (\mbox{\hyperlink{include_2types_8h_a139be01697d63f6c073ae7cbc5aa848f}{logical}} active);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00017}00017     \mbox{\hyperlink{struct___flag}{Flag}}**       (*getDefaultFlags)    (logical active);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00018}00018     \mbox{\hyperlink{struct___flag}{Flag}}**       (*getCurrentFlags)    (logical active);}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00019}00019     \mbox{\hyperlink{struct___parameter}{Parameter}}**  (*getDefaultOptions)();}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00020}00020     \mbox{\hyperlink{struct___parameter}{Parameter}}**  (*getCurrentOptions)();}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00021}00021     \mbox{\hyperlink{struct___parameter}{Parameter}}**  (*getDefinitions)   ();}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00023}\mbox{\hyperlink{libcmdline_2include_2cmdline_8h_a1388dab8f8981bcc47148d1f57df6198}{00023}} \} \mbox{\hyperlink{include_2cmdline_8h_a1388dab8f8981bcc47148d1f57df6198}{CmdLine}};}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00023}00023 \} \mbox{\hyperlink{class_cmd_line}{CmdLine}};}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00024}00024 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00025}00025 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00026}00026 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00027}00027     \mbox{\hyperlink{class_cmd_line}{CmdLine}} *\mbox{\hyperlink{include_2cmdline_8h_ae8507d3a2e4fc62f70827e51ffdfa244}{cmdline\_create}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv, \mbox{\hyperlink{struct___parm_def}{ParmDef}} \mbox{\hyperlink{drivercmdline__c_8c_a9246cbb8abb39cbc50f4213d72a4581e}{parms}}[]);}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00027}00027     \mbox{\hyperlink{class_cmd_line}{CmdLine}} *cmdline\_create(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char} **argv, \mbox{\hyperlink{struct___parm_def}{ParmDef}} parms[]);}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00029}00029     \textcolor{keywordtype}{void} \mbox{\hyperlink{include_2cmdline_8h_ae00361a3b75c72181549d305b29200a5}{cmdline\_delete}}(\mbox{\hyperlink{class_cmd_line}{CmdLine}} *\mbox{\hyperlink{namespacecmdline}{cmdline}});}
+\DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00029}00029     \textcolor{keywordtype}{void} cmdline\_delete(\mbox{\hyperlink{class_cmd_line}{CmdLine}} *\mbox{\hyperlink{namespacecmdline}{cmdline}});}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00030}00030 }
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00031}00031 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
 \DoxyCodeLine{\Hypertarget{libcmdline_2include_2cmdline_8h_source_l00032}00032 \}}

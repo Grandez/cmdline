@@ -11,8 +11,8 @@ var namespacecmdline =
     [ "CmdLineS", "d0/d1b/classcmdline_1_1_cmd_line_s.html", null ],
     [ "CmdLineValueException", "d8/d74/classcmdline_1_1_cmd_line_value_exception.html", null ],
     [ "HelpDetailedRequested", "d7/db2/classcmdline_1_1_help_detailed_requested.html", null ],
-    [ "HelpException", "d5/d97/classcmdline_1_1_help_exception.html", null ],
     [ "HelpRequested", "df/db7/classcmdline_1_1_help_requested.html", null ],
+    [ "HelpSimpleRequested", "d4/ddb/classcmdline_1_1_help_simple_requested.html", null ],
     [ "Parm", "d9/dff/classcmdline_1_1_parm.html", null ],
     [ "ParmFlag", "d0/d79/classcmdline_1_1_parm_flag.html", null ],
     [ "ParmOption", "d3/d85/classcmdline_1_1_parm_option.html", null ],
@@ -20,6 +20,7 @@ var namespacecmdline =
       [ "DEFAULT", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea5b39c8b553c821e7cddc6da64b5bd2ee", null ],
       [ "ENV", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea84b2faa3b60428ae499f9c6672c1123d", null ],
       [ "CMDLINE", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eaeac6d54143273f41f31aa59c9894c430", null ],
+      [ "FILE", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea9fc5887c030f7a3e19821ebec457e719", null ],
       [ "CODE", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351ea08054846bbc9933fd0395f8be516a9f9", null ],
       [ "AUTO", "df/d4e/group___types.html#gga176e1eca2d1e3d1c6a064340bc6a351eae1f2d5134ed2543d38a0de9751cf75d9", null ]
     ] ],

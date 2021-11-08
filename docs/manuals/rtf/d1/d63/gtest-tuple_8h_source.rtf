@@ -1,0 +1,2805 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-tuple.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-tuple.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/internal/gtest-tuple.h}
+{\bkmkstart AAAAAABIKN}
+{\bkmkend AAAAAABIKN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAARXH" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAABIKO}{\bkmkend AAAAAABIKO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 00001}}}
+ {\cf20 // This file was GENERATED by command:}\par
+{\bkmkstart AAAAAABIKQ}{\bkmkend AAAAAABIKQ}
+00002 {\cf20 //     pump.py gtest-tuple.h.pump}\par
+{\bkmkstart AAAAAABIKR}{\bkmkend AAAAAABIKR}
+00003 {\cf20 // DO NOT EDIT BY HAND!!!}\par
+{\bkmkstart AAAAAABIKS}{\bkmkend AAAAAABIKS}
+00004 \par
+{\bkmkstart AAAAAABIKT}{\bkmkend AAAAAABIKT}
+00005 {\cf20 // Copyright 2009 Google Inc.}\par
+{\bkmkstart AAAAAABIKU}{\bkmkend AAAAAABIKU}
+00006 {\cf20 // All Rights Reserved.}\par
+{\bkmkstart AAAAAABIKV}{\bkmkend AAAAAABIKV}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAABIKW}{\bkmkend AAAAAABIKW}
+00008 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAABIKX}{\bkmkend AAAAAABIKX}
+00009 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAABIKY}{\bkmkend AAAAAABIKY}
+00010 {\cf20 // met:}\par
+{\bkmkstart AAAAAABIKZ}{\bkmkend AAAAAABIKZ}
+00011 {\cf20 //}\par
+{\bkmkstart AAAAAABILA}{\bkmkend AAAAAABILA}
+00012 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAABILB}{\bkmkend AAAAAABILB}
+00013 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAABILC}{\bkmkend AAAAAABILC}
+00014 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAABILD}{\bkmkend AAAAAABILD}
+00015 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAABILE}{\bkmkend AAAAAABILE}
+00016 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAABILF}{\bkmkend AAAAAABILF}
+00017 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAABILG}{\bkmkend AAAAAABILG}
+00018 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAABILH}{\bkmkend AAAAAABILH}
+00019 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAABILI}{\bkmkend AAAAAABILI}
+00020 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAABILJ}{\bkmkend AAAAAABILJ}
+00021 {\cf20 //}\par
+{\bkmkstart AAAAAABILK}{\bkmkend AAAAAABILK}
+00022 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAABILL}{\bkmkend AAAAAABILL}
+00023 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAABILM}{\bkmkend AAAAAABILM}
+00024 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAABILN}{\bkmkend AAAAAABILN}
+00025 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAABILO}{\bkmkend AAAAAABILO}
+00026 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAABILP}{\bkmkend AAAAAABILP}
+00027 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAABILQ}{\bkmkend AAAAAABILQ}
+00028 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAABILR}{\bkmkend AAAAAABILR}
+00029 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAABILS}{\bkmkend AAAAAABILS}
+00030 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAABILT}{\bkmkend AAAAAABILT}
+00031 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAABILU}{\bkmkend AAAAAABILU}
+00032 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAABILV}{\bkmkend AAAAAABILV}
+00033 \par
+{\bkmkstart AAAAAABILW}{\bkmkend AAAAAABILW}
+00034 \par
+{\bkmkstart AAAAAABILX}{\bkmkend AAAAAABILX}
+00035 {\cf20 // Implements a subset of TR1 tuple needed by Google Test and Google Mock.}\par
+{\bkmkstart AAAAAABILY}{\bkmkend AAAAAABILY}
+00036 \par
+{\bkmkstart AAAAAABILZ}{\bkmkend AAAAAABILZ}
+00037 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAABIMA}{\bkmkend AAAAAABIMA}
+00038 \par
+{\bkmkstart AAAAAABIMB}{\bkmkend AAAAAABIMB}
+00039 {\cf21 #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_TUPLE_H_}\par
+{\bkmkstart AAAAAABIMC}{\bkmkend AAAAAABIMC}
+00040 {\cf21 #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_TUPLE_H_}\par
+{\bkmkstart AAAAAABIMD}{\bkmkend AAAAAABIMD}
+00041 \par
+{\bkmkstart AAAAAABIME}{\bkmkend AAAAAABIME}
+00042 {\cf21 #include <utility>}  {\cf20 // For ::std::pair.}\par
+{\bkmkstart AAAAAABIMF}{\bkmkend AAAAAABIMF}
+00043 \par
+{\bkmkstart AAAAAABIMG}{\bkmkend AAAAAABIMG}
+00044 {\cf20 // The compiler used in Symbian has a bug that prevents us from declaring the}\par
+{\bkmkstart AAAAAABIMH}{\bkmkend AAAAAABIMH}
+00045 {\cf20 // tuple template as a friend (it complains that tuple is redefined).  This}\par
+{\bkmkstart AAAAAABIMI}{\bkmkend AAAAAABIMI}
+00046 {\cf20 // bypasses the bug by declaring the members that should otherwise be}\par
+{\bkmkstart AAAAAABIMJ}{\bkmkend AAAAAABIMJ}
+00047 {\cf20 // private as public.}\par
+{\bkmkstart AAAAAABIMK}{\bkmkend AAAAAABIMK}
+00048 {\cf20 // Sun Studio versions < 12 also have the above bug.}\par
+{\bkmkstart AAAAAABIML}{\bkmkend AAAAAABIML}
+00049 {\cf21 #if defined(__SYMBIAN32__) || (defined(__SUNPRO_CC) && __SUNPRO_CC < 0x590)}\par
+{\bkmkstart AAAAAABIMM}{\bkmkend AAAAAABIMM}
+00050 {\cf21 # define GTEST_DECLARE_TUPLE_AS_FRIEND_ public:}\par
+{\bkmkstart AAAAAABIMN}{\bkmkend AAAAAABIMN}
+00051 {\cf21 #else}\par
+{\bkmkstart AAAAAABIMO}{\bkmkend AAAAAABIMO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 00052}}}
+ {\cf21 # define GTEST_DECLARE_TUPLE_AS_FRIEND_ \\}\par
+{\bkmkstart AAAAAABIMQ}{\bkmkend AAAAAABIMQ}
+00053 {\cf21     template <GTEST_10_TYPENAMES_(U)> friend class tuple; \\}\par
+{\bkmkstart AAAAAABIMR}{\bkmkend AAAAAABIMR}
+00054 {\cf21    private:}\par
+{\bkmkstart AAAAAABIMS}{\bkmkend AAAAAABIMS}
+00055 {\cf21 #endif}\par
+{\bkmkstart AAAAAABIMT}{\bkmkend AAAAAABIMT}
+00056 \par
+{\bkmkstart AAAAAABIMU}{\bkmkend AAAAAABIMU}
+00057 {\cf20 // Visual Studio 2010, 2012, and 2013 define symbols in std::tr1 that conflict}\par
+{\bkmkstart AAAAAABIMV}{\bkmkend AAAAAABIMV}
+00058 {\cf20 // with our own definitions. Therefore using our own tuple does not work on}\par
+{\bkmkstart AAAAAABIMW}{\bkmkend AAAAAABIMW}
+00059 {\cf20 // those compilers.}\par
+{\bkmkstart AAAAAABIMX}{\bkmkend AAAAAABIMX}
+00060 {\cf21 #if defined(_MSC_VER) && _MSC_VER >= 1600  }{\cf20 /* 1600 is Visual Studio 2010 */}{\cf21 }\par
+{\bkmkstart AAAAAABIMY}{\bkmkend AAAAAABIMY}
+00061 {\cf21 # error "gtest's tuple doesn't compile on Visual Studio 2010 or later. \\}\par
+{\bkmkstart AAAAAABIMZ}{\bkmkend AAAAAABIMZ}
+00062 {\cf21 GTEST_USE_OWN_TR1_TUPLE must be set to 0 on those compilers."}\par
+{\bkmkstart AAAAAABINA}{\bkmkend AAAAAABINA}
+00063 {\cf21 #endif}\par
+{\bkmkstart AAAAAABINB}{\bkmkend AAAAAABINB}
+00064 \par
+{\bkmkstart AAAAAABINC}{\bkmkend AAAAAABINC}
+00065 {\cf20 // GTEST_n_TUPLE_(T) is the type of an n-tuple.}\par
+{\bkmkstart AAAAAABIND}{\bkmkend AAAAAABIND}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINE" }{}}{\fldrslt {\cs37\ul\cf2 00066}}}
+ {\cf21 #define GTEST_0_TUPLE_(T) tuple<>}\par
+{\bkmkstart AAAAAABINF}{\bkmkend AAAAAABINF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABING" }{}}{\fldrslt {\cs37\ul\cf2 00067}}}
+ {\cf21 #define GTEST_1_TUPLE_(T) tuple<T##0, void, void, void, void, void, void, \\}\par
+{\bkmkstart AAAAAABINH}{\bkmkend AAAAAABINH}
+00068 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABINI}{\bkmkend AAAAAABINI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINJ" }{}}{\fldrslt {\cs37\ul\cf2 00069}}}
+ {\cf21 #define GTEST_2_TUPLE_(T) tuple<T##0, T##1, void, void, void, void, void, \\}\par
+{\bkmkstart AAAAAABINK}{\bkmkend AAAAAABINK}
+00070 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABINL}{\bkmkend AAAAAABINL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINM" }{}}{\fldrslt {\cs37\ul\cf2 00071}}}
+ {\cf21 #define GTEST_3_TUPLE_(T) tuple<T##0, T##1, T##2, void, void, void, void, \\}\par
+{\bkmkstart AAAAAABINN}{\bkmkend AAAAAABINN}
+00072 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABINO}{\bkmkend AAAAAABINO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINP" }{}}{\fldrslt {\cs37\ul\cf2 00073}}}
+ {\cf21 #define GTEST_4_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, void, void, void, \\}\par
+{\bkmkstart AAAAAABINQ}{\bkmkend AAAAAABINQ}
+00074 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABINR}{\bkmkend AAAAAABINR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINS" }{}}{\fldrslt {\cs37\ul\cf2 00075}}}
+ {\cf21 #define GTEST_5_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, T##4, void, void, \\}\par
+{\bkmkstart AAAAAABINT}{\bkmkend AAAAAABINT}
+00076 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABINU}{\bkmkend AAAAAABINU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINV" }{}}{\fldrslt {\cs37\ul\cf2 00077}}}
+ {\cf21 #define GTEST_6_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, T##4, T##5, void, \\}\par
+{\bkmkstart AAAAAABINW}{\bkmkend AAAAAABINW}
+00078 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABINX}{\bkmkend AAAAAABINX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINY" }{}}{\fldrslt {\cs37\ul\cf2 00079}}}
+ {\cf21 #define GTEST_7_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\}\par
+{\bkmkstart AAAAAABINZ}{\bkmkend AAAAAABINZ}
+00080 {\cf21     void, void, void>}\par
+{\bkmkstart AAAAAABIOA}{\bkmkend AAAAAABIOA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOB" }{}}{\fldrslt {\cs37\ul\cf2 00081}}}
+ {\cf21 #define GTEST_8_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\}\par
+{\bkmkstart AAAAAABIOC}{\bkmkend AAAAAABIOC}
+00082 {\cf21     T##7, void, void>}\par
+{\bkmkstart AAAAAABIOD}{\bkmkend AAAAAABIOD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOE" }{}}{\fldrslt {\cs37\ul\cf2 00083}}}
+ {\cf21 #define GTEST_9_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\}\par
+{\bkmkstart AAAAAABIOF}{\bkmkend AAAAAABIOF}
+00084 {\cf21     T##7, T##8, void>}\par
+{\bkmkstart AAAAAABIOG}{\bkmkend AAAAAABIOG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOH" }{}}{\fldrslt {\cs37\ul\cf2 00085}}}
+ {\cf21 #define GTEST_10_TUPLE_(T) tuple<T##0, T##1, T##2, T##3, T##4, T##5, T##6, \\}\par
+{\bkmkstart AAAAAABIOI}{\bkmkend AAAAAABIOI}
+00086 {\cf21     T##7, T##8, T##9>}\par
+{\bkmkstart AAAAAABIOJ}{\bkmkend AAAAAABIOJ}
+00087 \par
+{\bkmkstart AAAAAABIOK}{\bkmkend AAAAAABIOK}
+00088 {\cf20 // GTEST_n_TYPENAMES_(T) declares a list of n typenames.}\par
+{\bkmkstart AAAAAABIOL}{\bkmkend AAAAAABIOL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOM" }{}}{\fldrslt {\cs37\ul\cf2 00089}}}
+ {\cf21 #define GTEST_0_TYPENAMES_(T)}\par
+{\bkmkstart AAAAAABION}{\bkmkend AAAAAABION}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOO" }{}}{\fldrslt {\cs37\ul\cf2 00090}}}
+ {\cf21 #define GTEST_1_TYPENAMES_(T) typename T##0}\par
+{\bkmkstart AAAAAABIOP}{\bkmkend AAAAAABIOP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOQ" }{}}{\fldrslt {\cs37\ul\cf2 00091}}}
+ {\cf21 #define GTEST_2_TYPENAMES_(T) typename T##0, typename T##1}\par
+{\bkmkstart AAAAAABIOR}{\bkmkend AAAAAABIOR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOS" }{}}{\fldrslt {\cs37\ul\cf2 00092}}}
+ {\cf21 #define GTEST_3_TYPENAMES_(T) typename T##0, typename T##1, typename T##2}\par
+{\bkmkstart AAAAAABIOT}{\bkmkend AAAAAABIOT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOU" }{}}{\fldrslt {\cs37\ul\cf2 00093}}}
+ {\cf21 #define GTEST_4_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIOV}{\bkmkend AAAAAABIOV}
+00094 {\cf21     typename T##3}\par
+{\bkmkstart AAAAAABIOW}{\bkmkend AAAAAABIOW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIOX" }{}}{\fldrslt {\cs37\ul\cf2 00095}}}
+ {\cf21 #define GTEST_5_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIOY}{\bkmkend AAAAAABIOY}
+00096 {\cf21     typename T##3, typename T##4}\par
+{\bkmkstart AAAAAABIOZ}{\bkmkend AAAAAABIOZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPA" }{}}{\fldrslt {\cs37\ul\cf2 00097}}}
+ {\cf21 #define GTEST_6_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIPB}{\bkmkend AAAAAABIPB}
+00098 {\cf21     typename T##3, typename T##4, typename T##5}\par
+{\bkmkstart AAAAAABIPC}{\bkmkend AAAAAABIPC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPD" }{}}{\fldrslt {\cs37\ul\cf2 00099}}}
+ {\cf21 #define GTEST_7_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIPE}{\bkmkend AAAAAABIPE}
+00100 {\cf21     typename T##3, typename T##4, typename T##5, typename T##6}\par
+{\bkmkstart AAAAAABIPF}{\bkmkend AAAAAABIPF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPG" }{}}{\fldrslt {\cs37\ul\cf2 00101}}}
+ {\cf21 #define GTEST_8_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIPH}{\bkmkend AAAAAABIPH}
+00102 {\cf21     typename T##3, typename T##4, typename T##5, typename T##6, typename T##7}\par
+{\bkmkstart AAAAAABIPI}{\bkmkend AAAAAABIPI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPJ" }{}}{\fldrslt {\cs37\ul\cf2 00103}}}
+ {\cf21 #define GTEST_9_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIPK}{\bkmkend AAAAAABIPK}
+00104 {\cf21     typename T##3, typename T##4, typename T##5, typename T##6, \\}\par
+{\bkmkstart AAAAAABIPL}{\bkmkend AAAAAABIPL}
+00105 {\cf21     typename T##7, typename T##8}\par
+{\bkmkstart AAAAAABIPM}{\bkmkend AAAAAABIPM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPN" }{}}{\fldrslt {\cs37\ul\cf2 00106}}}
+ {\cf21 #define GTEST_10_TYPENAMES_(T) typename T##0, typename T##1, typename T##2, \\}\par
+{\bkmkstart AAAAAABIPO}{\bkmkend AAAAAABIPO}
+00107 {\cf21     typename T##3, typename T##4, typename T##5, typename T##6, \\}\par
+{\bkmkstart AAAAAABIPP}{\bkmkend AAAAAABIPP}
+00108 {\cf21     typename T##7, typename T##8, typename T##9}\par
+{\bkmkstart AAAAAABIPQ}{\bkmkend AAAAAABIPQ}
+00109 \par
+{\bkmkstart AAAAAABIPR}{\bkmkend AAAAAABIPR}
+00110 {\cf20 // In theory, defining stuff in the ::std namespace is undefined}\par
+{\bkmkstart AAAAAABIPS}{\bkmkend AAAAAABIPS}
+00111 {\cf20 // behavior.  We can do this as we are playing the role of a standard}\par
+{\bkmkstart AAAAAABIPT}{\bkmkend AAAAAABIPT}
+00112 {\cf20 // library vendor.}\par
+{\bkmkstart AAAAAABIPU}{\bkmkend AAAAAABIPU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 00113}}}
+ {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 std}}}
+ \{\par
+{\bkmkstart AAAAAABIPV}{\bkmkend AAAAAABIPV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIPW" }{}}{\fldrslt {\cs37\ul\cf2 00114}}}
+ {\cf17 namespace }tr1 \{\par
+{\bkmkstart AAAAAABIPX}{\bkmkend AAAAAABIPX}
+00115 \par
+{\bkmkstart AAAAAABIPY}{\bkmkend AAAAAABIPY}
+00116 {\cf17 template} <{\cf17 typename} T0 = void, {\cf17 typename} T1 = void, {\cf17 typename} T2 = void,\par
+{\bkmkstart AAAAAABIPZ}{\bkmkend AAAAAABIPZ}
+00117     {\cf17 typename} T3 = void, {\cf17 typename} T4 = void, {\cf17 typename} T5 = void,\par
+{\bkmkstart AAAAAABIQA}{\bkmkend AAAAAABIQA}
+00118     {\cf17 typename} T6 = void, {\cf17 typename} T7 = void, {\cf17 typename} T8 = void,\par
+{\bkmkstart AAAAAABIQB}{\bkmkend AAAAAABIQB}
+00119     {\cf17 typename} T9 = {\cf18 void}>\par
+{\bkmkstart AAAAAABIQC}{\bkmkend AAAAAABIQC}
+00120 {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+;\par
+{\bkmkstart AAAAAABIQE}{\bkmkend AAAAAABIQE}
+00121 \par
+{\bkmkstart AAAAAABIQF}{\bkmkend AAAAAABIQF}
+00122 {\cf20 // Anything in namespace gtest_internal is Google Test's INTERNAL}\par
+{\bkmkstart AAAAAABIQG}{\bkmkend AAAAAABIQG}
+00123 {\cf20 // IMPLEMENTATION DETAIL and MUST NOT BE USED DIRECTLY in user code.}\par
+{\bkmkstart AAAAAABIQH}{\bkmkend AAAAAABIQH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQI" }{}}{\fldrslt {\cs37\ul\cf2 00124}}}
+ {\cf17 namespace }gtest_internal \{\par
+{\bkmkstart AAAAAABIQJ}{\bkmkend AAAAAABIQJ}
+00125 \par
+{\bkmkstart AAAAAABIQK}{\bkmkend AAAAAABIQK}
+00126 {\cf20 // ByRef<T>::type is T if T is a reference; otherwise it's const T&.}\par
+{\bkmkstart AAAAAABIQL}{\bkmkend AAAAAABIQL}
+00127 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABIQM}{\bkmkend AAAAAABIQM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQN" }{}}{\fldrslt {\cs37\ul\cf2 00128}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQO" }{}}{\fldrslt {\cs37\ul\cf2 ByRef}}}
+ \{ {\cf17 typedef} {\cf17 const} T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQN" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+; \};  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABIQP}{\bkmkend AAAAAABIQP}
+00129 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABIQQ}{\bkmkend AAAAAABIQQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQR" }{}}{\fldrslt {\cs37\ul\cf2 00130}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQO" }{}}{\fldrslt {\cs37\ul\cf2 ByRef}}}
+<T&> \{ {\cf17 typedef} T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQR" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+; \};  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABIQS}{\bkmkend AAAAAABIQS}
+00131 \par
+{\bkmkstart AAAAAABIQT}{\bkmkend AAAAAABIQT}
+00132 {\cf20 // A handy wrapper for ByRef.}\par
+{\bkmkstart AAAAAABIQU}{\bkmkend AAAAAABIQU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQV" }{}}{\fldrslt {\cs37\ul\cf2 00133}}}
+ {\cf21 #define GTEST_BY_REF_(T) typename ::std::tr1::gtest_internal::ByRef<T>::type}\par
+{\bkmkstart AAAAAABIQW}{\bkmkend AAAAAABIQW}
+00134 \par
+{\bkmkstart AAAAAABIQX}{\bkmkend AAAAAABIQX}
+00135 {\cf20 // AddRef<T>::type is T if T is a reference; otherwise it's T&.  This}\par
+{\bkmkstart AAAAAABIQY}{\bkmkend AAAAAABIQY}
+00136 {\cf20 // is the same as tr1::add_reference<T>::type.}\par
+{\bkmkstart AAAAAABIQZ}{\bkmkend AAAAAABIQZ}
+00137 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABIRA}{\bkmkend AAAAAABIRA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRB" }{}}{\fldrslt {\cs37\ul\cf2 00138}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRC" }{}}{\fldrslt {\cs37\ul\cf2 AddRef}}}
+ \{ {\cf17 typedef} T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRB" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+; \};  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABIRD}{\bkmkend AAAAAABIRD}
+00139 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAABIRE}{\bkmkend AAAAAABIRE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRF" }{}}{\fldrslt {\cs37\ul\cf2 00140}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRC" }{}}{\fldrslt {\cs37\ul\cf2 AddRef}}}
+<T&> \{ {\cf17 typedef} T& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRF" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+; \};  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABIRG}{\bkmkend AAAAAABIRG}
+00141 \par
+{\bkmkstart AAAAAABIRH}{\bkmkend AAAAAABIRH}
+00142 {\cf20 // A handy wrapper for AddRef.}\par
+{\bkmkstart AAAAAABIRI}{\bkmkend AAAAAABIRI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRJ" }{}}{\fldrslt {\cs37\ul\cf2 00143}}}
+ {\cf21 #define GTEST_ADD_REF_(T) typename ::std::tr1::gtest_internal::AddRef<T>::type}\par
+{\bkmkstart AAAAAABIRK}{\bkmkend AAAAAABIRK}
+00144 \par
+{\bkmkstart AAAAAABIRL}{\bkmkend AAAAAABIRL}
+00145 {\cf20 // A helper for implementing get<k>().}\par
+{\bkmkstart AAAAAABIRM}{\bkmkend AAAAAABIRM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 00146}}}
+ {\cf17 template} <{\cf18 int} k> {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+;\par
+{\bkmkstart AAAAAABIRO}{\bkmkend AAAAAABIRO}
+00147 \par
+{\bkmkstart AAAAAABIRP}{\bkmkend AAAAAABIRP}
+00148 {\cf20 // A helper for implementing tuple_element<k, T>.  kIndexValid is true}\par
+{\bkmkstart AAAAAABIRQ}{\bkmkend AAAAAABIRQ}
+00149 {\cf20 // iff k < the number of fields in tuple type T.}\par
+{\bkmkstart AAAAAABIRR}{\bkmkend AAAAAABIRR}
+00150 {\cf17 template} <{\cf18 bool} kIndexVal{\cf18 id}, {\cf18 int} kIndex, {\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABIRS}{\bkmkend AAAAAABIRS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 00151}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+;\par
+{\bkmkstart AAAAAABIRU}{\bkmkend AAAAAABIRU}
+00152 \par
+{\bkmkstart AAAAAABIRV}{\bkmkend AAAAAABIRV}
+00153 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIRW}{\bkmkend AAAAAABIRW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRX" }{}}{\fldrslt {\cs37\ul\cf2 00154}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABIRZ}{\bkmkend AAAAAABIRZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISA" }{}}{\fldrslt {\cs37\ul\cf2 00155}}}
+   {\cf17 typedef} T0 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISA" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABISB}{\bkmkend AAAAAABISB}
+00156 \};\par
+{\bkmkstart AAAAAABISC}{\bkmkend AAAAAABISC}
+00157 \par
+{\bkmkstart AAAAAABISD}{\bkmkend AAAAAABISD}
+00158 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABISE}{\bkmkend AAAAAABISE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISF" }{}}{\fldrslt {\cs37\ul\cf2 00159}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 1, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABISG}{\bkmkend AAAAAABISG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISH" }{}}{\fldrslt {\cs37\ul\cf2 00160}}}
+   {\cf17 typedef} T1 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISH" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABISI}{\bkmkend AAAAAABISI}
+00161 \};\par
+{\bkmkstart AAAAAABISJ}{\bkmkend AAAAAABISJ}
+00162 \par
+{\bkmkstart AAAAAABISK}{\bkmkend AAAAAABISK}
+00163 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABISL}{\bkmkend AAAAAABISL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISM" }{}}{\fldrslt {\cs37\ul\cf2 00164}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 2, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABISN}{\bkmkend AAAAAABISN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISO" }{}}{\fldrslt {\cs37\ul\cf2 00165}}}
+   {\cf17 typedef} T2 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISO" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABISP}{\bkmkend AAAAAABISP}
+00166 \};\par
+{\bkmkstart AAAAAABISQ}{\bkmkend AAAAAABISQ}
+00167 \par
+{\bkmkstart AAAAAABISR}{\bkmkend AAAAAABISR}
+00168 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABISS}{\bkmkend AAAAAABISS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIST" }{}}{\fldrslt {\cs37\ul\cf2 00169}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 3, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABISU}{\bkmkend AAAAAABISU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISV" }{}}{\fldrslt {\cs37\ul\cf2 00170}}}
+   {\cf17 typedef} T3 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABISV" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABISW}{\bkmkend AAAAAABISW}
+00171 \};\par
+{\bkmkstart AAAAAABISX}{\bkmkend AAAAAABISX}
+00172 \par
+{\bkmkstart AAAAAABISY}{\bkmkend AAAAAABISY}
+00173 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABISZ}{\bkmkend AAAAAABISZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITA" }{}}{\fldrslt {\cs37\ul\cf2 00174}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 4, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABITB}{\bkmkend AAAAAABITB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITC" }{}}{\fldrslt {\cs37\ul\cf2 00175}}}
+   {\cf17 typedef} T4 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITC" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABITD}{\bkmkend AAAAAABITD}
+00176 \};\par
+{\bkmkstart AAAAAABITE}{\bkmkend AAAAAABITE}
+00177 \par
+{\bkmkstart AAAAAABITF}{\bkmkend AAAAAABITF}
+00178 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABITG}{\bkmkend AAAAAABITG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITH" }{}}{\fldrslt {\cs37\ul\cf2 00179}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 5, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABITI}{\bkmkend AAAAAABITI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITJ" }{}}{\fldrslt {\cs37\ul\cf2 00180}}}
+   {\cf17 typedef} T5 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITJ" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABITK}{\bkmkend AAAAAABITK}
+00181 \};\par
+{\bkmkstart AAAAAABITL}{\bkmkend AAAAAABITL}
+00182 \par
+{\bkmkstart AAAAAABITM}{\bkmkend AAAAAABITM}
+00183 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABITN}{\bkmkend AAAAAABITN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITO" }{}}{\fldrslt {\cs37\ul\cf2 00184}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 6, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABITP}{\bkmkend AAAAAABITP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITQ" }{}}{\fldrslt {\cs37\ul\cf2 00185}}}
+   {\cf17 typedef} T6 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITQ" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABITR}{\bkmkend AAAAAABITR}
+00186 \};\par
+{\bkmkstart AAAAAABITS}{\bkmkend AAAAAABITS}
+00187 \par
+{\bkmkstart AAAAAABITT}{\bkmkend AAAAAABITT}
+00188 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABITU}{\bkmkend AAAAAABITU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITV" }{}}{\fldrslt {\cs37\ul\cf2 00189}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 7, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABITW}{\bkmkend AAAAAABITW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITX" }{}}{\fldrslt {\cs37\ul\cf2 00190}}}
+   {\cf17 typedef} T7 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABITX" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABITY}{\bkmkend AAAAAABITY}
+00191 \};\par
+{\bkmkstart AAAAAABITZ}{\bkmkend AAAAAABITZ}
+00192 \par
+{\bkmkstart AAAAAABIUA}{\bkmkend AAAAAABIUA}
+00193 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIUB}{\bkmkend AAAAAABIUB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUC" }{}}{\fldrslt {\cs37\ul\cf2 00194}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 8, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABIUD}{\bkmkend AAAAAABIUD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUE" }{}}{\fldrslt {\cs37\ul\cf2 00195}}}
+   {\cf17 typedef} T8 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUE" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABIUF}{\bkmkend AAAAAABIUF}
+00196 \};\par
+{\bkmkstart AAAAAABIUG}{\bkmkend AAAAAABIUG}
+00197 \par
+{\bkmkstart AAAAAABIUH}{\bkmkend AAAAAABIUH}
+00198 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIUI}{\bkmkend AAAAAABIUI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUJ" }{}}{\fldrslt {\cs37\ul\cf2 00199}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 TupleElement}}}
+<true, 9, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABIUK}{\bkmkend AAAAAABIUK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUL" }{}}{\fldrslt {\cs37\ul\cf2 00200}}}
+   {\cf17 typedef} T9 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUL" }{}}{\fldrslt {\cs37\ul\cf2 type}}}
+;\par
+{\bkmkstart AAAAAABIUM}{\bkmkend AAAAAABIUM}
+00201 \};\par
+{\bkmkstart AAAAAABIUN}{\bkmkend AAAAAABIUN}
+00202 \par
+{\bkmkstart AAAAAABIUO}{\bkmkend AAAAAABIUO}
+00203 \}  {\cf20 // namespace gtest_internal}\par
+{\bkmkstart AAAAAABIUP}{\bkmkend AAAAAABIUP}
+00204 \par
+{\bkmkstart AAAAAABIUQ}{\bkmkend AAAAAABIUQ}
+00205 {\cf17 template} <>\par
+{\bkmkstart AAAAAABIUR}{\bkmkend AAAAAABIUR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUS" }{}}{\fldrslt {\cs37\ul\cf2 00206}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+<> \{\par
+{\bkmkstart AAAAAABIUT}{\bkmkend AAAAAABIUT}
+00207  {\cf17 public}:\par
+{\bkmkstart AAAAAABIUU}{\bkmkend AAAAAABIUU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUV" }{}}{\fldrslt {\cs37\ul\cf2 00208}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUV" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+() \{\}\par
+{\bkmkstart AAAAAABIUW}{\bkmkend AAAAAABIUW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUX" }{}}{\fldrslt {\cs37\ul\cf2 00209}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUX" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& {\cf20 /* t */})  \{\}\par
+{\bkmkstart AAAAAABIUY}{\bkmkend AAAAAABIUY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUZ" }{}}{\fldrslt {\cs37\ul\cf2 00210}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUZ" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& {\cf20 /* t */}) \{ {\cf19 return} *{\cf17 this}; \}\par
+{\bkmkstart AAAAAABIVA}{\bkmkend AAAAAABIVA}
+00211 \};\par
+{\bkmkstart AAAAAABIVB}{\bkmkend AAAAAABIVB}
+00212 \par
+{\bkmkstart AAAAAABIVC}{\bkmkend AAAAAABIVC}
+00213 {\cf17 template} <GTEST_1_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIVD}{\bkmkend AAAAAABIVD}
+00214 {\cf17 class }GTEST_1_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABIVE}{\bkmkend AAAAAABIVE}
+00215  {\cf17 public}:\par
+{\bkmkstart AAAAAABIVF}{\bkmkend AAAAAABIVF}
+00216   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABIVG}{\bkmkend AAAAAABIVG}
+00217 \par
+{\bkmkstart AAAAAABIVH}{\bkmkend AAAAAABIVH}
+00218   tuple() : f0_() \{\}\par
+{\bkmkstart AAAAAABIVI}{\bkmkend AAAAAABIVI}
+00219 \par
+{\bkmkstart AAAAAABIVJ}{\bkmkend AAAAAABIVJ}
+00220   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0) : f0_(f0) \{\}\par
+{\bkmkstart AAAAAABIVL}{\bkmkend AAAAAABIVL}
+00221 \par
+{\bkmkstart AAAAAABIVM}{\bkmkend AAAAAABIVM}
+00222   tuple({\cf17 const} tuple& t) : f0_(t.f0_) \{\}\par
+{\bkmkstart AAAAAABIVN}{\bkmkend AAAAAABIVN}
+00223 \par
+{\bkmkstart AAAAAABIVO}{\bkmkend AAAAAABIVO}
+00224   {\cf17 template} <GTEST_1_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIVP}{\bkmkend AAAAAABIVP}
+00225   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(U)& t) : f0_(t.f0_) \{\}\par
+{\bkmkstart AAAAAABIVQ}{\bkmkend AAAAAABIVQ}
+00226 \par
+{\bkmkstart AAAAAABIVR}{\bkmkend AAAAAABIVR}
+00227   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABIVS}{\bkmkend AAAAAABIVS}
+00228 \par
+{\bkmkstart AAAAAABIVT}{\bkmkend AAAAAABIVT}
+00229   {\cf17 template} <GTEST_1_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIVU}{\bkmkend AAAAAABIVU}
+00230   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABIVV}{\bkmkend AAAAAABIVV}
+00231     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABIVW}{\bkmkend AAAAAABIVW}
+00232   \}\par
+{\bkmkstart AAAAAABIVX}{\bkmkend AAAAAABIVX}
+00233 \par
+{\bkmkstart AAAAAABIVY}{\bkmkend AAAAAABIVY}
+00234   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABIVZ}{\bkmkend AAAAAABIVZ}
+00235 \par
+{\bkmkstart AAAAAABIWA}{\bkmkend AAAAAABIWA}
+00236   {\cf17 template} <GTEST_1_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIWB}{\bkmkend AAAAAABIWB}
+00237   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABIWC}{\bkmkend AAAAAABIWC}
+00238     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABIWD}{\bkmkend AAAAAABIWD}
+00239     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABIWE}{\bkmkend AAAAAABIWE}
+00240   \}\par
+{\bkmkstart AAAAAABIWF}{\bkmkend AAAAAABIWF}
+00241 \par
+{\bkmkstart AAAAAABIWG}{\bkmkend AAAAAABIWG}
+00242   T0 f0_;\par
+{\bkmkstart AAAAAABIWH}{\bkmkend AAAAAABIWH}
+00243 \};\par
+{\bkmkstart AAAAAABIWI}{\bkmkend AAAAAABIWI}
+00244 \par
+{\bkmkstart AAAAAABIWJ}{\bkmkend AAAAAABIWJ}
+00245 {\cf17 template} <GTEST_2_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIWK}{\bkmkend AAAAAABIWK}
+00246 {\cf17 class }GTEST_2_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABIWL}{\bkmkend AAAAAABIWL}
+00247  {\cf17 public}:\par
+{\bkmkstart AAAAAABIWM}{\bkmkend AAAAAABIWM}
+00248   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABIWN}{\bkmkend AAAAAABIWN}
+00249 \par
+{\bkmkstart AAAAAABIWO}{\bkmkend AAAAAABIWO}
+00250   tuple() : f0_(), f1_() \{\}\par
+{\bkmkstart AAAAAABIWP}{\bkmkend AAAAAABIWP}
+00251 \par
+{\bkmkstart AAAAAABIWQ}{\bkmkend AAAAAABIWQ}
+00252   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+) : f0_(f0),\par
+{\bkmkstart AAAAAABIWS}{\bkmkend AAAAAABIWS}
+00253       f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+) \{\}\par
+{\bkmkstart AAAAAABIWT}{\bkmkend AAAAAABIWT}
+00254 \par
+{\bkmkstart AAAAAABIWU}{\bkmkend AAAAAABIWU}
+00255   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_) \{\}\par
+{\bkmkstart AAAAAABIWV}{\bkmkend AAAAAABIWV}
+00256 \par
+{\bkmkstart AAAAAABIWW}{\bkmkend AAAAAABIWW}
+00257   {\cf17 template} <GTEST_2_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIWX}{\bkmkend AAAAAABIWX}
+00258   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_) \{\}\par
+{\bkmkstart AAAAAABIWZ}{\bkmkend AAAAAABIWZ}
+00259   {\cf17 template} <{\cf17 typename} U0, {\cf17 typename} U1>\par
+{\bkmkstart AAAAAABIXA}{\bkmkend AAAAAABIXA}
+00260   tuple(const ::std::pair<U0, U1>& p) : f0_(p.first), f1_(p.second) \{\}\par
+{\bkmkstart AAAAAABIXB}{\bkmkend AAAAAABIXB}
+00261 \par
+{\bkmkstart AAAAAABIXC}{\bkmkend AAAAAABIXC}
+00262   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABIXD}{\bkmkend AAAAAABIXD}
+00263 \par
+{\bkmkstart AAAAAABIXE}{\bkmkend AAAAAABIXE}
+00264   {\cf17 template} <GTEST_2_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIXF}{\bkmkend AAAAAABIXF}
+00265   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABIXG}{\bkmkend AAAAAABIXG}
+00266     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABIXH}{\bkmkend AAAAAABIXH}
+00267   \}\par
+{\bkmkstart AAAAAABIXI}{\bkmkend AAAAAABIXI}
+00268   {\cf17 template} <{\cf17 typename} U0, {\cf17 typename} U1>\par
+{\bkmkstart AAAAAABIXJ}{\bkmkend AAAAAABIXJ}
+00269   tuple& operator=(const ::std::pair<U0, U1>& p) \{\par
+{\bkmkstart AAAAAABIXK}{\bkmkend AAAAAABIXK}
+00270     f0_ = p.first;\par
+{\bkmkstart AAAAAABIXL}{\bkmkend AAAAAABIXL}
+00271     f1_ = p.second;\par
+{\bkmkstart AAAAAABIXM}{\bkmkend AAAAAABIXM}
+00272     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABIXN}{\bkmkend AAAAAABIXN}
+00273   \}\par
+{\bkmkstart AAAAAABIXO}{\bkmkend AAAAAABIXO}
+00274 \par
+{\bkmkstart AAAAAABIXP}{\bkmkend AAAAAABIXP}
+00275   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABIXQ}{\bkmkend AAAAAABIXQ}
+00276 \par
+{\bkmkstart AAAAAABIXR}{\bkmkend AAAAAABIXR}
+00277   {\cf17 template} <GTEST_2_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIXS}{\bkmkend AAAAAABIXS}
+00278   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABIXT}{\bkmkend AAAAAABIXT}
+00279     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABIXU}{\bkmkend AAAAAABIXU}
+00280     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABIXV}{\bkmkend AAAAAABIXV}
+00281     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABIXW}{\bkmkend AAAAAABIXW}
+00282   \}\par
+{\bkmkstart AAAAAABIXX}{\bkmkend AAAAAABIXX}
+00283 \par
+{\bkmkstart AAAAAABIXY}{\bkmkend AAAAAABIXY}
+00284   T0 f0_;\par
+{\bkmkstart AAAAAABIXZ}{\bkmkend AAAAAABIXZ}
+00285   T1 f1_;\par
+{\bkmkstart AAAAAABIYA}{\bkmkend AAAAAABIYA}
+00286 \};\par
+{\bkmkstart AAAAAABIYB}{\bkmkend AAAAAABIYB}
+00287 \par
+{\bkmkstart AAAAAABIYC}{\bkmkend AAAAAABIYC}
+00288 {\cf17 template} <GTEST_3_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIYD}{\bkmkend AAAAAABIYD}
+00289 {\cf17 class }GTEST_3_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABIYE}{\bkmkend AAAAAABIYE}
+00290  {\cf17 public}:\par
+{\bkmkstart AAAAAABIYF}{\bkmkend AAAAAABIYF}
+00291   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABIYG}{\bkmkend AAAAAABIYG}
+00292 \par
+{\bkmkstart AAAAAABIYH}{\bkmkend AAAAAABIYH}
+00293   tuple() : f0_(), f1_(), f2_() \{\}\par
+{\bkmkstart AAAAAABIYI}{\bkmkend AAAAAABIYI}
+00294 \par
+{\bkmkstart AAAAAABIYJ}{\bkmkend AAAAAABIYJ}
+00295   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABIYK}{\bkmkend AAAAAABIYK}
+00296       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+) \{\}\par
+{\bkmkstart AAAAAABIYM}{\bkmkend AAAAAABIYM}
+00297 \par
+{\bkmkstart AAAAAABIYN}{\bkmkend AAAAAABIYN}
+00298   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_) \{\}\par
+{\bkmkstart AAAAAABIYO}{\bkmkend AAAAAABIYO}
+00299 \par
+{\bkmkstart AAAAAABIYP}{\bkmkend AAAAAABIYP}
+00300   {\cf17 template} <GTEST_3_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIYQ}{\bkmkend AAAAAABIYQ}
+00301   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_) \{\}\par
+{\bkmkstart AAAAAABIYS}{\bkmkend AAAAAABIYS}
+00302 \par
+{\bkmkstart AAAAAABIYT}{\bkmkend AAAAAABIYT}
+00303   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABIYU}{\bkmkend AAAAAABIYU}
+00304 \par
+{\bkmkstart AAAAAABIYV}{\bkmkend AAAAAABIYV}
+00305   {\cf17 template} <GTEST_3_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIYW}{\bkmkend AAAAAABIYW}
+00306   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABIYX}{\bkmkend AAAAAABIYX}
+00307     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABIYY}{\bkmkend AAAAAABIYY}
+00308   \}\par
+{\bkmkstart AAAAAABIYZ}{\bkmkend AAAAAABIYZ}
+00309 \par
+{\bkmkstart AAAAAABIZA}{\bkmkend AAAAAABIZA}
+00310   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABIZB}{\bkmkend AAAAAABIZB}
+00311 \par
+{\bkmkstart AAAAAABIZC}{\bkmkend AAAAAABIZC}
+00312   {\cf17 template} <GTEST_3_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABIZD}{\bkmkend AAAAAABIZD}
+00313   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABIZE}{\bkmkend AAAAAABIZE}
+00314     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABIZF}{\bkmkend AAAAAABIZF}
+00315     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABIZG}{\bkmkend AAAAAABIZG}
+00316     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABIZH}{\bkmkend AAAAAABIZH}
+00317     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABIZI}{\bkmkend AAAAAABIZI}
+00318   \}\par
+{\bkmkstart AAAAAABIZJ}{\bkmkend AAAAAABIZJ}
+00319 \par
+{\bkmkstart AAAAAABIZK}{\bkmkend AAAAAABIZK}
+00320   T0 f0_;\par
+{\bkmkstart AAAAAABIZL}{\bkmkend AAAAAABIZL}
+00321   T1 f1_;\par
+{\bkmkstart AAAAAABIZM}{\bkmkend AAAAAABIZM}
+00322   T2 f2_;\par
+{\bkmkstart AAAAAABIZN}{\bkmkend AAAAAABIZN}
+00323 \};\par
+{\bkmkstart AAAAAABIZO}{\bkmkend AAAAAABIZO}
+00324 \par
+{\bkmkstart AAAAAABIZP}{\bkmkend AAAAAABIZP}
+00325 {\cf17 template} <GTEST_4_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABIZQ}{\bkmkend AAAAAABIZQ}
+00326 {\cf17 class }GTEST_4_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABIZR}{\bkmkend AAAAAABIZR}
+00327  {\cf17 public}:\par
+{\bkmkstart AAAAAABIZS}{\bkmkend AAAAAABIZS}
+00328   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABIZT}{\bkmkend AAAAAABIZT}
+00329 \par
+{\bkmkstart AAAAAABIZU}{\bkmkend AAAAAABIZU}
+00330   tuple() : f0_(), f1_(), f2_(), f3_() \{\}\par
+{\bkmkstart AAAAAABIZV}{\bkmkend AAAAAABIZV}
+00331 \par
+{\bkmkstart AAAAAABIZW}{\bkmkend AAAAAABIZW}
+00332   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABIZX}{\bkmkend AAAAAABIZX}
+00333       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+),\par
+{\bkmkstart AAAAAABIZZ}{\bkmkend AAAAAABIZZ}
+00334       f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+) \{\}\par
+{\bkmkstart AAAAAABJAA}{\bkmkend AAAAAABJAA}
+00335 \par
+{\bkmkstart AAAAAABJAB}{\bkmkend AAAAAABJAB}
+00336   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_) \{\}\par
+{\bkmkstart AAAAAABJAC}{\bkmkend AAAAAABJAC}
+00337 \par
+{\bkmkstart AAAAAABJAD}{\bkmkend AAAAAABJAD}
+00338   {\cf17 template} <GTEST_4_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJAE}{\bkmkend AAAAAABJAE}
+00339   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJAG}{\bkmkend AAAAAABJAG}
+00340       f3_(t.f3_) \{\}\par
+{\bkmkstart AAAAAABJAH}{\bkmkend AAAAAABJAH}
+00341 \par
+{\bkmkstart AAAAAABJAI}{\bkmkend AAAAAABJAI}
+00342   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJAJ}{\bkmkend AAAAAABJAJ}
+00343 \par
+{\bkmkstart AAAAAABJAK}{\bkmkend AAAAAABJAK}
+00344   {\cf17 template} <GTEST_4_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJAL}{\bkmkend AAAAAABJAL}
+00345   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJAM}{\bkmkend AAAAAABJAM}
+00346     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJAN}{\bkmkend AAAAAABJAN}
+00347   \}\par
+{\bkmkstart AAAAAABJAO}{\bkmkend AAAAAABJAO}
+00348 \par
+{\bkmkstart AAAAAABJAP}{\bkmkend AAAAAABJAP}
+00349   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJAQ}{\bkmkend AAAAAABJAQ}
+00350 \par
+{\bkmkstart AAAAAABJAR}{\bkmkend AAAAAABJAR}
+00351   {\cf17 template} <GTEST_4_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJAS}{\bkmkend AAAAAABJAS}
+00352   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJAT}{\bkmkend AAAAAABJAT}
+00353     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABJAU}{\bkmkend AAAAAABJAU}
+00354     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJAV}{\bkmkend AAAAAABJAV}
+00355     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJAW}{\bkmkend AAAAAABJAW}
+00356     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJAX}{\bkmkend AAAAAABJAX}
+00357     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJAY}{\bkmkend AAAAAABJAY}
+00358   \}\par
+{\bkmkstart AAAAAABJAZ}{\bkmkend AAAAAABJAZ}
+00359 \par
+{\bkmkstart AAAAAABJBA}{\bkmkend AAAAAABJBA}
+00360   T0 f0_;\par
+{\bkmkstart AAAAAABJBB}{\bkmkend AAAAAABJBB}
+00361   T1 f1_;\par
+{\bkmkstart AAAAAABJBC}{\bkmkend AAAAAABJBC}
+00362   T2 f2_;\par
+{\bkmkstart AAAAAABJBD}{\bkmkend AAAAAABJBD}
+00363   T3 f3_;\par
+{\bkmkstart AAAAAABJBE}{\bkmkend AAAAAABJBE}
+00364 \};\par
+{\bkmkstart AAAAAABJBF}{\bkmkend AAAAAABJBF}
+00365 \par
+{\bkmkstart AAAAAABJBG}{\bkmkend AAAAAABJBG}
+00366 {\cf17 template} <GTEST_5_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJBH}{\bkmkend AAAAAABJBH}
+00367 {\cf17 class }GTEST_5_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABJBI}{\bkmkend AAAAAABJBI}
+00368  {\cf17 public}:\par
+{\bkmkstart AAAAAABJBJ}{\bkmkend AAAAAABJBJ}
+00369   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABJBK}{\bkmkend AAAAAABJBK}
+00370 \par
+{\bkmkstart AAAAAABJBL}{\bkmkend AAAAAABJBL}
+00371   tuple() : f0_(), f1_(), f2_(), f3_(), f4_() \{\}\par
+{\bkmkstart AAAAAABJBM}{\bkmkend AAAAAABJBM}
+00372 \par
+{\bkmkstart AAAAAABJBN}{\bkmkend AAAAAABJBN}
+00373   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABJBO}{\bkmkend AAAAAABJBO}
+00374       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+,\par
+{\bkmkstart AAAAAABJBP}{\bkmkend AAAAAABJBP}
+00375       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T4) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+), f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+), f4_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+) \{\}\par
+{\bkmkstart AAAAAABJBR}{\bkmkend AAAAAABJBR}
+00376 \par
+{\bkmkstart AAAAAABJBS}{\bkmkend AAAAAABJBS}
+00377   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_),\par
+{\bkmkstart AAAAAABJBT}{\bkmkend AAAAAABJBT}
+00378       f4_(t.f4_) \{\}\par
+{\bkmkstart AAAAAABJBU}{\bkmkend AAAAAABJBU}
+00379 \par
+{\bkmkstart AAAAAABJBV}{\bkmkend AAAAAABJBV}
+00380   {\cf17 template} <GTEST_5_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJBW}{\bkmkend AAAAAABJBW}
+00381   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJBY}{\bkmkend AAAAAABJBY}
+00382       f3_(t.f3_), f4_(t.f4_) \{\}\par
+{\bkmkstart AAAAAABJBZ}{\bkmkend AAAAAABJBZ}
+00383 \par
+{\bkmkstart AAAAAABJCA}{\bkmkend AAAAAABJCA}
+00384   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJCB}{\bkmkend AAAAAABJCB}
+00385 \par
+{\bkmkstart AAAAAABJCC}{\bkmkend AAAAAABJCC}
+00386   {\cf17 template} <GTEST_5_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJCD}{\bkmkend AAAAAABJCD}
+00387   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJCE}{\bkmkend AAAAAABJCE}
+00388     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJCF}{\bkmkend AAAAAABJCF}
+00389   \}\par
+{\bkmkstart AAAAAABJCG}{\bkmkend AAAAAABJCG}
+00390 \par
+{\bkmkstart AAAAAABJCH}{\bkmkend AAAAAABJCH}
+00391   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJCI}{\bkmkend AAAAAABJCI}
+00392 \par
+{\bkmkstart AAAAAABJCJ}{\bkmkend AAAAAABJCJ}
+00393   {\cf17 template} <GTEST_5_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJCK}{\bkmkend AAAAAABJCK}
+00394   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJCL}{\bkmkend AAAAAABJCL}
+00395     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABJCM}{\bkmkend AAAAAABJCM}
+00396     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJCN}{\bkmkend AAAAAABJCN}
+00397     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJCO}{\bkmkend AAAAAABJCO}
+00398     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJCP}{\bkmkend AAAAAABJCP}
+00399     f4_ = t.f4_;\par
+{\bkmkstart AAAAAABJCQ}{\bkmkend AAAAAABJCQ}
+00400     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJCR}{\bkmkend AAAAAABJCR}
+00401   \}\par
+{\bkmkstart AAAAAABJCS}{\bkmkend AAAAAABJCS}
+00402 \par
+{\bkmkstart AAAAAABJCT}{\bkmkend AAAAAABJCT}
+00403   T0 f0_;\par
+{\bkmkstart AAAAAABJCU}{\bkmkend AAAAAABJCU}
+00404   T1 f1_;\par
+{\bkmkstart AAAAAABJCV}{\bkmkend AAAAAABJCV}
+00405   T2 f2_;\par
+{\bkmkstart AAAAAABJCW}{\bkmkend AAAAAABJCW}
+00406   T3 f3_;\par
+{\bkmkstart AAAAAABJCX}{\bkmkend AAAAAABJCX}
+00407   T4 f4_;\par
+{\bkmkstart AAAAAABJCY}{\bkmkend AAAAAABJCY}
+00408 \};\par
+{\bkmkstart AAAAAABJCZ}{\bkmkend AAAAAABJCZ}
+00409 \par
+{\bkmkstart AAAAAABJDA}{\bkmkend AAAAAABJDA}
+00410 {\cf17 template} <GTEST_6_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJDB}{\bkmkend AAAAAABJDB}
+00411 {\cf17 class }GTEST_6_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABJDC}{\bkmkend AAAAAABJDC}
+00412  {\cf17 public}:\par
+{\bkmkstart AAAAAABJDD}{\bkmkend AAAAAABJDD}
+00413   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABJDE}{\bkmkend AAAAAABJDE}
+00414 \par
+{\bkmkstart AAAAAABJDF}{\bkmkend AAAAAABJDF}
+00415   tuple() : f0_(), f1_(), f2_(), f3_(), f4_(), f5_() \{\}\par
+{\bkmkstart AAAAAABJDG}{\bkmkend AAAAAABJDG}
+00416 \par
+{\bkmkstart AAAAAABJDH}{\bkmkend AAAAAABJDH}
+00417   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABJDI}{\bkmkend AAAAAABJDI}
+00418       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T4) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+,\par
+{\bkmkstart AAAAAABJDJ}{\bkmkend AAAAAABJDJ}
+00419       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T5) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+), f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+), f4_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+),\par
+{\bkmkstart AAAAAABJDL}{\bkmkend AAAAAABJDL}
+00420       f5_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+) \{\}\par
+{\bkmkstart AAAAAABJDM}{\bkmkend AAAAAABJDM}
+00421 \par
+{\bkmkstart AAAAAABJDN}{\bkmkend AAAAAABJDN}
+00422   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_),\par
+{\bkmkstart AAAAAABJDO}{\bkmkend AAAAAABJDO}
+00423       f4_(t.f4_), f5_(t.f5_) \{\}\par
+{\bkmkstart AAAAAABJDP}{\bkmkend AAAAAABJDP}
+00424 \par
+{\bkmkstart AAAAAABJDQ}{\bkmkend AAAAAABJDQ}
+00425   {\cf17 template} <GTEST_6_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJDR}{\bkmkend AAAAAABJDR}
+00426   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJDT}{\bkmkend AAAAAABJDT}
+00427       f3_(t.f3_), f4_(t.f4_), f5_(t.f5_) \{\}\par
+{\bkmkstart AAAAAABJDU}{\bkmkend AAAAAABJDU}
+00428 \par
+{\bkmkstart AAAAAABJDV}{\bkmkend AAAAAABJDV}
+00429   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJDW}{\bkmkend AAAAAABJDW}
+00430 \par
+{\bkmkstart AAAAAABJDX}{\bkmkend AAAAAABJDX}
+00431   {\cf17 template} <GTEST_6_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJDY}{\bkmkend AAAAAABJDY}
+00432   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJDZ}{\bkmkend AAAAAABJDZ}
+00433     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJEA}{\bkmkend AAAAAABJEA}
+00434   \}\par
+{\bkmkstart AAAAAABJEB}{\bkmkend AAAAAABJEB}
+00435 \par
+{\bkmkstart AAAAAABJEC}{\bkmkend AAAAAABJEC}
+00436   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJED}{\bkmkend AAAAAABJED}
+00437 \par
+{\bkmkstart AAAAAABJEE}{\bkmkend AAAAAABJEE}
+00438   {\cf17 template} <GTEST_6_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJEF}{\bkmkend AAAAAABJEF}
+00439   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJEG}{\bkmkend AAAAAABJEG}
+00440     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABJEH}{\bkmkend AAAAAABJEH}
+00441     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJEI}{\bkmkend AAAAAABJEI}
+00442     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJEJ}{\bkmkend AAAAAABJEJ}
+00443     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJEK}{\bkmkend AAAAAABJEK}
+00444     f4_ = t.f4_;\par
+{\bkmkstart AAAAAABJEL}{\bkmkend AAAAAABJEL}
+00445     f5_ = t.f5_;\par
+{\bkmkstart AAAAAABJEM}{\bkmkend AAAAAABJEM}
+00446     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJEN}{\bkmkend AAAAAABJEN}
+00447   \}\par
+{\bkmkstart AAAAAABJEO}{\bkmkend AAAAAABJEO}
+00448 \par
+{\bkmkstart AAAAAABJEP}{\bkmkend AAAAAABJEP}
+00449   T0 f0_;\par
+{\bkmkstart AAAAAABJEQ}{\bkmkend AAAAAABJEQ}
+00450   T1 f1_;\par
+{\bkmkstart AAAAAABJER}{\bkmkend AAAAAABJER}
+00451   T2 f2_;\par
+{\bkmkstart AAAAAABJES}{\bkmkend AAAAAABJES}
+00452   T3 f3_;\par
+{\bkmkstart AAAAAABJET}{\bkmkend AAAAAABJET}
+00453   T4 f4_;\par
+{\bkmkstart AAAAAABJEU}{\bkmkend AAAAAABJEU}
+00454   T5 f5_;\par
+{\bkmkstart AAAAAABJEV}{\bkmkend AAAAAABJEV}
+00455 \};\par
+{\bkmkstart AAAAAABJEW}{\bkmkend AAAAAABJEW}
+00456 \par
+{\bkmkstart AAAAAABJEX}{\bkmkend AAAAAABJEX}
+00457 {\cf17 template} <GTEST_7_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJEY}{\bkmkend AAAAAABJEY}
+00458 {\cf17 class }GTEST_7_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABJEZ}{\bkmkend AAAAAABJEZ}
+00459  {\cf17 public}:\par
+{\bkmkstart AAAAAABJFA}{\bkmkend AAAAAABJFA}
+00460   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABJFB}{\bkmkend AAAAAABJFB}
+00461 \par
+{\bkmkstart AAAAAABJFC}{\bkmkend AAAAAABJFC}
+00462   tuple() : f0_(), f1_(), f2_(), f3_(), f4_(), f5_(), f6_() \{\}\par
+{\bkmkstart AAAAAABJFD}{\bkmkend AAAAAABJFD}
+00463 \par
+{\bkmkstart AAAAAABJFE}{\bkmkend AAAAAABJFE}
+00464   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABJFF}{\bkmkend AAAAAABJFF}
+00465       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T4) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+,\par
+{\bkmkstart AAAAAABJFG}{\bkmkend AAAAAABJFG}
+00466       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T5) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T6) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+),\par
+{\bkmkstart AAAAAABJFI}{\bkmkend AAAAAABJFI}
+00467       f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+), f4_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+), f5_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+), f6_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+) \{\}\par
+{\bkmkstart AAAAAABJFJ}{\bkmkend AAAAAABJFJ}
+00468 \par
+{\bkmkstart AAAAAABJFK}{\bkmkend AAAAAABJFK}
+00469   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_),\par
+{\bkmkstart AAAAAABJFL}{\bkmkend AAAAAABJFL}
+00470       f4_(t.f4_), f5_(t.f5_), f6_(t.f6_) \{\}\par
+{\bkmkstart AAAAAABJFM}{\bkmkend AAAAAABJFM}
+00471 \par
+{\bkmkstart AAAAAABJFN}{\bkmkend AAAAAABJFN}
+00472   {\cf17 template} <GTEST_7_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJFO}{\bkmkend AAAAAABJFO}
+00473   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJFQ}{\bkmkend AAAAAABJFQ}
+00474       f3_(t.f3_), f4_(t.f4_), f5_(t.f5_), f6_(t.f6_) \{\}\par
+{\bkmkstart AAAAAABJFR}{\bkmkend AAAAAABJFR}
+00475 \par
+{\bkmkstart AAAAAABJFS}{\bkmkend AAAAAABJFS}
+00476   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJFT}{\bkmkend AAAAAABJFT}
+00477 \par
+{\bkmkstart AAAAAABJFU}{\bkmkend AAAAAABJFU}
+00478   {\cf17 template} <GTEST_7_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJFV}{\bkmkend AAAAAABJFV}
+00479   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJFW}{\bkmkend AAAAAABJFW}
+00480     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJFX}{\bkmkend AAAAAABJFX}
+00481   \}\par
+{\bkmkstart AAAAAABJFY}{\bkmkend AAAAAABJFY}
+00482 \par
+{\bkmkstart AAAAAABJFZ}{\bkmkend AAAAAABJFZ}
+00483   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJGA}{\bkmkend AAAAAABJGA}
+00484 \par
+{\bkmkstart AAAAAABJGB}{\bkmkend AAAAAABJGB}
+00485   {\cf17 template} <GTEST_7_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJGC}{\bkmkend AAAAAABJGC}
+00486   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJGD}{\bkmkend AAAAAABJGD}
+00487     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABJGE}{\bkmkend AAAAAABJGE}
+00488     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJGF}{\bkmkend AAAAAABJGF}
+00489     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJGG}{\bkmkend AAAAAABJGG}
+00490     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJGH}{\bkmkend AAAAAABJGH}
+00491     f4_ = t.f4_;\par
+{\bkmkstart AAAAAABJGI}{\bkmkend AAAAAABJGI}
+00492     f5_ = t.f5_;\par
+{\bkmkstart AAAAAABJGJ}{\bkmkend AAAAAABJGJ}
+00493     f6_ = t.f6_;\par
+{\bkmkstart AAAAAABJGK}{\bkmkend AAAAAABJGK}
+00494     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJGL}{\bkmkend AAAAAABJGL}
+00495   \}\par
+{\bkmkstart AAAAAABJGM}{\bkmkend AAAAAABJGM}
+00496 \par
+{\bkmkstart AAAAAABJGN}{\bkmkend AAAAAABJGN}
+00497   T0 f0_;\par
+{\bkmkstart AAAAAABJGO}{\bkmkend AAAAAABJGO}
+00498   T1 f1_;\par
+{\bkmkstart AAAAAABJGP}{\bkmkend AAAAAABJGP}
+00499   T2 f2_;\par
+{\bkmkstart AAAAAABJGQ}{\bkmkend AAAAAABJGQ}
+00500   T3 f3_;\par
+{\bkmkstart AAAAAABJGR}{\bkmkend AAAAAABJGR}
+00501   T4 f4_;\par
+{\bkmkstart AAAAAABJGS}{\bkmkend AAAAAABJGS}
+00502   T5 f5_;\par
+{\bkmkstart AAAAAABJGT}{\bkmkend AAAAAABJGT}
+00503   T6 f6_;\par
+{\bkmkstart AAAAAABJGU}{\bkmkend AAAAAABJGU}
+00504 \};\par
+{\bkmkstart AAAAAABJGV}{\bkmkend AAAAAABJGV}
+00505 \par
+{\bkmkstart AAAAAABJGW}{\bkmkend AAAAAABJGW}
+00506 {\cf17 template} <GTEST_8_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJGX}{\bkmkend AAAAAABJGX}
+00507 {\cf17 class }GTEST_8_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABJGY}{\bkmkend AAAAAABJGY}
+00508  {\cf17 public}:\par
+{\bkmkstart AAAAAABJGZ}{\bkmkend AAAAAABJGZ}
+00509   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABJHA}{\bkmkend AAAAAABJHA}
+00510 \par
+{\bkmkstart AAAAAABJHB}{\bkmkend AAAAAABJHB}
+00511   tuple() : f0_(), f1_(), f2_(), f3_(), f4_(), f5_(), f6_(), f7_() \{\}\par
+{\bkmkstart AAAAAABJHC}{\bkmkend AAAAAABJHC}
+00512 \par
+{\bkmkstart AAAAAABJHD}{\bkmkend AAAAAABJHD}
+00513   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABJHE}{\bkmkend AAAAAABJHE}
+00514       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T4) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+,\par
+{\bkmkstart AAAAAABJHF}{\bkmkend AAAAAABJHF}
+00515       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T5) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T6) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+,\par
+{\bkmkstart AAAAAABJHG}{\bkmkend AAAAAABJHG}
+00516       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T7) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+), f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+), f4_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+),\par
+{\bkmkstart AAAAAABJHI}{\bkmkend AAAAAABJHI}
+00517       f5_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+), f6_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+), f7_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+) \{\}\par
+{\bkmkstart AAAAAABJHJ}{\bkmkend AAAAAABJHJ}
+00518 \par
+{\bkmkstart AAAAAABJHK}{\bkmkend AAAAAABJHK}
+00519   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_),\par
+{\bkmkstart AAAAAABJHL}{\bkmkend AAAAAABJHL}
+00520       f4_(t.f4_), f5_(t.f5_), f6_(t.f6_), f7_(t.f7_) \{\}\par
+{\bkmkstart AAAAAABJHM}{\bkmkend AAAAAABJHM}
+00521 \par
+{\bkmkstart AAAAAABJHN}{\bkmkend AAAAAABJHN}
+00522   {\cf17 template} <GTEST_8_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJHO}{\bkmkend AAAAAABJHO}
+00523   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJHQ}{\bkmkend AAAAAABJHQ}
+00524       f3_(t.f3_), f4_(t.f4_), f5_(t.f5_), f6_(t.f6_), f7_(t.f7_) \{\}\par
+{\bkmkstart AAAAAABJHR}{\bkmkend AAAAAABJHR}
+00525 \par
+{\bkmkstart AAAAAABJHS}{\bkmkend AAAAAABJHS}
+00526   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJHT}{\bkmkend AAAAAABJHT}
+00527 \par
+{\bkmkstart AAAAAABJHU}{\bkmkend AAAAAABJHU}
+00528   {\cf17 template} <GTEST_8_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJHV}{\bkmkend AAAAAABJHV}
+00529   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJHW}{\bkmkend AAAAAABJHW}
+00530     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJHX}{\bkmkend AAAAAABJHX}
+00531   \}\par
+{\bkmkstart AAAAAABJHY}{\bkmkend AAAAAABJHY}
+00532 \par
+{\bkmkstart AAAAAABJHZ}{\bkmkend AAAAAABJHZ}
+00533   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJIA}{\bkmkend AAAAAABJIA}
+00534 \par
+{\bkmkstart AAAAAABJIB}{\bkmkend AAAAAABJIB}
+00535   {\cf17 template} <GTEST_8_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJIC}{\bkmkend AAAAAABJIC}
+00536   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJID}{\bkmkend AAAAAABJID}
+00537     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABJIE}{\bkmkend AAAAAABJIE}
+00538     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJIF}{\bkmkend AAAAAABJIF}
+00539     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJIG}{\bkmkend AAAAAABJIG}
+00540     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJIH}{\bkmkend AAAAAABJIH}
+00541     f4_ = t.f4_;\par
+{\bkmkstart AAAAAABJII}{\bkmkend AAAAAABJII}
+00542     f5_ = t.f5_;\par
+{\bkmkstart AAAAAABJIJ}{\bkmkend AAAAAABJIJ}
+00543     f6_ = t.f6_;\par
+{\bkmkstart AAAAAABJIK}{\bkmkend AAAAAABJIK}
+00544     f7_ = t.f7_;\par
+{\bkmkstart AAAAAABJIL}{\bkmkend AAAAAABJIL}
+00545     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJIM}{\bkmkend AAAAAABJIM}
+00546   \}\par
+{\bkmkstart AAAAAABJIN}{\bkmkend AAAAAABJIN}
+00547 \par
+{\bkmkstart AAAAAABJIO}{\bkmkend AAAAAABJIO}
+00548   T0 f0_;\par
+{\bkmkstart AAAAAABJIP}{\bkmkend AAAAAABJIP}
+00549   T1 f1_;\par
+{\bkmkstart AAAAAABJIQ}{\bkmkend AAAAAABJIQ}
+00550   T2 f2_;\par
+{\bkmkstart AAAAAABJIR}{\bkmkend AAAAAABJIR}
+00551   T3 f3_;\par
+{\bkmkstart AAAAAABJIS}{\bkmkend AAAAAABJIS}
+00552   T4 f4_;\par
+{\bkmkstart AAAAAABJIT}{\bkmkend AAAAAABJIT}
+00553   T5 f5_;\par
+{\bkmkstart AAAAAABJIU}{\bkmkend AAAAAABJIU}
+00554   T6 f6_;\par
+{\bkmkstart AAAAAABJIV}{\bkmkend AAAAAABJIV}
+00555   T7 f7_;\par
+{\bkmkstart AAAAAABJIW}{\bkmkend AAAAAABJIW}
+00556 \};\par
+{\bkmkstart AAAAAABJIX}{\bkmkend AAAAAABJIX}
+00557 \par
+{\bkmkstart AAAAAABJIY}{\bkmkend AAAAAABJIY}
+00558 {\cf17 template} <GTEST_9_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJIZ}{\bkmkend AAAAAABJIZ}
+00559 {\cf17 class }GTEST_9_TUPLE_(T) \{\par
+{\bkmkstart AAAAAABJJA}{\bkmkend AAAAAABJJA}
+00560  {\cf17 public}:\par
+{\bkmkstart AAAAAABJJB}{\bkmkend AAAAAABJJB}
+00561   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }gtest_internal::Get;\par
+{\bkmkstart AAAAAABJJC}{\bkmkend AAAAAABJJC}
+00562 \par
+{\bkmkstart AAAAAABJJD}{\bkmkend AAAAAABJJD}
+00563   tuple() : f0_(), f1_(), f2_(), f3_(), f4_(), f5_(), f6_(), f7_(), f8_() \{\}\par
+{\bkmkstart AAAAAABJJE}{\bkmkend AAAAAABJJE}
+00564 \par
+{\bkmkstart AAAAAABJJF}{\bkmkend AAAAAABJJF}
+00565   {\cf17 explicit} tuple({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABJJG}{\bkmkend AAAAAABJJG}
+00566       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T4) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+,\par
+{\bkmkstart AAAAAABJJH}{\bkmkend AAAAAABJJH}
+00567       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T5) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T6) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T7) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+,\par
+{\bkmkstart AAAAAABJJI}{\bkmkend AAAAAABJJI}
+00568       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T8) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+), f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+), f4_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+),\par
+{\bkmkstart AAAAAABJJK}{\bkmkend AAAAAABJJK}
+00569       f5_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+), f6_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+), f7_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+), f8_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+) \{\}\par
+{\bkmkstart AAAAAABJJL}{\bkmkend AAAAAABJJL}
+00570 \par
+{\bkmkstart AAAAAABJJM}{\bkmkend AAAAAABJJM}
+00571   tuple({\cf17 const} tuple& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_),\par
+{\bkmkstart AAAAAABJJN}{\bkmkend AAAAAABJJN}
+00572       f4_(t.f4_), f5_(t.f5_), f6_(t.f6_), f7_(t.f7_), f8_(t.f8_) \{\}\par
+{\bkmkstart AAAAAABJJO}{\bkmkend AAAAAABJJO}
+00573 \par
+{\bkmkstart AAAAAABJJP}{\bkmkend AAAAAABJJP}
+00574   {\cf17 template} <GTEST_9_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJJQ}{\bkmkend AAAAAABJJQ}
+00575   tuple({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJJS}{\bkmkend AAAAAABJJS}
+00576       f3_(t.f3_), f4_(t.f4_), f5_(t.f5_), f6_(t.f6_), f7_(t.f7_), f8_(t.f8_) \{\}\par
+{\bkmkstart AAAAAABJJT}{\bkmkend AAAAAABJJT}
+00577 \par
+{\bkmkstart AAAAAABJJU}{\bkmkend AAAAAABJJU}
+00578   tuple& operator=({\cf17 const} tuple& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJJV}{\bkmkend AAAAAABJJV}
+00579 \par
+{\bkmkstart AAAAAABJJW}{\bkmkend AAAAAABJJW}
+00580   {\cf17 template} <GTEST_9_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJJX}{\bkmkend AAAAAABJJX}
+00581   tuple& operator=({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJJY}{\bkmkend AAAAAABJJY}
+00582     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJJZ}{\bkmkend AAAAAABJJZ}
+00583   \}\par
+{\bkmkstart AAAAAABJKA}{\bkmkend AAAAAABJKA}
+00584 \par
+{\bkmkstart AAAAAABJKB}{\bkmkend AAAAAABJKB}
+00585   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJKC}{\bkmkend AAAAAABJKC}
+00586 \par
+{\bkmkstart AAAAAABJKD}{\bkmkend AAAAAABJKD}
+00587   {\cf17 template} <GTEST_9_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJKE}{\bkmkend AAAAAABJKE}
+00588   tuple& CopyFrom({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJKF}{\bkmkend AAAAAABJKF}
+00589     f0_ = t.f0_;\par
+{\bkmkstart AAAAAABJKG}{\bkmkend AAAAAABJKG}
+00590     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJKH}{\bkmkend AAAAAABJKH}
+00591     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJKI}{\bkmkend AAAAAABJKI}
+00592     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJKJ}{\bkmkend AAAAAABJKJ}
+00593     f4_ = t.f4_;\par
+{\bkmkstart AAAAAABJKK}{\bkmkend AAAAAABJKK}
+00594     f5_ = t.f5_;\par
+{\bkmkstart AAAAAABJKL}{\bkmkend AAAAAABJKL}
+00595     f6_ = t.f6_;\par
+{\bkmkstart AAAAAABJKM}{\bkmkend AAAAAABJKM}
+00596     f7_ = t.f7_;\par
+{\bkmkstart AAAAAABJKN}{\bkmkend AAAAAABJKN}
+00597     f8_ = t.f8_;\par
+{\bkmkstart AAAAAABJKO}{\bkmkend AAAAAABJKO}
+00598     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJKP}{\bkmkend AAAAAABJKP}
+00599   \}\par
+{\bkmkstart AAAAAABJKQ}{\bkmkend AAAAAABJKQ}
+00600 \par
+{\bkmkstart AAAAAABJKR}{\bkmkend AAAAAABJKR}
+00601   T0 f0_;\par
+{\bkmkstart AAAAAABJKS}{\bkmkend AAAAAABJKS}
+00602   T1 f1_;\par
+{\bkmkstart AAAAAABJKT}{\bkmkend AAAAAABJKT}
+00603   T2 f2_;\par
+{\bkmkstart AAAAAABJKU}{\bkmkend AAAAAABJKU}
+00604   T3 f3_;\par
+{\bkmkstart AAAAAABJKV}{\bkmkend AAAAAABJKV}
+00605   T4 f4_;\par
+{\bkmkstart AAAAAABJKW}{\bkmkend AAAAAABJKW}
+00606   T5 f5_;\par
+{\bkmkstart AAAAAABJKX}{\bkmkend AAAAAABJKX}
+00607   T6 f6_;\par
+{\bkmkstart AAAAAABJKY}{\bkmkend AAAAAABJKY}
+00608   T7 f7_;\par
+{\bkmkstart AAAAAABJKZ}{\bkmkend AAAAAABJKZ}
+00609   T8 f8_;\par
+{\bkmkstart AAAAAABJLA}{\bkmkend AAAAAABJLA}
+00610 \};\par
+{\bkmkstart AAAAAABJLB}{\bkmkend AAAAAABJLB}
+00611 \par
+{\bkmkstart AAAAAABJLC}{\bkmkend AAAAAABJLC}
+00612 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJLD}{\bkmkend AAAAAABJLD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 00613}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+ \{\par
+{\bkmkstart AAAAAABJLE}{\bkmkend AAAAAABJLE}
+00614  {\cf17 public}:\par
+{\bkmkstart AAAAAABJLF}{\bkmkend AAAAAABJLF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLG" }{}}{\fldrslt {\cs37\ul\cf2 00615}}}
+   {\cf17 template} <{\cf18 int} k> {\cf17 friend} {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 gtest_internal::Get}}}
+;\par
+{\bkmkstart AAAAAABJLH}{\bkmkend AAAAAABJLH}
+00616 \par
+{\bkmkstart AAAAAABJLI}{\bkmkend AAAAAABJLI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLJ" }{}}{\fldrslt {\cs37\ul\cf2 00617}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLJ" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+() : f0_(), f1_(), f2_(), f3_(), f4_(), f5_(), f6_(), f7_(), f8_(),\par
+{\bkmkstart AAAAAABJLK}{\bkmkend AAAAAABJLK}
+00618       f9_() \{\}\par
+{\bkmkstart AAAAAABJLL}{\bkmkend AAAAAABJLL}
+00619 \par
+{\bkmkstart AAAAAABJLM}{\bkmkend AAAAAABJLM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLN" }{}}{\fldrslt {\cs37\ul\cf2 00620}}}
+   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLN" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T0) f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T1) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+,\par
+{\bkmkstart AAAAAABJLO}{\bkmkend AAAAAABJLO}
+00621       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T2) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T3) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T4) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+,\par
+{\bkmkstart AAAAAABJLP}{\bkmkend AAAAAABJLP}
+00622       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T5) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T6) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T7) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+,\par
+{\bkmkstart AAAAAABJLQ}{\bkmkend AAAAAABJLQ}
+00623       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T8) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+(T9) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLR" }{}}{\fldrslt {\cs37\ul\cf2 f9}}}
+) : f0_(f0), f1_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+), f2_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+),\par
+{\bkmkstart AAAAAABJLS}{\bkmkend AAAAAABJLS}
+00624       f3_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+), f4_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+), f5_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+), f6_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+), f7_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+), f8_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+), f9_({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLR" }{}}{\fldrslt {\cs37\ul\cf2 f9}}}
+) \{\}\par
+{\bkmkstart AAAAAABJLT}{\bkmkend AAAAAABJLT}
+00625 \par
+{\bkmkstart AAAAAABJLU}{\bkmkend AAAAAABJLU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLV" }{}}{\fldrslt {\cs37\ul\cf2 00626}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLV" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_), f3_(t.f3_),\par
+{\bkmkstart AAAAAABJLW}{\bkmkend AAAAAABJLW}
+00627       f4_(t.f4_), f5_(t.f5_), f6_(t.f6_), f7_(t.f7_), f8_(t.f8_), f9_(t.f9_) \{\}\par
+{\bkmkstart AAAAAABJLX}{\bkmkend AAAAAABJLX}
+00628 \par
+{\bkmkstart AAAAAABJLY}{\bkmkend AAAAAABJLY}
+00629   {\cf17 template} <GTEST_10_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJLZ}{\bkmkend AAAAAABJLZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMA" }{}}{\fldrslt {\cs37\ul\cf2 00630}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMA" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),\par
+{\bkmkstart AAAAAABJMB}{\bkmkend AAAAAABJMB}
+00631       f3_(t.f3_), f4_(t.f4_), f5_(t.f5_), f6_(t.f6_), f7_(t.f7_), f8_(t.f8_),\par
+{\bkmkstart AAAAAABJMC}{\bkmkend AAAAAABJMC}
+00632       f9_(t.f9_) \{\}\par
+{\bkmkstart AAAAAABJMD}{\bkmkend AAAAAABJMD}
+00633 \par
+{\bkmkstart AAAAAABJME}{\bkmkend AAAAAABJME}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMF" }{}}{\fldrslt {\cs37\ul\cf2 00634}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMF" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& t) \{ {\cf19 return} CopyFrom(t); \}\par
+{\bkmkstart AAAAAABJMG}{\bkmkend AAAAAABJMG}
+00635 \par
+{\bkmkstart AAAAAABJMH}{\bkmkend AAAAAABJMH}
+00636   {\cf17 template} <GTEST_10_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJMI}{\bkmkend AAAAAABJMI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMJ" }{}}{\fldrslt {\cs37\ul\cf2 00637}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMJ" }{}}{\fldrslt {\cs37\ul\cf2 operator=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJMK}{\bkmkend AAAAAABJMK}
+00638     {\cf19 return} CopyFrom(t);\par
+{\bkmkstart AAAAAABJML}{\bkmkend AAAAAABJML}
+00639   \}\par
+{\bkmkstart AAAAAABJMM}{\bkmkend AAAAAABJMM}
+00640 \par
+{\bkmkstart AAAAAABJMN}{\bkmkend AAAAAABJMN}
+00641   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIMP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_TUPLE_AS_FRIEND_}}}
+\par
+{\bkmkstart AAAAAABJMO}{\bkmkend AAAAAABJMO}
+00642 \par
+{\bkmkstart AAAAAABJMP}{\bkmkend AAAAAABJMP}
+00643   {\cf17 template} <GTEST_10_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABJMQ}{\bkmkend AAAAAABJMQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMR" }{}}{\fldrslt {\cs37\ul\cf2 00644}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIQD" }{}}{\fldrslt {\cs37\ul\cf2 tuple}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMR" }{}}{\fldrslt {\cs37\ul\cf2 CopyFrom}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)& t) \{\par
+{\bkmkstart AAAAAABJMS}{\bkmkend AAAAAABJMS}
+00645     f0_ = t.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMT" }{}}{\fldrslt {\cs37\ul\cf2 f0_}}}
+;\par
+{\bkmkstart AAAAAABJMU}{\bkmkend AAAAAABJMU}
+00646     f1_ = t.f1_;\par
+{\bkmkstart AAAAAABJMV}{\bkmkend AAAAAABJMV}
+00647     f2_ = t.f2_;\par
+{\bkmkstart AAAAAABJMW}{\bkmkend AAAAAABJMW}
+00648     f3_ = t.f3_;\par
+{\bkmkstart AAAAAABJMX}{\bkmkend AAAAAABJMX}
+00649     f4_ = t.f4_;\par
+{\bkmkstart AAAAAABJMY}{\bkmkend AAAAAABJMY}
+00650     f5_ = t.f5_;\par
+{\bkmkstart AAAAAABJMZ}{\bkmkend AAAAAABJMZ}
+00651     f6_ = t.f6_;\par
+{\bkmkstart AAAAAABJNA}{\bkmkend AAAAAABJNA}
+00652     f7_ = t.f7_;\par
+{\bkmkstart AAAAAABJNB}{\bkmkend AAAAAABJNB}
+00653     f8_ = t.f8_;\par
+{\bkmkstart AAAAAABJNC}{\bkmkend AAAAAABJNC}
+00654     f9_ = t.f9_;\par
+{\bkmkstart AAAAAABJND}{\bkmkend AAAAAABJND}
+00655     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAABJNE}{\bkmkend AAAAAABJNE}
+00656   \}\par
+{\bkmkstart AAAAAABJNF}{\bkmkend AAAAAABJNF}
+00657 \par
+{\bkmkstart AAAAAABJNG}{\bkmkend AAAAAABJNG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMT" }{}}{\fldrslt {\cs37\ul\cf2 00658}}}
+   T0 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJMT" }{}}{\fldrslt {\cs37\ul\cf2 f0_}}}
+;\par
+{\bkmkstart AAAAAABJNH}{\bkmkend AAAAAABJNH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNI" }{}}{\fldrslt {\cs37\ul\cf2 00659}}}
+   T1 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNI" }{}}{\fldrslt {\cs37\ul\cf2 f1_}}}
+;\par
+{\bkmkstart AAAAAABJNJ}{\bkmkend AAAAAABJNJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNK" }{}}{\fldrslt {\cs37\ul\cf2 00660}}}
+   T2 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNK" }{}}{\fldrslt {\cs37\ul\cf2 f2_}}}
+;\par
+{\bkmkstart AAAAAABJNL}{\bkmkend AAAAAABJNL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNM" }{}}{\fldrslt {\cs37\ul\cf2 00661}}}
+   T3 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNM" }{}}{\fldrslt {\cs37\ul\cf2 f3_}}}
+;\par
+{\bkmkstart AAAAAABJNN}{\bkmkend AAAAAABJNN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNO" }{}}{\fldrslt {\cs37\ul\cf2 00662}}}
+   T4 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNO" }{}}{\fldrslt {\cs37\ul\cf2 f4_}}}
+;\par
+{\bkmkstart AAAAAABJNP}{\bkmkend AAAAAABJNP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNQ" }{}}{\fldrslt {\cs37\ul\cf2 00663}}}
+   T5 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNQ" }{}}{\fldrslt {\cs37\ul\cf2 f5_}}}
+;\par
+{\bkmkstart AAAAAABJNR}{\bkmkend AAAAAABJNR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNS" }{}}{\fldrslt {\cs37\ul\cf2 00664}}}
+   T6 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNS" }{}}{\fldrslt {\cs37\ul\cf2 f6_}}}
+;\par
+{\bkmkstart AAAAAABJNT}{\bkmkend AAAAAABJNT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNU" }{}}{\fldrslt {\cs37\ul\cf2 00665}}}
+   T7 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNU" }{}}{\fldrslt {\cs37\ul\cf2 f7_}}}
+;\par
+{\bkmkstart AAAAAABJNV}{\bkmkend AAAAAABJNV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNW" }{}}{\fldrslt {\cs37\ul\cf2 00666}}}
+   T8 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNW" }{}}{\fldrslt {\cs37\ul\cf2 f8_}}}
+;\par
+{\bkmkstart AAAAAABJNX}{\bkmkend AAAAAABJNX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNY" }{}}{\fldrslt {\cs37\ul\cf2 00667}}}
+   T9 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJNY" }{}}{\fldrslt {\cs37\ul\cf2 f9_}}}
+;\par
+{\bkmkstart AAAAAABJNZ}{\bkmkend AAAAAABJNZ}
+00668 \};\par
+{\bkmkstart AAAAAABJOA}{\bkmkend AAAAAABJOA}
+00669 \par
+{\bkmkstart AAAAAABJOB}{\bkmkend AAAAAABJOB}
+00670 {\cf20 // 6.1.3.2 Tuple creation functions.}\par
+{\bkmkstart AAAAAABJOC}{\bkmkend AAAAAABJOC}
+00671 \par
+{\bkmkstart AAAAAABJOD}{\bkmkend AAAAAABJOD}
+00672 {\cf20 // Known limitations: we don't support passing an}\par
+{\bkmkstart AAAAAABJOE}{\bkmkend AAAAAABJOE}
+00673 {\cf20 // std::tr1::reference_wrapper<T> to make_tuple().  And we don't}\par
+{\bkmkstart AAAAAABJOF}{\bkmkend AAAAAABJOF}
+00674 {\cf20 // implement tie().}\par
+{\bkmkstart AAAAAABJOG}{\bkmkend AAAAAABJOG}
+00675 \par
+{\bkmkstart AAAAAABJOH}{\bkmkend AAAAAABJOH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 00676}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUS" }{}}{\fldrslt {\cs37\ul\cf2 tuple<>}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+() \{ {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIUS" }{}}{\fldrslt {\cs37\ul\cf2 tuple<>}}}
+(); \}\par
+{\bkmkstart AAAAAABJOI}{\bkmkend AAAAAABJOI}
+00677 \par
+{\bkmkstart AAAAAABJOJ}{\bkmkend AAAAAABJOJ}
+00678 {\cf17 template} <GTEST_1_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJOK}{\bkmkend AAAAAABJOK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJOL" }{}}{\fldrslt {\cs37\ul\cf2 00679}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0) \{\par
+{\bkmkstart AAAAAABJOM}{\bkmkend AAAAAABJOM}
+00680   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(T)(f0);\par
+{\bkmkstart AAAAAABJON}{\bkmkend AAAAAABJON}
+00681 \}\par
+{\bkmkstart AAAAAABJOO}{\bkmkend AAAAAABJOO}
+00682 \par
+{\bkmkstart AAAAAABJOP}{\bkmkend AAAAAABJOP}
+00683 {\cf17 template} <GTEST_2_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJOQ}{\bkmkend AAAAAABJOQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 00684}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+) \{\par
+{\bkmkstart AAAAAABJOR}{\bkmkend AAAAAABJOR}
+00685   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+);\par
+{\bkmkstart AAAAAABJOS}{\bkmkend AAAAAABJOS}
+00686 \}\par
+{\bkmkstart AAAAAABJOT}{\bkmkend AAAAAABJOT}
+00687 \par
+{\bkmkstart AAAAAABJOU}{\bkmkend AAAAAABJOU}
+00688 {\cf17 template} <GTEST_3_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJOV}{\bkmkend AAAAAABJOV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 00689}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+) \{\par
+{\bkmkstart AAAAAABJOW}{\bkmkend AAAAAABJOW}
+00690   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+);\par
+{\bkmkstart AAAAAABJOX}{\bkmkend AAAAAABJOX}
+00691 \}\par
+{\bkmkstart AAAAAABJOY}{\bkmkend AAAAAABJOY}
+00692 \par
+{\bkmkstart AAAAAABJOZ}{\bkmkend AAAAAABJOZ}
+00693 {\cf17 template} <GTEST_4_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJPA}{\bkmkend AAAAAABJPA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPB" }{}}{\fldrslt {\cs37\ul\cf2 00694}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJPC}{\bkmkend AAAAAABJPC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 00695}}}
+     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+) \{\par
+{\bkmkstart AAAAAABJPD}{\bkmkend AAAAAABJPD}
+00696   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+);\par
+{\bkmkstart AAAAAABJPE}{\bkmkend AAAAAABJPE}
+00697 \}\par
+{\bkmkstart AAAAAABJPF}{\bkmkend AAAAAABJPF}
+00698 \par
+{\bkmkstart AAAAAABJPG}{\bkmkend AAAAAABJPG}
+00699 {\cf17 template} <GTEST_5_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJPH}{\bkmkend AAAAAABJPH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPI" }{}}{\fldrslt {\cs37\ul\cf2 00700}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJPJ}{\bkmkend AAAAAABJPJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 00701}}}
+     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\cf17 const} T4& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+) \{\par
+{\bkmkstart AAAAAABJPK}{\bkmkend AAAAAABJPK}
+00702   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+);\par
+{\bkmkstart AAAAAABJPL}{\bkmkend AAAAAABJPL}
+00703 \}\par
+{\bkmkstart AAAAAABJPM}{\bkmkend AAAAAABJPM}
+00704 \par
+{\bkmkstart AAAAAABJPN}{\bkmkend AAAAAABJPN}
+00705 {\cf17 template} <GTEST_6_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJPO}{\bkmkend AAAAAABJPO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPP" }{}}{\fldrslt {\cs37\ul\cf2 00706}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJPQ}{\bkmkend AAAAAABJPQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 00707}}}
+     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\cf17 const} T4& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\cf17 const} T5& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+) \{\par
+{\bkmkstart AAAAAABJPR}{\bkmkend AAAAAABJPR}
+00708   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+);\par
+{\bkmkstart AAAAAABJPS}{\bkmkend AAAAAABJPS}
+00709 \}\par
+{\bkmkstart AAAAAABJPT}{\bkmkend AAAAAABJPT}
+00710 \par
+{\bkmkstart AAAAAABJPU}{\bkmkend AAAAAABJPU}
+00711 {\cf17 template} <GTEST_7_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJPV}{\bkmkend AAAAAABJPV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJPW" }{}}{\fldrslt {\cs37\ul\cf2 00712}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJPX}{\bkmkend AAAAAABJPX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 00713}}}
+     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\cf17 const} T4& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\cf17 const} T5& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\cf17 const} T6& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+) \{\par
+{\bkmkstart AAAAAABJPY}{\bkmkend AAAAAABJPY}
+00714   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+);\par
+{\bkmkstart AAAAAABJPZ}{\bkmkend AAAAAABJPZ}
+00715 \}\par
+{\bkmkstart AAAAAABJQA}{\bkmkend AAAAAABJQA}
+00716 \par
+{\bkmkstart AAAAAABJQB}{\bkmkend AAAAAABJQB}
+00717 {\cf17 template} <GTEST_8_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJQC}{\bkmkend AAAAAABJQC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJQD" }{}}{\fldrslt {\cs37\ul\cf2 00718}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJQE}{\bkmkend AAAAAABJQE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 00719}}}
+     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\cf17 const} T4& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\cf17 const} T5& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\cf17 const} T6& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\cf17 const} T7& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+) \{\par
+{\bkmkstart AAAAAABJQF}{\bkmkend AAAAAABJQF}
+00720   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+);\par
+{\bkmkstart AAAAAABJQG}{\bkmkend AAAAAABJQG}
+00721 \}\par
+{\bkmkstart AAAAAABJQH}{\bkmkend AAAAAABJQH}
+00722 \par
+{\bkmkstart AAAAAABJQI}{\bkmkend AAAAAABJQI}
+00723 {\cf17 template} <GTEST_9_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJQJ}{\bkmkend AAAAAABJQJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJQK" }{}}{\fldrslt {\cs37\ul\cf2 00724}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJQL}{\bkmkend AAAAAABJQL}
+00725     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\cf17 const} T4& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\cf17 const} T5& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\cf17 const} T6& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\cf17 const} T7& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+,\par
+{\bkmkstart AAAAAABJQM}{\bkmkend AAAAAABJQM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 00726}}}
+     {\cf17 const} T8& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+) \{\par
+{\bkmkstart AAAAAABJQN}{\bkmkend AAAAAABJQN}
+00727   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+);\par
+{\bkmkstart AAAAAABJQO}{\bkmkend AAAAAABJQO}
+00728 \}\par
+{\bkmkstart AAAAAABJQP}{\bkmkend AAAAAABJQP}
+00729 \par
+{\bkmkstart AAAAAABJQQ}{\bkmkend AAAAAABJQQ}
+00730 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJQR}{\bkmkend AAAAAABJQR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 00731}}}
+ {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAASKS" }{}}{\fldrslt {\cs37\ul\cf2 make_tuple}}}
+({\cf17 const} T0& f0, {\cf17 const} T1& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\cf17 const} T2& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+,\par
+{\bkmkstart AAAAAABJQS}{\bkmkend AAAAAABJQS}
+00732     {\cf17 const} T3& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\cf17 const} T4& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\cf17 const} T5& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\cf17 const} T6& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\cf17 const} T7& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+,\par
+{\bkmkstart AAAAAABJQT}{\bkmkend AAAAAABJQT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLR" }{}}{\fldrslt {\cs37\ul\cf2 00733}}}
+     {\cf17 const} T8& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+, {\cf17 const} T9& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLR" }{}}{\fldrslt {\cs37\ul\cf2 f9}}}
+) \{\par
+{\bkmkstart AAAAAABJQU}{\bkmkend AAAAAABJQU}
+00734   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)(f0, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWR" }{}}{\fldrslt {\cs37\ul\cf2 f1}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYL" }{}}{\fldrslt {\cs37\ul\cf2 f2}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIZY" }{}}{\fldrslt {\cs37\ul\cf2 f3}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBQ" }{}}{\fldrslt {\cs37\ul\cf2 f4}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDK" }{}}{\fldrslt {\cs37\ul\cf2 f5}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFH" }{}}{\fldrslt {\cs37\ul\cf2 f6}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHH" }{}}{\fldrslt {\cs37\ul\cf2 f7}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJJ" }{}}{\fldrslt {\cs37\ul\cf2 f8}}}
+, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJLR" }{}}{\fldrslt {\cs37\ul\cf2 f9}}}
+);\par
+{\bkmkstart AAAAAABJQV}{\bkmkend AAAAAABJQV}
+00735 \}\par
+{\bkmkstart AAAAAABJQW}{\bkmkend AAAAAABJQW}
+00736 \par
+{\bkmkstart AAAAAABJQX}{\bkmkend AAAAAABJQX}
+00737 {\cf20 // 6.1.3.3 Tuple helper classes.}\par
+{\bkmkstart AAAAAABJQY}{\bkmkend AAAAAABJQY}
+00738 \par
+{\bkmkstart AAAAAABJQZ}{\bkmkend AAAAAABJQZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 00739}}}
+ {\cf17 template} <{\cf17 typename} Tuple> {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+;\par
+{\bkmkstart AAAAAABJRA}{\bkmkend AAAAAABJRA}
+00740 \par
+{\bkmkstart AAAAAABJRB}{\bkmkend AAAAAABJRB}
+00741 {\cf17 template} <GTEST_0_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJRC}{\bkmkend AAAAAABJRC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRD" }{}}{\fldrslt {\cs37\ul\cf2 00742}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABINE" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_0_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJRE}{\bkmkend AAAAAABJRE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRF" }{}}{\fldrslt {\cs37\ul\cf2 00743}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 0;\par
+{\bkmkstart AAAAAABJRG}{\bkmkend AAAAAABJRG}
+00744 \};\par
+{\bkmkstart AAAAAABJRH}{\bkmkend AAAAAABJRH}
+00745 \par
+{\bkmkstart AAAAAABJRI}{\bkmkend AAAAAABJRI}
+00746 {\cf17 template} <GTEST_1_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJRJ}{\bkmkend AAAAAABJRJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRK" }{}}{\fldrslt {\cs37\ul\cf2 00747}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIKP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_1_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJRL}{\bkmkend AAAAAABJRL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRM" }{}}{\fldrslt {\cs37\ul\cf2 00748}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 1;\par
+{\bkmkstart AAAAAABJRN}{\bkmkend AAAAAABJRN}
+00749 \};\par
+{\bkmkstart AAAAAABJRO}{\bkmkend AAAAAABJRO}
+00750 \par
+{\bkmkstart AAAAAABJRP}{\bkmkend AAAAAABJRP}
+00751 {\cf17 template} <GTEST_2_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJRQ}{\bkmkend AAAAAABJRQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRR" }{}}{\fldrslt {\cs37\ul\cf2 00752}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIWY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_2_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJRS}{\bkmkend AAAAAABJRS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRT" }{}}{\fldrslt {\cs37\ul\cf2 00753}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 2;\par
+{\bkmkstart AAAAAABJRU}{\bkmkend AAAAAABJRU}
+00754 \};\par
+{\bkmkstart AAAAAABJRV}{\bkmkend AAAAAABJRV}
+00755 \par
+{\bkmkstart AAAAAABJRW}{\bkmkend AAAAAABJRW}
+00756 {\cf17 template} <GTEST_3_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJRX}{\bkmkend AAAAAABJRX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJRY" }{}}{\fldrslt {\cs37\ul\cf2 00757}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIYR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_3_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJRZ}{\bkmkend AAAAAABJRZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSA" }{}}{\fldrslt {\cs37\ul\cf2 00758}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 3;\par
+{\bkmkstart AAAAAABJSB}{\bkmkend AAAAAABJSB}
+00759 \};\par
+{\bkmkstart AAAAAABJSC}{\bkmkend AAAAAABJSC}
+00760 \par
+{\bkmkstart AAAAAABJSD}{\bkmkend AAAAAABJSD}
+00761 {\cf17 template} <GTEST_4_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJSE}{\bkmkend AAAAAABJSE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSF" }{}}{\fldrslt {\cs37\ul\cf2 00762}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJAF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_4_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJSG}{\bkmkend AAAAAABJSG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSH" }{}}{\fldrslt {\cs37\ul\cf2 00763}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 4;\par
+{\bkmkstart AAAAAABJSI}{\bkmkend AAAAAABJSI}
+00764 \};\par
+{\bkmkstart AAAAAABJSJ}{\bkmkend AAAAAABJSJ}
+00765 \par
+{\bkmkstart AAAAAABJSK}{\bkmkend AAAAAABJSK}
+00766 {\cf17 template} <GTEST_5_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJSL}{\bkmkend AAAAAABJSL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSM" }{}}{\fldrslt {\cs37\ul\cf2 00767}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJBX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_5_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJSN}{\bkmkend AAAAAABJSN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSO" }{}}{\fldrslt {\cs37\ul\cf2 00768}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 5;\par
+{\bkmkstart AAAAAABJSP}{\bkmkend AAAAAABJSP}
+00769 \};\par
+{\bkmkstart AAAAAABJSQ}{\bkmkend AAAAAABJSQ}
+00770 \par
+{\bkmkstart AAAAAABJSR}{\bkmkend AAAAAABJSR}
+00771 {\cf17 template} <GTEST_6_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJSS}{\bkmkend AAAAAABJSS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJST" }{}}{\fldrslt {\cs37\ul\cf2 00772}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJDS" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_6_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJSU}{\bkmkend AAAAAABJSU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJSV" }{}}{\fldrslt {\cs37\ul\cf2 00773}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 6;\par
+{\bkmkstart AAAAAABJSW}{\bkmkend AAAAAABJSW}
+00774 \};\par
+{\bkmkstart AAAAAABJSX}{\bkmkend AAAAAABJSX}
+00775 \par
+{\bkmkstart AAAAAABJSY}{\bkmkend AAAAAABJSY}
+00776 {\cf17 template} <GTEST_7_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJSZ}{\bkmkend AAAAAABJSZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTA" }{}}{\fldrslt {\cs37\ul\cf2 00777}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJFP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_7_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJTB}{\bkmkend AAAAAABJTB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTC" }{}}{\fldrslt {\cs37\ul\cf2 00778}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 7;\par
+{\bkmkstart AAAAAABJTD}{\bkmkend AAAAAABJTD}
+00779 \};\par
+{\bkmkstart AAAAAABJTE}{\bkmkend AAAAAABJTE}
+00780 \par
+{\bkmkstart AAAAAABJTF}{\bkmkend AAAAAABJTF}
+00781 {\cf17 template} <GTEST_8_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJTG}{\bkmkend AAAAAABJTG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTH" }{}}{\fldrslt {\cs37\ul\cf2 00782}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJHP" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_8_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJTI}{\bkmkend AAAAAABJTI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTJ" }{}}{\fldrslt {\cs37\ul\cf2 00783}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 8;\par
+{\bkmkstart AAAAAABJTK}{\bkmkend AAAAAABJTK}
+00784 \};\par
+{\bkmkstart AAAAAABJTL}{\bkmkend AAAAAABJTL}
+00785 \par
+{\bkmkstart AAAAAABJTM}{\bkmkend AAAAAABJTM}
+00786 {\cf17 template} <GTEST_9_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJTN}{\bkmkend AAAAAABJTN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTO" }{}}{\fldrslt {\cs37\ul\cf2 00787}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJJR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_9_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJTP}{\bkmkend AAAAAABJTP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTQ" }{}}{\fldrslt {\cs37\ul\cf2 00788}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 9;\par
+{\bkmkstart AAAAAABJTR}{\bkmkend AAAAAABJTR}
+00789 \};\par
+{\bkmkstart AAAAAABJTS}{\bkmkend AAAAAABJTS}
+00790 \par
+{\bkmkstart AAAAAABJTT}{\bkmkend AAAAAABJTT}
+00791 {\cf17 template} <GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABJTU}{\bkmkend AAAAAABJTU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTV" }{}}{\fldrslt {\cs37\ul\cf2 00792}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) > \{\par
+{\bkmkstart AAAAAABJTW}{\bkmkend AAAAAABJTW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJTX" }{}}{\fldrslt {\cs37\ul\cf2 00793}}}
+   {\cf17 static} {\cf17 const} {\cf18 int} value = 10;\par
+{\bkmkstart AAAAAABJTY}{\bkmkend AAAAAABJTY}
+00794 \};\par
+{\bkmkstart AAAAAABJTZ}{\bkmkend AAAAAABJTZ}
+00795 \par
+{\bkmkstart AAAAAABJUA}{\bkmkend AAAAAABJUA}
+00796 {\cf17 template} <{\cf18 int} k, {\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJUB}{\bkmkend AAAAAABJUB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKTC" }{}}{\fldrslt {\cs37\ul\cf2 00797}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKTC" }{}}{\fldrslt {\cs37\ul\cf2 tuple_element}}}
+ \{\par
+{\bkmkstart AAAAAABJUC}{\bkmkend AAAAAABJUC}
+00798   {\cf17 typedef} {\cf17 typename} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRT" }{}}{\fldrslt {\cs37\ul\cf2 gtest_internal::TupleElement}}}
+<\par
+{\bkmkstart AAAAAABJUD}{\bkmkend AAAAAABJUD}
+00799       k < ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size<Tuple>::value}}}
+), k, Tuple>::type type;\par
+{\bkmkstart AAAAAABJUE}{\bkmkend AAAAAABJUE}
+00800 \};\par
+{\bkmkstart AAAAAABJUF}{\bkmkend AAAAAABJUF}
+00801 \par
+{\bkmkstart AAAAAABJUG}{\bkmkend AAAAAABJUG}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 00802}}}
+ {\cf21 #define GTEST_TUPLE_ELEMENT_(k, Tuple) typename tuple_element<k, Tuple >::type}\par
+{\bkmkstart AAAAAABJUI}{\bkmkend AAAAAABJUI}
+00803 \par
+{\bkmkstart AAAAAABJUJ}{\bkmkend AAAAAABJUJ}
+00804 {\cf20 // 6.1.3.4 Element access.}\par
+{\bkmkstart AAAAAABJUK}{\bkmkend AAAAAABJUK}
+00805 \par
+{\bkmkstart AAAAAABJUL}{\bkmkend AAAAAABJUL}
+00806 {\cf17 namespace }gtest_internal \{\par
+{\bkmkstart AAAAAABJUM}{\bkmkend AAAAAABJUM}
+00807 \par
+{\bkmkstart AAAAAABJUN}{\bkmkend AAAAAABJUN}
+00808 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJUO}{\bkmkend AAAAAABJUO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUP" }{}}{\fldrslt {\cs37\ul\cf2 00809}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<0> \{\par
+{\bkmkstart AAAAAABJUQ}{\bkmkend AAAAAABJUQ}
+00810  {\cf17 public}:\par
+{\bkmkstart AAAAAABJUR}{\bkmkend AAAAAABJUR}
+00811   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJUS}{\bkmkend AAAAAABJUS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUT" }{}}{\fldrslt {\cs37\ul\cf2 00812}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUT" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(0, Tuple))\par
+{\bkmkstart AAAAAABJUU}{\bkmkend AAAAAABJUU}
+00813   Field(Tuple& t) \{ {\cf19 return} t.f0_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJUV}{\bkmkend AAAAAABJUV}
+00814 \par
+{\bkmkstart AAAAAABJUW}{\bkmkend AAAAAABJUW}
+00815   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJUX}{\bkmkend AAAAAABJUX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUY" }{}}{\fldrslt {\cs37\ul\cf2 00816}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(0, Tuple))\par
+{\bkmkstart AAAAAABJUZ}{\bkmkend AAAAAABJUZ}
+00817   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f0_; \}\par
+{\bkmkstart AAAAAABJVA}{\bkmkend AAAAAABJVA}
+00818 \};\par
+{\bkmkstart AAAAAABJVB}{\bkmkend AAAAAABJVB}
+00819 \par
+{\bkmkstart AAAAAABJVC}{\bkmkend AAAAAABJVC}
+00820 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJVD}{\bkmkend AAAAAABJVD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVE" }{}}{\fldrslt {\cs37\ul\cf2 00821}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<1> \{\par
+{\bkmkstart AAAAAABJVF}{\bkmkend AAAAAABJVF}
+00822  {\cf17 public}:\par
+{\bkmkstart AAAAAABJVG}{\bkmkend AAAAAABJVG}
+00823   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJVH}{\bkmkend AAAAAABJVH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVI" }{}}{\fldrslt {\cs37\ul\cf2 00824}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVI" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(1, Tuple))\par
+{\bkmkstart AAAAAABJVJ}{\bkmkend AAAAAABJVJ}
+00825   Field(Tuple& t) \{ {\cf19 return} t.f1_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJVK}{\bkmkend AAAAAABJVK}
+00826 \par
+{\bkmkstart AAAAAABJVL}{\bkmkend AAAAAABJVL}
+00827   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJVM}{\bkmkend AAAAAABJVM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVN" }{}}{\fldrslt {\cs37\ul\cf2 00828}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVN" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(1, Tuple))\par
+{\bkmkstart AAAAAABJVO}{\bkmkend AAAAAABJVO}
+00829   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f1_; \}\par
+{\bkmkstart AAAAAABJVP}{\bkmkend AAAAAABJVP}
+00830 \};\par
+{\bkmkstart AAAAAABJVQ}{\bkmkend AAAAAABJVQ}
+00831 \par
+{\bkmkstart AAAAAABJVR}{\bkmkend AAAAAABJVR}
+00832 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJVS}{\bkmkend AAAAAABJVS}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVT" }{}}{\fldrslt {\cs37\ul\cf2 00833}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<2> \{\par
+{\bkmkstart AAAAAABJVU}{\bkmkend AAAAAABJVU}
+00834  {\cf17 public}:\par
+{\bkmkstart AAAAAABJVV}{\bkmkend AAAAAABJVV}
+00835   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJVW}{\bkmkend AAAAAABJVW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVX" }{}}{\fldrslt {\cs37\ul\cf2 00836}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJVX" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(2, Tuple))\par
+{\bkmkstart AAAAAABJVY}{\bkmkend AAAAAABJVY}
+00837   Field(Tuple& t) \{ {\cf19 return} t.f2_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJVZ}{\bkmkend AAAAAABJVZ}
+00838 \par
+{\bkmkstart AAAAAABJWA}{\bkmkend AAAAAABJWA}
+00839   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJWB}{\bkmkend AAAAAABJWB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWC" }{}}{\fldrslt {\cs37\ul\cf2 00840}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWC" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(2, Tuple))\par
+{\bkmkstart AAAAAABJWD}{\bkmkend AAAAAABJWD}
+00841   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f2_; \}\par
+{\bkmkstart AAAAAABJWE}{\bkmkend AAAAAABJWE}
+00842 \};\par
+{\bkmkstart AAAAAABJWF}{\bkmkend AAAAAABJWF}
+00843 \par
+{\bkmkstart AAAAAABJWG}{\bkmkend AAAAAABJWG}
+00844 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJWH}{\bkmkend AAAAAABJWH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWI" }{}}{\fldrslt {\cs37\ul\cf2 00845}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<3> \{\par
+{\bkmkstart AAAAAABJWJ}{\bkmkend AAAAAABJWJ}
+00846  {\cf17 public}:\par
+{\bkmkstart AAAAAABJWK}{\bkmkend AAAAAABJWK}
+00847   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJWL}{\bkmkend AAAAAABJWL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWM" }{}}{\fldrslt {\cs37\ul\cf2 00848}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWM" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(3, Tuple))\par
+{\bkmkstart AAAAAABJWN}{\bkmkend AAAAAABJWN}
+00849   Field(Tuple& t) \{ {\cf19 return} t.f3_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJWO}{\bkmkend AAAAAABJWO}
+00850 \par
+{\bkmkstart AAAAAABJWP}{\bkmkend AAAAAABJWP}
+00851   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJWQ}{\bkmkend AAAAAABJWQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWR" }{}}{\fldrslt {\cs37\ul\cf2 00852}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWR" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(3, Tuple))\par
+{\bkmkstart AAAAAABJWS}{\bkmkend AAAAAABJWS}
+00853   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f3_; \}\par
+{\bkmkstart AAAAAABJWT}{\bkmkend AAAAAABJWT}
+00854 \};\par
+{\bkmkstart AAAAAABJWU}{\bkmkend AAAAAABJWU}
+00855 \par
+{\bkmkstart AAAAAABJWV}{\bkmkend AAAAAABJWV}
+00856 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJWW}{\bkmkend AAAAAABJWW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJWX" }{}}{\fldrslt {\cs37\ul\cf2 00857}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<4> \{\par
+{\bkmkstart AAAAAABJWY}{\bkmkend AAAAAABJWY}
+00858  {\cf17 public}:\par
+{\bkmkstart AAAAAABJWZ}{\bkmkend AAAAAABJWZ}
+00859   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJXA}{\bkmkend AAAAAABJXA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXB" }{}}{\fldrslt {\cs37\ul\cf2 00860}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXB" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(4, Tuple))\par
+{\bkmkstart AAAAAABJXC}{\bkmkend AAAAAABJXC}
+00861   Field(Tuple& t) \{ {\cf19 return} t.f4_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJXD}{\bkmkend AAAAAABJXD}
+00862 \par
+{\bkmkstart AAAAAABJXE}{\bkmkend AAAAAABJXE}
+00863   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJXF}{\bkmkend AAAAAABJXF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXG" }{}}{\fldrslt {\cs37\ul\cf2 00864}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXG" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(4, Tuple))\par
+{\bkmkstart AAAAAABJXH}{\bkmkend AAAAAABJXH}
+00865   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f4_; \}\par
+{\bkmkstart AAAAAABJXI}{\bkmkend AAAAAABJXI}
+00866 \};\par
+{\bkmkstart AAAAAABJXJ}{\bkmkend AAAAAABJXJ}
+00867 \par
+{\bkmkstart AAAAAABJXK}{\bkmkend AAAAAABJXK}
+00868 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJXL}{\bkmkend AAAAAABJXL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXM" }{}}{\fldrslt {\cs37\ul\cf2 00869}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<5> \{\par
+{\bkmkstart AAAAAABJXN}{\bkmkend AAAAAABJXN}
+00870  {\cf17 public}:\par
+{\bkmkstart AAAAAABJXO}{\bkmkend AAAAAABJXO}
+00871   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJXP}{\bkmkend AAAAAABJXP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXQ" }{}}{\fldrslt {\cs37\ul\cf2 00872}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(5, Tuple))\par
+{\bkmkstart AAAAAABJXR}{\bkmkend AAAAAABJXR}
+00873   Field(Tuple& t) \{ {\cf19 return} t.f5_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJXS}{\bkmkend AAAAAABJXS}
+00874 \par
+{\bkmkstart AAAAAABJXT}{\bkmkend AAAAAABJXT}
+00875   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJXU}{\bkmkend AAAAAABJXU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXV" }{}}{\fldrslt {\cs37\ul\cf2 00876}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJXV" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(5, Tuple))\par
+{\bkmkstart AAAAAABJXW}{\bkmkend AAAAAABJXW}
+00877   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f5_; \}\par
+{\bkmkstart AAAAAABJXX}{\bkmkend AAAAAABJXX}
+00878 \};\par
+{\bkmkstart AAAAAABJXY}{\bkmkend AAAAAABJXY}
+00879 \par
+{\bkmkstart AAAAAABJXZ}{\bkmkend AAAAAABJXZ}
+00880 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJYA}{\bkmkend AAAAAABJYA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYB" }{}}{\fldrslt {\cs37\ul\cf2 00881}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<6> \{\par
+{\bkmkstart AAAAAABJYC}{\bkmkend AAAAAABJYC}
+00882  {\cf17 public}:\par
+{\bkmkstart AAAAAABJYD}{\bkmkend AAAAAABJYD}
+00883   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJYE}{\bkmkend AAAAAABJYE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYF" }{}}{\fldrslt {\cs37\ul\cf2 00884}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYF" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(6, Tuple))\par
+{\bkmkstart AAAAAABJYG}{\bkmkend AAAAAABJYG}
+00885   Field(Tuple& t) \{ {\cf19 return} t.f6_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJYH}{\bkmkend AAAAAABJYH}
+00886 \par
+{\bkmkstart AAAAAABJYI}{\bkmkend AAAAAABJYI}
+00887   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJYJ}{\bkmkend AAAAAABJYJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYK" }{}}{\fldrslt {\cs37\ul\cf2 00888}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(6, Tuple))\par
+{\bkmkstart AAAAAABJYL}{\bkmkend AAAAAABJYL}
+00889   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f6_; \}\par
+{\bkmkstart AAAAAABJYM}{\bkmkend AAAAAABJYM}
+00890 \};\par
+{\bkmkstart AAAAAABJYN}{\bkmkend AAAAAABJYN}
+00891 \par
+{\bkmkstart AAAAAABJYO}{\bkmkend AAAAAABJYO}
+00892 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJYP}{\bkmkend AAAAAABJYP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYQ" }{}}{\fldrslt {\cs37\ul\cf2 00893}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<7> \{\par
+{\bkmkstart AAAAAABJYR}{\bkmkend AAAAAABJYR}
+00894  {\cf17 public}:\par
+{\bkmkstart AAAAAABJYS}{\bkmkend AAAAAABJYS}
+00895   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJYT}{\bkmkend AAAAAABJYT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYU" }{}}{\fldrslt {\cs37\ul\cf2 00896}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYU" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(7, Tuple))\par
+{\bkmkstart AAAAAABJYV}{\bkmkend AAAAAABJYV}
+00897   Field(Tuple& t) \{ {\cf19 return} t.f7_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJYW}{\bkmkend AAAAAABJYW}
+00898 \par
+{\bkmkstart AAAAAABJYX}{\bkmkend AAAAAABJYX}
+00899   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJYY}{\bkmkend AAAAAABJYY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYZ" }{}}{\fldrslt {\cs37\ul\cf2 00900}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJYZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(7, Tuple))\par
+{\bkmkstart AAAAAABJZA}{\bkmkend AAAAAABJZA}
+00901   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f7_; \}\par
+{\bkmkstart AAAAAABJZB}{\bkmkend AAAAAABJZB}
+00902 \};\par
+{\bkmkstart AAAAAABJZC}{\bkmkend AAAAAABJZC}
+00903 \par
+{\bkmkstart AAAAAABJZD}{\bkmkend AAAAAABJZD}
+00904 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJZE}{\bkmkend AAAAAABJZE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZF" }{}}{\fldrslt {\cs37\ul\cf2 00905}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<8> \{\par
+{\bkmkstart AAAAAABJZG}{\bkmkend AAAAAABJZG}
+00906  {\cf17 public}:\par
+{\bkmkstart AAAAAABJZH}{\bkmkend AAAAAABJZH}
+00907   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJZI}{\bkmkend AAAAAABJZI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZJ" }{}}{\fldrslt {\cs37\ul\cf2 00908}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZJ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(8, Tuple))\par
+{\bkmkstart AAAAAABJZK}{\bkmkend AAAAAABJZK}
+00909   Field(Tuple& t) \{ {\cf19 return} t.f8_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABJZL}{\bkmkend AAAAAABJZL}
+00910 \par
+{\bkmkstart AAAAAABJZM}{\bkmkend AAAAAABJZM}
+00911   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJZN}{\bkmkend AAAAAABJZN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZO" }{}}{\fldrslt {\cs37\ul\cf2 00912}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZO" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(8, Tuple))\par
+{\bkmkstart AAAAAABJZP}{\bkmkend AAAAAABJZP}
+00913   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f8_; \}\par
+{\bkmkstart AAAAAABJZQ}{\bkmkend AAAAAABJZQ}
+00914 \};\par
+{\bkmkstart AAAAAABJZR}{\bkmkend AAAAAABJZR}
+00915 \par
+{\bkmkstart AAAAAABJZS}{\bkmkend AAAAAABJZS}
+00916 {\cf17 template} <>\par
+{\bkmkstart AAAAAABJZT}{\bkmkend AAAAAABJZT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZU" }{}}{\fldrslt {\cs37\ul\cf2 00917}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 Get}}}
+<9> \{\par
+{\bkmkstart AAAAAABJZV}{\bkmkend AAAAAABJZV}
+00918  {\cf17 public}:\par
+{\bkmkstart AAAAAABJZW}{\bkmkend AAAAAABJZW}
+00919   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABJZX}{\bkmkend AAAAAABJZX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZY" }{}}{\fldrslt {\cs37\ul\cf2 00920}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJZY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(9, Tuple))\par
+{\bkmkstart AAAAAABJZZ}{\bkmkend AAAAAABJZZ}
+00921   Field(Tuple& t) \{ {\cf19 return} t.f9_; \}  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAABKAA}{\bkmkend AAAAAABKAA}
+00922 \par
+{\bkmkstart AAAAAABKAB}{\bkmkend AAAAAABKAB}
+00923   {\cf17 template} <{\cf17 class} Tuple>\par
+{\bkmkstart AAAAAABKAC}{\bkmkend AAAAAABKAC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKAD" }{}}{\fldrslt {\cs37\ul\cf2 00924}}}
+   {\cf17 static} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKAD" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(9, Tuple))\par
+{\bkmkstart AAAAAABKAE}{\bkmkend AAAAAABKAE}
+00925   ConstField({\cf17 const} Tuple& t) \{ {\cf19 return} t.f9_; \}\par
+{\bkmkstart AAAAAABKAF}{\bkmkend AAAAAABKAF}
+00926 \};\par
+{\bkmkstart AAAAAABKAG}{\bkmkend AAAAAABKAG}
+00927 \par
+{\bkmkstart AAAAAABKAH}{\bkmkend AAAAAABKAH}
+00928 \}  {\cf20 // namespace gtest_internal}\par
+{\bkmkstart AAAAAABKAI}{\bkmkend AAAAAABKAI}
+00929 \par
+{\bkmkstart AAAAAABKAJ}{\bkmkend AAAAAABKAJ}
+00930 {\cf17 template} <{\cf18 int} k, GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABKAK}{\bkmkend AAAAAABKAK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKAL" }{}}{\fldrslt {\cs37\ul\cf2 00931}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKAL" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_ADD_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(k, {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)))\par
+{\bkmkstart AAAAAABKAM}{\bkmkend AAAAAABKAM}
+00932 get({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)& t) \{\par
+{\bkmkstart AAAAAABKAN}{\bkmkend AAAAAABKAN}
+00933   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 gtest_internal::Get<k>::Field}}}
+(t);\par
+{\bkmkstart AAAAAABKAO}{\bkmkend AAAAAABKAO}
+00934 \}\par
+{\bkmkstart AAAAAABKAP}{\bkmkend AAAAAABKAP}
+00935 \par
+{\bkmkstart AAAAAABKAQ}{\bkmkend AAAAAABKAQ}
+00936 {\cf17 template} <{\cf18 int} k, GTEST_10_TYPENAMES_(T)>\par
+{\bkmkstart AAAAAABKAR}{\bkmkend AAAAAABKAR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 00937}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIVK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_BY_REF_}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAABJUH" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_TUPLE_ELEMENT_}}}
+(k,  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)))\par
+{\bkmkstart AAAAAABKAS}{\bkmkend AAAAAABKAS}
+00938 get({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)& t) \{\par
+{\bkmkstart AAAAAABKAT}{\bkmkend AAAAAABKAT}
+00939   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRN" }{}}{\fldrslt {\cs37\ul\cf2 gtest_internal::Get<k>::ConstField}}}
+(t);\par
+{\bkmkstart AAAAAABKAU}{\bkmkend AAAAAABKAU}
+00940 \}\par
+{\bkmkstart AAAAAABKAV}{\bkmkend AAAAAABKAV}
+00941 \par
+{\bkmkstart AAAAAABKAW}{\bkmkend AAAAAABKAW}
+00942 {\cf20 // 6.1.3.5 Relational operators}\par
+{\bkmkstart AAAAAABKAX}{\bkmkend AAAAAABKAX}
+00943 \par
+{\bkmkstart AAAAAABKAY}{\bkmkend AAAAAABKAY}
+00944 {\cf20 // We only implement == and !=, as we don't have a need for the rest yet.}\par
+{\bkmkstart AAAAAABKAZ}{\bkmkend AAAAAABKAZ}
+00945 \par
+{\bkmkstart AAAAAABKBA}{\bkmkend AAAAAABKBA}
+00946 {\cf17 namespace }gtest_internal \{\par
+{\bkmkstart AAAAAABKBB}{\bkmkend AAAAAABKBB}
+00947 \par
+{\bkmkstart AAAAAABKBC}{\bkmkend AAAAAABKBC}
+00948 {\cf20 // SameSizeTuplePrefixComparator<k, k>::Eq(t1, t2) returns true if the}\par
+{\bkmkstart AAAAAABKBD}{\bkmkend AAAAAABKBD}
+00949 {\cf20 // first k fields of t1 equals the first k fields of t2.}\par
+{\bkmkstart AAAAAABKBE}{\bkmkend AAAAAABKBE}
+00950 {\cf20 // SameSizeTuplePrefixComparator(k1, k2) would be a compiler error if}\par
+{\bkmkstart AAAAAABKBF}{\bkmkend AAAAAABKBF}
+00951 {\cf20 // k1 != k2.}\par
+{\bkmkstart AAAAAABKBG}{\bkmkend AAAAAABKBG}
+00952 {\cf17 template} <{\cf18 int} kSize1, {\cf18 int} kSize2>\par
+{\bkmkstart AAAAAABKBH}{\bkmkend AAAAAABKBH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBI" }{}}{\fldrslt {\cs37\ul\cf2 00953}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBI" }{}}{\fldrslt {\cs37\ul\cf2 SameSizeTuplePrefixComparator}}}
+;\par
+{\bkmkstart AAAAAABKBJ}{\bkmkend AAAAAABKBJ}
+00954 \par
+{\bkmkstart AAAAAABKBK}{\bkmkend AAAAAABKBK}
+00955 {\cf17 template} <>\par
+{\bkmkstart AAAAAABKBL}{\bkmkend AAAAAABKBL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBM" }{}}{\fldrslt {\cs37\ul\cf2 00956}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBI" }{}}{\fldrslt {\cs37\ul\cf2 SameSizeTuplePrefixComparator}}}
+<0, 0> \{\par
+{\bkmkstart AAAAAABKBN}{\bkmkend AAAAAABKBN}
+00957   {\cf17 template} <{\cf17 class} Tuple1, {\cf17 class} Tuple2>\par
+{\bkmkstart AAAAAABKBO}{\bkmkend AAAAAABKBO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBP" }{}}{\fldrslt {\cs37\ul\cf2 00958}}}
+   {\cf17 static} {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBP" }{}}{\fldrslt {\cs37\ul\cf2 Eq}}}
+({\cf17 const} Tuple1& {\cf20 /* t1 */}, {\cf17 const} Tuple2& {\cf20 /* t2 */}) \{\par
+{\bkmkstart AAAAAABKBQ}{\bkmkend AAAAAABKBQ}
+00959     {\cf19 return} {\cf17 true};\par
+{\bkmkstart AAAAAABKBR}{\bkmkend AAAAAABKBR}
+00960   \}\par
+{\bkmkstart AAAAAABKBS}{\bkmkend AAAAAABKBS}
+00961 \};\par
+{\bkmkstart AAAAAABKBT}{\bkmkend AAAAAABKBT}
+00962 \par
+{\bkmkstart AAAAAABKBU}{\bkmkend AAAAAABKBU}
+00963 {\cf17 template} <{\cf18 int} k>\par
+{\bkmkstart AAAAAABKBV}{\bkmkend AAAAAABKBV}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBW" }{}}{\fldrslt {\cs37\ul\cf2 00964}}}
+ {\cf17 struct }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBI" }{}}{\fldrslt {\cs37\ul\cf2 SameSizeTuplePrefixComparator}}}
+<k, k> \{\par
+{\bkmkstart AAAAAABKBX}{\bkmkend AAAAAABKBX}
+00965   {\cf17 template} <{\cf17 class} Tuple1, {\cf17 class} Tuple2>\par
+{\bkmkstart AAAAAABKBY}{\bkmkend AAAAAABKBY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBZ" }{}}{\fldrslt {\cs37\ul\cf2 00966}}}
+   {\cf17 static} {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBZ" }{}}{\fldrslt {\cs37\ul\cf2 Eq}}}
+({\cf17 const} Tuple1& t1, {\cf17 const} Tuple2& t2) \{\par
+{\bkmkstart AAAAAABKCA}{\bkmkend AAAAAABKCA}
+00967     {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBI" }{}}{\fldrslt {\cs37\ul\cf2 SameSizeTuplePrefixComparator<k - 1, k - 1>::Eq}}}
+(t1, t2) &&\par
+{\bkmkstart AAAAAABKCB}{\bkmkend AAAAAABKCB}
+00968         ::std::tr1::get<k - 1>(t1) == ::std::tr1::get<k - 1>(t2);\par
+{\bkmkstart AAAAAABKCC}{\bkmkend AAAAAABKCC}
+00969   \}\par
+{\bkmkstart AAAAAABKCD}{\bkmkend AAAAAABKCD}
+00970 \};\par
+{\bkmkstart AAAAAABKCE}{\bkmkend AAAAAABKCE}
+00971 \par
+{\bkmkstart AAAAAABKCF}{\bkmkend AAAAAABKCF}
+00972 \}  {\cf20 // namespace gtest_internal}\par
+{\bkmkstart AAAAAABKCG}{\bkmkend AAAAAABKCG}
+00973 \par
+{\bkmkstart AAAAAABKCH}{\bkmkend AAAAAABKCH}
+00974 {\cf17 template} <GTEST_10_TYPENAMES_(T), GTEST_10_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABKCI}{\bkmkend AAAAAABKCI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKCJ" }{}}{\fldrslt {\cs37\ul\cf2 00975}}}
+ {\cf17 inline} {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKCJ" }{}}{\fldrslt {\cs37\ul\cf2 operator==}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)& t,\par
+{\bkmkstart AAAAAABKCK}{\bkmkend AAAAAABKCK}
+00976                        {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)& u) \{\par
+{\bkmkstart AAAAAABKCL}{\bkmkend AAAAAABKCL}
+00977   {\cf19 return} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKBI" }{}}{\fldrslt {\cs37\ul\cf2 gtest_internal::SameSizeTuplePrefixComparator}}}
+<\par
+{\bkmkstart AAAAAABKCM}{\bkmkend AAAAAABKCM}
+00978       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T) >::value,\par
+{\bkmkstart AAAAAABKCN}{\bkmkend AAAAAABKCN}
+00979       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAKSY" }{}}{\fldrslt {\cs37\ul\cf2 tuple_size}}}
+<{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U) >::value>::Eq(t, u);\par
+{\bkmkstart AAAAAABKCO}{\bkmkend AAAAAABKCO}
+00980 \}\par
+{\bkmkstart AAAAAABKCP}{\bkmkend AAAAAABKCP}
+00981 \par
+{\bkmkstart AAAAAABKCQ}{\bkmkend AAAAAABKCQ}
+00982 {\cf17 template} <GTEST_10_TYPENAMES_(T), GTEST_10_TYPENAMES_(U)>\par
+{\bkmkstart AAAAAABKCR}{\bkmkend AAAAAABKCR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKCS" }{}}{\fldrslt {\cs37\ul\cf2 00983}}}
+ {\cf17 inline} {\cf18 bool} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABKCS" }{}}{\fldrslt {\cs37\ul\cf2 operator!=}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(T)& t,\par
+{\bkmkstart AAAAAABKCT}{\bkmkend AAAAAABKCT}
+00984                        {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABIRY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_10_TUPLE_}}}
+(U)& u) \{ {\cf19 return} !(t == u); \}\par
+{\bkmkstart AAAAAABKCU}{\bkmkend AAAAAABKCU}
+00985 \par
+{\bkmkstart AAAAAABKCV}{\bkmkend AAAAAABKCV}
+00986 {\cf20 // 6.1.4 Pairs.}\par
+{\bkmkstart AAAAAABKCW}{\bkmkend AAAAAABKCW}
+00987 {\cf20 // Unimplemented.}\par
+{\bkmkstart AAAAAABKCX}{\bkmkend AAAAAABKCX}
+00988 \par
+{\bkmkstart AAAAAABKCY}{\bkmkend AAAAAABKCY}
+00989 \}  {\cf20 // namespace tr1}\par
+{\bkmkstart AAAAAABKCZ}{\bkmkend AAAAAABKCZ}
+00990 \}  {\cf20 // namespace std}\par
+{\bkmkstart AAAAAABKDA}{\bkmkend AAAAAABKDA}
+00991 \par
+{\bkmkstart AAAAAABKDB}{\bkmkend AAAAAABKDB}
+00992 {\cf21 #undef GTEST_0_TUPLE_}\par
+{\bkmkstart AAAAAABKDC}{\bkmkend AAAAAABKDC}
+00993 {\cf21 #undef GTEST_1_TUPLE_}\par
+{\bkmkstart AAAAAABKDD}{\bkmkend AAAAAABKDD}
+00994 {\cf21 #undef GTEST_2_TUPLE_}\par
+{\bkmkstart AAAAAABKDE}{\bkmkend AAAAAABKDE}
+00995 {\cf21 #undef GTEST_3_TUPLE_}\par
+{\bkmkstart AAAAAABKDF}{\bkmkend AAAAAABKDF}
+00996 {\cf21 #undef GTEST_4_TUPLE_}\par
+{\bkmkstart AAAAAABKDG}{\bkmkend AAAAAABKDG}
+00997 {\cf21 #undef GTEST_5_TUPLE_}\par
+{\bkmkstart AAAAAABKDH}{\bkmkend AAAAAABKDH}
+00998 {\cf21 #undef GTEST_6_TUPLE_}\par
+{\bkmkstart AAAAAABKDI}{\bkmkend AAAAAABKDI}
+00999 {\cf21 #undef GTEST_7_TUPLE_}\par
+{\bkmkstart AAAAAABKDJ}{\bkmkend AAAAAABKDJ}
+01000 {\cf21 #undef GTEST_8_TUPLE_}\par
+{\bkmkstart AAAAAABKDK}{\bkmkend AAAAAABKDK}
+01001 {\cf21 #undef GTEST_9_TUPLE_}\par
+{\bkmkstart AAAAAABKDL}{\bkmkend AAAAAABKDL}
+01002 {\cf21 #undef GTEST_10_TUPLE_}\par
+{\bkmkstart AAAAAABKDM}{\bkmkend AAAAAABKDM}
+01003 \par
+{\bkmkstart AAAAAABKDN}{\bkmkend AAAAAABKDN}
+01004 {\cf21 #undef GTEST_0_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDO}{\bkmkend AAAAAABKDO}
+01005 {\cf21 #undef GTEST_1_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDP}{\bkmkend AAAAAABKDP}
+01006 {\cf21 #undef GTEST_2_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDQ}{\bkmkend AAAAAABKDQ}
+01007 {\cf21 #undef GTEST_3_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDR}{\bkmkend AAAAAABKDR}
+01008 {\cf21 #undef GTEST_4_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDS}{\bkmkend AAAAAABKDS}
+01009 {\cf21 #undef GTEST_5_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDT}{\bkmkend AAAAAABKDT}
+01010 {\cf21 #undef GTEST_6_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDU}{\bkmkend AAAAAABKDU}
+01011 {\cf21 #undef GTEST_7_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDV}{\bkmkend AAAAAABKDV}
+01012 {\cf21 #undef GTEST_8_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDW}{\bkmkend AAAAAABKDW}
+01013 {\cf21 #undef GTEST_9_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDX}{\bkmkend AAAAAABKDX}
+01014 {\cf21 #undef GTEST_10_TYPENAMES_}\par
+{\bkmkstart AAAAAABKDY}{\bkmkend AAAAAABKDY}
+01015 \par
+{\bkmkstart AAAAAABKDZ}{\bkmkend AAAAAABKDZ}
+01016 {\cf21 #undef GTEST_DECLARE_TUPLE_AS_FRIEND_}\par
+{\bkmkstart AAAAAABKEA}{\bkmkend AAAAAABKEA}
+01017 {\cf21 #undef GTEST_BY_REF_}\par
+{\bkmkstart AAAAAABKEB}{\bkmkend AAAAAABKEB}
+01018 {\cf21 #undef GTEST_ADD_REF_}\par
+{\bkmkstart AAAAAABKEC}{\bkmkend AAAAAABKEC}
+01019 {\cf21 #undef GTEST_TUPLE_ELEMENT_}\par
+{\bkmkstart AAAAAABKED}{\bkmkend AAAAAABKED}
+01020 \par
+{\bkmkstart AAAAAABKEE}{\bkmkend AAAAAABKEE}
+01021 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_INTERNAL_GTEST_TUPLE_H_}\par
+}
+}

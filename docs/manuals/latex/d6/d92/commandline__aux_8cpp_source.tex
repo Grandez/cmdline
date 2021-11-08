@@ -1,0 +1,51 @@
+\hypertarget{commandline__aux_8cpp_source}{}\doxysection{commandline\+\_\+aux.\+cpp}
+\label{commandline__aux_8cpp_source}\index{commandline\_aux.cpp@{commandline\_aux.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00002}00002 \textcolor{comment}{* Funciones de utilidad de commandline }}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00003}00003 \textcolor{comment}{* No acceden a la clase}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00004}00004 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <ctype.h>}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}config.h"{}}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}commandline\_aux.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#pragma warning( disable : 4996 )}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00014}00014 \textcolor{keywordtype}{bool} isParameter(\textcolor{keywordtype}{char} c) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00015}00015     \textcolor{keywordflow}{return} (c == \textcolor{charliteral}{'/'} || c == \textcolor{charliteral}{'+'} || c == \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00017}00017 \textcolor{keywordtype}{char} getFirstCharacter(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *arg) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00018}00018     \textcolor{keywordflow}{return} (arg == 0x0) ? 0x0 : arg[0];}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00021}00021 \textcolor{keywordtype}{bool} isConfigFile (\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char} **argv, \textcolor{keywordtype}{int} idxArgument, \textcolor{keywordtype}{bool} sensitive) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00022}00022 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00023}00023 \textcolor{comment}{     char tmp[64];}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00024}00024 \textcolor{comment}{     char configName[64] = CMDLINE\_CONFIG;}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00025}00025 \textcolor{comment}{     copyParameterInUpperCase(arg, sensitive, tmp);}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00026}00026 \textcolor{comment}{     copyParameterInUpperCase(configName, sensitive, configName);}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00027}00027 \textcolor{comment}{     return (strcmp(tmp, configName) == 0);}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00028}00028 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00029}00029      \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00031}00031 \textcolor{keywordtype}{void} copyParameterInUpperCase(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *arg, \textcolor{keywordtype}{bool} sensitive, \textcolor{keywordtype}{char} *name) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00032}00032       strcpy(name, arg);}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00033}00033       \textcolor{keywordflow}{if} (sensitive) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00034}00034           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < strlen(arg); j++) name[j] = toupper(arg[j]);}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00035}00035        \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00036}00036  \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00037}00037 \textcolor{keywordtype}{char}* configFileInCommandLine(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char} **argv) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00038}00038     \textcolor{keywordflow}{return} 0x0;}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00040}00040 \textcolor{keywordtype}{char} *checkKeywordHelp(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *arg) \{}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00041}00041      \textcolor{keywordflow}{if} (strcmp(arg, \textcolor{stringliteral}{"{}-\/h"{}}) == 0 ||  strcmp(arg, \textcolor{stringliteral}{"{}-\/help"{}}) == 0) \textcolor{keywordflow}{return} (\textcolor{keywordtype}{char} *) \textcolor{stringliteral}{"{}+help"{}};}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00042}00042      \textcolor{keywordflow}{if} (strcmp(arg, \textcolor{stringliteral}{"{}-\/H"{}}) == 0 ||  strcmp(arg, \textcolor{stringliteral}{"{}-\/HELP"{}}) == 0) \textcolor{keywordflow}{return} (\textcolor{keywordtype}{char} *) \textcolor{stringliteral}{"{}+HELP"{}};}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00043}00043      \textcolor{keywordflow}{return} 0x0;}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{commandline__aux_8cpp_source_l00045}00045 }
+
+\end{DoxyCode}

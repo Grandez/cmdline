@@ -1,0 +1,908 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+validationsTest.cpp\par \pard\plain 
+{\tc\tcl2 \v testcmdline/validationsTest.cpp}
+{\xe \v testcmdline/validationsTest.cpp}
+{\bkmkstart AAAAAABRCO}
+{\bkmkend AAAAAABRCO}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRCP" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAABRCQ}{\bkmkend AAAAAABRCQ}
+00001 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABPHM" }{}}{\fldrslt {\cs37\ul\cf2 pch.h}}}
+"}\par
+{\bkmkstart AAAAAABRCR}{\bkmkend AAAAAABRCR}
+00002 {\cf21 #include <stdexcept>}\par
+{\bkmkstart AAAAAABRCS}{\bkmkend AAAAAABRCS}
+00003 {\cf21 #include <regex>}\par
+{\bkmkstart AAAAAABRCT}{\bkmkend AAAAAABRCT}
+00004 \par
+{\bkmkstart AAAAAABRCU}{\bkmkend AAAAAABRCU}
+00005 {\cf21 #include "../libcmdline/include/validations.hpp"}\par
+{\bkmkstart AAAAAABRCV}{\bkmkend AAAAAABRCV}
+00006 {\cf21 #include "../libcmdline/include/cmdline_exceptions.hpp"}\par
+{\bkmkstart AAAAAABRCW}{\bkmkend AAAAAABRCW}
+00007 \par
+{\bkmkstart AAAAAABRCX}{\bkmkend AAAAAABRCX}
+00008 {\cf17 using namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABVE" }{}}{\fldrslt {\cs37\ul\cf2 _cmdline}}}
+;\par
+{\bkmkstart AAAAAABRCY}{\bkmkend AAAAAABRCY}
+00009 {\cf17 using namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAX" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+;\par
+{\bkmkstart AAAAAABRCZ}{\bkmkend AAAAAABRCZ}
+00010 \par
+{\bkmkstart AAAAAABRDA}{\bkmkend AAAAAABRDA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 00011}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Times_OK) \{\par
+{\bkmkstart AAAAAABRDC}{\bkmkend AAAAAABRDC}
+00012     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "10:00:00"}));\par
+{\bkmkstart AAAAAABRDD}{\bkmkend AAAAAABRDD}
+00013     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "01:01:01"}));\par
+{\bkmkstart AAAAAABRDE}{\bkmkend AAAAAABRDE}
+00014     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "00:00:00"}));\par
+{\bkmkstart AAAAAABRDF}{\bkmkend AAAAAABRDF}
+00015     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "23:59:59"}));\par
+{\bkmkstart AAAAAABRDG}{\bkmkend AAAAAABRDG}
+00016     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "1:23:45"}));\par
+{\bkmkstart AAAAAABRDH}{\bkmkend AAAAAABRDH}
+00017     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "23:22:0"}));\par
+{\bkmkstart AAAAAABRDI}{\bkmkend AAAAAABRDI}
+00018     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "23:1:59"}));\par
+{\bkmkstart AAAAAABRDJ}{\bkmkend AAAAAABRDJ}
+00019     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "1:1:1"}));\par
+{\bkmkstart AAAAAABRDK}{\bkmkend AAAAAABRDK}
+00020     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "0:0:0"}));\par
+{\bkmkstart AAAAAABRDL}{\bkmkend AAAAAABRDL}
+00021 \}\par
+{\bkmkstart AAAAAABRDM}{\bkmkend AAAAAABRDM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDN" }{}}{\fldrslt {\cs37\ul\cf2 00022}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Times_KO) \{\par
+{\bkmkstart AAAAAABRDO}{\bkmkend AAAAAABRDO}
+00023     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "1 1 1"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDP}{\bkmkend AAAAAABRDP}
+00024     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "24:0:0"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDQ}{\bkmkend AAAAAABRDQ}
+00025     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "nada"}),     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDR}{\bkmkend AAAAAABRDR}
+00026     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "23:60:0"}),  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDS}{\bkmkend AAAAAABRDS}
+00027     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "0:0:60"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDT}{\bkmkend AAAAAABRDT}
+00028     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "24:-10:0"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDU}{\bkmkend AAAAAABRDU}
+00029     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "23/10/05"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRDV}{\bkmkend AAAAAABRDV}
+00030 \}\par
+{\bkmkstart AAAAAABRDW}{\bkmkend AAAAAABRDW}
+00031 \par
+{\bkmkstart AAAAAABRDX}{\bkmkend AAAAAABRDX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDY" }{}}{\fldrslt {\cs37\ul\cf2 00032}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Dates_OK) \{\par
+{\bkmkstart AAAAAABRDZ}{\bkmkend AAAAAABRDZ}
+00033     std::locale::global(std::locale({\cf22 "es_ES.utf8"}));\par
+{\bkmkstart AAAAAABREA}{\bkmkend AAAAAABREA}
+00034     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "1/1/01"}));\par
+{\bkmkstart AAAAAABREB}{\bkmkend AAAAAABREB}
+00035     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "01/01/01"}));\par
+{\bkmkstart AAAAAABREC}{\bkmkend AAAAAABREC}
+00036     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "01-01-01"}));\par
+{\bkmkstart AAAAAABRED}{\bkmkend AAAAAABRED}
+00037     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "29/2/2000"}));\par
+{\bkmkstart AAAAAABREE}{\bkmkend AAAAAABREE}
+00038     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "29/02/2000"}));\par
+{\bkmkstart AAAAAABREF}{\bkmkend AAAAAABREF}
+00039     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "31/01/2000"}));\par
+{\bkmkstart AAAAAABREG}{\bkmkend AAAAAABREG}
+00040     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "28/02/2001"}));\par
+{\bkmkstart AAAAAABREH}{\bkmkend AAAAAABREH}
+00041     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "28-02-2001"}));\par
+{\bkmkstart AAAAAABREI}{\bkmkend AAAAAABREI}
+00042     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "29-02-2020"}));\par
+{\bkmkstart AAAAAABREJ}{\bkmkend AAAAAABREJ}
+00043     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "31-03-2020"}));\par
+{\bkmkstart AAAAAABREK}{\bkmkend AAAAAABREK}
+00044     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "30-11-2020"}));\par
+{\bkmkstart AAAAAABREL}{\bkmkend AAAAAABREL}
+00045     std::locale::global(std::locale());\par
+{\bkmkstart AAAAAABREM}{\bkmkend AAAAAABREM}
+00046 \}\par
+{\bkmkstart AAAAAABREN}{\bkmkend AAAAAABREN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABREO" }{}}{\fldrslt {\cs37\ul\cf2 00047}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Dates_KO) \{\par
+{\bkmkstart AAAAAABREP}{\bkmkend AAAAAABREP}
+00048     std::locale::global(std::locale({\cf22 "es_ES.utf8"}));\par
+{\bkmkstart AAAAAABREQ}{\bkmkend AAAAAABREQ}
+00049     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "1 1 01"}),     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRER}{\bkmkend AAAAAABRER}
+00050     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "31/02/01"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRES}{\bkmkend AAAAAABRES}
+00051     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBG" }{}}{\fldrslt {\cs37\ul\cf2 validateDate}}}
+({\cf22 "31-4-01"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRET}{\bkmkend AAAAAABRET}
+00052     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "0/1/2020"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABREU}{\bkmkend AAAAAABREU}
+00053     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "15/13/2020"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABREV}{\bkmkend AAAAAABREV}
+00054     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "data"}),       {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABREW}{\bkmkend AAAAAABREW}
+00055     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBE" }{}}{\fldrslt {\cs37\ul\cf2 validateTime}}}
+({\cf22 "29/02/2021"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABREX}{\bkmkend AAAAAABREX}
+00056     std::locale::global(std::locale());\par
+{\bkmkstart AAAAAABREY}{\bkmkend AAAAAABREY}
+00057 \}\par
+{\bkmkstart AAAAAABREZ}{\bkmkend AAAAAABREZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRFA" }{}}{\fldrslt {\cs37\ul\cf2 00058}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Datetimes_OK) \{\par
+{\bkmkstart AAAAAABRFB}{\bkmkend AAAAAABRFB}
+00059     std::locale::global(std::locale({\cf22 "es_ES.utf8"}));\par
+{\bkmkstart AAAAAABRFC}{\bkmkend AAAAAABRFC}
+00060     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "01/1/01 1:1:1"}));\par
+{\bkmkstart AAAAAABRFD}{\bkmkend AAAAAABRFD}
+00061     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "01/01/01 10:11:12"}));\par
+{\bkmkstart AAAAAABRFE}{\bkmkend AAAAAABRFE}
+00062     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "01-01-01   1:2:34"}));\par
+{\bkmkstart AAAAAABRFF}{\bkmkend AAAAAABRFF}
+00063     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "2000/2/29 1:12:3"}));\par
+{\bkmkstart AAAAAABRFG}{\bkmkend AAAAAABRFG}
+00064     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "2000/02/29 12:1:1"}));\par
+{\bkmkstart AAAAAABRFH}{\bkmkend AAAAAABRFH}
+00065     std::locale::global(std::locale());\par
+{\bkmkstart AAAAAABRFI}{\bkmkend AAAAAABRFI}
+00066 \}\par
+{\bkmkstart AAAAAABRFJ}{\bkmkend AAAAAABRFJ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRFK" }{}}{\fldrslt {\cs37\ul\cf2 00067}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Datetimes_KO) \{\par
+{\bkmkstart AAAAAABRFL}{\bkmkend AAAAAABRFL}
+00068     std::locale::global(std::locale({\cf22 "es_ES.utf8"}));\par
+{\bkmkstart AAAAAABRFM}{\bkmkend AAAAAABRFM}
+00069     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "1 1 01 1:1:1"}),        {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFN}{\bkmkend AAAAAABRFN}
+00070     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "0/1/2020 1:1:1"}),      {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFO}{\bkmkend AAAAAABRFO}
+00071     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15/13/2020 1:1:1"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFP}{\bkmkend AAAAAABRFP}
+00072     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "data 1:1:1"}),          {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFQ}{\bkmkend AAAAAABRFQ}
+00073     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "29/02/2021 1:1:1"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFR}{\bkmkend AAAAAABRFR}
+00074     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 1 1 1"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFS}{\bkmkend AAAAAABRFS}
+00075     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 24:0:0"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFT}{\bkmkend AAAAAABRFT}
+00076     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 nada"}),     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFU}{\bkmkend AAAAAABRFU}
+00077     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 23:60:0"}),  {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFV}{\bkmkend AAAAAABRFV}
+00078     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 0:0:60"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFW}{\bkmkend AAAAAABRFW}
+00079     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 24:-10:0"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFX}{\bkmkend AAAAAABRFX}
+00080     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADBI" }{}}{\fldrslt {\cs37\ul\cf2 validateDateTime}}}
+({\cf22 "15-13-2020 23/10/05"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRFY}{\bkmkend AAAAAABRFY}
+00081     std::locale::global(std::locale());\par
+{\bkmkstart AAAAAABRFZ}{\bkmkend AAAAAABRFZ}
+00082 \}\par
+{\bkmkstart AAAAAABRGA}{\bkmkend AAAAAABRGA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRGB" }{}}{\fldrslt {\cs37\ul\cf2 00083}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Timestamp_OK) \{\par
+{\bkmkstart AAAAAABRGC}{\bkmkend AAAAAABRGC}
+00084     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-01-01 01:01:01.000"}));\par
+{\bkmkstart AAAAAABRGD}{\bkmkend AAAAAABRGD}
+00085     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2000-02-29 01:01:01.000"}));\par
+{\bkmkstart AAAAAABRGE}{\bkmkend AAAAAABRGE}
+00086     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-02-28 01:01:01.000"}));\par
+{\bkmkstart AAAAAABRGF}{\bkmkend AAAAAABRGF}
+00087     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-01-01 01:01:01.123456"}));\par
+{\bkmkstart AAAAAABRGG}{\bkmkend AAAAAABRGG}
+00088     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-01-01-01:01:01.123456"}));\par
+{\bkmkstart AAAAAABRGH}{\bkmkend AAAAAABRGH}
+00089 \}\par
+{\bkmkstart AAAAAABRGI}{\bkmkend AAAAAABRGI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRGJ" }{}}{\fldrslt {\cs37\ul\cf2 00090}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Timestamp_KO) \{\par
+{\bkmkstart AAAAAABRGK}{\bkmkend AAAAAABRGK}
+00091     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-01-01 01 01 01.000"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGL}{\bkmkend AAAAAABRGL}
+00092     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2000-02-30 01:01:01.000"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGM}{\bkmkend AAAAAABRGM}
+00093     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-02-29 01:01:01.000"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGN}{\bkmkend AAAAAABRGN}
+00094     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-01-01 24:00:00.123456"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGO}{\bkmkend AAAAAABRGO}
+00095     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "2001-01-01-01:01:01.-12345"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGP}{\bkmkend AAAAAABRGP}
+00096     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "12-01-01-01:01:01.-12345"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGQ}{\bkmkend AAAAAABRGQ}
+00097     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIO" }{}}{\fldrslt {\cs37\ul\cf2 validateTimestamp}}}
+({\cf22 "123-01-01-01:01:01.-12345"}),   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRGR}{\bkmkend AAAAAABRGR}
+00098 \}\par
+{\bkmkstart AAAAAABRGS}{\bkmkend AAAAAABRGS}
+00099 \par
+{\bkmkstart AAAAAABRGT}{\bkmkend AAAAAABRGT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRGU" }{}}{\fldrslt {\cs37\ul\cf2 00100}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Numbers_OK) \{\par
+{\bkmkstart AAAAAABRGV}{\bkmkend AAAAAABRGV}
+00101     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "1"}));\par
+{\bkmkstart AAAAAABRGW}{\bkmkend AAAAAABRGW}
+00102     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "-1"}));\par
+{\bkmkstart AAAAAABRGX}{\bkmkend AAAAAABRGX}
+00103     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "+123"}));\par
+{\bkmkstart AAAAAABRGY}{\bkmkend AAAAAABRGY}
+00104     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "123"}));\par
+{\bkmkstart AAAAAABRGZ}{\bkmkend AAAAAABRGZ}
+00105     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "123456"}));\par
+{\bkmkstart AAAAAABRHA}{\bkmkend AAAAAABRHA}
+00106     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "0xff"}));\par
+{\bkmkstart AAAAAABRHB}{\bkmkend AAAAAABRHB}
+00107     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "0X2f04e009"})); \par
+{\bkmkstart AAAAAABRHC}{\bkmkend AAAAAABRHC}
+00108     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "0x7fffff"}));\par
+{\bkmkstart AAAAAABRHD}{\bkmkend AAAAAABRHD}
+00109 \}\par
+{\bkmkstart AAAAAABRHE}{\bkmkend AAAAAABRHE}
+00110 \par
+{\bkmkstart AAAAAABRHF}{\bkmkend AAAAAABRHF}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRHG" }{}}{\fldrslt {\cs37\ul\cf2 00111}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Numbers_KO) \{\par
+{\bkmkstart AAAAAABRHH}{\bkmkend AAAAAABRHH}
+00112     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "p"})       , {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHI}{\bkmkend AAAAAABRHI}
+00113     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "23:12:32"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHJ}{\bkmkend AAAAAABRHJ}
+00114     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 " "}),        {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHK}{\bkmkend AAAAAABRHK}
+00115     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "0xfg"}),     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHL}{\bkmkend AAAAAABRHL}
+00116     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "--123"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHM}{\bkmkend AAAAAABRHM}
+00117     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "-12-3"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHN}{\bkmkend AAAAAABRHN}
+00118     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "xfa"}),      {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHO}{\bkmkend AAAAAABRHO}
+00119     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIA" }{}}{\fldrslt {\cs37\ul\cf2 validateNumber}}}
+({\cf22 "2f04e009"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRHP}{\bkmkend AAAAAABRHP}
+00120 \}\par
+{\bkmkstart AAAAAABRHQ}{\bkmkend AAAAAABRHQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRHR" }{}}{\fldrslt {\cs37\ul\cf2 00121}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, LongNumbers_OK) \{\par
+{\bkmkstart AAAAAABRHS}{\bkmkend AAAAAABRHS}
+00122     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "1"}));\par
+{\bkmkstart AAAAAABRHT}{\bkmkend AAAAAABRHT}
+00123     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "-1"}));\par
+{\bkmkstart AAAAAABRHU}{\bkmkend AAAAAABRHU}
+00124     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "+123"}));\par
+{\bkmkstart AAAAAABRHV}{\bkmkend AAAAAABRHV}
+00125     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "123"}));\par
+{\bkmkstart AAAAAABRHW}{\bkmkend AAAAAABRHW}
+00126     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "123456"}));\par
+{\bkmkstart AAAAAABRHX}{\bkmkend AAAAAABRHX}
+00127     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "0xff"}));\par
+{\bkmkstart AAAAAABRHY}{\bkmkend AAAAAABRHY}
+00128     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "0X2f04e009"}));\par
+{\bkmkstart AAAAAABRHZ}{\bkmkend AAAAAABRHZ}
+00129     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "0x7fffff"}));\par
+{\bkmkstart AAAAAABRIA}{\bkmkend AAAAAABRIA}
+00130 \}\par
+{\bkmkstart AAAAAABRIB}{\bkmkend AAAAAABRIB}
+00131 \par
+{\bkmkstart AAAAAABRIC}{\bkmkend AAAAAABRIC}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRID" }{}}{\fldrslt {\cs37\ul\cf2 00132}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, LongNumbers_KO) \{\par
+{\bkmkstart AAAAAABRIE}{\bkmkend AAAAAABRIE}
+00133     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "p"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIF}{\bkmkend AAAAAABRIF}
+00134     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "23:12:32"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIG}{\bkmkend AAAAAABRIG}
+00135     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 " "}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIH}{\bkmkend AAAAAABRIH}
+00136     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "0xfg"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRII}{\bkmkend AAAAAABRII}
+00137     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "--123"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIJ}{\bkmkend AAAAAABRIJ}
+00138     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "-12-3"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIK}{\bkmkend AAAAAABRIK}
+00139     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "xfa"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIL}{\bkmkend AAAAAABRIL}
+00140     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIQ" }{}}{\fldrslt {\cs37\ul\cf2 validateLongNumber}}}
+({\cf22 "2f04e009"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRIM}{\bkmkend AAAAAABRIM}
+00141 \}\par
+{\bkmkstart AAAAAABRIN}{\bkmkend AAAAAABRIN}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRIO" }{}}{\fldrslt {\cs37\ul\cf2 00142}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Decimals_OK) \{\par
+{\bkmkstart AAAAAABRIP}{\bkmkend AAAAAABRIP}
+00143     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "1.23"}));\par
+{\bkmkstart AAAAAABRIQ}{\bkmkend AAAAAABRIQ}
+00144     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "1"}));\par
+{\bkmkstart AAAAAABRIR}{\bkmkend AAAAAABRIR}
+00145     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "+1"}));\par
+{\bkmkstart AAAAAABRIS}{\bkmkend AAAAAABRIS}
+00146     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "-1"}));\par
+{\bkmkstart AAAAAABRIT}{\bkmkend AAAAAABRIT}
+00147     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "1,0"}));\par
+{\bkmkstart AAAAAABRIU}{\bkmkend AAAAAABRIU}
+00148     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "1,01"}));\par
+{\bkmkstart AAAAAABRIV}{\bkmkend AAAAAABRIV}
+00149     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "+1,01"}));\par
+{\bkmkstart AAAAAABRIW}{\bkmkend AAAAAABRIW}
+00150     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "-1,01"}));\par
+{\bkmkstart AAAAAABRIX}{\bkmkend AAAAAABRIX}
+00151     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "-1.01"}));\par
+{\bkmkstart AAAAAABRIY}{\bkmkend AAAAAABRIY}
+00152     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "1.01"}));\par
+{\bkmkstart AAAAAABRIZ}{\bkmkend AAAAAABRIZ}
+00153 \}\par
+{\bkmkstart AAAAAABRJA}{\bkmkend AAAAAABRJA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRJB" }{}}{\fldrslt {\cs37\ul\cf2 00154}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Decimals_KO) \{\par
+{\bkmkstart AAAAAABRJC}{\bkmkend AAAAAABRJC}
+00155     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "p"})       , {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJD}{\bkmkend AAAAAABRJD}
+00156     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "23:12:32"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJE}{\bkmkend AAAAAABRJE}
+00157     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "+-1,23"})  , {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJF}{\bkmkend AAAAAABRJF}
+00158     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIF" }{}}{\fldrslt {\cs37\ul\cf2 validateDecimal}}}
+({\cf22 "1 2"})     , {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJG}{\bkmkend AAAAAABRJG}
+00159 \}\par
+{\bkmkstart AAAAAABRJH}{\bkmkend AAAAAABRJH}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRJI" }{}}{\fldrslt {\cs37\ul\cf2 00160}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, LongDecimals_OK) \{\par
+{\bkmkstart AAAAAABRJJ}{\bkmkend AAAAAABRJJ}
+00161     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "1.23"}));\par
+{\bkmkstart AAAAAABRJK}{\bkmkend AAAAAABRJK}
+00162     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "1"}));\par
+{\bkmkstart AAAAAABRJL}{\bkmkend AAAAAABRJL}
+00163     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "+1"}));\par
+{\bkmkstart AAAAAABRJM}{\bkmkend AAAAAABRJM}
+00164     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "-1"}));\par
+{\bkmkstart AAAAAABRJN}{\bkmkend AAAAAABRJN}
+00165     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "1,0"}));\par
+{\bkmkstart AAAAAABRJO}{\bkmkend AAAAAABRJO}
+00166     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "1,01"}));\par
+{\bkmkstart AAAAAABRJP}{\bkmkend AAAAAABRJP}
+00167     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "+1,01"}));\par
+{\bkmkstart AAAAAABRJQ}{\bkmkend AAAAAABRJQ}
+00168     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "-1,01"}));\par
+{\bkmkstart AAAAAABRJR}{\bkmkend AAAAAABRJR}
+00169     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "-1.01"}));\par
+{\bkmkstart AAAAAABRJS}{\bkmkend AAAAAABRJS}
+00170     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "1.01"}));\par
+{\bkmkstart AAAAAABRJT}{\bkmkend AAAAAABRJT}
+00171 \}\par
+{\bkmkstart AAAAAABRJU}{\bkmkend AAAAAABRJU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRJV" }{}}{\fldrslt {\cs37\ul\cf2 00172}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, LongDecimals_KO) \{\par
+{\bkmkstart AAAAAABRJW}{\bkmkend AAAAAABRJW}
+00173     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "p"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJX}{\bkmkend AAAAAABRJX}
+00174     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "23:12:32"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJY}{\bkmkend AAAAAABRJY}
+00175     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "+-1,23"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRJZ}{\bkmkend AAAAAABRJZ}
+00176     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIS" }{}}{\fldrslt {\cs37\ul\cf2 validateLongDecimal}}}
+({\cf22 "1 2"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRKA}{\bkmkend AAAAAABRKA}
+00177 \}\par
+{\bkmkstart AAAAAABRKB}{\bkmkend AAAAAABRKB}
+00178 \par
+{\bkmkstart AAAAAABRKC}{\bkmkend AAAAAABRKC}
+00179 {\cf21 #ifdef _WIN32}\par
+{\bkmkstart AAAAAABRKD}{\bkmkend AAAAAABRKD}
+00180 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Directory_OK) \{\par
+{\bkmkstart AAAAAABRKE}{\bkmkend AAAAAABRKE}
+00181     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "."}));\par
+{\bkmkstart AAAAAABRKF}{\bkmkend AAAAAABRKF}
+00182     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 ".."}));\par
+{\bkmkstart AAAAAABRKG}{\bkmkend AAAAAABRKG}
+00183     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "c:\\\\windows"}));\par
+{\bkmkstart AAAAAABRKH}{\bkmkend AAAAAABRKH}
+00184     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "c:\\\\program files"}));\par
+{\bkmkstart AAAAAABRKI}{\bkmkend AAAAAABRKI}
+00185 \}\par
+{\bkmkstart AAAAAABRKJ}{\bkmkend AAAAAABRKJ}
+00186 \par
+{\bkmkstart AAAAAABRKK}{\bkmkend AAAAAABRKK}
+00187 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, Directory_KO) \{\par
+{\bkmkstart AAAAAABRKL}{\bkmkend AAAAAABRKL}
+00188     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "\\\\ pepito"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRKM}{\bkmkend AAAAAABRKM}
+00189     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "......"}),    {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRKN}{\bkmkend AAAAAABRKN}
+00190 \par
+{\bkmkstart AAAAAABRKO}{\bkmkend AAAAAABRKO}
+00191 \}\par
+{\bkmkstart AAAAAABRKP}{\bkmkend AAAAAABRKP}
+00192 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, DirectoryExists_OK) \{\par
+{\bkmkstart AAAAAABRKQ}{\bkmkend AAAAAABRKQ}
+00193     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "c:\\\\program files"}));\par
+{\bkmkstart AAAAAABRKR}{\bkmkend AAAAAABRKR}
+00194     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "."}));\par
+{\bkmkstart AAAAAABRKS}{\bkmkend AAAAAABRKS}
+00195     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 ".."}));\par
+{\bkmkstart AAAAAABRKT}{\bkmkend AAAAAABRKT}
+00196     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "c:\\\\windows"}));\par
+{\bkmkstart AAAAAABRKU}{\bkmkend AAAAAABRKU}
+00197     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFV" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_NO_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABIW" }{}}{\fldrslt {\cs37\ul\cf2 validateDir}}}
+({\cf22 "c:\\\\program files"}));\par
+{\bkmkstart AAAAAABRKV}{\bkmkend AAAAAABRKV}
+00198 \}\par
+{\bkmkstart AAAAAABRKW}{\bkmkend AAAAAABRKW}
+00199 \par
+{\bkmkstart AAAAAABRKX}{\bkmkend AAAAAABRKX}
+00200 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAABRDB" }{}}{\fldrslt {\cs37\ul\cf2 TEST}}}
+(Validations, DirectoryExists_KO) \{\par
+{\bkmkstart AAAAAABRKY}{\bkmkend AAAAAABRKY}
+00201     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADAZ" }{}}{\fldrslt {\cs37\ul\cf2 validateDirExist}}}
+({\cf22 "\\\\pepito"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRKZ}{\bkmkend AAAAAABRKZ}
+00202     {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAPFS" }{}}{\fldrslt {\cs37\ul\cf2 EXPECT_THROW}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAADAZ" }{}}{\fldrslt {\cs37\ul\cf2 validateDirExist}}}
+({\cf22 "......"}), {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAZR" }{}}{\fldrslt {\cs37\ul\cf2 CmdLineValueException}}}
+);\par
+{\bkmkstart AAAAAABRLA}{\bkmkend AAAAAABRLA}
+00203 \par
+{\bkmkstart AAAAAABRLB}{\bkmkend AAAAAABRLB}
+00204 \}\par
+{\bkmkstart AAAAAABRLC}{\bkmkend AAAAAABRLC}
+00205 \par
+{\bkmkstart AAAAAABRLD}{\bkmkend AAAAAABRLD}
+00206 {\cf21 #endif}\par
+{\bkmkstart AAAAAABRLE}{\bkmkend AAAAAABRLE}
+00207 \par
+{\bkmkstart AAAAAABRLF}{\bkmkend AAAAAABRLF}
+00208 {\cf21 #if defined(unix) || defined(__unix__) || defined(__unix) || defined(__linux__)}\par
+{\bkmkstart AAAAAABRLG}{\bkmkend AAAAAABRLG}
+00209 {\cf21 #endif}\par
+}
+}

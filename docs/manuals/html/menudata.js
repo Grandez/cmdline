@@ -24,7 +24,6 @@
 */
 var menudata={children:[
 {text:"Página principal",url:"index.html"},
-{text:"Páginas relacionadas",url:"pages.html"},
 {text:"Módulos",url:"modules.html"},
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Lista de 'namespaces'",url:"namespaces.html"},
@@ -34,6 +33,4 @@ var menudata={children:[
 {text:"Clases",url:"annotated.html",children:[
 {text:"Lista de clases",url:"annotated.html"},
 {text:"Índice de clases",url:"classes.html"},
-{text:"Jerarquía de la clase",url:"inherits.html"}]},
-{text:"Archivos",url:"files.html",children:[
-{text:"Lista de archivos",url:"files.html"}]}]}
+{text:"Jerarquía de la clase",url:"inherits.html"}]}]}

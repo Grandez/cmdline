@@ -1,0 +1,687 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-message.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-message.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-message.h}
+{\bkmkstart AAAAAAAGLL}
+{\bkmkend AAAAAAAGLL}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGLM" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAGLN}{\bkmkend AAAAAAAGLN}
+00001 {\cf20 // Copyright 2005, Google Inc.}\par
+{\bkmkstart AAAAAAAGLO}{\bkmkend AAAAAAAGLO}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAGLP}{\bkmkend AAAAAAAGLP}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAGLQ}{\bkmkend AAAAAAAGLQ}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAAGLR}{\bkmkend AAAAAAAGLR}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAAGLS}{\bkmkend AAAAAAAGLS}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAAGLT}{\bkmkend AAAAAAAGLT}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAAGLU}{\bkmkend AAAAAAAGLU}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAAGLV}{\bkmkend AAAAAAAGLV}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAAGLW}{\bkmkend AAAAAAAGLW}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAAGLX}{\bkmkend AAAAAAAGLX}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAAGLY}{\bkmkend AAAAAAAGLY}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAAGLZ}{\bkmkend AAAAAAAGLZ}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAAGMA}{\bkmkend AAAAAAAGMA}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAAGMB}{\bkmkend AAAAAAAGMB}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAAGMC}{\bkmkend AAAAAAAGMC}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAAGMD}{\bkmkend AAAAAAAGMD}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAAGME}{\bkmkend AAAAAAAGME}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAAGMF}{\bkmkend AAAAAAAGMF}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAGMG}{\bkmkend AAAAAAAGMG}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAAGMH}{\bkmkend AAAAAAAGMH}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAAGMI}{\bkmkend AAAAAAAGMI}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAAGMJ}{\bkmkend AAAAAAAGMJ}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAGMK}{\bkmkend AAAAAAAGMK}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAAGML}{\bkmkend AAAAAAAGML}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAAGMM}{\bkmkend AAAAAAAGMM}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAAGMN}{\bkmkend AAAAAAAGMN}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAAGMO}{\bkmkend AAAAAAAGMO}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAAGMP}{\bkmkend AAAAAAAGMP}
+00029 \par
+{\bkmkstart AAAAAAAGMQ}{\bkmkend AAAAAAAGMQ}
+00030 {\cf20 //}\par
+{\bkmkstart AAAAAAAGMR}{\bkmkend AAAAAAAGMR}
+00031 {\cf20 // The Google C++ Testing and Mocking Framework (Google Test)}\par
+{\bkmkstart AAAAAAAGMS}{\bkmkend AAAAAAAGMS}
+00032 {\cf20 //}\par
+{\bkmkstart AAAAAAAGMT}{\bkmkend AAAAAAAGMT}
+00033 {\cf20 // This header file defines the Message class.}\par
+{\bkmkstart AAAAAAAGMU}{\bkmkend AAAAAAAGMU}
+00034 {\cf20 //}\par
+{\bkmkstart AAAAAAAGMV}{\bkmkend AAAAAAAGMV}
+00035 {\cf20 // IMPORTANT NOTE: Due to limitation of the C++ language, we have to}\par
+{\bkmkstart AAAAAAAGMW}{\bkmkend AAAAAAAGMW}
+00036 {\cf20 // leave some internal implementation details in this header file.}\par
+{\bkmkstart AAAAAAAGMX}{\bkmkend AAAAAAAGMX}
+00037 {\cf20 // They are clearly marked by comments like this:}\par
+{\bkmkstart AAAAAAAGMY}{\bkmkend AAAAAAAGMY}
+00038 {\cf20 //}\par
+{\bkmkstart AAAAAAAGMZ}{\bkmkend AAAAAAAGMZ}
+00039 {\cf20 //   // INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.}\par
+{\bkmkstart AAAAAAAGNA}{\bkmkend AAAAAAAGNA}
+00040 {\cf20 //}\par
+{\bkmkstart AAAAAAAGNB}{\bkmkend AAAAAAAGNB}
+00041 {\cf20 // Such code is NOT meant to be used by a user directly, and is subject}\par
+{\bkmkstart AAAAAAAGNC}{\bkmkend AAAAAAAGNC}
+00042 {\cf20 // to CHANGE WITHOUT NOTICE.  Therefore DO NOT DEPEND ON IT in a user}\par
+{\bkmkstart AAAAAAAGND}{\bkmkend AAAAAAAGND}
+00043 {\cf20 // program!}\par
+{\bkmkstart AAAAAAAGNE}{\bkmkend AAAAAAAGNE}
+00044 \par
+{\bkmkstart AAAAAAAGNF}{\bkmkend AAAAAAAGNF}
+00045 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAGNG}{\bkmkend AAAAAAAGNG}
+00046 \par
+{\bkmkstart AAAAAAAGNH}{\bkmkend AAAAAAAGNH}
+00047 {\cf21 #ifndef GTEST_INCLUDE_GTEST_GTEST_MESSAGE_H_}\par
+{\bkmkstart AAAAAAAGNI}{\bkmkend AAAAAAAGNI}
+00048 {\cf21 #define GTEST_INCLUDE_GTEST_GTEST_MESSAGE_H_}\par
+{\bkmkstart AAAAAAAGNJ}{\bkmkend AAAAAAAGNJ}
+00049 \par
+{\bkmkstart AAAAAAAGNK}{\bkmkend AAAAAAAGNK}
+00050 {\cf21 #include <limits>}\par
+{\bkmkstart AAAAAAAGNL}{\bkmkend AAAAAAAGNL}
+00051 \par
+{\bkmkstart AAAAAAAGNM}{\bkmkend AAAAAAAGNM}
+00052 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNN" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-port.h}}}
+"}\par
+{\bkmkstart AAAAAAAGNO}{\bkmkend AAAAAAAGNO}
+00053 \par
+{\bkmkstart AAAAAAAGNP}{\bkmkend AAAAAAAGNP}
+00054 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGNQ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_PUSH_}}}
+(4251 \\\par
+{\bkmkstart AAAAAAAGNR}{\bkmkend AAAAAAAGNR}
+00055 {\cf20 /* class A needs to have dll-interface to be used by clients of class B */})\par
+{\bkmkstart AAAAAAAGNS}{\bkmkend AAAAAAAGNS}
+00056 \par
+{\bkmkstart AAAAAAAGNT}{\bkmkend AAAAAAAGNT}
+00057 {\cf20 // Ensures that there is at least one operator<< in the global namespace.}\par
+{\bkmkstart AAAAAAAGNU}{\bkmkend AAAAAAAGNU}
+00058 {\cf20 // See Message& operator<<(...) below for why.}\par
+{\bkmkstart AAAAAAAGNV}{\bkmkend AAAAAAAGNV}
+00059 void operator<<(const {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+::internal::Secret&, {\cf18 int});\par
+{\bkmkstart AAAAAAAGNW}{\bkmkend AAAAAAAGNW}
+00060 \par
+{\bkmkstart AAAAAAAGNX}{\bkmkend AAAAAAAGNX}
+00061 namespace {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAGNY}{\bkmkend AAAAAAAGNY}
+00062 \par
+{\bkmkstart AAAAAAAGNZ}{\bkmkend AAAAAAAGNZ}
+00063 {\cf20 // The Message class works like an ostream repeater.}\par
+{\bkmkstart AAAAAAAGOA}{\bkmkend AAAAAAAGOA}
+00064 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOB}{\bkmkend AAAAAAAGOB}
+00065 {\cf20 // Typical usage:}\par
+{\bkmkstart AAAAAAAGOC}{\bkmkend AAAAAAAGOC}
+00066 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOD}{\bkmkend AAAAAAAGOD}
+00067 {\cf20 //   1. You stream a bunch of values to a Message object.}\par
+{\bkmkstart AAAAAAAGOE}{\bkmkend AAAAAAAGOE}
+00068 {\cf20 //      It will remember the text in a stringstream.}\par
+{\bkmkstart AAAAAAAGOF}{\bkmkend AAAAAAAGOF}
+00069 {\cf20 //   2. Then you stream the Message object to an ostream.}\par
+{\bkmkstart AAAAAAAGOG}{\bkmkend AAAAAAAGOG}
+00070 {\cf20 //      This causes the text in the Message to be streamed}\par
+{\bkmkstart AAAAAAAGOH}{\bkmkend AAAAAAAGOH}
+00071 {\cf20 //      to the ostream.}\par
+{\bkmkstart AAAAAAAGOI}{\bkmkend AAAAAAAGOI}
+00072 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOJ}{\bkmkend AAAAAAAGOJ}
+00073 {\cf20 // For example;}\par
+{\bkmkstart AAAAAAAGOK}{\bkmkend AAAAAAAGOK}
+00074 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOL}{\bkmkend AAAAAAAGOL}
+00075 {\cf20 //   testing::Message foo;}\par
+{\bkmkstart AAAAAAAGOM}{\bkmkend AAAAAAAGOM}
+00076 {\cf20 //   foo << 1 << " != " << 2;}\par
+{\bkmkstart AAAAAAAGON}{\bkmkend AAAAAAAGON}
+00077 {\cf20 //   std::cout << foo;}\par
+{\bkmkstart AAAAAAAGOO}{\bkmkend AAAAAAAGOO}
+00078 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOP}{\bkmkend AAAAAAAGOP}
+00079 {\cf20 // will print "1 != 2".}\par
+{\bkmkstart AAAAAAAGOQ}{\bkmkend AAAAAAAGOQ}
+00080 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOR}{\bkmkend AAAAAAAGOR}
+00081 {\cf20 // Message is not intended to be inherited from.  In particular, its}\par
+{\bkmkstart AAAAAAAGOS}{\bkmkend AAAAAAAGOS}
+00082 {\cf20 // destructor is not virtual.}\par
+{\bkmkstart AAAAAAAGOT}{\bkmkend AAAAAAAGOT}
+00083 {\cf20 //}\par
+{\bkmkstart AAAAAAAGOU}{\bkmkend AAAAAAAGOU}
+00084 {\cf20 // Note that stringstream behaves differently in gcc and in MSVC.  You}\par
+{\bkmkstart AAAAAAAGOV}{\bkmkend AAAAAAAGOV}
+00085 {\cf20 // can stream a NULL char pointer to it in the former, but not in the}\par
+{\bkmkstart AAAAAAAGOW}{\bkmkend AAAAAAAGOW}
+00086 {\cf20 // latter (it causes an access violation if you do).  The Message}\par
+{\bkmkstart AAAAAAAGOX}{\bkmkend AAAAAAAGOX}
+00087 {\cf20 // class hides this difference by treating a NULL char pointer as}\par
+{\bkmkstart AAAAAAAGOY}{\bkmkend AAAAAAAGOY}
+00088 {\cf20 // "(null)".}\par
+{\bkmkstart AAAAAAAGOZ}{\bkmkend AAAAAAAGOZ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 00089}}}
+ {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+ \{\par
+{\bkmkstart AAAAAAAGPB}{\bkmkend AAAAAAAGPB}
+00090  {\cf17 private}:\par
+{\bkmkstart AAAAAAAGPC}{\bkmkend AAAAAAAGPC}
+00091   {\cf20 // The type of basic IO manipulators (endl, ends, and flush) for}\par
+{\bkmkstart AAAAAAAGPD}{\bkmkend AAAAAAAGPD}
+00092   {\cf20 // narrow streams.}\par
+{\bkmkstart AAAAAAAGPE}{\bkmkend AAAAAAAGPE}
+00093   {\cf17 typedef} std::ostream& (*BasicNarrowIoManip)(std::ostream&);\par
+{\bkmkstart AAAAAAAGPF}{\bkmkend AAAAAAAGPF}
+00094 \par
+{\bkmkstart AAAAAAAGPG}{\bkmkend AAAAAAAGPG}
+00095  {\cf17 public}:\par
+{\bkmkstart AAAAAAAGPH}{\bkmkend AAAAAAAGPH}
+00096   {\cf20 // Constructs an empty Message.}\par
+{\bkmkstart AAAAAAAGPI}{\bkmkend AAAAAAAGPI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPJ" }{}}{\fldrslt {\cs37\ul\cf2 00097}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPJ" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+();\par
+{\bkmkstart AAAAAAAGPK}{\bkmkend AAAAAAAGPK}
+00098 \par
+{\bkmkstart AAAAAAAGPL}{\bkmkend AAAAAAAGPL}
+00099   {\cf20 // Copy constructor.}\par
+{\bkmkstart AAAAAAAGPM}{\bkmkend AAAAAAAGPM}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPN" }{}}{\fldrslt {\cs37\ul\cf2 00100}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPN" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+({\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& msg) : ss_(new ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 std}}}
+::stringstream) \{  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAAAGPO}{\bkmkend AAAAAAAGPO}
+00101     *ss_ << msg.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPP" }{}}{\fldrslt {\cs37\ul\cf2 GetString}}}
+();\par
+{\bkmkstart AAAAAAAGPQ}{\bkmkend AAAAAAAGPQ}
+00102   \}\par
+{\bkmkstart AAAAAAAGPR}{\bkmkend AAAAAAAGPR}
+00103 \par
+{\bkmkstart AAAAAAAGPS}{\bkmkend AAAAAAAGPS}
+00104   {\cf20 // Constructs a Message from a C-string.}\par
+{\bkmkstart AAAAAAAGPT}{\bkmkend AAAAAAAGPT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPU" }{}}{\fldrslt {\cs37\ul\cf2 00105}}}
+   {\cf17 explicit} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPU" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+({\cf17 const} {\cf18 char}* str) : ss_(new ::{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABQJ" }{}}{\fldrslt {\cs37\ul\cf2 std}}}
+::stringstream) \{\par
+{\bkmkstart AAAAAAAGPV}{\bkmkend AAAAAAAGPV}
+00106     *ss_ << str;\par
+{\bkmkstart AAAAAAAGPW}{\bkmkend AAAAAAAGPW}
+00107   \}\par
+{\bkmkstart AAAAAAAGPX}{\bkmkend AAAAAAAGPX}
+00108 \par
+{\bkmkstart AAAAAAAGPY}{\bkmkend AAAAAAAGPY}
+00109 {\cf21 #if GTEST_OS_SYMBIAN}\par
+{\bkmkstart AAAAAAAGPZ}{\bkmkend AAAAAAAGPZ}
+00110   {\cf20 // Streams a value (either a pointer or not) to this object.}\par
+{\bkmkstart AAAAAAAGQA}{\bkmkend AAAAAAAGQA}
+00111   {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAGQB}{\bkmkend AAAAAAAGQB}
+00112   {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\cf17 const} T& value) \{\par
+{\bkmkstart AAAAAAAGQD}{\bkmkend AAAAAAAGQD}
+00113     StreamHelper({\cf17 typename} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQE" }{}}{\fldrslt {\cs37\ul\cf2 internal::is_pointer<T>::type}}}
+(), value);\par
+{\bkmkstart AAAAAAAGQF}{\bkmkend AAAAAAAGQF}
+00114     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAAAGQG}{\bkmkend AAAAAAAGQG}
+00115   \}\par
+{\bkmkstart AAAAAAAGQH}{\bkmkend AAAAAAAGQH}
+00116 {\cf21 #else}\par
+{\bkmkstart AAAAAAAGQI}{\bkmkend AAAAAAAGQI}
+00117   {\cf20 // Streams a non-pointer value to this object.}\par
+{\bkmkstart AAAAAAAGQJ}{\bkmkend AAAAAAAGQJ}
+00118   {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAGQK}{\bkmkend AAAAAAAGQK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQL" }{}}{\fldrslt {\cs37\ul\cf2 00119}}}
+   {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\cf17 const} T& val) \{\par
+{\bkmkstart AAAAAAAGQM}{\bkmkend AAAAAAAGQM}
+00120     {\cf20 // Some libraries overload << for STL containers.  These}\par
+{\bkmkstart AAAAAAAGQN}{\bkmkend AAAAAAAGQN}
+00121     {\cf20 // overloads are defined in the global namespace instead of ::std.}\par
+{\bkmkstart AAAAAAAGQO}{\bkmkend AAAAAAAGQO}
+00122     {\cf20 //}\par
+{\bkmkstart AAAAAAAGQP}{\bkmkend AAAAAAAGQP}
+00123     {\cf20 // C++'s symbol lookup rule (i.e. Koenig lookup) says that these}\par
+{\bkmkstart AAAAAAAGQQ}{\bkmkend AAAAAAAGQQ}
+00124     {\cf20 // overloads are visible in either the std namespace or the global}\par
+{\bkmkstart AAAAAAAGQR}{\bkmkend AAAAAAAGQR}
+00125     {\cf20 // namespace, but not other namespaces, including the testing}\par
+{\bkmkstart AAAAAAAGQS}{\bkmkend AAAAAAAGQS}
+00126     {\cf20 // namespace which Google Test's Message class is in.}\par
+{\bkmkstart AAAAAAAGQT}{\bkmkend AAAAAAAGQT}
+00127     {\cf20 //}\par
+{\bkmkstart AAAAAAAGQU}{\bkmkend AAAAAAAGQU}
+00128     {\cf20 // To allow STL containers (and other types that has a << operator}\par
+{\bkmkstart AAAAAAAGQV}{\bkmkend AAAAAAAGQV}
+00129     {\cf20 // defined in the global namespace) to be used in Google Test}\par
+{\bkmkstart AAAAAAAGQW}{\bkmkend AAAAAAAGQW}
+00130     {\cf20 // assertions, testing::Message must access the custom << operator}\par
+{\bkmkstart AAAAAAAGQX}{\bkmkend AAAAAAAGQX}
+00131     {\cf20 // from the global namespace.  With this using declaration,}\par
+{\bkmkstart AAAAAAAGQY}{\bkmkend AAAAAAAGQY}
+00132     {\cf20 // overloads of << defined in the global namespace and those}\par
+{\bkmkstart AAAAAAAGQZ}{\bkmkend AAAAAAAGQZ}
+00133     {\cf20 // visible via Koenig lookup are both exposed in this function.}\par
+{\bkmkstart AAAAAAAGRA}{\bkmkend AAAAAAAGRA}
+00134     using ::operator <<;\par
+{\bkmkstart AAAAAAAGRB}{\bkmkend AAAAAAAGRB}
+00135     *ss_ << val;\par
+{\bkmkstart AAAAAAAGRC}{\bkmkend AAAAAAAGRC}
+00136     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAAAGRD}{\bkmkend AAAAAAAGRD}
+00137   \}\par
+{\bkmkstart AAAAAAAGRE}{\bkmkend AAAAAAAGRE}
+00138 \par
+{\bkmkstart AAAAAAAGRF}{\bkmkend AAAAAAAGRF}
+00139   {\cf20 // Streams a pointer value to this object.}\par
+{\bkmkstart AAAAAAAGRG}{\bkmkend AAAAAAAGRG}
+00140   {\cf20 //}\par
+{\bkmkstart AAAAAAAGRH}{\bkmkend AAAAAAAGRH}
+00141   {\cf20 // This function is an overload of the previous one.  When you}\par
+{\bkmkstart AAAAAAAGRI}{\bkmkend AAAAAAAGRI}
+00142   {\cf20 // stream a pointer to a Message, this definition will be used as it}\par
+{\bkmkstart AAAAAAAGRJ}{\bkmkend AAAAAAAGRJ}
+00143   {\cf20 // is more specialized.  (The C++ Standard, section}\par
+{\bkmkstart AAAAAAAGRK}{\bkmkend AAAAAAAGRK}
+00144   {\cf20 // [temp.func.order].)  If you stream a non-pointer, then the}\par
+{\bkmkstart AAAAAAAGRL}{\bkmkend AAAAAAAGRL}
+00145   {\cf20 // previous definition will be used.}\par
+{\bkmkstart AAAAAAAGRM}{\bkmkend AAAAAAAGRM}
+00146   {\cf20 //}\par
+{\bkmkstart AAAAAAAGRN}{\bkmkend AAAAAAAGRN}
+00147   {\cf20 // The reason for this overload is that streaming a NULL pointer to}\par
+{\bkmkstart AAAAAAAGRO}{\bkmkend AAAAAAAGRO}
+00148   {\cf20 // ostream is undefined behavior.  Depending on the compiler, you}\par
+{\bkmkstart AAAAAAAGRP}{\bkmkend AAAAAAAGRP}
+00149   {\cf20 // may get "0", "(nil)", "(null)", or an access violation.  To}\par
+{\bkmkstart AAAAAAAGRQ}{\bkmkend AAAAAAAGRQ}
+00150   {\cf20 // ensure consistent result across compilers, we always treat NULL}\par
+{\bkmkstart AAAAAAAGRR}{\bkmkend AAAAAAAGRR}
+00151   {\cf20 // as "(null)".}\par
+{\bkmkstart AAAAAAAGRS}{\bkmkend AAAAAAAGRS}
+00152   {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAGRT}{\bkmkend AAAAAAAGRT}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGRU" }{}}{\fldrslt {\cs37\ul\cf2 00153}}}
+   {\cf17 inline} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+(T* {\cf17 const}& pointer) \{  {\cf20 // NOLINT}\par
+{\bkmkstart AAAAAAAGRV}{\bkmkend AAAAAAAGRV}
+00154     {\cf19 if} (pointer == NULL) \{\par
+{\bkmkstart AAAAAAAGRW}{\bkmkend AAAAAAAGRW}
+00155       *ss_ << {\cf22 "(null)"};\par
+{\bkmkstart AAAAAAAGRX}{\bkmkend AAAAAAAGRX}
+00156     \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAGRY}{\bkmkend AAAAAAAGRY}
+00157       *ss_ << pointer;\par
+{\bkmkstart AAAAAAAGRZ}{\bkmkend AAAAAAAGRZ}
+00158     \}\par
+{\bkmkstart AAAAAAAGSA}{\bkmkend AAAAAAAGSA}
+00159     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAAAGSB}{\bkmkend AAAAAAAGSB}
+00160   \}\par
+{\bkmkstart AAAAAAAGSC}{\bkmkend AAAAAAAGSC}
+00161 {\cf21 #endif  }{\cf20 // GTEST_OS_SYMBIAN}\par
+{\bkmkstart AAAAAAAGSD}{\bkmkend AAAAAAAGSD}
+00162 \par
+{\bkmkstart AAAAAAAGSE}{\bkmkend AAAAAAAGSE}
+00163   {\cf20 // Since the basic IO manipulators are overloaded for both narrow}\par
+{\bkmkstart AAAAAAAGSF}{\bkmkend AAAAAAAGSF}
+00164   {\cf20 // and wide streams, we have to provide this specialized definition}\par
+{\bkmkstart AAAAAAAGSG}{\bkmkend AAAAAAAGSG}
+00165   {\cf20 // of operator <<, even though its body is the same as the}\par
+{\bkmkstart AAAAAAAGSH}{\bkmkend AAAAAAAGSH}
+00166   {\cf20 // templatized version above.  Without this definition, streaming}\par
+{\bkmkstart AAAAAAAGSI}{\bkmkend AAAAAAAGSI}
+00167   {\cf20 // endl or other basic IO manipulators to Message will confuse the}\par
+{\bkmkstart AAAAAAAGSJ}{\bkmkend AAAAAAAGSJ}
+00168   {\cf20 // compiler.}\par
+{\bkmkstart AAAAAAAGSK}{\bkmkend AAAAAAAGSK}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGSL" }{}}{\fldrslt {\cs37\ul\cf2 00169}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+(BasicNarrowIoManip val) \{\par
+{\bkmkstart AAAAAAAGSM}{\bkmkend AAAAAAAGSM}
+00170     *ss_ << val;\par
+{\bkmkstart AAAAAAAGSN}{\bkmkend AAAAAAAGSN}
+00171     {\cf19 return} *{\cf17 this};\par
+{\bkmkstart AAAAAAAGSO}{\bkmkend AAAAAAAGSO}
+00172   \}\par
+{\bkmkstart AAAAAAAGSP}{\bkmkend AAAAAAAGSP}
+00173 \par
+{\bkmkstart AAAAAAAGSQ}{\bkmkend AAAAAAAGSQ}
+00174   {\cf20 // Instead of 1/0, we want to see true/false for bool values.}\par
+{\bkmkstart AAAAAAAGSR}{\bkmkend AAAAAAAGSR}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGSS" }{}}{\fldrslt {\cs37\ul\cf2 00175}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\cf18 bool} b) \{\par
+{\bkmkstart AAAAAAAGST}{\bkmkend AAAAAAAGST}
+00176     {\cf19 return} *{\cf17 this} << (b ? {\cf22 "true"} : {\cf22 "false"});\par
+{\bkmkstart AAAAAAAGSU}{\bkmkend AAAAAAAGSU}
+00177   \}\par
+{\bkmkstart AAAAAAAGSV}{\bkmkend AAAAAAAGSV}
+00178 \par
+{\bkmkstart AAAAAAAGSW}{\bkmkend AAAAAAAGSW}
+00179   {\cf20 // These two overloads allow streaming a wide C string to a Message}\par
+{\bkmkstart AAAAAAAGSX}{\bkmkend AAAAAAAGSX}
+00180   {\cf20 // using the UTF-8 encoding.}\par
+{\bkmkstart AAAAAAAGSY}{\bkmkend AAAAAAAGSY}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGSZ" }{}}{\fldrslt {\cs37\ul\cf2 00181}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\cf17 const} {\cf18 wchar_t}* wide_c_str);\par
+{\bkmkstart AAAAAAAGTA}{\bkmkend AAAAAAAGTA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTB" }{}}{\fldrslt {\cs37\ul\cf2 00182}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\cf18 wchar_t}* wide_c_str);\par
+{\bkmkstart AAAAAAAGTC}{\bkmkend AAAAAAAGTC}
+00183 \par
+{\bkmkstart AAAAAAAGTD}{\bkmkend AAAAAAAGTD}
+00184 {\cf21 #if GTEST_HAS_STD_WSTRING}\par
+{\bkmkstart AAAAAAAGTE}{\bkmkend AAAAAAAGTE}
+00185   {\cf20 // Converts the given wide string to a narrow string using the UTF-8}\par
+{\bkmkstart AAAAAAAGTF}{\bkmkend AAAAAAAGTF}
+00186   {\cf20 // encoding, and streams the result to this Message object.}\par
+{\bkmkstart AAAAAAAGTG}{\bkmkend AAAAAAAGTG}
+00187   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 const ::std::wstring}}}
+& wstr);\par
+{\bkmkstart AAAAAAAGTI}{\bkmkend AAAAAAAGTI}
+00188 {\cf21 #endif  }{\cf20 // GTEST_HAS_STD_WSTRING}\par
+{\bkmkstart AAAAAAAGTJ}{\bkmkend AAAAAAAGTJ}
+00189 \par
+{\bkmkstart AAAAAAAGTK}{\bkmkend AAAAAAAGTK}
+00190 {\cf21 #if GTEST_HAS_GLOBAL_WSTRING}\par
+{\bkmkstart AAAAAAAGTL}{\bkmkend AAAAAAAGTL}
+00191   {\cf20 // Converts the given wide string to a narrow string using the UTF-8}\par
+{\bkmkstart AAAAAAAGTM}{\bkmkend AAAAAAAGTM}
+00192   {\cf20 // encoding, and streams the result to this Message object.}\par
+{\bkmkstart AAAAAAAGTN}{\bkmkend AAAAAAAGTN}
+00193   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGTH" }{}}{\fldrslt {\cs37\ul\cf2 const ::wstring}}}
+& wstr);\par
+{\bkmkstart AAAAAAAGTO}{\bkmkend AAAAAAAGTO}
+00194 {\cf21 #endif  }{\cf20 // GTEST_HAS_GLOBAL_WSTRING}\par
+{\bkmkstart AAAAAAAGTP}{\bkmkend AAAAAAAGTP}
+00195 \par
+{\bkmkstart AAAAAAAGTQ}{\bkmkend AAAAAAAGTQ}
+00196   {\cf20 // Gets the text streamed to this object so far as an std::string.}\par
+{\bkmkstart AAAAAAAGTR}{\bkmkend AAAAAAAGTR}
+00197   {\cf20 // Each '\\0' character in the buffer is replaced with "\\\\0".}\par
+{\bkmkstart AAAAAAAGTS}{\bkmkend AAAAAAAGTS}
+00198   {\cf20 //}\par
+{\bkmkstart AAAAAAAGTT}{\bkmkend AAAAAAAGTT}
+00199   {\cf20 // INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.}\par
+{\bkmkstart AAAAAAAGTU}{\bkmkend AAAAAAAGTU}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPP" }{}}{\fldrslt {\cs37\ul\cf2 00200}}}
+   {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPP" }{}}{\fldrslt {\cs37\ul\cf2 GetString}}}
+() {\cf17 const};\par
+{\bkmkstart AAAAAAAGTV}{\bkmkend AAAAAAAGTV}
+00201 \par
+{\bkmkstart AAAAAAAGTW}{\bkmkend AAAAAAAGTW}
+00202  {\cf17 private}:\par
+{\bkmkstart AAAAAAAGTX}{\bkmkend AAAAAAAGTX}
+00203 {\cf21 #if GTEST_OS_SYMBIAN}\par
+{\bkmkstart AAAAAAAGTY}{\bkmkend AAAAAAAGTY}
+00204   {\cf20 // These are needed as the Nokia Symbian Compiler cannot decide between}\par
+{\bkmkstart AAAAAAAGTZ}{\bkmkend AAAAAAAGTZ}
+00205   {\cf20 // const T& and const T* in a function template. The Nokia compiler _can_}\par
+{\bkmkstart AAAAAAAGUA}{\bkmkend AAAAAAAGUA}
+00206   {\cf20 // decide between class template specializations for T and T*, so a}\par
+{\bkmkstart AAAAAAAGUB}{\bkmkend AAAAAAAGUB}
+00207   {\cf20 // tr1::type_traits-like is_pointer works, and we can overload on that.}\par
+{\bkmkstart AAAAAAAGUC}{\bkmkend AAAAAAAGUC}
+00208   {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAGUD}{\bkmkend AAAAAAAGUD}
+00209   {\cf17 inline} {\cf18 void} StreamHelper({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQE" }{}}{\fldrslt {\cs37\ul\cf2 internal::true_type}}}
+ {\cf20 /*is_pointer*/}, T* pointer) \{\par
+{\bkmkstart AAAAAAAGUE}{\bkmkend AAAAAAAGUE}
+00210     {\cf19 if} (pointer == NULL) \{\par
+{\bkmkstart AAAAAAAGUF}{\bkmkend AAAAAAAGUF}
+00211       *ss_ << {\cf22 "(null)"};\par
+{\bkmkstart AAAAAAAGUG}{\bkmkend AAAAAAAGUG}
+00212     \} {\cf19 else} \{\par
+{\bkmkstart AAAAAAAGUH}{\bkmkend AAAAAAAGUH}
+00213       *ss_ << pointer;\par
+{\bkmkstart AAAAAAAGUI}{\bkmkend AAAAAAAGUI}
+00214     \}\par
+{\bkmkstart AAAAAAAGUJ}{\bkmkend AAAAAAAGUJ}
+00215   \}\par
+{\bkmkstart AAAAAAAGUK}{\bkmkend AAAAAAAGUK}
+00216   {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAGUL}{\bkmkend AAAAAAAGUL}
+00217   {\cf17 inline} {\cf18 void} StreamHelper({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGUM" }{}}{\fldrslt {\cs37\ul\cf2 internal::false_type}}}
+ {\cf20 /*is_pointer*/},\par
+{\bkmkstart AAAAAAAGUN}{\bkmkend AAAAAAAGUN}
+00218                            {\cf17 const} T& value) \{\par
+{\bkmkstart AAAAAAAGUO}{\bkmkend AAAAAAAGUO}
+00219     {\cf20 // See the comments in Message& operator <<(const T&) above for why}\par
+{\bkmkstart AAAAAAAGUP}{\bkmkend AAAAAAAGUP}
+00220     {\cf20 // we need this using statement.}\par
+{\bkmkstart AAAAAAAGUQ}{\bkmkend AAAAAAAGUQ}
+00221     using ::operator <<;\par
+{\bkmkstart AAAAAAAGUR}{\bkmkend AAAAAAAGUR}
+00222     *ss_ << value;\par
+{\bkmkstart AAAAAAAGUS}{\bkmkend AAAAAAAGUS}
+00223   \}\par
+{\bkmkstart AAAAAAAGUT}{\bkmkend AAAAAAAGUT}
+00224 {\cf21 #endif  }{\cf20 // GTEST_OS_SYMBIAN}\par
+{\bkmkstart AAAAAAAGUU}{\bkmkend AAAAAAAGUU}
+00225 \par
+{\bkmkstart AAAAAAAGUV}{\bkmkend AAAAAAAGUV}
+00226   {\cf20 // We'll hold the text streamed to this object here.}\par
+{\bkmkstart AAAAAAAGUW}{\bkmkend AAAAAAAGUW}
+00227   {\cf17 const} internal::scoped_ptr< ::std::stringstream> ss_;\par
+{\bkmkstart AAAAAAAGUX}{\bkmkend AAAAAAAGUX}
+00228 \par
+{\bkmkstart AAAAAAAGUY}{\bkmkend AAAAAAAGUY}
+00229   {\cf20 // We declare (but don't implement) this to prevent the compiler}\par
+{\bkmkstart AAAAAAAGUZ}{\bkmkend AAAAAAAGUZ}
+00230   {\cf20 // from implementing the assignment operator.}\par
+{\bkmkstart AAAAAAAGVA}{\bkmkend AAAAAAAGVA}
+00231   {\cf18 void} operator=({\cf17 const} Message&);\par
+{\bkmkstart AAAAAAAGVB}{\bkmkend AAAAAAAGVB}
+00232 \};\par
+{\bkmkstart AAAAAAAGVC}{\bkmkend AAAAAAAGVC}
+00233 \par
+{\bkmkstart AAAAAAAGVD}{\bkmkend AAAAAAAGVD}
+00234 {\cf20 // Streams a Message to an ostream.}\par
+{\bkmkstart AAAAAAAGVE}{\bkmkend AAAAAAAGVE}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 00235}}}
+ {\cf17 inline} std::ostream& {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGQC" }{}}{\fldrslt {\cs37\ul\cf2 operator <<}}}
+(std::ostream& os, {\cf17 const} {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+& sb) \{\par
+{\bkmkstart AAAAAAAGVF}{\bkmkend AAAAAAAGVF}
+00236   {\cf19 return} os << sb.{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPP" }{}}{\fldrslt {\cs37\ul\cf2 GetString}}}
+();\par
+{\bkmkstart AAAAAAAGVG}{\bkmkend AAAAAAAGVG}
+00237 \}\par
+{\bkmkstart AAAAAAAGVH}{\bkmkend AAAAAAAGVH}
+00238 \par
+{\bkmkstart AAAAAAAGVI}{\bkmkend AAAAAAAGVI}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVJ" }{}}{\fldrslt {\cs37\ul\cf2 00239}}}
+ {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAAAGVK}{\bkmkend AAAAAAAGVK}
+00240 \par
+{\bkmkstart AAAAAAAGVL}{\bkmkend AAAAAAAGVL}
+00241 {\cf20 // Converts a streamable value to an std::string.  A NULL pointer is}\par
+{\bkmkstart AAAAAAAGVM}{\bkmkend AAAAAAAGVM}
+00242 {\cf20 // converted to "(null)".  When the input value is a ::string,}\par
+{\bkmkstart AAAAAAAGVN}{\bkmkend AAAAAAAGVN}
+00243 {\cf20 // ::std::string, ::wstring, or ::std::wstring object, each NUL}\par
+{\bkmkstart AAAAAAAGVO}{\bkmkend AAAAAAAGVO}
+00244 {\cf20 // character in it is replaced with "\\\\0".}\par
+{\bkmkstart AAAAAAAGVP}{\bkmkend AAAAAAAGVP}
+00245 {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAGVQ}{\bkmkend AAAAAAAGVQ}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVR" }{}}{\fldrslt {\cs37\ul\cf2 00246}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAABRR" }{}}{\fldrslt {\cs37\ul\cf2 std::string}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVR" }{}}{\fldrslt {\cs37\ul\cf2 StreamableToString}}}
+({\cf17 const} T& streamable) \{\par
+{\bkmkstart AAAAAAAGVS}{\bkmkend AAAAAAAGVS}
+00247   {\cf19 return} ({\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGPA" }{}}{\fldrslt {\cs37\ul\cf2 Message}}}
+() << streamable).GetString();\par
+{\bkmkstart AAAAAAAGVT}{\bkmkend AAAAAAAGVT}
+00248 \}\par
+{\bkmkstart AAAAAAAGVU}{\bkmkend AAAAAAAGVU}
+00249 \par
+{\bkmkstart AAAAAAAGVV}{\bkmkend AAAAAAAGVV}
+00250 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAAAGVW}{\bkmkend AAAAAAAGVW}
+00251 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAGVX}{\bkmkend AAAAAAAGVX}
+00252 \par
+{\bkmkstart AAAAAAAGVY}{\bkmkend AAAAAAAGVY}
+00253 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGVZ" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DISABLE_MSC_WARNINGS_POP_}}}
+()  {\cf20 //  4251}\par
+{\bkmkstart AAAAAAAGWA}{\bkmkend AAAAAAAGWA}
+00254 \par
+{\bkmkstart AAAAAAAGWB}{\bkmkend AAAAAAAGWB}
+00255 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_GTEST_MESSAGE_H_}\par
+}
+}

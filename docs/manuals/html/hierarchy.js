@@ -10,6 +10,7 @@ var hierarchy =
       ] ],
       [ "CmdLineS", "d0/d1b/classcmdline_1_1_cmd_line_s.html", null ]
     ] ],
+    [ "CmdLineException", "db/d2d/class_cmd_line_exception.html", null ],
     [ "CommandLine", "d1/d0c/class__cmdline_1_1_command_line.html", null ],
     [ "Flag", "d5/dbf/struct_flag.html", null ],
     [ "Garbage", "db/df8/class_garbage.html", null ],
@@ -18,9 +19,9 @@ var hierarchy =
         [ "CmdLineDuplicateArgumentException", "d6/dd7/classcmdline_1_1_cmd_line_duplicate_argument_exception.html", null ],
         [ "CmdLineParameterException", "d1/d0b/classcmdline_1_1_cmd_line_parameter_exception.html", null ],
         [ "CmdLineValueException", "d8/d74/classcmdline_1_1_cmd_line_value_exception.html", null ],
-        [ "HelpException", "d5/d97/classcmdline_1_1_help_exception.html", [
+        [ "HelpRequested", "df/db7/classcmdline_1_1_help_requested.html", [
           [ "HelpDetailedRequested", "d7/db2/classcmdline_1_1_help_detailed_requested.html", null ],
-          [ "HelpRequested", "df/db7/classcmdline_1_1_help_requested.html", null ]
+          [ "HelpSimpleRequested", "d4/ddb/classcmdline_1_1_help_simple_requested.html", null ]
         ] ]
       ] ]
     ] ],
@@ -30,12 +31,14 @@ var hierarchy =
       [ "ParmFlag", "d0/d79/classcmdline_1_1_parm_flag.html", null ],
       [ "ParmOption", "d3/d85/classcmdline_1_1_parm_option.html", null ]
     ] ],
+    [ "Parm", "df/de1/class_parm.html", null ],
     [ "ParmDef", "db/d47/struct_parm_def.html", null ],
+    [ "ParmFlag", "da/d2a/class_parm_flag.html", null ],
     [ "runtime_error", null, [
       [ "CmdLineInvalidTypeException", "db/d21/classcmdline_1_1_cmd_line_invalid_type_exception.html", null ],
       [ "CmdLineNotFoundException", "d3/dd2/classcmdline_1_1_cmd_line_not_found_exception.html", null ]
     ] ],
-    [ "unordered_map", null, [
+    [ "unordered_map", "db/d70/classunordered__map.html", [
       [ "Group", "d2/dc1/class__cmdline_1_1_group.html", null ]
     ] ]
 ];

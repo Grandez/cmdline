@@ -1,0 +1,32 @@
+digraph "libcmdline/include/cmdline_exceptions.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="libcmdline/include\l/cmdline_exceptions.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="libcmdline/include\l/cmdline.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dff/libcmdline_2include_2cmdline_8hpp.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="libcmdline/include\l/argument.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d04/argument_8hpp.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="libcmdline/include\l/defines.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/df8/defines_8hpp.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="libcmdline/src/commandline.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d0d/commandline_8cpp.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="libcmdline/include\l/group.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d3d/group_8hpp.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="libcmdline/include\l/commandline.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d91/commandline_8hpp.html",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="libcmdline/src/cmdline.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db5/cmdline_8cpp.html",tooltip=" "];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="libcmdline/src/cmdline\l_flavors.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d60/cmdline__flavors_8cpp.html",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="libcmdline/src/argument.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df9/argument_8cpp.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="libcmdline/include\l/interface.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/db7/interface_8cpp.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="testcmdline/validationsTest.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6a/validations_test_8cpp.html",tooltip=" "];
+}

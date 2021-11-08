@@ -12,19 +12,38 @@
 #endif
 
 namespace cmdline {
-	static std::string mountMessage(const char* fmt, va_list list) {
+	std::string mountMessage(const char* fmt, va_list list) {
 		char t[255];
 		std::vsprintf(t, fmt, list);
 		return std::string(t);
 	}
+/*
+	std::string mountMessage(const char* fmt, char * list) {
+		char t[255];
+		std::sprintf(t, fmt, list);
+		return std::string(t);
+	}
+*/
 	CmdLineException::CmdLineException(char* txt) : invalid_argument(txt) {};
 	CmdLineException::CmdLineException(const char* fmt, ...) : invalid_argument("") {
 		va_list args;
 		va_start(args, fmt);
-		std::string txt = mountMessage(fmt, args);
+        std::string txt = mountMessage(fmt, args);
+        va_end(args);
+		this->invalid_argument::~invalid_argument();
+		new (this) invalid_argument(TXT_ERROR + txt); //
+	}
+/*
+	CmdLineException::CmdLineException(const char* fmt, char *more) : invalid_argument("") {
+//		va_list args;
+//		va_start(args, fmt);
+	//	std::string txt = mountMessage(fmt, args);
+ 	std::string txt = mountMessage(fmt, more);
+//        va_end(args);
 		this->invalid_argument::~invalid_argument();
 		new (this) invalid_argument(txt); //
 	}
+*/
 	CmdLineParameterException::CmdLineParameterException(const char* fmt, ...) {
 		va_list args;
 		va_start(args, fmt);

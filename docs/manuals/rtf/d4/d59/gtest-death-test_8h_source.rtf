@@ -1,0 +1,817 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gtest-death-test.h\par \pard\plain 
+{\tc\tcl2 \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-death-test.h}
+{\xe \v packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4/build/native/include/gtest/gtest-death-test.h}
+{\bkmkstart AAAAAAAFXW}
+{\bkmkend AAAAAAAFXW}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFXX" }{}}{\fldrslt {\cs37\ul\cf2 Go to the documentation of this file.}}}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAAFXY}{\bkmkend AAAAAAAFXY}
+00001 {\cf20 // Copyright 2005, Google Inc.}\par
+{\bkmkstart AAAAAAAFXZ}{\bkmkend AAAAAAAFXZ}
+00002 {\cf20 // All rights reserved.}\par
+{\bkmkstart AAAAAAAFYA}{\bkmkend AAAAAAAFYA}
+00003 {\cf20 //}\par
+{\bkmkstart AAAAAAAFYB}{\bkmkend AAAAAAAFYB}
+00004 {\cf20 // Redistribution and use in source and binary forms, with or without}\par
+{\bkmkstart AAAAAAAFYC}{\bkmkend AAAAAAAFYC}
+00005 {\cf20 // modification, are permitted provided that the following conditions are}\par
+{\bkmkstart AAAAAAAFYD}{\bkmkend AAAAAAAFYD}
+00006 {\cf20 // met:}\par
+{\bkmkstart AAAAAAAFYE}{\bkmkend AAAAAAAFYE}
+00007 {\cf20 //}\par
+{\bkmkstart AAAAAAAFYF}{\bkmkend AAAAAAAFYF}
+00008 {\cf20 //     * Redistributions of source code must retain the above copyright}\par
+{\bkmkstart AAAAAAAFYG}{\bkmkend AAAAAAAFYG}
+00009 {\cf20 // notice, this list of conditions and the following disclaimer.}\par
+{\bkmkstart AAAAAAAFYH}{\bkmkend AAAAAAAFYH}
+00010 {\cf20 //     * Redistributions in binary form must reproduce the above}\par
+{\bkmkstart AAAAAAAFYI}{\bkmkend AAAAAAAFYI}
+00011 {\cf20 // copyright notice, this list of conditions and the following disclaimer}\par
+{\bkmkstart AAAAAAAFYJ}{\bkmkend AAAAAAAFYJ}
+00012 {\cf20 // in the documentation and/or other materials provided with the}\par
+{\bkmkstart AAAAAAAFYK}{\bkmkend AAAAAAAFYK}
+00013 {\cf20 // distribution.}\par
+{\bkmkstart AAAAAAAFYL}{\bkmkend AAAAAAAFYL}
+00014 {\cf20 //     * Neither the name of Google Inc. nor the names of its}\par
+{\bkmkstart AAAAAAAFYM}{\bkmkend AAAAAAAFYM}
+00015 {\cf20 // contributors may be used to endorse or promote products derived from}\par
+{\bkmkstart AAAAAAAFYN}{\bkmkend AAAAAAAFYN}
+00016 {\cf20 // this software without specific prior written permission.}\par
+{\bkmkstart AAAAAAAFYO}{\bkmkend AAAAAAAFYO}
+00017 {\cf20 //}\par
+{\bkmkstart AAAAAAAFYP}{\bkmkend AAAAAAAFYP}
+00018 {\cf20 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}\par
+{\bkmkstart AAAAAAAFYQ}{\bkmkend AAAAAAAFYQ}
+00019 {\cf20 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAFYR}{\bkmkend AAAAAAAFYR}
+00020 {\cf20 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}\par
+{\bkmkstart AAAAAAAFYS}{\bkmkend AAAAAAAFYS}
+00021 {\cf20 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}\par
+{\bkmkstart AAAAAAAFYT}{\bkmkend AAAAAAAFYT}
+00022 {\cf20 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}\par
+{\bkmkstart AAAAAAAFYU}{\bkmkend AAAAAAAFYU}
+00023 {\cf20 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}\par
+{\bkmkstart AAAAAAAFYV}{\bkmkend AAAAAAAFYV}
+00024 {\cf20 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}\par
+{\bkmkstart AAAAAAAFYW}{\bkmkend AAAAAAAFYW}
+00025 {\cf20 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}\par
+{\bkmkstart AAAAAAAFYX}{\bkmkend AAAAAAAFYX}
+00026 {\cf20 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}\par
+{\bkmkstart AAAAAAAFYY}{\bkmkend AAAAAAAFYY}
+00027 {\cf20 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}\par
+{\bkmkstart AAAAAAAFYZ}{\bkmkend AAAAAAAFYZ}
+00028 {\cf20 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}\par
+{\bkmkstart AAAAAAAFZA}{\bkmkend AAAAAAAFZA}
+00029 \par
+{\bkmkstart AAAAAAAFZB}{\bkmkend AAAAAAAFZB}
+00030 {\cf20 //}\par
+{\bkmkstart AAAAAAAFZC}{\bkmkend AAAAAAAFZC}
+00031 {\cf20 // The Google C++ Testing and Mocking Framework (Google Test)}\par
+{\bkmkstart AAAAAAAFZD}{\bkmkend AAAAAAAFZD}
+00032 {\cf20 //}\par
+{\bkmkstart AAAAAAAFZE}{\bkmkend AAAAAAAFZE}
+00033 {\cf20 // This header file defines the public API for death tests.  It is}\par
+{\bkmkstart AAAAAAAFZF}{\bkmkend AAAAAAAFZF}
+00034 {\cf20 // #included by gtest.h so a user doesn't need to include this}\par
+{\bkmkstart AAAAAAAFZG}{\bkmkend AAAAAAAFZG}
+00035 {\cf20 // directly.}\par
+{\bkmkstart AAAAAAAFZH}{\bkmkend AAAAAAAFZH}
+00036 {\cf20 // GOOGLETEST_CM0001 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAFZI}{\bkmkend AAAAAAAFZI}
+00037 \par
+{\bkmkstart AAAAAAAFZJ}{\bkmkend AAAAAAAFZJ}
+00038 {\cf21 #ifndef GTEST_INCLUDE_GTEST_GTEST_DEATH_TEST_H_}\par
+{\bkmkstart AAAAAAAFZK}{\bkmkend AAAAAAAFZK}
+00039 {\cf21 #define GTEST_INCLUDE_GTEST_GTEST_DEATH_TEST_H_}\par
+{\bkmkstart AAAAAAAFZL}{\bkmkend AAAAAAAFZL}
+00040 \par
+{\bkmkstart AAAAAAAFZM}{\bkmkend AAAAAAAFZM}
+00041 {\cf21 #include "{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZN" }{}}{\fldrslt {\cs37\ul\cf2 gtest/internal/gtest-death-test-internal.h}}}
+"}\par
+{\bkmkstart AAAAAAAFZO}{\bkmkend AAAAAAAFZO}
+00042 \par
+{\bkmkstart AAAAAAAFZP}{\bkmkend AAAAAAAFZP}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 00043}}}
+ {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZQ" }{}}{\fldrslt {\cs37\ul\cf2 testing}}}
+ \{\par
+{\bkmkstart AAAAAAAFZR}{\bkmkend AAAAAAAFZR}
+00044 \par
+{\bkmkstart AAAAAAAFZS}{\bkmkend AAAAAAAFZS}
+00045 {\cf20 // This flag controls the style of death tests.  Valid values are "threadsafe",}\par
+{\bkmkstart AAAAAAAFZT}{\bkmkend AAAAAAAFZT}
+00046 {\cf20 // meaning that the death test child process will re-execute the test binary}\par
+{\bkmkstart AAAAAAAFZU}{\bkmkend AAAAAAAFZU}
+00047 {\cf20 // from the start, running only a single death test, or "fast",}\par
+{\bkmkstart AAAAAAAFZV}{\bkmkend AAAAAAAFZV}
+00048 {\cf20 // meaning that the child process will execute the test logic immediately}\par
+{\bkmkstart AAAAAAAFZW}{\bkmkend AAAAAAAFZW}
+00049 {\cf20 // after forking.}\par
+{\bkmkstart AAAAAAAFZX}{\bkmkend AAAAAAAFZX}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZY" }{}}{\fldrslt {\cs37\ul\cf2 00050}}}
+ {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAFZY" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_DECLARE_string_}}}
+(death_test_style);\par
+{\bkmkstart AAAAAAAFZZ}{\bkmkend AAAAAAAFZZ}
+00051 \par
+{\bkmkstart AAAAAAAGAA}{\bkmkend AAAAAAAGAA}
+00052 {\cf21 #if GTEST_HAS_DEATH_TEST}\par
+{\bkmkstart AAAAAAAGAB}{\bkmkend AAAAAAAGAB}
+00053 \par
+{\bkmkstart AAAAAAAGAC}{\bkmkend AAAAAAAGAC}
+00054 {\cf17 namespace }internal \{\par
+{\bkmkstart AAAAAAAGAD}{\bkmkend AAAAAAAGAD}
+00055 \par
+{\bkmkstart AAAAAAAGAE}{\bkmkend AAAAAAAGAE}
+00056 {\cf20 // Returns a Boolean value indicating whether the caller is currently}\par
+{\bkmkstart AAAAAAAGAF}{\bkmkend AAAAAAAGAF}
+00057 {\cf20 // executing in the context of the death test child process.  Tools such as}\par
+{\bkmkstart AAAAAAAGAG}{\bkmkend AAAAAAAGAG}
+00058 {\cf20 // Valgrind heap checkers may need this to modify their behavior in death}\par
+{\bkmkstart AAAAAAAGAH}{\bkmkend AAAAAAAGAH}
+00059 {\cf20 // tests.  IMPORTANT: This is an internal utility.  Using it may break the}\par
+{\bkmkstart AAAAAAAGAI}{\bkmkend AAAAAAAGAI}
+00060 {\cf20 // implementation of death tests.  User code MUST NOT use it.}\par
+{\bkmkstart AAAAAAAGAJ}{\bkmkend AAAAAAAGAJ}
+00061 {\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ {\cf18 bool} InDeathTestChild();\par
+{\bkmkstart AAAAAAAGAL}{\bkmkend AAAAAAAGAL}
+00062 \par
+{\bkmkstart AAAAAAAGAM}{\bkmkend AAAAAAAGAM}
+00063 \}  {\cf20 // namespace internal}\par
+{\bkmkstart AAAAAAAGAN}{\bkmkend AAAAAAAGAN}
+00064 \par
+{\bkmkstart AAAAAAAGAO}{\bkmkend AAAAAAAGAO}
+00065 {\cf20 // The following macros are useful for writing death tests.}\par
+{\bkmkstart AAAAAAAGAP}{\bkmkend AAAAAAAGAP}
+00066 \par
+{\bkmkstart AAAAAAAGAQ}{\bkmkend AAAAAAAGAQ}
+00067 {\cf20 // Here's what happens when an ASSERT_DEATH* or EXPECT_DEATH* is}\par
+{\bkmkstart AAAAAAAGAR}{\bkmkend AAAAAAAGAR}
+00068 {\cf20 // executed:}\par
+{\bkmkstart AAAAAAAGAS}{\bkmkend AAAAAAAGAS}
+00069 {\cf20 //}\par
+{\bkmkstart AAAAAAAGAT}{\bkmkend AAAAAAAGAT}
+00070 {\cf20 //   1. It generates a warning if there is more than one active}\par
+{\bkmkstart AAAAAAAGAU}{\bkmkend AAAAAAAGAU}
+00071 {\cf20 //   thread.  This is because it's safe to fork() or clone() only}\par
+{\bkmkstart AAAAAAAGAV}{\bkmkend AAAAAAAGAV}
+00072 {\cf20 //   when there is a single thread.}\par
+{\bkmkstart AAAAAAAGAW}{\bkmkend AAAAAAAGAW}
+00073 {\cf20 //}\par
+{\bkmkstart AAAAAAAGAX}{\bkmkend AAAAAAAGAX}
+00074 {\cf20 //   2. The parent process clone()s a sub-process and runs the death}\par
+{\bkmkstart AAAAAAAGAY}{\bkmkend AAAAAAAGAY}
+00075 {\cf20 //   test in it; the sub-process exits with code 0 at the end of the}\par
+{\bkmkstart AAAAAAAGAZ}{\bkmkend AAAAAAAGAZ}
+00076 {\cf20 //   death test, if it hasn't exited already.}\par
+{\bkmkstart AAAAAAAGBA}{\bkmkend AAAAAAAGBA}
+00077 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBB}{\bkmkend AAAAAAAGBB}
+00078 {\cf20 //   3. The parent process waits for the sub-process to terminate.}\par
+{\bkmkstart AAAAAAAGBC}{\bkmkend AAAAAAAGBC}
+00079 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBD}{\bkmkend AAAAAAAGBD}
+00080 {\cf20 //   4. The parent process checks the exit code and error message of}\par
+{\bkmkstart AAAAAAAGBE}{\bkmkend AAAAAAAGBE}
+00081 {\cf20 //   the sub-process.}\par
+{\bkmkstart AAAAAAAGBF}{\bkmkend AAAAAAAGBF}
+00082 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBG}{\bkmkend AAAAAAAGBG}
+00083 {\cf20 // Examples:}\par
+{\bkmkstart AAAAAAAGBH}{\bkmkend AAAAAAAGBH}
+00084 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBI}{\bkmkend AAAAAAAGBI}
+00085 {\cf20 //   ASSERT_DEATH(server.SendMessage(56, "Hello"), "Invalid port number");}\par
+{\bkmkstart AAAAAAAGBJ}{\bkmkend AAAAAAAGBJ}
+00086 {\cf20 //   for (int i = 0; i < 5; i++) \{}\par
+{\bkmkstart AAAAAAAGBK}{\bkmkend AAAAAAAGBK}
+00087 {\cf20 //     EXPECT_DEATH(server.ProcessRequest(i),}\par
+{\bkmkstart AAAAAAAGBL}{\bkmkend AAAAAAAGBL}
+00088 {\cf20 //                  "Invalid request .* in ProcessRequest()")}\par
+{\bkmkstart AAAAAAAGBM}{\bkmkend AAAAAAAGBM}
+00089 {\cf20 //                  << "Failed to die on request " << i;}\par
+{\bkmkstart AAAAAAAGBN}{\bkmkend AAAAAAAGBN}
+00090 {\cf20 //   \}}\par
+{\bkmkstart AAAAAAAGBO}{\bkmkend AAAAAAAGBO}
+00091 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBP}{\bkmkend AAAAAAAGBP}
+00092 {\cf20 //   ASSERT_EXIT(server.ExitNow(), ::testing::ExitedWithCode(0), "Exiting");}\par
+{\bkmkstart AAAAAAAGBQ}{\bkmkend AAAAAAAGBQ}
+00093 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBR}{\bkmkend AAAAAAAGBR}
+00094 {\cf20 //   bool KilledBySIGHUP(int exit_code) \{}\par
+{\bkmkstart AAAAAAAGBS}{\bkmkend AAAAAAAGBS}
+00095 {\cf20 //     return WIFSIGNALED(exit_code) && WTERMSIG(exit_code) == SIGHUP;}\par
+{\bkmkstart AAAAAAAGBT}{\bkmkend AAAAAAAGBT}
+00096 {\cf20 //   \}}\par
+{\bkmkstart AAAAAAAGBU}{\bkmkend AAAAAAAGBU}
+00097 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBV}{\bkmkend AAAAAAAGBV}
+00098 {\cf20 //   ASSERT_EXIT(client.HangUpServer(), KilledBySIGHUP, "Hanging up!");}\par
+{\bkmkstart AAAAAAAGBW}{\bkmkend AAAAAAAGBW}
+00099 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBX}{\bkmkend AAAAAAAGBX}
+00100 {\cf20 // On the regular expressions used in death tests:}\par
+{\bkmkstart AAAAAAAGBY}{\bkmkend AAAAAAAGBY}
+00101 {\cf20 //}\par
+{\bkmkstart AAAAAAAGBZ}{\bkmkend AAAAAAAGBZ}
+00102 {\cf20 //   GOOGLETEST_CM0005 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAGCA}{\bkmkend AAAAAAAGCA}
+00103 {\cf20 //   On POSIX-compliant systems (*nix), we use the <regex.h> library,}\par
+{\bkmkstart AAAAAAAGCB}{\bkmkend AAAAAAAGCB}
+00104 {\cf20 //   which uses the POSIX extended regex syntax.}\par
+{\bkmkstart AAAAAAAGCC}{\bkmkend AAAAAAAGCC}
+00105 {\cf20 //}\par
+{\bkmkstart AAAAAAAGCD}{\bkmkend AAAAAAAGCD}
+00106 {\cf20 //   On other platforms (e.g. Windows or Mac), we only support a simple regex}\par
+{\bkmkstart AAAAAAAGCE}{\bkmkend AAAAAAAGCE}
+00107 {\cf20 //   syntax implemented as part of Google Test.  This limited}\par
+{\bkmkstart AAAAAAAGCF}{\bkmkend AAAAAAAGCF}
+00108 {\cf20 //   implementation should be enough most of the time when writing}\par
+{\bkmkstart AAAAAAAGCG}{\bkmkend AAAAAAAGCG}
+00109 {\cf20 //   death tests; though it lacks many features you can find in PCRE}\par
+{\bkmkstart AAAAAAAGCH}{\bkmkend AAAAAAAGCH}
+00110 {\cf20 //   or POSIX extended regex syntax.  For example, we don't support}\par
+{\bkmkstart AAAAAAAGCI}{\bkmkend AAAAAAAGCI}
+00111 {\cf20 //   union ("x|y"), grouping ("(xy)"), brackets ("[xy]"), and}\par
+{\bkmkstart AAAAAAAGCJ}{\bkmkend AAAAAAAGCJ}
+00112 {\cf20 //   repetition count ("x\{5,7\}"), among others.}\par
+{\bkmkstart AAAAAAAGCK}{\bkmkend AAAAAAAGCK}
+00113 {\cf20 //}\par
+{\bkmkstart AAAAAAAGCL}{\bkmkend AAAAAAAGCL}
+00114 {\cf20 //   Below is the syntax that we do support.  We chose it to be a}\par
+{\bkmkstart AAAAAAAGCM}{\bkmkend AAAAAAAGCM}
+00115 {\cf20 //   subset of both PCRE and POSIX extended regex, so it's easy to}\par
+{\bkmkstart AAAAAAAGCN}{\bkmkend AAAAAAAGCN}
+00116 {\cf20 //   learn wherever you come from.  In the following: 'A' denotes a}\par
+{\bkmkstart AAAAAAAGCO}{\bkmkend AAAAAAAGCO}
+00117 {\cf20 //   literal character, period (.), or a single \\\\ escape sequence;}\par
+{\bkmkstart AAAAAAAGCP}{\bkmkend AAAAAAAGCP}
+00118 {\cf20 //   'x' and 'y' denote regular expressions; 'm' and 'n' are for}\par
+{\bkmkstart AAAAAAAGCQ}{\bkmkend AAAAAAAGCQ}
+00119 {\cf20 //   natural numbers.}\par
+{\bkmkstart AAAAAAAGCR}{\bkmkend AAAAAAAGCR}
+00120 {\cf20 //}\par
+{\bkmkstart AAAAAAAGCS}{\bkmkend AAAAAAAGCS}
+00121 {\cf20 //     c     matches any literal character c}\par
+{\bkmkstart AAAAAAAGCT}{\bkmkend AAAAAAAGCT}
+00122 {\cf20 //     \\\\d   matches any decimal digit}\par
+{\bkmkstart AAAAAAAGCU}{\bkmkend AAAAAAAGCU}
+00123 {\cf20 //     \\\\D   matches any character that's not a decimal digit}\par
+{\bkmkstart AAAAAAAGCV}{\bkmkend AAAAAAAGCV}
+00124 {\cf20 //     \\\\f   matches \\f}\par
+{\bkmkstart AAAAAAAGCW}{\bkmkend AAAAAAAGCW}
+00125 {\cf20 //     \\\\n   matches \\n}\par
+{\bkmkstart AAAAAAAGCX}{\bkmkend AAAAAAAGCX}
+00126 {\cf20 //     \\\\r   matches \\r}\par
+{\bkmkstart AAAAAAAGCY}{\bkmkend AAAAAAAGCY}
+00127 {\cf20 //     \\\\s   matches any ASCII whitespace, including \\n}\par
+{\bkmkstart AAAAAAAGCZ}{\bkmkend AAAAAAAGCZ}
+00128 {\cf20 //     \\\\S   matches any character that's not a whitespace}\par
+{\bkmkstart AAAAAAAGDA}{\bkmkend AAAAAAAGDA}
+00129 {\cf20 //     \\\\t   matches \\t}\par
+{\bkmkstart AAAAAAAGDB}{\bkmkend AAAAAAAGDB}
+00130 {\cf20 //     \\\\v   matches \\v}\par
+{\bkmkstart AAAAAAAGDC}{\bkmkend AAAAAAAGDC}
+00131 {\cf20 //     \\\\w   matches any letter, _, or decimal digit}\par
+{\bkmkstart AAAAAAAGDD}{\bkmkend AAAAAAAGDD}
+00132 {\cf20 //     \\\\W   matches any character that \\\\w doesn't match}\par
+{\bkmkstart AAAAAAAGDE}{\bkmkend AAAAAAAGDE}
+00133 {\cf20 //     \\\\c   matches any literal character c, which must be a punctuation}\par
+{\bkmkstart AAAAAAAGDF}{\bkmkend AAAAAAAGDF}
+00134 {\cf20 //     .     matches any single character except \\n}\par
+{\bkmkstart AAAAAAAGDG}{\bkmkend AAAAAAAGDG}
+00135 {\cf20 //     A?    matches 0 or 1 occurrences of A}\par
+{\bkmkstart AAAAAAAGDH}{\bkmkend AAAAAAAGDH}
+00136 {\cf20 //     A*    matches 0 or many occurrences of A}\par
+{\bkmkstart AAAAAAAGDI}{\bkmkend AAAAAAAGDI}
+00137 {\cf20 //     A+    matches 1 or many occurrences of A}\par
+{\bkmkstart AAAAAAAGDJ}{\bkmkend AAAAAAAGDJ}
+00138 {\cf20 //     ^     matches the beginning of a string (not that of each line)}\par
+{\bkmkstart AAAAAAAGDK}{\bkmkend AAAAAAAGDK}
+00139 {\cf20 //     $     matches the end of a string (not that of each line)}\par
+{\bkmkstart AAAAAAAGDL}{\bkmkend AAAAAAAGDL}
+00140 {\cf20 //     xy    matches x followed by y}\par
+{\bkmkstart AAAAAAAGDM}{\bkmkend AAAAAAAGDM}
+00141 {\cf20 //}\par
+{\bkmkstart AAAAAAAGDN}{\bkmkend AAAAAAAGDN}
+00142 {\cf20 //   If you accidentally use PCRE or POSIX extended regex features}\par
+{\bkmkstart AAAAAAAGDO}{\bkmkend AAAAAAAGDO}
+00143 {\cf20 //   not implemented by us, you will get a run-time failure.  In that}\par
+{\bkmkstart AAAAAAAGDP}{\bkmkend AAAAAAAGDP}
+00144 {\cf20 //   case, please try to rewrite your regular expression within the}\par
+{\bkmkstart AAAAAAAGDQ}{\bkmkend AAAAAAAGDQ}
+00145 {\cf20 //   above syntax.}\par
+{\bkmkstart AAAAAAAGDR}{\bkmkend AAAAAAAGDR}
+00146 {\cf20 //}\par
+{\bkmkstart AAAAAAAGDS}{\bkmkend AAAAAAAGDS}
+00147 {\cf20 //   This implementation is *not* meant to be as highly tuned or robust}\par
+{\bkmkstart AAAAAAAGDT}{\bkmkend AAAAAAAGDT}
+00148 {\cf20 //   as a compiled regex library, but should perform well enough for a}\par
+{\bkmkstart AAAAAAAGDU}{\bkmkend AAAAAAAGDU}
+00149 {\cf20 //   death test, which already incurs significant overhead by launching}\par
+{\bkmkstart AAAAAAAGDV}{\bkmkend AAAAAAAGDV}
+00150 {\cf20 //   a child process.}\par
+{\bkmkstart AAAAAAAGDW}{\bkmkend AAAAAAAGDW}
+00151 {\cf20 //}\par
+{\bkmkstart AAAAAAAGDX}{\bkmkend AAAAAAAGDX}
+00152 {\cf20 // Known caveats:}\par
+{\bkmkstart AAAAAAAGDY}{\bkmkend AAAAAAAGDY}
+00153 {\cf20 //}\par
+{\bkmkstart AAAAAAAGDZ}{\bkmkend AAAAAAAGDZ}
+00154 {\cf20 //   A "threadsafe" style death test obtains the path to the test}\par
+{\bkmkstart AAAAAAAGEA}{\bkmkend AAAAAAAGEA}
+00155 {\cf20 //   program from argv[0] and re-executes it in the sub-process.  For}\par
+{\bkmkstart AAAAAAAGEB}{\bkmkend AAAAAAAGEB}
+00156 {\cf20 //   simplicity, the current implementation doesn't search the PATH}\par
+{\bkmkstart AAAAAAAGEC}{\bkmkend AAAAAAAGEC}
+00157 {\cf20 //   when launching the sub-process.  This means that the user must}\par
+{\bkmkstart AAAAAAAGED}{\bkmkend AAAAAAAGED}
+00158 {\cf20 //   invoke the test program via a path that contains at least one}\par
+{\bkmkstart AAAAAAAGEE}{\bkmkend AAAAAAAGEE}
+00159 {\cf20 //   path separator (e.g. path/to/foo_test and}\par
+{\bkmkstart AAAAAAAGEF}{\bkmkend AAAAAAAGEF}
+00160 {\cf20 //   /absolute/path/to/bar_test are fine, but foo_test is not).  This}\par
+{\bkmkstart AAAAAAAGEG}{\bkmkend AAAAAAAGEG}
+00161 {\cf20 //   is rarely a problem as people usually don't put the test binary}\par
+{\bkmkstart AAAAAAAGEH}{\bkmkend AAAAAAAGEH}
+00162 {\cf20 //   directory in PATH.}\par
+{\bkmkstart AAAAAAAGEI}{\bkmkend AAAAAAAGEI}
+00163 {\cf20 //}\par
+{\bkmkstart AAAAAAAGEJ}{\bkmkend AAAAAAAGEJ}
+00164 {\cf20 // FIXME: make thread-safe death tests search the PATH.}\par
+{\bkmkstart AAAAAAAGEK}{\bkmkend AAAAAAAGEK}
+00165 \par
+{\bkmkstart AAAAAAAGEL}{\bkmkend AAAAAAAGEL}
+00166 {\cf20 // Asserts that a given statement causes the program to exit, with an}\par
+{\bkmkstart AAAAAAAGEM}{\bkmkend AAAAAAAGEM}
+00167 {\cf20 // integer exit status that satisfies predicate, and emitting error output}\par
+{\bkmkstart AAAAAAAGEN}{\bkmkend AAAAAAAGEN}
+00168 {\cf20 // that matches regex.}\par
+{\bkmkstart AAAAAAAGEO}{\bkmkend AAAAAAAGEO}
+00169 {\cf21 # define ASSERT_EXIT(statement, predicate, regex) \\}\par
+{\bkmkstart AAAAAAAGEP}{\bkmkend AAAAAAAGEP}
+00170 {\cf21     GTEST_DEATH_TEST_(statement, predicate, regex, GTEST_FATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAGEQ}{\bkmkend AAAAAAAGEQ}
+00171 \par
+{\bkmkstart AAAAAAAGER}{\bkmkend AAAAAAAGER}
+00172 {\cf20 // Like ASSERT_EXIT, but continues on to successive tests in the}\par
+{\bkmkstart AAAAAAAGES}{\bkmkend AAAAAAAGES}
+00173 {\cf20 // test case, if any:}\par
+{\bkmkstart AAAAAAAGET}{\bkmkend AAAAAAAGET}
+00174 {\cf21 # define EXPECT_EXIT(statement, predicate, regex) \\}\par
+{\bkmkstart AAAAAAAGEU}{\bkmkend AAAAAAAGEU}
+00175 {\cf21     GTEST_DEATH_TEST_(statement, predicate, regex, GTEST_NONFATAL_FAILURE_)}\par
+{\bkmkstart AAAAAAAGEV}{\bkmkend AAAAAAAGEV}
+00176 \par
+{\bkmkstart AAAAAAAGEW}{\bkmkend AAAAAAAGEW}
+00177 {\cf20 // Asserts that a given statement causes the program to exit, either by}\par
+{\bkmkstart AAAAAAAGEX}{\bkmkend AAAAAAAGEX}
+00178 {\cf20 // explicitly exiting with a nonzero exit code or being killed by a}\par
+{\bkmkstart AAAAAAAGEY}{\bkmkend AAAAAAAGEY}
+00179 {\cf20 // signal, and emitting error output that matches regex.}\par
+{\bkmkstart AAAAAAAGEZ}{\bkmkend AAAAAAAGEZ}
+00180 {\cf21 # define ASSERT_DEATH(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGFA}{\bkmkend AAAAAAAGFA}
+00181 {\cf21     ASSERT_EXIT(statement, ::testing::internal::ExitedUnsuccessfully, regex)}\par
+{\bkmkstart AAAAAAAGFB}{\bkmkend AAAAAAAGFB}
+00182 \par
+{\bkmkstart AAAAAAAGFC}{\bkmkend AAAAAAAGFC}
+00183 {\cf20 // Like ASSERT_DEATH, but continues on to successive tests in the}\par
+{\bkmkstart AAAAAAAGFD}{\bkmkend AAAAAAAGFD}
+00184 {\cf20 // test case, if any:}\par
+{\bkmkstart AAAAAAAGFE}{\bkmkend AAAAAAAGFE}
+00185 {\cf21 # define EXPECT_DEATH(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGFF}{\bkmkend AAAAAAAGFF}
+00186 {\cf21     EXPECT_EXIT(statement, ::testing::internal::ExitedUnsuccessfully, regex)}\par
+{\bkmkstart AAAAAAAGFG}{\bkmkend AAAAAAAGFG}
+00187 \par
+{\bkmkstart AAAAAAAGFH}{\bkmkend AAAAAAAGFH}
+00188 {\cf20 // Two predicate classes that can be used in \{ASSERT,EXPECT\}_EXIT*:}\par
+{\bkmkstart AAAAAAAGFI}{\bkmkend AAAAAAAGFI}
+00189 \par
+{\bkmkstart AAAAAAAGFJ}{\bkmkend AAAAAAAGFJ}
+00190 {\cf20 // Tests that an exit code describes a normal exit with a given exit code.}\par
+{\bkmkstart AAAAAAAGFK}{\bkmkend AAAAAAAGFK}
+00191 {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ ExitedWithCode \{\par
+{\bkmkstart AAAAAAAGFL}{\bkmkend AAAAAAAGFL}
+00192  {\cf17 public}:\par
+{\bkmkstart AAAAAAAGFM}{\bkmkend AAAAAAAGFM}
+00193   {\cf17 explicit} ExitedWithCode({\cf18 int} exit_code);\par
+{\bkmkstart AAAAAAAGFN}{\bkmkend AAAAAAAGFN}
+00194   {\cf18 bool} operator()({\cf18 int} exit_status) {\cf17 const};\par
+{\bkmkstart AAAAAAAGFO}{\bkmkend AAAAAAAGFO}
+00195  {\cf17 private}:\par
+{\bkmkstart AAAAAAAGFP}{\bkmkend AAAAAAAGFP}
+00196   {\cf20 // No implementation - assignment is unsupported.}\par
+{\bkmkstart AAAAAAAGFQ}{\bkmkend AAAAAAAGFQ}
+00197   {\cf18 void} operator=({\cf17 const} ExitedWithCode& other);\par
+{\bkmkstart AAAAAAAGFR}{\bkmkend AAAAAAAGFR}
+00198 \par
+{\bkmkstart AAAAAAAGFS}{\bkmkend AAAAAAAGFS}
+00199   {\cf17 const} {\cf18 int} exit_code_;\par
+{\bkmkstart AAAAAAAGFT}{\bkmkend AAAAAAAGFT}
+00200 \};\par
+{\bkmkstart AAAAAAAGFU}{\bkmkend AAAAAAAGFU}
+00201 \par
+{\bkmkstart AAAAAAAGFV}{\bkmkend AAAAAAAGFV}
+00202 {\cf21 # if !GTEST_OS_WINDOWS && !GTEST_OS_FUCHSIA}\par
+{\bkmkstart AAAAAAAGFW}{\bkmkend AAAAAAAGFW}
+00203 {\cf20 // Tests that an exit code describes an exit due to termination by a}\par
+{\bkmkstart AAAAAAAGFX}{\bkmkend AAAAAAAGFX}
+00204 {\cf20 // given signal.}\par
+{\bkmkstart AAAAAAAGFY}{\bkmkend AAAAAAAGFY}
+00205 {\cf20 // GOOGLETEST_CM0006 DO NOT DELETE}\par
+{\bkmkstart AAAAAAAGFZ}{\bkmkend AAAAAAAGFZ}
+00206 {\cf17 class }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGAK" }{}}{\fldrslt {\cs37\ul\cf2 GTEST_API_}}}
+ KilledBySignal \{\par
+{\bkmkstart AAAAAAAGGA}{\bkmkend AAAAAAAGGA}
+00207  {\cf17 public}:\par
+{\bkmkstart AAAAAAAGGB}{\bkmkend AAAAAAAGGB}
+00208   {\cf17 explicit} KilledBySignal({\cf18 int} signum);\par
+{\bkmkstart AAAAAAAGGC}{\bkmkend AAAAAAAGGC}
+00209   {\cf18 bool} operator()({\cf18 int} exit_status) {\cf17 const};\par
+{\bkmkstart AAAAAAAGGD}{\bkmkend AAAAAAAGGD}
+00210  {\cf17 private}:\par
+{\bkmkstart AAAAAAAGGE}{\bkmkend AAAAAAAGGE}
+00211   {\cf17 const} {\cf18 int} signum_;\par
+{\bkmkstart AAAAAAAGGF}{\bkmkend AAAAAAAGGF}
+00212 \};\par
+{\bkmkstart AAAAAAAGGG}{\bkmkend AAAAAAAGGG}
+00213 {\cf21 # endif  }{\cf20 // !GTEST_OS_WINDOWS}\par
+{\bkmkstart AAAAAAAGGH}{\bkmkend AAAAAAAGGH}
+00214 \par
+{\bkmkstart AAAAAAAGGI}{\bkmkend AAAAAAAGGI}
+00215 {\cf20 // EXPECT_DEBUG_DEATH asserts that the given statements die in debug mode.}\par
+{\bkmkstart AAAAAAAGGJ}{\bkmkend AAAAAAAGGJ}
+00216 {\cf20 // The death testing framework causes this to have interesting semantics,}\par
+{\bkmkstart AAAAAAAGGK}{\bkmkend AAAAAAAGGK}
+00217 {\cf20 // since the sideeffects of the call are only visible in opt mode, and not}\par
+{\bkmkstart AAAAAAAGGL}{\bkmkend AAAAAAAGGL}
+00218 {\cf20 // in debug mode.}\par
+{\bkmkstart AAAAAAAGGM}{\bkmkend AAAAAAAGGM}
+00219 {\cf20 //}\par
+{\bkmkstart AAAAAAAGGN}{\bkmkend AAAAAAAGGN}
+00220 {\cf20 // In practice, this can be used to test functions that utilize the}\par
+{\bkmkstart AAAAAAAGGO}{\bkmkend AAAAAAAGGO}
+00221 {\cf20 // LOG(DFATAL) macro using the following style:}\par
+{\bkmkstart AAAAAAAGGP}{\bkmkend AAAAAAAGGP}
+00222 {\cf20 //}\par
+{\bkmkstart AAAAAAAGGQ}{\bkmkend AAAAAAAGGQ}
+00223 {\cf20 // int DieInDebugOr12(int* sideeffect) \{}\par
+{\bkmkstart AAAAAAAGGR}{\bkmkend AAAAAAAGGR}
+00224 {\cf20 //   if (sideeffect) \{}\par
+{\bkmkstart AAAAAAAGGS}{\bkmkend AAAAAAAGGS}
+00225 {\cf20 //     *sideeffect = 12;}\par
+{\bkmkstart AAAAAAAGGT}{\bkmkend AAAAAAAGGT}
+00226 {\cf20 //   \}}\par
+{\bkmkstart AAAAAAAGGU}{\bkmkend AAAAAAAGGU}
+00227 {\cf20 //   LOG(DFATAL) << "death";}\par
+{\bkmkstart AAAAAAAGGV}{\bkmkend AAAAAAAGGV}
+00228 {\cf20 //   return 12;}\par
+{\bkmkstart AAAAAAAGGW}{\bkmkend AAAAAAAGGW}
+00229 {\cf20 // \}}\par
+{\bkmkstart AAAAAAAGGX}{\bkmkend AAAAAAAGGX}
+00230 {\cf20 //}\par
+{\bkmkstart AAAAAAAGGY}{\bkmkend AAAAAAAGGY}
+00231 {\cf20 // TEST(TestCase, TestDieOr12WorksInDgbAndOpt) \{}\par
+{\bkmkstart AAAAAAAGGZ}{\bkmkend AAAAAAAGGZ}
+00232 {\cf20 //   int sideeffect = 0;}\par
+{\bkmkstart AAAAAAAGHA}{\bkmkend AAAAAAAGHA}
+00233 {\cf20 //   // Only asserts in dbg.}\par
+{\bkmkstart AAAAAAAGHB}{\bkmkend AAAAAAAGHB}
+00234 {\cf20 //   EXPECT_DEBUG_DEATH(DieInDebugOr12(&sideeffect), "death");}\par
+{\bkmkstart AAAAAAAGHC}{\bkmkend AAAAAAAGHC}
+00235 {\cf20 //}\par
+{\bkmkstart AAAAAAAGHD}{\bkmkend AAAAAAAGHD}
+00236 {\cf20 // #ifdef NDEBUG}\par
+{\bkmkstart AAAAAAAGHE}{\bkmkend AAAAAAAGHE}
+00237 {\cf20 //   // opt-mode has sideeffect visible.}\par
+{\bkmkstart AAAAAAAGHF}{\bkmkend AAAAAAAGHF}
+00238 {\cf20 //   EXPECT_EQ(12, sideeffect);}\par
+{\bkmkstart AAAAAAAGHG}{\bkmkend AAAAAAAGHG}
+00239 {\cf20 // #else}\par
+{\bkmkstart AAAAAAAGHH}{\bkmkend AAAAAAAGHH}
+00240 {\cf20 //   // dbg-mode no visible sideeffect.}\par
+{\bkmkstart AAAAAAAGHI}{\bkmkend AAAAAAAGHI}
+00241 {\cf20 //   EXPECT_EQ(0, sideeffect);}\par
+{\bkmkstart AAAAAAAGHJ}{\bkmkend AAAAAAAGHJ}
+00242 {\cf20 // #endif}\par
+{\bkmkstart AAAAAAAGHK}{\bkmkend AAAAAAAGHK}
+00243 {\cf20 // \}}\par
+{\bkmkstart AAAAAAAGHL}{\bkmkend AAAAAAAGHL}
+00244 {\cf20 //}\par
+{\bkmkstart AAAAAAAGHM}{\bkmkend AAAAAAAGHM}
+00245 {\cf20 // This will assert that DieInDebugReturn12InOpt() crashes in debug}\par
+{\bkmkstart AAAAAAAGHN}{\bkmkend AAAAAAAGHN}
+00246 {\cf20 // mode, usually due to a DCHECK or LOG(DFATAL), but returns the}\par
+{\bkmkstart AAAAAAAGHO}{\bkmkend AAAAAAAGHO}
+00247 {\cf20 // appropriate fallback value (12 in this case) in opt mode. If you}\par
+{\bkmkstart AAAAAAAGHP}{\bkmkend AAAAAAAGHP}
+00248 {\cf20 // need to test that a function has appropriate side-effects in opt}\par
+{\bkmkstart AAAAAAAGHQ}{\bkmkend AAAAAAAGHQ}
+00249 {\cf20 // mode, include assertions against the side-effects.  A general}\par
+{\bkmkstart AAAAAAAGHR}{\bkmkend AAAAAAAGHR}
+00250 {\cf20 // pattern for this is:}\par
+{\bkmkstart AAAAAAAGHS}{\bkmkend AAAAAAAGHS}
+00251 {\cf20 //}\par
+{\bkmkstart AAAAAAAGHT}{\bkmkend AAAAAAAGHT}
+00252 {\cf20 // EXPECT_DEBUG_DEATH(\{}\par
+{\bkmkstart AAAAAAAGHU}{\bkmkend AAAAAAAGHU}
+00253 {\cf20 //   // Side-effects here will have an effect after this statement in}\par
+{\bkmkstart AAAAAAAGHV}{\bkmkend AAAAAAAGHV}
+00254 {\cf20 //   // opt mode, but none in debug mode.}\par
+{\bkmkstart AAAAAAAGHW}{\bkmkend AAAAAAAGHW}
+00255 {\cf20 //   EXPECT_EQ(12, DieInDebugOr12(&sideeffect));}\par
+{\bkmkstart AAAAAAAGHX}{\bkmkend AAAAAAAGHX}
+00256 {\cf20 // \}, "death");}\par
+{\bkmkstart AAAAAAAGHY}{\bkmkend AAAAAAAGHY}
+00257 {\cf20 //}\par
+{\bkmkstart AAAAAAAGHZ}{\bkmkend AAAAAAAGHZ}
+00258 {\cf21 # ifdef NDEBUG}\par
+{\bkmkstart AAAAAAAGIA}{\bkmkend AAAAAAAGIA}
+00259 \par
+{\bkmkstart AAAAAAAGIB}{\bkmkend AAAAAAAGIB}
+00260 {\cf21 #  define EXPECT_DEBUG_DEATH(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGIC}{\bkmkend AAAAAAAGIC}
+00261 {\cf21   GTEST_EXECUTE_STATEMENT_(statement, regex)}\par
+{\bkmkstart AAAAAAAGID}{\bkmkend AAAAAAAGID}
+00262 \par
+{\bkmkstart AAAAAAAGIE}{\bkmkend AAAAAAAGIE}
+00263 {\cf21 #  define ASSERT_DEBUG_DEATH(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGIF}{\bkmkend AAAAAAAGIF}
+00264 {\cf21   GTEST_EXECUTE_STATEMENT_(statement, regex)}\par
+{\bkmkstart AAAAAAAGIG}{\bkmkend AAAAAAAGIG}
+00265 \par
+{\bkmkstart AAAAAAAGIH}{\bkmkend AAAAAAAGIH}
+00266 {\cf21 # else}\par
+{\bkmkstart AAAAAAAGII}{\bkmkend AAAAAAAGII}
+00267 \par
+{\bkmkstart AAAAAAAGIJ}{\bkmkend AAAAAAAGIJ}
+00268 {\cf21 #  define EXPECT_DEBUG_DEATH(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGIK}{\bkmkend AAAAAAAGIK}
+00269 {\cf21   EXPECT_DEATH(statement, regex)}\par
+{\bkmkstart AAAAAAAGIL}{\bkmkend AAAAAAAGIL}
+00270 \par
+{\bkmkstart AAAAAAAGIM}{\bkmkend AAAAAAAGIM}
+00271 {\cf21 #  define ASSERT_DEBUG_DEATH(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGIN}{\bkmkend AAAAAAAGIN}
+00272 {\cf21   ASSERT_DEATH(statement, regex)}\par
+{\bkmkstart AAAAAAAGIO}{\bkmkend AAAAAAAGIO}
+00273 \par
+{\bkmkstart AAAAAAAGIP}{\bkmkend AAAAAAAGIP}
+00274 {\cf21 # endif  }{\cf20 // NDEBUG for EXPECT_DEBUG_DEATH}\par
+{\bkmkstart AAAAAAAGIQ}{\bkmkend AAAAAAAGIQ}
+00275 {\cf21 #endif  }{\cf20 // GTEST_HAS_DEATH_TEST}\par
+{\bkmkstart AAAAAAAGIR}{\bkmkend AAAAAAAGIR}
+00276 \par
+{\bkmkstart AAAAAAAGIS}{\bkmkend AAAAAAAGIS}
+00277 {\cf20 // This macro is used for implementing macros such as}\par
+{\bkmkstart AAAAAAAGIT}{\bkmkend AAAAAAAGIT}
+00278 {\cf20 // EXPECT_DEATH_IF_SUPPORTED and ASSERT_DEATH_IF_SUPPORTED on systems where}\par
+{\bkmkstart AAAAAAAGIU}{\bkmkend AAAAAAAGIU}
+00279 {\cf20 // death tests are not supported. Those macros must compile on such systems}\par
+{\bkmkstart AAAAAAAGIV}{\bkmkend AAAAAAAGIV}
+00280 {\cf20 // iff EXPECT_DEATH and ASSERT_DEATH compile with the same parameters on}\par
+{\bkmkstart AAAAAAAGIW}{\bkmkend AAAAAAAGIW}
+00281 {\cf20 // systems that support death tests. This allows one to write such a macro}\par
+{\bkmkstart AAAAAAAGIX}{\bkmkend AAAAAAAGIX}
+00282 {\cf20 // on a system that does not support death tests and be sure that it will}\par
+{\bkmkstart AAAAAAAGIY}{\bkmkend AAAAAAAGIY}
+00283 {\cf20 // compile on a death-test supporting system. It is exposed publicly so that}\par
+{\bkmkstart AAAAAAAGIZ}{\bkmkend AAAAAAAGIZ}
+00284 {\cf20 // systems that have death-tests with stricter requirements than}\par
+{\bkmkstart AAAAAAAGJA}{\bkmkend AAAAAAAGJA}
+00285 {\cf20 // GTEST_HAS_DEATH_TEST can write their own equivalent of}\par
+{\bkmkstart AAAAAAAGJB}{\bkmkend AAAAAAAGJB}
+00286 {\cf20 // EXPECT_DEATH_IF_SUPPORTED and ASSERT_DEATH_IF_SUPPORTED.}\par
+{\bkmkstart AAAAAAAGJC}{\bkmkend AAAAAAAGJC}
+00287 {\cf20 //}\par
+{\bkmkstart AAAAAAAGJD}{\bkmkend AAAAAAAGJD}
+00288 {\cf20 // Parameters:}\par
+{\bkmkstart AAAAAAAGJE}{\bkmkend AAAAAAAGJE}
+00289 {\cf20 //   statement -  A statement that a macro such as EXPECT_DEATH would test}\par
+{\bkmkstart AAAAAAAGJF}{\bkmkend AAAAAAAGJF}
+00290 {\cf20 //                for program termination. This macro has to make sure this}\par
+{\bkmkstart AAAAAAAGJG}{\bkmkend AAAAAAAGJG}
+00291 {\cf20 //                statement is compiled but not executed, to ensure that}\par
+{\bkmkstart AAAAAAAGJH}{\bkmkend AAAAAAAGJH}
+00292 {\cf20 //                EXPECT_DEATH_IF_SUPPORTED compiles with a certain}\par
+{\bkmkstart AAAAAAAGJI}{\bkmkend AAAAAAAGJI}
+00293 {\cf20 //                parameter iff EXPECT_DEATH compiles with it.}\par
+{\bkmkstart AAAAAAAGJJ}{\bkmkend AAAAAAAGJJ}
+00294 {\cf20 //   regex     -  A regex that a macro such as EXPECT_DEATH would use to test}\par
+{\bkmkstart AAAAAAAGJK}{\bkmkend AAAAAAAGJK}
+00295 {\cf20 //                the output of statement.  This parameter has to be}\par
+{\bkmkstart AAAAAAAGJL}{\bkmkend AAAAAAAGJL}
+00296 {\cf20 //                compiled but not evaluated by this macro, to ensure that}\par
+{\bkmkstart AAAAAAAGJM}{\bkmkend AAAAAAAGJM}
+00297 {\cf20 //                this macro only accepts expressions that a macro such as}\par
+{\bkmkstart AAAAAAAGJN}{\bkmkend AAAAAAAGJN}
+00298 {\cf20 //                EXPECT_DEATH would accept.}\par
+{\bkmkstart AAAAAAAGJO}{\bkmkend AAAAAAAGJO}
+00299 {\cf20 //   terminator - Must be an empty statement for EXPECT_DEATH_IF_SUPPORTED}\par
+{\bkmkstart AAAAAAAGJP}{\bkmkend AAAAAAAGJP}
+00300 {\cf20 //                and a return statement for ASSERT_DEATH_IF_SUPPORTED.}\par
+{\bkmkstart AAAAAAAGJQ}{\bkmkend AAAAAAAGJQ}
+00301 {\cf20 //                This ensures that ASSERT_DEATH_IF_SUPPORTED will not}\par
+{\bkmkstart AAAAAAAGJR}{\bkmkend AAAAAAAGJR}
+00302 {\cf20 //                compile inside functions where ASSERT_DEATH doesn't}\par
+{\bkmkstart AAAAAAAGJS}{\bkmkend AAAAAAAGJS}
+00303 {\cf20 //                compile.}\par
+{\bkmkstart AAAAAAAGJT}{\bkmkend AAAAAAAGJT}
+00304 {\cf20 //}\par
+{\bkmkstart AAAAAAAGJU}{\bkmkend AAAAAAAGJU}
+00305 {\cf20 //  The branch that has an always false condition is used to ensure that}\par
+{\bkmkstart AAAAAAAGJV}{\bkmkend AAAAAAAGJV}
+00306 {\cf20 //  statement and regex are compiled (and thus syntactically correct) but}\par
+{\bkmkstart AAAAAAAGJW}{\bkmkend AAAAAAAGJW}
+00307 {\cf20 //  never executed. The unreachable code macro protects the terminator}\par
+{\bkmkstart AAAAAAAGJX}{\bkmkend AAAAAAAGJX}
+00308 {\cf20 //  statement from generating an 'unreachable code' warning in case}\par
+{\bkmkstart AAAAAAAGJY}{\bkmkend AAAAAAAGJY}
+00309 {\cf20 //  statement unconditionally returns or throws. The Message constructor at}\par
+{\bkmkstart AAAAAAAGJZ}{\bkmkend AAAAAAAGJZ}
+00310 {\cf20 //  the end allows the syntax of streaming additional messages into the}\par
+{\bkmkstart AAAAAAAGKA}{\bkmkend AAAAAAAGKA}
+00311 {\cf20 //  macro, for compilational compatibility with EXPECT_DEATH/ASSERT_DEATH.}\par
+{\bkmkstart AAAAAAAGKB}{\bkmkend AAAAAAAGKB}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGKC" }{}}{\fldrslt {\cs37\ul\cf2 00312}}}
+ {\cf21 # define GTEST_UNSUPPORTED_DEATH_TEST(statement, regex, terminator) \\}\par
+{\bkmkstart AAAAAAAGKD}{\bkmkend AAAAAAAGKD}
+00313 {\cf21     GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\}\par
+{\bkmkstart AAAAAAAGKE}{\bkmkend AAAAAAAGKE}
+00314 {\cf21     if (::testing::internal::AlwaysTrue()) \{ \\}\par
+{\bkmkstart AAAAAAAGKF}{\bkmkend AAAAAAAGKF}
+00315 {\cf21       GTEST_LOG_(WARNING) \\}\par
+{\bkmkstart AAAAAAAGKG}{\bkmkend AAAAAAAGKG}
+00316 {\cf21           << "Death tests are not supported on this platform.\\n"} \\\par
+{\bkmkstart AAAAAAAGKH}{\bkmkend AAAAAAAGKH}
+00317           << "Statement '" #statement "' cannot be verified."; \\\par
+{\bkmkstart AAAAAAAGKI}{\bkmkend AAAAAAAGKI}
+00318     \} else if (::testing::internal::AlwaysFalse()) \{ \\\par
+{\bkmkstart AAAAAAAGKJ}{\bkmkend AAAAAAAGKJ}
+00319       ::testing::internal::RE::PartialMatch(".*", (regex)); \\\par
+{\bkmkstart AAAAAAAGKK}{\bkmkend AAAAAAAGKK}
+00320       GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement); \\\par
+{\bkmkstart AAAAAAAGKL}{\bkmkend AAAAAAAGKL}
+00321       terminator; \\\par
+{\bkmkstart AAAAAAAGKM}{\bkmkend AAAAAAAGKM}
+00322     \} else \\\par
+{\bkmkstart AAAAAAAGKN}{\bkmkend AAAAAAAGKN}
+00323       ::testing::Message()\par
+{\bkmkstart AAAAAAAGKO}{\bkmkend AAAAAAAGKO}
+00324 \par
+{\bkmkstart AAAAAAAGKP}{\bkmkend AAAAAAAGKP}
+00325 {\cf20 // EXPECT_DEATH_IF_SUPPORTED(statement, regex) and}\par
+{\bkmkstart AAAAAAAGKQ}{\bkmkend AAAAAAAGKQ}
+00326 {\cf20 // ASSERT_DEATH_IF_SUPPORTED(statement, regex) expand to real death tests if}\par
+{\bkmkstart AAAAAAAGKR}{\bkmkend AAAAAAAGKR}
+00327 {\cf20 // death tests are supported; otherwise they just issue a warning.  This is}\par
+{\bkmkstart AAAAAAAGKS}{\bkmkend AAAAAAAGKS}
+00328 {\cf20 // useful when you are combining death test assertions with normal test}\par
+{\bkmkstart AAAAAAAGKT}{\bkmkend AAAAAAAGKT}
+00329 {\cf20 // assertions in one test.}\par
+{\bkmkstart AAAAAAAGKU}{\bkmkend AAAAAAAGKU}
+00330 {\cf21 #if GTEST_HAS_DEATH_TEST}\par
+{\bkmkstart AAAAAAAGKV}{\bkmkend AAAAAAAGKV}
+00331 {\cf21 # define EXPECT_DEATH_IF_SUPPORTED(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGKW}{\bkmkend AAAAAAAGKW}
+00332 {\cf21     EXPECT_DEATH(statement, regex)}\par
+{\bkmkstart AAAAAAAGKX}{\bkmkend AAAAAAAGKX}
+00333 {\cf21 # define ASSERT_DEATH_IF_SUPPORTED(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGKY}{\bkmkend AAAAAAAGKY}
+00334 {\cf21     ASSERT_DEATH(statement, regex)}\par
+{\bkmkstart AAAAAAAGKZ}{\bkmkend AAAAAAAGKZ}
+00335 {\cf21 #else}\par
+{\bkmkstart AAAAAAAGLA}{\bkmkend AAAAAAAGLA}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGLB" }{}}{\fldrslt {\cs37\ul\cf2 00336}}}
+ {\cf21 # define EXPECT_DEATH_IF_SUPPORTED(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGLC}{\bkmkend AAAAAAAGLC}
+00337 {\cf21     GTEST_UNSUPPORTED_DEATH_TEST(statement, regex, )}\par
+{\bkmkstart AAAAAAAGLD}{\bkmkend AAAAAAAGLD}
+{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAGLE" }{}}{\fldrslt {\cs37\ul\cf2 00338}}}
+ {\cf21 # define ASSERT_DEATH_IF_SUPPORTED(statement, regex) \\}\par
+{\bkmkstart AAAAAAAGLF}{\bkmkend AAAAAAAGLF}
+00339 {\cf21     GTEST_UNSUPPORTED_DEATH_TEST(statement, regex, return)}\par
+{\bkmkstart AAAAAAAGLG}{\bkmkend AAAAAAAGLG}
+00340 {\cf21 #endif}\par
+{\bkmkstart AAAAAAAGLH}{\bkmkend AAAAAAAGLH}
+00341 \par
+{\bkmkstart AAAAAAAGLI}{\bkmkend AAAAAAAGLI}
+00342 \}  {\cf20 // namespace testing}\par
+{\bkmkstart AAAAAAAGLJ}{\bkmkend AAAAAAAGLJ}
+00343 \par
+{\bkmkstart AAAAAAAGLK}{\bkmkend AAAAAAAGLK}
+00344 {\cf21 #endif  }{\cf20 // GTEST_INCLUDE_GTEST_GTEST_DEATH_TEST_H_}\par
+}
+}

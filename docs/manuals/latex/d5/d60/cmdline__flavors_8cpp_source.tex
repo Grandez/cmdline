@@ -22,17 +22,17 @@
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00018}00018     CmdLineI::\string~CmdLineI() \{}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00019}00019         \_cleanClass();}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00020}00020     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00021}00021     CmdLineI::CmdLineI(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) : \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}}(argc, argv, parms, true) \{\}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00022}00022     CmdLineI::CmdLineI(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms, \textcolor{keywordtype}{bool} strict) : \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}}(argc, argv, parms, true, strict) \{\}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00023}00023     \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}} CmdLineI::getInstance(\textcolor{keywordtype}{int} argc,  \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00021}00021     CmdLineI::CmdLineI(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, true) \{\}}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00022}00022     CmdLineI::CmdLineI(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms, \textcolor{keywordtype}{bool} strict) : CmdLine(argc, argv, parms, true, strict) \{\}}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00023}00023     CmdLine* CmdLineI::getInstance(\textcolor{keywordtype}{int} argc,  \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) \{}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00024}00024         \textcolor{keywordflow}{return} CmdLine::pGetInstance(argc, argv, parms, \textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00025}00025     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00026}00026     CmdLineS::CmdLineS(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) : \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}}(argc, argv, parms, false, true) \{\}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00027}00027     CmdLineIS::CmdLineIS(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) : \mbox{\hyperlink{classcmdline_1_1_cmd_line_i}{CmdLineI}}(argc, argv, parms, true) \{\}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00028}00028     \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}} CmdLineS::getInstance(\textcolor{keywordtype}{int} argc,  \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00026}00026     CmdLineS::CmdLineS(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) : CmdLine(argc, argv, parms, false, true) \{\}}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00027}00027     CmdLineIS::CmdLineIS(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) : CmdLineI(argc, argv, parms, true) \{\}}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00028}00028     CmdLine* CmdLineS::getInstance(\textcolor{keywordtype}{int} argc,  \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) \{}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00029}00029         \textcolor{keywordflow}{return} CmdLine::pGetInstance(argc, argv, parms, \textcolor{keyword}{false}, \textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00030}00030     \}}
-\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00031}00031     \mbox{\hyperlink{classcmdline_1_1_cmd_line}{CmdLine}} CmdLineIS::getInstance(\textcolor{keywordtype}{int} argc,  \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) \{}
+\DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00031}00031     CmdLine* CmdLineIS::getInstance(\textcolor{keywordtype}{int} argc,  \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv, cmdline::Parameters parms) \{}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00032}00032         \textcolor{keywordflow}{return} CmdLine::pGetInstance(argc, argv, parms, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00033}00033     \}}
 \DoxyCodeLine{\Hypertarget{cmdline__flavors_8cpp_source_l00034}00034     CmdLineIS::\string~CmdLineIS() \{}

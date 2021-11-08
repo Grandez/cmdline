@@ -81,7 +81,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00077}00077             \textcolor{keywordflow}{if} (strlen(value) != pos) \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00078}00078         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00079}00079         \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00080}00080             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DECIMAL);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00080}00080             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DECIMAL);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00081}00081         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00082}00082         \textcolor{keywordflow}{return} res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00083}00083     \}}
@@ -94,13 +94,13 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00090}00090             \textcolor{keywordflow}{if} (strlen(value) != pos) \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00091}00091         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00092}00092         \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00093}00093             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_LONGDECIMAL);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00093}00093             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_LONGDECIMAL);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00094}00094         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00095}00095         \textcolor{keywordflow}{return} res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00096}00096     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00097}00097     \textcolor{comment}{// Public functions}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00098}00098     \textcolor{keywordtype}{void}        validateEntry     (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* parm, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prev) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00099}00099         \textcolor{keywordflow}{if} (strlen(parm) == 1) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_exception}{CmdLineException}}(ERR\_INV\_OPTION, parm);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00099}00099         \textcolor{keywordflow}{if} (strlen(parm) == 1) \textcolor{keywordflow}{throw} CmdLineException(ERR\_INV\_OPTION, parm);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00100}00100         \textcolor{comment}{//if (prev != nullptr) throw CmdLineException("{}Missing value"{}, prev);}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00101}00101     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00102}00102     \textcolor{keywordtype}{long}        validateNumber    (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
@@ -111,7 +111,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00107}00107             \textcolor{keywordflow}{if} (strlen(value) != pos) \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00108}00108         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00109}00109         \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00110}00110             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_NUMBER);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00110}00110             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_NUMBER);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00111}00111         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00112}00112         \textcolor{keywordflow}{return} res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00113}00113     \}}
@@ -123,7 +123,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00119}00119             \textcolor{keywordflow}{if} (strlen(value) != pos) \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00120}00120         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00121}00121         \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00122}00122             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_LONGNUMBER);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00122}00122             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_LONGNUMBER);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00123}00123         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00124}00124         \textcolor{keywordflow}{return} res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00125}00125     \}}
@@ -148,7 +148,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00144}00144                 \textcolor{keywordflow}{return} res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00145}00145             \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00146}00146             \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00147}00147                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DECIMAL);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00147}00147                 \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DECIMAL);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00148}00148             \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00149}00149         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00150}00150     \}}
@@ -174,7 +174,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00170}00170                 \textcolor{keywordflow}{return} res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00171}00171             \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00172}00172             \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00173}00173                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_LONGDECIMAL);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00173}00173                 \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_LONGDECIMAL);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00174}00174             \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00175}00175         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00176}00176     \}}
@@ -182,11 +182,11 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00178}00178         \textcolor{keywordtype}{char} strTime[9];}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00179}00179         regex pat\{ \textcolor{stringliteral}{"{}\string^[0-\/9]\{1,2\}:[0-\/9]\{1,2\}:[0-\/9]\{1,2\}\$"{}} \};}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00180}00180         \textcolor{keywordtype}{bool} match = regex\_search(value, pat);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00181}00181         \textcolor{keywordflow}{if} (!match) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_TIME);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00181}00181         \textcolor{keywordflow}{if} (!match) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_TIME);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00182}00182         vector<int> res = tokenizeNumber(value, (\textcolor{keywordtype}{char}*)\textcolor{stringliteral}{"{}:"{}});}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00183}00183         \textcolor{keywordflow}{if} (res[0] < 0 || res[0] > 23) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00183}00183         \textcolor{keywordflow}{if} (res[0] < 0 || res[0] > 23) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00184}00184         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < 3; i++) }
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00185}00185             \textcolor{keywordflow}{if} (res[i] < 0 || res[i] > 59) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00185}00185             \textcolor{keywordflow}{if} (res[i] < 0 || res[i] > 59) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00186}00186         sprintf(strTime, \textcolor{stringliteral}{"{}\%02d:\%02d:\%02d"{}}, res[0], res[1], res[2]);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00187}00187         \textcolor{keywordflow}{return} makeDateTime(0x0, strTime);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00188}00188     \}}
@@ -194,10 +194,10 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00190}00190         \textcolor{keywordtype}{int} days[] = \{ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 \};}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00191}00191         \textcolor{keywordtype}{int} day;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00192}00192 }
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00193}00193         \textcolor{keywordflow}{if} (dt[0] < 1 || dt[0] > 31) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00194}00194         \textcolor{keywordflow}{if} (dt[1] < 1 || dt[1] > 12) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00193}00193         \textcolor{keywordflow}{if} (dt[0] < 1 || dt[0] > 31) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00194}00194         \textcolor{keywordflow}{if} (dt[1] < 1 || dt[1] > 12) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00195}00195         day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] -\/ 1];}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00196}00196         \textcolor{keywordflow}{if} (dt[0] > day) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00196}00196         \textcolor{keywordflow}{if} (dt[0] > day) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00197}00197     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00198}00198     \textcolor{keyword}{struct }tm*  validateDate      (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, \textcolor{keywordtype}{int} fmt) \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00199}00199         \textcolor{keywordtype}{char} strDate[11];}
@@ -216,7 +216,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00212}00212                 \textcolor{keywordflow}{default}:                  pat = pat2;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00213}00213         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00214}00214         \textcolor{keywordtype}{bool} match = regex\_search(value, pat);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00215}00215         \textcolor{keywordflow}{if} (!match) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DATE);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00215}00215         \textcolor{keywordflow}{if} (!match) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DATE);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00216}00216         vector<int> res = tokenizeNumber(value, (\textcolor{keywordtype}{char}*)\textcolor{stringliteral}{"{}[/-\/]"{}});}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00217}00217         \textcolor{keywordflow}{switch} (d) \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00218}00218                \textcolor{keywordflow}{case} time\_base::dmy: dt = \{ res[0], res[1], res[2] \}; \textcolor{keywordflow}{break};}
@@ -237,7 +237,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00233}00233         vector<int> res;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00234}00234         \textcolor{comment}{// Revisited. More clean by pieces}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00235}00235         vector<string> pieces = tokenize(value, \textcolor{stringliteral}{"{}[ \(\backslash\)t]+"{}});}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00236}00236         \textcolor{keywordflow}{if} (pieces.size() != 2) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DATETIME);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00236}00236         \textcolor{keywordflow}{if} (pieces.size() != 2) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DATETIME);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00237}00237         \textcolor{keywordflow}{try} \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00238}00238             tmDate = validateDate(pieces[0].c\_str(), time\_base::ymd);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00239}00239             tmTime = validateTime(pieces[1].c\_str());}
@@ -245,7 +245,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00241}00241             sprintf(szTime, \textcolor{stringliteral}{"{}\%02d:\%02d:\%02d"{}}, tmTime-\/>tm\_hour, tmTime-\/>tm\_min, tmTime-\/>tm\_sec);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00242}00242         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00243}00243         \textcolor{keywordflow}{catch}(exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00244}00244             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00244}00244             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00245}00245         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00246}00246         \textcolor{keywordflow}{return} makeDateTime(szDate,szTime);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00247}00247     \}}
@@ -255,7 +255,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00251}00251         \textcolor{keyword}{struct }tm *tmDate, *tmTime;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00252}00252         vector<string> pieces = tokenize(value, \textcolor{stringliteral}{"{}-\/|[ \(\backslash\)t]+"{}});}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00253}00253         \textcolor{keywordtype}{int} npieces = (int) pieces.size();}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00254}00254         \textcolor{keywordflow}{if} (npieces != 2 \&\& npieces != 4) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_TMS);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00254}00254         \textcolor{keywordflow}{if} (npieces != 2 \&\& npieces != 4) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_TMS);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00255}00255         \textcolor{keywordflow}{try} \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00256}00256             \textcolor{keywordtype}{int} iTime = (npieces == 2) ? 1 : 3;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00257}00257             \textcolor{keywordflow}{if} (npieces == 2) tmDate = validateDate(pieces[0].c\_str(), time\_base::ymd);}
@@ -265,12 +265,12 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00261}00261                 tmDate = validateDate(strdt, time\_base::ymd);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00262}00262             \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00263}00263             vector<string> tt = tokenize(pieces[iTime].c\_str(), \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)."{}});}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00264}00264             \textcolor{keywordflow}{if} (tt.size() != 2) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_TMS);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00264}00264             \textcolor{keywordflow}{if} (tt.size() != 2) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_TMS);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00265}00265             tmTime = validateTime(tt[0].c\_str());}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00266}00266             validateNumber(tt[1].c\_str());}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00267}00267         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00268}00268         \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00269}00269             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_INVALID, value);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00269}00269             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_INVALID, value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00270}00270         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00271}00271         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{char} *) value;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00272}00272     \}}
@@ -284,7 +284,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00280}00280         \textcolor{keywordflow}{if} (strcmp(value, \textcolor{stringliteral}{"{}."{}}) == 0) \textcolor{keywordflow}{return} filesystem::path(old);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00281}00281         \textcolor{keywordflow}{if} (strcmp(value, old) == 0) \textcolor{keywordflow}{return} filesystem::path(old);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00282}00282         rc = \_chdir(value);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00283}00283         \textcolor{keywordflow}{if} (rc) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DIR );}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00283}00283         \textcolor{keywordflow}{if} (rc) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DIR );}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00284}00284         ptr = getcwd(tmp, 256);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00285}00285         rc = chdir(old);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00286}00286 \textcolor{preprocessor}{        \#ifdef \_WIN32 }\textcolor{comment}{// Windows is case insensitive}}
@@ -293,17 +293,17 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00289}00289             rc2 = strcmp(old, tmp);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00290}00290 \textcolor{preprocessor}{        \#endif}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00291}00291 }
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00292}00292         \textcolor{keywordflow}{if} (rc2 == 0) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DIR);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00292}00292         \textcolor{keywordflow}{if} (rc2 == 0) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DIR);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00293}00293         \textcolor{keywordflow}{return} filesystem::path(value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00294}00294     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00295}00295     filesystem::path        validateDirExist(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00296}00296         \textcolor{keyword}{struct }stat info;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00297}00297         validateDir(value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00298}00298         \textcolor{keywordtype}{int} rc = stat(value, \&info);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00299}00299         \textcolor{keywordflow}{if} (stat(value, \&info) != 0) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_NO\_DIR);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00299}00299         \textcolor{keywordflow}{if} (stat(value, \&info) != 0) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_NO\_DIR);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00300}00300         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} mask = info.st\_mode \& S\_IFDIR;}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00301}00301         mask \string^= 16384; \textcolor{comment}{// 100 0000 0000 0000}}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00302}00302         \textcolor{keywordflow}{if} (mask == 0)          \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_DIR\_NOTFND);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00301}00301         \textcolor{comment}{//mask \string^= 16384; // 100 0000 0000 0000}}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00302}00302         \textcolor{keywordflow}{if} (mask == 0)          \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_DIR\_NOTFND);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00303}00303         \textcolor{comment}{//if ((info.st\_mode \& S\_IFDIR) == 0)               throw CmdLineValueException(value, "{}is not a directory"{});}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00304}00304         \textcolor{keywordflow}{return} filesystem::path(value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00305}00305     \}}
@@ -312,14 +312,14 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00308}00308             \textcolor{keywordflow}{return} filesystem::path(value);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00309}00309         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00310}00310         \textcolor{keywordflow}{catch} (exception ex) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00311}00311             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_FILE);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00311}00311             \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_FILE);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00312}00312         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00313}00313     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00314}00314     filesystem::path        validateFileExist (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value) \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00315}00315         \textcolor{keyword}{struct }stat info;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00316}00316         filesystem::path p = validateFile(value);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00317}00317         \textcolor{keywordflow}{if} (stat(value, \&info) != 0) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_FILE\_NOTFND);}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00318}00318         \textcolor{keywordflow}{if} (info.st\_mode \& S\_IFDIR)  \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_value_exception}{CmdLineValueException}}(TXT\_VAL\_EXPECTED, value, TXT\_FILE\_DIR);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00317}00317         \textcolor{keywordflow}{if} (stat(value, \&info) != 0) \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_FILE\_NOTFND);}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00318}00318         \textcolor{keywordflow}{if} (info.st\_mode \& S\_IFDIR)  \textcolor{keywordflow}{throw} CmdLineValueException(TXT\_VAL\_EXPECTED, value, TXT\_FILE\_DIR);}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00319}00319         \textcolor{keywordflow}{return} p;}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00320}00320     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00321}00321     \textcolor{keywordtype}{void}        validateValue     (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* value, Type type) \{}
@@ -359,7 +359,7 @@
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00355}00355     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00356}00356     \textcolor{keywordtype}{void} checkValue(\textcolor{keyword}{auto} value) \{}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00357}00357         \textcolor{keywordflow}{if} (value < numeric\_limits<T>::min() || value > numeric\_limits<T>::max()) \{}
-\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00358}00358             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classcmdline_1_1_cmd_line_invalid_type_exception}{CmdLineInvalidTypeException}}(\textcolor{keyword}{typeid}(T).name());}
+\DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00358}00358             \textcolor{keywordflow}{throw} CmdLineInvalidTypeException(\textcolor{keyword}{typeid}(T).name());}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00359}00359         \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00360}00360     \}}
 \DoxyCodeLine{\Hypertarget{validations_8cpp_source_l00361}00361     \textcolor{keywordtype}{int}  makeInteger(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *value) \{}

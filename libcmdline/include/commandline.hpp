@@ -47,7 +47,7 @@ namespace _cmdline {
 		Group  options;
 		Group  flags;
 		Group  defines;
-		void  parse(const int argc, const char** argv);
+		void  parseCommandLine(const int argc, const char** argv);
 		char* addValueToOption(const char* option, char* prev);
 		char* checkOption(const char* option);
 		char* checkFlag(const char* flag);
@@ -58,7 +58,7 @@ namespace _cmdline {
 		void  updateFlagItem(const char* flag, const char* prev, bool value);
 		char* updateOption(const char* option, char* value);
 		char* updateDefinition(const char* def);
-		void  updateFromEnv();
+		void  updateValuesFromEnvironment();
 		void  udpateArgsFromEnv(Group& parms, const char* prfx);
 
 		Flags       getFlags(bool active, bool set);
@@ -66,9 +66,15 @@ namespace _cmdline {
 		Argument*   findPointer(Group* group, const char* what);
 		const char* getValue(Group* group, const char* what);
 		unordered_map<string,string>     getOptionsValue(bool def);
-		void        preInit(Parameters parms, bool init = true);
-		void        postInit();
-		void        loadHelp();
+        void       loadParameters(Parameters parms);
+		void        loadHelpFlags();
 		
+       void  processConfigFile(char *fname);
+       char* processOptionOrDefinition(const char *argv, char *prevToken);
+       char* processDefinition(const char *argv);
+       char* activeFlag(const char *flag, char *prev);
+       char* inactiveFlag(const char *flag, char *prev);
+       void  addToInputs(const char *arg);
+       bool  updateFlagHelp(const char *arg, char *prev);
 	};
 }

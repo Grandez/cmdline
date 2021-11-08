@@ -1,0 +1,51 @@
+.TH "Parm" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Parm \- Generic Class to define defined flags and options 
+.br
+  
+
+.SH SYNOPSIS
+.br
+.PP
+.SH "Descripción detallada"
+.PP 
+Generic Class to define defined flags and options 
+.br
+ 
+
+A parm has 4 properties:
+.PP
+.IP "\(bu" 2
+\fBname\fP: Name of parameter 
+.br
+
+.IP "\(bu" 2
+\fBvalue\fP: Default value for the parameter 
+.br
+
+.IP "\(bu" 2
+\fBtype\fP: Type of parameter according \fBcmdline::Type\fP
+.IP "\(bu" 2
+\fBmultiple\fP: \fBParameter\fP supports multiple values? 
+.br
+
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+{ 
+.br
+ \fBParm(const char* name)\fP : Default for \fBFlag\fP 
+.br
+ \fBParm(const char* name, const char* value)\fP: Default for option 
+.br
+ \fBParm(const char* name, bool value)\fP : Define \fBFlag\fP with false or true } 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

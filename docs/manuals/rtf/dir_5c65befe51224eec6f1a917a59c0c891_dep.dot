@@ -1,0 +1,10 @@
+digraph "testcmdline" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_5c65befe51224eec6f1a917a59c0c891 [shape=box, label="testcmdline", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5c65befe51224eec6f1a917a59c0c891.html"];
+  dir_93501a11e921083efbd154e0cdff5f10 [shape=box label="packages" fillcolor="white" style="filled" color="red" URL="dir_93501a11e921083efbd154e0cdff5f10.html"];
+  dir_fedd67a8c96aee38c54230a4e25bd216 [shape=box label="libcmdline" fillcolor="white" style="filled" color="red" URL="dir_fedd67a8c96aee38c54230a4e25bd216.html"];
+  dir_5c65befe51224eec6f1a917a59c0c891->dir_93501a11e921083efbd154e0cdff5f10 [headlabel="1", labeldistance=1.5 headhref="dir_000019_000003.html"];
+  dir_5c65befe51224eec6f1a917a59c0c891->dir_fedd67a8c96aee38c54230a4e25bd216 [headlabel="4", labeldistance=1.5 headhref="dir_000019_000014.html"];
+}

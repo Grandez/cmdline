@@ -1,4 +1,4 @@
-.TH "CmdLine" 3 "Sábado, 6 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "CmdLine" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ Heredado por \fBCmdLineI\fP y \fBCmdLineS\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBCmdLine\fP (int argc, char **argv, Parameters parms)"
+.RI "\fBCmdLine\fP (int argc, const char **argv, Parameters parms)"
 .br
 .ti -1c
 .RI "vector< const char * > \fBargs\fP ()"
@@ -28,6 +28,9 @@ Heredado por \fBCmdLineI\fP y \fBCmdLineS\fP\&.
 .br
 .ti -1c
 .RI "Flags \fBgetCurrentFlags\fP (bool all=true)"
+.br
+.ti -1c
+.RI "\fBType\fP \fBgetType\fP (const char *name)"
 .br
 .ti -1c
 .RI "bool \fBhasOption\fP (const char *name)"
@@ -60,16 +63,13 @@ Heredado por \fBCmdLineI\fP y \fBCmdLineS\fP\&.
 .RI "int \fBgetOptionNumValues\fP (string name)"
 .br
 .ti -1c
-.RI "Options \fBgetDefaultOptions\fP ()"
+.RI "\fBunordered_map\fP< string, string > \fBgetDefaultOptions\fP ()"
 .br
 .ti -1c
 .RI "Options \fBgetCurrentOptions\fP ()"
 .br
 .ti -1c
-.RI "template<typename T > const T \fBgetOptionAs\fP (T t, const char *name)"
-.br
-.ti -1c
-.RI "template<typename T > const T \fBgetOptionAs\fP (const char *name)"
+.RI "template<typename T > T \fBgetOptionAs\fP (const char *name)"
 .br
 .ti -1c
 .RI "template<typename T > const T \fBgetOptionAs\fP (string name)"
@@ -118,10 +118,13 @@ Heredado por \fBCmdLineI\fP y \fBCmdLineS\fP\&.
 
 .in +1c
 .ti -1c
-.RI "static \fBCmdLine\fP \fBgetInstance\fP (int argc, char **argv, Parameters parms=Parameters())"
+.RI "static \fBCmdLine\fP * \fBgetInstance\fP (int argc, char *argv[], Parameters parms=Parameters())"
 .br
 .ti -1c
-.RI "static \fBCmdLine\fP \fBgetInstance\fP (Parameters parms, int argc, char **argv)"
+.RI "static \fBCmdLine\fP * \fBgetInstance\fP (int argc, const char **argv, Parameters parms=Parameters())"
+.br
+.ti -1c
+.RI "static \fBCmdLine\fP * \fBgetInstance\fP (Parameters parms, int argc, const char **argv)"
 .br
 .ti -1c
 .RI "static void \fBfreeInstance\fP ()"
@@ -131,190 +134,19 @@ Heredado por \fBCmdLineI\fP y \fBCmdLineS\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBCmdLine\fP (int argc, char **argv, Parameters parms, bool sensitive, bool strict)"
+.RI "\fBCmdLine\fP (int argc, const char **argv, Parameters parms, bool sensitive, bool strict)"
 .br
 .ti -1c
-.RI "\fBCmdLine\fP (int argc, char **argv, Parameters parms, bool sensitive)"
+.RI "\fBCmdLine\fP (int argc, const char **argv, Parameters parms, bool sensitive)"
 .br
 .in -1c
 .SS "Métodos protegidos estáticos"
 
 .in +1c
 .ti -1c
-.RI "static \fBCmdLine\fP \fBpGetInstance\fP (int argc, char **argv, Parameters parms, bool sensitive=false, bool strict=false)"
+.RI "static \fBCmdLine\fP * \fBpGetInstance\fP (int argc, const char **argv, Parameters parms, bool sensitive=false, bool strict=false)"
 .br
 .in -1c
-.SH "Descripción detallada"
-.PP 
-Definición en la línea \fB79\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SH "Documentación del constructor y destructor"
-.PP 
-.SS "\fBCmdLine\fP ()\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB81\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "\fBCmdLine\fP (int argc, char ** argv, Parameters parms)"
-
-.PP
-Definición en la línea \fB17\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "~\fBCmdLine\fP ()"
-
-.PP
-Definición en la línea \fB23\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "\fBCmdLine\fP (int argc, char ** argv, Parameters parms, bool sensitive, bool strict)\fC [protected]\fP"
-
-.PP
-Definición en la línea \fB20\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "\fBCmdLine\fP (int argc, char ** argv, Parameters parms, bool sensitive)\fC [inline]\fP, \fC [protected]\fP"
-
-.PP
-Definición en la línea \fB148\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SH "Documentación de las funciones miembro"
-.PP 
-.SS "vector< const char * > args ()"
-
-.PP
-Definición en la línea \fB42\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "void freeInstance ()\fC [static]\fP"
-
-.PP
-Definición en la línea \fB14\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "Flags getCurrentFlags (bool all = \fCtrue\fP)"
-
-.PP
-Definición en la línea \fB47\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "Options getCurrentOptions ()"
-
-.PP
-Definición en la línea \fB61\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "Flags getDefaultFlags (bool all = \fCtrue\fP)"
-
-.PP
-Definición en la línea \fB46\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "Options getDefaultOptions ()"
-
-.PP
-Definición en la línea \fB60\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "const char * getDefinition (const char * name)"
-
-.PP
-Definición en la línea \fB76\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "const char * getDefinition (string name)"
-
-.PP
-Definición en la línea \fB77\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "int getDefinitionNumValues (const char * name)"
-
-.PP
-Definición en la línea \fB78\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "int getDefinitionNumValues (string name)"
-
-.PP
-Definición en la línea \fB79\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "Options getDefinitions ()"
-
-.PP
-Definición en la línea \fB80\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "vector< const char * > getDefinitionValues (const char * name)"
-
-.PP
-Definición en la línea \fB83\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "vector< const char * > getDefinitionValues (string name)"
-
-.PP
-Definición en la línea \fB84\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "\fBCmdLine\fP getInstance (int argc, char ** argv, Parameters parms = \fCParameters()\fP)\fC [static]\fP"
-
-.PP
-Definición en la línea \fB31\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "\fBCmdLine\fP getInstance (Parameters parms, int argc, char ** argv)\fC [static]\fP"
-
-.PP
-Definición en la línea \fB26\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "const char * getOption (const char * name)"
-
-.PP
-Definición en la línea \fB53\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "const char * getOption (string name)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB102\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "const T getOptionAs (const char * name)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB114\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "const T getOptionAs (string name)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB119\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "const T getOptionAs (T t, const char * name)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB111\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "int getOptionNumValues (const char * name)"
-
-.PP
-Definición en la línea \fB58\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "int getOptionNumValues (string name)"
-
-.PP
-Definición en la línea \fB59\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "vector< const char * > getOptionValues (const char * name)"
-
-.PP
-Definición en la línea \fB55\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "vector< const char * > getOptionValues (string name)"
-
-.PP
-Definición en la línea \fB56\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "const vector< T > getOptionValuesAs (string name)\fC [inline]\fP"
-
-.PP
-Definición en la línea \fB120\fP del archivo \fBcmdline\&.hpp\fP\&.
-.SS "bool hasDefinition (const char * def)"
-
-.PP
-Definición en la línea \fB72\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool hasDefinition (string def)"
-
-.PP
-Definición en la línea \fB73\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool hasFlag (const char * name)"
-
-.PP
-Definición en la línea \fB44\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool hasFlag (string name)"
-
-.PP
-Definición en la línea \fB45\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool hasOption (const char * name)"
-
-.PP
-Definición en la línea \fB49\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool hasOption (string name)"
-
-.PP
-Definición en la línea \fB50\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool isDefinitionMultiple (const char * name)"
-
-.PP
-Definición en la línea \fB74\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool isDefinitionMultiple (string name)"
-
-.PP
-Definición en la línea \fB75\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool isOptionMultiple (const char * name)"
-
-.PP
-Definición en la línea \fB51\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "bool isOptionMultiple (string name)"
-
-.PP
-Definición en la línea \fB52\fP del archivo \fBcmdline\&.cpp\fP\&.
-.SS "\fBCmdLine\fP pGetInstance (int argc, char ** argv, Parameters parms, bool sensitive = \fCfalse\fP, bool strict = \fCfalse\fP)\fC [static]\fP, \fC [protected]\fP"
-
-.PP
-Definición en la línea \fB36\fP del archivo \fBcmdline\&.cpp\fP\&.
 
 .SH "Autor"
 .PP 

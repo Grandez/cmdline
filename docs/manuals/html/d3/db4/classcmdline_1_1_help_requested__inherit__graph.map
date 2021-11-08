@@ -1,6 +1,7 @@
 <map id="HelpRequested" name="HelpRequested">
-<area shape="rect" id="node1" title=" " alt="" coords="15,229,126,256"/>
-<area shape="rect" id="node2" href="$d5/d97/classcmdline_1_1_help_exception.html" title=" " alt="" coords="17,155,124,181"/>
-<area shape="rect" id="node3" href="$d3/dfd/classcmdline_1_1_cmd_line_exception.html" title=" " alt="" coords="5,80,136,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="11,5,130,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="118,155,229,181"/>
+<area shape="rect" id="node4" href="$d7/db2/classcmdline_1_1_help_detailed_requested.html" title=" " alt="" coords="5,229,163,256"/>
+<area shape="rect" id="node5" href="$d4/ddb/classcmdline_1_1_help_simple_requested.html" title=" " alt="" coords="187,229,338,256"/>
+<area shape="rect" id="node2" href="$d3/dfd/classcmdline_1_1_cmd_line_exception.html" title=" " alt="" coords="108,80,239,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="114,5,233,32"/>
 </map>

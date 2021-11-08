@@ -1,0 +1,933 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+validations.cpp\par \pard\plain 
+{\tc\tcl2 \v validations.cpp}
+{\xe \v validations.cpp}
+{\bkmkstart AAAAAAADTF}
+{\bkmkend AAAAAAADTF}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\bkmkstart AAAAAAADTG}{\bkmkend AAAAAAADTG}
+00001 {\cf20 // #define _VALIDATIONS_CODE_}\par
+{\bkmkstart AAAAAAADTH}{\bkmkend AAAAAAADTH}
+00002 {\cf21 #ifdef _WIN32}\par
+{\bkmkstart AAAAAAADTI}{\bkmkend AAAAAAADTI}
+00003 {\cf21 #pragma warning(disable : 4996)}\par
+{\bkmkstart AAAAAAADTJ}{\bkmkend AAAAAAADTJ}
+00004 {\cf21 #endif}\par
+{\bkmkstart AAAAAAADTK}{\bkmkend AAAAAAADTK}
+00005 \par
+{\bkmkstart AAAAAAADTL}{\bkmkend AAAAAAADTL}
+00006 \par
+{\bkmkstart AAAAAAADTM}{\bkmkend AAAAAAADTM}
+00007 {\cf21 #include <ctime>}\par
+{\bkmkstart AAAAAAADTN}{\bkmkend AAAAAAADTN}
+00008 {\cf21 #include <cstring>}\par
+{\bkmkstart AAAAAAADTO}{\bkmkend AAAAAAADTO}
+00009 {\cf21 #include <cstdio>}\par
+{\bkmkstart AAAAAAADTP}{\bkmkend AAAAAAADTP}
+00010 {\cf21 #include <iomanip>}\par
+{\bkmkstart AAAAAAADTQ}{\bkmkend AAAAAAADTQ}
+00011 {\cf21 #include <string>}\par
+{\bkmkstart AAAAAAADTR}{\bkmkend AAAAAAADTR}
+00012 {\cf21 #include <regex>}\par
+{\bkmkstart AAAAAAADTS}{\bkmkend AAAAAAADTS}
+00013 {\cf21 #include <filesystem>}\par
+{\bkmkstart AAAAAAADTT}{\bkmkend AAAAAAADTT}
+00014 {\cf21 #include <direct.h>}\par
+{\bkmkstart AAAAAAADTU}{\bkmkend AAAAAAADTU}
+00015 {\cf21 #include <vector>}\par
+{\bkmkstart AAAAAAADTV}{\bkmkend AAAAAAADTV}
+00016 \par
+{\bkmkstart AAAAAAADTW}{\bkmkend AAAAAAADTW}
+00017 {\cf21 #include "cmdline.hpp"}\par
+{\bkmkstart AAAAAAADTX}{\bkmkend AAAAAAADTX}
+00018 {\cf21 #include "tools.hpp"}\par
+{\bkmkstart AAAAAAADTY}{\bkmkend AAAAAAADTY}
+00019 {\cf21 #include "cmdline_exceptions.hpp"}\par
+{\bkmkstart AAAAAAADTZ}{\bkmkend AAAAAAADTZ}
+00020 {\cf21 #include "validations.hpp"}\par
+{\bkmkstart AAAAAAADUA}{\bkmkend AAAAAAADUA}
+00021 {\cf21 #include "msg_locale.hpp"}\par
+{\bkmkstart AAAAAAADUB}{\bkmkend AAAAAAADUB}
+00022 \par
+{\bkmkstart AAAAAAADUC}{\bkmkend AAAAAAADUC}
+00023 {\cf20 /*}\par
+{\bkmkstart AAAAAAADUD}{\bkmkend AAAAAAADUD}
+00024 {\cf20 }\par
+{\bkmkstart AAAAAAADUE}{\bkmkend AAAAAAADUE}
+00025 {\cf20 #include "types.h"}\par
+{\bkmkstart AAAAAAADUF}{\bkmkend AAAAAAADUF}
+00026 {\cf20 }\par
+{\bkmkstart AAAAAAADUG}{\bkmkend AAAAAAADUG}
+00027 {\cf20 */}\par
+{\bkmkstart AAAAAAADUH}{\bkmkend AAAAAAADUH}
+00028 \par
+{\bkmkstart AAAAAAADUI}{\bkmkend AAAAAAADUI}
+00029 {\cf17 using namespace }std;\par
+{\bkmkstart AAAAAAADUJ}{\bkmkend AAAAAAADUJ}
+00030 {\cf17 using namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAJ" }{}}{\fldrslt {\cs37\ul\cf2 cmdline}}}
+;\par
+{\bkmkstart AAAAAAADUK}{\bkmkend AAAAAAADUK}
+00031 \par
+{\bkmkstart AAAAAAADUL}{\bkmkend AAAAAAADUL}
+00032 {\cf17 namespace }{\field {\*\fldinst { HYPERLINK  \\l "AAAAAAAAAM" }{}}{\fldrslt {\cs37\ul\cf2 _cmdline}}}
+ \{\par
+{\bkmkstart AAAAAAADUM}{\bkmkend AAAAAAADUM}
+00033     {\cf20 // Decimals are tried two times: Using comma and point as decimal sign}\par
+{\bkmkstart AAAAAAADUN}{\bkmkend AAAAAAADUN}
+00034     {\cf20 // Internal functions}\par
+{\bkmkstart AAAAAAADUO}{\bkmkend AAAAAAADUO}
+00035     {\cf17 struct }tm* makeDateTime({\cf18 char}* sdate, {\cf18 char}* stime) \{\par
+{\bkmkstart AAAAAAADUP}{\bkmkend AAAAAAADUP}
+00036         {\cf17 struct }tm* tt;\par
+{\bkmkstart AAAAAAADUQ}{\bkmkend AAAAAAADUQ}
+00037         {\cf17 struct }tm now;\par
+{\bkmkstart AAAAAAADUR}{\bkmkend AAAAAAADUR}
+00038         {\cf17 struct }tm res;\par
+{\bkmkstart AAAAAAADUS}{\bkmkend AAAAAAADUS}
+00039 \par
+{\bkmkstart AAAAAAADUT}{\bkmkend AAAAAAADUT}
+00040         time_t t = std::time(0);\par
+{\bkmkstart AAAAAAADUU}{\bkmkend AAAAAAADUU}
+00041         tt = std::localtime(&t);\par
+{\bkmkstart AAAAAAADUV}{\bkmkend AAAAAAADUV}
+00042         memcpy(&now, tt, {\cf17 sizeof}(tm));\par
+{\bkmkstart AAAAAAADUW}{\bkmkend AAAAAAADUW}
+00043 \par
+{\bkmkstart AAAAAAADUX}{\bkmkend AAAAAAADUX}
+00044         {\cf19 if} (!sdate) \{\par
+{\bkmkstart AAAAAAADUY}{\bkmkend AAAAAAADUY}
+00045             memcpy(&res, &now, {\cf17 sizeof}(tm));\par
+{\bkmkstart AAAAAAADUZ}{\bkmkend AAAAAAADUZ}
+00046         \}\par
+{\bkmkstart AAAAAAADVA}{\bkmkend AAAAAAADVA}
+00047         {\cf19 else} \{\par
+{\bkmkstart AAAAAAADVB}{\bkmkend AAAAAAADVB}
+00048             std::istringstream ss(sdate);\par
+{\bkmkstart AAAAAAADVC}{\bkmkend AAAAAAADVC}
+00049             ss >> get_time(&res, {\cf22 "%Y/%m/%d"});\par
+{\bkmkstart AAAAAAADVD}{\bkmkend AAAAAAADVD}
+00050             res.tm_hour = now.tm_hour;\par
+{\bkmkstart AAAAAAADVE}{\bkmkend AAAAAAADVE}
+00051             res.tm_min  = now.tm_min;\par
+{\bkmkstart AAAAAAADVF}{\bkmkend AAAAAAADVF}
+00052             res.tm_sec  = now.tm_sec;\par
+{\bkmkstart AAAAAAADVG}{\bkmkend AAAAAAADVG}
+00053         \}\par
+{\bkmkstart AAAAAAADVH}{\bkmkend AAAAAAADVH}
+00054 \par
+{\bkmkstart AAAAAAADVI}{\bkmkend AAAAAAADVI}
+00055         {\cf19 if} (stime) \{\par
+{\bkmkstart AAAAAAADVJ}{\bkmkend AAAAAAADVJ}
+00056             vector<int> tt = tokenizeNumber(stime, {\cf22 ":"});\par
+{\bkmkstart AAAAAAADVK}{\bkmkend AAAAAAADVK}
+00057             res.tm_hour = tt[0];\par
+{\bkmkstart AAAAAAADVL}{\bkmkend AAAAAAADVL}
+00058             res.tm_min  = tt[1];\par
+{\bkmkstart AAAAAAADVM}{\bkmkend AAAAAAADVM}
+00059             res.tm_sec  = tt[2];\par
+{\bkmkstart AAAAAAADVN}{\bkmkend AAAAAAADVN}
+00060         \}\par
+{\bkmkstart AAAAAAADVO}{\bkmkend AAAAAAADVO}
+00061         tt = ({\cf17 struct }tm *) malloc({\cf17 sizeof}({\cf17 struct} tm));\par
+{\bkmkstart AAAAAAADVP}{\bkmkend AAAAAAADVP}
+00062         memcpy(tt, &res, {\cf17 sizeof}({\cf17 struct} tm));\par
+{\bkmkstart AAAAAAADVQ}{\bkmkend AAAAAAADVQ}
+00063         {\cf19 return} tt;\par
+{\bkmkstart AAAAAAADVR}{\bkmkend AAAAAAADVR}
+00064     \}\par
+{\bkmkstart AAAAAAADVS}{\bkmkend AAAAAAADVS}
+00065     {\cf18 int}         isLeap({\cf18 int} year) \{\par
+{\bkmkstart AAAAAAADVT}{\bkmkend AAAAAAADVT}
+00066         {\cf19 if} (year < 100) year += 2000;\par
+{\bkmkstart AAAAAAADVU}{\bkmkend AAAAAAADVU}
+00067         {\cf19 if} (year % 4) {\cf19 return} 28;\par
+{\bkmkstart AAAAAAADVV}{\bkmkend AAAAAAADVV}
+00068         {\cf19 if} ((year % 100) == 0) {\cf19 return} ((year % 400) == 0 ? 29 : 28);\par
+{\bkmkstart AAAAAAADVW}{\bkmkend AAAAAAADVW}
+00069         {\cf19 return} 29;\par
+{\bkmkstart AAAAAAADVX}{\bkmkend AAAAAAADVX}
+00070     \}\par
+{\bkmkstart AAAAAAADVY}{\bkmkend AAAAAAADVY}
+00071     {\cf18 double}      validateDecimal2({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAADVZ}{\bkmkend AAAAAAADVZ}
+00072         {\cf18 double} res;\par
+{\bkmkstart AAAAAAADWA}{\bkmkend AAAAAAADWA}
+00073         {\cf19 try} \{\par
+{\bkmkstart AAAAAAADWB}{\bkmkend AAAAAAADWB}
+00074             {\cf18 size_t} pos;\par
+{\bkmkstart AAAAAAADWC}{\bkmkend AAAAAAADWC}
+00075             {\cf18 double}* pld = &res;\par
+{\bkmkstart AAAAAAADWD}{\bkmkend AAAAAAADWD}
+00076             res = stod({\cf18 string}(value), &pos);\par
+{\bkmkstart AAAAAAADWE}{\bkmkend AAAAAAADWE}
+00077             {\cf19 if} (strlen(value) != pos) {\cf19 throw} exception({\cf22 ""});\par
+{\bkmkstart AAAAAAADWF}{\bkmkend AAAAAAADWF}
+00078         \}\par
+{\bkmkstart AAAAAAADWG}{\bkmkend AAAAAAADWG}
+00079         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADWH}{\bkmkend AAAAAAADWH}
+00080             {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DECIMAL);\par
+{\bkmkstart AAAAAAADWI}{\bkmkend AAAAAAADWI}
+00081         \}\par
+{\bkmkstart AAAAAAADWJ}{\bkmkend AAAAAAADWJ}
+00082         {\cf19 return} res;\par
+{\bkmkstart AAAAAAADWK}{\bkmkend AAAAAAADWK}
+00083     \}\par
+{\bkmkstart AAAAAAADWL}{\bkmkend AAAAAAADWL}
+00084     {\cf18 long} {\cf18 double} validateLongDecimal2({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAADWM}{\bkmkend AAAAAAADWM}
+00085         {\cf18 long} {\cf18 double} res;\par
+{\bkmkstart AAAAAAADWN}{\bkmkend AAAAAAADWN}
+00086         {\cf19 try} \{\par
+{\bkmkstart AAAAAAADWO}{\bkmkend AAAAAAADWO}
+00087             {\cf18 size_t} pos;\par
+{\bkmkstart AAAAAAADWP}{\bkmkend AAAAAAADWP}
+00088             {\cf18 long} {\cf18 double}* pld = &res;\par
+{\bkmkstart AAAAAAADWQ}{\bkmkend AAAAAAADWQ}
+00089             stod({\cf18 string}(value), &pos);\par
+{\bkmkstart AAAAAAADWR}{\bkmkend AAAAAAADWR}
+00090             {\cf19 if} (strlen(value) != pos) {\cf19 throw} exception({\cf22 ""});\par
+{\bkmkstart AAAAAAADWS}{\bkmkend AAAAAAADWS}
+00091         \}\par
+{\bkmkstart AAAAAAADWT}{\bkmkend AAAAAAADWT}
+00092         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADWU}{\bkmkend AAAAAAADWU}
+00093             {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);\par
+{\bkmkstart AAAAAAADWV}{\bkmkend AAAAAAADWV}
+00094         \}\par
+{\bkmkstart AAAAAAADWW}{\bkmkend AAAAAAADWW}
+00095         {\cf19 return} res;\par
+{\bkmkstart AAAAAAADWX}{\bkmkend AAAAAAADWX}
+00096     \}\par
+{\bkmkstart AAAAAAADWY}{\bkmkend AAAAAAADWY}
+00097     {\cf20 // Public functions}\par
+{\bkmkstart AAAAAAADWZ}{\bkmkend AAAAAAADWZ}
+00098     {\cf18 void}        validateEntry     ({\cf17 const} {\cf18 char}* parm, {\cf17 const} {\cf18 char}* prev) \{\par
+{\bkmkstart AAAAAAADXA}{\bkmkend AAAAAAADXA}
+00099         {\cf19 if} (strlen(parm) == 1) {\cf19 throw} CmdLineException(ERR_INV_OPTION, parm);\par
+{\bkmkstart AAAAAAADXB}{\bkmkend AAAAAAADXB}
+00100         {\cf20 //if (prev != nullptr) throw CmdLineException("Missing value", prev);}\par
+{\bkmkstart AAAAAAADXC}{\bkmkend AAAAAAADXC}
+00101     \}\par
+{\bkmkstart AAAAAAADXD}{\bkmkend AAAAAAADXD}
+00102     {\cf18 long}        validateNumber    ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAADXE}{\bkmkend AAAAAAADXE}
+00103         {\cf18 long} res;\par
+{\bkmkstart AAAAAAADXF}{\bkmkend AAAAAAADXF}
+00104         {\cf19 try} \{\par
+{\bkmkstart AAAAAAADXG}{\bkmkend AAAAAAADXG}
+00105             {\cf18 size_t} pos;\par
+{\bkmkstart AAAAAAADXH}{\bkmkend AAAAAAADXH}
+00106             res = stol({\cf18 string}(value), &pos, 0);\par
+{\bkmkstart AAAAAAADXI}{\bkmkend AAAAAAADXI}
+00107             {\cf19 if} (strlen(value) != pos) {\cf19 throw} exception({\cf22 ""});\par
+{\bkmkstart AAAAAAADXJ}{\bkmkend AAAAAAADXJ}
+00108         \}\par
+{\bkmkstart AAAAAAADXK}{\bkmkend AAAAAAADXK}
+00109         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADXL}{\bkmkend AAAAAAADXL}
+00110             {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NUMBER);\par
+{\bkmkstart AAAAAAADXM}{\bkmkend AAAAAAADXM}
+00111         \}\par
+{\bkmkstart AAAAAAADXN}{\bkmkend AAAAAAADXN}
+00112         {\cf19 return} res;\par
+{\bkmkstart AAAAAAADXO}{\bkmkend AAAAAAADXO}
+00113     \}\par
+{\bkmkstart AAAAAAADXP}{\bkmkend AAAAAAADXP}
+00114     {\cf18 long} {\cf18 long}   validateLongNumber({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAADXQ}{\bkmkend AAAAAAADXQ}
+00115         {\cf18 long} {\cf18 long} res;\par
+{\bkmkstart AAAAAAADXR}{\bkmkend AAAAAAADXR}
+00116         {\cf19 try} \{\par
+{\bkmkstart AAAAAAADXS}{\bkmkend AAAAAAADXS}
+00117             {\cf18 size_t} pos;\par
+{\bkmkstart AAAAAAADXT}{\bkmkend AAAAAAADXT}
+00118             res = stoll({\cf18 string}(value), &pos, 0);\par
+{\bkmkstart AAAAAAADXU}{\bkmkend AAAAAAADXU}
+00119             {\cf19 if} (strlen(value) != pos) {\cf19 throw} exception({\cf22 ""});\par
+{\bkmkstart AAAAAAADXV}{\bkmkend AAAAAAADXV}
+00120         \}\par
+{\bkmkstart AAAAAAADXW}{\bkmkend AAAAAAADXW}
+00121         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADXX}{\bkmkend AAAAAAADXX}
+00122             {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGNUMBER);\par
+{\bkmkstart AAAAAAADXY}{\bkmkend AAAAAAADXY}
+00123         \}\par
+{\bkmkstart AAAAAAADXZ}{\bkmkend AAAAAAADXZ}
+00124         {\cf19 return} res;\par
+{\bkmkstart AAAAAAADYA}{\bkmkend AAAAAAADYA}
+00125     \}\par
+{\bkmkstart AAAAAAADYB}{\bkmkend AAAAAAADYB}
+00126     {\cf18 double}      validateDecimal   ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAADYC}{\bkmkend AAAAAAADYC}
+00127         {\cf18 double} res;\par
+{\bkmkstart AAAAAAADYD}{\bkmkend AAAAAAADYD}
+00128         {\cf18 char}* tmp = strdup(value);\par
+{\bkmkstart AAAAAAADYE}{\bkmkend AAAAAAADYE}
+00129         {\cf19 try} \{\par
+{\bkmkstart AAAAAAADYF}{\bkmkend AAAAAAADYF}
+00130             res = validateDecimal2(tmp);\par
+{\bkmkstart AAAAAAADYG}{\bkmkend AAAAAAADYG}
+00131             free(tmp);\par
+{\bkmkstart AAAAAAADYH}{\bkmkend AAAAAAADYH}
+00132             {\cf19 return} res;\par
+{\bkmkstart AAAAAAADYI}{\bkmkend AAAAAAADYI}
+00133         \}\par
+{\bkmkstart AAAAAAADYJ}{\bkmkend AAAAAAADYJ}
+00134         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADYK}{\bkmkend AAAAAAADYK}
+00135             {\cf19 for} ({\cf18 size_t} i = 0; i < strlen(tmp); i++) \{\par
+{\bkmkstart AAAAAAADYL}{\bkmkend AAAAAAADYL}
+00136                 {\cf19 switch} (tmp[i]) \{\par
+{\bkmkstart AAAAAAADYM}{\bkmkend AAAAAAADYM}
+00137                     {\cf19 case} {\cf23 ','}: tmp[i] = {\cf23 '.'}; {\cf19 break};\par
+{\bkmkstart AAAAAAADYN}{\bkmkend AAAAAAADYN}
+00138                     {\cf19 case} {\cf23 '.'}: tmp[i] = {\cf23 ','}; {\cf19 break};\par
+{\bkmkstart AAAAAAADYO}{\bkmkend AAAAAAADYO}
+00139                 \}\par
+{\bkmkstart AAAAAAADYP}{\bkmkend AAAAAAADYP}
+00140             \}\par
+{\bkmkstart AAAAAAADYQ}{\bkmkend AAAAAAADYQ}
+00141             {\cf19 try} \{\par
+{\bkmkstart AAAAAAADYR}{\bkmkend AAAAAAADYR}
+00142                 res = validateDecimal2(tmp);\par
+{\bkmkstart AAAAAAADYS}{\bkmkend AAAAAAADYS}
+00143                 free(tmp);\par
+{\bkmkstart AAAAAAADYT}{\bkmkend AAAAAAADYT}
+00144                 {\cf19 return} res;\par
+{\bkmkstart AAAAAAADYU}{\bkmkend AAAAAAADYU}
+00145             \}\par
+{\bkmkstart AAAAAAADYV}{\bkmkend AAAAAAADYV}
+00146             {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADYW}{\bkmkend AAAAAAADYW}
+00147                 {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DECIMAL);\par
+{\bkmkstart AAAAAAADYX}{\bkmkend AAAAAAADYX}
+00148             \}\par
+{\bkmkstart AAAAAAADYY}{\bkmkend AAAAAAADYY}
+00149         \}\par
+{\bkmkstart AAAAAAADYZ}{\bkmkend AAAAAAADYZ}
+00150     \}\par
+{\bkmkstart AAAAAAADZA}{\bkmkend AAAAAAADZA}
+00151     {\cf18 long} {\cf18 double} validateLongDecimal({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAADZB}{\bkmkend AAAAAAADZB}
+00152         {\cf18 long} {\cf18 double} res;\par
+{\bkmkstart AAAAAAADZC}{\bkmkend AAAAAAADZC}
+00153         {\cf18 char}* tmp = strdup(value);\par
+{\bkmkstart AAAAAAADZD}{\bkmkend AAAAAAADZD}
+00154 \par
+{\bkmkstart AAAAAAADZE}{\bkmkend AAAAAAADZE}
+00155         {\cf19 try} \{\par
+{\bkmkstart AAAAAAADZF}{\bkmkend AAAAAAADZF}
+00156             res = validateLongDecimal2(tmp);\par
+{\bkmkstart AAAAAAADZG}{\bkmkend AAAAAAADZG}
+00157             free(tmp);\par
+{\bkmkstart AAAAAAADZH}{\bkmkend AAAAAAADZH}
+00158             {\cf19 return} res;\par
+{\bkmkstart AAAAAAADZI}{\bkmkend AAAAAAADZI}
+00159         \}\par
+{\bkmkstart AAAAAAADZJ}{\bkmkend AAAAAAADZJ}
+00160         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADZK}{\bkmkend AAAAAAADZK}
+00161             {\cf19 for} ({\cf18 size_t} i = 0; i < strlen(tmp); i++) \{\par
+{\bkmkstart AAAAAAADZL}{\bkmkend AAAAAAADZL}
+00162                 {\cf19 switch} (tmp[i]) \{\par
+{\bkmkstart AAAAAAADZM}{\bkmkend AAAAAAADZM}
+00163                 {\cf19 case} {\cf23 ','}: tmp[i] = {\cf23 '.'}; {\cf19 break};\par
+{\bkmkstart AAAAAAADZN}{\bkmkend AAAAAAADZN}
+00164                 {\cf19 case} {\cf23 '.'}: tmp[i] = {\cf23 ','}; {\cf19 break};\par
+{\bkmkstart AAAAAAADZO}{\bkmkend AAAAAAADZO}
+00165                 \}\par
+{\bkmkstart AAAAAAADZP}{\bkmkend AAAAAAADZP}
+00166             \}\par
+{\bkmkstart AAAAAAADZQ}{\bkmkend AAAAAAADZQ}
+00167             {\cf19 try} \{\par
+{\bkmkstart AAAAAAADZR}{\bkmkend AAAAAAADZR}
+00168                 res = validateLongDecimal2(tmp);\par
+{\bkmkstart AAAAAAADZS}{\bkmkend AAAAAAADZS}
+00169                 free(tmp);\par
+{\bkmkstart AAAAAAADZT}{\bkmkend AAAAAAADZT}
+00170                 {\cf19 return} res;\par
+{\bkmkstart AAAAAAADZU}{\bkmkend AAAAAAADZU}
+00171             \}\par
+{\bkmkstart AAAAAAADZV}{\bkmkend AAAAAAADZV}
+00172             {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAADZW}{\bkmkend AAAAAAADZW}
+00173                 {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_LONGDECIMAL);\par
+{\bkmkstart AAAAAAADZX}{\bkmkend AAAAAAADZX}
+00174             \}\par
+{\bkmkstart AAAAAAADZY}{\bkmkend AAAAAAADZY}
+00175         \}\par
+{\bkmkstart AAAAAAADZZ}{\bkmkend AAAAAAADZZ}
+00176     \}\par
+{\bkmkstart AAAAAAAEAA}{\bkmkend AAAAAAAEAA}
+00177     {\cf17 struct }tm*  validateTime      ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAEAB}{\bkmkend AAAAAAAEAB}
+00178         {\cf18 char} strTime[9];\par
+{\bkmkstart AAAAAAAEAC}{\bkmkend AAAAAAAEAC}
+00179         regex pat\{ {\cf22 "^[0-9]\{1,2\}:[0-9]\{1,2\}:[0-9]\{1,2\}$"} \};\par
+{\bkmkstart AAAAAAAEAD}{\bkmkend AAAAAAAEAD}
+00180         {\cf18 bool} match = regex_search(value, pat);\par
+{\bkmkstart AAAAAAAEAE}{\bkmkend AAAAAAAEAE}
+00181         {\cf19 if} (!match) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TIME);\par
+{\bkmkstart AAAAAAAEAF}{\bkmkend AAAAAAAEAF}
+00182         vector<int> res = tokenizeNumber(value, ({\cf18 char}*){\cf22 ":"});\par
+{\bkmkstart AAAAAAAEAG}{\bkmkend AAAAAAAEAG}
+00183         {\cf19 if} (res[0] < 0 || res[0] > 23) {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAEAH}{\bkmkend AAAAAAAEAH}
+00184         {\cf19 for} ({\cf18 int} i = 1; i < 3; i++) \par
+{\bkmkstart AAAAAAAEAI}{\bkmkend AAAAAAAEAI}
+00185             {\cf19 if} (res[i] < 0 || res[i] > 59) {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAEAJ}{\bkmkend AAAAAAAEAJ}
+00186         sprintf(strTime, {\cf22 "%02d:%02d:%02d"}, res[0], res[1], res[2]);\par
+{\bkmkstart AAAAAAAEAK}{\bkmkend AAAAAAAEAK}
+00187         {\cf19 return} makeDateTime(0x0, strTime);\par
+{\bkmkstart AAAAAAAEAL}{\bkmkend AAAAAAAEAL}
+00188     \}\par
+{\bkmkstart AAAAAAAEAM}{\bkmkend AAAAAAAEAM}
+00189     {\cf18 void}        validateDateValue ({\cf17 const} {\cf18 char} *value, vector<int> dt) \{\par
+{\bkmkstart AAAAAAAEAN}{\bkmkend AAAAAAAEAN}
+00190         {\cf18 int} days[] = \{ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 \};\par
+{\bkmkstart AAAAAAAEAO}{\bkmkend AAAAAAAEAO}
+00191         {\cf18 int} day;\par
+{\bkmkstart AAAAAAAEAP}{\bkmkend AAAAAAAEAP}
+00192 \par
+{\bkmkstart AAAAAAAEAQ}{\bkmkend AAAAAAAEAQ}
+00193         {\cf19 if} (dt[0] < 1 || dt[0] > 31) {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAEAR}{\bkmkend AAAAAAAEAR}
+00194         {\cf19 if} (dt[1] < 1 || dt[1] > 12) {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAEAS}{\bkmkend AAAAAAAEAS}
+00195         day = (dt[1] == 2) ? isLeap(dt[2]) : days[dt[1] - 1];\par
+{\bkmkstart AAAAAAAEAT}{\bkmkend AAAAAAAEAT}
+00196         {\cf19 if} (dt[0] > day) {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAEAU}{\bkmkend AAAAAAAEAU}
+00197     \}\par
+{\bkmkstart AAAAAAAEAV}{\bkmkend AAAAAAAEAV}
+00198     {\cf17 struct }tm*  validateDate      ({\cf17 const} {\cf18 char}* value, {\cf18 int} fmt) \{\par
+{\bkmkstart AAAAAAAEAW}{\bkmkend AAAAAAAEAW}
+00199         {\cf18 char} strDate[11];\par
+{\bkmkstart AAAAAAAEAX}{\bkmkend AAAAAAAEAX}
+00200         time_base::dateorder d;\par
+{\bkmkstart AAAAAAAEAY}{\bkmkend AAAAAAAEAY}
+00201         vector<int> dt(3);\par
+{\bkmkstart AAAAAAAEAZ}{\bkmkend AAAAAAAEAZ}
+00202         regex pat1\{ {\cf22 "^[0-9]\{1,2\}[/-]\{1\}[0-9]\{1,2\}[/-]\{1\}[0-9]\{2,4\}$"} \};\par
+{\bkmkstart AAAAAAAEBA}{\bkmkend AAAAAAAEBA}
+00203         regex pat2\{ {\cf22 "^[0-9]\{2,4\}[/-]\{1\}[0-9]\{1,2\}[/-]\{1\}[0-9]\{1,2\}$"} \};\par
+{\bkmkstart AAAAAAAEBB}{\bkmkend AAAAAAAEBB}
+00204         regex pat;\par
+{\bkmkstart AAAAAAAEBC}{\bkmkend AAAAAAAEBC}
+00205         d = (fmt == -1) ? use_facet<time_get<char>>(locale()).date_order() \par
+{\bkmkstart AAAAAAAEBD}{\bkmkend AAAAAAAEBD}
+00206                         : {\cf17 static_cast<}time_base::dateorder{\cf17 >}(fmt);\par
+{\bkmkstart AAAAAAAEBE}{\bkmkend AAAAAAAEBE}
+00207 \par
+{\bkmkstart AAAAAAAEBF}{\bkmkend AAAAAAAEBF}
+00208         {\cf19 switch} (d) \{\par
+{\bkmkstart AAAAAAAEBG}{\bkmkend AAAAAAAEBG}
+00209                 {\cf19 case} time_base::no_order: \par
+{\bkmkstart AAAAAAAEBH}{\bkmkend AAAAAAAEBH}
+00210                 {\cf19 case} time_base::dmy: \par
+{\bkmkstart AAAAAAAEBI}{\bkmkend AAAAAAAEBI}
+00211                 {\cf19 case} time_base::mdy: pat = pat1; {\cf19 break};\par
+{\bkmkstart AAAAAAAEBJ}{\bkmkend AAAAAAAEBJ}
+00212                 {\cf19 default}:                  pat = pat2;\par
+{\bkmkstart AAAAAAAEBK}{\bkmkend AAAAAAAEBK}
+00213         \}\par
+{\bkmkstart AAAAAAAEBL}{\bkmkend AAAAAAAEBL}
+00214         {\cf18 bool} match = regex_search(value, pat);\par
+{\bkmkstart AAAAAAAEBM}{\bkmkend AAAAAAAEBM}
+00215         {\cf19 if} (!match) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DATE);\par
+{\bkmkstart AAAAAAAEBN}{\bkmkend AAAAAAAEBN}
+00216         vector<int> res = tokenizeNumber(value, ({\cf18 char}*){\cf22 "[/-]"});\par
+{\bkmkstart AAAAAAAEBO}{\bkmkend AAAAAAAEBO}
+00217         {\cf19 switch} (d) \{\par
+{\bkmkstart AAAAAAAEBP}{\bkmkend AAAAAAAEBP}
+00218                {\cf19 case} time_base::dmy: dt = \{ res[0], res[1], res[2] \}; {\cf19 break};\par
+{\bkmkstart AAAAAAAEBQ}{\bkmkend AAAAAAAEBQ}
+00219                {\cf19 case} time_base::mdy: dt = \{ res[1], res[0], res[2] \}; {\cf19 break};\par
+{\bkmkstart AAAAAAAEBR}{\bkmkend AAAAAAAEBR}
+00220                {\cf19 case} time_base::ymd: dt = \{ res[2], res[1], res[0] \}; {\cf19 break};\par
+{\bkmkstart AAAAAAAEBS}{\bkmkend AAAAAAAEBS}
+00221                {\cf19 case} time_base::ydm: dt = \{ res[2], res[0], res[1] \}; {\cf19 break};\par
+{\bkmkstart AAAAAAAEBT}{\bkmkend AAAAAAAEBT}
+00222                {\cf19 default}:                  dt = \{ res[0], res[1], res[2] \};\par
+{\bkmkstart AAAAAAAEBU}{\bkmkend AAAAAAAEBU}
+00223         \}\par
+{\bkmkstart AAAAAAAEBV}{\bkmkend AAAAAAAEBV}
+00224         validateDateValue(value, dt);\par
+{\bkmkstart AAAAAAAEBW}{\bkmkend AAAAAAAEBW}
+00225         sprintf(strDate, {\cf22 "%04d/%02d/%02d"}, dt[2], dt[1], dt[0]);\par
+{\bkmkstart AAAAAAAEBX}{\bkmkend AAAAAAAEBX}
+00226         {\cf19 return} makeDateTime(strDate, 0x0);\par
+{\bkmkstart AAAAAAAEBY}{\bkmkend AAAAAAAEBY}
+00227     \}\par
+{\bkmkstart AAAAAAAEBZ}{\bkmkend AAAAAAAEBZ}
+00228     {\cf17 struct }tm*  validateDateTime  ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAECA}{\bkmkend AAAAAAAECA}
+00229         {\cf17 struct }tm* tmDate;\par
+{\bkmkstart AAAAAAAECB}{\bkmkend AAAAAAAECB}
+00230         {\cf17 struct }tm* tmTime;\par
+{\bkmkstart AAAAAAAECC}{\bkmkend AAAAAAAECC}
+00231         {\cf18 char} szDate[11];\par
+{\bkmkstart AAAAAAAECD}{\bkmkend AAAAAAAECD}
+00232         {\cf18 char} szTime[10];\par
+{\bkmkstart AAAAAAAECE}{\bkmkend AAAAAAAECE}
+00233         vector<int> res;\par
+{\bkmkstart AAAAAAAECF}{\bkmkend AAAAAAAECF}
+00234         {\cf20 // Revisited. More clean by pieces}\par
+{\bkmkstart AAAAAAAECG}{\bkmkend AAAAAAAECG}
+00235         vector<string> pieces = tokenize(value, {\cf22 "[ \\t]+"});\par
+{\bkmkstart AAAAAAAECH}{\bkmkend AAAAAAAECH}
+00236         {\cf19 if} (pieces.size() != 2) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DATETIME);\par
+{\bkmkstart AAAAAAAECI}{\bkmkend AAAAAAAECI}
+00237         {\cf19 try} \{\par
+{\bkmkstart AAAAAAAECJ}{\bkmkend AAAAAAAECJ}
+00238             tmDate = validateDate(pieces[0].c_str(), time_base::ymd);\par
+{\bkmkstart AAAAAAAECK}{\bkmkend AAAAAAAECK}
+00239             tmTime = validateTime(pieces[1].c_str());\par
+{\bkmkstart AAAAAAAECL}{\bkmkend AAAAAAAECL}
+00240             sprintf(szDate, {\cf22 "%04d/%02d/%02d"}, tmDate->tm_year + 1900, tmDate->tm_mon + 1, tmDate->tm_mday);\par
+{\bkmkstart AAAAAAAECM}{\bkmkend AAAAAAAECM}
+00241             sprintf(szTime, {\cf22 "%02d:%02d:%02d"}, tmTime->tm_hour, tmTime->tm_min, tmTime->tm_sec);\par
+{\bkmkstart AAAAAAAECN}{\bkmkend AAAAAAAECN}
+00242         \}\par
+{\bkmkstart AAAAAAAECO}{\bkmkend AAAAAAAECO}
+00243         {\cf19 catch}(exception ex) \{\par
+{\bkmkstart AAAAAAAECP}{\bkmkend AAAAAAAECP}
+00244             {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAECQ}{\bkmkend AAAAAAAECQ}
+00245         \}\par
+{\bkmkstart AAAAAAAECR}{\bkmkend AAAAAAAECR}
+00246         {\cf19 return} makeDateTime(szDate,szTime);\par
+{\bkmkstart AAAAAAAECS}{\bkmkend AAAAAAAECS}
+00247     \}\par
+{\bkmkstart AAAAAAAECT}{\bkmkend AAAAAAAECT}
+00248     {\cf18 char} *      validateTimestamp ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAECU}{\bkmkend AAAAAAAECU}
+00249         vector<int> res;\par
+{\bkmkstart AAAAAAAECV}{\bkmkend AAAAAAAECV}
+00250         {\cf20 // timestamp es yyyy-mm-dd[- ]hh:MM:SS.nnnnnn}\par
+{\bkmkstart AAAAAAAECW}{\bkmkend AAAAAAAECW}
+00251         {\cf17 struct }tm *tmDate, *tmTime;\par
+{\bkmkstart AAAAAAAECX}{\bkmkend AAAAAAAECX}
+00252         vector<string> pieces = tokenize(value, {\cf22 "-|[ \\t]+"});\par
+{\bkmkstart AAAAAAAECY}{\bkmkend AAAAAAAECY}
+00253         {\cf18 int} npieces = (int) pieces.size();\par
+{\bkmkstart AAAAAAAECZ}{\bkmkend AAAAAAAECZ}
+00254         {\cf19 if} (npieces != 2 && npieces != 4) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);\par
+{\bkmkstart AAAAAAAEDA}{\bkmkend AAAAAAAEDA}
+00255         {\cf19 try} \{\par
+{\bkmkstart AAAAAAAEDB}{\bkmkend AAAAAAAEDB}
+00256             {\cf18 int} iTime = (npieces == 2) ? 1 : 3;\par
+{\bkmkstart AAAAAAAEDC}{\bkmkend AAAAAAAEDC}
+00257             {\cf19 if} (npieces == 2) tmDate = validateDate(pieces[0].c_str(), time_base::ymd);\par
+{\bkmkstart AAAAAAAEDD}{\bkmkend AAAAAAAEDD}
+00258             {\cf19 if} (npieces != 2) \{\par
+{\bkmkstart AAAAAAAEDE}{\bkmkend AAAAAAAEDE}
+00259                 {\cf18 char} strdt[11];\par
+{\bkmkstart AAAAAAAEDF}{\bkmkend AAAAAAAEDF}
+00260                 sprintf(strdt, {\cf22 "%s-%s-%s"}, pieces[0].c_str(), pieces[1].c_str(), pieces[2].c_str());\par
+{\bkmkstart AAAAAAAEDG}{\bkmkend AAAAAAAEDG}
+00261                 tmDate = validateDate(strdt, time_base::ymd);\par
+{\bkmkstart AAAAAAAEDH}{\bkmkend AAAAAAAEDH}
+00262             \}\par
+{\bkmkstart AAAAAAAEDI}{\bkmkend AAAAAAAEDI}
+00263             vector<string> tt = tokenize(pieces[iTime].c_str(), {\cf22 "\\\\."});\par
+{\bkmkstart AAAAAAAEDJ}{\bkmkend AAAAAAAEDJ}
+00264             {\cf19 if} (tt.size() != 2) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_TMS);\par
+{\bkmkstart AAAAAAAEDK}{\bkmkend AAAAAAAEDK}
+00265             tmTime = validateTime(tt[0].c_str());\par
+{\bkmkstart AAAAAAAEDL}{\bkmkend AAAAAAAEDL}
+00266             validateNumber(tt[1].c_str());\par
+{\bkmkstart AAAAAAAEDM}{\bkmkend AAAAAAAEDM}
+00267         \}\par
+{\bkmkstart AAAAAAAEDN}{\bkmkend AAAAAAAEDN}
+00268         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAEDO}{\bkmkend AAAAAAAEDO}
+00269             {\cf19 throw} CmdLineValueException(TXT_VAL_INVALID, value);\par
+{\bkmkstart AAAAAAAEDP}{\bkmkend AAAAAAAEDP}
+00270         \}\par
+{\bkmkstart AAAAAAAEDQ}{\bkmkend AAAAAAAEDQ}
+00271         {\cf19 return} ({\cf18 char} *) value;\par
+{\bkmkstart AAAAAAAEDR}{\bkmkend AAAAAAAEDR}
+00272     \}\par
+{\bkmkstart AAAAAAAEDS}{\bkmkend AAAAAAAEDS}
+00273     filesystem::path        validateDir       ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAEDT}{\bkmkend AAAAAAAEDT}
+00274         {\cf20 // If is not a valid path, chdir return -1}\par
+{\bkmkstart AAAAAAAEDU}{\bkmkend AAAAAAAEDU}
+00275         {\cf20 // Some times chdir returns 0 but not change the directory}\par
+{\bkmkstart AAAAAAAEDV}{\bkmkend AAAAAAAEDV}
+00276         {\cf18 char} old[256];\par
+{\bkmkstart AAAAAAAEDW}{\bkmkend AAAAAAAEDW}
+00277         {\cf18 char} tmp[256];\par
+{\bkmkstart AAAAAAAEDX}{\bkmkend AAAAAAAEDX}
+00278         {\cf18 int} rc, rc2;\par
+{\bkmkstart AAAAAAAEDY}{\bkmkend AAAAAAAEDY}
+00279         {\cf18 char}* ptr = getcwd(old, 256);\par
+{\bkmkstart AAAAAAAEDZ}{\bkmkend AAAAAAAEDZ}
+00280         {\cf19 if} (strcmp(value, {\cf22 "."}) == 0) {\cf19 return} filesystem::path(old);\par
+{\bkmkstart AAAAAAAEEA}{\bkmkend AAAAAAAEEA}
+00281         {\cf19 if} (strcmp(value, old) == 0) {\cf19 return} filesystem::path(old);\par
+{\bkmkstart AAAAAAAEEB}{\bkmkend AAAAAAAEEB}
+00282         rc = _chdir(value);\par
+{\bkmkstart AAAAAAAEEC}{\bkmkend AAAAAAAEEC}
+00283         {\cf19 if} (rc) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR );\par
+{\bkmkstart AAAAAAAEED}{\bkmkend AAAAAAAEED}
+00284         ptr = getcwd(tmp, 256);\par
+{\bkmkstart AAAAAAAEEE}{\bkmkend AAAAAAAEEE}
+00285         rc = chdir(old);\par
+{\bkmkstart AAAAAAAEEF}{\bkmkend AAAAAAAEEF}
+00286 {\cf21         #ifdef _WIN32 }{\cf20 // Windows is case insensitive}\par
+{\bkmkstart AAAAAAAEEG}{\bkmkend AAAAAAAEEG}
+00287             rc2 = strcmpi(old, tmp);\par
+{\bkmkstart AAAAAAAEEH}{\bkmkend AAAAAAAEEH}
+00288 {\cf21         #else}\par
+{\bkmkstart AAAAAAAEEI}{\bkmkend AAAAAAAEEI}
+00289             rc2 = strcmp(old, tmp);\par
+{\bkmkstart AAAAAAAEEJ}{\bkmkend AAAAAAAEEJ}
+00290 {\cf21         #endif}\par
+{\bkmkstart AAAAAAAEEK}{\bkmkend AAAAAAAEEK}
+00291 \par
+{\bkmkstart AAAAAAAEEL}{\bkmkend AAAAAAAEEL}
+00292         {\cf19 if} (rc2 == 0) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR);\par
+{\bkmkstart AAAAAAAEEM}{\bkmkend AAAAAAAEEM}
+00293         {\cf19 return} filesystem::path(value);\par
+{\bkmkstart AAAAAAAEEN}{\bkmkend AAAAAAAEEN}
+00294     \}\par
+{\bkmkstart AAAAAAAEEO}{\bkmkend AAAAAAAEEO}
+00295     filesystem::path        validateDirExist({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAEEP}{\bkmkend AAAAAAAEEP}
+00296         {\cf17 struct }stat info;\par
+{\bkmkstart AAAAAAAEEQ}{\bkmkend AAAAAAAEEQ}
+00297         validateDir(value);\par
+{\bkmkstart AAAAAAAEER}{\bkmkend AAAAAAAEER}
+00298         {\cf18 int} rc = stat(value, &info);\par
+{\bkmkstart AAAAAAAEES}{\bkmkend AAAAAAAEES}
+00299         {\cf19 if} (stat(value, &info) != 0) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_NO_DIR);\par
+{\bkmkstart AAAAAAAEET}{\bkmkend AAAAAAAEET}
+00300         {\cf18 unsigned} {\cf18 short} mask = info.st_mode & S_IFDIR;\par
+{\bkmkstart AAAAAAAEEU}{\bkmkend AAAAAAAEEU}
+00301         {\cf20 //mask ^= 16384; // 100 0000 0000 0000}\par
+{\bkmkstart AAAAAAAEEV}{\bkmkend AAAAAAAEEV}
+00302         {\cf19 if} (mask == 0)          {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_DIR_NOTFND);\par
+{\bkmkstart AAAAAAAEEW}{\bkmkend AAAAAAAEEW}
+00303         {\cf20 //if ((info.st_mode & S_IFDIR) == 0)               throw CmdLineValueException(value, "is not a directory");}\par
+{\bkmkstart AAAAAAAEEX}{\bkmkend AAAAAAAEEX}
+00304         {\cf19 return} filesystem::path(value);\par
+{\bkmkstart AAAAAAAEEY}{\bkmkend AAAAAAAEEY}
+00305     \}\par
+{\bkmkstart AAAAAAAEEZ}{\bkmkend AAAAAAAEEZ}
+00306     filesystem::path        validateFile      ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAEFA}{\bkmkend AAAAAAAEFA}
+00307         {\cf19 try} \{\par
+{\bkmkstart AAAAAAAEFB}{\bkmkend AAAAAAAEFB}
+00308             {\cf19 return} filesystem::path(value);\par
+{\bkmkstart AAAAAAAEFC}{\bkmkend AAAAAAAEFC}
+00309         \}\par
+{\bkmkstart AAAAAAAEFD}{\bkmkend AAAAAAAEFD}
+00310         {\cf19 catch} (exception ex) \{\par
+{\bkmkstart AAAAAAAEFE}{\bkmkend AAAAAAAEFE}
+00311             {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE);\par
+{\bkmkstart AAAAAAAEFF}{\bkmkend AAAAAAAEFF}
+00312         \}\par
+{\bkmkstart AAAAAAAEFG}{\bkmkend AAAAAAAEFG}
+00313     \}\par
+{\bkmkstart AAAAAAAEFH}{\bkmkend AAAAAAAEFH}
+00314     filesystem::path        validateFileExist ({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAEFI}{\bkmkend AAAAAAAEFI}
+00315         {\cf17 struct }stat info;\par
+{\bkmkstart AAAAAAAEFJ}{\bkmkend AAAAAAAEFJ}
+00316         filesystem::path p = validateFile(value);\par
+{\bkmkstart AAAAAAAEFK}{\bkmkend AAAAAAAEFK}
+00317         {\cf19 if} (stat(value, &info) != 0) {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE_NOTFND);\par
+{\bkmkstart AAAAAAAEFL}{\bkmkend AAAAAAAEFL}
+00318         {\cf19 if} (info.st_mode & S_IFDIR)  {\cf19 throw} CmdLineValueException(TXT_VAL_EXPECTED, value, TXT_FILE_DIR);\par
+{\bkmkstart AAAAAAAEFM}{\bkmkend AAAAAAAEFM}
+00319         {\cf19 return} p;\par
+{\bkmkstart AAAAAAAEFN}{\bkmkend AAAAAAAEFN}
+00320     \}\par
+{\bkmkstart AAAAAAAEFO}{\bkmkend AAAAAAAEFO}
+00321     {\cf18 void}        validateValue     ({\cf17 const} {\cf18 char}* value, Type type) \{\par
+{\bkmkstart AAAAAAAEFP}{\bkmkend AAAAAAAEFP}
+00322         {\cf19 switch} (type) \{\par
+{\bkmkstart AAAAAAAEFQ}{\bkmkend AAAAAAAEFQ}
+00323                 {\cf19 case} Type::NUMBER:      validateNumber(value);      {\cf19 break};\par
+{\bkmkstart AAAAAAAEFR}{\bkmkend AAAAAAAEFR}
+00324                 {\cf19 case} Type::LONGNUMBER:  validateLongNumber(value);  {\cf19 break};\par
+{\bkmkstart AAAAAAAEFS}{\bkmkend AAAAAAAEFS}
+00325                 {\cf19 case} Type::DECIMAL:     validateDecimal(value);     {\cf19 break};\par
+{\bkmkstart AAAAAAAEFT}{\bkmkend AAAAAAAEFT}
+00326                 {\cf19 case} Type::LONGDECIMAL: validateLongDecimal(value); {\cf19 break};\par
+{\bkmkstart AAAAAAAEFU}{\bkmkend AAAAAAAEFU}
+00327                 {\cf19 case} Type::DATE:        validateDate(value);        {\cf19 break};\par
+{\bkmkstart AAAAAAAEFV}{\bkmkend AAAAAAAEFV}
+00328                 {\cf19 case} Type::TIME:        validateTime(value);        {\cf19 break};\par
+{\bkmkstart AAAAAAAEFW}{\bkmkend AAAAAAAEFW}
+00329                 {\cf19 case} Type::DATETIME:    validateDateTime(value);    {\cf19 break};\par
+{\bkmkstart AAAAAAAEFX}{\bkmkend AAAAAAAEFX}
+00330                 {\cf19 case} Type::TMS:         validateTimestamp(value);   {\cf19 break};\par
+{\bkmkstart AAAAAAAEFY}{\bkmkend AAAAAAAEFY}
+00331                 {\cf19 case} Type::DIR:         validateDir(value);         {\cf19 break};\par
+{\bkmkstart AAAAAAAEFZ}{\bkmkend AAAAAAAEFZ}
+00332                 {\cf19 case} Type::FILE:        validateFile(value);        {\cf19 break};\par
+{\bkmkstart AAAAAAAEGA}{\bkmkend AAAAAAAEGA}
+00333                 {\cf19 case} Type::DIR_EXISTS:  validateDirExist(value);    {\cf19 break};\par
+{\bkmkstart AAAAAAAEGB}{\bkmkend AAAAAAAEGB}
+00334                 {\cf19 case} Type::FILE_EXISTS: validateFileExist(value);   {\cf19 break};\par
+{\bkmkstart AAAAAAAEGC}{\bkmkend AAAAAAAEGC}
+00335         \}\par
+{\bkmkstart AAAAAAAEGD}{\bkmkend AAAAAAAEGD}
+00336         {\cf20 // return obj;}\par
+{\bkmkstart AAAAAAAEGE}{\bkmkend AAAAAAAEGE}
+00337     \}\par
+{\bkmkstart AAAAAAAEGF}{\bkmkend AAAAAAAEGF}
+00338     {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAEGG}{\bkmkend AAAAAAAEGG}
+00339     T        getValue({\cf17 const} {\cf18 char}* value, Type type) \{\par
+{\bkmkstart AAAAAAAEGH}{\bkmkend AAAAAAAEGH}
+00340         {\cf19 switch} (type) \{\par
+{\bkmkstart AAAAAAAEGI}{\bkmkend AAAAAAAEGI}
+00341         {\cf19 case} Type::NUMBER:      {\cf19 return} validateNumber(value);\par
+{\bkmkstart AAAAAAAEGJ}{\bkmkend AAAAAAAEGJ}
+00342         {\cf19 case} Type::DECIMAL:     {\cf19 return} validateDecimal(value);\par
+{\bkmkstart AAAAAAAEGK}{\bkmkend AAAAAAAEGK}
+00343         {\cf19 case} Type::DATE:        {\cf19 return} validateDate(value);\par
+{\bkmkstart AAAAAAAEGL}{\bkmkend AAAAAAAEGL}
+00344         {\cf19 case} Type::TIME:        {\cf19 return} validateTime(value);\par
+{\bkmkstart AAAAAAAEGM}{\bkmkend AAAAAAAEGM}
+00345         {\cf19 case} Type::DATETIME:    {\cf19 return} validateDateTime(value);\par
+{\bkmkstart AAAAAAAEGN}{\bkmkend AAAAAAAEGN}
+00346         {\cf19 case} Type::TMS:         {\cf19 return} validateTimestamp(value);\par
+{\bkmkstart AAAAAAAEGO}{\bkmkend AAAAAAAEGO}
+00347         {\cf19 case} Type::DIR:         {\cf19 return} validateDir(value);\par
+{\bkmkstart AAAAAAAEGP}{\bkmkend AAAAAAAEGP}
+00348         {\cf19 case} Type::FILE:        {\cf19 return} validateFile(value);\par
+{\bkmkstart AAAAAAAEGQ}{\bkmkend AAAAAAAEGQ}
+00349         {\cf19 case} Type::DIR_EXISTS:  {\cf19 return} validateDirExist(value);\par
+{\bkmkstart AAAAAAAEGR}{\bkmkend AAAAAAAEGR}
+00350         {\cf19 case} Type::FILE_EXISTS: {\cf19 return} validateFileExist(value);\par
+{\bkmkstart AAAAAAAEGS}{\bkmkend AAAAAAAEGS}
+00351         \}\par
+{\bkmkstart AAAAAAAEGT}{\bkmkend AAAAAAAEGT}
+00352         {\cf19 return} value;\par
+{\bkmkstart AAAAAAAEGU}{\bkmkend AAAAAAAEGU}
+00353         {\cf20 // return obj;}\par
+{\bkmkstart AAAAAAAEGV}{\bkmkend AAAAAAAEGV}
+00354     \}\par
+{\bkmkstart AAAAAAAEGW}{\bkmkend AAAAAAAEGW}
+00355     {\cf17 template} <{\cf17 typename} T>\par
+{\bkmkstart AAAAAAAEGX}{\bkmkend AAAAAAAEGX}
+00356     {\cf18 void} checkValue({\cf17 auto} value) \{\par
+{\bkmkstart AAAAAAAEGY}{\bkmkend AAAAAAAEGY}
+00357         {\cf19 if} (value < numeric_limits<T>::min() || value > numeric_limits<T>::max()) \{\par
+{\bkmkstart AAAAAAAEGZ}{\bkmkend AAAAAAAEGZ}
+00358             {\cf19 throw} CmdLineInvalidTypeException({\cf17 typeid}(T).name());\par
+{\bkmkstart AAAAAAAEHA}{\bkmkend AAAAAAAEHA}
+00359         \}\par
+{\bkmkstart AAAAAAAEHB}{\bkmkend AAAAAAAEHB}
+00360     \}\par
+{\bkmkstart AAAAAAAEHC}{\bkmkend AAAAAAAEHC}
+00361     {\cf18 int}  makeInteger({\cf17 const} {\cf18 char} *value) \{\par
+{\bkmkstart AAAAAAAEHD}{\bkmkend AAAAAAAEHD}
+00362         {\cf18 long} lvalue = validateNumber(value);\par
+{\bkmkstart AAAAAAAEHE}{\bkmkend AAAAAAAEHE}
+00363         checkValue<int>(lvalue);\par
+{\bkmkstart AAAAAAAEHF}{\bkmkend AAAAAAAEHF}
+00364         {\cf19 return} ({\cf18 int}) lvalue;\par
+{\bkmkstart AAAAAAAEHG}{\bkmkend AAAAAAAEHG}
+00365     \}\par
+{\bkmkstart AAAAAAAEHH}{\bkmkend AAAAAAAEHH}
+00366     {\cf18 float}  makeFloat({\cf17 const} {\cf18 char}* value) \{\par
+{\bkmkstart AAAAAAAEHI}{\bkmkend AAAAAAAEHI}
+00367         {\cf18 double} dvalue = validateDecimal(value);\par
+{\bkmkstart AAAAAAAEHJ}{\bkmkend AAAAAAAEHJ}
+00368         checkValue<float>(dvalue);\par
+{\bkmkstart AAAAAAAEHK}{\bkmkend AAAAAAAEHK}
+00369         {\cf19 return} ({\cf18 float}) dvalue;\par
+{\bkmkstart AAAAAAAEHL}{\bkmkend AAAAAAAEHL}
+00370     \}\par
+{\bkmkstart AAAAAAAEHM}{\bkmkend AAAAAAAEHM}
+00371     {\cf17 struct }tm makeTm(const char *value) \{\par
+{\bkmkstart AAAAAAAEHN}{\bkmkend AAAAAAAEHN}
+00372         {\cf20 // Como date, time y datetime son tm}\par
+{\bkmkstart AAAAAAAEHO}{\bkmkend AAAAAAAEHO}
+00373         {\cf20 // Parseamos}\par
+{\bkmkstart AAAAAAAEHP}{\bkmkend AAAAAAAEHP}
+00374         {\cf20 // datetime > 10}\par
+{\bkmkstart AAAAAAAEHQ}{\bkmkend AAAAAAAEHQ}
+00375         {\cf20 // date puede ser > 8}\par
+{\bkmkstart AAAAAAAEHR}{\bkmkend AAAAAAAEHR}
+00376         {\cf20 // si es menor y tiene : es hora, si no tiempo}\par
+{\bkmkstart AAAAAAAEHS}{\bkmkend AAAAAAAEHS}
+00377         {\cf17 struct }tm* ptr = {\cf17 nullptr};\par
+{\bkmkstart AAAAAAAEHT}{\bkmkend AAAAAAAEHT}
+00378         {\cf17 struct }tm t;\par
+{\bkmkstart AAAAAAAEHU}{\bkmkend AAAAAAAEHU}
+00379         {\cf18 int} len = (int) strlen(value);\par
+{\bkmkstart AAAAAAAEHV}{\bkmkend AAAAAAAEHV}
+00380         {\cf19 if} (len > 10) \{\par
+{\bkmkstart AAAAAAAEHW}{\bkmkend AAAAAAAEHW}
+00381             ptr = validateDateTime(value);\par
+{\bkmkstart AAAAAAAEHX}{\bkmkend AAAAAAAEHX}
+00382         \}\par
+{\bkmkstart AAAAAAAEHY}{\bkmkend AAAAAAAEHY}
+00383         {\cf19 else} \{\par
+{\bkmkstart AAAAAAAEHZ}{\bkmkend AAAAAAAEHZ}
+00384             {\cf19 if} (len > 8) \{\par
+{\bkmkstart AAAAAAAEIA}{\bkmkend AAAAAAAEIA}
+00385                 ptr = validateDate(value);\par
+{\bkmkstart AAAAAAAEIB}{\bkmkend AAAAAAAEIB}
+00386             \}\par
+{\bkmkstart AAAAAAAEIC}{\bkmkend AAAAAAAEIC}
+00387             {\cf19 else} \{\par
+{\bkmkstart AAAAAAAEID}{\bkmkend AAAAAAAEID}
+00388                 {\cf18 string} str(value);\par
+{\bkmkstart AAAAAAAEIE}{\bkmkend AAAAAAAEIE}
+00389                 {\cf19 if} (str.find({\cf23 ':'}) != std::string::npos) \{\par
+{\bkmkstart AAAAAAAEIF}{\bkmkend AAAAAAAEIF}
+00390                     ptr = validateTime(value);\par
+{\bkmkstart AAAAAAAEIG}{\bkmkend AAAAAAAEIG}
+00391                 \}\par
+{\bkmkstart AAAAAAAEIH}{\bkmkend AAAAAAAEIH}
+00392                 {\cf19 else} \{\par
+{\bkmkstart AAAAAAAEII}{\bkmkend AAAAAAAEII}
+00393                     ptr = validateDate(value);\par
+{\bkmkstart AAAAAAAEIJ}{\bkmkend AAAAAAAEIJ}
+00394                 \}\par
+{\bkmkstart AAAAAAAEIK}{\bkmkend AAAAAAAEIK}
+00395             \}\par
+{\bkmkstart AAAAAAAEIL}{\bkmkend AAAAAAAEIL}
+00396         \}\par
+{\bkmkstart AAAAAAAEIM}{\bkmkend AAAAAAAEIM}
+00397         memcpy(&t, ptr, {\cf17 sizeof}({\cf17 struct} tm));\par
+{\bkmkstart AAAAAAAEIN}{\bkmkend AAAAAAAEIN}
+00398         {\cf19 return} t;\par
+{\bkmkstart AAAAAAAEIO}{\bkmkend AAAAAAAEIO}
+00399     \}\par
+{\bkmkstart AAAAAAAEIP}{\bkmkend AAAAAAAEIP}
+00400     {\cf18 bool}  valMakeBoolean({\cf17 const} {\cf18 char} *value) \{\par
+{\bkmkstart AAAAAAAEIQ}{\bkmkend AAAAAAAEIQ}
+00401         {\cf19 return} makeBoolean(value);\par
+{\bkmkstart AAAAAAAEIR}{\bkmkend AAAAAAAEIR}
+00402     \}\par
+{\bkmkstart AAAAAAAEIS}{\bkmkend AAAAAAAEIS}
+00403     {\cf18 bool}  valMakeBoolean(std::string value) \{\par
+{\bkmkstart AAAAAAAEIT}{\bkmkend AAAAAAAEIT}
+00404         {\cf19 return} makeBoolean(value);\par
+{\bkmkstart AAAAAAAEIU}{\bkmkend AAAAAAAEIU}
+00405     \}\par
+{\bkmkstart AAAAAAAEIV}{\bkmkend AAAAAAAEIV}
+00406 \par
+{\bkmkstart AAAAAAAEIW}{\bkmkend AAAAAAAEIW}
+00407 \}\par
+}
+}
