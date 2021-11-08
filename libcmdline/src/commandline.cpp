@@ -36,7 +36,6 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		}
 	}
 	                    CommandLine::CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
-		std::cout << "Crea CommandLine\n";
 		this->sensitive = sensitive;
 		this->strict = strict;
 		memset(&rootOptions, 0x0, sizeof(rootOptions));
@@ -97,8 +96,11 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		return getOptionsValue(true);
 	}
 	Options CommandLine::getCurrentOptions() {
-//		return getOptionsValues(false);
-		return Options();
+        Options opts;
+        for (auto it : options) {
+            opts.emplace(it.first, vectorChar2String(it.second.getValues()));
+        }
+		return opts;
 	}
 	bool    CommandLine::hasDefinition(const char* name) {
 		Argument* opt = findPointer(&defines, name);
@@ -297,7 +299,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 	void  CommandLine::loadParameters(Parameters parms) {
 		ParameterTree** root;
 
-		for (Parm p : parms) {
+		for (Parameter p : parms) {
 			Argument option(&p);
 			if (sensitive) option.makeUpper();
 			bool isFlag = (p.instanceOfFlag() || p.type == Type::FLAG) ? true : false;
@@ -308,7 +310,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		}
 	}
 	void  CommandLine::loadHelpFlags() {
-		Parameters flagsHelp = { Parm("help", false) ,Parm("HELP", false) };
+		Parameters flagsHelp = { Parameter("help", false) ,Parameter("HELP", false) };
 		Argument* arg = flags.find("help");
 		if (arg != nullptr) return;
 		loadParameters(flagsHelp);

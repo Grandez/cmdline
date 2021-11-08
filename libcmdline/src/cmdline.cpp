@@ -11,7 +11,9 @@ using namespace _cmdline;
 namespace cmdline {
 	CmdLine* singleton_ = nullptr;
 	static bool instance = false;  // Allow constructor only in test
-	void CmdLine::freeInstance() { singleton_ = nullptr; }
+	void CmdLine::destroyInstance(CmdLine* cmdline) { 
+         singleton_ = nullptr; 
+    }
 	_cmdline::CommandLine* _commandLine;
 
 	CmdLine::CmdLine(int argc, const char** argv, Parameters parms) {

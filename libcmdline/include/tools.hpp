@@ -26,4 +26,5 @@ namespace _cmdline {
 	char*               myStrdup(const char* s, int size); /*!< @private */
 	char*               myStrdup(const char* s);           /*!< @private */
 	void                defaultDate(char* aux);
+    vector<string>      vectorChar2String(vector<const char *> data); 
 }

@@ -19,7 +19,7 @@ namespace _cmdline {
 		Argument() = delete;
 		~Argument();
 		Argument(Argument *arg);
-		Argument(Parm *parm);
+		Argument(Parameter *parm);
 		Argument(const char *name, const char* value);
 		Argument(const char *name, const char* value, Source source);
 		Argument(const char* name, const char* value, Type type);

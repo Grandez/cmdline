@@ -2,6 +2,7 @@
 
 #include <vector>
 #include "types.hpp"
+// #include "validations.hpp"
 #include "cmdline_exceptions.hpp"
 
 #ifndef __CLASS_CMDLINE__
@@ -12,67 +13,39 @@
 #endif
 
 namespace cmdline {
-	/**
-	 * Generic Class to define defined flags and options
-	 *
-	 * A parm has 4 properties:
-	 * \property name Name of parameter
-	 * \property value Default value for the parameter
-	 * \property type Type of parameter according Type enum
-	 * \property multiple Parameter supports multiple values?
-	 * 
-	 * Parm(const char* name) : Default for Flag
-	 * Parm(const char* name, const char* value): Default for option
-	 * Parm(const char* name, bool value) : Define Flag with false or true
-     * Parm(const char* name, const char* value, Type type, bool multiple = false) : Detailed definition
-	 *
-	 */
-	class Parm {
+	class Parameter {
 	public:
 		const char* name;              // Name of parameter
 		Type type = Type::STRING;  // Type
 		char* value;   // default value
 		bool multiple = false;   // Allow multiple values?
-		Parm() = delete ; // { name = nullptr; } // default
-		Parm(const char* name);
-		Parm(const char* name, const char* value);
-		Parm(const char* name, const char* value, Type type, bool multiple = false);
-		Parm(const char* name, bool value);
+		Parameter() = delete ; // { name = nullptr; } // default
+		Parameter(const char* name);
+		Parameter(const char* name, const char* value);
+		Parameter(const char* name, const char* value, Type type, bool multiple = false);
+		Parameter(const char* name, bool value);
 		bool instanceOfFlag();
 		bool instanceOfOption();
 	private:
 		int instance = 0;
 
 	};
-	/**
-	 * Utility subclass for defining Flags
-	 *
-	 * Parm(const char* name) : Name,false
-	 * Parm(const char* name, const char* value): name/value (false/true)
-	 *
-	 */
-	class ParmFlag : public Parm {
+	class ParmFlag : public Parameter {
 	public:
 		ParmFlag() = delete;
-		ParmFlag(const char* name) : Parm(name, true) {};
-		ParmFlag(const char* name, bool active) : Parm(name, active) {};
+		ParmFlag(const char* name) : Parameter(name, true) {};
+		ParmFlag(const char* name, bool active) : Parameter(name, active) {};
 	};
-	/**
-	 * Utility subclass for defining Options
-	 *
-	 * Parm(const char* name, const char* value): name/value (false/true)
-	 *
-	 */
-	class ParmOption : public Parm {
+	class ParmOption : public Parameter {
 	public:
 		ParmOption() = delete;
-		ParmOption(const char* name, const char* value) : Parm(name, value) {};
-		ParmOption(const char* name, Type type) : Parm(name, NULL, type) {}
-		ParmOption(const char* name, const char* value, bool multiple) : Parm(name, value, Type::STRING, multiple) {};
-		ParmOption(const char* name, Type type, bool multiple) : Parm(name, NULL, type, multiple) {};
-		ParmOption(const char* name, const char* value, Type type,  bool multiple = false) : Parm(name, value, type, multiple) {};
+		ParmOption(const char* name, const char* value) : Parameter(name, value) {};
+		ParmOption(const char* name, Type type) : Parameter(name, NULL, type) {}
+		ParmOption(const char* name, const char* value, bool multiple) : Parameter(name, value, Type::STRING, multiple) {};
+		ParmOption(const char* name, Type type, bool multiple) : Parameter(name, NULL, type, multiple) {};
+		ParmOption(const char* name, const char* value, Type type,  bool multiple = false) : Parameter(name, value, type, multiple) {};
 	};
-	typedef std::vector<Parm>                 Parameters;
+	typedef std::vector<Parameter> Parameters;
 	class CmdLine {
 	public:
 		CmdLine() {};
@@ -83,7 +56,7 @@ namespace cmdline {
 //		static CmdLine *getInstance(int argc, const char* argv[], Parameters parms = Parameters());
 		static CmdLine *getInstance(int argc, const char** argv, Parameters parms = Parameters());
 		static CmdLine *getInstance(Parameters parms, int argc, const char** argv);
-		static void freeInstance();  // Just for test
+		static void destroyInstance(CmdLine *cmdline);  // Just for test
 		// Arguments
 		vector<const char*> args();
 

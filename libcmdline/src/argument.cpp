@@ -16,7 +16,7 @@ using namespace std;
 using namespace cmdline;
 
 namespace _cmdline {
-	Argument::Argument(Parm *parm) {
+	Argument::Argument(Parameter *parm) {
 		// Initial constructor. from default data
 		name = string(parm->name);
 		type = parm->type;
@@ -67,6 +67,10 @@ namespace _cmdline {
 	vector<const char *>  Argument::getValues() {
 		int i = 0;
 		vector<const char*> v(values.size());
+        if (values.size() == 0) {
+            v.push_back(defValue.c_str());
+            return v; 
+        }
 		for (string val : values) {
 			v[i++] = strdup((val.c_str()));
 		}

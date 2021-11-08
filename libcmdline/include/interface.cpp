@@ -62,12 +62,12 @@ logical     isMultiple(bool option, const char* name) {
     }
 }
 cmdline::Parameters makeParameters(ParmDef cparms[]) {
-    vector <cmdline::Parm> parms;
+    vector <cmdline::Parameter> parms;
     ParmDef* cp = cparms;
     while (cp->name) {
         bool b = (cp->multiple == TRUE) ? "1" : "0";
         cmdline::Type t = cmdline::Type(cp->type);
-        parms.push_back(cmdline::Parm(cp->name, cp->value, t, b));
+        parms.push_back(cmdline::Parameter(cp->name, cp->value, t, b));
         cp++;
     }
     return parms;

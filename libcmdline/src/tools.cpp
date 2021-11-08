@@ -187,4 +187,11 @@ namespace _cmdline {
 			        sprintf(aux, "%02d/%02d/%04d", now->tm_mday, now->tm_mon + 1, now->tm_year + 1900);
 		}
 	}
+    vector<string>      vectorChar2String(vector<const char *> data) {
+        vector<string> res;
+        for (int i = 0; i < data.size(); i++) {
+             res.push_back(data[i]);
+        }  
+        return res;
+    }
 }
