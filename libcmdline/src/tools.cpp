@@ -23,30 +23,39 @@ namespace _cmdline {
 			prev->addChild(temp);
 			prev = temp;
 		}
+        prev->last = true; 
 		return (root);
 	}
 	ParameterTree *joinTree(ParameterTree* root, const char* word) {
 		int idx = 1; // Here we know first word matches, so we check second letter
+        root->branchs++;
 		ParameterTree* last = root;
 		ParameterTree* act = root->getNext();
 		if (act == nullptr) {
+            last->branchs++;
 			last->addBranch(createTree(&(word[idx])));
 			return last;
 		}
 		bool done = false;
 		while (!done) {
 			if (act == nullptr) {
+                last->branchs++;
 				last->addBranch(createTree(&(word[idx])));
 				done = true;
 				continue;
 			}
 			if (act->letter == word[idx]) {
+                act->branchs++; 
 				last = act;
 				act = act->getNext();
 				idx++;
 				continue;
 			}
-			last->addBranch(createTree(&(word[idx])));
+            if (word[idx] == 0x0) {
+                last->last = true;
+            } else {
+			    last->addBranch(createTree(&(word[idx])));
+            }
 			done = true;
 		}
 		return last;

@@ -8,6 +8,7 @@ namespace _cmdline {
     public:
         char letter;
         int  branchs = 0; // Maximum of branchs along all children
+        bool last = false; 
         ParameterTree *parent = nullptr;
         ParameterTree() = delete;
         ParameterTree(ParameterTree&) = delete;

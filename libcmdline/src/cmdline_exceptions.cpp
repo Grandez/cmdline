@@ -15,15 +15,8 @@ namespace cmdline {
 	std::string mountMessage(const char* fmt, va_list list) {
 		char t[255];
 		std::vsprintf(t, fmt, list);
-		return std::string(t);
+		return std::string(TXT_ERROR).append(t);
 	}
-/*
-	std::string mountMessage(const char* fmt, char * list) {
-		char t[255];
-		std::sprintf(t, fmt, list);
-		return std::string(t);
-	}
-*/
 	CmdLineException::CmdLineException(char* txt) : invalid_argument(txt) {};
 	CmdLineException::CmdLineException(const char* fmt, ...) : invalid_argument("") {
 		va_list args;
@@ -31,46 +24,39 @@ namespace cmdline {
         std::string txt = mountMessage(fmt, args);
         va_end(args);
 		this->invalid_argument::~invalid_argument();
-		new (this) invalid_argument(TXT_ERROR + txt); //
+		new (this) invalid_argument(txt);
+        type = "CmdLineException";
 	}
-/*
-	CmdLineException::CmdLineException(const char* fmt, char *more) : invalid_argument("") {
-//		va_list args;
-//		va_start(args, fmt);
-	//	std::string txt = mountMessage(fmt, args);
- 	std::string txt = mountMessage(fmt, more);
-//        va_end(args);
-		this->invalid_argument::~invalid_argument();
-		new (this) invalid_argument(txt); //
-	}
-*/
 	CmdLineParameterException::CmdLineParameterException(const char* fmt, ...) {
 		va_list args;
 		va_start(args, fmt);
 		std::string txt = mountMessage(fmt, args);
 		this->CmdLineException::~CmdLineException(); // destroy the base class
-		new (this) CmdLineException((char*)txt.c_str()); //
+		new (this) CmdLineException((char*)txt.c_str()); 
+        type = "CmdLineParameterException";
 	}
 	CmdLineValueException::CmdLineValueException(const char* fmt, ...) {
 		va_list args;
 		va_start(args, fmt);
 		std::string txt = mountMessage(fmt, args);
 		this->CmdLineException::~CmdLineException(); // destroy the base class
-		new (this) CmdLineException((char*)txt.c_str()); //
+		new (this) CmdLineException((char*)txt.c_str()); 
+        type = "CmdLineValueException";
 	}
 	CmdLineDuplicateArgumentException::CmdLineDuplicateArgumentException(const char* fmt, ...) {
 		va_list args;
 		va_start(args, fmt);
 		std::string txt = mountMessage(fmt, args);
 		this->CmdLineException::~CmdLineException(); // destroy the base class
-		new (this) CmdLineException((char*)txt.c_str()); //
+		new (this) CmdLineException((char*)txt.c_str());
+        type = "CmdLineDuplicateArgumentException";
 	}
 	CmdLineNotFoundException::CmdLineNotFoundException(const char* fmt, ...) : std::runtime_error("unchecked") {
 		va_list args;
 		va_start(args, fmt);
 		std::string txt = mountMessage(fmt, args);
 		this->runtime_error::~runtime_error(); // destroy the base class
-		new (this) runtime_error((char*)txt.c_str()); //
+		new (this) runtime_error((char*)txt.c_str());
 	}
 	CmdLineInvalidTypeException::CmdLineInvalidTypeException(const char* fmt, ...) : std::runtime_error("unchecked") {
 		va_list args;

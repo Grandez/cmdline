@@ -1,30 +1,7 @@
 #pragma once
-/**
- * Base class for cmdline exceptions
- *
- * As library process argument from command line it inherits from invalid_argument
- *
- * @param msg Text to show
- *
- */
-
 #include <stdexcept>
 #include <unordered_map>
 #include <cstdarg>
-/*
-namespace cmdline {
-	class CmdLineNotFoundException;
-	class CmdLineInvalidTypeException;
-	class CmdLineException;
-	class CmdLineParameterException;
-	class CmdLineValueException;
-	class CmdLineDuplicateArgumentException;
-	class HelpRequested;
-	class HelpSimpleRequested;
-	class HelpDetailedRequested;
-}
-*/
-
 #ifndef __CMDLINE_EXCEPTIONS__
 #define __CMDLINE_EXCEPTIONS__
 namespace cmdline {
@@ -42,11 +19,10 @@ namespace cmdline {
 	class CmdLineException : public std::invalid_argument {
 	public:
 		CmdLineException() : invalid_argument("") {};
-		~CmdLineException() {};
-//		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
-
 		CmdLineException(const char* fmt, ...); 
 		CmdLineException(char* txt);
+		~CmdLineException() {};
+        string type;
 	};
 
 	class CmdLineParameterException : public CmdLineException {
@@ -69,20 +45,21 @@ namespace cmdline {
 
 	class HelpRequested : public CmdLineException {
 	public:
-		char *name;
+		const char *name;
 		bool detailed = false;
 		std::unordered_map<std::string, bool>        flags;
 		std::unordered_map<std::string, std::string> options;
 
 		HelpRequested() = delete;
+		~HelpRequested();
 	protected:
-        HelpRequested(const char *programName, const char *txt, bool detailed
+        HelpRequested(const char * programName, const char *txt, bool detailed
 		                             , std::unordered_map<std::string, bool> flags
 		                             , std::unordered_map<std::string, string> options);
 	};
 	class HelpSimpleRequested : public HelpRequested {
 	public:
-		HelpSimpleRequested( const char * programName
+		HelpSimpleRequested( char * programName
 			                ,unordered_map<string,bool> flags  
 		                    ,unordered_map<string,string> options);       
 	};

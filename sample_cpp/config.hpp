@@ -6,6 +6,7 @@ constexpr auto SUMMARY   = "summary";
 constexpr auto OVERWRITE = "overwrite";
 constexpr auto INPUT     = "input";
 constexpr auto OUTPUT    = "output";
+constexpr auto CONFIG    = "config";
 constexpr auto PATTERN   = "pattern";
 constexpr auto EXT       = "ext";
 

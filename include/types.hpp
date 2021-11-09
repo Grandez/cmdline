@@ -7,16 +7,14 @@
 using namespace std;
 
 namespace cmdline {
-/** @ingroup Types
- *  @brief Define el tipo de dato esperado del parametro
- */
 	enum class Type { STRING,CHAR,BOOL
 		             ,NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL
 		             ,DATE, TIME, DATETIME, TMS
 		             ,DIR, DIR_EXISTS, FILE, FILE_EXISTS
+                     ,CONFIG
 		             ,FLAG
 	};
-	enum class Source { DEFAULT, ENV, CMDLINE, CODE, AUTO };
+	enum class Source { DEFAULT, ENV, CMDLINE, FILE, CODE, AUTO };
 
 	using TYPE_STRING = std::string;
 	using TYPE_BOOL = bool;

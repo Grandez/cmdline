@@ -12,7 +12,7 @@ namespace _cmdline {
 	}
 	ParameterTree& ParameterTree::addBranch(ParameterTree* tree) {
 		children.insert_or_assign(tree->letter, tree);
-		branchs++;
+//		branchs++;
 		return *this;
 	}
 	char * ParameterTree::getWord() {

@@ -11,6 +11,7 @@ namespace cmdline {
 		             ,NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL
 		             ,DATE, TIME, DATETIME, TMS
 		             ,DIR, DIR_EXISTS, FILE, FILE_EXISTS
+                     ,CONFIG
 		             ,FLAG
 	};
 	enum class Source { DEFAULT, ENV, CMDLINE, FILE, CODE, AUTO };

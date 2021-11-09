@@ -12,6 +12,10 @@
 
 #include "commandline_aux.hpp"
 
+#ifdef _WIN32
+#pragma warning( disable : 6011 ) // prev pointer can not be null
+#endif
+
 using namespace std;
 
 namespace _cmdline {
@@ -46,19 +50,10 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		parseCommandLine(argc, argv);
 	}
 	                    CommandLine::~CommandLine() {
-		std::cout << "Delete CommandLine\n";
-		for (int i = 0; i < 128; i++) {
-			
-			if (rootOptions[i]) {
-				std::cout << "deleting option " << i << "\n";
-				delete rootOptions[i];
-			}
-			if (rootFlags[i])  {
-				std::cout << "deleting flag " << i << "\n";
-				delete rootFlags[i];
-			}
+		for (int i = 0; i < 128; i++) {			
+			if (rootOptions[i]) delete rootOptions[i];
+			if (rootFlags[i])   delete rootFlags[i];
 		}
-		std::cout << "Fin Delete CommandLine\n";
 	}
 	vector<const char*> CommandLine::getArgs() {
 		return inputs;
@@ -192,7 +187,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
    	     size_t pos = std::string(argv).find("=");
    	     if (pos != std::string::npos) return processDefinition(argv);
    	     validateEntry(argv, prevToken);
-   	     optionName = checkOption(&(argv[1]));
+   	     optionName = checkOption(argv);
    	     if (strict) checkAlreadySet(&options, prevToken);
    	     return optionName;
    }
@@ -221,7 +216,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
           std::string name;
           validateEntry(flag, prev);
           try {
-             Argument* opt = flags.find(checkFlag(&(flag[1])));
+             Argument* opt = flags.find(checkFlag(flag));
              opt->setValue(value);
           }
           catch (exception ex) {
@@ -352,27 +347,30 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 	char* CommandLine::checkFlag(const char* flag)     { return (checkParameter(rootFlags, flag)); }
 	char* CommandLine::checkParameter(ParameterTree* root[], const char* parm) {
 	    size_t idx = 0;
-		ParameterTree* base = root[parm[0] - ' '];
+        const char* value = &(parm[1]);
+		ParameterTree* base = root[value[0] - ' '];
 		ParameterTree* prev = nullptr;
 
-		while (idx < strlen(parm) && base != nullptr) {
+		while (idx < strlen(value) && base != nullptr) {
 				prev = base;
-				if (base->letter != parm[idx]) break;
-				base = base->getChild(parm[++idx]);
+				if (base->letter != value[idx]) break;
+				base = base->getChild(value[++idx]);
 		}
 
+		if (prev == nullptr) throw new CmdLineException(TXT_ARG_NFND, parm);  // primero
 		std::string str;
-		if (idx == strlen(parm)) { // Parsing full done
-		switch (prev->numChildren()) {
-			case 0: return (strdup(parm));
-			case 1: str = parm;
-		    		str.append(prev->getNext()->getWord());
-					return (makeChar(str));
-			default: throw new CmdLineParameterException(ERR_ARG_ERR, parm);
+		if (idx == strlen(value)) { // Parsing full done
+            if (prev->last) return (char *) value;
+		    switch (prev->branchs) {
+			        case 0: return (strdup(value));
+			        case 1: str = value;
+		    		        str.append(prev->getNext()->getWord());
+					        return (makeChar(str));
+			        default: throw new CmdLineParameterException(ERR_ARG_MULT, parm);
+		    }
 		}
-			}
-			if (prev == nullptr) throw new CmdLineException(TXT_ARG_NFND, parm);  // primero
-			if (idx < strlen(parm) && prev->branchs == 0) { // overtype
+
+			if (idx < strlen(value) && prev->branchs == 0) { // overtype
 				throw new CmdLineException(TXT_ARG_NFND1, parm, prev->getReversedWord());
 			}
 			// Ha salido por base = nullptr
@@ -388,7 +386,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 			}
 			//		if (base == nullptr) throw CmdLineParameterException(parm, prev->getReversedWord());
 
-			std::string ss(parm);
+			std::string ss(value);
 			ss.append(base->getWord());
 			return (makeChar(ss));
 		}

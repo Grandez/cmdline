@@ -19,12 +19,10 @@ namespace cmdline {
 	class CmdLineException : public std::invalid_argument {
 	public:
 		CmdLineException() : invalid_argument("") {};
-		~CmdLineException() {};
-//		CmdLineException(const CmdLineException& test) : invalid_argument(test) {};
-
 		CmdLineException(const char* fmt, ...); 
- // CmdLineException(const char* fmt, char *more);
 		CmdLineException(char* txt);
+		~CmdLineException() {};
+        string type;
 	};
 
 	class CmdLineParameterException : public CmdLineException {
