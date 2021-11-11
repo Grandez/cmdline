@@ -1,4 +1,5 @@
 #include <iostream>
+#include "config.h"
 
 #include "cmdline.hpp"
 #include "commandline.hpp"
@@ -6,47 +7,41 @@
 #include "validations.hpp"
 #include "tools.hpp"
 
-using namespace _cmdline;
+using namespace NS2;
 
-namespace cmdline {
+namespace NS1 {
 	CmdLine* singleton_ = nullptr;
 	static bool instance = false;  // Allow constructor only in test
-	void CmdLine::destroyInstance(CmdLine* cmdline) { 
+	void CmdLine::destroyInstance(CmdLine* CmdLine) { 
          singleton_ = nullptr; 
     }
-	_cmdline::CommandLine* _commandLine;
+	NS2::CommandLine* _commandLine;
 
 	CmdLine::CmdLine(int argc, const char** argv, Parameters parms) {
-		_commandLine = new _cmdline::CommandLine(argc, argv, parms, false, false);
+		_commandLine = new NS2::CommandLine(argc, argv, parms, false, false);
 	}
 	CmdLine::CmdLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict) {
-		_commandLine = new _cmdline::CommandLine(argc, argv, parms, sensitive, strict);
+		_commandLine = new NS2::CommandLine(argc, argv, parms, sensitive, strict);
 	}
 	CmdLine::~CmdLine() {
-		std::cout << "Destruye\n";
+//		std::cout << "Destruye\n";
 	}
 	CmdLine* CmdLine::getInstance(Parameters parms, int argc,  const char**  argv) {
-		cmdline::instance = true;
+		NS1::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return singleton_;
 	}
 	CmdLine* CmdLine::getInstance(int argc, const char** argv, Parameters parms) {
-		cmdline::instance = true;
+		NS1::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms);
 		return singleton_;
 	}
-//	CmdLine* CmdLine::getInstance(int argc, char** argv, Parameters parms) {
-//		return getInstance(argc, (const char**) argv, parms);
-//	}
 	CmdLine* CmdLine::getInstance(int argc, char* argv[], Parameters parms) {
 		return getInstance(argc, (const char**) argv, parms);
 	}
-//	CmdLine* CmdLine::getInstance(int argc, const char* argv[], Parameters parms) {
-//		return getInstance(argc, (const char**) argv, parms);
-//	}
 
 	CmdLine* CmdLine::pGetInstance(int argc,  const char**  argv, Parameters parms, bool sensitive, bool strict) {
-		cmdline::instance = true;
+		NS1::instance = true;
 		if (singleton_ == nullptr) singleton_ = new CmdLine(argc, argv, parms, sensitive, strict);
 		return singleton_;
 	}
@@ -100,25 +95,25 @@ namespace cmdline {
 		if constexpr (is_same<T, char*>::value)            return (char*)value;
 
 		if constexpr (is_same<T, TYPE_STRING>::value)       return string(value);
-		if constexpr (is_same<T, TYPE_NUMBER>::value)       return _cmdline::validateNumber(value);
-		if constexpr (is_same<T, TYPE_LONG>::value)         return _cmdline::validateNumber(value);
-		if constexpr (is_same<T, TYPE_INT>::value)          return _cmdline::makeInteger(value);
-		if constexpr (is_same<T, TYPE_DECIMAL>::value)      return _cmdline::validateDecimal(value);
-		if constexpr (is_same<T, TYPE_FLOAT>::value)        return _cmdline::makeFloat(value);
-		if constexpr (is_same<T, TYPE_DOUBLE>::value)       return _cmdline::validateDecimal(value);
-		if constexpr (is_same<T, TYPE_DATE>::value)         return _cmdline::makeTm(value);
-		if constexpr (is_same<T, TYPE_TIME>::value)         return _cmdline::makeTm(value);
-		if constexpr (is_same<T, TYPE_DATETIME>::value)     return _cmdline::makeTm(value);
-		if constexpr (is_same<T, TYPE_TMS>::value)          return _cmdline::validateTimestamp(value);
-		if constexpr (is_same<T, TYPE_LONGNUMBER>::value)   return _cmdline::validateLongNumber(value);
-		if constexpr (is_same<T, TYPE_LONGDECIMAL>::value)  return _cmdline::validateLongDecimal(value);
-		if constexpr (is_same<T, TYPE_DIR>::value)          return _cmdline::validateFile(value);
-		if constexpr (is_same<T, TYPE_FILE>::value)         return _cmdline::validateDir(value);
+		if constexpr (is_same<T, TYPE_NUMBER>::value)       return NS2::validateNumber(value);
+		if constexpr (is_same<T, TYPE_LONG>::value)         return NS2::validateNumber(value);
+		if constexpr (is_same<T, TYPE_INT>::value)          return NS2::makeInteger(value);
+		if constexpr (is_same<T, TYPE_DECIMAL>::value)      return NS2::validateDecimal(value);
+		if constexpr (is_same<T, TYPE_FLOAT>::value)        return NS2::makeFloat(value);
+		if constexpr (is_same<T, TYPE_DOUBLE>::value)       return NS2::validateDecimal(value);
+		if constexpr (is_same<T, TYPE_DATE>::value)         return NS2::makeTm(value);
+		if constexpr (is_same<T, TYPE_TIME>::value)         return NS2::makeTm(value);
+		if constexpr (is_same<T, TYPE_DATETIME>::value)     return NS2::makeTm(value);
+		if constexpr (is_same<T, TYPE_TMS>::value)          return NS2::validateTimestamp(value);
+		if constexpr (is_same<T, TYPE_LONGNUMBER>::value)   return NS2::validateLongNumber(value);
+		if constexpr (is_same<T, TYPE_LONGDECIMAL>::value)  return NS2::validateLongDecimal(value);
+		if constexpr (is_same<T, TYPE_DIR>::value)          return NS2::validateFile(value);
+		if constexpr (is_same<T, TYPE_FILE>::value)         return NS2::validateDir(value);
 		if constexpr (is_same<T, TYPE_BOOL>::value) {
 			if (value == 0x0) return false;
-			return _cmdline::makeBoolean(value);
+			return NS2::makeBoolean(value);
 		}
-		throw CmdLineInvalidTypeException(typeid(T).name());
+		throw NS1InvalidTypeException(typeid(T).name());
 	}
 	*/
 }

@@ -1,0 +1,153 @@
+.TH "CmdLine" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CmdLine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Heredado por \fBCmdLineI\fP y \fBCmdLineS\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBCmdLine\fP (int argc, const char **argv, Parameters parms)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBargs\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhasFlag\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasFlag\fP (string name)"
+.br
+.ti -1c
+.RI "Flags \fBgetDefaultFlags\fP (bool all=true)"
+.br
+.ti -1c
+.RI "Flags \fBgetCurrentFlags\fP (bool all=true)"
+.br
+.ti -1c
+.RI "\fBType\fP \fBgetType\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasOption\fP (string name)"
+.br
+.ti -1c
+.RI "bool \fBisOptionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBisOptionMultiple\fP (string name)"
+.br
+.ti -1c
+.RI "const char * \fBgetOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBgetOption\fP (string name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetOptionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetOptionValues\fP (string name)"
+.br
+.ti -1c
+.RI "int \fBgetOptionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBgetOptionNumValues\fP (string name)"
+.br
+.ti -1c
+.RI "\fBunordered_map\fP< string, string > \fBgetDefaultOptions\fP ()"
+.br
+.ti -1c
+.RI "Options \fBgetCurrentOptions\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > T \fBgetOptionAs\fP (const char *name)"
+.br
+.ti -1c
+.RI "template<typename T > const T \fBgetOptionAs\fP (string name)"
+.br
+.ti -1c
+.RI "template<typename T > const vector< T > \fBgetOptionValuesAs\fP (string name)"
+.br
+.ti -1c
+.RI "template<typename T > const vector< T > \fBgetOptionValuesAs\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasDefinition\fP (const char *def)"
+.br
+.ti -1c
+.RI "bool \fBhasDefinition\fP (string def)"
+.br
+.ti -1c
+.RI "bool \fBisDefinitionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBisDefinitionMultiple\fP (string name)"
+.br
+.ti -1c
+.RI "const char * \fBgetDefinition\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBgetDefinition\fP (string name)"
+.br
+.ti -1c
+.RI "Options \fBgetDefinitions\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetDefinitionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBgetDefinitionNumValues\fP (string name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetDefinitionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetDefinitionValues\fP (string name)"
+.br
+.in -1c
+.SS "Métodos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static \fBCmdLine\fP * \fBgetInstance\fP (int argc, char *argv[], Parameters parms=Parameters())"
+.br
+.ti -1c
+.RI "static \fBCmdLine\fP * \fBgetInstance\fP (int argc, const char **argv, Parameters parms=Parameters())"
+.br
+.ti -1c
+.RI "static \fBCmdLine\fP * \fBgetInstance\fP (Parameters parms, int argc, const char **argv)"
+.br
+.ti -1c
+.RI "static void \fBdestroyInstance\fP (\fBCmdLine\fP *\fBCmdLine\fP)"
+.br
+.in -1c
+.SS "Métodos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBCmdLine\fP (int argc, const char **argv, Parameters parms, bool sensitive, bool strict)"
+.br
+.ti -1c
+.RI "\fBCmdLine\fP (int argc, const char **argv, Parameters parms, bool sensitive)"
+.br
+.in -1c
+.SS "Métodos protegidos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static \fBCmdLine\fP * \fBpGetInstance\fP (int argc, const char **argv, Parameters parms, bool sensitive=false, bool strict=false)"
+.br
+.in -1c
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

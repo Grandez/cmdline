@@ -18,7 +18,7 @@
 
 using namespace std;
 
-namespace _cmdline {
+namespace NS2 {
 constexpr auto OPTION_OR_DEFINITION = '/';
 constexpr auto  FLAG_ACTIVE         =  '+';
 constexpr auto  FLAG_INACTIVE       =  '-';
@@ -131,7 +131,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		}
 		return act;
 	}
-	cmdline::Type CommandLine::getType(const char *name) {
+	NS1::Type CommandLine::getType(const char *name) {
 		Argument* opt = options.find(name);
 		return opt->type;
 	}
@@ -141,13 +141,13 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 	// /////////////////////////////////////////////////////////////
 	void  CommandLine::parseCommandLine(int argc, const char** argv) {
 		 programName = strdup(argv[0]);
-		 char *configFile = configFileInCommandLine(argc, argv);
-		 if (configFile) processConfigFile(configFile);
-
 		 char firstLetter;
 		 char parmName[64] = "";
 		 char* prevToken = nullptr;
 
+		 for (string configFile : configFileInCommandLine(argc, argv, sensitive)) {
+              processConfigFile(configFile);
+         }
 		 for (int idxArgument = 1; idxArgument < argc; idxArgument++) {
 		      firstLetter = getFirstCharacter(argv[idxArgument]);
 			  if (isParameter(firstLetter)) {
@@ -155,7 +155,7 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 			   }
 			   switch (firstLetter) {
 			           case OPTION_OR_DEFINITION: 
-                            if (isConfigFile(argc, argv, idxArgument, sensitive)) {
+                            if (isConfigFile(&(argv[idxArgument][1]), sensitive)) {
                                 idxArgument++;
                                 break;
                             }
@@ -194,8 +194,8 @@ constexpr auto  FLAG_INACTIVE       =  '-';
     char* CommandLine::processDefinition(const char *argv) {
    	     const char* ptr = &(argv[1]);
    	     vector<string> toks = tokenize(ptr, "=");
-   	     if (toks.size() != 2)      throw cmdline::CmdLineParameterException(INV_DEFINITION, argv);
-   	     if (toks[0].length() == 0) throw cmdline::CmdLineParameterException(INV_DEFINITION, argv);
+   	     if (toks.size() != 2)      throw NS1::CmdLineParameterException(INV_DEFINITION, argv);
+   	     if (toks[0].length() == 0) throw NS1::CmdLineParameterException(INV_DEFINITION, argv);
    	     Argument* def = defines.find(toks[0]);
    	     if (def == nullptr) def = new Define(toks[0].c_str());
    	     def->addValues(splitArgument(toks[1].c_str()));
@@ -392,6 +392,8 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		}
 
     void  CommandLine::processConfigFile (char *fname) {
+          unordered_map<string, string> map;
+          map = processIniConfigFile(fname);
     }
     bool  CommandLine::updateFlagHelp    (const char *arg, char *prev) {
          char *flag = checkKeywordHelp(arg);
@@ -399,6 +401,22 @@ constexpr auto  FLAG_INACTIVE       =  '-';
          updateFlag(flag, prev, true);
          return true;
     }
+   vector<string> CommandLine::configFileInCommandLine(int argc, const char **argv, bool sensitive) {
+      char *value = nullptr;
+      vector<string> configFiles;
+      for (int i = 1; i < argc; i++) {
+           if (argv[i][0] != '/') continue;
+           value = (sensitive) ? makeUpper(&(argv[i][1])) : strdup(&(argv[i][1]));
+           Argument* opt = findPointer(&options, &(argv[i][1]));
+           if (opt == nullptr) continue;
+           if (opt->type != Type::CONFIG &&  opt->type != Type::CONFIG_RELAXED) continue;
+           if (i + 1 == argc) throw  new exception("Falta el ficehro");
+          configFiles.push_back(argv[i + 1]);
+      }
+      if (value) free(value);
+	  return configFiles;
+}
+
 }
 /*
 #include <iostream> // temp

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-namespace _cmdline {
+namespace NS2 {
 	ParameterTree& ParameterTree::addChild(ParameterTree* child) {
 		children.insert_or_assign(child->letter, child);
 		branchs = (int)children.size();

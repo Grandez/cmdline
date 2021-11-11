@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
 #include <unordered_map>
+#include "config.h"
 
-namespace _cmdline {
+namespace NS2 {
 
     class ParameterTree {
     public:

@@ -13,9 +13,9 @@
 #endif
 
 using namespace std;
-using namespace cmdline;
+using namespace NS1;
 
-namespace _cmdline {
+namespace NS2 {
 	Argument::Argument(Parameter *parm) {
 		// Initial constructor. from default data
 		name = string(parm->name);

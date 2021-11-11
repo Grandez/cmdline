@@ -1,0 +1,41 @@
+.TH "ParmOption" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ParmOption \- A wrapper of \fBParm\fP to define Options 
+.br
+  
+
+.SH SYNOPSIS
+.br
+.PP
+.SH "Descripción detallada"
+.PP 
+A wrapper of \fBParm\fP to define Options 
+.br
+ 
+
+An option has 4 properties:
+.PP
+.IP "\(bu" 2
+\fBname\fP: Name of parameter 
+.br
+
+.IP "\(bu" 2
+\fBvalue\fP: Default value
+.IP "\(bu" 2
+\fBType\fP: The type for the option, see \fBTipos definidos para C++\fP
+.IP "\(bu" 2
+\fBMultiple\fP: Flag indicating when la option can be set to multiple values
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+{ \fBParmOption(const char* name, const char* value)\fP : Parameter(name, value) {}; \fBParmOption(const char* name, Type type)\fP : Parameter(name, NULL, type) {} \fBParmOption(const char* name, const char* value, bool multiple)\fP : Parameter(name, value, Type::STRING, multiple) {}; \fBParmOption(const char* name, Type type, bool multiple)\fP : Parameter(name, NULL, type, multiple) {}; \fBParmOption\fP(const char* name, const char* value, Type type, bool multiple = false) : Parameter(name, value, type, multiple) {}; } 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

@@ -1,0 +1,291 @@
+\hypertarget{md_doc_manual_autotoc_md16}{}\doxysection{Intro}\label{md_doc_manual_autotoc_md16}
+Para mostrar el uso de la libreria se ha desarrollado un par de programas \char`\"{}muy poco funcionales\char`\"{} en C++ y en C\hypertarget{md_doc_manual_autotoc_md17}{}\doxysection{Sample}\label{md_doc_manual_autotoc_md17}
+El programa recopila un conjunto de ficheros de diferentes directorios y los copia en otro. Si se definen ciertas expresiones regulares o patrones, busca dentro de los archivos y aplica esos cambios
+
+Las opciones que acepta son\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Nombre   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipo   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Defecto   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Multiple   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripcion    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Nombre   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipo   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Defecto   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Multiple   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripcion    }\\\cline{1-5}
+\endhead
+verbose   &Flag   &True   &True   &Mostrar informacion    \\\cline{1-5}
+summary   &Flag   &True   &True   &Mostrar resumen    \\\cline{1-5}
+overwrite   &Flag   &True   &True   &Sobreescribir ficheros existentes    \\\cline{1-5}
+config   &Opcion   &N/A   &False   &Fichero de configuracion {\bfseries{existente}}    \\\cline{1-5}
+input   &Opcion   &.   &True   &Directorio de entrada {\bfseries{existente}}    \\\cline{1-5}
+output   &Opcion   &.   &True   &Directorio de salida    \\\cline{1-5}
+pattern   &Opcion   &$\ast$   &True   &Patron de nombresde ficheros    \\\cline{1-5}
+ext   &Opcion   &$\ast$   &True   &Patron de extensiones de ficheros    \\\cline{1-5}
+...   &Defines   &N/A   &True   &Patrones de sustitucion   \\\cline{1-5}
+\end{longtabu}
+
+
+Para las pruebas se ha creado el siguiente entorno\+:\hypertarget{md_doc_manual_autotoc_md18}{}\doxysection{Casos de uso}\label{md_doc_manual_autotoc_md18}
+\hypertarget{md_doc_manual_autotoc_md19}{}\doxysubsection{Ayuda}\label{md_doc_manual_autotoc_md19}
+El flag de ayuda está soportado por defecto en las siguientes versiones\+:
+
+
+\begin{DoxyItemize}
+\item -\/h
+\item --help
+\item +help
+\item +HELP
+\end{DoxyItemize}
+
+Notese que se soporta la forma clásica de ayuda\+: {\ttfamily -\/h} y {\ttfamily -\/-\/help} por su uso extendido y por que no tiene sentido desactivar la ayuda\+: {\ttfamily -\/help}\hypertarget{md_doc_manual_autotoc_md20}{}\doxysubsubsection{Ayuda}\label{md_doc_manual_autotoc_md20}
+En los casos en que la libreria se configura como sensible a mayúsculas se soporta dos tipos de ayuda a las que se ha denominado {\itshape simple} y {\itshape detallada}, el objetivo es ofrecer la opcion de mostrar una ayuda mas simple o una ayuda mas detallada en función de las caracteristicas del programa.\hypertarget{md_doc_manual_autotoc_md21}{}\doxysubsubsection{Ayuda simple}\label{md_doc_manual_autotoc_md21}
+Los siguientes comandos son equivalentes\+:
+
+
+\begin{DoxyItemize}
+\item sample -\/h
+\item sample --help
+\item sample +h
+\item sample +he
+\item sample +help
+\end{DoxyItemize}
+
+comando\+: {\ttfamily sample -\/h}
+
+
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{samplecpp_help_01.jpg}%Help detallado. Modo clasico
+\end{DoxyInlineImage}
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{samplecpp_help_01.jpg}}
+\end{DoxyImageNoCaption}
+
+
+comando\+: {\ttfamily sample +h}
+
+  
+
+Help detallado. Modo normal
+
+ 
+
+comando\+: {\ttfamily sample +he}
+
+  
+
+Help detallado. Modo abreviado
+
+ 
+
+comando\+: {\ttfamily sample +help}
+
+  
+
+Help detallado. Modo completo
+
+ \hypertarget{md_doc_manual_autotoc_md22}{}\doxysubsubsection{Ayuda detallada}\label{md_doc_manual_autotoc_md22}
+El objetivo es poder mostrar una ayuda mas detallada
+
+Los siguientes comandos son equivalentes\+:
+
+
+\begin{DoxyItemize}
+\item sample --HELP
+\item sample +H
+\item sample +HE
+\item sample +HELP
+\end{DoxyItemize}
+
+comando\+: {\ttfamily sample -\/-\/HELP}
+
+  
+
+Help simple. Modo clasico
+
+ 
+
+comando\+: {\ttfamily sample +H}
+
+  
+
+Help simple. Modo normal
+
+ 
+
+comando\+: {\ttfamily sample +HE}
+
+  
+
+Help simple. Modo abreviado
+
+ 
+
+comando\+: {\ttfamily sample +HELP}
+
+  
+
+Help simple. Modo completo
+
+ \hypertarget{md_doc_manual_autotoc_md23}{}\doxysubsection{Exceptions}\label{md_doc_manual_autotoc_md23}
+En C++ los errores son gestionados a través de {\ttfamily \mbox{\hyperlink{class_cmd_line_exception}{Cmd\+Line\+Exception}}}. El programa ejemplo {\ttfamily sample\+\_\+exceptions} no realiza ninguna función pero acepta todos los tipos preestablecidos de parámetros.
+
+Por simplicidad unicamente se captura la excepción base, pero la salida indica el tipo de excepción concreta generada.\hypertarget{md_doc_manual_autotoc_md24}{}\doxysubsection{Source code}\label{md_doc_manual_autotoc_md24}
+
+\begin{DoxyItemize}
+\item config.\+hpp
+\item showinfo.\+hpp
+\item showinfo.\+cpp
+\item sample\+\_\+exceptions.\+cpp
+\end{DoxyItemize}\hypertarget{md_doc_manual_autotoc_md25}{}\doxysubsubsection{config.\+hpp}\label{md_doc_manual_autotoc_md25}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}cmdline.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} VERBOSE    = \textcolor{stringliteral}{"{}verbose"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} SUMMARY    = \textcolor{stringliteral}{"{}summary"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} FLAG       = \textcolor{stringliteral}{"{}flag"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} NUMBERS    = \textcolor{stringliteral}{"{}numbers"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a34f55eca38e0605a84f169ff61a2a396}{NUMBER}}     = \textcolor{stringliteral}{"{}number"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a13d992d671957e9a2b3e936ca0cf14a4}{DECIMAL}}    = \textcolor{stringliteral}{"{}decimal"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} DECIMALS   = \textcolor{stringliteral}{"{}decimals"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a633a6c7a6b9958f8174250094daf1e6a}{DATE}}       = \textcolor{stringliteral}{"{}date"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a346ff32eaa3c09983fb2ec057816d352}{TIME}}       = \textcolor{stringliteral}{"{}time"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7aa3eb957bd02f4780a599d5ec4464ca46}{DATETIME}}   = \textcolor{stringliteral}{"{}datetime"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} TIMESTAMP  = \textcolor{stringliteral}{"{}timestamp"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} DIRIN      = \textcolor{stringliteral}{"{}dirIn"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} DIROUT     = \textcolor{stringliteral}{"{}dirOut"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} FILEIN     = \textcolor{stringliteral}{"{}fileIn"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} FILEOUT    = \textcolor{stringliteral}{"{}fileOut"{}};}
+\DoxyCodeLine{\textcolor{keyword}{constexpr} \textcolor{keyword}{auto} CONFIG     = \textcolor{stringliteral}{"{}config"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }cmdline;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#ifdef \_\_MAIN\_\_}}
+\DoxyCodeLine{ \mbox{\hyperlink{struct_cmd_line}{CmdLine}} *cmdLine = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\textcolor{preprocessor}{\#else }}
+\DoxyCodeLine{\textcolor{keyword}{extern} \mbox{\hyperlink{struct_cmd_line}{CmdLine}} *cmdLine;}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
+\hypertarget{md_doc_manual_autotoc_md26}{}\doxysubsubsection{showinfo.\+hpp}\label{md_doc_manual_autotoc_md26}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}config.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} showHelp    (\mbox{\hyperlink{class_help_requested}{HelpRequested}}* help);}
+\DoxyCodeLine{\textcolor{keywordtype}{void} showValues  ();}
+
+\end{DoxyCode}
+\hypertarget{md_doc_manual_autotoc_md27}{}\doxysubsubsection{showinfo.\+cpp}\label{md_doc_manual_autotoc_md27}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}config.hpp"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}showinfo.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} printOption(\textcolor{keywordtype}{string} option, vector<string> values) \{}
+\DoxyCodeLine{   \textcolor{keywordtype}{int} num = 0;}
+\DoxyCodeLine{   cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << option << \textcolor{stringliteral}{"{}\(\backslash\)t: "{}}; }
+\DoxyCodeLine{   \textcolor{keywordflow}{if} (values.size() == 1 \&\& values[0].length() == 0) \{}
+\DoxyCodeLine{       cout << \textcolor{stringliteral}{"{}No default value\(\backslash\)n"{}};}
+\DoxyCodeLine{       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} str : values) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (num) cout << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{        cout << str;}
+\DoxyCodeLine{        num++;}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{   cout << endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} showHelp(\mbox{\hyperlink{class_help_requested}{HelpRequested}}* help) \{}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}A sample program about error management"{}}                << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}Use: "{}} << help-\/>name << \textcolor{stringliteral}{"{} [options]"{}}                    << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}Options:"{}}                                               << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << VERBOSE   << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}Flag"{}}                              << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << SUMMARY   << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}Flag"{}}                              << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << FLAG      << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}Option boolean"{}}                    << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << NUMBERS   << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}Integers"{}}                          << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a34f55eca38e0605a84f169ff61a2a396}{NUMBER}}    << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}Just one integer"{}}                  << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << DECIMALS  << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}Decimals"{}}                          << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a13d992d671957e9a2b3e936ca0cf14a4}{DECIMAL}}   << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}Just one decimal"{}}                  << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a633a6c7a6b9958f8174250094daf1e6a}{DATE}}      << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}Date"{}}                              << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7a346ff32eaa3c09983fb2ec057816d352}{TIME}}      << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}Time"{}}                              << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << \mbox{\hyperlink{group___types_gga1d1cfd8ffb84e947f82999c682b666a7aa3eb957bd02f4780a599d5ec4464ca46}{DATETIME}}  << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}DateTime"{}}                          << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << TIMESTAMP << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}Timestamp"{}}                         << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << DIRIN     << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}Existing directories"{}}              << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << DIROUT    << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}A directory"{}}                       << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << FILEIN    << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}Existing files"{}}                    << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << FILEOUT   << \textcolor{stringliteral}{"{}:\(\backslash\)t"{}}   << \textcolor{stringliteral}{"{}A possible output file"{}}            << endl;}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << CONFIG    << \textcolor{stringliteral}{"{}:\(\backslash\)t\(\backslash\)t"{}} << \textcolor{stringliteral}{"{}An existing configuration file"{}}    << endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} showValues() \{}
+\DoxyCodeLine{    Flags   flags   = cmdLine-\/>getCurrentFlags();}
+\DoxyCodeLine{    Options options = cmdLine-\/>getCurrentOptions();}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}Flags:"{}} << endl;}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} flag : flags) \{}
+\DoxyCodeLine{       cout << \textcolor{stringliteral}{"{}\(\backslash\)t"{}} << flag.first << \textcolor{stringliteral}{"{}: "{}} << std::boolalpha << flag.second << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}Options:"{}} << endl;}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} option : options) \{}
+\DoxyCodeLine{        printOption(option.first, option.second);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_doc_manual_autotoc_md28}{}\doxysubsubsection{sample\+\_\+exceptions.\+cpp}\label{md_doc_manual_autotoc_md28}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define \_\_MAIN\_\_}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}config.hpp"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}showinfo.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Parameters  parms \{ }
+\DoxyCodeLine{    \mbox{\hyperlink{class_parm_flag}{ParmFlag}}(VERBOSE,  \textcolor{keyword}{true})                    }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_flag}{ParmFlag}}(SUMMARY,  \textcolor{keyword}{true})                     }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(FLAG,  \textcolor{stringliteral}{"{}true"{}}, Type::BOOL,    \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(NUMBERS,   Type::NUMBER,      \textcolor{keyword}{true}) }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(NUMBER,    Type::NUMBER,      \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(DECIMALS,  Type::DECIMAL,     \textcolor{keyword}{true}) }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(DECIMAL,   Type::DECIMAL,     \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(DATE,      Type::DATE,        \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(TIME,      Type::TIME,        \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(DATETIME,  Type::DATETIME,    \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(TIMESTAMP, Type::TMS,         \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(DIRIN,     Type::DIR\_EXISTS,  \textcolor{keyword}{true}) }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(DIROUT,    Type::DIR,         \textcolor{keyword}{false})}
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(FILEIN,    Type::FILE\_EXISTS, \textcolor{keyword}{true}) }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(FILEOUT,   Type::FILE,        \textcolor{keyword}{false}) }
+\DoxyCodeLine{   ,\mbox{\hyperlink{class_parm_option}{ParmOption}}(CONFIG,    Type::CONFIG,      \textcolor{keyword}{false}) }
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[]) \{}
+\DoxyCodeLine{    cout << \textcolor{stringliteral}{"{}Starting "{}} << argv[0] << endl;}
+\DoxyCodeLine{    \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{       cmdLine = CmdLine::getInstance(argc, argv,parms);}
+\DoxyCodeLine{       showValues();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{catch} (\mbox{\hyperlink{class_help_requested}{HelpRequested}} *help) \{ }
+\DoxyCodeLine{        showHelp(help); }
+\DoxyCodeLine{    \} }
+\DoxyCodeLine{    \textcolor{keywordflow}{catch} (\mbox{\hyperlink{class_cmd_line_exception}{CmdLineException}} *ex) \{}
+\DoxyCodeLine{        cerr << ex-\/>what() << endl;}
+\DoxyCodeLine{        cerr << \textcolor{stringliteral}{"{}Exception type: "{}} << ex-\/>type << endl;}
+\DoxyCodeLine{        exit(1);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    exit (0);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

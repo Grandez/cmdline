@@ -1,0 +1,68 @@
+.TH "ParameterTree" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ParameterTree
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBParameterTree\fP (\fBParameterTree\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP (\fBParameterTree\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP (const char *parm, \fBParameterTree\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP & \fBaddBranch\fP (\fBParameterTree\fP *tree)"
+.br
+.ti -1c
+.RI "char * \fBgetWord\fP ()"
+.br
+.ti -1c
+.RI "char * \fBgetReversedWord\fP ()"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBgetNext\fP ()"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBgetChild\fP (char letter)"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBsetParent\fP (\fBParameterTree\fP *parent)"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP & \fBaddChild\fP (\fBParameterTree\fP *child)"
+.br
+.ti -1c
+.RI "bool \fBhasChild\fP (char letter)"
+.br
+.ti -1c
+.RI "size_t \fBnumChildren\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "char \fBletter\fP"
+.br
+.ti -1c
+.RI "int \fBbranchs\fP = 0"
+.br
+.ti -1c
+.RI "bool \fBlast\fP = false"
+.br
+.ti -1c
+.RI "\fBParameterTree\fP * \fBparent\fP = nullptr"
+.br
+.in -1c
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

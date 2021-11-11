@@ -1,13 +1,9 @@
 <map id="CmdLine" name="CmdLine">
-<area shape="rect" id="node1" title="Singleton encargado de mantener la informacion pasada por la linea de comandos @detail Aqui ponemos m..." alt="" coords="524,236,597,263"/>
-<area shape="rect" id="node2" title=" " alt="" coords="203,78,340,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="192,145,351,172"/>
-<area shape="rect" id="node4" title=" " alt="" coords="201,197,342,238"/>
-<area shape="rect" id="node5" title=" " alt="" coords="198,262,345,303"/>
-<area shape="rect" id="node6" href="$d5/dbf/struct_flag.html" title=" " alt="" coords="248,423,295,449"/>
-<area shape="rect" id="node7" title=" " alt="" coords="8,400,100,427"/>
-<area shape="rect" id="node9" href="$d2/d3f/struct_parameter.html" title=" " alt="" coords="230,336,313,363"/>
-<area shape="rect" id="node8" title=" " alt="" coords="25,468,83,495"/>
-<area shape="rect" id="node10" title=" " alt="" coords="5,281,103,308"/>
-<area shape="rect" id="node11" title=" " alt="" coords="35,332,73,359"/>
+<area shape="rect" id="node1" title="Singleton encargado de mantener la informacion pasada por la linea de comandos @detail Aqui ponemos m..." alt="" coords="337,237,411,264"/>
+<area shape="rect" id="node2" title=" " alt="" coords="16,78,153,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,145,164,172"/>
+<area shape="rect" id="node4" title=" " alt="" coords="14,197,155,238"/>
+<area shape="rect" id="node5" title=" " alt="" coords="11,262,158,303"/>
+<area shape="rect" id="node6" title=" " alt="" coords="27,327,142,369"/>
+<area shape="rect" id="node7" title=" " alt="" coords="26,407,143,433"/>
 </map>

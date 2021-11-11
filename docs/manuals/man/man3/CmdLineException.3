@@ -1,16 +1,20 @@
-.TH "CmdLineException" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "CmdLineException" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-CmdLineException \- Clase base para cualquier excepcion generada en el sistema @detail Distinguimos tres tipos de excepciones A) Las que 'solo' se pueden producir durante el tiempo de desarrollo B) Las que se producen en tiempo de ejecucion C) El usuario ha solicitado la ayuda del programa\&.  
+CmdLineException \- Clase base para cualquier excepcion generada en el sistema\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 .SH "Descripción detallada"
 .PP 
-Clase base para cualquier excepcion generada en el sistema @detail Distinguimos tres tipos de excepciones A) Las que 'solo' se pueden producir durante el tiempo de desarrollo B) Las que se producen en tiempo de ejecucion C) El usuario ha solicitado la ayuda del programa\&. 
+Clase base para cualquier excepcion generada en el sistema\&. 
 
+Distinguimos tres tipos de excepciones
+.PP
+A) Las que 'solo' se pueden producir durante el tiempo de desarrollo B) Las que se producen en tiempo de ejecucion C) El usuario ha solicitado la ayuda del programa
+.PP
 Las primeras son derivadas de errores en el proceso de desarollo, por ejemplo, un error en el nombre del parametro\&. Estas excepciones derivan de runtime_error Las segundas son derivadas del proceso de analisis en tiempo de ejecución, dado que C++ ya define una invalid_argument excepcion \fC\fBCmdLineException\fP\fP deriva de esta clase
 .PP
 A su vez, exisena clases especializadas en funcion del tipo de error que se haya producido 

@@ -6,7 +6,7 @@ using namespace std;
 
 #include "argument.hpp"
 
-namespace _cmdline {
+namespace NS2 {
 	class Group : public unordered_map<string, Argument> {
 	public:
 		Group& add(const char* name, Argument *arg) {

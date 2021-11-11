@@ -8,9 +8,9 @@
 #include "group.hpp"
 #include "parameter_tree.hpp"
 
-using namespace cmdline;
+using namespace NS1;
 
-namespace _cmdline {
+namespace NS2 {
 	class CommandLine {
 	public:
 		CommandLine(int argc, const char** argv, Parameters parms, bool sensitive, bool strict);
@@ -76,5 +76,6 @@ namespace _cmdline {
        char* inactiveFlag(const char *flag, char *prev);
        void  addToInputs(const char *arg);
        bool  updateFlagHelp(const char *arg, char *prev);
+       vector<string> configFileInCommandLine(int argc, const char **argv, bool sensitive);
 	};
 }

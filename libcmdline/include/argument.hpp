@@ -1,13 +1,13 @@
 #pragma once
-
+#include "config.h"
 #include <set>
 #include "cmdline.hpp"
 #include "types.hpp"
 
 using namespace std;
-using namespace cmdline;
+using namespace NS1;
 
-namespace _cmdline {
+namespace NS2 {
 	class Argument {
 	public:
 		string name;

@@ -1,4 +1,5 @@
 #pragma once
+#include "config.h"
 #include <filesystem>
 #include <unordered_map>
 
@@ -6,12 +7,12 @@
 #define __CMDLINE_TYPESCPP__
 using namespace std;
 
-namespace cmdline {
+namespace NS1 {
 	enum class Type { STRING,CHAR,BOOL
 		             ,NUMBER, DECIMAL, LONGNUMBER, LONGDECIMAL
 		             ,DATE, TIME, DATETIME, TMS
 		             ,DIR, DIR_EXISTS, FILE, FILE_EXISTS
-                     ,CONFIG
+                     ,CONFIG, CONFIG_RELAXED
 		             ,FLAG
 	};
 	enum class Source { DEFAULT, ENV, CMDLINE, FILE, CODE, AUTO };

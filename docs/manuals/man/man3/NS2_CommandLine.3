@@ -1,0 +1,73 @@
+.TH "CommandLine" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommandLine
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandLine\fP (int argc, const char **argv, Parameters parms, bool sensitive, bool strict)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetArgs\fP ()"
+.br
+.ti -1c
+.RI "Type \fBgetType\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasFlag\fP (const char *flag)"
+.br
+.ti -1c
+.RI "Flags \fBgetDefaultFlags\fP (bool all)"
+.br
+.ti -1c
+.RI "Flags \fBgetCurrentFlags\fP (bool all)"
+.br
+.ti -1c
+.RI "int \fBgetOptionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBhasOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "bool \fBisOptionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "Options \fBgetCurrentOptions\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBgetOption\fP (const char *name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetOptionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBunordered_map\fP< string, string > \fBgetDefaultOptions\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhasDefinition\fP (const char *def)"
+.br
+.ti -1c
+.RI "bool \fBisDefinitionMultiple\fP (const char *name)"
+.br
+.ti -1c
+.RI "int \fBgetDefinitionNumValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBgetDefinition\fP (const char *name)"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetDefinitionValues\fP (const char *name)"
+.br
+.ti -1c
+.RI "Options \fBgetDefinitions\fP ()"
+.br
+.in -1c
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

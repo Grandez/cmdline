@@ -2,9 +2,11 @@
 #include <stdexcept>
 #include <unordered_map>
 #include <cstdarg>
+#include "config.h"
+
 #ifndef __CMDLINE_EXCEPTIONS__
 #define __CMDLINE_EXCEPTIONS__
-namespace cmdline {
+namespace NS1 {
 	class CmdLineNotFoundException : public std::runtime_error {
 	public:
 		CmdLineNotFoundException() = delete;

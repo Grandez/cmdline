@@ -1,4 +1,3 @@
-
 #define __MAIN__
 
 #include "config.hpp"
@@ -27,6 +26,7 @@ int main(int argc, char *argv[]) {
     cout << "Starting " << argv[0] << endl;
     try {
        cmdLine = CmdLine::getInstance(argc, argv,parms);
+       showValues();
     }
     catch (HelpRequested *help) { 
         showHelp(help); 
@@ -36,5 +36,5 @@ int main(int argc, char *argv[]) {
         cerr << "Exception type: " << ex->type << endl;
         exit(1);
     }
-
+    exit (0);
 }

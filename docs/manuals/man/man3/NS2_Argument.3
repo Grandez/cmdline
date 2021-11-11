@@ -1,0 +1,91 @@
+.TH "Argument" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Argument
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Heredado por \fBDefine\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBArgument\fP (\fBArgument\fP *arg)"
+.br
+.ti -1c
+.RI "\fBArgument\fP (\fBParameter\fP *parm)"
+.br
+.ti -1c
+.RI "\fBArgument\fP (const char *name, const char *value)"
+.br
+.ti -1c
+.RI "\fBArgument\fP (const char *name, const char *value, Source source)"
+.br
+.ti -1c
+.RI "\fBArgument\fP (const char *name, const char *value, Type type)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBsetFromEnv\fP (const char *value)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBsetValue\fP (bool value)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBsetValue\fP (const char *value)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBsetValue\fP (std::string value)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBaddValue\fP (std::string value)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBaddValues\fP (vector< string > values)"
+.br
+.ti -1c
+.RI "const char * \fBgetValue\fP ()"
+.br
+.ti -1c
+.RI "vector< const char * > \fBgetValues\fP ()"
+.br
+.ti -1c
+.RI "vector< string > \fBgetStringValues\fP ()"
+.br
+.ti -1c
+.RI "bool \fBgetBoolean\fP ()"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBinitValues\fP (vector< string > values)"
+.br
+.ti -1c
+.RI "\fBArgument\fP & \fBmakeUpper\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "Source \fBsource\fP = Source::DEFAULT"
+.br
+.ti -1c
+.RI "Type \fBtype\fP = Type::STRING"
+.br
+.ti -1c
+.RI "bool \fBmultiple\fP = false"
+.br
+.ti -1c
+.RI "string \fBdefValue\fP"
+.br
+.ti -1c
+.RI "set< string > \fBvalues\fP"
+.br
+.in -1c
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

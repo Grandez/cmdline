@@ -1,5 +1,3 @@
 <map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,104,57"/>
-<area shape="rect" id="node2" href="$db/d21/classcmdline_1_1_cmd_line_invalid_type_exception.html" title=" " alt="" coords="152,5,347,32"/>
-<area shape="rect" id="node3" href="$d3/dd2/classcmdline_1_1_cmd_line_not_found_exception.html" title=" " alt="" coords="156,56,343,83"/>
+<area shape="rect" id="node1" href="$de/d53/class_cmd_line_invalid_type_exception.html" title="Se ha solicitado un parametro de un tipo incompatible con su definicion Esto solo puede ocurrir en ti..." alt="" coords="5,5,200,32"/>
 </map>

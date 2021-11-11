@@ -8,9 +8,9 @@
 
 using namespace std;
 
-namespace _cmdline {
+namespace NS2 {
     void        validateEntry      (const char* parm, const char* prev);
-    void        validateValue      (const char* value, cmdline::Type type);
+    void        validateValue      (const char* value, NS1::Type type);
     long        validateNumber     (const char* value);
     double      validateDecimal    (const char* value);
     long long   validateLongNumber (const char* value);

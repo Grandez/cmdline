@@ -27,6 +27,8 @@
     <ClInclude Include="include\commandline.hpp" />
     <ClInclude Include="include\commandline_aux.hpp" />
     <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\config_files.hpp" />
+    <ClInclude Include="include\config_ini.hpp" />
     <ClInclude Include="include\defines.hpp" />
     <ClInclude Include="include\garbage.hpp" />
     <ClInclude Include="include\group.hpp" />
@@ -50,7 +52,7 @@
     <ClCompile Include="src\config_json.cpp" />
     <ClCompile Include="src\config_xml.cpp" />
     <ClCompile Include="src\parameter_tree.cpp" />
-    <ClCompile Include="src\parm.cpp" />
+    <ClCompile Include="src\parameter.cpp" />
     <ClCompile Include="src\templates.cpp" />
     <ClCompile Include="src\tools.cpp" />
     <ClCompile Include="src\validations.cpp" />

@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"Página principal",url:"index.html"},
+{text:"Páginas relacionadas",url:"pages.html"},
 {text:"Módulos",url:"modules.html"},
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Lista de 'namespaces'",url:"namespaces.html"},

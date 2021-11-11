@@ -1,0 +1,32 @@
+/** \class ParmOption
+  *  \brief A wrapper of \ref Parm to define Options  
+  *  
+  * An option has 4 properties:
+  *
+  * - **name**: Name of parameter                                                                   
+  * - **value**: Default value
+  * - **Type**: The type for the option, see \ref Types
+  * - **Multiple**: Flag indicating when la option can be set to multiple values
+  *  
+  * \sa {
+  * ParmOption(const char* name, const char* value) : Parameter(name, value) {};
+  * ParmOption(const char* name, Type type) : Parameter(name, NULL, type) {}
+  * ParmOption(const char* name, const char* value, bool multiple) : Parameter(name, value, Type::STRING, multiple) {};
+  * ParmOption(const char* name, Type type, bool multiple) : Parameter(name, NULL, type, multiple) {};
+  * ParmOption(const char* name, const char* value, Type type,  bool multiple = false) : Parameter(name, value, type, multiple) {};
+  * }
+  */
+
+/** @name Constuctors                       
+ *  Description of group 2.         
+ */                                
+
+///@{             
+  /**
+  * \fn ParmOption::ParmOption(const char* name, const char* value) 
+  * \fn ParmOption::ParmOption(const char* name, Type type) 
+  * \fn ParmOption::ParmOption(const char* name, const char* value, bool multiple) 
+  * \fn ParmOption::ParmOption(const char* name, Type type, bool multiple) 
+  * \fn ParmOption::ParmOption(const char* name, const char* value, Type type,  bool multiple = false) 
+ */
+///@} 

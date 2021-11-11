@@ -27,9 +27,9 @@
 */
 
 using namespace std;
-using namespace cmdline;
+using namespace NS1;
 
-namespace _cmdline {
+namespace NS2 {
 	// Decimals are tried two times: Using comma and point as decimal sign
 	// Internal functions
 	struct tm* makeDateTime(char* sdate, char* stime) {

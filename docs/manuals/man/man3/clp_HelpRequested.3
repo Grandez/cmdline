@@ -1,0 +1,41 @@
+.TH "HelpRequested" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HelpRequested
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Herencias \fBCmdLineException\fP\&.
+.PP
+Heredado por \fBHelpDetailedRequested\fP y \fBHelpSimpleRequested\fP\&.
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBname\fP"
+.br
+.ti -1c
+.RI "bool \fBdetailed\fP = false"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, bool > \fBflags\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, std::string > \fBoptions\fP"
+.br
+.in -1c
+.SS "Métodos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBHelpRequested\fP (const char *programName, const char *txt, bool detailed, std::unordered_map< std::string, bool > flags, std::unordered_map< std::string, string > options)"
+.br
+.in -1c
+.SS "Otros miembros heredados"
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

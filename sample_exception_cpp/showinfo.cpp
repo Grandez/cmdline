@@ -3,6 +3,21 @@
 #include "config.hpp"
 #include "showinfo.hpp"
 
+void printOption(string option, vector<string> values) {
+   int num = 0;
+   cout << "\t" << option << "\t: "; 
+   if (values.size() == 1 && values[0].length() == 0) {
+       cout << "No default value\n";
+       return;
+   }
+   for (auto str : values) {
+        if (num) cout << ", ";
+        cout << str;
+        num++;
+   }
+   cout << endl;
+}
+
 void showHelp(HelpRequested* help) {
     cout << "A sample program about error management"                << endl;
     cout << "Use: " << help->name << " [options]"                    << endl;
@@ -25,3 +40,16 @@ void showHelp(HelpRequested* help) {
     cout << "\t" << CONFIG    << ":\t\t" << "An existing configuration file"    << endl;
 }
 
+void showValues() {
+    Flags   flags   = cmdLine->getCurrentFlags();
+    Options options = cmdLine->getCurrentOptions();
+    cout << "Flags:" << endl;
+    for (auto flag : flags) {
+       cout << "\t" << flag.first << ": " << std::boolalpha << flag.second << endl;
+    }
+    cout << "Options:" << endl;
+    for (auto option : options) {
+        printOption(option.first, option.second);
+    }
+    
+}

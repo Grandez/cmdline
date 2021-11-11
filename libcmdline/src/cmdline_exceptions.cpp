@@ -11,7 +11,7 @@
 #pragma warning( disable : 4996)
 #endif
 
-namespace cmdline {
+namespace NS1 {
 	std::string mountMessage(const char* fmt, va_list list) {
 		char t[255];
 		std::vsprintf(t, fmt, list);

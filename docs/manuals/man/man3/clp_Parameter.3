@@ -1,0 +1,52 @@
+.TH "Parameter" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Parameter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Heredado por \fBParmFlag\fP y \fBParmOption\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBParameter\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBParameter\fP (const char *name, const char *value)"
+.br
+.ti -1c
+.RI "\fBParameter\fP (const char *name, const char *value, \fBType\fP type, bool multiple=false)"
+.br
+.ti -1c
+.RI "\fBParameter\fP (const char *name, bool value)"
+.br
+.ti -1c
+.RI "bool \fBinstanceOfFlag\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinstanceOfOption\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBname\fP"
+.br
+.ti -1c
+.RI "\fBType\fP \fBtype\fP = \fBType::STRING\fP"
+.br
+.ti -1c
+.RI "char * \fBvalue\fP"
+.br
+.ti -1c
+.RI "bool \fBmultiple\fP = false"
+.br
+.in -1c
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

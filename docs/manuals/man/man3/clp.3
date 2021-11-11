@@ -1,0 +1,140 @@
+.TH "clp" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+clp \- Public namespace to avoid naming mangling\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "class \fBCmdLine\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineDuplicateArgumentException\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineException\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineI\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineInvalidTypeException\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineIS\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineNotFoundException\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineParameterException\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineS\fP"
+.br
+.ti -1c
+.RI "class \fBCmdLineValueException\fP"
+.br
+.ti -1c
+.RI "class \fBHelpDetailedRequested\fP"
+.br
+.ti -1c
+.RI "class \fBHelpRequested\fP"
+.br
+.ti -1c
+.RI "class \fBHelpSimpleRequested\fP"
+.br
+.ti -1c
+.RI "class \fBParameter\fP"
+.br
+.ti -1c
+.RI "class \fBParmFlag\fP"
+.br
+.ti -1c
+.RI "class \fBParmOption\fP"
+.br
+.in -1c
+.SS "typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< \fBParameter\fP > \fBParameters\fP"
+.br
+.ti -1c
+.RI "using \fBTYPE_STRING\fP = std::string"
+.br
+.ti -1c
+.RI "using \fBTYPE_BOOL\fP = bool"
+.br
+.ti -1c
+.RI "using \fBTYPE_NUMBER\fP = long"
+.br
+.ti -1c
+.RI "using \fBTYPE_LONG\fP = long"
+.br
+.ti -1c
+.RI "using \fBTYPE_INT\fP = int"
+.br
+.ti -1c
+.RI "using \fBTYPE_DECIMAL\fP = float"
+.br
+.ti -1c
+.RI "using \fBTYPE_FLOAT\fP = float"
+.br
+.ti -1c
+.RI "using \fBTYPE_DOUBLE\fP = double"
+.br
+.ti -1c
+.RI "using \fBTYPE_LONGNUMBER\fP = long long"
+.br
+.ti -1c
+.RI "using \fBTYPE_LONGDECIMAL\fP = float"
+.br
+.ti -1c
+.RI "using \fBTYPE_DATE\fP = std::tm"
+.br
+.ti -1c
+.RI "using \fBTYPE_TIME\fP = std::tm"
+.br
+.ti -1c
+.RI "using \fBTYPE_DATETIME\fP = std::tm"
+.br
+.ti -1c
+.RI "using \fBTYPE_TMS\fP = char *"
+.br
+.ti -1c
+.RI "using \fBTYPE_DIR\fP = filesystem::path"
+.br
+.ti -1c
+.RI "using \fBTYPE_FILE\fP = filesystem::path"
+.br
+.ti -1c
+.RI "using \fBFlags\fP = std::unordered_map< std::string, bool >"
+.br
+.ti -1c
+.RI "using \fBOptions\fP = std::unordered_map< std::string, vector< std::string > >"
+.br
+.in -1c
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP, \fBCONFIG\fP, \fBFLAG\fP }"
+.br
+.RI "Define the expected type of the string passed as parameter\&. "
+.ti -1c
+.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBFILE\fP, \fBCODE\fP, \fBAUTO\fP }"
+.br
+.RI "Indicates the origin of thelast value of parameter\&. "
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Public namespace to avoid naming mangling\&. 
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

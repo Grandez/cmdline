@@ -1,5 +1,6 @@
 
 /** @defgroup Types Tipos definidos para C++
+ *  @ingroup CPP
  *  Conjunto de tipos para simplificar la codificacion
  *  
  * Se usan en la declaracion de los parametros que soporta la aplicacion
@@ -9,7 +10,7 @@
  */
  
  /** 
-   @enum cmdline::Type
+   @enum clp::Type
    @ingroup Types
    @brief Define the expected type of the string passed as parameter
    
@@ -17,57 +18,57 @@
  */
    
  /**   
-   @var cmdline::Type::STRING  
+   @var clp::Type::STRING  
    string (valor por defecto)
-   @var cmdline::Type::CHAR  
+   @var clp::Type::CHAR  
    const char *               
-   @var cmdline::Type::BOOL  
+   @var clp::Type::BOOL  
    boolean                    
-   @var cmdline::Type::NUMBER  
+   @var clp::Type::NUMBER  
    Whole number (long/int)
-   @var cmdline::Type::DECIMAL  
+   @var clp::Type::DECIMAL  
    Decimal number (double/float)
-   @var cmdline::Type::LONGNUMBER  
+   @var clp::Type::LONGNUMBER  
    Whole number (long long/long int)
-   @var cmdline::Type::LONGDECIMAL  
+   @var clp::Type::LONGDECIMAL  
    Whole number (long double/long float)
-   @var cmdline::Type::DATE  
+   @var clp::Type::DATE  
    A date formatted as locale. Example: `dd/mm/yy`
-   @var cmdline::Type::TIME  
+   @var clp::Type::TIME  
    A time in format `hh:mm:ss`
-   @var cmdline::Type::DATETIME  
+   @var clp::Type::DATETIME  
    An string like `yyyy/mm/dd[ -]hh:mm:ss`
    Note that using space requires quote the parameter
-   @var cmdline::Type::TMS  
+   @var clp::Type::TMS  
    An string like `yyyy/mm/dd-hh:mm:ss.nnnnnn`
    Note that spaces is not allowed
-   @var cmdline::Type::DIR  
+   @var clp::Type::DIR  
    A possibly correct path
-   @var cmdline::Type::FILE  
+   @var clp::Type::FILE  
    A possibly correct file name
-   @var cmdline::Type::DIR_EXISTS  
+   @var clp::Type::DIR_EXISTS  
    An existing path before execution
-   @var cmdline::Type::FILE_EXISTS  
+   @var clp::Type::FILE_EXISTS  
    An existing file before execution
  */
 
  /** 
-   @enum cmdline::Source
+   @enum clp::Source
    @ingroup Types
    @brief Indicates the origin of thelast value of parameter
  */
 
  /**   
-  * @var cmdline::Source::DEFAULT  
+  * @var clp::Source::DEFAULT  
   * Default value
-  * @var cmdline::Source::ENV  
+  * @var clp::Source::ENV  
   * Value has been set in the environment
-  * @var cmdline::Source::FILE  
+  * @var clp::Source::FILE  
   * Value has been set thru a config file
-  * @var cmdline::Source::CMDLINE  
+  * @var clp::Source::CMDLINE  
   * Value has been set thru command line
-  * @var cmdline::Source::CODE  
+  * @var clp::Source::CODE  
   * Value has been update programatically
-  * @var cmdline::Source::AUTO  
+  * @var clp::Source::AUTO  
   * **Reserved** Hide parameter from queries
   */   

@@ -1,0 +1,153 @@
+\hypertarget{class_n_s1_1_1_cmd_line}{}\doxysection{Referencia de la Clase Cmd\+Line}
+\label{class_n_s1_1_1_cmd_line}\index{CmdLine@{CmdLine}}
+
+
+Diagrama de herencias de Cmd\+Line
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{d1/dfa/class_n_s1_1_1_cmd_line__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a94db28deeff944b744bcf1a1fe5fd62a}\label{class_n_s1_1_1_cmd_line_a94db28deeff944b744bcf1a1fe5fd62a}} 
+{\bfseries Cmd\+Line} (int argc, const char $\ast$$\ast$argv, Parameters parms)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a4e365e95e8ed8878c729c618ca53b8cf}\label{class_n_s1_1_1_cmd_line_a4e365e95e8ed8878c729c618ca53b8cf}} 
+vector$<$ const char $\ast$ $>$ {\bfseries args} ()
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a766b2005ffb85c637d23ab3276a79bd1}\label{class_n_s1_1_1_cmd_line_a766b2005ffb85c637d23ab3276a79bd1}} 
+bool {\bfseries has\+Flag} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a82ef002662f9a3047a94021f82fe6e8a}\label{class_n_s1_1_1_cmd_line_a82ef002662f9a3047a94021f82fe6e8a}} 
+bool {\bfseries has\+Flag} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a1c85e8d98fea2b2bda5af1d24104ff02}\label{class_n_s1_1_1_cmd_line_a1c85e8d98fea2b2bda5af1d24104ff02}} 
+Flags {\bfseries get\+Default\+Flags} (bool all=true)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a9fece5f8bc05884ca2dedb4e0ae6cee8}\label{class_n_s1_1_1_cmd_line_a9fece5f8bc05884ca2dedb4e0ae6cee8}} 
+Flags {\bfseries get\+Current\+Flags} (bool all=true)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a820b48b534e85eca87d685e28a23ea30}\label{class_n_s1_1_1_cmd_line_a820b48b534e85eca87d685e28a23ea30}} 
+Type {\bfseries get\+Type} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a2922cf5050b004365b8981a57274d96b}\label{class_n_s1_1_1_cmd_line_a2922cf5050b004365b8981a57274d96b}} 
+bool {\bfseries has\+Option} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a0a715ad6269525223378d5049d96806c}\label{class_n_s1_1_1_cmd_line_a0a715ad6269525223378d5049d96806c}} 
+bool {\bfseries has\+Option} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_aa10223b47ab74d3facd2c6c67dd393a7}\label{class_n_s1_1_1_cmd_line_aa10223b47ab74d3facd2c6c67dd393a7}} 
+bool {\bfseries is\+Option\+Multiple} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a2c51b1af5a950626f1060b0db2848e03}\label{class_n_s1_1_1_cmd_line_a2c51b1af5a950626f1060b0db2848e03}} 
+bool {\bfseries is\+Option\+Multiple} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a95e97e7a907a6bdda9ec1d495ce3cd67}\label{class_n_s1_1_1_cmd_line_a95e97e7a907a6bdda9ec1d495ce3cd67}} 
+const char $\ast$ {\bfseries get\+Option} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a78f932eb2e2d96e8cd5ab00be443854e}\label{class_n_s1_1_1_cmd_line_a78f932eb2e2d96e8cd5ab00be443854e}} 
+const char $\ast$ {\bfseries get\+Option} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a5fe6db07b9426f0088407533b8b1827a}\label{class_n_s1_1_1_cmd_line_a5fe6db07b9426f0088407533b8b1827a}} 
+vector$<$ const char $\ast$ $>$ {\bfseries get\+Option\+Values} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a231828d68ff6da0fa2719945bdbb30e5}\label{class_n_s1_1_1_cmd_line_a231828d68ff6da0fa2719945bdbb30e5}} 
+vector$<$ const char $\ast$ $>$ {\bfseries get\+Option\+Values} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a756a2aaabe73d5425e5c6b7a8405f2f2}\label{class_n_s1_1_1_cmd_line_a756a2aaabe73d5425e5c6b7a8405f2f2}} 
+int {\bfseries get\+Option\+Num\+Values} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_ace408913781050e59e1d51d01ea6ccca}\label{class_n_s1_1_1_cmd_line_ace408913781050e59e1d51d01ea6ccca}} 
+int {\bfseries get\+Option\+Num\+Values} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a4a824f0a8bd515ad6519acd028460772}\label{class_n_s1_1_1_cmd_line_a4a824f0a8bd515ad6519acd028460772}} 
+\mbox{\hyperlink{classunordered__map}{unordered\+\_\+map}}$<$ string, string $>$ {\bfseries get\+Default\+Options} ()
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a27ec032e2d58266f493abcd7209383d2}\label{class_n_s1_1_1_cmd_line_a27ec032e2d58266f493abcd7209383d2}} 
+Options {\bfseries get\+Current\+Options} ()
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a9a6d57416b1f9ed66cf0454ec818a6cc}\label{class_n_s1_1_1_cmd_line_a9a6d57416b1f9ed66cf0454ec818a6cc}} 
+{\footnotesize template$<$typename T $>$ }\\T {\bfseries get\+Option\+As} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a29f9dab86a371a488d9a98a3ef8682ea}\label{class_n_s1_1_1_cmd_line_a29f9dab86a371a488d9a98a3ef8682ea}} 
+{\footnotesize template$<$typename T $>$ }\\const T {\bfseries get\+Option\+As} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a6ce8c50e86de910696b94e9d14a451cd}\label{class_n_s1_1_1_cmd_line_a6ce8c50e86de910696b94e9d14a451cd}} 
+{\footnotesize template$<$typename T $>$ }\\const vector$<$ T $>$ {\bfseries get\+Option\+Values\+As} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_ad8f4f496586f83bcf53b92adb35796b9}\label{class_n_s1_1_1_cmd_line_ad8f4f496586f83bcf53b92adb35796b9}} 
+{\footnotesize template$<$typename T $>$ }\\const vector$<$ T $>$ {\bfseries get\+Option\+Values\+As} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_ac969ba91ad6da0ba4b0c0f9a539d028f}\label{class_n_s1_1_1_cmd_line_ac969ba91ad6da0ba4b0c0f9a539d028f}} 
+bool {\bfseries has\+Definition} (const char $\ast$def)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a94d3ee508f6ebcf0e39d1d3c1b01e71f}\label{class_n_s1_1_1_cmd_line_a94d3ee508f6ebcf0e39d1d3c1b01e71f}} 
+bool {\bfseries has\+Definition} (string def)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a0670ca6b08642f7b8ae1cc69f3363b46}\label{class_n_s1_1_1_cmd_line_a0670ca6b08642f7b8ae1cc69f3363b46}} 
+bool {\bfseries is\+Definition\+Multiple} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_ac0557f1e96de9ac4466fe0ce41d60c7b}\label{class_n_s1_1_1_cmd_line_ac0557f1e96de9ac4466fe0ce41d60c7b}} 
+bool {\bfseries is\+Definition\+Multiple} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a000d508ed727aa2ad13f935b80937419}\label{class_n_s1_1_1_cmd_line_a000d508ed727aa2ad13f935b80937419}} 
+const char $\ast$ {\bfseries get\+Definition} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a2405249b660d174571bd1bf2b789f937}\label{class_n_s1_1_1_cmd_line_a2405249b660d174571bd1bf2b789f937}} 
+const char $\ast$ {\bfseries get\+Definition} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_ad55c99398845e560342f2649488225a1}\label{class_n_s1_1_1_cmd_line_ad55c99398845e560342f2649488225a1}} 
+Options {\bfseries get\+Definitions} ()
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a4d54f5edddfd4fac55260defddaeacef}\label{class_n_s1_1_1_cmd_line_a4d54f5edddfd4fac55260defddaeacef}} 
+int {\bfseries get\+Definition\+Num\+Values} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a284b7a8736234b9d4907ea217e489e81}\label{class_n_s1_1_1_cmd_line_a284b7a8736234b9d4907ea217e489e81}} 
+int {\bfseries get\+Definition\+Num\+Values} (string name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a6d730f9ba0d1b53c449d973b73c66e25}\label{class_n_s1_1_1_cmd_line_a6d730f9ba0d1b53c449d973b73c66e25}} 
+vector$<$ const char $\ast$ $>$ {\bfseries get\+Definition\+Values} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_ad708c3520483b12746651c21b9bb1155}\label{class_n_s1_1_1_cmd_line_ad708c3520483b12746651c21b9bb1155}} 
+vector$<$ const char $\ast$ $>$ {\bfseries get\+Definition\+Values} (string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_aa226dbe3772ee819986f992d90c9c17e}\label{class_n_s1_1_1_cmd_line_aa226dbe3772ee819986f992d90c9c17e}} 
+static \mbox{\hyperlink{class_n_s1_1_1_cmd_line}{Cmd\+Line}} $\ast$ {\bfseries get\+Instance} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, Parameters parms=Parameters())
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_aee35d4741fa0e0377a8de73cf9581bdc}\label{class_n_s1_1_1_cmd_line_aee35d4741fa0e0377a8de73cf9581bdc}} 
+static \mbox{\hyperlink{class_n_s1_1_1_cmd_line}{Cmd\+Line}} $\ast$ {\bfseries get\+Instance} (int argc, const char $\ast$$\ast$argv, Parameters parms=Parameters())
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a974268a85e84925b2d4f661798d5da4e}\label{class_n_s1_1_1_cmd_line_a974268a85e84925b2d4f661798d5da4e}} 
+static \mbox{\hyperlink{class_n_s1_1_1_cmd_line}{Cmd\+Line}} $\ast$ {\bfseries get\+Instance} (Parameters parms, int argc, const char $\ast$$\ast$argv)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a37ab070d51eed778af1c998c90a9ca08}\label{class_n_s1_1_1_cmd_line_a37ab070d51eed778af1c998c90a9ca08}} 
+static void {\bfseries destroy\+Instance} (\mbox{\hyperlink{class_n_s1_1_1_cmd_line}{Cmd\+Line}} $\ast$\mbox{\hyperlink{class_n_s1_1_1_cmd_line}{Cmd\+Line}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a8a5cf67f8077bc07c12eefc0c142e073}\label{class_n_s1_1_1_cmd_line_a8a5cf67f8077bc07c12eefc0c142e073}} 
+{\bfseries Cmd\+Line} (int argc, const char $\ast$$\ast$argv, Parameters parms, bool sensitive, bool strict)
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a9f6b4dfd055cc7faf809d9da5eb52408}\label{class_n_s1_1_1_cmd_line_a9f6b4dfd055cc7faf809d9da5eb52408}} 
+{\bfseries Cmd\+Line} (int argc, const char $\ast$$\ast$argv, Parameters parms, bool sensitive)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos protegidos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_n_s1_1_1_cmd_line_a3a030485e68b09511f9cd9242f80b23f}\label{class_n_s1_1_1_cmd_line_a3a030485e68b09511f9cd9242f80b23f}} 
+static \mbox{\hyperlink{class_n_s1_1_1_cmd_line}{Cmd\+Line}} $\ast$ {\bfseries p\+Get\+Instance} (int argc, const char $\ast$$\ast$argv, Parameters parms, bool sensitive=false, bool strict=false)
+\end{DoxyCompactItemize}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+cmdline.\+hpp\item 
+cmdline.\+cpp\end{DoxyCompactItemize}

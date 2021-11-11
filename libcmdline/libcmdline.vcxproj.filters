@@ -72,6 +72,12 @@
     <ClInclude Include="include\commandline_aux.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\config_files.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_ini.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cmdline.cpp">
@@ -80,7 +86,7 @@
     <ClCompile Include="src\commandline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parm.cpp">
+    <ClCompile Include="src\parameter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\tools.cpp">

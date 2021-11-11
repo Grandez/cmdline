@@ -2,15 +2,16 @@
 
 #include <unordered_map>
 
+#include "config.h"
 #include "parameter_tree.hpp"
 #include "msg_locale.hpp"
 using namespace std;
 
-namespace _cmdline {
+namespace NS2 {
 #ifdef _WIN32
    #define chdir(a) _chdir(a)
    #define getcwd(a, b) _getcwd(a, b)
-   #define strdup(a) _cmdline::myStrdup(a)
+   #define strdup(a) NS2::myStrdup(a)
 #endif
 
 	void  add2tree(ParameterTree* root[], const char* word);
@@ -27,4 +28,8 @@ namespace _cmdline {
 	char*               myStrdup(const char* s);           /*!< @private */
 	void                defaultDate(char* aux);
     vector<string>      vectorChar2String(vector<const char *> data); 
+    char*             ltrim(char* str);
+    char*             rtrim(char* str);
+    char*             trim(char* str);
+
 }

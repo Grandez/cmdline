@@ -1,5 +1,4 @@
 var namespaces_dup =
 [
-    [ "_cmdline", "d4/d6e/namespace__cmdline.html", "d4/d6e/namespace__cmdline" ],
-    [ "cmdline", "d4/d41/namespacecmdline.html", "d4/d41/namespacecmdline" ]
+    [ "clp", "d2/d9d/namespaceclp.html", "d2/d9d/namespaceclp" ]
 ];

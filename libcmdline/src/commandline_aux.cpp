@@ -11,7 +11,7 @@
 #ifdef _WIN32
 #pragma warning( disable : 4996 )
 #endif
-namespace _cmdline {
+namespace NS2 {
 bool isParameter(char c) {
 	return (c == '/' || c == '+' || c == '-');
 }
@@ -35,9 +35,6 @@ void copyParameterInUpperCase(const char *arg, bool sensitive, char *name) {
 		  for (size_t j = 0; j < strlen(arg); j++) name[j] = toupper(arg[j]);
 	   }
  }
-char* configFileInCommandLine(int argc, const char **argv) {
-	return 0x0;
-}
 char *checkKeywordHelp(const char *arg) {
      if (strcmp(arg, "-h") == 0 ||  strcmp(arg, "--help") == 0) return (char *) "+help";
      if (strcmp(arg, "-H") == 0 ||  strcmp(arg, "--HELP") == 0) return (char *) "+HELP";

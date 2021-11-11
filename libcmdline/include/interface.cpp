@@ -16,18 +16,18 @@
 #pragma warning(disable : 26812 6011 6386)
 #endif
 
-static cmdline::CmdLine* _cmdLine = nullptr;
+static NS1::CmdLine* _cmdLine = nullptr;
 static CmdLine* _pCmdLine = NULL;
 
 template <typename T> void * checkException(T& ex) {
     /*
-    if      constexpr (is_same<T, cmdline::HelpRequested>::ex)                      errno = ECMDLINE_HELP;
-    else if constexpr (is_same<T, cmdline::HelpDetailedRequested>::ex)              errno = ECMDLINE_HELP_DETAIL;
-    else if constexpr (is_same<T, cmdline::CmdLineNotFoundException>::ex)           errno = ECMDLINE_NOTFND;
-    else if constexpr (is_same<T, cmdline::CmdLineInvalidTypeException>::ex)        errno = ECMDLINE_INVTYPE;
-    else if constexpr (is_same<T, cmdline::CmdLineParameterException>::ex)          errno = ECMDLINE_INVPARM;
-    else if constexpr (is_same<T, cmdline::CmdLineValueException>::ex)              errno = ECMDLINE_INVVALUE;
-    else if constexpr (is_same<T, cmdline::CmdLineDuplicateArgumentException>::ex)  errno = ECMDLINE_DUP;
+    if      constexpr (is_same<T, NS1::HelpRequested>::ex)                      errno = ECMDLINE_HELP;
+    else if constexpr (is_same<T, NS1::HelpDetailedRequested>::ex)              errno = ECMDLINE_HELP_DETAIL;
+    else if constexpr (is_same<T, NS1::CmdLineNotFoundException>::ex)           errno = ECMDLINE_NOTFND;
+    else if constexpr (is_same<T, NS1::CmdLineInvalidTypeException>::ex)        errno = ECMDLINE_INVTYPE;
+    else if constexpr (is_same<T, NS1::CmdLineParameterException>::ex)          errno = ECMDLINE_INVPARM;
+    else if constexpr (is_same<T, NS1::CmdLineValueException>::ex)              errno = ECMDLINE_INVVALUE;
+    else if constexpr (is_same<T, NS1::CmdLineDuplicateArgumentException>::ex)  errno = ECMDLINE_DUP;
     else                                                                    errno = ECMDLINE;
     */
         errno = ECMDLINE;
@@ -61,13 +61,13 @@ logical     isMultiple(bool option, const char* name) {
         return MISSING;
     }
 }
-cmdline::Parameters makeParameters(ParmDef cparms[]) {
-    vector <cmdline::Parameter> parms;
+NS1::Parameters makeParameters(ParmDef cparms[]) {
+    vector <NS1::Parameter> parms;
     ParmDef* cp = cparms;
     while (cp->name) {
         bool b = (cp->multiple == TRUE) ? "1" : "0";
-        cmdline::Type t = cmdline::Type(cp->type);
-        parms.push_back(cmdline::Parameter(cp->name, cp->value, t, b));
+        NS1::Type t = NS1::Type(cp->type);
+        parms.push_back(NS1::Parameter(cp->name, cp->value, t, b));
         cp++;
     }
     return parms;
@@ -99,7 +99,7 @@ const char** _makeArray(vector<string> data) {
     }
 }
 
-Parameter** _makeArrayParameter(cmdline::Options data) {
+Parameter** _makeArrayParameter(NS1::Options data) {
     Parameter** parms = NULL;
     Parameter*  tmp   = NULL;
     try {
@@ -157,7 +157,7 @@ const char** getAllValues(bool option, const char* name) {
 }
 Parameter** _getOptions  (bool def) {
     Parameter **parms = NULL;
-    cmdline::Options opts;
+    NS1::Options opts;
     
     try {
         if (!def) {
@@ -190,7 +190,7 @@ Parameter** _getOptions  (bool def) {
 
 }
 
-Flag** makeFlags(cmdline::Flags flags) {
+Flag** makeFlags(NS1::Flags flags) {
     int i = 0;
     Flag* tmp;
     Flag** res = (Flag**)malloc((flags.size() + 1) * sizeof(Flag*));
@@ -223,7 +223,7 @@ const char** cGetDefineValues    (const char* name) { return getAllValues (false
 Flag **cGetDefaultFlags  (logical active) {
     try {
         bool b = (active == TRUE) ? false : true;
-        cmdline::Flags flags = _cmdLine->getDefaultFlags(b);
+        NS1::Flags flags = _cmdLine->getDefaultFlags(b);
         return makeFlags(flags);
     }
     catch (exception ex) {
@@ -233,7 +233,7 @@ Flag **cGetDefaultFlags  (logical active) {
 Flag **cGetCurrentFlags  (logical active) {
     try {
         bool b = (active == TRUE) ? false : true;
-        cmdline::Flags flags = _cmdLine->getCurrentFlags(b);
+        NS1::Flags flags = _cmdLine->getCurrentFlags(b);
         return makeFlags(flags);
     }
     catch (exception ex) {
@@ -247,15 +247,15 @@ Parameter** cGetCurrentOptions  () {
     return _getOptions(false);
 }
 Parameter** cGetDefinitions  () {
-    cmdline::Options defs = _cmdLine->getDefinitions();
+    NS1::Options defs = _cmdLine->getDefinitions();
     return _makeArrayParameter(defs);
 }
 
 extern "C" CmdLine*  cmdline_create(int argc, const char** arg, ParmDef cparms[]) {
     if (_pCmdLine != nullptr) return _pCmdLine;
-    cmdline::Parameters parms = makeParameters(cparms);
+    NS1::Parameters parms = makeParameters(cparms);
     try {
-        _cmdLine = new cmdline::CmdLine(argc, arg, parms);
+        _cmdLine = new NS1::CmdLine(argc, arg, parms);
 
         _pCmdLine = (CmdLine*)malloc(sizeof(CmdLine));
         _pCmdLine->hasFlag            = &cHasFlag;

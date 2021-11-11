@@ -1,6 +1,8 @@
 /**  @class CmdLineException
   *  @brief Clase  base para cualquier excepcion generada en el sistema
-  *  @detail Distinguimos tres tipos de excepciones
+  *
+  *  Distinguimos tres tipos de excepciones
+  *
   *  A) Las que "solo" se pueden producir durante el tiempo de desarrollo
   *  B) Las que se producen en tiempo de ejecucion
   *  C) El usuario ha solicitado la ayuda del programa
@@ -11,3 +13,37 @@
   * A su vez, exisena clases especializadas en funcion del tipo de error que se haya producido
   */
   
+/**  @class CmdLineNotFoundException
+  *  @brief No se ha encontrado el parametro solicitado
+  *  Esto solo puede ocurrir en tiempo de desarrollo
+  */
+
+/**  @class CmdLineInvalidTypeException
+  *  @brief Se ha solicitado un parametro de un tipo incompatible con su definicion
+  *  Esto solo puede ocurrir en tiempo de desarrollo
+  */
+
+/**  @class CmdLineParameterException
+  *  @brief El parametro indicado es erroneo
+  */
+
+/**  @class CmdLineValueException
+  *  @brief El valor asociado a la opcion no es valido
+  */
+
+/**  @class CmdLineDuplicateArgumentException
+  *  @brief Se ha indicado un parametro dos veces
+  */
+
+/**  @class HelpRequested
+  *  @brief Excepcion generica sobre el parametro **help**
+  */
+
+/**  @class HelpSimpleRequested
+  *  @brief Se ha solicitado la ayuda sencilla
+  */
+
+/**  @class HelpDetailedRequested
+  *  @brief Se ha solicitado la ayuda detallada
+  */
+

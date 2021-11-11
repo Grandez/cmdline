@@ -1,18 +1,20 @@
 #pragma once
 
+#include "config.h"
+
 #include <vector>
 #include "types.hpp"
 #include "validations.hpp"
 #include "cmdline_exceptions.hpp"
 
-#ifndef __CLASS_CMDLINE__
-#define __CLASS_CMDLINE__
+#ifndef __CLASS_NS1__
+#define __CLASS_NS1__
 
 #ifdef _WIN32
 #pragma warning( disable : 4244)
 #endif
 
-namespace cmdline {
+namespace NS1 {
 	class Parameter {
 	public:
 		const char* name;              // Name of parameter
@@ -69,7 +71,7 @@ namespace cmdline {
 //		static CmdLine *getInstance(int argc, const char* argv[], Parameters parms = Parameters());
 		static CmdLine *getInstance(int argc, const char** argv, Parameters parms = Parameters());
 		static CmdLine *getInstance(Parameters parms, int argc, const char** argv);
-		static void destroyInstance(CmdLine *cmdline);  // Just for test
+		static void destroyInstance(CmdLine *CmdLine);  // Just for test
 		// Arguments
 		vector<const char*> args();
 
@@ -139,13 +141,15 @@ namespace cmdline {
 	class CmdLineI : public CmdLine {
 	public:
 		CmdLineI(int argc, const char** argv, Parameters parms);
-		CmdLineI(int argc, const char** argv, cmdline::Parameters parms, bool strict);
+		CmdLineI(int argc, const char** argv, NS1::Parameters parms, bool strict);
+        ~CmdLineI();
 		static CmdLine* getInstance(int argc, const char** argv, Parameters parms);
-		~CmdLineI();
+		
 	};
 	class CmdLineS : public CmdLine {
 	public:
 		CmdLineS(int argc, const char** argv, Parameters parms);
+		~CmdLineS();
 		static CmdLine* getInstance(int argc, const char** argv, Parameters parms);
 	};
 	class CmdLineIS : public CmdLineI {

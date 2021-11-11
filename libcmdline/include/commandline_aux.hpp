@@ -3,7 +3,7 @@
 * No acceden a la clase
 */
 
-namespace _cmdline {
+namespace NS2 {
 bool  isParameter        (char c);
 char  getFirstCharacter  (const char *arg);
 bool  isConfigFile       (int argc, const char **argv, int idxArgument, bool sensitive);

@@ -1,175 +1,71 @@
-.TH "cmdline" 3 "Lunes, 8 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
+.TH "CmdLine" 3 "Jueves, 11 de Noviembre de 2021" "Version 0.2.3" "Command Line Processor" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-cmdline \- Public namespace to avoid naming mangling\&.  
+CmdLine \- Singleton encargado de mantener la informacion pasada por la linea de comandos @detail Aqui ponemos mas cosas\&.  
 
 .SH SYNOPSIS
 .br
 .PP
-.SS "Clases"
+.SS "Atributos públicos"
 
 .in +1c
 .ti -1c
-.RI "class \fBCmdLine\fP"
+.RI "logical(* \fBhasFlag\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineDuplicateArgumentException\fP"
+.RI "logical(* \fBhasOption\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineException\fP"
+.RI "logical(* \fBhasDefine\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineI\fP"
+.RI "logical(* \fBisOptionMultiple\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineInvalidTypeException\fP"
+.RI "logical(* \fBisDefineMultiple\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineIS\fP"
+.RI "logical(* \fBgetFlag\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineNotFoundException\fP"
+.RI "int(* \fBgetOptionNumValues\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineParameterException\fP"
+.RI "int(* \fBgetDefineNumValues\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineS\fP"
+.RI "const char *(* \fBgetOption\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBCmdLineValueException\fP"
+.RI "const char *(* \fBgetDefine\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBHelpDetailedRequested\fP"
+.RI "const char **(* \fBgetOptionValues\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBHelpRequested\fP"
+.RI "const char **(* \fBgetDefineValues\fP )(const char *name)"
 .br
 .ti -1c
-.RI "class \fBHelpSimpleRequested\fP"
+.RI "Flag **(* \fBgetDefaultFlags\fP )(logical active)"
 .br
 .ti -1c
-.RI "class \fBParm\fP"
+.RI "Flag **(* \fBgetCurrentFlags\fP )(logical active)"
 .br
 .ti -1c
-.RI "class \fBParmFlag\fP"
+.RI "Parameter **(* \fBgetDefaultOptions\fP )()"
 .br
 .ti -1c
-.RI "class \fBParmOption\fP"
-.br
-.in -1c
-.SS "typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef std::vector< \fBParm\fP > \fBParameters\fP"
+.RI "Parameter **(* \fBgetCurrentOptions\fP )()"
 .br
 .ti -1c
-.RI "using \fBTYPE_STRING\fP = std::string"
-.br
-.ti -1c
-.RI "using \fBTYPE_BOOL\fP = bool"
-.br
-.ti -1c
-.RI "using \fBTYPE_NUMBER\fP = long"
-.br
-.ti -1c
-.RI "using \fBTYPE_LONG\fP = long"
-.br
-.ti -1c
-.RI "using \fBTYPE_INT\fP = int"
-.br
-.ti -1c
-.RI "using \fBTYPE_DECIMAL\fP = float"
-.br
-.ti -1c
-.RI "using \fBTYPE_FLOAT\fP = float"
-.br
-.ti -1c
-.RI "using \fBTYPE_DOUBLE\fP = double"
-.br
-.ti -1c
-.RI "using \fBTYPE_LONGNUMBER\fP = long long"
-.br
-.ti -1c
-.RI "using \fBTYPE_LONGDECIMAL\fP = float"
-.br
-.ti -1c
-.RI "using \fBTYPE_DATE\fP = std::tm"
-.br
-.ti -1c
-.RI "using \fBTYPE_TIME\fP = std::tm"
-.br
-.ti -1c
-.RI "using \fBTYPE_DATETIME\fP = std::tm"
-.br
-.ti -1c
-.RI "using \fBTYPE_TMS\fP = char *"
-.br
-.ti -1c
-.RI "using \fBTYPE_DIR\fP = filesystem::path"
-.br
-.ti -1c
-.RI "using \fBTYPE_FILE\fP = filesystem::path"
-.br
-.ti -1c
-.RI "using \fBFlags\fP = std::unordered_map< std::string, bool >"
-.br
-.ti -1c
-.RI "using \fBOptions\fP = std::unordered_map< std::string, vector< std::string > >"
-.br
-.in -1c
-.SS "Enumeraciones"
-
-.in +1c
-.ti -1c
-.RI "enum class \fBType\fP { \fBSTRING\fP, \fBCHAR\fP, \fBBOOL\fP, \fBNUMBER\fP, \fBDECIMAL\fP, \fBLONGNUMBER\fP, \fBLONGDECIMAL\fP, \fBDATE\fP, \fBTIME\fP, \fBDATETIME\fP, \fBTMS\fP, \fBDIR\fP, \fBDIR_EXISTS\fP, \fBFILE\fP, \fBFILE_EXISTS\fP, \fBFLAG\fP }"
-.br
-.RI "Define the expected type of the string passed as parameter\&. "
-.ti -1c
-.RI "enum class \fBSource\fP { \fBDEFAULT\fP, \fBENV\fP, \fBCMDLINE\fP, \fBFILE\fP, \fBCODE\fP, \fBAUTO\fP }"
-.br
-.RI "Indicates the origin of thelast value of parameter\&. "
-.in -1c
-.SS "Funciones"
-
-.in +1c
-.ti -1c
-.RI "template<typename T > const vector< T > \fBgetOptionValuesAs\fP (const char *name)"
-.br
-.ti -1c
-.RI "static std::string \fBmountMessage\fP (const char *fmt, va_list list)"
-.br
-.ti -1c
-.RI "void \fB_cleanClass\fP ()"
-.br
-.in -1c
-.SS "Variables"
-
-.in +1c
-.ti -1c
-.RI "\fBCmdLine\fP * \fBsingleton_\fP = nullptr"
-.br
-.ti -1c
-.RI "static bool \fBinstance\fP = false"
-.br
-.ti -1c
-.RI "\fB_cmdline::CommandLine\fP * \fB_commandLine\fP"
-.br
-.ti -1c
-.RI "char ** \fB_argv\fP = nullptr"
-.br
-.ti -1c
-.RI "int \fB_nargc\fP"
-.br
-.ti -1c
-.RI "Parameters \fB_parms\fP"
+.RI "Parameter **(* \fBgetDefinitions\fP )()"
 .br
 .in -1c
 .SH "Descripción detallada"
 .PP 
-Public namespace to avoid naming mangling\&. 
+Singleton encargado de mantener la informacion pasada por la linea de comandos @detail Aqui ponemos mas cosas\&. 
+
 .SH "Autor"
 .PP 
 Generado automáticamente por Doxygen para Command Line Processor del código fuente\&.

@@ -5,16 +5,14 @@
 #define CMDLINE_ERRNO 16000
 #endif
 
-#ifndef CMDLINE_CONFIG
-#define CMDLINE_CONFIG "/config"
-#endif
-
 #ifndef CMDLINE_NS1
-#define CMDLINE_NS1 cmdline
+#define CMDLINE_NS1 clp
+#define NS1 CMDLINE_NS1
 #endif
 
 #ifndef CMDLINE_NS2
-#define CMDLINE_NS2 _cmdline
+#define CMDLINE_NS2 _clp
+#define NS2 CMDLINE_NS2
 #endif
 
 #endif

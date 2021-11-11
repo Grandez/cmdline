@@ -4,7 +4,7 @@
 
 using namespace std;
 
-namespace _cmdline {
+namespace NS2 {
 	class Define : public Argument {
 	public:
 		Define() = delete;

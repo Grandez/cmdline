@@ -4,15 +4,16 @@
 #include <ctime>
 #include <locale>
 #include <cctype>
+#include <algorithm>
 
 #include "tools.hpp"
 #include "parameter_tree.hpp"
 #include "cmdline_exceptions.hpp"
 
 using namespace std;
-using namespace cmdline;
+using namespace NS1;
 
-namespace _cmdline {
+namespace NS2 {
 	char _upper[64] = "";
 	ParameterTree* createTree(const char* word) {
 		ParameterTree* root = new ParameterTree(word);
@@ -54,6 +55,7 @@ namespace _cmdline {
             if (word[idx] == 0x0) {
                 last->last = true;
             } else {
+                last->branchs++;
 			    last->addBranch(createTree(&(word[idx])));
             }
 			done = true;
@@ -203,4 +205,31 @@ namespace _cmdline {
         }  
         return res;
     }
+    char *           ltrim(char *str) {
+        int i = 0;
+        while (str[i] == ' ' || str[i] == '\t' || str[i] == '\r') i++;
+        return &(str[i]);
+     }
+
+    char*             rtrim(char *str) {
+        size_t len = strlen(str);
+        char c;
+        size_t i;
+        bool done = false;
+        for (i = len - 1; i > -1; i--) {
+             switch(str[i]) {
+                case ' ':
+                case '\t': 
+                case '\r':
+                case '\n': break;
+                default: done = true;
+             }
+             if (done) break;
+        }
+        str[++i] = 0x0;
+        return str;
+     }
+     char *           trim(char *str) {
+         return ltrim(rtrim(str));
+     }
 }
