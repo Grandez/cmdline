@@ -18,17 +18,18 @@ bool isParameter(char c) {
 char getFirstCharacter(const char *arg) {
 	return (arg == 0x0) ? 0x0 : arg[0];
 }
-
-bool isConfigFile (int argc, const char **argv, int idxArgument, bool sensitive) {
 /*
+bool isConfigFile (int argc, const char **argv, int idxArgument, bool sensitive) {
+
      char tmp[64];
      char configName[64] = CMDLINE_CONFIG;
      copyParameterInUpperCase(arg, sensitive, tmp);
      copyParameterInUpperCase(configName, sensitive, configName);
      return (strcmp(tmp, configName) == 0);
-*/
+
      return false;
 }
+*/
 void copyParameterInUpperCase(const char *arg, bool sensitive, char *name) {
 	  strcpy(name, arg);
 	  if (sensitive) {

@@ -9,7 +9,7 @@
 #include "validations.hpp"
 #include "cmdline_exceptions.hpp"
 #include "defines.hpp"
-
+#include "config_files.hpp"
 #include "commandline_aux.hpp"
 
 #ifdef _WIN32
@@ -145,8 +145,8 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 		 char parmName[64] = "";
 		 char* prevToken = nullptr;
 
-		 for (string configFile : configFileInCommandLine(argc, argv, sensitive)) {
-              processConfigFile(configFile);
+		 for (string configFile : configFilesInCommandLine(argc, argv, sensitive)) {
+              processConfigFile((char *) configFile.c_str());
          }
 		 for (int idxArgument = 1; idxArgument < argc; idxArgument++) {
 		      firstLetter = getFirstCharacter(argv[idxArgument]);
@@ -155,10 +155,6 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 			   }
 			   switch (firstLetter) {
 			           case OPTION_OR_DEFINITION: 
-                            if (isConfigFile(&(argv[idxArgument][1]), sensitive)) {
-                                idxArgument++;
-                                break;
-                            }
                             prevToken = processOptionOrDefinition(argv[idxArgument], prevToken); 
                             break;
 			           case FLAG_ACTIVE:           
@@ -391,17 +387,13 @@ constexpr auto  FLAG_INACTIVE       =  '-';
 			return (makeChar(ss));
 		}
 
-    void  CommandLine::processConfigFile (char *fname) {
-          unordered_map<string, string> map;
-          map = processIniConfigFile(fname);
-    }
     bool  CommandLine::updateFlagHelp    (const char *arg, char *prev) {
          char *flag = checkKeywordHelp(arg);
          if (flag == nullptr) return false;
          updateFlag(flag, prev, true);
          return true;
     }
-   vector<string> CommandLine::configFileInCommandLine(int argc, const char **argv, bool sensitive) {
+   vector<string> CommandLine::configFilesInCommandLine(int argc, const char **argv, bool sensitive) {
       char *value = nullptr;
       vector<string> configFiles;
       for (int i = 1; i < argc; i++) {

@@ -7,6 +7,10 @@
 using namespace std;
 #include <unordered_map>
 
-using namespace NS2 {
+namespace NS2 {
    #include "config_ini.hpp"
+
+// vector<string> configFilesInCommandLine(int argc, char **argv, bool sensitive);
+   void  processConfigFile (const char *fname);
+
 }

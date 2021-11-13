@@ -1,303 +1,208 @@
 ---
-title: "Command Line Processor"
+title: "An holistic proposal and tool to parse command line input"
 author: "Grandez"
 output:
   html_document:
     keep_md: yes
 ---
+# An holistic proposal and tool to parse command line input
 
-# Unificacion de la linea de comandos
+## disclaimer {-}
 
+Given that my mother tongue is Spanish (one of the most used in the world) and for accuracy this document and all related ones are written in Spanish.
 
-## Intro
+However, if you are interested, do not hesitate to mail me, I will be happy to translate it into English for you.
 
-Para mostrar el uso de la libreria se ha desarrollado un par de programas "muy poco funcionales" en C++ y en C
+## abstract {-}
 
+En este documento se plantea una nueva forma de indicar los argumentos aceptados por un programa de una manera mas homogenea y común a cualquier Sistema Operativo.
 
-## Sample
+También se incluye una librería para el análisis y proceso de la linea de comandos en C y C++
 
-El programa recopila un conjunto de ficheros de diferentes directorios y los copia en otro. 
-Si se definen ciertas expresiones regulares o patrones, busca dentro de los archivos y aplica esos cambios
+## Motivacion
 
-Las opciones que acepta son:
+Cualquier programa susceptible de ser ejecutado a través de una linea de comandos necesita una serie de parámetros de entrada para su ejecución, de lo contario siempre generaría el mismo resultado.
 
+Ahora bien, dependiendo del sistema operativo, la forma habitual de indicar estos parámetros varía; es mas, cada programador podría definir un nuevo sistema de entrada de parámetros. Esto obliga, o al menos debería, a que un programa multiplataforma debe adecuarse a cada sistema operativo y controlar programáticamente el estilo de cada uno de ellos.
 
-|  Nombre   | Tipo    | Defecto | Multiple |            Descripcion             |
-|-----------|---------|---------|----------|------------------------------------|
-| verbose   | Flag    | True    | True     | Mostrar informacion                |
-| summary   | Flag    | True    | True     | Mostrar resumen                    |
-| overwrite | Flag    | True    | True     | Sobreescribir ficheros existentes  |
-| config    | Opcion  | N/A     | False    | Fichero de configuracion **existente** |
-| input     | Opcion  | .       | True     | Directorio de entrada **existente** |
-| output    | Opcion  | .       | True     | Directorio de salida               |
-| pattern   | Opcion  | *       | True     | Patron de nombresde ficheros       |
-| ext       | Opcion  | *       | True     | Patron de extensiones de ficheros  |
-| ...       | Defines | N/A     | True     | Patrones de sustitucion            |
+Veamos algunos ejemplos:
 
+**Sistemas *nix**
 
-Para las pruebas se ha creado el siguiente entorno:
+Tipicamente estos sistemas utilizan uno o dos guiones: **'-'** o **'--'**; para indicar un parámetro, donde:
 
-## Casos de uso
+- La primera forma se aplica a parámetros definidos por un solo carácter y permite además concatenarlos
+- La segunda forma se entiende como parámetro extendido definido por una palabra
 
-### Ayuda
+Ejemplos:
 
-El flag de ayuda está soportado por defecto en las siguientes versiones:
+`command -h`
+`command --help`
+`command -af` 
+`command -a -f`
+`command -o output_file`
 
-- -h
-- --help
-- +help
-- +HELP
+**Sistemas Windows**
 
-Notese que se soporta la forma clásica de ayuda: `-h` y `--help` por su uso extendido y por que no tiene sentido desactivar la ayuda: `-help`
+En estos sistemas, la linea de comandos **no es sensible a mayúsculas/minúsculas** y se utiliza el caracter __slash__ '**/**'. Y también añade diferentes formas de indicarlos.
 
-#### Ayuda
+Estos son algunos ejemplos:
 
-En los casos en que la libreria se configura como sensible a mayúsculas se soporta dos tipos de ayuda a las que se ha denominado _simple_ y _detallada_, el objetivo es ofrecer la opcion de mostrar una ayuda mas simple o una ayuda mas detallada en función de las caracteristicas del programa.
+`command /h`
+`command /-Y`
+`command /D:value`
+`command /o output_file`
 
-#### Ayuda simple
+Por otro lado, con la inclusión de `PowerShell` se han añadido también el uso de guiones y algunas otras variantes en función de cada comando; algunos especificados en modo __camel case__ aunque como se ha indicado, en este sistema no se distinguen mayúsculas de minúsculas.
 
-Los siguientes comandos son equivalentes:
+**zOS y otros**
 
-- sample -h
-- sample --help
-- sample +h
-- sample +he
-- sample +help
+Otros sistemas operativos soportan otros métodos. Por ejemplo zOS usa /_characters_, donde _characters_ es el mínimo numero de caracteres necesario para identificar un comando.
 
+Por ejemplo `/pre pattern` y `/preffix pattern` son equivalentes en el sentido de que no existe mas que un comando que empiece por la secuencia `pre`
 
-comando: `sample -h`
+## Conclusiones e inefciencias
 
+Sea el sistema operativo que sea, el desarrollador debe **siempre** programar la gestión de estos parámetros para cada uno de los programas que desarrolle (soy consciente de que existen algunas utilidades que facilitan un poco la tarea, pero suelen ser incompletas) a pesar de ser una de las tareas comunes de cualquier programa, lo cual conlleva un esfuerzo de trabajo innecesario y repetitivo.
 
-comando: `sample +h`
+Con estos sistemas se plantean los siguientes problemas:
 
-<div class="figure">
-<img src="samplecpp_help_02.png" alt="Help detallado. Modo normal" width="100%" />
-<p class="caption">Help detallado. Modo normal</p>
-</div>
+Dado un parametro P o Parameter:
 
-comando: `sample +he`
+- ¿Como podemos saber si es un flag o una opcion?
+- Si es un flag, ¿Activa o desactiva esa funcionalidad? (Vease el caso -verbose y -silent)
+- ¿Por que tengo que elegir como usuario, y controlar como desarrollador, las dos opciones -P y --Parameter?
+- En el caso de que no exista una version corta del parámetro, ¿Por que necesito escribir Parameter si con la primera letra ya seria suficiente? 
+- Cuanto mas caracteres tenga que escribir mas posible es que introduzca un error de tipografia
 
-<div class="figure">
-<img src="samplecpp_help_03.png" alt="Help detallado. Modo abreviado" width="100%" />
-<p class="caption">Help detallado. Modo abreviado</p>
-</div>
+## Taxonomia de la linea de comandos
 
-comando: `sample +help`
+Un programa acepta un conjunto de parámetros y argumentos para realizar el proceso para el que fue diseñado (mas adelante matizaremos estas dos palabras).
 
-<div class="figure">
-<img src="samplecpp_help_04.png" alt="Help detallado. Modo completo" width="100%" />
-<p class="caption">Help detallado. Modo completo</p>
-</div>
+Los parámetros que acepta el programa se conocen en tiempo de diseño y desarrollo y por lo tanto está controlados en el propio código, aceptando de manera implícita o explícita un valor por defecto para los casos en los que no se indique otro valor.
 
-#### Ayuda detallada
+Para modificar esos valores por defecto para cada ejecución especifica únicamente hay tres formas:
 
-El objetivo es poder mostrar una ayuda mas detallada
+1. A través de un fichero de configuración, que también puede tener un valor por defecto
+2. A través de variables de entorno
+3. En la propia linea de comandos
 
-Los siguientes comandos son equivalentes:
+En cualquiera de los tres casos, el programa es responsable de codificar y probar todo el código necesario.
 
-- sample --HELP
-- sample +H
-- sample +HE
-- sample +HELP
+###  Clasificacion
 
+Desde el punto de vista de los parámetros se pueden clasificar en cuatro tipos:
 
-comando: `sample --HELP`
+- **Flags**: Aquellos que son binarios; es decir que no necesitan información adicional
+- **Opciones con valor**: Aquellos que **si** que necesitan un valor o conjunto de valores asociados a él
+- **Argumentos**: Los objetos sobre lo que el programa va a realizar algún tipo de proceso
+- **Definiciones**: Hemos utilizado esta palabra, a falta de otra mejor, para aquellos parámetros que no están codificados en el programa pero que pueden ser incorporados en tiempo de ejecución
 
-<div class="figure">
-<img src="samplecpp_help_11.png" alt="Help simple. Modo clasico" width="100%" />
-<p class="caption">Help simple. Modo clasico</p>
-</div>
+Ejemplo:
 
-comando: `sample +H`
-
-<div class="figure">
-<img src="samplecpp_help_12.png" alt="Help simple. Modo normal" width="100%" />
-<p class="caption">Help simple. Modo normal</p>
-</div>
-
-comando: `sample +HE`
-
-<div class="figure">
-<img src="samplecpp_help_13.png" alt="Help simple. Modo abreviado" width="100%" />
-<p class="caption">Help simple. Modo abreviado</p>
-</div>
-
-comando: `sample +HELP`
-
-<div class="figure">
-<img src="samplecpp_help_14.png" alt="Help simple. Modo completo" width="100%" />
-<p class="caption">Help simple. Modo completo</p>
-</div>
-
-
-### Exceptions
-
-En C++ los errores son gestionados a través de `CmdLineException`.
-El programa ejemplo `sample_exceptions` no realiza ninguna función pero acepta todos los tipos preestablecidos de parámetros.
-
-Por simplicidad unicamente se captura la excepción base, pero la salida indica el tipo de excepción concreta generada.
-
-
-### Source code
-
-- config.hpp
-- showinfo.hpp
-- showinfo.cpp
-- sample_exceptions.cpp
-
-#### config.hpp
-
-```cc
-#pragma once
-#include <iostream>
-#include "cmdline.hpp"
-
-constexpr auto VERBOSE    = "verbose";
-constexpr auto SUMMARY    = "summary";
-constexpr auto FLAG       = "flag";
-constexpr auto NUMBERS    = "numbers";
-constexpr auto NUMBER     = "number";
-constexpr auto DECIMAL    = "decimal";
-constexpr auto DECIMALS   = "decimals";
-constexpr auto DATE       = "date";
-constexpr auto TIME       = "time";
-constexpr auto DATETIME   = "datetime";
-constexpr auto TIMESTAMP  = "timestamp";
-constexpr auto DIRIN      = "dirIn";
-constexpr auto DIROUT     = "dirOut";
-constexpr auto FILEIN     = "fileIn";
-constexpr auto FILEOUT    = "fileOut";
-constexpr auto CONFIG     = "config";
-
-using namespace cmdline;
-
-
-#ifdef __MAIN__
- CmdLine *cmdLine = nullptr;
-#else 
-extern CmdLine *cmdLine;
-#endif
+Supongamos un programa `sample` cuya funcionalidad es: Lee un fichero y lo escribe en otro sitio cambiando ciertas palabras por otras en función de lso datos indicados por el usuario. Su ayuda podría mostrar algo similar a lo siguiente:
 
 ```
-
-
-#### showinfo.hpp
-
-
-```cc
-#pragma once
-
-#include "config.hpp"
-
-void showHelp    (HelpRequested* help);
-void showValues  ();
+sample [-h] [-v] [-i input_dir] [-o output_dir] [[-d palabra=valor] ...] [...]
+    -h: Esta ayuda
+    -v: Mostrar información de progreso
+    -i input_dir: Directorio de entrada
+    -o output_dir: Directorio de salida. Si se omite se usara la salida estandar
+    -d palabra=valor: conjunto de palabras a cambiar en el fichero
+    ...: Archivos a procesar. Si se omite se utilizará la entrada estandar
 ```
 
-#### showinfo.cpp
+En este programa:
+
+- `-h`, `-v` son **Flags**
+- `-i`,`-o` son **Opciones**
+- `-d` son **Definiciones**
+- `...` son los **Argumentos** a procesar
+
+###  Tipologia
+
+Independientemente del modo de especificar los parámetros, estos son recibidos por el programa como cadenas de caracteres, pero en función del tipo de opción su valor asociado debe ser convertible a un tipo de dato concreto.
+
+Podemos clasificar de manera general la tipologia de los valores de acuerdo con la siguiente tabla:
 
 
-```cc
-#pragma once
+|   Tipo         |            Descripcion               |
+|----------------|--------------------------------------|
+| logico         | Un valor interpretable como lógico   |
+| numerico       | Un valor numerico                    |
+| cadena         | Una cadena de caracteres             |
+| directorios    | Un nombre de directorio valido      |
+| ficheros       | Un nombre de archivo valido          |
+| fechas y horas | Algun tipo de fechas y horas         |
 
-#include "config.hpp"
-#include "showinfo.hpp"
+Y dentro de estos tipos, además, los valores numéricos podrían estar limitados a un cierto rango y las cadenas de caracteres a un conjunto de valores.
 
-void printOption(string option, vector<string> values) {
-   int num = 0;
-   cout << "\t" << option << "\t: "; 
-   if (values.size() == 1 && values[0].length() == 0) {
-       cout << "No default value\n";
-       return;
-   }
-   for (auto str : values) {
-        if (num) cout << ", ";
-        cout << str;
-        num++;
-   }
-   cout << endl;
-}
+Todavia podemos matizar un poco esta tipologia:
 
-void showHelp(HelpRequested* help) {
-    cout << "A sample program about error management"                << endl;
-    cout << "Use: " << help->name << " [options]"                    << endl;
-    cout << "Options:"                                               << endl;
-    cout << "\t" << VERBOSE   << ":\t"   << "Flag"                              << endl;
-    cout << "\t" << SUMMARY   << ":\t"   << "Flag"                              << endl;
-    cout << "\t" << FLAG      << ":\t\t" << "Option boolean"                    << endl;
-    cout << "\t" << NUMBERS   << ":\t"   << "Integers"                          << endl;
-    cout << "\t" << NUMBER    << ":\t\t" << "Just one integer"                  << endl;
-    cout << "\t" << DECIMALS  << ":\t"   << "Decimals"                          << endl;
-    cout << "\t" << DECIMAL   << ":\t"   << "Just one decimal"                  << endl;
-    cout << "\t" << DATE      << ":\t\t" << "Date"                              << endl;
-    cout << "\t" << TIME      << ":\t\t" << "Time"                              << endl;
-    cout << "\t" << DATETIME  << ":\t"   << "DateTime"                          << endl;
-    cout << "\t" << TIMESTAMP << ":\t"   << "Timestamp"                         << endl;
-    cout << "\t" << DIRIN     << ":\t\t" << "Existing directories"              << endl;
-    cout << "\t" << DIROUT    << ":\t\t" << "A directory"                       << endl;
-    cout << "\t" << FILEIN    << ":\t\t" << "Existing files"                    << endl;
-    cout << "\t" << FILEOUT   << ":\t"   << "A possible output file"            << endl;
-    cout << "\t" << CONFIG    << ":\t\t" << "An existing configuration file"    << endl;
-}
+|   Tipo         |            Descripcion               |
+|----------------|--------------------------------------|
+| Logico         | Un valor interpretable como lógico   |
+| Natural        | Un numero entero positivo            |
+| Entero         | Un numero entero positivo o negativo |
+| Decimal        | Un numero real                       |
+| Directorio     | Un nombre de directorio valido       |
+| Directorio_OK  | Un nombre de directorio valido que ademas existe  |
+| Fichero        | Un nombre de archivo valido          |
+| Fichero_OK     | Un archivo existente en el sistema   |
+| Fecha          | Una fecha valida                     |
+| Hora           | Una hora valida                      |
+| Fecha/Hora     | Una fecha y hora valida  (_datetime_)|
+| Timestamp      | Un Timestamp                         |
+| Configuracion  | Como caso especial un fichero que contiene configuracion para el programa |
 
-void showValues() {
-    Flags   flags   = cmdLine->getCurrentFlags();
-    Options options = cmdLine->getCurrentOptions();
-    cout << "Flags:" << endl;
-    for (auto flag : flags) {
-       cout << "\t" << flag.first << ": " << std::boolalpha << flag.second << endl;
-    }
-    cout << "Options:" << endl;
-    for (auto option : options) {
-        printOption(option.first, option.second);
-    }
-    
-}
-```
+Es importante señalar que, esta tipologia esta codificada expresamente en todos y cada uno de los programas
 
-#### sample_exceptions.cpp
+## Definiciones
 
+Introduzcamos algunas definiciones:
 
-```cc
-#define __MAIN__
+**Parametro** o **argumento** son sinónimos y es cualquier elemento que aparece después del comando en si mismo 
 
-#include "config.hpp"
-#include "showinfo.hpp"
+Ahora bien, estos parámetros pueden ser de tres tipos:
 
-Parameters  parms { 
-    ParmFlag(VERBOSE,  true)                    
-   ,ParmFlag(SUMMARY,  true)                     
-   ,ParmOption(FLAG,  "true", Type::BOOL,    false)
-   ,ParmOption(NUMBERS,   Type::NUMBER,      true) 
-   ,ParmOption(NUMBER,    Type::NUMBER,      false)
-   ,ParmOption(DECIMALS,  Type::DECIMAL,     true) 
-   ,ParmOption(DECIMAL,   Type::DECIMAL,     false)
-   ,ParmOption(DATE,      Type::DATE,        false)
-   ,ParmOption(TIME,      Type::TIME,        false)
-   ,ParmOption(DATETIME,  Type::DATETIME,    false)
-   ,ParmOption(TIMESTAMP, Type::TMS,         false)
-   ,ParmOption(DIRIN,     Type::DIR_EXISTS,  true) 
-   ,ParmOption(DIROUT,    Type::DIR,         false)
-   ,ParmOption(FILEIN,    Type::FILE_EXISTS, true) 
-   ,ParmOption(FILEOUT,   Type::FILE,        false) 
-   ,ParmOption(CONFIG,    Type::CONFIG,      false) 
-};
+1. Datos de entrada
+2. Opciones
+3. Flags
 
-int main(int argc, char *argv[]) {
-    cout << "Starting " << argv[0] << endl;
-    try {
-       cmdLine = CmdLine::getInstance(argc, argv,parms);
-       showValues();
-    }
-    catch (HelpRequested *help) { 
-        showHelp(help); 
-    } 
-    catch (CmdLineException *ex) {
-        cerr << ex->what() << endl;
-        cerr << "Exception type: " << ex->type << endl;
-        exit(1);
-    }
-    exit (0);
-}
-```
+Y cada programa puede aceptar un determinado número de opciones, incluida ninguna, y de flags, incluidos ninguno, pero en el caso de que exista al menos uno, este, por definición debe asumir un valor por defecto cuando no es especificado en la linea de comandos.
 
+### Datos de entrada
+
+Es cualquier elemento o secuencia de ellos que debe ser procesado por el programa.
+
+Por ejemplo: `cat fichero.txt` mostrara por pantalla el contenido del fichero fichero.txt
+
+### Opciones
+
+Es cualquier elemento o secuencia de ellos que modifica o afecta al comportamiento del programa aportándole algun tipo de información
+
+Por ejemplo: `grep -e _pattern_` o `grep --regexp _pattern_` indica a grep que patrón usar
+
+### Flags
+
+Es cualquier elemento que activa o desactiva alguna característica o funcionalidad del programa.
+El caso mas típico seria el flag: `-h` o `--help` que indica al programa que muestre su ayuda
+
+Otros ejemplos podrían ser:
+
+`command -v` o `command --verbose` que suele usarse para generar información de progreso
+`command -s` o `command --silent` que suele usarse para evitar que se genere esa información
+
+Notese que estos flags son complementarios; es decir, afectan a las misma funcionalidad.
+
+# Propuesta
+
+El siguiente esquema propone resolver estas "deficiencias" y clarificar de cara al usuario los significados de cada parámetro:
+
+1. Un flag se prefija siempre con los signos + o - y su significado es **siempre** el mismo: + activa la funcionalidad y - la desactiva.
+2. Dado que los flags no necesitan información asociada se pueden concatenar en una secuencia de caracteres con la unica condicion de que ninguno de ellos empiece por el mismo caracter
+3. Una opcion se prefija **siempre** con la barra / y su valor asociado se establece en la siguiente palabra
+4. Cualquier parámetro queda definido en el momento en el que no existe duda acerca de la intención del usuario; es decir, no es necesario introducir el nombre completo del parámetro
+
+Por ultimo, y como consejo, el manual de usuario o la ayuda en linea, deberia indicar los valores por defecto de todos los flags y opciones soportadas por el programa
 

@@ -48,6 +48,7 @@
     <ClCompile Include="src\cmdline_flavors.cpp" />
     <ClCompile Include="src\commandline.cpp" />
     <ClCompile Include="src\commandline_aux.cpp" />
+    <ClCompile Include="src\config_files.cpp" />
     <ClCompile Include="src\config_ini.cpp" />
     <ClCompile Include="src\config_json.cpp" />
     <ClCompile Include="src\config_xml.cpp" />

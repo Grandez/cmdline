@@ -1,13 +1,17 @@
 #include "config_ini.hpp"
 #include "tools.hpp"
 
+#ifdef _WIN32
+#pragma warning( disable : 4996 ) 
+#endif
+
 using namespace std;
 namespace NS2 {
 char* loadIniFile (char *file) {
-    char *buffer;
+    char *buffer = 0x0;;
     struct stat stat_buf;
-    FILE * pFile;
-    int size;
+    FILE * pFile = 0x0;;
+    size_t size;
     int rc = stat(file, &stat_buf);
     if (rc == 0) {
         pFile = fopen (file,"rt");

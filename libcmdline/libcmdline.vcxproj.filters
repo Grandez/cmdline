@@ -125,5 +125,8 @@
     <ClCompile Include="src\commandline_aux.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\config_files.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

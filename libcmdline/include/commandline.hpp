@@ -76,6 +76,6 @@ namespace NS2 {
        char* inactiveFlag(const char *flag, char *prev);
        void  addToInputs(const char *arg);
        bool  updateFlagHelp(const char *arg, char *prev);
-       vector<string> configFileInCommandLine(int argc, const char **argv, bool sensitive);
+       vector<string> configFilesInCommandLine(int argc, const char **argv, bool sensitive);
 	};
 }
